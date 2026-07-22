@@ -1,0 +1,39 @@
+schema_version: 1
+project: conway-99-research
+target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
+target_frozen_on: 2026-07-22
+literature_audit:
+  through: 2026-07-22
+  status: OPEN_IN_CHECKED_PRIMARY_SOURCES
+  caveat: "A literature search cannot prove that no resolution exists."
+project_status: EXPLORATORY
+resolution_claim: NONE
+symmetry_policy:
+  full_search_assumes_nontrivial_automorphism: false
+  note: "Symmetry-conditioned branches must be labeled as restricted subproblems."
+evidence_labels:
+  - CITED
+  - DERIVED
+  - VERIFIED
+  - CANDIDATE
+  - REFUTED
+  - UNKNOWN
+positive_certificate:
+  required: "99x99 symmetric binary zero-diagonal adjacency matrix"
+  identity: "A^2 = 12 I - A + 2 J over the integers"
+  independent_validators_required: 2
+negative_certificate:
+  accepted:
+    - "complete human-checkable proof"
+    - "checked formal proof"
+    - "public exact encoding plus complete proof artifact and checker"
+  rejected:
+    - "timeout"
+    - "heuristic failure"
+    - "floating-point residual alone"
+    - "search restricted by an unproved automorphism assumption"
+primary_status_source:
+  title: "On the automorphism group of a putative Conway 99-graph"
+  doi: "10.5802/alco.418"
+  year: 2025
+last_updated: 2026-07-22

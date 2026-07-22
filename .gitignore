@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.env
+*.log
+*.tmp
+*.bak
+*.cnf
+*.drat
+*.lrat
+*.proof
+*.checkpoint
+dist/
+build/
+
+# Keep small, intentionally committed fixtures despite broad artifact ignores.
+!verification/fixtures/**/*.cnf
+!verification/fixtures/**/*.lrat
