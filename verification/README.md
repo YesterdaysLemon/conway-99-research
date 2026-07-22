@@ -45,3 +45,15 @@ pinned proof checker and preferably an LRAT conversion/check.
 ```powershell
 python verification/check_drup.py path/to/instance.cnf path/to/proof.drup
 ```
+
+## Mature LRAT calibration
+
+The external proof path is calibrated separately with pinned CaDiCaL 3.0.1,
+`drat-trim`, and `lrat-check` source commits. Both complete `pair_count=3`
+branch-unit CNFs were accepted after DRAT-to-LRAT conversion. Exact versions,
+commands, artifact hashes, and the target-scope warning are recorded in
+`2026-07-22-lrat-calibration.md`.
+
+This calibration does not make an embedded-solver `UNSAT` result evidentiary.
+A target claim still requires retained proofs for all 11 complete branches and
+independent replay of every artifact.

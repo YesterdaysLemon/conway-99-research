@@ -37,6 +37,14 @@ freshness search through 2026-07-22 found no credible construction or
 nonexistence proof. That search is evidence about the literature, not a
 mathematical proof of openness.
 
+Wave 2 independently verified a native-cardinality discovery backend, a new
+endpoint-fiber bijection, exact modular/Smith/code constraints, and a pinned
+CaDiCaL-to-LRAT calibration path. A fresh 10,000-conflict pass over all 11
+complete target branches returned `UNKNOWN` in every branch. That bounded run
+is explicitly non-evidentiary; it is useful only for engineering and branch
+ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md) and
+[run manifest](logs/2026-07-22-wave2.json).
+
 ## Why the search has 84 vertices
 
 Fix a root `x`. Its 14 neighbors induce seven disjoint edges. Each of the other
@@ -84,6 +92,10 @@ status.
 - [PROMPT.md](PROMPT.md): reusable orchestrator/parallel-agent/verifier prompt.
 - [First-wave audit](verification/2026-07-22-first-wave-audit.md): adversarial
   verifier verdict.
+- [Wave 2 audit](verification/2026-07-22-wave2-audit.md): independent review of
+  the structural, algebraic, and native-encoding claims.
+- [LRAT calibration](verification/2026-07-22-lrat-calibration.md): pinned small
+  negative-control proof replay.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

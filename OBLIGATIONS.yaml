@@ -32,10 +32,10 @@ obligations:
   - id: O-UNSAT-PIPELINE
     requirement: "Pin and calibrate a stable external proof-producing solver and mature independent proof checker."
     critical: false
-    status: UNKNOWN
+    status: PASS
     evidence:
-      - "verification/2026-07-22-first-wave-audit.md"
-    note: "The unstable PySAT in-process proof path is rejected."
+      - "verification/2026-07-22-lrat-calibration.md"
+    note: "CaDiCaL-to-DRAT-to-LRAT replay passes both complete pair_count=3 branches; no target proof exists."
 
   - id: O-CLEAN-REPRODUCTION
     requirement: "Reproduce decisive artifacts from a clean clone with pinned dependencies and recorded hashes."
@@ -57,11 +57,24 @@ obligations:
   - id: O-WAVE2-STRUCTURAL
     requirement: "Adversarially verify any Wave 2 structural lemma before using it as a search cut or proof step."
     critical: false
-    status: UNKNOWN
-    evidence: []
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave2-structural.md"
+      - "verification/2026-07-22-wave2-audit.md"
 
   - id: O-WAVE2-COMPUTATIONAL
     requirement: "Calibrate and independently check any Wave 2 encoding improvement before target experiments."
     critical: false
-    status: UNKNOWN
-    evidence: []
+    status: PASS
+    evidence:
+      - "attempts/2026-07-22-native-cardinality.md"
+      - "verification/2026-07-22-wave2-audit.md"
+
+  - id: O-WAVE2-ALGEBRA
+    requirement: "Independently reproduce finite-field, Smith-form, code, kernel-lattice, and conditional-design claims."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave2-algebra-codes.md"
+      - "verification/2026-07-22-wave2-audit.md"
+    note: "Individual residual 2-primary exponents and literature novelty remain unknown."

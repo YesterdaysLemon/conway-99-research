@@ -43,4 +43,14 @@ first_research_wave:
   verifier_verdict: PASS_FOR_INFRASTRUCTURE_ONLY
   target_result: UNKNOWN
   run_manifest: "logs/2026-07-22-first-wave.json"
+second_research_wave:
+  source_commit: "b34f73e1e8a857d495be10325b45943c15b6380e"
+  verifier_verdict: PASS_FOR_RECORDED_NECESSARY_CONDITIONS_AND_INFRASTRUCTURE
+  target_result: UNKNOWN
+  native_scout: "logs/2026-07-22-native-10000.json"
+  structural_report: "agents/2026-07-22-wave2-structural.md"
+  algebra_report: "agents/2026-07-22-wave2-algebra-codes.md"
+  verifier_report: "verification/2026-07-22-wave2-audit.md"
+  proof_pipeline_calibration: "verification/2026-07-22-lrat-calibration.md"
+  caveat: "All 11 target branches returned UNKNOWN at the bounded cutoff; this is non-evidentiary."
 last_updated: 2026-07-22

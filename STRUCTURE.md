@@ -165,3 +165,65 @@ spectrum(B) = 12^1, 3^40, 0^7, (-2)^6, (-4)^30.
 ```
 
 In particular, a putative residual graph is connected.
+
+## Endpoint-fiber incidence (`VERIFIED`)
+
+For a root-neighbor coordinate `a`, let `F_a` be the 12 residual labels
+containing `a`, and let `W_a` be the 60 labels containing neither `a` nor its
+mate. The map
+
+```text
+w -> N_B(w) intersection F_a
+```
+
+is a bijection from `W_a` to the 60 nonedges of the perfect matching
+`B[F_a]`. Thus `B[F_a,W_a]` is the vertex-edge incidence graph of
+`K_12-6K_2`.
+
+Coupling the corresponding bijections for `a` and its mate gives a 12-by-12
+nonnegative integer matrix `R` with entry sum 240. Consequently
+
+```text
+sum binom(R[u,v],2) >= 96.
+```
+
+Each counted pair defines a residual four-cycle separated by that root-matched
+coordinate pair. This supplies at least 96 distinct such cycles per root group,
+but cycles may be counted for multiple groups, so it is not a contradiction.
+See `agents/2026-07-22-wave2-structural.md` for the proof and scope warning.
+
+## Modular and integral constraints (`VERIFIED`)
+
+Conditional on existence, the full adjacency matrix has
+
+```text
+rank_F2(A) = 54,
+rank_F3(A) = 45,
+SNF(A) = diag(1^45, 3^9, 6, 12^43, 84).
+```
+
+The residual adjacency matrix has exact modular Jordan forms
+
+```text
+over F2: 1^40 + J_3(0)^6 + 0^26,       rank 52;
+over F3: 1^6 + 2^30 + J_2(0)^7 + 0^34, rank 43.
+```
+
+Its top nonzero determinantal divisor is
+
+```text
+Delta_77(B) = 2^49 * 3^34.
+```
+
+This determines 25 nontrivial 2-primary torsion factors with total valuation
+49 and 34 factors equal to `Z/3`; it does not determine the individual
+2-primary exponents.
+
+Over `F2`, `im(A)` is an even LCD `[99,54]` code and `ker(A)` is its LCD
+`[99,45]` dual. Both have minimum weight at least eight. A weight-eight dual
+word must support an independent eight-set, with every vertex meeting that set
+in zero or two points. Over `F3`, `im(A)` is an LCD `[99,45]` code.
+
+Full derivations and the independently checked boundaries are in
+`agents/2026-07-22-wave2-algebra-codes.md` and
+`verification/2026-07-22-wave2-audit.md`.

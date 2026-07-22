@@ -69,6 +69,10 @@ returned `UNKNOWN`. Those bounded runs are explicitly `NON_EVIDENTIARY`.
 Recorded wall times compare implementations, not mathematical progress, and
 conflict counts from different solvers are not directly comparable.
 
+The public committed-code reproduction at 10,000 conflicts is
+`logs/2026-07-22-native-10000.json`; its source and output hashes are recorded
+in `logs/2026-07-22-wave2.json`.
+
 ## Certificate boundary
 
 MiniCard is used only to find candidate models or rank branches. A SAT model

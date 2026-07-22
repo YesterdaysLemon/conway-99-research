@@ -58,9 +58,55 @@ claims:
       - "code/test_sat_model.py"
       - "verification/2026-07-22-first-wave-audit.md"
 
+  - id: C-NATIVE-001
+    statement: "The native MiniCard formulation is semantically equivalent to the audited compact rooted encoding."
+    label: VERIFIED
+    scope: ENCODING_SEMANTICS_DISCOVERY_ONLY
+    evidence:
+      - "attempts/2026-07-22-native-cardinality.md"
+      - "code/sat_model.py"
+      - "code/test_sat_model.py"
+      - "verification/2026-07-22-wave2-audit.md"
+    limitations: "MiniCard has no accepted proof-logging path here; its target cutoffs are non-evidentiary."
+
+  - id: C-FIBER-001
+    statement: "For every endpoint fiber, the 60 outside residual labels biject with the nonedges of K_12 minus the fiber matching; coupling mate fibers forces at least 96 separation four-cycles per root group."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-22-wave2-structural.md"
+      - "verification/2026-07-22-wave2-audit.md"
+    limitations: "The 672 group incidences need not be distinct four-cycles and give no contradiction."
+
+  - id: C-ARITHMETIC-001
+    statement: "The full Smith form, residual modular Jordan forms, code bounds, saturated kernel determinant, and Delta_77 recorded in the Wave 2 algebra report are parameter-forced."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-22-wave2-algebra-codes.md"
+      - "verification/2026-07-22-wave2-audit.md"
+    limitations: "The individual residual 2-primary torsion exponents and literature novelty remain unknown."
+
+  - id: C-LRAT-CALIBRATION-001
+    statement: "Both complete pair_count=3 branch-unit CNFs have CaDiCaL DRAT proofs converted to LRAT and accepted by independent lrat-check."
+    label: VERIFIED
+    scope: SMALL_NEGATIVE_CONTROL_ONLY
+    evidence:
+      - "verification/2026-07-22-lrat-calibration.md"
+    limitations: "No target branch is covered by this calibration."
+
+  - id: C-REJECTED-002
+    statement: "The residual 2-primary torsion is forced to be (Z/2) plus (Z/4)^24."
+    label: UNKNOWN
+    scope: UNSUPPORTED_INFERENCE
+    evidence:
+      - "agents/2026-07-22-wave2-algebra-codes.md"
+      - "verification/2026-07-22-wave2-audit.md"
+    limitations: "Only 25 nontrivial factors and total 2-adic valuation 49 are verified."
+
   - id: C-REJECTED-001
     statement: "One canonical 24-vertex configuration per multiple-of-four cycle partition would be a complete symmetry split."
-    label: REJECTED
+    label: REFUTED
     scope: UNSAFE_SYMMETRY_SHORTCUT
     evidence:
       - "STRUCTURE.md"
