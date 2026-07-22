@@ -44,7 +44,8 @@ obligations:
     evidence:
       - "REPRODUCING.md"
       - "logs/2026-07-22-first-wave.json"
-    note: "First-wave local checks pass, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave2-clean-clone.md"
+    note: "Wave 2 tests and controls pass from a fresh clone, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
     requirement: "Prove every search normalization complete without assuming a nontrivial solution automorphism."

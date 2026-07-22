@@ -52,5 +52,6 @@ second_research_wave:
   algebra_report: "agents/2026-07-22-wave2-algebra-codes.md"
   verifier_report: "verification/2026-07-22-wave2-audit.md"
   proof_pipeline_calibration: "verification/2026-07-22-lrat-calibration.md"
+  clean_clone_replay: "verification/2026-07-22-wave2-clean-clone.md"
   caveat: "All 11 target branches returned UNKNOWN at the bounded cutoff; this is non-evidentiary."
 last_updated: 2026-07-22
