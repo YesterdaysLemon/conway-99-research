@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import unittest
+from itertools import combinations
 
 from root_model import RootModel
 
@@ -82,6 +83,70 @@ class ConwayRootModelTests(unittest.TestCase):
         self.assertEqual(summary["common_neighbor_equalities"], 3486)
         self.assertEqual(summary["direct_and_auxiliaries"], 285852)
         self.assertEqual(len(summary["sha256"]), 64)
+
+    def test_canonical_n3_edge_has_the_full_safe_scaffold_orbit(self) -> None:
+        indices = self.model.label_index()
+        canonical = frozenset((indices[(0, 2)], indices[(2, 4)]))
+        orbit = {canonical}
+        frontier = [canonical]
+        generators = self.model.label_generators()
+        while frontier:
+            pair = frontier.pop()
+            for generator in generators:
+                image = frozenset(generator[index] for index in pair)
+                if image not in orbit:
+                    orbit.add(image)
+                    frontier.append(image)
+
+        expected = set()
+        for first, second in combinations(range(self.model.residual_count), 2):
+            left = set(self.model.labels[first])
+            right = set(self.model.labels[second])
+            if len(left & right) != 1:
+                continue
+            nonshared = tuple((left ^ right))
+            if nonshared[1] != self.model.mate(nonshared[0]):
+                expected.add(frozenset((first, second)))
+
+        self.assertEqual(len(orbit), 840)
+        self.assertEqual(orbit, expected)
+
+    def test_canonical_n3_induced_table_is_fixed_except_one_edge(self) -> None:
+        # Full numbering is root 0, coordinates 1..14, residual labels 15..98.
+        indices = self.model.label_index()
+        vertices = {
+            "x": 0,
+            "u": 1,
+            "v": 2,
+            "a": 3,
+            "b": 15 + indices[(0, 2)],
+            "c": 15 + indices[(2, 4)],
+        }
+        self.assertEqual(vertices, {"x": 0, "u": 1, "v": 2, "a": 3, "b": 15, "c": 39})
+
+        fixed_present = {
+            ("x", "u"),
+            ("x", "v"),
+            ("x", "a"),
+            ("u", "v"),
+            ("u", "b"),
+            ("a", "b"),
+            ("a", "c"),
+        }
+        residual_unit = ("b", "c")
+        fixed_absent = {
+            ("x", "b"),
+            ("x", "c"),
+            ("u", "a"),
+            ("u", "c"),
+            ("v", "a"),
+            ("v", "b"),
+            ("v", "c"),
+        }
+        all_pairs = {tuple(pair) for pair in combinations(vertices, 2)}
+        self.assertEqual(fixed_present | {residual_unit} | fixed_absent, all_pairs)
+        self.assertEqual(len(fixed_present), 7)
+        self.assertEqual(len(fixed_absent), 7)
 
 
 if __name__ == "__main__":

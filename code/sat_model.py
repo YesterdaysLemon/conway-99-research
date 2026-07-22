@@ -3,7 +3,8 @@
 
 This is discovery code. A SAT model is decoded into a complete edge-list
 certificate and must be checked by the independent validators. An UNSAT return
-does not become evidence unless the exact CNF and a proof artifact are checked.
+does not become evidence unless the exact CNF or OPB formula and a proof
+artifact are checked.
 """
 
 from __future__ import annotations
@@ -32,6 +33,8 @@ class EncodedRootModel:
     wedge_variables: dict[tuple[int, int, int], int]
     variant: str
     cardinality_backend: str
+    matching_branch_added: bool = False
+    n3_normalized: bool = False
 
     @classmethod
     def build(
@@ -180,6 +183,48 @@ class EncodedRootModel:
             literals.append(self.edge_literal(first, second))
             self._add_at_most(literals, 2 - intersection)
 
+    @staticmethod
+    def _opb_literal(literal: int) -> str:
+        if literal == 0:
+            raise ValueError("OPB literals cannot be zero")
+        variable = f"x{abs(literal)}"
+        return variable if literal > 0 else f"~{variable}"
+
+    @classmethod
+    def _opb_lower_bound(cls, literals: Sequence[int], bound: int) -> str:
+        terms = " ".join(f"+1 {cls._opb_literal(literal)}" for literal in literals)
+        prefix = f"{terms} " if terms else ""
+        return f"{prefix}>= {bound} ;"
+
+    def opb_text(self) -> str:
+        """Render a native-cardinality formula as unit-weight OPB inequalities.
+
+        A clause is the lower bound that at least one of its literals is true.
+        An AtMost constraint ``sum(lits) <= k`` is rendered equivalently as
+        ``sum(complement(lits)) >= len(lits) - k``.  This preserves the native
+        cardinalities instead of expanding them into auxiliary-variable CNF.
+        """
+
+        if not isinstance(self.cnf, CNFPlus):
+            raise ValueError("OPB export requires the native-cardinality formula")
+
+        constraints = [self._opb_lower_bound(clause, 1) for clause in self.cnf.clauses]
+        for atmost in self.cnf.atmosts:
+            if len(atmost) != 2:
+                raise ValueError("weighted native constraints are not supported")
+            raw_literals, raw_bound = atmost
+            literals = list(raw_literals)
+            bound = int(raw_bound)
+            constraints.append(
+                self._opb_lower_bound(
+                    [-literal for literal in literals],
+                    len(literals) - bound,
+                )
+            )
+
+        header = f"* #variable= {self.cnf.nv} #constraint= {len(constraints)}"
+        return "\n".join([header, *constraints, ""])
+
     def statistics(self) -> dict[str, Any]:
         native_atmost = (
             len(self.cnf.atmosts) if isinstance(self.cnf, CNFPlus) else 0
@@ -204,10 +249,42 @@ class EncodedRootModel:
         ]
 
     def add_matching_branch(self, coordinate: int, partition: Sequence[int]) -> None:
+        if self.n3_normalized:
+            raise ValueError(
+                "the N3 normalization cannot be combined with legacy matching "
+                "representatives without a separate joint symmetry cover"
+            )
         decisions = canonical_branch_decisions(self.root, coordinate, partition)
         for edge, present in decisions.items():
             literal = self.edge_variables[edge]
             self.cnf.append([literal if present else -literal])
+        self.matching_branch_added = True
+
+    def add_n3_normalization(self) -> int:
+        """Fix the cited-and-derived target N3 using only global relabeling.
+
+        With root-neighbor coordinates normalized to matched pairs (0,1),
+        (2,3), and (4,5), the two residual vertices are labels (0,2) and
+        (2,4).  Their edge is the only N3 adjacency not already fixed by the
+        rooted incidence scaffold.
+        """
+
+        if self.root.pair_count != 7:
+            raise ValueError("the target N3 normalization applies only to pair_count 7")
+        if self.matching_branch_added:
+            raise ValueError(
+                "the N3 normalization cannot be combined with legacy matching "
+                "representatives without a separate joint symmetry cover"
+            )
+        if self.n3_normalized:
+            raise ValueError("the N3 normalization has already been added")
+        indices = self.root.label_index()
+        first = indices[(0, 2)]
+        second = indices[(2, 4)]
+        literal = self.edge_literal(first, second)
+        self.cnf.append([literal])
+        self.n3_normalized = True
+        return literal
 
     def full_certificate(self, model: Sequence[int]) -> dict[str, Any]:
         """Decode a SAT assignment into the complete normalized graph."""
@@ -288,6 +365,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="canonical fiber-matching partition, e.g. 6 or 3+2+1",
     )
     parser.add_argument("--branch-coordinate", type=int, default=0)
+    parser.add_argument(
+        "--n3",
+        action="store_true",
+        help="fix one target-specific cited-and-derived N3 by global relabeling",
+    )
     parser.add_argument("--solve", action="store_true")
     parser.add_argument(
         "--solver",
@@ -299,6 +381,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="return UNKNOWN after this many conflicts instead of running unbounded",
     )
     parser.add_argument("--cnf", type=Path, help="optional DIMACS output")
+    parser.add_argument(
+        "--opb",
+        type=Path,
+        help="optional OPB formula for a proof-logging solver (requires native cardinality)",
+    )
     parser.add_argument("--candidate", type=Path, help="decoded SAT certificate output")
     return parser.parse_args(argv)
 
@@ -309,9 +396,20 @@ def main(argv: Sequence[str] | None = None) -> int:
         raise SystemExit("--candidate requires --solve")
     if args.conflict_budget is not None and args.conflict_budget < 1:
         raise SystemExit("--conflict-budget must be positive")
+    if args.cnf and args.opb:
+        raise SystemExit("--cnf and --opb are mutually exclusive")
     if args.cnf and args.cardinality == "native":
         raise SystemExit(
             "--cnf requires --cardinality cnf; native AtMost constraints are not DIMACS"
+        )
+    if args.opb and args.cardinality != "native":
+        raise SystemExit("--opb requires --cardinality native")
+    if args.n3 and args.pair_count != 7:
+        raise SystemExit("--n3 applies only to the target --pair-count 7")
+    if args.n3 and args.branch:
+        raise SystemExit(
+            "--n3 cannot be combined with the legacy --branch representatives; "
+            "their joint symmetry requires a separate complete cover"
         )
 
     encoded = EncodedRootModel.build(
@@ -322,17 +420,29 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.branch:
         partition = parse_partition(args.branch, args.pair_count - 1)
         encoded.add_matching_branch(args.branch_coordinate, partition)
+    n3_literal = encoded.add_n3_normalization() if args.n3 else None
     report: dict[str, Any] = {"encoding": encoded.statistics()}
     if args.branch:
         report["branch"] = {
             "coordinate": args.branch_coordinate,
             "partition": list(partition),
         }
+    if n3_literal is not None:
+        report["n3_normalization"] = {
+            "residual_labels": [[0, 2], [2, 4]],
+            "edge_literal": n3_literal,
+            "completed_graph_automorphism_assumed": False,
+        }
 
     if args.cnf:
         args.cnf.parent.mkdir(parents=True, exist_ok=True)
         encoded.cnf.to_file(str(args.cnf))
         report["cnf"] = str(args.cnf)
+
+    if args.opb:
+        args.opb.parent.mkdir(parents=True, exist_ok=True)
+        args.opb.write_text(encoded.opb_text(), encoding="ascii", newline="\n")
+        report["opb"] = str(args.opb)
 
     if args.solve:
         solver_name = args.solver or (
