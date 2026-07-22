@@ -36,4 +36,9 @@ primary_status_source:
   title: "On the automorphism group of a putative Conway 99-graph"
   doi: "10.5802/alco.418"
   year: 2025
+first_research_wave:
+  source_commit: "a828bcb1352e6b1eae3cd0f4746aeae18ab06cc1"
+  verifier_verdict: PASS_FOR_INFRASTRUCTURE_ONLY
+  target_result: UNKNOWN
+  run_manifest: "logs/2026-07-22-first-wave.json"
 last_updated: 2026-07-22
