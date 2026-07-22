@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import unittest
 from contextlib import redirect_stdout
 from io import StringIO
@@ -10,7 +11,24 @@ from itertools import product
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from matching_orbits import n3_joint_branch_decisions
 from sat_model import EncodedRootModel, main, solve_model
+
+
+EXPECTED_N3_POSITIVE_LITERALS = (
+    (24, 943, 1834, 1947, 2056, 2161),
+    (24, 943, 1834, 1947, 2057, 2110),
+    (24, 943, 1834, 1948, 2004, 2110),
+    (24, 943, 1835, 1892, 2057, 2110),
+    (24, 943, 1835, 1893, 2004, 2110),
+    (24, 944, 1777, 1947, 2056, 2161),
+    (24, 944, 1777, 1947, 2057, 2110),
+    (24, 944, 1777, 1948, 2004, 2110),
+    (24, 944, 1778, 1892, 2056, 2161),
+    (24, 944, 1778, 1892, 2057, 2110),
+    (24, 944, 1778, 1893, 2003, 2161),
+    (24, 944, 1778, 1893, 2004, 2110),
+)
 
 
 class DirectSatEncodingTests(unittest.TestCase):
@@ -188,9 +206,103 @@ class DirectSatEncodingTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "only to pair_count 7"):
                     encoded.add_n3_normalization()
 
+    def test_n3_joint_cover_has_expected_literals_and_exact_unit_counts(self) -> None:
+        encoded = EncodedRootModel.build(7, "compact", "native")
+        for branch_number, expected in enumerate(
+            EXPECTED_N3_POSITIVE_LITERALS, start=1
+        ):
+            decisions = n3_joint_branch_decisions(encoded.root, branch_number)
+            actual = tuple(
+                sorted(
+                    encoded.edge_variables[edge]
+                    for edge, present in decisions.items()
+                    if present
+                )
+            )
+            self.assertEqual(actual, expected)
+
+        before = encoded.statistics()
+        encoded.add_n3_normalization()
+        positive_literals = encoded.add_n3_joint_branch(12)
+        after = encoded.statistics()
+        added_branch_clauses = encoded.cnf.clauses[-65:]
+
+        self.assertEqual(positive_literals, EXPECTED_N3_POSITIVE_LITERALS[-1])
+        self.assertEqual(encoded.n3_joint_branch_number, 12)
+        self.assertEqual(after["total_variables"], before["total_variables"])
+        self.assertEqual(after["clauses"], before["clauses"] + 66)
+        self.assertEqual(
+            after["native_atmost_constraints"],
+            before["native_atmost_constraints"],
+        )
+        self.assertEqual(len(added_branch_clauses), 65)
+        self.assertTrue(all(len(clause) == 1 for clause in added_branch_clauses))
+        self.assertEqual(sum(clause[0] > 0 for clause in added_branch_clauses), 5)
+        self.assertNotIn([24], added_branch_clauses)
+        self.assertEqual(
+            encoded.opb_text().splitlines()[0],
+            "* #variable= 289338 #constraint= 291756",
+        )
+
     def test_cli_rejects_unsafe_n3_legacy_branch_combination(self) -> None:
-        with self.assertRaisesRegex(SystemExit, "joint symmetry"):
+        with self.assertRaisesRegex(SystemExit, "n3-branch"):
             main(["--pair-count", "7", "--n3", "--branch", "6"])
+
+    def test_cli_validates_and_reports_n3_joint_branch(self) -> None:
+        with self.assertRaisesRegex(SystemExit, "requires --n3"):
+            main(["--pair-count", "7", "--n3-branch", "1"])
+        for branch_number in (0, 13):
+            with self.subTest(branch_number=branch_number):
+                with self.assertRaisesRegex(SystemExit, "must be in 1..12"):
+                    main(
+                        [
+                            "--pair-count",
+                            "7",
+                            "--n3",
+                            "--n3-branch",
+                            str(branch_number),
+                        ]
+                    )
+        with self.assertRaisesRegex(SystemExit, "shared coordinate 2"):
+            main(
+                [
+                    "--pair-count",
+                    "7",
+                    "--n3",
+                    "--n3-branch",
+                    "1",
+                    "--branch-coordinate",
+                    "2",
+                ]
+            )
+
+        output = StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(
+                main(
+                    [
+                        "--pair-count",
+                        "7",
+                        "--cardinality",
+                        "native",
+                        "--n3",
+                        "--n3-branch",
+                        "1",
+                    ]
+                ),
+                0,
+            )
+        report = json.loads(output.getvalue())
+        branch = report["n3_joint_branch"]
+        self.assertEqual(branch["branch"], 1)
+        self.assertEqual(branch["cover_branch_count"], 12)
+        self.assertEqual(branch["fiber_coordinate"], 2)
+        self.assertEqual(branch["orbit_size"], 1)
+        self.assertEqual(
+            branch["positive_edge_literals"],
+            [24, 943, 1834, 1947, 2056, 2161],
+        )
+        self.assertEqual(report["encoding"]["clauses"], 285_918)
 
     def test_cli_rejects_n3_on_every_non_target_scaffold(self) -> None:
         for pair_count in (2, 3):
@@ -201,13 +313,26 @@ class DirectSatEncodingTests(unittest.TestCase):
     def test_direct_api_rejects_n3_legacy_branch_in_either_order(self) -> None:
         n3_first = EncodedRootModel.build(7, "compact", "native")
         n3_first.add_n3_normalization()
-        with self.assertRaisesRegex(ValueError, "joint symmetry cover"):
+        with self.assertRaisesRegex(ValueError, "verified N3 joint cover"):
             n3_first.add_matching_branch(0, (6,))
 
         branch_first = EncodedRootModel.build(7, "compact", "native")
         branch_first.add_matching_branch(0, (6,))
-        with self.assertRaisesRegex(ValueError, "joint symmetry cover"):
+        with self.assertRaisesRegex(ValueError, "verified N3 joint cover"):
             branch_first.add_n3_normalization()
+
+    def test_direct_api_guards_n3_joint_branch_state(self) -> None:
+        wrong_size = EncodedRootModel.build(3, "compact", "native")
+        with self.assertRaisesRegex(ValueError, "only to pair_count 7"):
+            wrong_size.add_n3_joint_branch(1)
+
+        encoded = EncodedRootModel.build(7, "compact", "native")
+        with self.assertRaisesRegex(ValueError, "requires the N3 normalization"):
+            encoded.add_n3_joint_branch(1)
+        encoded.add_n3_normalization()
+        encoded.add_n3_joint_branch(1)
+        with self.assertRaisesRegex(ValueError, "already been added"):
+            encoded.add_n3_joint_branch(2)
 
     def test_only_small_matching_branch_is_still_sat(self) -> None:
         encoded = EncodedRootModel.build(2, "compact")

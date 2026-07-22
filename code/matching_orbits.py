@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter
+from functools import lru_cache
 from itertools import combinations
 from pathlib import Path
 from typing import Any, Iterator, Sequence
@@ -19,6 +20,10 @@ from root_model import RootModel
 
 
 Matching = tuple[tuple[int, int], ...]
+
+N3_SHARED_COORDINATE = 2
+N3_FIXED_ENDPOINT_EDGE = (0, 4)
+N3_REMAINING_ENDPOINTS = (1, 5, 6, 7, 8, 9, 10, 11, 12, 13)
 
 
 def integer_partitions(total: int, maximum: int | None = None) -> Iterator[tuple[int, ...]]:
@@ -158,6 +163,145 @@ def permute_matching(matching: Matching, permutation: Sequence[int]) -> Matching
     )
 
 
+def n3_unit_stabilizer_generators() -> tuple[tuple[int, ...], ...]:
+    """Generators for the target N3-unit stabilizer inside C2 wreath S7.
+
+    The normalized unit joins labels (0,2) and (2,4).  Its unique shared
+    coordinate 2 and mate 3 are fixed.  The coordinate pairs (0,1) and (4,5)
+    may be exchanged, while the other four scaffold pairs retain their full
+    wreath-product action.
+    """
+
+    identity = tuple(range(14))
+    generators: list[tuple[int, ...]] = []
+
+    permutation = list(identity)
+    permutation[0], permutation[4] = 4, 0
+    permutation[1], permutation[5] = 5, 1
+    generators.append(tuple(permutation))
+
+    for left in (6, 8, 10, 12):
+        permutation = list(identity)
+        permutation[left], permutation[left + 1] = left + 1, left
+        generators.append(tuple(permutation))
+
+    for first, second in ((6, 8), (8, 10), (10, 12)):
+        permutation = list(identity)
+        permutation[first], permutation[second] = second, first
+        permutation[first + 1], permutation[second + 1] = second + 1, first + 1
+        generators.append(tuple(permutation))
+
+    return tuple(generators)
+
+
+@lru_cache(maxsize=1)
+def n3_joint_matching_orbits() -> tuple[tuple[Matching, int], ...]:
+    """Return the 12 matching orbits on the invariant shared fiber S_2.
+
+    The N3 unit already fixes endpoint edge (0,4), leaving ten endpoints and
+    9!!=945 perfect matchings.  Representatives are the lexicographic minima
+    under the exact N3-unit stabilizer generators.
+    """
+
+    unseen = set(perfect_matchings(N3_REMAINING_ENDPOINTS))
+    generators = n3_unit_stabilizer_generators()
+    orbits: list[tuple[Matching, int]] = []
+
+    while unseen:
+        remaining_representative = min(unseen)
+        orbit = {remaining_representative}
+        frontier = [remaining_representative]
+        while frontier:
+            current = frontier.pop()
+            for generator in generators:
+                image = permute_matching(current, generator)
+                if image not in orbit:
+                    orbit.add(image)
+                    frontier.append(image)
+        if not orbit <= unseen:
+            raise AssertionError("N3 matching orbits overlap")
+        unseen.difference_update(orbit)
+        full_representative = tuple(
+            sorted((N3_FIXED_ENDPOINT_EDGE, *remaining_representative))
+        )
+        orbits.append((full_representative, len(orbit)))
+
+    return tuple(orbits)
+
+
+def n3_joint_branch_decisions(
+    root: RootModel, branch_number: int
+) -> dict[tuple[int, int], bool]:
+    """Fix one branch of the complete N3-stabilized matching cover on S_2."""
+
+    if root.pair_count != 7:
+        raise ValueError("the N3 joint cover applies only to pair_count 7")
+    if type(branch_number) is not int:
+        raise ValueError("N3 joint branch number must be an integer")
+    orbits = n3_joint_matching_orbits()
+    if not 1 <= branch_number <= len(orbits):
+        raise ValueError(f"N3 joint branch number must be in 1..{len(orbits)}")
+
+    representative, _ = orbits[branch_number - 1]
+    fiber = root.containing(N3_SHARED_COORDINATE)
+    endpoint_to_label: dict[int, int] = {}
+    for label_index in fiber:
+        left, right = root.labels[label_index]
+        other = right if left == N3_SHARED_COORDINATE else left
+        endpoint_to_label[other] = label_index
+    if set(endpoint_to_label) != {
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+    }:
+        raise AssertionError("unexpected N3 shared-fiber endpoints")
+
+    true_edges = {
+        tuple(sorted((endpoint_to_label[left], endpoint_to_label[right])))
+        for left, right in representative
+    }
+    if len(true_edges) != 6:
+        raise AssertionError("N3 joint representative is not a perfect matching")
+    return {
+        tuple(sorted((first, second))): tuple(sorted((first, second))) in true_edges
+        for first, second in combinations(fiber, 2)
+    }
+
+
+def n3_joint_summary() -> dict[str, Any]:
+    orbits = n3_joint_matching_orbits()
+    if sum(size for _, size in orbits) != 945:
+        raise AssertionError("N3 joint orbits do not cover all 945 matchings")
+    return {
+        "format": "n3-joint-fiber-matching-orbits-v1",
+        "pair_count": 7,
+        "branch_coordinate": N3_SHARED_COORDINATE,
+        "fixed_endpoint_edge": list(N3_FIXED_ENDPOINT_EDGE),
+        "stabilizer": "C2 x (C2 wreath S4)",
+        "stabilizer_order": 768,
+        "matching_count": 945,
+        "orbit_count": len(orbits),
+        "orbits": [
+            {
+                "branch": branch,
+                "orbit_size": size,
+                "stabilizer_size": 768 // size,
+                "representative": [list(edge) for edge in representative],
+            }
+            for branch, (representative, size) in enumerate(orbits, start=1)
+        ],
+    }
+
+
 def orbit_sizes_via_generators(pair_count: int = 6) -> dict[tuple[int, ...], int]:
     """Exhaustively compute matching orbits under C2 wreath S_pair_count."""
 
@@ -254,18 +398,28 @@ def summary(pair_count: int = 6) -> dict[str, Any]:
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--pair-count", type=int, default=6)
+    parser.add_argument("--pair-count", type=int)
+    parser.add_argument(
+        "--n3-joint",
+        action="store_true",
+        help="emit the target-specific 12-branch N3-stabilized cover",
+    )
     parser.add_argument("--output", type=Path)
     return parser.parse_args(argv)
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
-    report = summary(args.pair_count)
+    if args.n3_joint:
+        if args.pair_count not in (None, 7):
+            raise SystemExit("--n3-joint applies only to --pair-count 7")
+        report = n3_joint_summary()
+    else:
+        report = summary(args.pair_count if args.pair_count is not None else 6)
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(rendered, encoding="utf-8")
+        args.output.write_text(rendered, encoding="utf-8", newline="\n")
     else:
         print(rendered, end="")
     return 0

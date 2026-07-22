@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Exact coverage tests for the 11 canonical endpoint-fiber branches."""
+"""Exact coverage tests for the legacy and N3-joint matching branches."""
 
 from __future__ import annotations
 
+import json
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 
 from matching_orbits import (
     canonical_branch_decisions,
     canonical_matching,
     integer_partitions,
     matching_type,
+    main as matching_main,
+    n3_joint_branch_decisions,
+    n3_joint_matching_orbits,
+    n3_joint_summary,
+    n3_unit_stabilizer_generators,
     orbit_sizes_via_generators,
     orbit_type_counts,
 )
@@ -29,6 +37,21 @@ EXPECTED_COUNTS = {
     (2, 1, 1, 1, 1): 30,
     (1, 1, 1, 1, 1, 1): 1,
 }
+
+EXPECTED_N3_ORBITS = (
+    (((0, 4), (1, 5), (6, 7), (8, 9), (10, 11), (12, 13)), 1),
+    (((0, 4), (1, 5), (6, 7), (8, 9), (10, 12), (11, 13)), 12),
+    (((0, 4), (1, 5), (6, 7), (8, 10), (9, 12), (11, 13)), 32),
+    (((0, 4), (1, 5), (6, 8), (7, 9), (10, 12), (11, 13)), 12),
+    (((0, 4), (1, 5), (6, 8), (7, 10), (9, 12), (11, 13)), 48),
+    (((0, 4), (1, 6), (5, 7), (8, 9), (10, 11), (12, 13)), 8),
+    (((0, 4), (1, 6), (5, 7), (8, 9), (10, 12), (11, 13)), 48),
+    (((0, 4), (1, 6), (5, 7), (8, 10), (9, 12), (11, 13)), 64),
+    (((0, 4), (1, 6), (5, 8), (7, 9), (10, 11), (12, 13)), 48),
+    (((0, 4), (1, 6), (5, 8), (7, 9), (10, 12), (11, 13)), 96),
+    (((0, 4), (1, 6), (5, 8), (7, 10), (9, 11), (12, 13)), 192),
+    (((0, 4), (1, 6), (5, 8), (7, 10), (9, 12), (11, 13)), 384),
+)
 
 
 class MatchingOrbitTests(unittest.TestCase):
@@ -65,6 +88,81 @@ class MatchingOrbitTests(unittest.TestCase):
                         degrees[first] += 1
                         degrees[second] += 1
                 self.assertEqual(set(degrees.values()), {1})
+
+    def test_n3_unit_stabilizer_generators_have_order_768(self) -> None:
+        generators = n3_unit_stabilizer_generators()
+        self.assertEqual(len(generators), 8)
+        identity = tuple(range(14))
+        group = {identity}
+        frontier = [identity]
+        unit = {frozenset((0, 2)), frozenset((2, 4))}
+        while frontier:
+            current = frontier.pop()
+            for generator in generators:
+                image = tuple(generator[value] for value in current)
+                if image not in group:
+                    group.add(image)
+                    frontier.append(image)
+        self.assertEqual(len(group), 768)
+        for permutation in group:
+            self.assertEqual(sorted(permutation), list(range(14)))
+            self.assertTrue(
+                all(
+                    permutation[coordinate ^ 1] == (permutation[coordinate] ^ 1)
+                    for coordinate in range(14)
+                )
+            )
+            image_unit = {
+                frozenset(permutation[coordinate] for coordinate in label)
+                for label in unit
+            }
+            self.assertEqual(image_unit, unit)
+
+    def test_n3_joint_matching_orbits_are_the_expected_complete_cover(self) -> None:
+        self.assertEqual(n3_joint_matching_orbits(), EXPECTED_N3_ORBITS)
+        self.assertEqual(sum(size for _, size in EXPECTED_N3_ORBITS), 945)
+        summary = n3_joint_summary()
+        self.assertEqual(summary["orbit_count"], 12)
+        self.assertEqual(summary["matching_count"], 945)
+        self.assertEqual(summary["branch_coordinate"], 2)
+        self.assertEqual(summary["fixed_endpoint_edge"], [0, 4])
+
+    def test_each_n3_joint_branch_fixes_a_full_matching_on_shared_fiber(self) -> None:
+        root = RootModel.build(7)
+        indices = root.label_index()
+        fixed_edge = tuple(sorted((indices[(0, 2)], indices[(2, 4)])))
+        for branch_number in range(1, 13):
+            with self.subTest(branch_number=branch_number):
+                decisions = n3_joint_branch_decisions(root, branch_number)
+                self.assertEqual(len(decisions), 66)
+                self.assertEqual(sum(decisions.values()), 6)
+                self.assertTrue(decisions[fixed_edge])
+                fiber = set(root.containing(2))
+                degrees = {vertex: 0 for vertex in fiber}
+                for (first, second), present in decisions.items():
+                    self.assertIn(first, fiber)
+                    self.assertIn(second, fiber)
+                    if present:
+                        degrees[first] += 1
+                        degrees[second] += 1
+                self.assertEqual(set(degrees.values()), {1})
+
+    def test_n3_joint_branch_rejects_wrong_scaffold_and_index(self) -> None:
+        with self.assertRaisesRegex(ValueError, "only to pair_count 7"):
+            n3_joint_branch_decisions(RootModel.build(3), 1)
+        root = RootModel.build(7)
+        for branch_number in (True, 0, 13):
+            with self.subTest(branch_number=branch_number):
+                with self.assertRaisesRegex(ValueError, "branch number"):
+                    n3_joint_branch_decisions(root, branch_number)
+
+    def test_n3_joint_cli_rejects_an_explicit_wrong_pair_count(self) -> None:
+        with self.assertRaisesRegex(SystemExit, "only to --pair-count 7"):
+            matching_main(["--n3-joint", "--pair-count", "3"])
+        output = StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(matching_main(["--n3-joint"]), 0)
+        self.assertEqual(json.loads(output.getvalue())["pair_count"], 7)
 
 
 if __name__ == "__main__":

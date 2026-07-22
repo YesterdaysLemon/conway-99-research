@@ -20,7 +20,12 @@ from pysat.card import CardEnc, EncType
 from pysat.formula import CNF, CNFPlus, IDPool
 from pysat.solvers import Solver
 
-from matching_orbits import canonical_branch_decisions, parse_partition
+from matching_orbits import (
+    canonical_branch_decisions,
+    n3_joint_branch_decisions,
+    n3_joint_matching_orbits,
+    parse_partition,
+)
 from root_model import RootModel
 
 
@@ -35,6 +40,7 @@ class EncodedRootModel:
     cardinality_backend: str
     matching_branch_added: bool = False
     n3_normalized: bool = False
+    n3_joint_branch_number: int | None = None
 
     @classmethod
     def build(
@@ -252,7 +258,7 @@ class EncodedRootModel:
         if self.n3_normalized:
             raise ValueError(
                 "the N3 normalization cannot be combined with legacy matching "
-                "representatives without a separate joint symmetry cover"
+                "representatives; use the verified N3 joint cover"
             )
         decisions = canonical_branch_decisions(self.root, coordinate, partition)
         for edge, present in decisions.items():
@@ -274,7 +280,7 @@ class EncodedRootModel:
         if self.matching_branch_added:
             raise ValueError(
                 "the N3 normalization cannot be combined with legacy matching "
-                "representatives without a separate joint symmetry cover"
+                "representatives; use the verified N3 joint cover"
             )
         if self.n3_normalized:
             raise ValueError("the N3 normalization has already been added")
@@ -285,6 +291,39 @@ class EncodedRootModel:
         self.cnf.append([literal])
         self.n3_normalized = True
         return literal
+
+    def add_n3_joint_branch(self, branch_number: int) -> tuple[int, ...]:
+        """Fix one of the 12 complete matching orbits after N3 normalization."""
+
+        if self.root.pair_count != 7:
+            raise ValueError("the N3 joint cover applies only to pair_count 7")
+        if not self.n3_normalized:
+            raise ValueError("the N3 joint branch requires the N3 normalization first")
+        if self.matching_branch_added:
+            raise ValueError("the N3 joint cover cannot follow a legacy matching branch")
+        if self.n3_joint_branch_number is not None:
+            raise ValueError("an N3 joint branch has already been added")
+
+        decisions = n3_joint_branch_decisions(self.root, branch_number)
+        indices = self.root.label_index()
+        fixed_edge = tuple(sorted((indices[(0, 2)], indices[(2, 4)])))
+        positive_literals = tuple(
+            sorted(
+                self.edge_variables[edge]
+                for edge, present in decisions.items()
+                if present
+            )
+        )
+        if self.edge_variables[fixed_edge] != 24 or 24 not in positive_literals:
+            raise AssertionError("N3 joint branch does not contain the normalized unit")
+
+        for edge, present in decisions.items():
+            if edge == fixed_edge:
+                continue
+            literal = self.edge_variables[edge]
+            self.cnf.append([literal if present else -literal])
+        self.n3_joint_branch_number = branch_number
+        return positive_literals
 
     def full_certificate(self, model: Sequence[int]) -> dict[str, Any]:
         """Decode a SAT assignment into the complete normalized graph."""
@@ -370,6 +409,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="fix one target-specific cited-and-derived N3 by global relabeling",
     )
+    parser.add_argument(
+        "--n3-branch",
+        type=int,
+        metavar="1..12",
+        help="select one branch of the verified N3-stabilized shared-fiber cover",
+    )
     parser.add_argument("--solve", action="store_true")
     parser.add_argument(
         "--solver",
@@ -409,7 +454,19 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.n3 and args.branch:
         raise SystemExit(
             "--n3 cannot be combined with the legacy --branch representatives; "
-            "their joint symmetry requires a separate complete cover"
+            "use --n3-branch for the verified joint cover"
+        )
+    if args.n3_branch is not None and not args.n3:
+        raise SystemExit("--n3-branch requires --n3")
+    n3_branch_count = (
+        len(n3_joint_matching_orbits()) if args.n3_branch is not None else 0
+    )
+    if args.n3_branch is not None and not 1 <= args.n3_branch <= n3_branch_count:
+        raise SystemExit(f"--n3-branch must be in 1..{n3_branch_count}")
+    if args.n3_branch is not None and args.branch_coordinate != 0:
+        raise SystemExit(
+            "--branch-coordinate applies only to legacy --branch; the N3 joint "
+            "cover uses shared coordinate 2"
         )
 
     encoded = EncodedRootModel.build(
@@ -421,6 +478,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         partition = parse_partition(args.branch, args.pair_count - 1)
         encoded.add_matching_branch(args.branch_coordinate, partition)
     n3_literal = encoded.add_n3_normalization() if args.n3 else None
+    n3_positive_literals = (
+        encoded.add_n3_joint_branch(args.n3_branch)
+        if args.n3_branch is not None
+        else None
+    )
     report: dict[str, Any] = {"encoding": encoded.statistics()}
     if args.branch:
         report["branch"] = {
@@ -431,6 +493,21 @@ def main(argv: Sequence[str] | None = None) -> int:
         report["n3_normalization"] = {
             "residual_labels": [[0, 2], [2, 4]],
             "edge_literal": n3_literal,
+            "completed_graph_automorphism_assumed": False,
+        }
+    if args.n3_branch is not None:
+        representative, orbit_size = n3_joint_matching_orbits()[args.n3_branch - 1]
+        report["n3_joint_branch"] = {
+            "branch": args.n3_branch,
+            "cover_branch_count": n3_branch_count,
+            "fiber_coordinate": 2,
+            "representative_endpoint_matching": [
+                list(edge) for edge in representative
+            ],
+            "orbit_size": orbit_size,
+            "stabilizer_size": 768 // orbit_size,
+            "positive_edge_literals": list(n3_positive_literals or ()),
+            "added_unit_clauses": 65,
             "completed_graph_automorphism_assumed": False,
         }
 
