@@ -1,0 +1,67 @@
+schema_version: 1
+as_of: 2026-07-22
+obligations:
+  - id: O-STATEMENT
+    requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
+    critical: true
+    status: PASS
+    evidence:
+      - "CONJECTURE.md"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: O-LITERATURE
+    requirement: "Audit current primary literature under alternate terminology and state the search-date limitation."
+    critical: true
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-statement-literature.md"
+      - "SOURCES.bib"
+
+  - id: O-POSITIVE-CERTIFICATE
+    requirement: "Produce a complete 99-vertex certificate and pass two independent exact validators."
+    critical: true
+    status: UNKNOWN
+    evidence: []
+
+  - id: O-NEGATIVE-CERTIFICATE
+    requirement: "Produce a complete proof or exact exhaustive encoding with a complete independently checked proof artifact."
+    critical: true
+    status: UNKNOWN
+    evidence: []
+
+  - id: O-UNSAT-PIPELINE
+    requirement: "Pin and calibrate a stable external proof-producing solver and mature independent proof checker."
+    critical: false
+    status: UNKNOWN
+    evidence:
+      - "verification/2026-07-22-first-wave-audit.md"
+    note: "The unstable PySAT in-process proof path is rejected."
+
+  - id: O-CLEAN-REPRODUCTION
+    requirement: "Reproduce decisive artifacts from a clean clone with pinned dependencies and recorded hashes."
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "REPRODUCING.md"
+      - "logs/2026-07-22-first-wave.json"
+    note: "First-wave local checks pass, but no decisive target artifact exists."
+
+  - id: O-SYMMETRY-SAFETY
+    requirement: "Prove every search normalization complete without assuming a nontrivial solution automorphism."
+    critical: true
+    status: PASS
+    evidence:
+      - "attempts/2026-07-22-eleven-branch-cover.md"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: O-WAVE2-STRUCTURAL
+    requirement: "Adversarially verify any Wave 2 structural lemma before using it as a search cut or proof step."
+    critical: false
+    status: UNKNOWN
+    evidence: []
+
+  - id: O-WAVE2-COMPUTATIONAL
+    requirement: "Calibrate and independently check any Wave 2 encoding improvement before target experiments."
+    critical: false
+    status: UNKNOWN
+    evidence: []

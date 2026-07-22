@@ -77,6 +77,8 @@ status.
 - [CONJECTURE.md](CONJECTURE.md): exact target and normalized formulation.
 - [STRUCTURE.md](STRUCTURE.md): checked global and rooted consequences.
 - [STATUS.yaml](STATUS.yaml): machine-readable project status.
+- [CLAIMS.yaml](CLAIMS.yaml): claim and resolution-candidate ledger.
+- [OBLIGATIONS.yaml](OBLIGATIONS.yaml): proof and verification obligations.
 - [SOURCES.bib](SOURCES.bib): bibliography and provenance.
 - [REPRODUCING.md](REPRODUCING.md): reproducibility and certificate policy.
 - [PROMPT.md](PROMPT.md): reusable orchestrator/parallel-agent/verifier prompt.

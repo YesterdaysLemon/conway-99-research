@@ -8,6 +8,8 @@ literature_audit:
   caveat: "A literature search cannot prove that no resolution exists."
 project_status: EXPLORATORY
 resolution_claim: NONE
+claim_ledger: "CLAIMS.yaml"
+proof_obligation_ledger: "OBLIGATIONS.yaml"
 symmetry_policy:
   full_search_assumes_nontrivial_automorphism: false
   note: "Symmetry-conditioned branches must be labeled as restricted subproblems."

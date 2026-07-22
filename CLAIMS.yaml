@@ -1,0 +1,79 @@
+schema_version: 1
+as_of: 2026-07-22
+project_primary_status: EXPLORATORY
+resolution_candidates: []
+claims:
+  - id: C-STATUS-001
+    statement: "No resolution of srg(99,14,1,2) was found in the primary sources audited through 2026-07-22."
+    label: CITED
+    scope: LITERATURE_STATUS_ONLY
+    evidence:
+      - "agents/2026-07-22-statement-literature.md"
+      - "SOURCES.bib"
+    limitations: "A literature search cannot prove that no resolution exists."
+
+  - id: C-EQUIV-001
+    statement: "Conway's unique-triangle/unique-quadrilateral wording is equivalent to srg(99,14,1,2)."
+    label: DERIVED
+    scope: UNRESTRICTED_TARGET
+    evidence:
+      - "CONJECTURE.md"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-ROOT-001
+    statement: "Fixing a root gives an exact 84-vertex residual formulation with no completed-graph automorphism assumption."
+    label: DERIVED
+    scope: UNRESTRICTED_TARGET
+    evidence:
+      - "CONJECTURE.md"
+      - "code/root_model.py"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-STRUCT-001
+    statement: "The pair table, local neighborhood structure, global counts, and residual spectrum in STRUCTURE.md are necessary consequences of a putative graph."
+    label: DERIVED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-proof-a.md"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-BRANCH-001
+    statement: "The 10,395 perfect matchings in one endpoint fiber form exactly 11 C2 wreath S6 orbits, so all 11 branches give a safe complete split."
+    label: VERIFIED
+    scope: UNRESTRICTED_ROOTED_SEARCH
+    evidence:
+      - "attempts/2026-07-22-eleven-branch-cover.md"
+      - "code/matching_orbits.py"
+      - "code/test_matching_orbits.py"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-ENCODING-001
+    statement: "The compact one-way-wedge SAT encoding is equisatisfiable with the rooted residual equations."
+    label: VERIFIED
+    scope: ENCODING_SEMANTICS
+    evidence:
+      - "attempts/2026-07-22-compact-sat-encoding.md"
+      - "code/sat_model.py"
+      - "code/test_sat_model.py"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-REJECTED-001
+    statement: "One canonical 24-vertex configuration per multiple-of-four cycle partition would be a complete symmetry split."
+    label: REJECTED
+    scope: UNSAFE_SYMMETRY_SHORTCUT
+    evidence:
+      - "STRUCTURE.md"
+      - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-EXISTS-001
+    statement: "A graph srg(99,14,1,2) exists."
+    label: UNKNOWN
+    scope: TARGET
+    evidence: []
+
+  - id: C-NONEXISTS-001
+    statement: "No graph srg(99,14,1,2) exists."
+    label: UNKNOWN
+    scope: TARGET
+    evidence: []
