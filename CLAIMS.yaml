@@ -100,6 +100,20 @@ claims:
       - "verification/2026-07-22-wave3-clean-clone.md"
     limitations: "The VERIFIED label covers the conditional relabeling and implementation only; universal N3 occurrence remains DERIVED and the target remains UNKNOWN."
 
+  - id: C-N3-JOINT-COVER-001
+    statement: "Conditional on the canonical N3 unit, the 945 compatible perfect matchings on invariant fiber S_2 form exactly 12 orbits under the order-768 N3 stabilizer, giving a complete symmetry-safe SAT branch cover."
+    label: VERIFIED
+    scope: CONDITIONAL_ENCODING_BRANCH_COVER
+    evidence:
+      - "agents/2026-07-22-wave5-n3-joint-cover.md"
+      - "code/matching_orbits.py"
+      - "code/sat_model.py"
+      - "verification/n3-joint-cover/n3-joint-cover.json"
+      - "verification/n3-joint-cover/verify.py"
+      - "verification/2026-07-22-n3-joint-cover-audit.md"
+      - "verification/2026-07-22-wave5-clean-clone.md"
+    limitations: "Universal N3 occurrence remains DERIVED; no branch is solved and the target remains UNKNOWN. The legacy S_0 diagnostic has 78 orbits and is not the 12-branch cover."
+
   - id: C-PERCOLATION-001
     statement: "Each of the two central diagonal nonedges of any induced N3 2-percolates a putative Conway graph, so m(G,2)=2."
     label: DERIVED

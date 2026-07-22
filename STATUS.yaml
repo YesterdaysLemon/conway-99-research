@@ -73,4 +73,13 @@ fourth_research_wave:
   verifier_report: "verification/2026-07-22-n3-normalization-audit.md"
   clean_clone_replay: "verification/2026-07-22-wave3-clean-clone.md"
   caveat: "Universal N3 occurrence remains DERIVED; the safe normalization cannot be combined with the legacy 11 branch representatives, and its bounded target run concluded only NO CONCLUSION."
+fifth_research_wave:
+  source_commit: "b075fdd33c0023cbbbebc63469a87f5430c2da34"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_JOINT_COVER
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave5-n3-joint-cover.md"
+  verifier_report: "verification/2026-07-22-n3-joint-cover-audit.md"
+  clean_clone_replay: "verification/2026-07-22-wave5-clean-clone.md"
+  scout_manifest: "logs/2026-07-22-wave5-n3-joint-scout.json"
+  caveat: "The 12 branches are complete conditional on the DERIVED universal N3 premise. Every scout returned UNKNOWN; checker replay reported VERIFIED NO CONCLUSION."
 last_updated: 2026-07-22

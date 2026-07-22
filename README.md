@@ -53,10 +53,21 @@ controls pass. A 10-second full target log is itself verified to have
 Wave 4 turns the derived universal `N3` consequence into a separately verified
 target normalization: after safe global relabeling it is the single residual
 unit `+24`. The unbranched `--n3` formula is equisatisfiable conditional on the
-derived occurrence claim and assumes no completed-graph automorphism. It is
-deliberately incompatible with the legacy 11 representatives until a complete
-joint stabilizer cover is proved. See the
+derived occurrence claim and assumes no completed-graph automorphism. Wave 4
+deliberately rejected the legacy 11 representatives because their interaction
+with the smaller stabilizer had not yet been proved. See the
 [N3 audit](verification/2026-07-22-n3-normalization-audit.md).
+
+Wave 5 supplies that missing joint analysis on the invariant shared fiber
+`S_2`. The normalized stabilizer has order 768, and its action partitions the
+945 compatible fiber matchings into exactly 12 verified orbits. A strict
+standalone checker independently reconstructs the full stabilizer, cover,
+Burnside checksum, representatives, and SAT literals. All 12 proof-producing
+five-second scouts ended in checked `NO CONCLUSION`, so the target remains
+`UNKNOWN`. See the
+[joint-cover audit](verification/2026-07-22-n3-joint-cover-audit.md),
+[certificate](verification/n3-joint-cover/n3-joint-cover.json), and
+[clean-clone replay](verification/2026-07-22-wave5-clean-clone.md).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
@@ -120,8 +131,13 @@ status.
   OPB fixtures and Exact/VeriPB/CakePB replay.
 - [N3 normalization audit](verification/2026-07-22-n3-normalization-audit.md):
   independent orbit, implementation, and safety review.
+- [N3 joint-cover audit](verification/2026-07-22-n3-joint-cover-audit.md):
+  independent proof of the conditional 12-branch split and strict certificate
+  review.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
+- [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
+  frozen-commit tests and byte-identical regeneration of all 12 branch OPBs.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

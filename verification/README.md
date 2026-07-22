@@ -55,5 +55,24 @@ commands, artifact hashes, and the target-scope warning are recorded in
 `2026-07-22-lrat-calibration.md`.
 
 This calibration does not make an embedded-solver `UNSAT` result evidentiary.
-A target claim still requires retained proofs for all 11 complete branches and
+A target claim still requires retained proofs for a proved complete cover and
 independent replay of every artifact.
+
+## Conditional `N3` joint-cover checker
+
+`n3-joint-cover/verify.py` is a standard-library verifier for the strict JSON
+certificate describing the 12 matching orbits after canonical `N3`
+normalization. It independently enumerates the full rooted scaffold
+stabilizer, all 945 compatible matchings, orbit-stabilizer products, a Burnside
+checksum, the legacy-fiber diagnostic, and SAT literal numbering.
+
+```powershell
+python verification/n3-joint-cover/verify.py
+python verification/n3-joint-cover/verify.py `
+  verification/n3-joint-cover/n3-joint-cover.json
+```
+
+The parser rejects duplicate keys, booleans masquerading as integers, unknown
+fields, and non-standard JSON constants. This certificate proves only the
+conditional finite branch cover. It neither establishes the upstream `N3`
+occurrence theorem nor solves a target branch.

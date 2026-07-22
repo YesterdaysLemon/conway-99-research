@@ -114,11 +114,27 @@ the target:
   --cardinality native --opb logs/local/conway99-n3-native-lf.opb
 ```
 
-Do not add a legacy `--branch` to this command. Fixing the N3 witness changes
-the stabilizer, so the old 11 representatives are not a proved complete joint
-cover; the CLI and direct API reject that unsafe combination. The derivation
-and independent audit are in
-`verification/2026-07-22-n3-normalization-audit.md`.
+Fixing the N3 witness changes the stabilizer, so the old 11 representatives
+remain incompatible and the CLI rejects that combination. Use the separately
+verified 12-branch cover instead:
+
+```powershell
+.venv\Scripts\python code/matching_orbits.py --n3-joint
+.venv\Scripts\python verification/n3-joint-cover/verify.py
+1..12 | ForEach-Object {
+  $branch = '{0:D2}' -f $_
+  .venv\Scripts\python code/sat_model.py --pair-count 7 `
+    --cardinality native --n3 --n3-branch $_ `
+    --opb "logs/local/conway99-n3-branch-$branch.opb"
+}
+```
+
+All 12 branches together cover the normalized search. They act on the
+invariant shared fiber `S_2`; the legacy `S_0` fiber is moved by part of the
+stabilizer and has 78 orbits under its preserving subgroup. The exact
+derivation, public certificate, and independent audit are in
+`agents/2026-07-22-wave5-n3-joint-cover.md` and
+`verification/2026-07-22-n3-joint-cover-audit.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.

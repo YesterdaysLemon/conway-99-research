@@ -47,7 +47,8 @@ obligations:
       - "logs/2026-07-22-first-wave.json"
       - "verification/2026-07-22-wave2-clean-clone.md"
       - "verification/2026-07-22-wave3-clean-clone.md"
-    note: "Wave 2 and Wave 3/N3 infrastructure replays pass from fresh clones, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave5-clean-clone.md"
+    note: "Wave 2, Wave 3/N3, and Wave 5 infrastructure replays pass from fresh clones, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
     requirement: "Prove the frozen root normalization and legacy 11-branch cover complete without assuming a nontrivial solution automorphism."
@@ -122,4 +123,16 @@ obligations:
       - "agents/2026-07-22-wave4-n3-normalization.md"
       - "verification/2026-07-22-n3-normalization-audit.md"
       - "verification/2026-07-22-wave3-clean-clone.md"
-    note: "The safe unbranched --n3 formula is verified. Do not combine it with the legacy 11 representatives without a separately proved joint cover."
+    note: "The safe unbranched --n3 formula is verified. The legacy 11 representatives remain incompatible; use the separately verified 12-branch N3 joint cover."
+
+  - id: O-N3-JOINT-COVER
+    requirement: "Derive and independently verify a complete matching branch cover under the exact stabilizer of the canonical N3 unit, without assuming a completed-graph automorphism."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave5-n3-joint-cover.md"
+      - "verification/n3-joint-cover/n3-joint-cover.json"
+      - "verification/n3-joint-cover/verify.py"
+      - "verification/2026-07-22-n3-joint-cover-audit.md"
+      - "verification/2026-07-22-wave5-clean-clone.md"
+    note: "The 12 branches cover the N3-normalized search only; universal N3 occurrence remains DERIVED and no target branch is resolved."

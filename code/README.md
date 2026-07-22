@@ -89,9 +89,24 @@ relabeling then reduces the normalization to the single residual edge unit
 The flag is rejected on calibration sizes. Both CLI and direct API also reject
 combining it with the legacy `--branch` representatives: fixing the witness
 changes the stabilizer, so those 11 representatives are no longer a proved
-complete joint cover. See `agents/2026-07-22-wave4-n3-normalization.md`.
-The conditional implementation and these guards are independently checked in
+complete joint cover. See `agents/2026-07-22-wave4-n3-normalization.md` and
 `verification/2026-07-22-n3-normalization-audit.md`.
+
+The separately proved replacement is a 12-branch cover on the invariant
+shared fiber `S_2`:
+
+```powershell
+.venv\Scripts\python code\matching_orbits.py --n3-joint
+.venv\Scripts\python code\sat_model.py --pair-count 7 --n3 `
+  --n3-branch 1 --cardinality native `
+  --opb logs\local\conway99-n3-branch-01.opb
+```
+
+The normalized stabilizer has order 768. Its 945 compatible fiber matchings
+split into 12 exact orbits. Each branch fixes all 66 shared-fiber edges, with
+six positive and 60 negative units; `+24` is already supplied by `--n3`, so
+the branch itself adds 65 clauses. The certificate and independent checker are
+under `verification/n3-joint-cover/`.
 
 ## Eleven complete matching branches
 
@@ -107,8 +122,8 @@ python code/matching_orbits.py
 
 One branch is conditional; all 11 together cover the full rooted search.
 This statement concerns the legacy unnormalized search. Do not combine these
-representatives with `--n3`; use the safe unbranched `--n3` formula until a
-separate joint orbit cover has been verified.
+representatives with `--n3`; use `--n3-branch 1..12` for the separately
+verified normalized split.
 
 Use a conflict budget for scouting runs that must terminate reproducibly:
 
