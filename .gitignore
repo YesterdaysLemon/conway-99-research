@@ -15,6 +15,7 @@ env/
 *.lrat
 *.proof
 *.checkpoint
+logs/local/
 dist/
 build/
 

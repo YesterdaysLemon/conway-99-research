@@ -32,11 +32,61 @@ language.
 - Verify SAT/UNSAT results independently. For UNSAT, retain a checkable proof
   artifact such as LRAT when technically feasible.
 
-## Commands
+Create the optional search environment without changing the global Python
+installation:
 
-The initial scaffold intentionally contains no claimed search result. Commands
-will be added alongside the first independent checker and calibration suite;
-until then, `STATUS.yaml` remains the authoritative machine-readable status.
+```powershell
+python -m venv .venv
+.venv\Scripts\python -m pip install --requirement requirements-search.txt
+```
+
+The independent validators do not import this environment or trust its solver
+bindings.
+
+## Baseline commands
+
+Run the test suite and the known-positive `srg(9,4,1,2)` calibration fixture:
+
+```powershell
+python -m unittest discover -s verification -p "test_*.py" -v
+python verification/check_srg.py `
+  verification/fixtures/rook-3x3.srg.json `
+  --vertices 9 --degree 4 --lambda 1 --mu 2
+powershell -NoProfile -ExecutionPolicy Bypass -File verification/Check-Srg.ps1 `
+  -Certificate verification/fixtures/rook-3x3.srg.json `
+  -Vertices 9 -Degree 4 -AdjacentCommon 1 -NonadjacentCommon 2
+```
+
+Check the deterministic rooted scaffold and its constraint counts:
+
+```powershell
+python code/root_model.py
+python code/matching_orbits.py
+```
+
+Run the SAT encoding's positive and negative calibration cases:
+
+```powershell
+.venv\Scripts\python -m unittest discover -s code -p "test_*.py" -v
+.venv\Scripts\python code/sat_model.py --pair-count 2 --solve `
+  --candidate candidates/calibration-srg-9.srg.json
+python verification/check_srg.py candidates/calibration-srg-9.srg.json `
+  --vertices 9 --degree 4 --lambda 1 --mu 2
+```
+
+Validate a future Conway-format certificate using the frozen defaults:
+
+```powershell
+python verification/check_srg.py candidates/conway-99.srg.json
+```
+
+No such target certificate is currently claimed. `STATUS.yaml` remains the
+authoritative machine-readable status.
+
+`requirements-search.txt` pins the prototyping API version, but it is not an
+archival proof lockfile. Before a proof-producing run, also pin the Python ABI,
+wheel hashes, native solver binary, and independent checker binary, then record
+their cryptographic hashes in the run manifest.
 
 ## Artifact retention
 

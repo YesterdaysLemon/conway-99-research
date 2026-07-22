@@ -75,9 +75,13 @@ status.
 ## Repository map
 
 - [CONJECTURE.md](CONJECTURE.md): exact target and normalized formulation.
+- [STRUCTURE.md](STRUCTURE.md): checked global and rooted consequences.
 - [STATUS.yaml](STATUS.yaml): machine-readable project status.
 - [SOURCES.bib](SOURCES.bib): bibliography and provenance.
 - [REPRODUCING.md](REPRODUCING.md): reproducibility and certificate policy.
+- [PROMPT.md](PROMPT.md): reusable orchestrator/parallel-agent/verifier prompt.
+- [First-wave audit](verification/2026-07-22-first-wave-audit.md): adversarial
+  verifier verdict.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.
@@ -92,6 +96,7 @@ status.
 - [Conway, *Five $1,000 Problems* (2017 update)](https://oeis.org/A248380/a248380.pdf)
 - [Cesarz and Woldar, *Algebraic Combinatorics* 8 (2025)](https://doi.org/10.5802/alco.418)
 - [Keramatipour, *Approaching the Conway-99 problem using SAT solvers*](https://arxiv.org/abs/2604.23037)
+- [Petro and Phillips, *On clique graphs and clique regular graphs*](https://doi.org/10.1016/j.disc.2025.114862)
 
 An older public code repository is tracked only as prior art because no license
 was found during the initial audit. Its source must not be copied here.
