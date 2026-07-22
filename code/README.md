@@ -30,6 +30,27 @@ cross-check. Both use sequential counters and make no completed-graph
 automorphism assumption. The proof of compact exactness is recorded in
 `attempts/2026-07-22-compact-sat-encoding.md`.
 
+The independently reviewed `native` cardinality backend represents the same
+compact constraints directly for MiniCard. It removes sequential-counter
+auxiliaries but does not change the mathematics:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 2 `
+  --cardinality native --solve
+.venv\Scripts\python code/scout_branches.py --cardinality native `
+  --fresh-solvers --conflict-budget 100000
+```
+
+`--fresh-solvers` launches one isolated Python process per branch and
+materializes branch decisions as unit clauses. This avoids sharing embedded
+solver state between branches; startup time is included in each wall time.
+
+For the target this has 289,338 variables, 285,852 ordinary clauses, and
+5,838 native `AtMost` constraints. MiniCard has no accepted proof-logging path
+in this project, so it is discovery-only. Any apparent `UNSAT` result must be
+regenerated with the sequential-counter CNF backend and checked externally.
+See `attempts/2026-07-22-native-cardinality.md`.
+
 The small `pair_count=2` instance reconstructs an `srg(9,4,1,2)`. The
 `pair_count=3` instance is an `UNSAT_UNVERIFIED` negative control (its
 hypothetical spectrum is already infeasible). Run both before any target

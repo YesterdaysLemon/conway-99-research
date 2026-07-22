@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 from pysat.card import CardEnc, EncType
-from pysat.formula import CNF, IDPool
+from pysat.formula import CNF, CNFPlus, IDPool
 from pysat.solvers import Solver
 
 from matching_orbits import canonical_branch_decisions, parse_partition
@@ -26,19 +26,27 @@ from root_model import RootModel
 @dataclass
 class EncodedRootModel:
     root: RootModel
-    cnf: CNF
+    cnf: CNF | CNFPlus
     pool: IDPool
     edge_variables: dict[tuple[int, int], int]
     wedge_variables: dict[tuple[int, int, int], int]
     variant: str
+    cardinality_backend: str
 
     @classmethod
-    def build(cls, pair_count: int, variant: str = "compact") -> "EncodedRootModel":
+    def build(
+        cls,
+        pair_count: int,
+        variant: str = "compact",
+        cardinality_backend: str = "cnf",
+    ) -> "EncodedRootModel":
         if variant not in ("compact", "direct"):
             raise ValueError("variant must be 'compact' or 'direct'")
+        if cardinality_backend not in ("cnf", "native"):
+            raise ValueError("cardinality_backend must be 'cnf' or 'native'")
         root = RootModel.build(pair_count)
         root.validate_fixed_identities()
-        cnf = CNF()
+        cnf = CNF() if cardinality_backend == "cnf" else CNFPlus()
         pool = IDPool()
 
         edge_variables: dict[tuple[int, int], int] = {}
@@ -54,7 +62,15 @@ class EncodedRootModel:
                     ("wedge", first, second, center)
                 )
 
-        encoded = cls(root, cnf, pool, edge_variables, wedge_variables, variant)
+        encoded = cls(
+            root,
+            cnf,
+            pool,
+            edge_variables,
+            wedge_variables,
+            variant,
+            cardinality_backend,
+        )
         if variant == "compact":
             encoded._add_wedge_implications()
         else:
@@ -91,6 +107,15 @@ class EncodedRootModel:
             self.cnf.append([-left, -right, wedge])
 
     def _add_exactly(self, literals: list[int], bound: int) -> None:
+        if self.cardinality_backend == "native":
+            if not isinstance(self.cnf, CNFPlus):
+                raise AssertionError("native cardinality requires CNFPlus")
+            self.cnf.append([literals, bound], is_atmost=True)
+            self.cnf.append(
+                [[-literal for literal in literals], len(literals) - bound],
+                is_atmost=True,
+            )
+            return
         encoding = CardEnc.equals(
             lits=literals,
             bound=bound,
@@ -100,6 +125,11 @@ class EncodedRootModel:
         self.cnf.extend(encoding.clauses)
 
     def _add_at_most(self, literals: list[int], bound: int) -> None:
+        if self.cardinality_backend == "native":
+            if not isinstance(self.cnf, CNFPlus):
+                raise AssertionError("native cardinality requires CNFPlus")
+            self.cnf.append([literals, bound], is_atmost=True)
+            return
         encoding = CardEnc.atmost(
             lits=literals,
             bound=bound,
@@ -151,8 +181,12 @@ class EncodedRootModel:
             self._add_at_most(literals, 2 - intersection)
 
     def statistics(self) -> dict[str, Any]:
+        native_atmost = (
+            len(self.cnf.atmosts) if isinstance(self.cnf, CNFPlus) else 0
+        )
         return {
             "variant": self.variant,
+            "cardinality_backend": self.cardinality_backend,
             "pair_count": self.root.pair_count,
             "full_vertex_count": 2 * self.root.pair_count**2 + 1,
             "residual_vertex_count": self.root.residual_count,
@@ -160,6 +194,7 @@ class EncodedRootModel:
             "named_wedge_variables": len(self.wedge_variables),
             "total_variables": self.cnf.nv,
             "clauses": len(self.cnf.clauses),
+            "native_atmost_constraints": native_atmost,
         }
 
     def residual_edges_from_model(self, model: Sequence[int]) -> list[tuple[int, int]]:
@@ -211,9 +246,16 @@ def solve_model(
     solver_name: str,
     conflict_budget: int | None = None,
 ) -> tuple[bool | None, list[int] | None, dict[str, Any]]:
+    if encoded.cardinality_backend == "native" and solver_name != "minicard":
+        raise ValueError("native cardinality is supported only with solver 'minicard'")
+    bootstrap = (
+        encoded.cnf
+        if encoded.cardinality_backend == "native"
+        else encoded.cnf.clauses
+    )
     with Solver(
         name=solver_name,
-        bootstrap_with=encoded.cnf.clauses,
+        bootstrap_with=bootstrap,
         use_timer=True,
     ) as solver:
         if conflict_budget is None:
@@ -236,12 +278,21 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--pair-count", type=int, default=2)
     parser.add_argument("--variant", choices=("compact", "direct"), default="compact")
     parser.add_argument(
+        "--cardinality",
+        choices=("cnf", "native"),
+        default="cnf",
+        help="sequential-counter CNF or MiniCard native AtMost constraints",
+    )
+    parser.add_argument(
         "--branch",
         help="canonical fiber-matching partition, e.g. 6 or 3+2+1",
     )
     parser.add_argument("--branch-coordinate", type=int, default=0)
     parser.add_argument("--solve", action="store_true")
-    parser.add_argument("--solver", default="cadical300")
+    parser.add_argument(
+        "--solver",
+        help="defaults to cadical300 for CNF and minicard for native cardinality",
+    )
     parser.add_argument(
         "--conflict-budget",
         type=int,
@@ -258,8 +309,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         raise SystemExit("--candidate requires --solve")
     if args.conflict_budget is not None and args.conflict_budget < 1:
         raise SystemExit("--conflict-budget must be positive")
+    if args.cnf and args.cardinality == "native":
+        raise SystemExit(
+            "--cnf requires --cardinality cnf; native AtMost constraints are not DIMACS"
+        )
 
-    encoded = EncodedRootModel.build(args.pair_count, args.variant)
+    encoded = EncodedRootModel.build(
+        args.pair_count,
+        args.variant,
+        args.cardinality,
+    )
     if args.branch:
         partition = parse_partition(args.branch, args.pair_count - 1)
         encoded.add_matching_branch(args.branch_coordinate, partition)
@@ -276,9 +335,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         report["cnf"] = str(args.cnf)
 
     if args.solve:
+        solver_name = args.solver or (
+            "minicard" if args.cardinality == "native" else "cadical300"
+        )
         satisfiable, model, solver_statistics = solve_model(
             encoded,
-            args.solver,
+            solver_name,
             args.conflict_budget,
         )
         report["result"] = (

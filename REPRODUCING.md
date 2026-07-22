@@ -74,6 +74,21 @@ python verification/check_srg.py candidates/calibration-srg-9.srg.json `
   --vertices 9 --degree 4 --lambda 1 --mu 2
 ```
 
+Run the native-cardinality discovery backend on the same positive control, or
+make a bounded non-evidentiary pass over all complete target branches:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 2 `
+  --cardinality native --solve
+.venv\Scripts\python code/scout_branches.py --cardinality native `
+  --fresh-solvers --conflict-budget 100000 `
+  --output logs/local/native-100000.json
+```
+
+The native backend is not an archival UNSAT path. Regenerate any branch with
+`--cardinality cnf --cnf ...` and require a pinned external proof producer and
+independent checker.
+
 Validate a future Conway-format certificate using the frozen defaults:
 
 ```powershell

@@ -29,6 +29,20 @@ class BranchScoutTests(unittest.TestCase):
         self.assertEqual(report["branches"][0]["partition"], [1])
         self.assertEqual(report["branches"][0]["result"], "SAT_MODEL")
 
+    def test_native_pair_count_two_runs_with_a_fresh_minicard_solver(self) -> None:
+        report = run_scout(
+            pair_count=2,
+            coordinate=0,
+            conflict_budget=100,
+            solver_name="minicard",
+            candidate_directory=None,
+            cardinality_backend="native",
+            reuse_solver=False,
+        )
+        self.assertEqual(report["configuration"]["cardinality_backend"], "native")
+        self.assertFalse(report["configuration"]["incremental_learned_clauses"])
+        self.assertEqual(report["branches"][0]["result"], "SAT_MODEL")
+
 
 if __name__ == "__main__":
     unittest.main()

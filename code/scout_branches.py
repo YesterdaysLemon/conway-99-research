@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import platform
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -33,55 +34,150 @@ def run_scout(
     conflict_budget: int,
     solver_name: str,
     candidate_directory: Path | None,
+    cardinality_backend: str = "cnf",
+    reuse_solver: bool = True,
 ) -> dict[str, Any]:
+    if cardinality_backend == "native" and solver_name != "minicard":
+        raise ValueError("native cardinality is supported only with solver 'minicard'")
     build_start = time.perf_counter()
-    encoded = EncodedRootModel.build(pair_count, "compact")
+    encoded = EncodedRootModel.build(
+        pair_count,
+        "compact",
+        cardinality_backend,
+    )
     build_seconds = time.perf_counter() - build_start
     partitions = list(integer_partitions(pair_count - 1))
     branch_reports: list[dict[str, Any]] = []
+    bootstrap = (
+        encoded.cnf
+        if encoded.cardinality_backend == "native"
+        else encoded.cnf.clauses
+    )
+
+    def run_partition(
+        solver: Solver,
+        partition: tuple[int, ...],
+        previous_stats: dict[str, int],
+    ) -> tuple[dict[str, Any], dict[str, int], bool | None]:
+        decisions = canonical_branch_decisions(encoded.root, coordinate, partition)
+        assumptions = [
+            encoded.edge_variables[edge] if present else -encoded.edge_variables[edge]
+            for edge, present in sorted(decisions.items())
+        ]
+        solver.conf_budget(conflict_budget)
+        branch_start = time.perf_counter()
+        status = solver.solve_limited(assumptions=assumptions)
+        branch_seconds = time.perf_counter() - branch_start
+        current_stats = solver.accum_stats()
+        delta = difference(current_stats, previous_stats)
+
+        branch: dict[str, Any] = {
+            "partition": list(partition),
+            "result": (
+                "SAT_MODEL"
+                if status is True
+                else "UNSAT_UNVERIFIED"
+                if status is False
+                else "UNKNOWN"
+            ),
+            "wall_seconds": branch_seconds,
+            "solver_stats_delta": delta,
+        }
+        if status is True:
+            model = solver.get_model()
+            if model is None:
+                raise RuntimeError("solver returned SAT without a model")
+            certificate = encoded.full_certificate(model)
+            if candidate_directory:
+                candidate_directory.mkdir(parents=True, exist_ok=True)
+                name = "-".join(str(part) for part in partition)
+                candidate_path = candidate_directory / f"scout-branch-{name}.srg.json"
+                candidate_path.write_text(
+                    json.dumps(certificate, indent=2, sort_keys=True) + "\n",
+                    encoding="utf-8",
+                )
+                branch["candidate"] = str(candidate_path)
+        return branch, current_stats, status
 
     solve_start = time.perf_counter()
-    with Solver(name=solver_name, bootstrap_with=encoded.cnf.clauses, use_timer=True) as solver:
-        previous_stats = solver.accum_stats()
-        for partition in partitions:
-            decisions = canonical_branch_decisions(encoded.root, coordinate, partition)
-            assumptions = [
-                encoded.edge_variables[edge] if present else -encoded.edge_variables[edge]
-                for edge, present in sorted(decisions.items())
-            ]
-            solver.conf_budget(conflict_budget)
-            branch_start = time.perf_counter()
-            status = solver.solve_limited(assumptions=assumptions)
-            branch_seconds = time.perf_counter() - branch_start
-            current_stats = solver.accum_stats()
-            delta = difference(current_stats, previous_stats)
-            previous_stats = current_stats
-
-            branch: dict[str, Any] = {
-                "partition": list(partition),
-                "result": (
-                    "SAT_MODEL" if status is True else "UNSAT_UNVERIFIED" if status is False else "UNKNOWN"
-                ),
-                "wall_seconds": branch_seconds,
-                "solver_stats_delta": delta,
-            }
-            if status is True:
-                model = solver.get_model()
-                if model is None:
-                    raise RuntimeError("solver returned SAT without a model")
-                certificate = encoded.full_certificate(model)
-                if candidate_directory:
-                    candidate_directory.mkdir(parents=True, exist_ok=True)
-                    name = "-".join(str(part) for part in partition)
-                    candidate_path = candidate_directory / f"scout-branch-{name}.srg.json"
-                    candidate_path.write_text(
-                        json.dumps(certificate, indent=2, sort_keys=True) + "\n",
-                        encoding="utf-8",
-                    )
-                    branch["candidate"] = str(candidate_path)
+    if reuse_solver:
+        with Solver(
+            name=solver_name,
+            bootstrap_with=bootstrap,
+            use_timer=True,
+        ) as solver:
+            previous_stats = solver.accum_stats()
+            for partition in partitions:
+                branch, previous_stats, status = run_partition(
+                    solver,
+                    partition,
+                    previous_stats,
+                )
                 branch_reports.append(branch)
-                break
+                if status is True:
+                    break
+    else:
+        for partition in partitions:
+            partition_text = "+".join(str(part) for part in partition)
+            command = [
+                sys.executable,
+                str(Path(__file__).with_name("sat_model.py")),
+                "--pair-count",
+                str(pair_count),
+                "--variant",
+                "compact",
+                "--cardinality",
+                cardinality_backend,
+                "--branch",
+                partition_text,
+                "--branch-coordinate",
+                str(coordinate),
+                "--solve",
+                "--solver",
+                solver_name,
+                "--conflict-budget",
+                str(conflict_budget),
+            ]
+            candidate_path = None
+            if candidate_directory:
+                candidate_directory.mkdir(parents=True, exist_ok=True)
+                candidate_path = (
+                    candidate_directory / f"scout-branch-{partition_text}.srg.json"
+                )
+                command.extend(("--candidate", str(candidate_path)))
+
+            branch_start = time.perf_counter()
+            completed = subprocess.run(
+                command,
+                capture_output=True,
+                check=False,
+                text=True,
+            )
+            branch_seconds = time.perf_counter() - branch_start
+            if completed.returncode != 0:
+                raise RuntimeError(
+                    f"fresh branch process failed for {partition_text}: "
+                    f"{completed.stderr.strip()}"
+                )
+            child_report = json.loads(completed.stdout)
+            result = child_report.get("result")
+            if result not in ("SAT_MODEL", "UNSAT_UNVERIFIED", "UNKNOWN"):
+                raise RuntimeError(
+                    f"fresh branch process returned invalid result {result!r}"
+                )
+            branch = {
+                "partition": list(partition),
+                "result": result,
+                "wall_seconds": branch_seconds,
+                "solver_stats_delta": child_report["solver"][
+                    "accumulated_stats"
+                ],
+            }
+            if result == "SAT_MODEL" and candidate_path:
+                branch["candidate"] = str(candidate_path)
             branch_reports.append(branch)
+            if result == "SAT_MODEL":
+                break
 
     return {
         "format": "conway-branch-scout-v1",
@@ -97,7 +193,8 @@ def run_scout(
             "coordinate": coordinate,
             "conflict_budget_per_branch": conflict_budget,
             "solver": solver_name,
-            "incremental_learned_clauses": True,
+            "cardinality_backend": cardinality_backend,
+            "incremental_learned_clauses": reuse_solver,
         },
         "encoding": encoded.statistics(),
         "build_seconds": build_seconds,
@@ -113,7 +210,17 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--pair-count", type=int, default=7)
     parser.add_argument("--coordinate", type=int, default=0)
     parser.add_argument("--conflict-budget", type=int, default=100)
-    parser.add_argument("--solver", default="cadical300")
+    parser.add_argument("--solver")
+    parser.add_argument(
+        "--cardinality",
+        choices=("cnf", "native"),
+        default="cnf",
+    )
+    parser.add_argument(
+        "--fresh-solvers",
+        action="store_true",
+        help="rebuild the solver for each branch instead of sharing learned clauses",
+    )
     parser.add_argument("--output", type=Path)
     parser.add_argument("--candidate-directory", type=Path)
     return parser.parse_args(argv)
@@ -123,12 +230,17 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
     if args.conflict_budget < 1:
         raise SystemExit("--conflict-budget must be positive")
+    solver_name = args.solver or (
+        "minicard" if args.cardinality == "native" else "cadical300"
+    )
     report = run_scout(
         args.pair_count,
         args.coordinate,
         args.conflict_budget,
-        args.solver,
+        solver_name,
         args.candidate_directory,
+        args.cardinality,
+        not args.fresh_solvers,
     )
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
     if args.output:
