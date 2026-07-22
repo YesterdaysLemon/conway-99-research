@@ -20,10 +20,12 @@ from root_model import RootModel
 
 
 Matching = tuple[tuple[int, int], ...]
+RefinedN3State = tuple[Matching, int]
 
 N3_SHARED_COORDINATE = 2
 N3_FIXED_ENDPOINT_EDGE = (0, 4)
 N3_REMAINING_ENDPOINTS = (1, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+N3_REFINED_CANDIDATE_ENDPOINTS = (0, 1, 3, 6, 7, 8, 9, 10, 11, 12, 13)
 
 
 def integer_partitions(total: int, maximum: int | None = None) -> Iterator[tuple[int, ...]]:
@@ -194,6 +196,17 @@ def n3_unit_stabilizer_generators() -> tuple[tuple[int, ...], ...]:
     return tuple(generators)
 
 
+def n3_oriented_stabilizer_generators() -> tuple[tuple[int, ...], ...]:
+    """Generators for the N3-unit stabilizer fixing coordinate 0.
+
+    Fixing coordinate 0 also fixes its normalized witness partner 4 and their
+    mates 1 and 5.  The remaining action is exactly C2 wreath S4, of order
+    384.  This subgroup preserves the oriented common-neighbor refinement.
+    """
+
+    return n3_unit_stabilizer_generators()[1:]
+
+
 @lru_cache(maxsize=1)
 def n3_joint_matching_orbits() -> tuple[tuple[Matching, int], ...]:
     """Return the 12 matching orbits on the invariant shared fiber S_2.
@@ -225,6 +238,50 @@ def n3_joint_matching_orbits() -> tuple[tuple[Matching, int], ...]:
             sorted((N3_FIXED_ENDPOINT_EDGE, *remaining_representative))
         )
         orbits.append((full_representative, len(orbit)))
+
+    return tuple(orbits)
+
+
+@lru_cache(maxsize=1)
+def n3_refined_orbits() -> tuple[tuple[Matching, int, int], ...]:
+    """Return the 78 oriented N3 common-neighbor refinement orbits.
+
+    A state consists of an S_2 matching containing endpoint edge (0,4) and
+    the endpoint h of the unique additional common neighbor label (4,h) for
+    label (0,2) and root-neighbor coordinate 4.  There are 945*11=10,395
+    states.  The orientation-preserving stabilizer has exactly 78 orbits.
+    """
+
+    matchings = {
+        tuple(sorted((N3_FIXED_ENDPOINT_EDGE, *remaining)))
+        for remaining in perfect_matchings(N3_REMAINING_ENDPOINTS)
+    }
+    unseen: set[RefinedN3State] = {
+        (matching, endpoint)
+        for matching in matchings
+        for endpoint in N3_REFINED_CANDIDATE_ENDPOINTS
+    }
+    generators = n3_oriented_stabilizer_generators()
+    orbits: list[tuple[Matching, int, int]] = []
+
+    while unseen:
+        representative = min(unseen)
+        orbit = {representative}
+        frontier = [representative]
+        while frontier:
+            matching, endpoint = frontier.pop()
+            for generator in generators:
+                image = (
+                    permute_matching(matching, generator),
+                    generator[endpoint],
+                )
+                if image not in orbit:
+                    orbit.add(image)
+                    frontier.append(image)
+        if not orbit <= unseen:
+            raise AssertionError("refined N3 orbits overlap")
+        unseen.difference_update(orbit)
+        orbits.append((representative[0], representative[1], len(orbit)))
 
     return tuple(orbits)
 
@@ -277,6 +334,40 @@ def n3_joint_branch_decisions(
     }
 
 
+def n3_refined_branch_specification(
+    root: RootModel, branch_number: int
+) -> tuple[dict[tuple[int, int], bool], tuple[int, int], int]:
+    """Return matching decisions, the refinement edge, and first branch."""
+
+    if root.pair_count != 7:
+        raise ValueError("the refined N3 cover applies only to pair_count 7")
+    if type(branch_number) is not int:
+        raise ValueError("refined N3 branch number must be an integer")
+    orbits = n3_refined_orbits()
+    if not 1 <= branch_number <= len(orbits):
+        raise ValueError(f"refined N3 branch number must be in 1..{len(orbits)}")
+
+    representative, endpoint, _ = orbits[branch_number - 1]
+    first_branches = n3_joint_matching_orbits()
+    try:
+        first_branch = next(
+            branch
+            for branch, (matching, _) in enumerate(first_branches, start=1)
+            if matching == representative
+        )
+    except StopIteration as exc:
+        raise AssertionError("refined representative is not joint-canonical") from exc
+
+    decisions = n3_joint_branch_decisions(root, first_branch)
+    indices = root.label_index()
+    first_label = indices[(0, 2)]
+    second_label = indices[tuple(sorted((4, endpoint)))]
+    refinement_edge = tuple(sorted((first_label, second_label)))
+    if refinement_edge in decisions:
+        raise AssertionError("refinement edge unexpectedly lies inside S_2")
+    return decisions, refinement_edge, first_branch
+
+
 def n3_joint_summary() -> dict[str, Any]:
     orbits = n3_joint_matching_orbits()
     if sum(size for _, size in orbits) != 945:
@@ -298,6 +389,65 @@ def n3_joint_summary() -> dict[str, Any]:
                 "representative": [list(edge) for edge in representative],
             }
             for branch, (representative, size) in enumerate(orbits, start=1)
+        ],
+    }
+
+
+def n3_refined_summary() -> dict[str, Any]:
+    orbits = n3_refined_orbits()
+    if sum(size for _, _, size in orbits) != 10_395:
+        raise AssertionError("refined N3 orbits do not cover all 10,395 states")
+    first_branches = {
+        matching: branch
+        for branch, (matching, _) in enumerate(n3_joint_matching_orbits(), start=1)
+    }
+    root = RootModel.build(7)
+    indices = root.label_index()
+    edge_variables = {
+        edge: variable
+        for variable, edge in enumerate(
+            combinations(range(root.residual_count), 2), start=1
+        )
+    }
+
+    def positive_literals(matching: Matching, endpoint: int) -> list[int]:
+        literals = []
+        for left, right in matching:
+            first = indices[tuple(sorted((N3_SHARED_COORDINATE, left)))]
+            second = indices[tuple(sorted((N3_SHARED_COORDINATE, right)))]
+            literals.append(edge_variables[tuple(sorted((first, second)))])
+        first = indices[(0, 2)]
+        second = indices[tuple(sorted((4, endpoint)))]
+        literals.append(edge_variables[tuple(sorted((first, second)))])
+        return sorted(literals)
+
+    return {
+        "format": "n3-oriented-common-neighbor-orbits-v1",
+        "pair_count": 7,
+        "matching_coordinate": N3_SHARED_COORDINATE,
+        "fixed_endpoint_edge": list(N3_FIXED_ENDPOINT_EDGE),
+        "oriented_coordinate": 0,
+        "common_neighbor_coordinate": 4,
+        "stabilizer": "C2 wreath S4",
+        "stabilizer_order": 384,
+        "matching_count": 945,
+        "candidate_count": len(N3_REFINED_CANDIDATE_ENDPOINTS),
+        "candidate_endpoints": list(N3_REFINED_CANDIDATE_ENDPOINTS),
+        "coordinate_profile_target": 2,
+        "state_count": 10_395,
+        "orbit_count": len(orbits),
+        "burnside_fixed_sum": 29_952,
+        "orbits": [
+            {
+                "branch": branch,
+                "first_matching_branch": first_branches[matching],
+                "candidate_endpoint": endpoint,
+                "orbit_size": size,
+                "stabilizer_size": 384 // size,
+                "representative": [list(edge) for edge in matching],
+                "positive_edge_literals": positive_literals(matching, endpoint),
+            }
+            for branch, (matching, endpoint, size) in enumerate(orbits, start=1)
         ],
     }
 
@@ -399,10 +549,16 @@ def summary(pair_count: int = 6) -> dict[str, Any]:
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pair-count", type=int)
-    parser.add_argument(
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
         "--n3-joint",
         action="store_true",
         help="emit the target-specific 12-branch N3-stabilized cover",
+    )
+    group.add_argument(
+        "--n3-refined",
+        action="store_true",
+        help="emit the 78-branch oriented common-neighbor refinement",
     )
     parser.add_argument("--output", type=Path)
     return parser.parse_args(argv)
@@ -410,10 +566,11 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
-    if args.n3_joint:
+    if args.n3_joint or args.n3_refined:
         if args.pair_count not in (None, 7):
-            raise SystemExit("--n3-joint applies only to --pair-count 7")
-        report = n3_joint_summary()
+            flag = "--n3-joint" if args.n3_joint else "--n3-refined"
+            raise SystemExit(f"{flag} applies only to --pair-count 7")
+        report = n3_joint_summary() if args.n3_joint else n3_refined_summary()
     else:
         report = summary(args.pair_count if args.pair_count is not None else 6)
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"

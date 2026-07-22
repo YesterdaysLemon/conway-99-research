@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import json
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from io import StringIO
 
 from matching_orbits import (
@@ -17,6 +17,10 @@ from matching_orbits import (
     n3_joint_branch_decisions,
     n3_joint_matching_orbits,
     n3_joint_summary,
+    n3_oriented_stabilizer_generators,
+    n3_refined_branch_specification,
+    n3_refined_orbits,
+    n3_refined_summary,
     n3_unit_stabilizer_generators,
     orbit_sizes_via_generators,
     orbit_type_counts,
@@ -51,6 +55,36 @@ EXPECTED_N3_ORBITS = (
     (((0, 4), (1, 6), (5, 8), (7, 9), (10, 12), (11, 13)), 96),
     (((0, 4), (1, 6), (5, 8), (7, 10), (9, 11), (12, 13)), 192),
     (((0, 4), (1, 6), (5, 8), (7, 10), (9, 12), (11, 13)), 384),
+)
+
+EXPECTED_REFINED_ENDPOINTS = (
+    (0, 1, 3, 6),
+    (0, 1, 3, 6, 10),
+    (0, 1, 3, 6, 8),
+    (0, 1, 3, 6),
+    (0, 1, 3, 6),
+    (0, 1, 3, 6, 7, 8),
+    (0, 1, 3, 6, 7, 8, 10),
+    (0, 1, 3, 6, 7, 8),
+    (0, 1, 3, 6, 7, 8, 9, 10),
+    (0, 1, 3, 6, 7, 8, 9, 10),
+    (0, 1, 3, 6, 7, 8, 9, 10, 11, 12),
+    (0, 1, 3, 6, 7, 8, 9, 10, 11, 12, 13),
+)
+
+EXPECTED_REFINED_ORBIT_SIZES = (
+    (1, 1, 1, 8),
+    (12, 12, 12, 48, 48),
+    (32, 32, 32, 64, 192),
+    (12, 12, 12, 96),
+    (48, 48, 48, 384),
+    (8, 8, 8, 8, 8, 48),
+    (48, 48, 48, 48, 48, 96, 192),
+    (64, 64, 64, 64, 64, 384),
+    (48, 48, 48, 48, 48, 48, 48, 192),
+    (96, 96, 96, 96, 96, 96, 96, 384),
+    (192, 192, 192, 192, 192, 192, 192, 192, 192, 384),
+    (384,) * 11,
 )
 
 
@@ -163,6 +197,81 @@ class MatchingOrbitTests(unittest.TestCase):
         with redirect_stdout(output):
             self.assertEqual(matching_main(["--n3-joint"]), 0)
         self.assertEqual(json.loads(output.getvalue())["pair_count"], 7)
+
+    def test_n3_oriented_stabilizer_and_refined_cover(self) -> None:
+        generators = n3_oriented_stabilizer_generators()
+        identity = tuple(range(14))
+        group = {identity}
+        frontier = [identity]
+        while frontier:
+            current = frontier.pop()
+            for generator in generators:
+                image = tuple(generator[value] for value in current)
+                if image not in group:
+                    group.add(image)
+                    frontier.append(image)
+        self.assertEqual(len(group), 384)
+        self.assertTrue(all(permutation[:6] == identity[:6] for permutation in group))
+
+        refined = n3_refined_orbits()
+        self.assertEqual(len(refined), 78)
+        self.assertEqual(sum(size for _, _, size in refined), 10_395)
+        grouped_endpoints: list[tuple[int, ...]] = []
+        grouped_sizes: list[tuple[int, ...]] = []
+        for matching, _ in EXPECTED_N3_ORBITS:
+            entries = [entry for entry in refined if entry[0] == matching]
+            grouped_endpoints.append(tuple(endpoint for _, endpoint, _ in entries))
+            grouped_sizes.append(tuple(size for _, _, size in entries))
+        self.assertEqual(tuple(grouped_endpoints), EXPECTED_REFINED_ENDPOINTS)
+        self.assertEqual(tuple(grouped_sizes), EXPECTED_REFINED_ORBIT_SIZES)
+
+        summary = n3_refined_summary()
+        self.assertEqual(summary["stabilizer_order"], 384)
+        self.assertEqual(summary["state_count"], 10_395)
+        self.assertEqual(summary["orbit_count"], 78)
+        self.assertEqual(summary["burnside_fixed_sum"], 29_952)
+
+    def test_refined_branch_specification_and_guards(self) -> None:
+        root = RootModel.build(7)
+        indices = root.label_index()
+        for branch_number, expected_endpoint in ((1, 0), (78, 13)):
+            decisions, refinement_edge, first_branch = (
+                n3_refined_branch_specification(root, branch_number)
+            )
+            self.assertEqual(len(decisions), 66)
+            self.assertNotIn(refinement_edge, decisions)
+            self.assertEqual(
+                refinement_edge,
+                tuple(
+                    sorted(
+                        (
+                            indices[(0, 2)],
+                            indices[tuple(sorted((4, expected_endpoint)))],
+                        )
+                    )
+                ),
+            )
+            self.assertEqual(first_branch, 1 if branch_number == 1 else 12)
+
+        with self.assertRaisesRegex(ValueError, "only to pair_count 7"):
+            n3_refined_branch_specification(RootModel.build(3), 1)
+        for branch_number in (True, 0, 79):
+            with self.subTest(branch_number=branch_number):
+                with self.assertRaisesRegex(ValueError, "branch number"):
+                    n3_refined_branch_specification(root, branch_number)
+
+    def test_refined_cli_summary_and_mutual_exclusion(self) -> None:
+        output = StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(matching_main(["--n3-refined"]), 0)
+        report = json.loads(output.getvalue())
+        self.assertEqual(report["orbit_count"], 78)
+        self.assertEqual(report["state_count"], 10_395)
+        with redirect_stderr(StringIO()):
+            with self.assertRaises(SystemExit):
+                matching_main(["--n3-joint", "--n3-refined"])
+        with self.assertRaisesRegex(SystemExit, "only to --pair-count 7"):
+            matching_main(["--n3-refined", "--pair-count", "3"])
 
 
 if __name__ == "__main__":

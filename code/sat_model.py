@@ -24,6 +24,8 @@ from matching_orbits import (
     canonical_branch_decisions,
     n3_joint_branch_decisions,
     n3_joint_matching_orbits,
+    n3_refined_branch_specification,
+    n3_refined_orbits,
     parse_partition,
 )
 from root_model import RootModel
@@ -41,6 +43,7 @@ class EncodedRootModel:
     matching_branch_added: bool = False
     n3_normalized: bool = False
     n3_joint_branch_number: int | None = None
+    n3_refined_branch_number: int | None = None
 
     @classmethod
     def build(
@@ -325,6 +328,40 @@ class EncodedRootModel:
         self.n3_joint_branch_number = branch_number
         return positive_literals
 
+    def add_n3_refined_branch(self, branch_number: int) -> tuple[int, ...]:
+        """Fix one of 78 oriented common-neighbor refinement orbits."""
+
+        if self.root.pair_count != 7:
+            raise ValueError("the refined N3 cover applies only to pair_count 7")
+        if not self.n3_normalized:
+            raise ValueError("the refined N3 branch requires N3 normalization first")
+        if self.matching_branch_added:
+            raise ValueError("the refined N3 cover cannot follow a legacy branch")
+        if self.n3_refined_branch_number is not None:
+            raise ValueError("a refined N3 branch has already been added")
+        if self.n3_joint_branch_number is not None:
+            raise ValueError("the refined N3 branch cannot follow an N3 joint branch")
+
+        _, refinement_edge, first_branch = n3_refined_branch_specification(
+            self.root, branch_number
+        )
+        matching_literals = self.add_n3_joint_branch(first_branch)
+        indices = self.root.label_index()
+        first_label = indices[(0, 2)]
+        fixed_neighbor = indices[(2, 4)]
+        fixed_edge = tuple(sorted((first_label, fixed_neighbor)))
+        if self.edge_variables[fixed_edge] != 24:
+            raise AssertionError("the refined N3 cover lost the normalized unit")
+        if self.root.coordinate_neighbor_target(4, first_label) != 2:
+            raise AssertionError("unexpected coordinate-4 neighbor target")
+
+        refinement_literal = self.edge_variables[refinement_edge]
+        if refinement_literal in matching_literals:
+            raise AssertionError("refinement literal duplicates a matching literal")
+        self.cnf.append([refinement_literal])
+        self.n3_refined_branch_number = branch_number
+        return tuple(sorted((*matching_literals, refinement_literal)))
+
     def full_certificate(self, model: Sequence[int]) -> dict[str, Any]:
         """Decode a SAT assignment into the complete normalized graph."""
 
@@ -415,6 +452,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         metavar="1..12",
         help="select one branch of the verified N3-stabilized shared-fiber cover",
     )
+    parser.add_argument(
+        "--n3-refined-branch",
+        type=int,
+        metavar="1..78",
+        help="select one orbit of the oriented common-neighbor refinement",
+    )
     parser.add_argument("--solve", action="store_true")
     parser.add_argument(
         "--solver",
@@ -454,19 +497,38 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.n3 and args.branch:
         raise SystemExit(
             "--n3 cannot be combined with the legacy --branch representatives; "
-            "use --n3-branch for the verified joint cover"
+            "use --n3-branch or --n3-refined-branch"
         )
+    if args.n3_branch is not None and args.n3_refined_branch is not None:
+        raise SystemExit("--n3-branch and --n3-refined-branch are mutually exclusive")
     if args.n3_branch is not None and not args.n3:
         raise SystemExit("--n3-branch requires --n3")
+    if args.n3_refined_branch is not None and not args.n3:
+        raise SystemExit("--n3-refined-branch requires --n3")
     n3_branch_count = (
         len(n3_joint_matching_orbits()) if args.n3_branch is not None else 0
     )
     if args.n3_branch is not None and not 1 <= args.n3_branch <= n3_branch_count:
         raise SystemExit(f"--n3-branch must be in 1..{n3_branch_count}")
+    n3_refined_branch_count = (
+        len(n3_refined_orbits()) if args.n3_refined_branch is not None else 0
+    )
+    if (
+        args.n3_refined_branch is not None
+        and not 1 <= args.n3_refined_branch <= n3_refined_branch_count
+    ):
+        raise SystemExit(
+            f"--n3-refined-branch must be in 1..{n3_refined_branch_count}"
+        )
     if args.n3_branch is not None and args.branch_coordinate != 0:
         raise SystemExit(
             "--branch-coordinate applies only to legacy --branch; the N3 joint "
             "cover uses shared coordinate 2"
+        )
+    if args.n3_refined_branch is not None and args.branch_coordinate != 0:
+        raise SystemExit(
+            "--branch-coordinate applies only to legacy --branch; the refined "
+            "N3 cover uses fixed internal coordinates 0, 2, and 4"
         )
 
     encoded = EncodedRootModel.build(
@@ -481,6 +543,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     n3_positive_literals = (
         encoded.add_n3_joint_branch(args.n3_branch)
         if args.n3_branch is not None
+        else None
+    )
+    n3_refined_positive_literals = (
+        encoded.add_n3_refined_branch(args.n3_refined_branch)
+        if args.n3_refined_branch is not None
         else None
     )
     report: dict[str, Any] = {"encoding": encoded.statistics()}
@@ -508,6 +575,31 @@ def main(argv: Sequence[str] | None = None) -> int:
             "stabilizer_size": 768 // orbit_size,
             "positive_edge_literals": list(n3_positive_literals or ()),
             "added_unit_clauses": 65,
+            "completed_graph_automorphism_assumed": False,
+        }
+    if args.n3_refined_branch is not None:
+        representative, endpoint, orbit_size = n3_refined_orbits()[
+            args.n3_refined_branch - 1
+        ]
+        _, refinement_edge, first_branch = n3_refined_branch_specification(
+            encoded.root, args.n3_refined_branch
+        )
+        refinement_literal = encoded.edge_variables[refinement_edge]
+        report["n3_refined_branch"] = {
+            "branch": args.n3_refined_branch,
+            "cover_branch_count": n3_refined_branch_count,
+            "first_matching_branch": first_branch,
+            "matching_coordinate": 2,
+            "representative_endpoint_matching": [
+                list(edge) for edge in representative
+            ],
+            "oriented_nonadjacent_pair": [[0, 2], 4],
+            "additional_common_neighbor_label": sorted((4, endpoint)),
+            "additional_common_neighbor_literal": refinement_literal,
+            "orbit_size": orbit_size,
+            "stabilizer_size": 384 // orbit_size,
+            "positive_edge_literals": list(n3_refined_positive_literals or ()),
+            "added_unit_clauses": 66,
             "completed_graph_automorphism_assumed": False,
         }
 

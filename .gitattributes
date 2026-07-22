@@ -7,3 +7,5 @@ verification/cyclic-design/*.py text eol=lf
 verification/literature-audit/*.py text eol=lf
 verification/n3-joint-cover/*.json text eol=lf
 verification/n3-joint-cover/*.py text eol=lf
+verification/n3-refined-cover/*.json text eol=lf
+verification/n3-refined-cover/*.py text eol=lf

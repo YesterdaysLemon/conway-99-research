@@ -11,7 +11,11 @@ from itertools import product
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from matching_orbits import n3_joint_branch_decisions
+from matching_orbits import (
+    n3_joint_branch_decisions,
+    n3_refined_branch_specification,
+    n3_refined_orbits,
+)
 from sat_model import EncodedRootModel, main, solve_model
 
 
@@ -29,6 +33,20 @@ EXPECTED_N3_POSITIVE_LITERALS = (
     (24, 944, 1778, 1893, 2003, 2161),
     (24, 944, 1778, 1893, 2004, 2110),
 )
+
+EXPECTED_REFINED_LITERAL_BY_ENDPOINT = {
+    0: 2,
+    1: 14,
+    3: 34,
+    6: 44,
+    7: 45,
+    8: 46,
+    9: 47,
+    10: 48,
+    11: 49,
+    12: 50,
+    13: 51,
+}
 
 
 class DirectSatEncodingTests(unittest.TestCase):
@@ -333,6 +351,101 @@ class DirectSatEncodingTests(unittest.TestCase):
         encoded.add_n3_joint_branch(1)
         with self.assertRaisesRegex(ValueError, "already been added"):
             encoded.add_n3_joint_branch(2)
+
+    def test_refined_cover_literals_counts_and_state_guards(self) -> None:
+        encoded = EncodedRootModel.build(7, "compact", "native")
+        for branch_number, (_, endpoint, _) in enumerate(
+            n3_refined_orbits(), start=1
+        ):
+            _, refinement_edge, _ = n3_refined_branch_specification(
+                encoded.root, branch_number
+            )
+            self.assertEqual(
+                encoded.edge_variables[refinement_edge],
+                EXPECTED_REFINED_LITERAL_BY_ENDPOINT[endpoint],
+            )
+
+        before = encoded.statistics()
+        encoded.add_n3_normalization()
+        positive_literals = encoded.add_n3_refined_branch(78)
+        after = encoded.statistics()
+        added_clauses = encoded.cnf.clauses[-66:]
+        self.assertEqual(
+            positive_literals,
+            (24, 51, 944, 1778, 1893, 2004, 2110),
+        )
+        self.assertEqual(encoded.n3_joint_branch_number, 12)
+        self.assertEqual(encoded.n3_refined_branch_number, 78)
+        self.assertEqual(after["total_variables"], before["total_variables"])
+        self.assertEqual(after["clauses"], before["clauses"] + 67)
+        self.assertEqual(
+            after["native_atmost_constraints"], before["native_atmost_constraints"]
+        )
+        self.assertEqual(len(added_clauses), 66)
+        self.assertEqual(sum(clause[0] > 0 for clause in added_clauses), 6)
+        self.assertEqual(sum(clause[0] < 0 for clause in added_clauses), 60)
+        self.assertEqual(
+            encoded.opb_text().splitlines()[0],
+            "* #variable= 289338 #constraint= 291757",
+        )
+        with self.assertRaisesRegex(ValueError, "already been added"):
+            encoded.add_n3_refined_branch(1)
+        with self.assertRaisesRegex(ValueError, "already been added"):
+            encoded.add_n3_joint_branch(1)
+
+    def test_refined_cli_validation_and_report(self) -> None:
+        with self.assertRaisesRegex(SystemExit, "requires --n3"):
+            main(["--pair-count", "7", "--n3-refined-branch", "1"])
+        with self.assertRaisesRegex(SystemExit, "mutually exclusive"):
+            main(
+                [
+                    "--pair-count",
+                    "7",
+                    "--n3",
+                    "--n3-branch",
+                    "1",
+                    "--n3-refined-branch",
+                    "1",
+                ]
+            )
+        for branch_number in (0, 79):
+            with self.subTest(branch_number=branch_number):
+                with self.assertRaisesRegex(SystemExit, "must be in 1..78"):
+                    main(
+                        [
+                            "--pair-count",
+                            "7",
+                            "--n3",
+                            "--n3-refined-branch",
+                            str(branch_number),
+                        ]
+                    )
+
+        output = StringIO()
+        with redirect_stdout(output):
+            self.assertEqual(
+                main(
+                    [
+                        "--pair-count",
+                        "7",
+                        "--cardinality",
+                        "native",
+                        "--n3",
+                        "--n3-refined-branch",
+                        "1",
+                    ]
+                ),
+                0,
+            )
+        report = json.loads(output.getvalue())
+        branch = report["n3_refined_branch"]
+        self.assertEqual(branch["branch"], 1)
+        self.assertEqual(branch["cover_branch_count"], 78)
+        self.assertEqual(branch["first_matching_branch"], 1)
+        self.assertEqual(branch["additional_common_neighbor_label"], [0, 4])
+        self.assertEqual(branch["additional_common_neighbor_literal"], 2)
+        self.assertEqual(branch["positive_edge_literals"][0], 2)
+        self.assertEqual(report["encoding"]["clauses"], 285_919)
 
     def test_only_small_matching_branch_is_still_sat(self) -> None:
         encoded = EncodedRootModel.build(2, "compact")
