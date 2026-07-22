@@ -22,11 +22,13 @@ is diagnostic, not a claim that the direct encoding is the best search method.
 
 ## Direct SAT prototype
 
-`sat_model.py` translates the two exact block equations into CNF. Its default
+`sat_model.py` translates the two exact block equations into CNF or a native
+cardinality formula. Its default
 `compact` variant uses one-way wedge implications and common-neighbor upper
 bounds; a global wedge count proves these are exact. The larger `direct`
 variant keeps full conjunction equivalences and exact common-neighbor sums as a
-cross-check. Both use sequential counters and make no completed-graph
+cross-check. The default CNF backend uses sequential counters; the native
+backend retains exact `AtMost` constraints. Neither makes a completed-graph
 automorphism assumption. The proof of compact exactness is recorded in
 `attempts/2026-07-22-compact-sat-encoding.md`.
 
@@ -47,14 +49,16 @@ solver state between branches; startup time is included in each wall time.
 
 For the target this has 289,338 variables, 285,852 ordinary clauses, and
 5,838 native `AtMost` constraints. MiniCard has no accepted proof-logging path
-in this project, so it is discovery-only. Any apparent `UNSAT` result must be
-regenerated with the sequential-counter CNF backend and checked externally.
-See `attempts/2026-07-22-native-cardinality.md`.
+in this project, so embedded solves are discovery-only. The same native formula
+can be exported canonically with `--opb` and sent to the pinned
+Exact/VeriPB/CakePB path. Sequential-counter CNF plus LRAT remains an
+alternative. See `attempts/2026-07-22-native-cardinality.md` and
+`verification/2026-07-22-veripb-calibration.md`.
 
-The small `pair_count=2` instance reconstructs an `srg(9,4,1,2)`. The
-`pair_count=3` instance is an `UNSAT_UNVERIFIED` negative control (its
-hypothetical spectrum is already infeasible). Run both before any target
-experiment:
+The small `pair_count=2` instance reconstructs an `srg(9,4,1,2)`. Embedded
+solver output for `pair_count=3` is still labeled `UNSAT_UNVERIFIED`, but the
+same negative-control formula now has independently checked LRAT and VeriPB
+proofs. Run both controls before any target experiment:
 
 ```powershell
 .venv\Scripts\python -m unittest discover -s code -p "test_*.py" -v
@@ -64,11 +68,30 @@ python verification/check_srg.py candidates/calibration-srg-9.srg.json `
   --vertices 9 --degree 4 --lambda 1 --mu 2
 ```
 
-A solver's `UNSAT` status alone is not accepted. `--cnf` retains the exact
-instance for an external pinned proof-logging solver. The PySAT in-process proof
-path is intentionally disabled because adversarial verification found unstable
-or incomplete traces on the current Windows/Python build. Any proof artifact
-must pass an independently trusted checker before promotion.
+A solver's `UNSAT` status alone is not accepted. `--cnf` and `--opb` retain
+exact instances for external pinned proof-producing solvers. The PySAT
+in-process proof path is intentionally disabled because adversarial
+verification found unstable or incomplete traces on the current Windows/Python
+build. Any proof artifact must pass independent checking before promotion.
+
+## Theorem-forced `N3` normalization
+
+For the target only, `--n3` fixes one induced six-vertex `N3` obtained by
+combining Makhnev's cited theorem with the project's `DERIVED` inference. Global
+relabeling then reduces the normalization to the single residual edge unit
+`x24=1`:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 7 --n3 `
+  --cardinality native --opb logs/local/conway99-n3-native-lf.opb
+```
+
+The flag is rejected on calibration sizes. Both CLI and direct API also reject
+combining it with the legacy `--branch` representatives: fixing the witness
+changes the stabilizer, so those 11 representatives are no longer a proved
+complete joint cover. See `agents/2026-07-22-wave4-n3-normalization.md`.
+The conditional implementation and these guards are independently checked in
+`verification/2026-07-22-n3-normalization-audit.md`.
 
 ## Eleven complete matching branches
 
@@ -83,6 +106,9 @@ python code/matching_orbits.py
 ```
 
 One branch is conditional; all 11 together cover the full rooted search.
+This statement concerns the legacy unnormalized search. Do not combine these
+representatives with `--n3`; use the safe unbranched `--n3` formula until a
+separate joint orbit cover has been verified.
 
 Use a conflict budget for scouting runs that must terminate reproducibly:
 

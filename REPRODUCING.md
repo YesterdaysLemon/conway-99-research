@@ -85,9 +85,45 @@ make a bounded non-evidentiary pass over all complete target branches:
   --output logs/local/native-100000.json
 ```
 
-The native backend is not an archival UNSAT path. Regenerate any branch with
-`--cardinality cnf --cnf ...` and require a pinned external proof producer and
-independent checker.
+The embedded MiniCard solve is discovery-only, but the native formula now has
+an exact archival export. Generate the canonical LF OPB positive and negative
+controls with:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 2 `
+  --cardinality native --opb formal/opb-calibration/pair2.opb
+.venv\Scripts\python code/sat_model.py --pair-count 3 `
+  --cardinality native --opb formal/opb-calibration/pair3.opb
+```
+
+The committed formulas, raw VeriPB proofs, and elaborated CakePB-compatible
+proofs replay as documented in
+`verification/2026-07-22-veripb-calibration.md`. The same exporter can produce
+the target formula:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 7 `
+  --cardinality native --opb logs/local/conway99-native-lf.opb
+```
+
+The independently audited theorem-forced normalization is available only for
+the target:
+
+```powershell
+.venv\Scripts\python code/sat_model.py --pair-count 7 --n3 `
+  --cardinality native --opb logs/local/conway99-n3-native-lf.opb
+```
+
+Do not add a legacy `--branch` to this command. Fixing the N3 witness changes
+the stabilizer, so the old 11 representatives are not a proved complete joint
+cover; the CLI and direct API reject that unsafe combination. The derivation
+and independent audit are in
+`verification/2026-07-22-n3-normalization-audit.md`.
+
+An archival UNSAT claim would require the complete public OPB formula, a
+complete proof from a pinned producer, and successful independent checking.
+The alternative sequential-counter CNF/LRAT route remains available. No
+target proof currently exists in either format.
 
 Validate a future Conway-format certificate using the frozen defaults:
 
@@ -100,8 +136,9 @@ authoritative machine-readable status.
 
 `requirements-search.txt` pins the prototyping API version, but it is not an
 archival proof lockfile. Before a proof-producing run, also pin the Python ABI,
-wheel hashes, native solver binary, and independent checker binary, then record
-their cryptographic hashes in the run manifest.
+wheel hashes, proof-producing solver binary, and independent checker binaries,
+then record their cryptographic hashes in the run manifest. The current Exact,
+VeriPB, and CakePB identities and hashes are in the calibration report.
 
 ## Artifact retention
 

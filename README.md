@@ -37,13 +37,31 @@ freshness search through 2026-07-22 found no credible construction or
 nonexistence proof. That search is evidence about the literature, not a
 mathematical proof of openness.
 
-Wave 2 independently verified a native-cardinality discovery backend, a new
-endpoint-fiber bijection, exact modular/Smith/code constraints, and a pinned
-CaDiCaL-to-LRAT calibration path. A fresh 10,000-conflict pass over all 11
-complete target branches returned `UNKNOWN` in every branch. That bounded run
-is explicitly non-evidentiary; it is useful only for engineering and branch
-ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md) and
-[run manifest](logs/2026-07-22-wave2.json).
+Wave 3 added three advances, with independently checked structural and
+proof-pipeline components, without changing the target status. First, cited
+results force an induced six-vertex `N3` configuration in every putative graph;
+a project derivation shows that each of its two central diagonal nonedges
+2-percolates the whole graph. Second, exact mate-fiber coupling identities and
+a conditional alpha-22 projector formulation sharpen the structural search.
+Third, the native-cardinality model now has a source-built
+Exact-to-VeriPB-to-CakePB certificate path. Its small positive and negative
+controls pass. A 10-second full target log is itself verified to have
+`NO CONCLUSION`, so it is explicitly non-evidentiary. See the
+[Wave 3 audit](verification/2026-07-22-wave3-audit.md) and
+[proof-pipeline calibration](verification/2026-07-22-veripb-calibration.md).
+
+Wave 4 turns the derived universal `N3` consequence into a separately verified
+target normalization: after safe global relabeling it is the single residual
+unit `+24`. The unbranched `--n3` formula is equisatisfiable conditional on the
+derived occurrence claim and assumes no completed-graph automorphism. It is
+deliberately incompatible with the legacy 11 representatives until a complete
+joint stabilizer cover is proved. See the
+[N3 audit](verification/2026-07-22-n3-normalization-audit.md).
+
+Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
+returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
+branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
+and [run manifest](logs/2026-07-22-wave2.json).
 
 ## Why the search has 84 vertices
 
@@ -94,8 +112,16 @@ status.
   verifier verdict.
 - [Wave 2 audit](verification/2026-07-22-wave2-audit.md): independent review of
   the structural, algebraic, and native-encoding claims.
+- [Wave 3 audit](verification/2026-07-22-wave3-audit.md): independent review of
+  the coclique/design, fiber-coupling, and OPB claims.
 - [LRAT calibration](verification/2026-07-22-lrat-calibration.md): pinned small
   negative-control proof replay.
+- [VeriPB calibration](verification/2026-07-22-veripb-calibration.md): canonical
+  OPB fixtures and Exact/VeriPB/CakePB replay.
+- [N3 normalization audit](verification/2026-07-22-n3-normalization-audit.md):
+  independent orbit, implementation, and safety review.
+- [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
+  frozen-commit tests and byte-identical proof regeneration.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

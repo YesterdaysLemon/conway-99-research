@@ -35,7 +35,8 @@ obligations:
     status: PASS
     evidence:
       - "verification/2026-07-22-lrat-calibration.md"
-    note: "CaDiCaL-to-DRAT-to-LRAT replay passes both complete pair_count=3 branches; no target proof exists."
+      - "verification/2026-07-22-veripb-calibration.md"
+    note: "Both CaDiCaL/LRAT and Exact/VeriPB/CakePB pass small controls; no target proof exists."
 
   - id: O-CLEAN-REPRODUCTION
     requirement: "Reproduce decisive artifacts from a clean clone with pinned dependencies and recorded hashes."
@@ -45,10 +46,11 @@ obligations:
       - "REPRODUCING.md"
       - "logs/2026-07-22-first-wave.json"
       - "verification/2026-07-22-wave2-clean-clone.md"
-    note: "Wave 2 tests and controls pass from a fresh clone, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave3-clean-clone.md"
+    note: "Wave 2 and Wave 3/N3 infrastructure replays pass from fresh clones, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
-    requirement: "Prove every search normalization complete without assuming a nontrivial solution automorphism."
+    requirement: "Prove the frozen root normalization and legacy 11-branch cover complete without assuming a nontrivial solution automorphism."
     critical: true
     status: PASS
     evidence:
@@ -79,3 +81,45 @@ obligations:
       - "agents/2026-07-22-wave2-algebra-codes.md"
       - "verification/2026-07-22-wave2-audit.md"
     note: "Individual residual 2-primary exponents and literature novelty remain unknown."
+
+  - id: O-WAVE3-LITERATURE
+    requirement: "Audit the adjacent-neighborhood prior art and source any theorem used to impose a new unrestricted search normalization."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave3-prior-art.md"
+      - "SOURCES.bib"
+    note: "Makhnev plus the six-vertex count yields the DERIVED universal N3 consequence; its conditional implementation and symmetry interaction pass the separate O-N3-NORMALIZATION audit."
+
+  - id: O-WAVE3-STRUCTURAL
+    requirement: "Adversarially verify the alpha-22 and mate-fiber Wave 3 identities with exact independent reconstruction."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave3-coclique-design.md"
+      - "agents/2026-07-22-wave3-fiber-coupling.md"
+      - "verification/2026-07-22-wave3-audit.md"
+    note: "Both lanes yield necessary conditions only; the cyclic design and target remain unresolved."
+
+  - id: O-WAVE3-OPB
+    requirement: "Independently verify native-to-OPB semantics and replay positive and negative controls through a mature checker and a separately verified checker."
+    critical: false
+    status: PASS
+    evidence:
+      - "attempts/2026-07-22-native-opb-proof-pipeline.md"
+      - "formal/opb-calibration"
+      - "verification/2026-07-22-veripb-calibration.md"
+      - "verification/2026-07-22-wave3-audit.md"
+      - "verification/2026-07-22-wave3-clean-clone.md"
+    note: "The full target scale run and its checked proof conclude NO CONCLUSION."
+
+  - id: O-N3-NORMALIZATION
+    requirement: "Implement and independently verify a symmetry-safe N3 normalization, including its interaction with the existing matching branch cover."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave3-prior-art.md"
+      - "agents/2026-07-22-wave4-n3-normalization.md"
+      - "verification/2026-07-22-n3-normalization-audit.md"
+      - "verification/2026-07-22-wave3-clean-clone.md"
+    note: "The safe unbranched --n3 formula is verified. Do not combine it with the legacy 11 representatives without a separately proved joint cover."

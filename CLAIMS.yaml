@@ -67,7 +67,7 @@ claims:
       - "code/sat_model.py"
       - "code/test_sat_model.py"
       - "verification/2026-07-22-wave2-audit.md"
-    limitations: "MiniCard has no accepted proof-logging path here; its target cutoffs are non-evidentiary."
+    limitations: "Embedded MiniCard solves do not log proofs; the equivalent OPB export has a separate calibrated external proof path. Target cutoffs are non-evidentiary."
 
   - id: C-FIBER-001
     statement: "For every endpoint fiber, the 60 outside residual labels biject with the nonedges of K_12 minus the fiber matching; coupling mate fibers forces at least 96 separation four-cycles per root group."
@@ -77,6 +77,78 @@ claims:
       - "agents/2026-07-22-wave2-structural.md"
       - "verification/2026-07-22-wave2-audit.md"
     limitations: "The 672 group incidences need not be distinct four-cycles and give no contradiction."
+
+  - id: C-N3-001
+    statement: "Every putative srg(99,14,1,2) contains an induced N3 consisting of two disjoint triangles joined by exactly two independent cross-edges; its count is a positive multiple of three."
+    label: DERIVED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-22-wave3-prior-art.md"
+      - "SOURCES.bib"
+    limitations: "The universal occurrence combines Makhnev's cited theorem with a project derivation; Makhnev's full proof was not independently reconstructed."
+
+  - id: C-N3-NORMALIZATION-001
+    statement: "Conditional on the derived universal N3 occurrence, fixing residual edge literal +24 is an equisatisfiable target normalization under global relabeling; it assumes no automorphism of the completed graph and cannot be naively combined with the legacy 11 matching representatives."
+    label: VERIFIED
+    scope: CONDITIONAL_ENCODING_NORMALIZATION
+    evidence:
+      - "agents/2026-07-22-wave4-n3-normalization.md"
+      - "code/sat_model.py"
+      - "code/test_sat_model.py"
+      - "code/test_root_model.py"
+      - "verification/2026-07-22-n3-normalization-audit.md"
+      - "verification/2026-07-22-wave3-clean-clone.md"
+    limitations: "The VERIFIED label covers the conditional relabeling and implementation only; universal N3 occurrence remains DERIVED and the target remains UNKNOWN."
+
+  - id: C-PERCOLATION-001
+    statement: "Each of the two central diagonal nonedges of any induced N3 2-percolates a putative Conway graph, so m(G,2)=2."
+    label: DERIVED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave3-prior-art.md"
+      - "SOURCES.bib"
+    limitations: "Uses the cited strongly-regular closure classification of Ibrahim, LaFayette, and McCall."
+
+  - id: C-FIBER-002
+    statement: "Mate-fiber coupling gives S_g=96+z_g with 0<=z_g<=24, at least 231 residual four-cycles unseparated by any root group, a weighted 2-factor relation, and the exact edge/four-cycle table."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-22-wave3-fiber-coupling.md"
+      - "verification/2026-07-22-wave3-audit.md"
+    limitations: "The identities are necessary conditions and give no contradiction; endpoint local controls are not full graphs."
+
+  - id: C-ALPHA22-001
+    statement: "Conditional on an independent 22-set, the outside equation is equivalent to X^2=28X for X=4D+16I-N^T N and to an exact two-sided PSD bound; the cyclic design certificate satisfies the design equations."
+    label: VERIFIED
+    scope: ALPHA_22_CONDITIONAL_SUBPROBLEM
+    evidence:
+      - "agents/2026-07-22-wave3-coclique-design.md"
+      - "verification/cyclic-design/verify.py"
+      - "verification/2026-07-22-wave3-audit.md"
+    limitations: "The certificate is one design only; no compatible D and no exhaustive alpha-22 infeasibility proof are known."
+
+  - id: C-OPB-001
+    statement: "The native-cardinality rooted formula exports exactly to canonical unit-weight OPB inequalities."
+    label: VERIFIED
+    scope: ENCODING_SEMANTICS
+    evidence:
+      - "attempts/2026-07-22-native-opb-proof-pipeline.md"
+      - "code/sat_model.py"
+      - "code/test_sat_model.py"
+      - "verification/2026-07-22-wave3-audit.md"
+    limitations: "Formula equivalence is not a target result."
+
+  - id: C-VERIPB-CALIBRATION-001
+    statement: "Canonical pair-count 2 and 3 OPB controls pass Exact proof generation, strict VeriPB replay and elaboration, and CakePB replay with SAT and UNSAT conclusions respectively."
+    label: VERIFIED
+    scope: SMALL_CONTROLS_ONLY
+    evidence:
+      - "formal/opb-calibration"
+      - "verification/2026-07-22-veripb-calibration.md"
+      - "verification/2026-07-22-wave3-audit.md"
+    limitations: "The 10-second target proof log is independently checked to have NO CONCLUSION; no target branch is proved."
 
   - id: C-ARITHMETIC-001
     statement: "The full Smith form, residual modular Jordan forms, code bounds, saturated kernel determinant, and Delta_77 recorded in the Wave 2 algebra report are parameter-forced."

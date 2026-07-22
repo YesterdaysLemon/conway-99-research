@@ -1,5 +1,9 @@
 # Native-cardinality discovery backend
 
+> **Record type:** synthesis note, not a run manifest. Reproducible commands,
+> source commits, and artifact hashes are recorded in the linked Wave 2 and
+> Wave 3 verifier reports; this note makes no independent verification claim.
+
 Status: `VERIFIED_ENCODING`; target result: `UNKNOWN`
 
 Scope: exact representation of the rooted residual equations
@@ -75,9 +79,11 @@ in `logs/2026-07-22-wave2.json`.
 
 ## Certificate boundary
 
-MiniCard is used only to find candidate models or rank branches. A SAT model
-must decode to a complete graph and pass independent validators. An apparent
-UNSAT branch must be regenerated as ordinary DIMACS with branch decisions as
-unit clauses, solved by a pinned proof-producing solver, and replayed with an
-independent proof checker. All 11 checked branches would be required for a
-nonexistence claim.
+Embedded MiniCard is used only to find candidate models or rank branches. A
+SAT model must decode to a complete graph and pass independent validators. An
+apparent UNSAT result must be regenerated either as ordinary DIMACS or as the
+exact native-cardinality OPB export, solved by a pinned proof-producing solver,
+and replayed with independent proof checkers. A nonexistence claim must cover
+an explicitly proved complete search split; the legacy split has 11 branches,
+while a theorem-forced `N3` normalization uses a different stabilizer and must
+not be naively intersected with those representatives.

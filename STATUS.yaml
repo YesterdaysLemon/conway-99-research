@@ -54,4 +54,23 @@ second_research_wave:
   proof_pipeline_calibration: "verification/2026-07-22-lrat-calibration.md"
   clean_clone_replay: "verification/2026-07-22-wave2-clean-clone.md"
   caveat: "All 11 target branches returned UNKNOWN at the bounded cutoff; this is non-evidentiary."
+third_research_wave:
+  source_commit: "98ee7b3dac89d57f09c583f83a356b3ef9541b3e"
+  verifier_verdict: PASS_FOR_RECORDED_NECESSARY_CONDITIONS_AND_PROOF_PIPELINE
+  target_result: UNKNOWN
+  literature_report: "agents/2026-07-22-wave3-prior-art.md"
+  coclique_report: "agents/2026-07-22-wave3-coclique-design.md"
+  fiber_report: "agents/2026-07-22-wave3-fiber-coupling.md"
+  verifier_report: "verification/2026-07-22-wave3-audit.md"
+  proof_pipeline_calibration: "verification/2026-07-22-veripb-calibration.md"
+  clean_clone_replay: "verification/2026-07-22-wave3-clean-clone.md"
+  caveat: "The target-scale proof run returned UNKNOWN and all proof checkers verified NO CONCLUSION; it is non-evidentiary."
+fourth_research_wave:
+  source_commit: "98ee7b3dac89d57f09c583f83a356b3ef9541b3e"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_NORMALIZATION_ONLY
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave4-n3-normalization.md"
+  verifier_report: "verification/2026-07-22-n3-normalization-audit.md"
+  clean_clone_replay: "verification/2026-07-22-wave3-clean-clone.md"
+  caveat: "Universal N3 occurrence remains DERIVED; the safe normalization cannot be combined with the legacy 11 branch representatives, and its bounded target run concluded only NO CONCLUSION."
 last_updated: 2026-07-22

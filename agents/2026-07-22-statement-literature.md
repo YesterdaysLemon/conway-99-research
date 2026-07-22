@@ -37,7 +37,7 @@ The agent supplied complete derivations, now integrated into
   certificate was located.
 - Crnkovic--Maksimovic rule out specified composite group actions; asymmetric,
   `C2`, and `C3` cases remain outside those exclusions.
-- Gray Taylor's public notebooks explore local configurations. No compatible
+- Graeme Taylor's public notebooks explore local configurations. No compatible
   source license, full construction, or universal impossibility certificate
   was found.
 - Keramatipour's direct encodings timed out/stalled. A timeout is not evidence
@@ -51,7 +51,7 @@ or equivalent independently replayable nonexistence certificate.
 - Cesarz--Woldar is CC BY 4.0 and must be attributed.
 - Link to Wilbrink's institutional scan; do not mirror it.
 - Do not presume reuse rights for older journal PDFs or project reports.
-- The Gray Taylor repository showed no explicit license during this audit; its
+- The Graeme Taylor repository showed no explicit license during this audit; its
   code must not be copied. Mathematical ideas may be independently specified
   and clean-room reimplemented.
 

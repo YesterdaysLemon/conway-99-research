@@ -26,6 +26,39 @@ The complement would be `srg(99,84,71,72)`. The Laplacian spectrum is
 spanning_trees = 11^54 * 18^44 / 99.
 ```
 
+## Forced `N3` and two-vertex percolation (`CITED` + `DERIVED`)
+
+Every putative Conway graph contains an induced `N3`: two disjoint triangles
+joined by exactly two independent cross-edges. Makhnev proved that no target
+graph satisfies the condition that two triangles joined by at least two
+cross-edges always have exactly three; `lambda=1` makes those cross-edges a
+matching, so failure of the condition forces `N3`.
+
+Reimbayev's six-vertex identities then give
+
+```text
+n3 >= 3,
+n3 = 0 (mod 3),
+induced_C6_count = 209,286 + n3 >= 209,289.
+```
+
+Each of the two central diagonal nonedges of the four-cycle in any `N3`
+2-percolates the whole graph. The seed first infects the other two vertices of
+the four-cycle and then the two remaining triangle vertices. The closure classification of
+Ibrahim--LaFayette--McCall leaves only a proper `srg(9,4,1,2)` closure, but the
+unique `K3 square K3` contains no induced `N3`. Therefore
+
+```text
+m(G,2) = 2.
+```
+
+Fixing one labeled `N3` is an existentially safe search normalization: a
+putative graph has an occurrence that can be globally relabeled. This does not
+claim that occurrences form one automorphism orbit. The complete derivation
+and source boundaries are in `agents/2026-07-22-wave3-prior-art.md`; the
+single-unit implementation and branch-interaction guards are independently
+checked in `verification/2026-07-22-n3-normalization-audit.md`.
+
 ## Rooted counts (`DERIVED`)
 
 For a root `x`, write `N1=N(x)` and `N2=V-(N1 union {x})`. The induced graph
@@ -190,7 +223,62 @@ sum binom(R[u,v],2) >= 96.
 Each counted pair defines a residual four-cycle separated by that root-matched
 coordinate pair. This supplies at least 96 distinct such cycles per root group,
 but cycles may be counted for multiple groups, so it is not a contradiction.
-See `agents/2026-07-22-wave2-structural.md` for the proof and scope warning.
+
+Wave 3 sharpens the count. For each root group there is an integer
+`0<=z_g<=24` such that the exact number of separated cycles is
+
+```text
+S_g = 96 + z_g.
+```
+
+Thus the seven groups give at most 840 separation incidences, and at least 231
+of the 1,071 residual four-cycles are not separated by any group. The same
+block algebra yields a matching-plus-2-regular packaging of selected residual
+edges and the exact number of residual four-cycles through each relation type:
+
+```text
+(Q,D) = (1,0),(1,1),(0,0),(0,1),(0,2)
+cycles =   10,   11,    8,    9,   10.
+```
+
+See `agents/2026-07-22-wave2-structural.md` for the endpoint bijection and
+`agents/2026-07-22-wave3-fiber-coupling.md` for the independently checked
+coupling identities and scope warnings.
+
+## Conditional alpha-22 design reduction (`VERIFIED`)
+
+If a putative graph has an independent set of size 22, its other 77 vertices
+define a simple `2-(22,4,2)` design with point-block incidence matrix `N` and
+an outside adjacency matrix `D` satisfying
+
+```text
+NN^T = 12I+2J,
+ND = -N+2J.
+```
+
+Writing `G=N^T N` and `X=4D+16I-G`, the remaining SRG equation is exactly
+
+```text
+X^2=28X.
+```
+
+Equivalently, for symmetric hollow Boolean `D` satisfying the linear
+incidence equation, it is enough to impose
+
+```text
+D+4I >= 0,
+33I-11D+J >= 0.
+```
+
+A compatible `X` would be 28 times a rank-33 projector. The design's
+intersection-one graph consists of 22 edge-disjoint perfect matchings, while
+its disjoint-block edges form 77 triples of pairwise-disjoint blocks, a linear
+`77_3` configuration.
+
+The repository includes an exact cyclic `2-(22,4,2)` certificate with block
+intersection histogram `1155/1540/231`; this shows the design equations alone
+are consistent. No compatible `D` is known, and this one design does not cover
+the alpha-22 case. See `agents/2026-07-22-wave3-coclique-design.md`.
 
 ## Modular and integral constraints (`VERIFIED`)
 
