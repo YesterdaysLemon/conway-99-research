@@ -406,16 +406,18 @@ def relaxed_route_ledger() -> dict[str, Any]:
     if {"h": 9, "det_Q": 5, "det_B": 45} not in mod8_omitted_pairs:
         raise CheckError("hostile omission of trace-square mod 8 did not survive")
 
-    # If det(Q)==3 were admitted, h=9 gives det(B)=27 under the new cap.
-    q_residue_omitted_pairs = factor_pairs(
+    # If the signature obstruction det(Q)!=1 is omitted while the mod-four
+    # residues remain active, h=9 and det(Q)=1 give the compatible
+    # determinant det(B)=9 under the new cap.
+    q_signature_omitted_pairs = factor_pairs(
         42,
-        3,
+        1,
         require_h_mod_4_one=True,
         exclude_h_one=True,
-        require_det_q_mod_4_one=False,
+        require_det_q_mod_4_one=True,
     )
-    if {"h": 9, "det_Q": 3, "det_B": 27} not in q_residue_omitted_pairs:
-        raise CheckError("hostile det(Q)=3 mutation did not survive")
+    if {"h": 9, "det_Q": 1, "det_B": 9} not in q_signature_omitted_pairs:
+        raise CheckError("hostile det(Q)=1 signature omission did not survive")
 
     # If h were not constrained to be 3,7-smooth, h=5 and det(Q)=5 would
     # survive.  This pair is deliberately outside factor_pairs' prime gate.
@@ -442,8 +444,13 @@ def relaxed_route_ledger() -> dict[str, Any]:
             "survivor": {"h": 9, "det_Q": 5, "det_B": 45},
             "status": "ENDPOINT_NOT_EXCLUDED",
         },
-        "admit_det_Q_3": {
-            "survivor": {"h": 9, "det_Q": 3, "det_B": 27},
+        "omit_det_Q_one_signature_obstruction": {
+            "retained_residues": {
+                "det_B_mod_4": 1,
+                "det_Q_mod_4": 1,
+                "h_mod_4": 1,
+            },
+            "survivor": {"h": 9, "det_Q": 1, "det_B": 9},
             "status": "ENDPOINT_NOT_EXCLUDED",
         },
         "omit_3_7_smoothness": {

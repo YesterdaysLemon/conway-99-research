@@ -29,12 +29,29 @@ The missing bridge is that `S=21G^{-1}` is itself even integral positive
 definite with determinant `h`.  At `h=1` it would be an even unimodular
 positive-definite lattice of rank 44, forbidden by the signature theorem.
 
-## Omitting the even determinant congruence for Q
+## Omitting the signature obstruction at det(Q)=1
 
-If `det(Q)=3` is incorrectly admitted, the formal pair
-`(h,det(Q),det(B))=(9,3,27)` survives the new cap.  Rank 44 forces every odd
-determinant of the even Gram matrix `Q` to be `1 mod 4`; together with the
-signature obstruction this gives `det(Q)>=5`.
+If the even-unimodular signature obstruction is omitted while all mod-four
+constraints are retained, the formal pair
+
+```text
+(h,det(Q),det(B))=(9,1,9)
+```
+
+survives the new cap.  It satisfies `h=det(Q)=det(B)=1 mod 4`, smoothness,
+and `det(B)=h det(Q)`.  The active missing premise is exactly that
+`det(Q)=1` would be an even unimodular positive-definite rank-44 lattice.
+
+### Superseded invalid control, retained
+
+The frozen discovery commit
+`b3763368049422b5f10f949a8ac02b14ec0fb54f` instead listed
+`(9,3,27)` after supposedly omitting the `det(Q)` residue/signature package.
+The verifier commit `a6771108ec00bddfcc8ae5b41779760673fef22e`
+correctly refuted that as a single-relaxation control: `27=3 mod 4`, so it
+also violates the retained frozen consequence `det(B)=1 mod 4`.
+The triple `(9,3,27)` would require dropping both the `det(Q)` and `det(B)`
+residues.  It is not used by the repaired ledger or by the main proof.
 
 ## Omitting index smoothness
 

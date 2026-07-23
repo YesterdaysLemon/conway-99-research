@@ -151,12 +151,15 @@ class EndpointCrosscheckTests(unittest.TestCase):
             {1},
         )
 
-    def test_20_det_Q_three_hostile_survivor(self) -> None:
+    def test_20_det_Q_one_signature_hostile_survivor(self) -> None:
         ledger = exact_check.relaxed_route_ledger()
         self.assertEqual(
-            ledger["admit_det_Q_3"]["survivor"],
-            {"h": 9, "det_Q": 3, "det_B": 27},
+            ledger["omit_det_Q_one_signature_obstruction"]["survivor"],
+            {"h": 9, "det_Q": 1, "det_B": 9},
         )
+        survivor = ledger["omit_det_Q_one_signature_obstruction"]["survivor"]
+        self.assertEqual(survivor["det_B"] % 4, 1)
+        self.assertEqual(survivor["det_Q"] % 4, 1)
 
     def test_21_nonsmooth_h_five_hostile_survivor(self) -> None:
         ledger = exact_check.relaxed_route_ledger()

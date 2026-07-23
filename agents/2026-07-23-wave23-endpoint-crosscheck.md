@@ -21,16 +21,21 @@ outputs:
   - path: attempts/wave23-endpoint-crosscheck/input-freeze.sha256
     sha256: 48d7f4a9340f20140e0c83cb49235f523ad87f6fb46057e9a387487293edbce0
   - path: attempts/wave23-endpoint-crosscheck/exact_check.py
-    sha256: 90d57665d8b5306ff03f73a09ec36dc2ed619d41a368f2378b630fd82ba93279
+    sha256: 92c480e4b4c45f528f41f825d522982cd273c952104a7fe134b1b4acc161b2da
   - path: attempts/wave23-endpoint-crosscheck/test_exact_check.py
-    sha256: 34e08f976b0115c01a2b79f5b486c115d7876257fdbed89a61a8ae8f6ad9c275
+    sha256: 24ae053c2508e8e30c9118d9a58e90b2cf445b536df0de6066ec43143e850bb6
   - path: attempts/wave23-endpoint-crosscheck/exact-results.json
-    sha256: 68fbf3f4e8ee0510b4585a7d455f33c154cb2be173760f86303ae372a8c2db6d
+    sha256: 1b31074d0fe4872c14caf1e25842377e4ddab9860f241d87d2814a350ac100a4
   - path: attempts/wave23-endpoint-crosscheck/failed-runs.md
-    sha256: b59a45e3f593f49cb0b876bb820cc4b13e96d626985c2db41de42a4fde587987
+    sha256: ca5f7078e352a1406c9260ead56f2f5cb9c775e1c9099e0ef5b2746190ecc8bb
   - path: attempts/wave23-endpoint-crosscheck/failed-routes.md
-    sha256: 82af026c1883e59cb25afdfa239e7c6faf5ae53fbdb450d98290477b49af59c2
+    sha256: 86e14750167d09ec330a801af5f81e5d1f3bc7f8ed4b56866de5d9ff5bb62abe
 limitations: pending an independent verifier; relies on the audited prose-to-lattice bridges and the even-unimodular signature theorem; no graph is constructed; target existence and novelty remain unknown
+correction_provenance:
+  frozen_discovery_commit: b3763368049422b5f10f949a8ac02b14ec0fb54f
+  verifier_commit: a6771108ec00bddfcc8ae5b41779760673fef22e
+  verifier_audit: verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md
+  verifier_audit_sha256: 56cf0b8c14f9af50a58e60a8a6a273726a79d15782527ff8ea46194e9dea5d8c
 ---
 
 # Wave 23 endpoint cross-check: a trace-square/index exclusion of n3=705
@@ -59,7 +64,11 @@ This lane used only the five audited artifacts listed in the front matter.
 Their hashes and byte lengths were frozen in
 `attempts/wave23-endpoint-crosscheck/input-freeze.sha256` before the
 derivation.  No other Wave-23 attempt, report, code, result, or message was
-inspected.
+inspected during discovery.  After the discovery was frozen at commit
+`b3763368049422b5f10f949a8ac02b14ec0fb54f`, the correction described in
+Section 7 inspected only the independent audit committed at
+`a6771108ec00bddfcc8ae5b41779760673fef22e`; that audit is correction
+provenance, not a premise of the main proof.
 
 The imported audited facts are:
 
@@ -300,12 +309,36 @@ formal endpoint survivor:
 | Omitted condition | Survivor |
 |---|---|
 | `tr(B^2)=4 mod 8` | `(h,detQ,detB)=(9,5,45)` |
-| `det(Q)=1 mod 4` and signature lower bound | `(9,3,27)` |
+| signature obstruction excluding `det(Q)=1` | `(9,1,9)` |
 | `h` is 3,7-smooth | `(5,5,25)` |
 | scaled-dual obstruction to `h=1` | ten `h=1` pairs |
 
 The retained route and run ledgers record why none of these weaker systems
 is promoted.
+
+## 7. Correction of an ancillary hostile control
+
+The independent audit
+`verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md`
+verified the main proof and identified one nonblocking defect in the frozen
+hostile ledger.  The original `(9,3,27)` example does not retain all the
+claimed constraints: although it arises if the `det(Q)` residue is dropped,
+it also violates the frozen identity `det(B)=1 mod 4`.
+
+The repaired single-relaxation control is
+
+```text
+(h,det(Q),det(B))=(9,1,9).
+```
+
+It omits only the even-unimodular signature obstruction to `det(Q)=1`.
+It retains the mod-four residues of all three determinants, 3,7-smoothness,
+`det(B)=h det(Q)`, positivity, and the cap `det(B)<=42`.  The invalid
+`(9,3,27)` control remains explicitly documented in both ledgers, with the
+frozen discovery and verifier commits, so the correction is auditable.
+
+No line of the endpoint exclusion uses either hostile control.  The proof
+and conditional bounds are unchanged.
 
 ## Scope wall
 

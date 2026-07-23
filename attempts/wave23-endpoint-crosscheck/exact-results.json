@@ -108,20 +108,25 @@
     }
   },
   "hostile_relaxations": {
-    "admit_det_Q_3": {
-      "status": "ENDPOINT_NOT_EXCLUDED",
-      "survivor": {
-        "det_B": 27,
-        "det_Q": 3,
-        "h": 9
-      }
-    },
     "omit_3_7_smoothness": {
       "status": "ENDPOINT_NOT_EXCLUDED",
       "survivor": {
         "det_B": 25,
         "det_Q": 5,
         "h": 5
+      }
+    },
+    "omit_det_Q_one_signature_obstruction": {
+      "retained_residues": {
+        "det_B_mod_4": 1,
+        "det_Q_mod_4": 1,
+        "h_mod_4": 1
+      },
+      "status": "ENDPOINT_NOT_EXCLUDED",
+      "survivor": {
+        "det_B": 9,
+        "det_Q": 1,
+        "h": 9
       }
     },
     "omit_scaled_dual_h1_obstruction": {

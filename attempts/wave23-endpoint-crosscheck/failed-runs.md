@@ -17,3 +17,20 @@ the ungated arithmetic path.  The corrected run and all 25 tests pass.
 
 No solver, floating-point calculation, or candidate Wave-23 artifact was
 used.
+
+## Verifier correction of one hostile control
+
+The frozen discovery commit
+`b3763368049422b5f10f949a8ac02b14ec0fb54f` claimed that
+`(h,det(Q),det(B))=(9,3,27)` survived after omitting the `det(Q)` residue
+and signature package.  The independent audit committed at
+`a6771108ec00bddfcc8ae5b41779760673fef22e` correctly observed that this
+triple violates the still-frozen consequence `det(B)=1 mod 4`, since
+`27=3 mod 4`.
+
+The invalid control is retained here rather than silently rewritten.  It is
+replaced in the executable hostile ledger by the single-relaxation control
+`(9,1,9)`: omit only the signature obstruction `det(Q)!=1`, while retaining
+`det(Q)=1 mod 4`, `h=1 mod 4`, `det(B)=1 mod 4`, smoothness, factorization,
+and the determinant cap.  The main endpoint proof never used the invalid
+control and is unchanged.
