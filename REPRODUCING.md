@@ -433,6 +433,40 @@ exists for any solver-negative row, so every such row remains
 52-code-test, 12-focused-test, and 104-verification-test replay is recorded in
 `verification/2026-07-22-wave13-clean-clone.md`.
 
+Replay the Wave 14 `n3=48` structural frontier and its explicit
+all-size-two relaxation object:
+
+```powershell
+.venv\Scripts\python -B attempts\wave14-proof-a\profile_modes.py
+.venv\Scripts\python -B attempts\wave14-proof-a\verify_all2_countermodel.py `
+  attempts\wave14-proof-a\all2-active-countermodel.json
+.venv\Scripts\python -B -m unittest -v `
+  attempts\wave14-proof-a\test_wave14_proof_a.py
+.venv\Scripts\python -B verification\n3-48-proof\independent_reconstruction.py
+.venv\Scripts\python -B verification\n3-48-proof\audit_countermodel.py `
+  attempts\wave14-proof-a\all2-active-countermodel.json
+```
+
+Replay the separate active-local computation and its independent audit:
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE='1'
+.venv\Scripts\python code\wave14_n3_48_verify.py `
+  --output attempts\wave14-computation\n3-48-independent-validation.json
+.venv\Scripts\python code\wave14_n3_48_test.py -v
+.venv\Scripts\python verification\n3-48-computation\independent_audit.py
+```
+
+The proof audit reproduces twelve raw profiles, three inherited survivors,
+both mixed-profile exclusions, and the exact unresolved `r=16` support
+residual. The computation audit independently rebuilds thirteen formulas,
+checks one full positive object and two weakened controls, and rejects 29
+hostile mutations. Its raw scan remains exactly `1 SAT_CANDIDATE`,
+`7 UNSAT_UNVERIFIED`, `1 BUDGET_UNKNOWN`, and `2 TIMEOUT_UNKNOWN`. None of
+the seven negative rows has a checked proof trace. Wave 14 therefore leaves
+the verified bound at `n3>=48` and `induced_C6_count>=209334`; equality,
+Conway-99, and novelty remain `UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

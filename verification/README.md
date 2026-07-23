@@ -370,3 +370,40 @@ trace was emitted or checked, so every solver-negative branch remains
 replay at `2026-07-22-wave13-clean-clone.md` records 52 code tests, 12 focused
 Wave 13 tests, 104 verification tests, and byte-identical census and positive
 diagnostic regeneration.
+
+## `N3=48` frontier reduction
+
+`n3-48-proof/independent_reconstruction.py` independently rebuilds the twelve
+active profiles, inherited three-profile filter, order-fourteen and
+order-fifteen mixed-profile contradictions, and order-sixteen local-mode
+arithmetic. `n3-48-proof/audit_countermodel.py` separately reconstructs the
+explicit all-size-two active/local/support object and attacks it with five
+semantic mutations.
+
+```powershell
+python -B verification/n3-48-proof/independent_reconstruction.py
+python -B verification/n3-48-proof/audit_countermodel.py `
+  attempts/wave14-proof-a/all2-active-countermodel.json
+```
+
+The proof audit passes the scoped reduction to an `r=16`, all-`q=2` residual
+with point sizes two or three, eight surviving size-three modes, `H`-degrees
+zero or four, and exact twofold support coverage. The positive object shows
+that the listed active constraints alone are not contradictory; it is not a
+partial or complete Conway graph. Exclusion of `n3=48` remains `UNKNOWN` at
+this checkpoint.
+
+The computation lane is audited independently by
+`n3-48-computation/independent_audit.py`. It reconstructs all thirteen formula
+streams, checks the full positive candidate and two weakened controls, binds
+file and semantic provenance, and rejects 29 hostile mutations.
+
+```powershell
+python -B verification/n3-48-computation/independent_audit.py
+python -B code/wave14_n3_48_test.py -v
+```
+
+The archived JSON output is deterministic under replay. The scan status is
+`1 SAT_CANDIDATE`, `7 UNSAT_UNVERIFIED`, `1 BUDGET_UNKNOWN`, and
+`2 TIMEOUT_UNKNOWN`; negative solver exits are explicitly non-evidentiary.
+The literature/status audit also keeps the target and novelty `UNKNOWN`.

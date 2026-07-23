@@ -225,3 +225,34 @@ The 17 solver-negative branches still have no checked proof trace and remain
 conditional `n3=45` exclusion; that promotion depends on the separately
 written and twice-audited human reduction. Conway-99 and novelty remain
 `UNKNOWN`.
+
+## Wave 14 `n3=48` discovery tools
+
+The Wave 14 programs enumerate twelve `sum q=32` profiles, replay the finite
+flower and local-mode reductions, and build a deliberately scoped active-local
+SAT model:
+
+- `wave14_n3_48_profiles.py` generates the exact profile, flower, local-state,
+  and finite branch census;
+- `wave14_n3_48_active_sat.py` materializes thirteen exact formula streams and
+  the bounded discovery scan;
+- `wave14_n3_48_verify.py` validates the archived census, positive objects,
+  controls, formula hashes, provenance, and status boundary; and
+- `wave14_n3_48_test.py` supplies seven focused regression and hostile-mutation
+  tests.
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE='1'
+.venv\Scripts\python code\wave14_n3_48_profiles.py `
+  --output attempts\wave14-computation\n3-48-profile-census.json
+.venv\Scripts\python code\wave14_n3_48_verify.py `
+  --output attempts\wave14-computation\n3-48-independent-validation.json
+.venv\Scripts\python code\wave14_n3_48_test.py -v
+```
+
+The exact scan status is `1 SAT_CANDIDATE / 7 UNSAT_UNVERIFIED /
+1 BUDGET_UNKNOWN / 2 TIMEOUT_UNKNOWN`. The solver negatives have no checked
+proof traces. The positive objects encode only the active-local layer and are
+not `H`, partial Conway graphs, or target certificates. The independently
+audited human lane reduces equality to a finite support residual but does not
+exclude it; the verified bound stays `n3>=48`.

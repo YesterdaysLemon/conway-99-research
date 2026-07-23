@@ -255,6 +255,28 @@ This is a conditional necessary bound, not a Conway-99 resolution. No checked
 source was found for the exact strengthening; novelty and the target remain
 `UNKNOWN`.
 
+Wave 14 analyzes the remaining equality frontier `n3=48` but does not exclude
+it. Exact partitioning of `sum q(T)=32` gives twelve active profiles; inherited
+degree and point-clique obstructions leave three. Human reductions eliminate
+the mixed order-fourteen and order-fifteen profiles. The surviving case has
+sixteen active triangles, `q=2` everywhere, a 9-regular complement `K`, and
+active point sizes two or three. Eight aligned size-three modes remain, every
+edge-auxiliary `H`-degree is zero or four, and a support graph `R` has degree
+equal to point size with exact twofold rectangle coverage of `L`.
+
+Those conditions are a sharp residual, not a contradiction. A checked
+all-size-two object satisfies the stated active/local/support relaxation, and
+a separate active-local SAT lane retains the exact raw status split
+`1 SAT_CANDIDATE / 7 UNSAT_UNVERIFIED / 1 BUDGET_UNKNOWN / 2 TIMEOUT_UNKNOWN`.
+The negative solver rows have no checked proof traces and are not evidence.
+See the [Wave 14 reduction](agents/2026-07-22-wave14-n3-48-proof-a.md),
+[proof audit](verification/2026-07-22-wave14-n3-48-proof-audit.md),
+[computation audit](verification/2026-07-22-wave14-n3-48-computation-audit.md),
+and [status audit](verification/2026-07-22-wave14-status-audit.md). The strongest
+verified project bound therefore remains `n3>=48` and
+`induced_C6_count>=209334`; exclusion of equality, Conway-99, and novelty are
+all `UNKNOWN` at this checkpoint.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -357,6 +379,16 @@ status.
 - [Wave 13 computation-repair audit](verification/2026-07-22-wave13-computation-repair-audit.md):
   fresh 17-formula reconstruction, clause-by-clause positive replay, direct
   provenance, and 31 hostile mutations; solver negatives remain uncertified.
+- [Wave 14 `n3=48` proof audit](verification/2026-07-22-wave14-n3-48-proof-audit.md):
+  independent reconstruction of the twelve-to-three profile reduction, both
+  mixed-profile exclusions, and the exact surviving support residual.
+- [Wave 14 computation audit](verification/2026-07-22-wave14-n3-48-computation-audit.md):
+  independent reconstruction of all thirteen formula streams, three positive
+  relaxation objects, 29 hostile mutations, and the non-evidentiary scan
+  status boundary.
+- [Wave 14 literature/status audit](verification/2026-07-22-wave14-status-audit.md):
+  source-frozen audit of the `N3` notation, hexagon identity, unresolved target
+  status, and nonexhaustive novelty search.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

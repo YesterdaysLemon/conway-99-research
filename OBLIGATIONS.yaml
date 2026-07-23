@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-22
+as_of: 2026-07-23
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -288,3 +288,19 @@ obligations:
       - "verification/2026-07-22-wave13-computation-repair-audit.md"
       - "verification/2026-07-22-wave13-clean-clone.md"
     note: "Two independent semantic verifiers pass the human conditional exclusion of n3=45, yielding n3>=48 and induced_C6_count>=209334. The initial computation bundle failed self-validation; that failure is preserved, its repair passed independent formula/provenance/mutation checks, and every solver-negative row remains UNSAT_UNVERIFIED. Novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE14-STRUCTURAL
+    requirement: "Adversarially verify the n3=48 profile enumeration, both mixed-profile exclusions, r=16 point-size and local-mode reductions, zero-or-four H-degree conclusion, exact support residual, positive relaxation countermodels, and computation/provenance boundary without promoting unchecked solver negatives."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave14-n3-48-proof-a.md"
+      - "agents/2026-07-22-wave14-n3-48-computational.md"
+      - "verification/2026-07-22-wave14-n3-48-proof-audit.md"
+      - "verification/n3-48-proof/independent_reconstruction.py"
+      - "verification/n3-48-proof/audit_countermodel.py"
+      - "verification/2026-07-22-wave14-n3-48-computation-audit.md"
+      - "verification/n3-48-computation/independent_audit.py"
+      - "verification/n3-48-computation/independent-audit-results.json"
+      - "verification/2026-07-22-wave14-status-audit.md"
+    note: "The scoped reduction and positive relaxation objects pass independent reconstruction. Wave 14 does not exclude n3=48: seven negative rows remain UNSAT_UNVERIFIED and the remaining bounded rows are SAT_CANDIDATE, BUDGET_UNKNOWN, or TIMEOUT_UNKNOWN. The strongest verified bound remains n3>=48 and induced_C6_count>=209334; novelty and Conway-99 remain UNKNOWN."

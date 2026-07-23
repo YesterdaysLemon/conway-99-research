@@ -285,6 +285,54 @@ repaired and re-audited without erasing the failure. See
 `verification/2026-07-22-wave13-computation-repair-audit.md`. The result is a
 conditional necessary bound only. Conway-99 and novelty remain `UNKNOWN`.
 
+Wave 14 treats the unresolved equality case `n3=48`. Partitioning
+`sum q(T)=32` gives twelve raw active profiles; the inherited minimum
+point-clique degree and degree-three obstruction leave
+
+```text
+r=14: q-profile (2^10,3^4),
+r=15: q-profile (2^13,3^2),
+r=16: q-profile (2^16).
+```
+
+In the order-fourteen case, local crossing capacity reduces size-three points
+to two modes; their intersection graph and incidence budget conflict, and the
+all-size-two alternative overfills a special label. In the order-fifteen
+case, size-three points cannot meet either special label, while a remaining
+special--ordinary size-two point has fixed support sum ten although every
+term is divisible by four. Both mixed profiles are therefore excluded.
+
+For `r=16`, expansion and flower obstructions leave only point sizes two and
+three. Exact local enumeration gives ten aligned size-three modes; fixed
+support eliminates the two modes with no full meeting crossing. A six-edge
+crossing is then impossible, so every graph-edge vertex of `H` has degree
+zero or four. If `mathcal P` is the active point family and `R` joins point
+objects whose actual graph edge has `H`-degree four, then
+
+```text
+d_R(P)=|P| in {2,3},
+sum_(P in mathcal P)|P|=48,
+|E(R)|=24,
+```
+
+and every one of the 48 edges of the 6-regular graph `L` has exact twofold
+coverage by the full `K2,2` rectangles carried by `R`.
+
+This finite residual is consistent at the active/local/support level. The
+archived all-size-two object has point graph `2Q3`, support `6C4`, a simple
+4-regular triangle-free `H`, and passes the declared common-neighbor upper
+caps. It omits the other 75 original vertices, inactive triangles, degree-14
+completion, and the missing SRG equalities, so it is a countermodel only to an
+overstrong relaxation claim. A separate computation has raw status
+`1 SAT_CANDIDATE`, `7 UNSAT_UNVERIFIED`, `1 BUDGET_UNKNOWN`, and
+`2 TIMEOUT_UNKNOWN`; none of its negative rows is proof evidence. The
+reduction and independent audits are in
+`agents/2026-07-22-wave14-n3-48-proof-a.md`,
+`verification/2026-07-22-wave14-n3-48-proof-audit.md`, and
+`verification/2026-07-22-wave14-n3-48-computation-audit.md`. Thus Wave 14
+does not improve the verified `n3>=48` bound. The equality exclusion, target,
+and novelty remain `UNKNOWN` at this checkpoint.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

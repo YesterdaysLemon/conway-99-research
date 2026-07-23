@@ -218,4 +218,34 @@ thirteenth_research_wave:
   clean_clone_commit: "4e354b80101b24cd9ef0861e9f65f948b912621f"
   clean_clone_replay: "verification/2026-07-22-wave13-clean-clone.md"
   caveat: "The human conditional exclusion of n3=45 passed two independent semantic audits and yields n3>=48 and induced_C6_count>=209334. The separate SAT computation is not used as negative evidence: its first self-validation bundle failed publicly, the repair passed a fresh audit, and all 17 solver-negative rows remain UNSAT_UNVERIFIED. No checked literature source establishes novelty, and Conway-99 remains UNKNOWN."
+fourteenth_research_wave:
+  source_commit: "e3edcfbe188f9504d9f259993bc89a2296153529"
+  verification_commit: "6b6d721885a6d7c8451c6d6322a35e881b72d94e"
+  verifier_verdict: PASS_FOR_SCOPED_N3_48_RESIDUAL_REDUCTION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_lower_bound: 48
+  conditional_induced_C6_lower_bound: 209334
+  conditional_n3_48_exclusion: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave14-n3-48-proof-a.md"
+  computational_report: "agents/2026-07-22-wave14-n3-48-computational.md"
+  proof_audit: "verification/2026-07-22-wave14-n3-48-proof-audit.md"
+  computation_audit: "verification/2026-07-22-wave14-n3-48-computation-audit.md"
+  prior_art_status_audit: "verification/2026-07-22-wave14-status-audit.md"
+  proof_reconstruction: "verification/n3-48-proof/independent_reconstruction.py"
+  countermodel_audit: "verification/n3-48-proof/audit_countermodel.py"
+  computation_reconstruction: "verification/n3-48-computation/independent_audit.py"
+  active_profiles_raw: 12
+  active_profiles_after_inherited_filters: 3
+  surviving_profile: "r=16, q=(2^16), K 9-regular"
+  surviving_point_sizes: [2, 3]
+  surviving_size3_modes: 8
+  residual_H_degrees: [0, 4]
+  computation_scan_status:
+    SAT_CANDIDATE: 1
+    UNSAT_UNVERIFIED: 7
+    BUDGET_UNKNOWN: 1
+    TIMEOUT_UNKNOWN: 2
+  computation_negative_evidence: false
+  caveat: "Wave 14 verifies a sharp conditional residual and explicit countermodels to narrower active/local/support relaxations, but does not exclude n3=48. The positive objects are not partial or complete Conway graphs, every solver-negative row lacks a checked proof trace, and target existence, nonexistence, and novelty remain UNKNOWN."
 last_updated: 2026-07-23
