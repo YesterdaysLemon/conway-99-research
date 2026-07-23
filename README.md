@@ -923,6 +923,10 @@ status.
 - [Wave 24 literature/status audit](verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md):
   exact endpoint and method queries, 40 individual index templates,
   conceptual ingredient prior art, and bounded non-discovery.
+- [Waves 21-24 clean-source replay](verification/2026-07-23-wave24-clean-clone.md):
+  detached 278-test replay, 15 byte-identical regenerated files, seven exact
+  manifests, metadata and full unpublished-history privacy gates, clean
+  status, and `git fsck`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

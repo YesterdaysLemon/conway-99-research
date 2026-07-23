@@ -1173,6 +1173,14 @@ The verified result restricts the endpoint to eight arithmetic index values
 and verifies an abstract `h=9` lattice survivor. It does not exclude
 `n3=708` or construct the projector or graph.
 
+The combined detached clean-source replay for Waves 21-24 is recorded in
+`verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
+independent tests, regenerates 15 exact files from 14 commands, checks seven
+publication manifests and the 108 status path/hash pairs present at the
+replayed commit, scans both the release tree and all unpublished Git history
+for credential-shaped or private-path payloads, and finishes with a clean
+tracked tree and `git fsck --full --strict`.
+
 The separate `attempts/wave20-n3-63-structural` package is archival. Its
 14/14 tests and exact JSON replay pass, but its proof remains
 `DERIVED_PENDING_INDEPENDENT_AUDIT`; the first false two-profile census is

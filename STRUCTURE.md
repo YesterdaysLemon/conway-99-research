@@ -1109,6 +1109,13 @@ construction as conceptual prior art, not exact target matches. This is
 bounded non-discovery; novelty and priority remain `UNKNOWN`. See
 `verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md`.
 
+The combined detached Waves 21-24 publication replay is
+`verification/2026-07-23-wave24-clean-clone.md`. It records 278 passing tests,
+15 byte-identical regenerated files, seven exact manifests, metadata and
+unpublished-history privacy checks, a clean tracked tree, and Git object
+integrity at integration commit
+`4111abeea284d218af31cfb7d37ec8a697400998`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

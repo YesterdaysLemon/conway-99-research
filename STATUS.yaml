@@ -582,7 +582,10 @@ twenty_first_research_wave:
   lattice_independent_tests_passed: 16
   endpoint_lattice_index_h: "{1,9}"
   endpoint_lattice_index_status: NECESSARY_CONDITION_ONLY_INDEX_UNDETERMINED
-  clean_clone_verdict: PENDING
+  clean_clone_commit: "4111abeea284d218af31cfb7d37ec8a697400998"
+  clean_clone_replay: "verification/2026-07-23-wave24-clean-clone.md"
+  clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
+  clean_clone_verdict: PASS
   caveat: "The independent count verifier confirms a complete exhaustion of the encoded six-vertex and Hamiltonian seven-vertex affine necessary conditions, not of global graphs. The raw pinned source equation is separately preserved as false as printed, and the +n23 correction is explicit rather than silent. A source-first audit confirms that official v1 and the still-current v2 omit the term, but its failure to locate an official correction or exact prior source is bounded non-discovery rather than a novelty certificate. The separately audited local-diagonal and lattice lanes restrict a putative n3=705 endpoint to q(T)<=8, tr(A4^2)>=26460, and h in {1,9}; scalar relaxations survive and h is undetermined. Feasible count vectors are not adjacency matrices, and the seven-vertex source omits non-Hamiltonian types. These lanes do not improve n3>=705, construct or exclude the target graph, establish adoption of the correction by the source author, or determine novelty. Conway-99 and novelty remain UNKNOWN."
 twenty_second_research_wave:
   discovery_commit: "7178f822fe12d4b8804ed9952ceebc84fed6fd22"
@@ -619,7 +622,10 @@ twenty_second_research_wave:
   witness_support_size: 105
   witness_total: 14887031544
   graph_construction: false
-  clean_clone_verdict: PENDING
+  clean_clone_commit: "4111abeea284d218af31cfb7d37ec8a697400998"
+  clean_clone_replay: "verification/2026-07-23-wave24-clean-clone.md"
+  clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
+  clean_clone_verdict: PASS
   caveat: "The exact witness proves only that an aggregate order-seven necessary-count relaxation is feasible at the historical endpoint. It does not enforce overlap consistency or provide a 99-by-99 graph. Wave 23 independently excludes n3=705 using stronger projector-lattice constraints; that later exclusion does not invalidate the scoped relaxation witness. Conway-99 and novelty remain UNKNOWN."
 twenty_third_research_wave:
   discovery_commit: "c5984f1556a5b4893f52fee5b9904c11898f4dd7"
@@ -711,7 +717,10 @@ twenty_third_research_wave:
   weighted_extensions_allowed_z_values_checked: 353
   weighted_extensions_graph_construction: false
   weighted_extensions_bound_changed: false
-  clean_clone_verdict: PENDING
+  clean_clone_commit: "4111abeea284d218af31cfb7d37ec8a697400998"
+  clean_clone_replay: "verification/2026-07-23-wave24-clean-clone.md"
+  clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
+  clean_clone_verdict: PASS
   caveat: "Two structurally independent proof lanes verify the conditional exclusion n3!=705 and therefore n3>=708 and induced_C6_count>=209994. The shorter lane's original audit caught one ancillary hostile-ledger defect, now preserved, corrected, and separately reverified without changing the proof. The separately verified 712-by-208 weighted-extension family proves only that a necessary aggregate relaxation is feasible at the historical endpoint; it is not a graph and does not weaken the endpoint exclusion. These are human proofs with exact arithmetic companions and an imported even-unimodular signature theorem, not a graph construction, target nonexistence proof, or formal-kernel proof. They do not determine modular ranks away from the excluded endpoint. The source-first audit found no exact prior hit, but bounded non-discovery is not a novelty certificate. Target existence and novelty remain UNKNOWN."
 twenty_fourth_research_wave:
   discovery_commit: "821b162f7ff31f92bd1982bc31164c6b767838f4"
@@ -764,6 +773,9 @@ twenty_fourth_research_wave:
   conceptual_prior_art:
     - "Knill: general characteristic pseudodeterminant"
     - "Bacher--Venkov: integral lattices from rational idempotents"
-  clean_clone_verdict: PENDING
+  clean_clone_commit: "4111abeea284d218af31cfb7d37ec8a697400998"
+  clean_clone_replay: "verification/2026-07-23-wave24-clean-clone.md"
+  clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
+  clean_clone_verdict: PASS
   caveat: "The independently verified logarithmic argument gives det(B)<=6561 and exactly eight necessary arithmetic index survivors at n3=708. A complete exact E8/A2 coordinate-lattice package survives at h=9, proving that the abstract determinant, scaled-dual, parity, positivity, and minimum identities alone do not exclude the endpoint. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The source-first audit found no exact match but records older conceptual ingredient prior art; bounded non-discovery is not a novelty certificate. The current conditional bound remains n3>=708; target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23
