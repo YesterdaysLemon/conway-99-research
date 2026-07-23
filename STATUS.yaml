@@ -103,5 +103,18 @@ seventh_research_wave:
   structured_checker: "verification/n3-side-incidence/verify.py"
   generic_checker: "verification/n3-side-incidence/audit_generic.py"
   clean_clone_replay: "verification/2026-07-22-wave7-clean-clone.md"
-  caveat: "The verified conditional necessary bound is n3>=30. No checked primary source stated this exact bound, but novelty is not established. The extremal n3=30 case and the Conway-99 target remain UNKNOWN."
+  caveat: "The Wave 7 conditional bound is n3>=30. At that snapshot n3=30 was not excluded; Wave 8 supersedes this boundary. No checked primary source stated the exact Wave 7 bound, but novelty is not established."
+eighth_research_wave:
+  source_commit: "b2a31846d243a76b9e516f85304e21137e3fe874"
+  exhaustive_commit: "164857e29d2720e3e285b0e20c6895ce7404764e"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave8-n3-equality.md"
+  prior_art_status_report: "agents/2026-07-22-wave8-status-search.md"
+  verifier_report: "verification/2026-07-22-n3-equality-audit.md"
+  structured_checker: "verification/n3-equality/verify.py"
+  exhaustive_checker: "verification/n3-equality/audit_exhaustive.py"
+  exhaustive_certificate: "verification/n3-equality/n3-30-audit.json"
+  clean_clone_replay: "verification/2026-07-22-wave8-clean-clone.md"
+  caveat: "The verified conditional necessary bound is n3>=33. Lou-Murin 2014 already contains the upstream fixed-triangle profile and q-gap; no novelty is claimed. Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

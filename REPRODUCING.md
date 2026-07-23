@@ -180,6 +180,29 @@ replay are recorded in
 `verification/2026-07-22-n3-side-incidence-audit.md` and
 `verification/2026-07-22-wave7-clean-clone.md`.
 
+Replay the Wave 8 exclusion of the remaining equality case `n3=30` with:
+
+```powershell
+.venv\Scripts\python verification\n3-equality\verify.py
+.venv\Scripts\python -m unittest verification.test_n3_equality -v
+```
+
+The compact checker is an arithmetic regression companion to the human
+proof. An optional independent census audit regenerates all 21 cubic types,
+674,880 point-clique families, and the committed exact JSON certificate. It
+uses only the standard library but takes about five minutes:
+
+```powershell
+.venv\Scripts\python verification\n3-equality\audit_exhaustive.py `
+  --check verification\n3-equality\n3-30-audit.json
+```
+
+The derivation, adversarial audit, and frozen-commit replay are recorded in
+`agents/2026-07-22-wave8-n3-equality.md`,
+`verification/2026-07-22-n3-equality-audit.md`, and
+`verification/2026-07-22-wave8-clean-clone.md`. They establish the conditional
+necessary bound `n3>=33`, not a target construction or nonexistence proof.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

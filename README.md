@@ -107,6 +107,27 @@ or nonexistence proof; Conway-99 remains `UNKNOWN`. See the
 [precise-status search](agents/2026-07-22-wave7-status-search.md), and
 [clean replay](verification/2026-07-22-wave7-clean-clone.md).
 
+Wave 8 excludes the remaining equality case `n3=30` without assuming a
+completed-graph automorphism or classifying cubic graphs. A fixed-original-
+vertex incidence identity and point-clique edge budget reduce the case to a
+forbidden `H`-degree one, giving
+
+```text
+n3 >= 33,
+induced_C6_count >= 209,319.
+```
+
+An adversarial proof reconstruction returned `PUBLISH`; a separate slow
+standard-library audit generated all 21 cubic complement types and all
+674,880 point-clique families, with zero surviving exact-two covers. Lou and
+Murin's 2014 report is now explicitly credited for the upstream fixed-
+triangle partner equations and `q!=1` gap; no novelty is claimed for those
+facts. See the [Wave 8 derivation](agents/2026-07-22-wave8-n3-equality.md),
+[equality audit](verification/2026-07-22-n3-equality-audit.md),
+[status/prior-art audit](agents/2026-07-22-wave8-status-search.md), and
+[clean replay](verification/2026-07-22-wave8-clean-clone.md). Conway-99 itself
+remains `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -179,6 +200,9 @@ status.
 - [N3 side-incidence audit](verification/2026-07-22-n3-side-incidence-audit.md):
   two independent reconstructions and finite checks proving the conditional
   strengthening `n3 >= 30`.
+- [N3 equality audit](verification/2026-07-22-n3-equality-audit.md):
+  adversarial proof reconstruction and exhaustive secondary audit proving the
+  conditional strengthening `n3 >= 33`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
@@ -187,6 +211,8 @@ status.
   frozen-commit tests and byte-identical refined-certificate regeneration.
 - [Wave 7 clean-source replay](verification/2026-07-22-wave7-clean-clone.md):
   frozen-commit tests and replay of two independent incidence checkers.
+- [Wave 8 clean-source replay](verification/2026-07-22-wave8-clean-clone.md):
+  frozen-commit tests and replay of the equality-exclusion arithmetic checker.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.
@@ -199,6 +225,7 @@ status.
 ## Primary starting points
 
 - [Conway, *Five $1,000 Problems* (2017 update)](https://oeis.org/A248380/a248380.pdf)
+- [Lou and Murin, *On the Strongly Regular Graph of Parameters (99, 14, 1, 2)* (2014)](https://math.mit.edu/research/highschool/primes/materials/2014/Lou-Murin.pdf)
 - [Cesarz and Woldar, *Algebraic Combinatorics* 8 (2025)](https://doi.org/10.5802/alco.418)
 - [Keramatipour, *Approaching the Conway-99 problem using SAT solvers*](https://arxiv.org/abs/2604.23037)
 - [Petro and Phillips, *On clique graphs and clique regular graphs*](https://doi.org/10.1016/j.disc.2025.114862)

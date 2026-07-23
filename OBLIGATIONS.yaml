@@ -15,6 +15,7 @@ obligations:
     status: PASS
     evidence:
       - "agents/2026-07-22-statement-literature.md"
+      - "agents/2026-07-22-wave8-status-search.md"
       - "SOURCES.bib"
 
   - id: O-POSITIVE-CERTIFICATE
@@ -49,7 +50,9 @@ obligations:
       - "verification/2026-07-22-wave3-clean-clone.md"
       - "verification/2026-07-22-wave5-clean-clone.md"
       - "verification/2026-07-22-wave6-clean-clone.md"
-    note: "Wave 2, Wave 3/N3, Wave 5, and Wave 6 infrastructure replays pass from clean source trees, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave7-clean-clone.md"
+      - "verification/2026-07-22-wave8-clean-clone.md"
+    note: "Wave 2, Wave 3/N3, and Waves 5-8 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
     requirement: "Prove the frozen root normalization and legacy 11-branch cover complete without assuming a nontrivial solution automorphism."
@@ -171,4 +174,18 @@ obligations:
       - "verification/n3-side-incidence/audit_generic.py"
       - "verification/2026-07-22-n3-side-incidence-audit.md"
       - "verification/2026-07-22-wave7-clean-clone.md"
-    note: "The verified result is the conditional necessary bound n3>=30; n3=30 and the target existence question remain UNKNOWN."
+    note: "The Wave 7 result is the conditional necessary bound n3>=30; its open equality case is superseded by the Wave 8 exclusion. Lou-Murin 2014 is credited for the upstream fixed-triangle profile and q-gap."
+
+  - id: O-WAVE8-STRUCTURAL
+    requirement: "Adversarially verify the fixed-original-point identity, point-clique resource count, size-four branch, overlapping-set crossing, and exclusion of n3=30."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave8-n3-equality.md"
+      - "agents/2026-07-22-wave8-status-search.md"
+      - "verification/n3-equality/verify.py"
+      - "verification/n3-equality/audit_exhaustive.py"
+      - "verification/n3-equality/n3-30-audit.json"
+      - "verification/2026-07-22-n3-equality-audit.md"
+      - "verification/2026-07-22-wave8-clean-clone.md"
+    note: "The verified result is the conditional necessary bound n3>=33. The upstream fixed-triangle profile/q-gap is credited to Lou-Murin 2014, novelty is not claimed, and Conway-99 remains UNKNOWN."

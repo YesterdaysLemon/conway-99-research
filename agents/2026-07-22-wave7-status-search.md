@@ -17,15 +17,42 @@ inputs:
   cesarz_woldar_2025_pdf:
     url: https://alco.centre-mersenne.org/item/10.5802/alco.418.pdf
     sha256: d88f3832337b949edbd21cadf0836bd0df77bf84bf5c225a1b834d9883ca65a8
+  lou_murin_2014_pdf:
+    url: https://math.mit.edu/research/highschool/primes/materials/2014/Lou-Murin.pdf
+    sha256: 5df5b96709419c6168430c58601ee98ec26e6c08036034bd755247311c2fb211
 method: targeted web and full-text search of primary sources under exact values, formulas, graph parameters, and alternate terminology
 command: interactive web search and full-text PDF inspection using the exact queries recorded below
 outputs:
-  checked_source_prior_art_hit: NONE_FOUND
+  exact_bound_prior_art_hit: NONE_FOUND
+  method_prior_art_overlap: LOU_MURIN_2014_FIXED_TRIANGLE_PROFILE_AND_Q_GAP
   novelty_established: false
 search_date: 2026-07-22
-verdict: NO_PRIOR_ART_HIT_IN_CHECKED_PRIMARY_SOURCES_NOVELTY_NOT_ESTABLISHED
+correction_date_utc: 2026-07-23T01:42:30Z
+verdict: NO_EXACT_BOUND_HIT_METHOD_OVERLAP_FOUND_NOVELTY_NOT_ESTABLISHED
 limitations: absence from a targeted search is not proof of novelty or exhaustive bibliographic coverage
 ```
+
+## Wave 8 prior-art correction
+
+The initial Wave 7 search correctly found no checked source stating the exact
+bound `n3>=30`, but its broader no-hit field was too strong. Lou and Murin's
+2014 MIT PRIMES-USA report, Section 5, pages 7--8, already gives the equivalent
+fixed-triangle partner equations
+
+```text
+alpha + beta = 180,
+beta + 3 gamma = 36,
+alpha - 3 gamma = 144,
+distance-three count = 32-gamma,
+gamma != 11.
+```
+
+The translation is `(alpha,beta,gamma)=(a1,a2,a3)` and `q=12-gamma`, so this
+is exactly the Wave 7 partner profile and `q!=1` gap. Those ingredients are
+prior art or independent rederivations, not novelty. No checked hit was found
+for the Wave 7 global support exclusions of `n3=24,27` or the exact resulting
+bound. The full correction and expanded search are recorded in
+`agents/2026-07-22-wave8-status-search.md`.
 
 ## Queries
 

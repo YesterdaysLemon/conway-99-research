@@ -131,3 +131,32 @@ Both reproduce support maxima `6`, `9`, and `8`, giving the conditional
 necessary bound `n3>=30`. The human proof supplies the upstream graph-theoretic
 reduction; neither finite checker is a Conway-99 existence or nonexistence
 certificate.
+
+## `N3=30` equality exclusion
+
+`n3-equality/verify.py` checks the exact arithmetic accompanying the Wave 8
+classification-free proof: the unique ten-triangle `q=2` equality profile,
+the fixed-endpoint count four, the point-size equations, the cubic component
+orders, the forbidden internal crossing, and the strengthened global and
+branch-local bounds.
+
+```powershell
+python verification/n3-equality/verify.py
+python -m unittest verification.test_n3_equality -v
+```
+
+`n3-equality/audit_exhaustive.py` is an optional slow, solver-free secondary
+audit archived verbatim from an independent lane. It generates every
+normalized labeled cubic graph on ten vertices, recovers all 21 isomorphism
+types, enumerates 674,880 point-clique families, and checks the committed JSON
+certificate byte-for-byte. A replay takes about five minutes under the pinned
+environment.
+
+```powershell
+python verification/n3-equality/audit_exhaustive.py `
+  --check verification/n3-equality/n3-30-audit.json
+```
+
+The human derivation and adversarial audit establish why these finite
+conditions follow from the Wave 6/7 framework. The resulting `n3>=33` is a
+conditional necessary bound; it does not resolve Conway-99.

@@ -11,6 +11,7 @@ inputs:
   agents/2026-07-22-wave6-opposite-edge-graph.md: 4197c40e1b43d72d5a2ad9a6203099ffed2e1dbf4f0b3c07186aaad54cae4fa2
   verification/n3-side-incidence/verify.py: ec51e5245a886f4f10520393ed06140fb4f9f07531f5461c9fc89f04c5654441
   verification/n3-side-incidence/audit_generic.py: cf37f75ad033cb2f9d839e7fa85d6bac2e6d113cfdfc07bc78a043e453482f98
+  lou_murin_2014_prior_art_pdf: 5df5b96709419c6168430c58601ee98ec26e6c08036034bd755247311c2fb211
 method: exact triangle-partner counts, local two-matching structure, an active-triangle incidence reduction, extremal graph theory, and two exhaustive finite checks
 command: |
   python verification/n3-side-incidence/verify.py
@@ -21,6 +22,15 @@ outputs:
   branch_n3_lower_bounds: [30, 33, 42, 48, 48, 30, 42, 48, 33, 48, 42, 48]
 limitations: conditional on target existence and the previously established target-specific N3 occurrence; no graph or nonexistence proof is produced
 ```
+
+> **Prior-art attribution (added 2026-07-23):** Lou and Murin's 2014 MIT
+> PRIMES-USA report, Section 5, pages 7--8, gives the equivalent fixed-triangle
+> partner equations in variables `(alpha,beta,gamma)=(a1,a2,a3)` and excludes
+> `gamma=11`, which is `q=1`. The profile and `q`-gap below are therefore
+> independent rederivations of prior art, not project novelty. See
+> `agents/2026-07-22-wave8-status-search.md` for the exact translation and
+> source hash. The later global support exclusions and exact project bound had
+> no checked prior-art hit, but novelty is not claimed for them either.
 
 ## Triangle-pair arithmetic
 

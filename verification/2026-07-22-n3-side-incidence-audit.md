@@ -3,6 +3,12 @@
 Verdict: `PASS` for the conditional strengthening `n3 >= 30` and
 `induced_C6_count >= 209,316`. Conway-99 remains `UNKNOWN`.
 
+> **Post-audit provenance note (2026-07-23):** the Wave 7 discovery report was
+> later amended only to credit Lou--Murin 2014 for the fixed-triangle profile
+> and `q!=1` gap. The input hash below identifies the exact mathematical text
+> audited at commit `0728b260...`; the attribution correction and expanded
+> source search are recorded in `agents/2026-07-22-wave8-status-search.md`.
+
 ```yaml
 role: verifier
 date_utc: 2026-07-23T00:43:19Z

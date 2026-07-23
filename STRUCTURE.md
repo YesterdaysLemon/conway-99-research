@@ -42,12 +42,12 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three and gives the currently strongest project
-bound
+the next two multiples of three, and Wave 8 excludes the remaining equality
+case at 30. The currently strongest project bound is
 
 ```text
-n3 >= 30,
-induced_C6_count >= 209,316.
+n3 >= 33,
+induced_C6_count >= 209,319.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -72,6 +72,12 @@ d_L(T)=3q(T),
 sum_T q(T)=2n3/3.
 ```
 
+Lou and Murin's 2014 MIT PRIMES report already gives the equivalent fixed-
+triangle partner equations and excludes `q=1` in its variables
+`(alpha,beta,gamma)=(a1,a2,a3)`. Wave 7 independently rederived this profile
+and combined it with the later opposite-edge graph framework; the project
+does not claim novelty for the partner identities or the `q`-gap.
+
 The local two-matching structure makes the `N3`s with fixed side `T` a
 2-regular subgraph of triangle-free `H`, so `q(T)` is zero or at least two.
 For `n3=24` and 27 this forces respectively eight and nine active triangles,
@@ -89,6 +95,27 @@ contradict the required support sizes. Two materially different standard-
 library checkers reproduce the finite reduction. The proof and independent
 audit are in `agents/2026-07-22-wave7-triangle-side-incidence.md` and
 `verification/2026-07-22-n3-side-incidence-audit.md`.
+
+Wave 8 treats `n3=30`. The same arithmetic forces ten active triangles, all
+with `q=2`; their `L`-complement `K` is cubic. For an original graph vertex
+`u`, a uniform fixed-side count gives
+
+```text
+sum_{v: uv in E(G)} d_H(uv) = 4 |S_u|.
+```
+
+Point cliques `S_u` consume disjoint `K`-edges. A size-four point is a
+saturated `K4` component and forces singleton points, contradicting the fixed-
+point identity. Without a size-four point, singletons are again impossible,
+and the incidence/edge budget forces fifteen size-two points consuming every
+`K`-edge. A cubic graph on ten vertices has a vertex with two nonadjacent
+neighbors `j,k`; the corresponding original vertices share an active graph-
+triangle but have exactly the one crossing `L`-edge `jk`. The support identity
+would give forbidden `H`-degree one. This excludes `n3=30` without classifying
+cubic graphs. An independent slow audit also exhausts all 21 cubic types and
+674,880 point-clique families. The proof and audit are in
+`agents/2026-07-22-wave8-n3-equality.md` and
+`verification/2026-07-22-n3-equality-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
