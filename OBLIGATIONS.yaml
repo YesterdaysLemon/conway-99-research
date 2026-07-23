@@ -705,3 +705,66 @@ obligations:
       - "verification/wave25-literature-audit/publication-hashes.sha256"
       - "SOURCES.bib"
     note: "The audit froze 30 queries before inspecting proof artifacts and inspected ten primary or authoritative sources. It found no exact Wave 25 match. Bacher--Venkov, Berget et al., and the standard even-unimodular rank-divisibility theorem are recorded as conceptual or theorem-level prior art, not novel ingredients. Search coverage is bounded and subscription databases were unavailable; target status, novelty, and priority remain UNKNOWN."
+
+  - id: O-WAVE26-A2-FRAME-OBSTRUCTION
+    requirement: "Blindly freeze and independently reconstruct the basis-covariant projector-frame identities, exact A2 small-vector arithmetic, energy-42 incidence count, six oriented-root fibers, positive-semidefinite cap three, 18-versus-21 contradiction, exact application to the Wave 24 survivor, active +2 and missing-frame hostile controls, opposite-root edge case, deterministic submitted replay, scope wall, and the disposition of the proposed determinant strengthening."
+    critical: true
+    status: PASS_SCOPED_A2_FRAME_OBSTRUCTION
+    evidence:
+      - "agents/2026-07-23-wave26-a2-frame-obstruction.md"
+      - "attempts/wave26-a2-frame-obstruction/exact_check.py"
+      - "attempts/wave26-a2-frame-obstruction/test_exact_check.py"
+      - "attempts/wave26-a2-frame-obstruction/exact-results.json"
+      - "attempts/wave26-a2-frame-obstruction/input-freeze.sha256"
+      - "attempts/wave26-a2-frame-obstruction/failed-routes.md"
+      - "attempts/wave26-a2-frame-obstruction/run-report.yaml"
+      - "verification/wave26-a2-frame-obstruction/preinspection-freeze.sha256"
+      - "verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md"
+      - "verification/wave26-a2-frame-obstruction/independent_check.py"
+      - "verification/wave26-a2-frame-obstruction/test_independent_check.py"
+      - "verification/wave26-a2-frame-obstruction/independent-results.json"
+      - "verification/wave26-a2-frame-obstruction/artifact-manifest.sha256"
+      - "verification/wave26-a2-frame-obstruction/run-report.yaml"
+      - "verification/wave26-a2-frame-obstruction/determinant-scout-disposition.md"
+    note: "The discovery suite passes 15 tests and the independent verifier passes 14 separately written tests. Both obtain 21 forced A2-root rows versus capacity 18 and reject the required projector-frame origin of the exact E8^5 orthogonal-sum A2^2 survivor. The abstract coordinate package remains valid; all h=9 forms, arbitrary embeddings without the frame identities, n3=708, Conway-99, and novelty remain UNKNOWN. The proposed det(B)<=3645 strengthening remains UNKNOWN."
+
+  - id: O-WAVE26-A2-CUBIC-OBSTRUCTION
+    requirement: "Independently freeze and reconstruct the ordered-tensor Schur factorization, tight-frame gate, exact A2 root-line counts, odd signed-imbalance cubic floor, orthogonal compression inequality, mixed-block and normalized symmetric-square factors, basis covariance, row orientation, redundant M1=0 premise, exact Wave 24 block trace, hostile dropped-frame control, deterministic replay, and strict endpoint scope."
+    critical: true
+    status: PASS_SCOPED_A2_CUBIC_OBSTRUCTION
+    evidence:
+      - "agents/2026-07-23-wave26-a2-cubic-obstruction.md"
+      - "attempts/wave26-a2-cubic-obstruction/exact_check.py"
+      - "attempts/wave26-a2-cubic-obstruction/test_exact_check.py"
+      - "attempts/wave26-a2-cubic-obstruction/exact-results.json"
+      - "attempts/wave26-a2-cubic-obstruction/input-freeze.sha256"
+      - "attempts/wave26-a2-cubic-obstruction/failed-routes.md"
+      - "attempts/wave26-a2-cubic-obstruction/run-report.yaml"
+      - "verification/wave26-a2-cubic-obstruction/preinspection-freeze.md"
+      - "verification/wave26-a2-cubic-obstruction/precomparison-freeze.sha256"
+      - "verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md"
+      - "verification/wave26-a2-cubic-obstruction/independent_check.py"
+      - "verification/wave26-a2-cubic-obstruction/test_independent_check.py"
+      - "verification/wave26-a2-cubic-obstruction/independent-results.json"
+      - "verification/wave26-a2-cubic-obstruction/submitted-regenerated.json"
+      - "verification/wave26-a2-cubic-obstruction/artifact-manifest.sha256"
+      - "verification/wave26-a2-cubic-obstruction/run-report.yaml"
+      - "verification/wave26-a2-cubic-obstruction/verifier-failures.md"
+    note: "The independent suite passes 17 tests, the submitted suite passes 19 tests, and the submitted JSON replay is byte-identical. The verifier proves tr(A2 Q_AA)>=18 with cross-block normalization and basis conventions checked, while each explicit survivor block has trace 10. A procedurally contaminated auxiliary route is excluded from evidence, and the immutable discovery report's row/column terminology defect is recorded. The result does not classify all h=9 forms or exclude n3=708."
+
+  - id: O-WAVE26-LITERATURE-STATUS
+    requirement: "Freeze a proof-separated source-first plan and audit direct or near-direct prior art for the 231-row orthogonal-A2 exclusion, parameter-specific terms, tight-frame projector Grams, integer and rational lattice frames, strongly regular graph embeddings, eutaxy and spherical designs, Hadamard-Gram products, Schur-product versus Schur-complement terminology, source quality, service failures, and bounded non-discovery language."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave26-literature-audit/protocol-freeze.md"
+      - "verification/wave26-literature-audit/audit-report.md"
+      - "verification/wave26-literature-audit/sources.md"
+      - "verification/wave26-literature-audit/bibliography.bib"
+      - "verification/wave26-literature-audit/query-ledger.json"
+      - "verification/wave26-literature-audit/query-log.md"
+      - "verification/wave26-literature-audit/failures-limitations.md"
+      - "verification/wave26-literature-audit/run-report.yaml"
+      - "verification/wave26-literature-audit/manifest.sha256"
+      - "SOURCES.bib"
+    note: "The audit attempted all 28 frozen queries across five search surfaces, inspected 15 primary or authoritative sources, and found no direct or near-direct match. It records established general machinery and the important fact that generic A2 tightness, strong eutaxy, and antipodal odd-moment cancellation do not imply the target exclusion. Raw responses were reduced to a compact ledger. Every nonhit is bounded; proof validity, target status, novelty, and priority remain UNKNOWN."

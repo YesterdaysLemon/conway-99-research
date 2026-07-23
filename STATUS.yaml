@@ -6,11 +6,12 @@ literature_audit:
   through: 2026-07-23
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md"
-  latest_audit_sha256: "76a839b16d2c7ac3bfe85548e33908943f32859d9a95a67833f02bab38feecbc"
-  source_query_ledger: "verification/wave25-literature-audit/source-query-ledger.json"
-  source_query_ledger_sha256: "9115c80e432d6d834497621f5e9e7238064afc2d02696285a3557f115d4bf053"
+  latest_audit: "verification/wave26-literature-audit/audit-report.md"
+  latest_audit_sha256: "ccb3dbbbb1dcff3b8d6f4278a144d29ea4cfe05596031598b6aecbd731a3a566"
+  source_query_ledger: "verification/wave26-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "a0f2b2b19848313e676f455ec72e0cc0a5383871e394f7f1f394177582353e0d"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
+  exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -777,7 +778,7 @@ twenty_fourth_research_wave:
   clean_clone_replay: "verification/2026-07-23-wave24-clean-clone.md"
   clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
   clean_clone_verdict: PASS
-  caveat: "The independently verified logarithmic argument gives det(B)<=6561 and exactly eight necessary arithmetic index survivors at n3=708. A complete exact E8/A2 coordinate-lattice package survives at h=9, proving that the abstract determinant, scaled-dual, parity, positivity, and minimum identities alone do not exclude the endpoint. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The source-first audit found no exact match but records older conceptual ingredient prior art; bounded non-discovery is not a novelty certificate. The current conditional bound remains n3>=708; target existence and novelty remain UNKNOWN."
+  caveat: "The independently verified logarithmic argument gives det(B)<=6561 and exactly eight necessary arithmetic index survivors at n3=708. A complete exact E8/A2 coordinate-lattice package survives at h=9, proving that the abstract determinant, scaled-dual, parity, positivity, and minimum identities alone do not exclude the endpoint. No primitive embedding in Z^231, 231-row projector-frame realization, Hadamard/Schur-square origin, or graph is supplied. The source-first audit found no exact match but records older conceptual ingredient prior art; bounded non-discovery is not a novelty certificate. The current conditional bound remains n3>=708; target existence and novelty remain UNKNOWN."
 twenty_fifth_research_wave:
   discovery_commit: "8e552d50efb9ecc5c5a7b0ec819801f8c7d6b96f"
   verification_commit: "e41d6da44486281d8972437caafc9494b6d054cb"
@@ -855,5 +856,87 @@ twenty_fifth_research_wave:
   clean_clone_replay: "verification/2026-07-23-wave25-clean-clone.md"
   clean_clone_replay_sha256: "890b7f023bfdb627aa9fdce22467da5233333c2bfa28096d5b917a531e598dbd"
   clean_clone_verdict: PASS
-  caveat: "The independent verifier excludes the trace-square equality case and verifies the necessary combined determinant cap det(B)<=6525 at n3=708. In that hypothetical equality case, S0=Q0^-1 is used only on the ker(C) block, where B0 is the identity; S=Q^-1 is false globally. The exact h=9, det(B)=81 E8/A2 abstract coordinate-lattice survivor remains. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The endpoint is not excluded, the headline conditional bound remains n3>=708, and target existence and novelty remain UNKNOWN."
+  caveat: "The independent verifier excludes the trace-square equality case and verifies the necessary combined determinant cap det(B)<=6525 at n3=708. In that hypothetical equality case, S0=Q0^-1 is used only on the ker(C) block, where B0 is the identity; S=Q^-1 is false globally. The exact h=9, det(B)=81 E8/A2 abstract coordinate-lattice survivor remains. No primitive embedding in Z^231, 231-row projector-frame realization, Hadamard/Schur-square origin, or graph is supplied. The endpoint is not excluded, the headline conditional bound remains n3>=708, and target existence and novelty remain UNKNOWN."
+twenty_sixth_research_wave:
+  frame_discovery_commit: "740aed722145825f46f11534d654cc06b9653e4e"
+  cubic_discovery_commit: "7832268531cdd10f557758be54bcda558add8dcb"
+  frame_verification_commit: "930cb99e28d2461fbdec378318efc911f8e36a82"
+  cubic_verification_commit: "235540fecff57d546bf48af3b749d16001a72b72"
+  literature_audit_commit: "7eb877b7bc3c2f204c88b8193c7a25efb2a4cd60"
+  frame_verifier_verdict: PASS_SCOPED_A2_FRAME_OBSTRUCTION
+  cubic_verifier_verdict: PASS_SCOPED_A2_CUBIC_OBSTRUCTION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  all_h9_forms_excluded: false
+  abstract_coordinate_lattice_survivor: VERIFIED_AT_H_9_DET_B_81
+  explicit_survivor_projector_frame_origin: REFUTED
+  explicit_survivor_full_schur_origin: REFUTED
+  arbitrary_primitive_embedding_without_frame_identities: UNKNOWN
+  general_orthogonal_A2_scaled_dual_projector_frame: IMPOSSIBLE
+  frame_forced_A2_incident_rows: 21
+  frame_oriented_root_capacity: 18
+  cubic_A2_trace_floor: 18
+  explicit_survivor_A2_block_trace: 10
+  M1_zero_required_for_cubic_floor: false
+  determinant_3645_proposal: UNKNOWN
+  frame_discovery_report: "agents/2026-07-23-wave26-a2-frame-obstruction.md"
+  frame_discovery_report_sha256: "2870c4b9195d5569655fded93a7d1b3d4131663e3ef37ce2ef346c03cf8f2925"
+  frame_submitted_checker: "attempts/wave26-a2-frame-obstruction/exact_check.py"
+  frame_submitted_checker_sha256: "77c4657696ae214196a1abdc30c2baf6c67263fc7c4ed53cc036e58f33b32aa8"
+  frame_submitted_result: "attempts/wave26-a2-frame-obstruction/exact-results.json"
+  frame_submitted_result_sha256: "bb2b2ffe33d0ca6a0a1f18be8b36c48060d40aef2fc6e0857fd1d23c18e84bb9"
+  frame_submitted_run_report: "attempts/wave26-a2-frame-obstruction/run-report.yaml"
+  frame_submitted_run_report_sha256: "7cd99c1a5a3443bc85a0f372f29685217a4e315d44c9124cd3b003f352317f3e"
+  frame_verifier_audit: "verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md"
+  frame_verifier_audit_sha256: "5ec6b1924fb9ca2ab9295808178684751b6a90e43315d00cbf232ba8d9fe84a3"
+  frame_independent_checker: "verification/wave26-a2-frame-obstruction/independent_check.py"
+  frame_independent_checker_sha256: "9c6178cec17bd8c83a5d34dee6f3268d6b02949adf8a3a49737ed56779ce4ba2"
+  frame_independent_result: "verification/wave26-a2-frame-obstruction/independent-results.json"
+  frame_independent_result_sha256: "b664844d65ab553cfd2277e925f5596193c586378d880dc1a29242cb9ac8f03b"
+  frame_verifier_manifest: "verification/wave26-a2-frame-obstruction/artifact-manifest.sha256"
+  frame_verifier_manifest_sha256: "dc12aeacd906d5b7f54fca3de796ca95d829385ac3a901dbf9760ee4aed3550c"
+  frame_submitted_tests_passed: 15
+  frame_independent_tests_passed: 14
+  cubic_discovery_report: "agents/2026-07-23-wave26-a2-cubic-obstruction.md"
+  cubic_discovery_report_sha256: "da701181c9d591498cf112ab8b0342d09d3ada4094396cebebe3e0dd81c44d1a"
+  cubic_submitted_checker: "attempts/wave26-a2-cubic-obstruction/exact_check.py"
+  cubic_submitted_checker_sha256: "e266fd1189f5f1960093e2991d88b66c220bbbd7bcdc390c04e2d8a8218f3523"
+  cubic_submitted_result: "attempts/wave26-a2-cubic-obstruction/exact-results.json"
+  cubic_submitted_result_sha256: "acc3ce7298c164bdee1fe32766bf18437fe79770ee69090b759d3dc774640f33"
+  cubic_submitted_run_report: "attempts/wave26-a2-cubic-obstruction/run-report.yaml"
+  cubic_submitted_run_report_sha256: "008a154f928d64c5c3fbc672ce0aabc1115a84984e9d6d231757016bdb2b2003"
+  cubic_verifier_audit: "verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md"
+  cubic_verifier_audit_sha256: "883f48e70336b87955f5c2a115ac8b137169310c6f5ef91fe4581cb1b6c10465"
+  cubic_independent_checker: "verification/wave26-a2-cubic-obstruction/independent_check.py"
+  cubic_independent_checker_sha256: "fe9f661183eb15405d24e5c9d5b330c48b49553cf6de6d577d13f296f3a5dcc2"
+  cubic_independent_result: "verification/wave26-a2-cubic-obstruction/independent-results.json"
+  cubic_independent_result_sha256: "658b7eb7eec64a4560d20e9c7b272c428168876c43910d9af6e44035dde12352"
+  cubic_verifier_manifest: "verification/wave26-a2-cubic-obstruction/artifact-manifest.sha256"
+  cubic_verifier_manifest_sha256: "75572e7f356312e2f4aee94ecaa5032f7d2bfdfd530f989a9e36fd39da63f842"
+  cubic_submitted_tests_passed: 19
+  cubic_independent_tests_passed: 17
+  source_status_audit: "verification/wave26-literature-audit/audit-report.md"
+  source_status_audit_sha256: "ccb3dbbbb1dcff3b8d6f4278a144d29ea4cfe05596031598b6aecbd731a3a566"
+  source_query_ledger: "verification/wave26-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "a0f2b2b19848313e676f455ec72e0cc0a5383871e394f7f1f394177582353e0d"
+  source_query_plan: "verification/wave26-literature-audit/protocol-freeze.md"
+  source_query_plan_sha256: "e18b84021ab9c2c9df7ca21378cde276d614eb728239fec9f3d7d04cfdffcaa9"
+  source_run_report: "verification/wave26-literature-audit/run-report.yaml"
+  source_run_report_sha256: "73259c08b0965b994531496601dfaa187366cec6af42cae83e3104e3e458976c"
+  source_publication_manifest: "verification/wave26-literature-audit/manifest.sha256"
+  source_publication_manifest_sha256: "0d9381d47a33fa376c53510cae2a57dfd419a41bb96658b56ce7cb624d953816"
+  literature_query_count: 28
+  inspected_source_count: 15
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  conceptual_prior_art:
+    - "Fukshansky et al.: lattices generated by rational tight frames"
+    - "Barg et al.: strongly regular graph and two-distance tight-frame embeddings"
+    - "Nebe and Sunada: eutaxy, spherical designs, and root-system tight frames"
+    - "Peng--Waldron: Hadamard products of frame Gram matrices"
+  caveat: "Two independently verified arguments refute the required projector-frame and full Schur-square origins of the one explicit Wave 24 E8^5 orthogonal-sum A2^2 abstract survivor. The abstract matrices remain exact, and no classification of all h=9 forms, exclusion of n3=708, graph construction, or target resolution follows. The stronger det(B)<=3645 proposal is retained as UNKNOWN. The proof-separated source audit found no direct or near-direct match, but bounded non-discovery is not novelty evidence; target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23

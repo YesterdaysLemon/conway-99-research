@@ -558,7 +558,7 @@ claims:
       - "verification/wave24-n3-708-index/survivor-certificate.json"
       - "verification/wave24-n3-708-index/theorem-applicability.md"
       - "verification/wave24-n3-708-index/artifact-manifest.sha256"
-    limitations: "The eight h values are necessary arithmetic survivors, not determined modular ranks. The exact E8/A2 object is only an abstract coordinate-lattice package: no primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. Thus n3=708 is not excluded, the current lower bound does not improve, and Conway-99 and novelty remain UNKNOWN."
+    limitations: "The eight h values are necessary arithmetic survivors, not determined modular ranks. The exact E8/A2 object is only an abstract coordinate-lattice package: no primitive embedding in Z^231, 231-row projector-frame realization, Hadamard/Schur-square origin, or graph is supplied. Thus n3=708 is not excluded, the current lower bound does not improve, and Conway-99 and novelty remain UNKNOWN."
 
   - id: C-WAVE24-LITERATURE-022
     statement: "At the frozen 2026-07-23 cutoff, the inspected current specialized and maintained sources still treated srg(99,14,1,2) as unresolved. The enumerated searches located no exact n3=708, det(B)<=6561=3^8, ordered eight-index list, or complete logarithmic characteristic-pseudodeterminant argument. General pseudodeterminant and rational-idempotent lattice ingredients have older cited analogues."
@@ -606,6 +606,67 @@ claims:
       - "verification/wave25-literature-audit/publication-hashes.sha256"
       - "SOURCES.bib"
     limitations: "Thirty search nonhits are bounded non-discovery, not a novelty, priority, or openness certificate. MathSciNet and zbMATH subscription searches were unavailable; indexing can omit or lag theses, preprints, conference manuscripts, and alternative notation. The audit did not inspect the proof. Target status and Wave 25 novelty remain UNKNOWN."
+
+  - id: C-WAVE26-A2-FRAME-025
+    statement: "Conditional on the verified n3=708 projector-lattice premises, a required 231-row projector frame cannot have a scaled-dual even integral form with an orthogonal A2 summand. The A2 block of the tight-frame identity forces total A2 energy 42, hence 21 rows with one of the six oriented A2 roots; rows with the same oriented root have a positive-semidefinite capacity of at most three because the actual off-diagonal alphabet excludes +2, so the total capacity is only 18. Therefore the exact Wave 24 E8^5 orthogonal-sum A2^2 survivor is excluded as a projector-frame realization."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_ORTHOGONAL_A2_PROJECTOR_FRAME_OBSTRUCTION
+    evidence:
+      - "agents/2026-07-23-wave26-a2-frame-obstruction.md"
+      - "attempts/wave26-a2-frame-obstruction/exact_check.py"
+      - "attempts/wave26-a2-frame-obstruction/test_exact_check.py"
+      - "attempts/wave26-a2-frame-obstruction/exact-results.json"
+      - "attempts/wave26-a2-frame-obstruction/input-freeze.sha256"
+      - "attempts/wave26-a2-frame-obstruction/failed-routes.md"
+      - "attempts/wave26-a2-frame-obstruction/run-report.yaml"
+      - "verification/wave26-a2-frame-obstruction/preinspection-freeze.sha256"
+      - "verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md"
+      - "verification/wave26-a2-frame-obstruction/independent_check.py"
+      - "verification/wave26-a2-frame-obstruction/test_independent_check.py"
+      - "verification/wave26-a2-frame-obstruction/independent-results.json"
+      - "verification/wave26-a2-frame-obstruction/artifact-manifest.sha256"
+      - "verification/wave26-a2-frame-obstruction/run-report.yaml"
+      - "verification/wave26-a2-frame-obstruction/determinant-scout-disposition.md"
+    limitations: "The abstract Wave 24 coordinate-lattice matrices remain exact, and an arbitrary primitive embedding without the projector-frame identities is not excluded. The theorem does not classify every even h=9 form, exclude the h=9 arithmetic row, or exclude n3=708. Conway-99 existence and novelty remain UNKNOWN. The separate determinant proposal det(B)<=3645 also remains UNKNOWN."
+
+  - id: C-WAVE26-A2-CUBIC-026
+    statement: "Under the same full 231-row tight-frame/projector and Schur-square origin, every orthogonal A2 summand of the scaled-dual form satisfies tr(A2 Q_AA)>=18. The block frame moment places exactly seven rows on each of the three unoriented A2 root lines, so their signed imbalances are odd and the pure cubic tensor has squared norm at least 18; ordered-tensor orthogonality shows that mixed complement terms cannot lower this compression. Each A2 block of the explicit Wave 24 survivor has Q_AA=A2 and tr(A2^2)=10, independently refuting its full projector/Schur origin."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_ORTHOGONAL_A2_CUBIC_COMPRESSION_OBSTRUCTION
+    evidence:
+      - "agents/2026-07-23-wave26-a2-cubic-obstruction.md"
+      - "attempts/wave26-a2-cubic-obstruction/exact_check.py"
+      - "attempts/wave26-a2-cubic-obstruction/test_exact_check.py"
+      - "attempts/wave26-a2-cubic-obstruction/exact-results.json"
+      - "attempts/wave26-a2-cubic-obstruction/input-freeze.sha256"
+      - "attempts/wave26-a2-cubic-obstruction/failed-routes.md"
+      - "attempts/wave26-a2-cubic-obstruction/run-report.yaml"
+      - "verification/wave26-a2-cubic-obstruction/preinspection-freeze.md"
+      - "verification/wave26-a2-cubic-obstruction/precomparison-freeze.sha256"
+      - "verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md"
+      - "verification/wave26-a2-cubic-obstruction/independent_check.py"
+      - "verification/wave26-a2-cubic-obstruction/test_independent_check.py"
+      - "verification/wave26-a2-cubic-obstruction/independent-results.json"
+      - "verification/wave26-a2-cubic-obstruction/artifact-manifest.sha256"
+      - "verification/wave26-a2-cubic-obstruction/run-report.yaml"
+    limitations: "The tight-frame identity is essential; M1=0 is not needed for the numeric floor and only restricts equality cases. The immutable discovery report's occasional '231-column' wording is a recorded terminology defect: X is 231 by 44 and the frame objects are rows. The result rejects the stronger origin of one explicit abstract survivor, not all h=9 forms or n3=708. Conway-99 existence and novelty remain UNKNOWN."
+
+  - id: C-WAVE26-LITERATURE-027
+    statement: "At the frozen 2026-07-23 cutoff, a proof-separated audit attempted 28 exact queries across Crossref, OpenAlex, zbMATH Open, arXiv, and general web search, then inspected 15 primary or authoritative sources. It found no direct or near-direct source for the parameter-specific 231-row projector/Hadamard-square exclusion of an orthogonal A2 summand. General tight-frame/projector, integer and rational lattice-frame, strongly-regular-graph embedding, eutaxy and spherical-design, and Hadamard-Gram machinery is established prior art; generic A2 root data is compatible with tightness, strong eutaxy, and antipodal odd-moment cancellation."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_CONCEPTUAL_PRIOR_ART_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave26-literature-audit/protocol-freeze.md"
+      - "verification/wave26-literature-audit/audit-report.md"
+      - "verification/wave26-literature-audit/sources.md"
+      - "verification/wave26-literature-audit/bibliography.bib"
+      - "verification/wave26-literature-audit/query-ledger.json"
+      - "verification/wave26-literature-audit/query-log.md"
+      - "verification/wave26-literature-audit/failures-limitations.md"
+      - "verification/wave26-literature-audit/run-report.yaml"
+      - "verification/wave26-literature-audit/manifest.sha256"
+      - "SOURCES.bib"
+    limitations: "No-match results are bounded non-discovery, not novelty or priority evidence. Five Crossref queries were rate-limited, DuckDuckGo automated requests were blocked, the zbMATH public endpoint returned its no-results 404 response, all services were first-page or first-20 limited, and MathSciNet was unavailable. The audit did not verify the proof. Target status and Wave 26 novelty remain UNKNOWN."
 
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."

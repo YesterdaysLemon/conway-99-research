@@ -761,6 +761,47 @@ prior art for idempotent lattices, rational orthogonal graph lattices, and the
 even-unimodular rank theorem. These are bounded search results; target status,
 novelty, and priority remain `UNKNOWN`.
 
+Wave 26 closes one realization gap in the exact Wave 24 hostile control.
+For any actual 231-row projector frame whose scaled-dual form has an
+orthogonal `A2` summand, the `A2` block of the frame identity forces 21
+root-incident rows. The actual off-diagonal alphabet bounds each of the six
+oriented-root fibres by three, giving capacity 18. The
+[independent frame audit](verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md)
+reconstructs this `21>18` contradiction without discovery internals and
+passes 14 adversarial tests.
+
+A structurally separate cubic argument reaches the same scoped conclusion.
+The frame block puts seven rows on each of the three unoriented `A2` root
+lines, so the signed imbalances are odd and force
+
+```text
+tr(A2 Q_AA) >= 18.
+```
+
+Each `A2` block of the explicit survivor instead has `Q_AA=A2` and
+`tr(A2^2)=10`. The
+[independent cubic audit](verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md)
+checks the ordered-tensor factorization, cross-block normalization, basis
+covariance, and a dropped-frame hostile control in 17 independent tests.
+It also shows that `M1=0` is unnecessary for the numeric floor. Together,
+the two proofs refute the required projector-frame and full Schur-square
+origins of the one explicit `E8^5 orthogonal-sum A2^2` package.
+
+This does not invalidate that package as an abstract coordinate-lattice
+certificate, classify all `h=9` forms, or exclude `n3=708`. The bound remains
+`n3>=708`; Conway-99 existence remains `UNKNOWN`. The proposed stronger
+determinant cap `det(B)<=3645` also remains `UNKNOWN`.
+
+The proof-separated
+[Wave 26 literature audit](verification/wave26-literature-audit/audit-report.md)
+attempted 28 frozen queries and inspected 15 primary or authoritative
+sources. It found established tight-frame, lattice-eutaxy, SRG-embedding,
+spherical-design, and Hadamard-Gram machinery, but no direct or near-direct
+match for this 231-row `A2` exclusion. Generic `A2` root data is compatible
+with tightness and strong eutaxy, so the extra discrete row/count/trace rules
+are essential. These are bounded search results; novelty and priority remain
+`UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -974,6 +1015,16 @@ status.
 - [Wave 25 literature/status audit](verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md):
   30 pre-frozen exact and conceptual queries, ten inspected sources, prior-art
   separation, and bounded non-discovery with novelty left `UNKNOWN`.
+- [Wave 26 `A2` projector-frame audit](verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md):
+  blind basis-covariant reconstruction, exact `21>18` root-fibre
+  contradiction, 14 adversarial tests, and strict preservation of the
+  abstract survivor and endpoint scope.
+- [Wave 26 `A2` cubic audit](verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md):
+  independent ordered-tensor factorization, exact compression gap `10<18`,
+  cross-block and basis-convention attacks, and 17 independent tests.
+- [Wave 26 literature/status audit](verification/wave26-literature-audit/audit-report.md):
+  28 frozen queries, 15 inspected sources, Schur-product terminology repair,
+  conceptual prior art, and bounded non-discovery with novelty `UNKNOWN`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

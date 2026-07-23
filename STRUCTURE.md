@@ -1094,7 +1094,7 @@ minimum(G)>=14.
 ```
 
 This is a hostile control against overclaiming the lattice route. It is not a
-primitive sublattice of `Z^231`, a 231-column projector Gram realization, a
+primitive sublattice of `Z^231`, a 231-row projector-frame realization, a
 matrix with proved `W=M o M` origin, or a graph. Thus `n3=708` remains open
 inside the project, and a further contradiction must use one of those omitted
 structural bridges. See
@@ -1165,10 +1165,10 @@ uniquely maximized at `(h,det(Q))=(9,725)`. The surviving index set remains
 
 This stricter arithmetic still does not exclude the endpoint. The exact
 Wave 24 `E8^5 direct_sum A2^2` package has `h=9`, `det(B)=81`, and
-`tr(C^2)=32`, so it survives. It still lacks a primitive embedding in
-`Z^231`, projector columns, Hadamard/Schur-square origin, and graph
-realization. Thus the project bound remains `n3>=708`, while Conway-99
-existence remains `UNKNOWN`. See
+`tr(C^2)=32`, so it survives all Wave 25 arithmetic. Wave 26 below later
+excludes its required projector-frame and Schur-square origins while
+preserving the abstract matrices. Thus the project bound remains `n3>=708`,
+while Conway-99 existence remains `UNKNOWN`. See
 `agents/2026-07-23-wave25-n3-708-strictness.md` and
 `verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md`.
 
@@ -1187,6 +1187,74 @@ status path/hash pairs, scoped link and line-ending checks, zero exact-blob
 privacy findings in the release tree and the four-commit unpublished range,
 a clean tracked tree, and Git object integrity at integration commit
 `156756d4ef98dc7233e29a7f8c9feeb143548197`.
+
+## Explicit `A2` survivor-origin obstruction (`VERIFIED_INCONCLUSIVE`)
+
+Wave 26 uses the realization data omitted by the Wave 24 hostile control.
+Suppose the scaled-dual form `S` of an actual 231-row projector frame has an
+orthogonal `A2` summand. In a basis displaying that summand,
+
+```text
+M=Y S Y^T,
+Y^T Y=21 S^(-1),
+M_ii=4,
+M_ij in {0,1,-1,-2}.
+```
+
+The `A2` block of the second identity has energy 42. Since `A2` has six
+oriented roots of norm two and no vector of norm four, exactly 21 rows meet
+that block in a root. Rows sharing one oriented root have norm-two residuals;
+the off-diagonal alphabet and positivity give a fibre cap of three. The total
+capacity is therefore only
+
+```text
+6*3=18<21.
+```
+
+The independent frame verifier reconstructs the contragredient basis change,
+the exact root enumeration, the opposite-root edge case, and active `+2` and
+missing-frame hostile controls. See
+`agents/2026-07-23-wave26-a2-frame-obstruction.md` and
+`verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md`.
+
+A separate cubic/Schur argument does not use the off-diagonal fibre cap. The
+same frame block places seven rows on each of the three unoriented root lines,
+so their three signed imbalances are odd. The exact cubic Gram form has
+eigenvalues `6,9,9`, giving
+
+```text
+tr(A2 Q_AA)>=18.
+```
+
+Ordered-tensor orthogonality shows that complement and mixed blocks cannot
+decrease this compression. For either displayed `A2` block of the explicit
+Wave 24 package,
+
+```text
+Q_AA=A2,
+tr(A2 Q_AA)=tr(A2^2)=10,
+```
+
+which is impossible. The independent verifier checks ordered and normalized
+symmetric-tensor conventions, cross blocks, basis covariance, row
+orientation, and a dropped-frame control. It also proves that `M1=0` is
+unnecessary for the numeric floor. See
+`agents/2026-07-23-wave26-a2-cubic-obstruction.md` and
+`verification/wave26-a2-cubic-obstruction/2026-07-23T231001Z-audit.md`.
+
+These arguments refute the projector-frame and full Schur-square origins of
+one explicit abstract survivor. They do not refute its coordinate-lattice
+identities, classify all even `h=9` forms, exclude `n3=708`, or resolve
+Conway-99. The proposed global cap `det(B)<=3645` remains `UNKNOWN`.
+
+The proof-separated Wave 26 source audit attempted 28 frozen queries and
+inspected 15 primary or authoritative sources. General tight-frame,
+lattice-eutaxy, spherical-design, SRG-embedding, and Hadamard-Gram machinery
+is established prior art, while generic `A2` root data is compatible with
+tightness and strong eutaxy. No direct or near-direct match for the
+parameter-specific 231-row exclusion was found. This is bounded
+non-discovery only; novelty and priority remain `UNKNOWN`. See
+`verification/wave26-literature-audit/audit-report.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

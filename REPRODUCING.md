@@ -1226,6 +1226,74 @@ after the prior public checkpoint for credential-shaped or private-path
 payloads, and finishes with a clean tracked tree and
 `git fsck --full --strict`.
 
+Replay the two Wave 26 `A2` obstructions and their independent verifiers:
+
+```powershell
+$wave26Stem = [guid]::NewGuid().ToString('N')
+$wave26FrameSubmitted = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave26-frame-submitted-$wave26Stem.json"
+$wave26FrameIndependent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave26-frame-independent-$wave26Stem.json"
+$wave26CubicSubmitted = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave26-cubic-submitted-$wave26Stem.json"
+$wave26CubicIndependent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave26-cubic-independent-$wave26Stem.json"
+
+python -B -m unittest discover `
+  -s attempts\wave26-a2-frame-obstruction -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave26-a2-frame-obstruction `
+  -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s attempts\wave26-a2-cubic-obstruction -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave26-a2-cubic-obstruction `
+  -p test_independent_check.py -v
+
+python -B attempts\wave26-a2-frame-obstruction\exact_check.py `
+  --output $wave26FrameSubmitted
+python -B verification\wave26-a2-frame-obstruction\independent_check.py `
+  --output $wave26FrameIndependent
+python -B attempts\wave26-a2-cubic-obstruction\exact_check.py `
+  --output $wave26CubicSubmitted
+python -B verification\wave26-a2-cubic-obstruction\independent_check.py `
+  --output $wave26CubicIndependent
+
+Get-FileHash -Algorithm SHA256 `
+  $wave26FrameSubmitted,$wave26FrameIndependent,`
+  $wave26CubicSubmitted,$wave26CubicIndependent
+```
+
+The four suites pass 15/15, 14/14, 19/19, and 17/17. Expected generated
+hashes, in the same order, are:
+
+```text
+bb2b2ffe33d0ca6a0a1f18be8b36c48060d40aef2fc6e0857fd1d23c18e84bb9
+b664844d65ab553cfd2277e925f5596193c586378d880dc1a29242cb9ac8f03b
+acc3ce7298c164bdee1fe32766bf18437fe79770ee69090b759d3dc774640f33
+658b7eb7eec64a4560d20e9c7b272c428168876c43910d9af6e44035dde12352
+```
+
+All eight entries in
+`verification/wave26-a2-frame-obstruction/artifact-manifest.sha256` must
+match; the manifest SHA-256 is
+`dc12aeacd906d5b7f54fca3de796ca95d829385ac3a901dbf9760ee4aed3550c`.
+All nine entries in
+`verification/wave26-a2-cubic-obstruction/artifact-manifest.sha256` must
+match; the manifest SHA-256 is
+`75572e7f356312e2f4aee94ecaa5032f7d2bfdfd530f989a9e36fd39da63f842`.
+All nine entries in
+`verification/wave26-literature-audit/manifest.sha256` must match; the
+manifest SHA-256 is
+`0d9381d47a33fa376c53510cae2a57dfd419a41bb96658b56ce7cb624d953816`.
+
+The frame route proves the exact `21>18` root-fibre contradiction. The cubic
+route independently proves `tr(A2 Q_AA)>=18`, while each explicit survivor
+block has trace ten. Together they exclude the required projector-frame and
+full Schur-square origins of the one `E8^5 orthogonal-sum A2^2` hostile
+control. They do not classify all `h=9` forms, exclude `n3=708`, improve the
+headline `n3>=708` bound, or resolve Conway-99.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
