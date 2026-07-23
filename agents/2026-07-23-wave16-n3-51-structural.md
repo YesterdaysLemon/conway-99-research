@@ -30,7 +30,13 @@ inputs:
   verification/2026-07-22-wave12-n3-42-premise-audit.md: abc6be22f73735e2e46c3c59cbb3b15665b9b639db4b263b59a3c50515ba13a2
   verification/2026-07-22-wave12-integration-audit.md: 90021fc6f29cfc4ac0d3df07769ce43b4f270a99a13784ff7491711d15352e70
   verification/2026-07-22-wave13-n3-45-audit.md: a7e520790680a3cec1d8fcff42db30105572aefeea8a41cf178aaf703147925a
-  verification/2026-07-23-wave15-global-lift-audit.md: d5e931284407a2071eaf1e6523aac045c96df0b212c946cd4e9b074b9cf41191
+  verification/2026-07-23-wave15-global-lift-audit.md: edda3785d080db464028f10c22bcae5c0bf17f1e61432a8641bfa6ffdccab036
+historical_provenance:
+  discovery_wave15_audit_path: verification/2026-07-23-wave15-global-lift-audit.md
+  discovery_wave15_audit_transient_sha256: d5e931284407a2071eaf1e6523aac045c96df0b212c946cd4e9b074b9cf41191
+  discovery_wave15_audit_transient_bytes_publicly_recoverable: false
+  failed_discovery_baseline_commit: 09c20e6c8774ff8676de789b631fd7b0973cf1f5
+  public_replay_input_reaudited: true
 method: exact q-profile enumeration, audited point-degree filter, complete size-two crossing classification, fixed-point support count, and the audited SRG spectral subset bound
 command: |
   .venv\Scripts\python.exe -B attempts\wave16-n3-51-structural\exact_check.py --verify attempts\wave16-n3-51-structural\exact-checks.json
@@ -53,6 +59,24 @@ The commit value was read directly from `.git/HEAD` and its ref file before
 this report was written; no Git command was run.  The shared branch may have
 moved since that observation.  This lane made no Git changes and did not
 inspect any sibling Wave 16 work.
+
+### Public-input provenance repair
+
+The discovery lane originally read a transient, uncommitted Wave 15 audit
+whose SHA-256 was
+`d5e931284407a2071eaf1e6523aac045c96df0b212c946cd4e9b074b9cf41191`.
+Those exact bytes were replaced during Wave 15's public-provenance repair and
+are no longer available as a standalone artifact. Baseline commit `09c20e6`
+preserves this report with that historical hash in the `inputs` map.
+
+For reproducible public replay, the current `inputs` map instead pins the
+final published Wave 15 audit at
+`edda3785d080db464028f10c22bcae5c0bf17f1e61432a8641bfa6ffdccab036`.
+The fresh independent Wave 16 re-audit records both hashes, also preserves the
+first verifier's intermediate uncommitted hash, and reconstructs the subset
+lemma and the full Wave 16 argument from the final public input. This repair
+changes report metadata and its file hash only; it changes no premise used in
+the proof, derivation, checker output, bound, or status label.
 
 ## 1. Imported audited premises
 
