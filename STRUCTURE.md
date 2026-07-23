@@ -42,12 +42,12 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, Waves 8--11 exclude equality at 30, 33, 36,
-and 39. The currently strongest project bound is
+the next two multiples of three, and Waves 8--12 exclude equality at 30, 33,
+36, 39, and 42. The currently strongest project bound is
 
 ```text
-n3 >= 42,
-induced_C6_count >= 209,328.
+n3 >= 45,
+induced_C6_count >= 209,331.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -194,6 +194,49 @@ that bridge and failed audit. The repaired compact checker, independent
 `agents/2026-07-22-wave11-n3-39-equality.md`,
 `verification/n3-39-equality/`, and
 `verification/2026-07-22-n3-39-equality-audit.md`.
+
+Wave 12 treats `n3=42`. Exact partitioning of `sum q(T)=28` gives six raw
+active profiles. The inherited no-singleton premise first leaves
+`(2^14)` and `(2^11,3^2)`. A triangle of forced point sets around any active
+`K`-vertex of degree three excludes the mixed profile, so the sole case has
+fourteen active triangles, `q=2` everywhere, and a 7-regular `K`.
+
+Expansion again bounds active point size by four. Eight petals around a
+size-four point occupy ten external labels, forcing at least six singleton
+external sides and hence `K`-degree at least nine at every root label. With
+sizes two and three left, put `t_i` for the number of size-three points through
+label `i`, let `F` be the point-clique edges, and set `U=K-E(F)`. Then
+
+```text
+d_F(i)=3+t_i,  d_U(i)=4-t_i.
+```
+
+For a size-three point `{i,j,k}`, singleton petals and capacity leave only
+`(t_i,t_j,t_k)=(2,2,2)` or a permutation of `(2,3,3)`. The latter forces five
+distinct full `2`-by-`2` crossings, contributing 20 to a fixed-point sum equal
+to 12. If a size-three point remained in the former mode, the intersection
+graph of size-three points would be cubic and triangle-free. Incidence bounds
+reduce it to `K3,3`; its nine edge labels would inject into only five `t=0`
+labels because `L(K3,3)` has no open twins. Thus every active point has size
+two.
+
+The 42 point incidences are therefore the 21 edges of a simple cubic
+triangle-free graph `F` on fourteen labels. Every valid `K` contains `F` and
+every pair of `F`-neighbors of one label. The fixed-point identity makes the
+positive-support graph on `E(F)` a 2-factor. Testing support rectangles only
+against those mandatory `K`-edges is a relaxation, while the forced active
+adjacency graph must obey the SRG common-neighbor upper caps one and two.
+
+An independently decoded GENREG catalog supplies the 110 connected types;
+direct order-six and order-eight censuses supply the two disconnected types.
+They match the independent 112-record graph6 catalog bijectively. Only four
+types survive the mandatory-degree filter, and independently generated and
+replayed rejection trees find no support factor satisfying the caps. This
+conditionally excludes `n3=42`; it assumes no completed-graph automorphism and
+does not resolve Conway-99. The proof, support certificate, and final audit are
+in `agents/2026-07-22-wave12-n3-42-proof-a.md`,
+`verification/n3-42-equality/`, and
+`verification/2026-07-22-wave12-integration-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

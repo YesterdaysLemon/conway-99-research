@@ -169,4 +169,23 @@ eleventh_research_wave:
   clean_clone_commit: "7895a7da129a5d5415b21603872c3a002e6c7f6d"
   clean_clone_replay: "verification/2026-07-22-wave11-clean-clone.md"
   caveat: "The verified conditional necessary bound is n3>=42. The original proof omitted an explicit complement bridge, the first checker had weak semantic guards, and the first detached replay exposed platform-dependent outer newlines; all three failures are public and repaired. No literature novelty is claimed, and Conway-99 remains UNKNOWN."
+twelfth_research_wave:
+  source_commit: "4d561fb8b5e0b335d430c2ac93962cbf0ae40184"
+  verification_commit: "6bba34d8de7b2faa94e2d13467ccca511e6e7413"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_42_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave12-n3-42-proof-a.md"
+  prior_art_status_report: "agents/2026-07-22-wave12-status-search.md"
+  computational_report: "agents/2026-07-22-wave12-n3-42-computational.md"
+  premise_audit: "verification/2026-07-22-wave12-n3-42-premise-audit.md"
+  support_audit: "verification/2026-07-22-n3-42-support-audit.md"
+  integration_audit: "verification/2026-07-22-wave12-integration-audit.md"
+  structured_checker: "verification/n3-42-equality/verify_reduction.py"
+  support_generator: "verification/n3-42-equality/build_support_certificate.py"
+  independent_support_verifier: "verification/n3-42-equality/verify_support_certificate.py"
+  support_certificate: "verification/n3-42-equality/n3-42-support-certificate.json"
+  support_certificate_sha256: "8115b5f34568a463952afc399bc22db927121f3f1aa28cfc33ae191ea93dc68a"
+  external_catalog_url: "https://www.mathe2.uni-bayreuth.de/markus/REGGRAPHS/SCD/14_3_4.scd"
+  external_catalog_sha256: "6f3e9cf2b7e0d85c5df59c1638ab9d2fddbfc9905c49b35da01cc892f847e9a0"
+  caveat: "The verified result is the conditional necessary bound n3>=45 and induced_C6_count>=209331. The official GENREG binary has no stated redistribution license and is downloaded by URL for replay rather than committed. Generator completeness remains an external premise cross-checked between independent catalogs; no literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

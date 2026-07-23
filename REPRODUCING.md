@@ -314,6 +314,60 @@ Conway-99 remains `UNKNOWN`. The detached-clone procedure, first failed
 newline-portability gate, canonical-LF repair, and exact byte comparison are
 recorded in `verification/2026-07-22-wave11-clean-clone.md`.
 
+Replay the Wave 12 exclusion of `n3=42` with:
+
+```powershell
+.venv\Scripts\python code\wave12_n3_42_active.py `
+  --certificate attempts\wave12-computation\n3-42-size2-active-local-candidate.json
+.venv\Scripts\python code\wave12_n3_42_size2_scout.py `
+  --compare attempts\wave12-computation\n3-42-size2-active-local-candidate.json
+.venv\Scripts\python code\wave12_n3_42_size2_caps.py `
+  --catalog attempts\wave12-computation\n3-42-cubic-trianglefree-14.g6
+.venv\Scripts\python code\test_wave12_n3_42.py -v
+.venv\Scripts\python verification\n3-42-equality\verify_reduction.py
+.venv\Scripts\python -m unittest verification.test_n3_42_reduction -v
+```
+
+The independent catalog replay uses Meringer's official 871-byte GENREG
+shortcode archive. It is not redistributed because its source page states no
+license. Download it from the official host and verify its exact digest:
+
+```powershell
+$wave12Scd = 'verification\n3-42-equality\14_3_4.scd'
+$wave12ScdSha = '6f3e9cf2b7e0d85c5df59c1638ab9d2fddbfc9905c49b35da01cc892f847e9a0'
+Invoke-WebRequest `
+  -Uri 'https://www.mathe2.uni-bayreuth.de/markus/REGGRAPHS/SCD/14_3_4.scd' `
+  -OutFile $wave12Scd
+if ((Get-FileHash $wave12Scd -Algorithm SHA256).Hash.ToLower() -ne $wave12ScdSha) {
+  throw 'Wave 12 GENREG archive hash mismatch'
+}
+
+$wave12Certificate = Join-Path ([System.IO.Path]::GetTempPath()) `
+  'n3-42-support-certificate.json'
+.venv\Scripts\python verification\n3-42-equality\build_support_certificate.py `
+  --scd $wave12Scd `
+  --graph6 attempts\wave12-computation\n3-42-cubic-trianglefree-14.g6 `
+  --output $wave12Certificate
+$wave12Expected = '8115b5f34568a463952afc399bc22db927121f3f1aa28cfc33ae191ea93dc68a'
+if ((Get-FileHash $wave12Certificate -Algorithm SHA256).Hash.ToLower() -ne $wave12Expected) {
+  throw 'Wave 12 regenerated certificate hash mismatch'
+}
+.venv\Scripts\python verification\n3-42-equality\verify_support_certificate.py `
+  --certificate verification\n3-42-equality\n3-42-support-certificate.json `
+  --scd $wave12Scd `
+  --graph6 attempts\wave12-computation\n3-42-cubic-trianglefree-14.g6 `
+  --mutations
+```
+
+The catalog audit decodes 110 connected GENREG types, independently classifies
+two disconnected types, and matches all 112 graph6 records. Four types survive
+the mandatory-degree filter and zero support factors survive the exact replay.
+Combined with the separately checked proof reduction, this establishes only the
+conditional necessary bound `n3>=45` and
+`induced_C6_count>=209331`. Conway-99 and novelty remain `UNKNOWN`. See
+`verification/2026-07-22-n3-42-support-audit.md` and
+`verification/2026-07-22-wave12-integration-audit.md`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

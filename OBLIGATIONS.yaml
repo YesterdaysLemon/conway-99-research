@@ -247,3 +247,21 @@ obligations:
       - "verification/2026-07-22-n3-39-equality-audit.md"
       - "verification/2026-07-22-wave11-clean-clone.md"
     note: "The initial exposition omitted the explicit K=complement(L) bridge, the first compact checker hid a six-profile overlap with weak mutation guards, and the first detached replay exposed platform-dependent newlines. All three failures are public and repaired. The verified result is the conditional necessary bound n3>=42; novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE12-STRUCTURAL
+    requirement: "Adversarially verify the n3=42 active profiles, degree-three obstruction, point-size reductions, all-size-two support relaxation, complete cubic triangle-free catalog bridge, common-neighbor caps, and independent proof-certificate replay."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave12-n3-42-proof-a.md"
+      - "agents/2026-07-22-wave12-n3-42-computational.md"
+      - "agents/2026-07-22-wave12-status-search.md"
+      - "verification/2026-07-22-wave12-n3-42-premise-audit.md"
+      - "verification/n3-42-equality/verify_reduction.py"
+      - "verification/test_n3_42_reduction.py"
+      - "verification/n3-42-equality/build_support_certificate.py"
+      - "verification/n3-42-equality/verify_support_certificate.py"
+      - "verification/n3-42-equality/n3-42-support-certificate.json"
+      - "verification/2026-07-22-n3-42-support-audit.md"
+      - "verification/2026-07-22-wave12-integration-audit.md"
+    note: "The proof-side checker explicitly requires the external support-exclusion premise. An official GENREG connected catalog and an independent nauty catalog were cross-matched, the two disconnected types were separately classified, and all four surviving support trees were replayed with mutations. The verified result is the conditional necessary bound n3>=45; novelty and Conway-99 remain UNKNOWN."

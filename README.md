@@ -202,6 +202,30 @@ the initial LF/CRLF portability failure and the byte-stable repair. No
 checked source was found for the exact exclusion, but novelty remains
 `UNKNOWN`; the Conway-99 target itself also remains `UNKNOWN`.
 
+Wave 12 excludes `n3=42`. Exact active-profile arithmetic leaves an all-`q=2`
+case on fourteen triangles after a new degree-three point-clique obstruction.
+Expansion and fixed-point arguments eliminate active points of sizes four and
+three. In the remaining all-size-two case, the 21 point objects are the edges
+of a cubic triangle-free graph `F` on fourteen labels. An independent GENREG
+catalog plus a direct disconnected census matches all 112 types in the nauty
+catalog; a mandatory-`K` filter leaves four, and independently generated and
+replayed support-factor rejection trees leave zero.
+Consequently,
+
+```text
+n3 >= 45,
+induced_C6_count >= 209,331.
+```
+
+This remains a conditional necessary bound, not a Conway-99 resolution. The
+official GENREG archive used for the cross-catalog audit has no stated
+redistribution license, so it is fetched from its official URL and checked by
+SHA-256 rather than committed. See the [Wave 12 proof reduction](agents/2026-07-22-wave12-n3-42-proof-a.md),
+[support audit](verification/2026-07-22-n3-42-support-audit.md), and
+[final integration audit](verification/2026-07-22-wave12-integration-audit.md).
+No checked source was found for the exact exclusion; novelty and Conway-99 both
+remain `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -286,6 +310,12 @@ status.
 - [N3=39 equality audit](verification/2026-07-22-n3-39-equality-audit.md):
   repaired adversarial reconstruction and two-implementation rooted-flower
   replay proving the conditional strengthening `n3 >= 42`.
+- [N3=42 support audit](verification/2026-07-22-n3-42-support-audit.md):
+  independent GENREG/nauty cross-catalog check and proof-tree replay excluding
+  the final all-size-two support branch.
+- [Wave 12 integration audit](verification/2026-07-22-wave12-integration-audit.md):
+  adversarial reconstruction of the full conditional reduction and the
+  strengthening `n3 >= 45`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

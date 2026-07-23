@@ -166,3 +166,28 @@ incremental solver and carries learned clauses between assumption branches:
 This is explicitly a scouting workflow. An `UNSAT` branch must be regenerated
 with its decisions as unit clauses and accompanied by a separately checked
 proof before it counts as evidence.
+
+## Wave 12 `n3=42` discovery tools
+
+The Wave 12 programs are discovery-lane artifacts with explicit scope labels:
+
+- `wave12_n3_42_active.py` replays the six active profiles, local flower
+  obstructions, and the retained weakened active-local candidate;
+- `wave12_n3_42_size2_scout.py` regenerates that restricted SAT candidate;
+- `wave12_n3_42_size2_caps.py` runs the first 112-type all-size-two support
+  census; and
+- `test_wave12_n3_42.py` supplies four focused regression tests.
+
+```powershell
+.venv\Scripts\python code\wave12_n3_42_active.py `
+  --certificate attempts\wave12-computation\n3-42-size2-active-local-candidate.json
+.venv\Scripts\python code\wave12_n3_42_size2_caps.py `
+  --catalog attempts\wave12-computation\n3-42-cubic-trianglefree-14.g6
+.venv\Scripts\python code\test_wave12_n3_42.py -v
+```
+
+The restricted SAT object and the construction-lane zero-survivor census are
+kept as `CANDIDATE` evidence. The promoted conditional exclusion depends on
+the independent proof reduction, second catalog, proof certificate, and
+adversarial reports under `verification/n3-42-equality/`; the discovery code
+does not certify itself.

@@ -224,6 +224,25 @@ claims:
       - "verification/2026-07-22-wave11-clean-clone.md"
     limitations: "The result depends on C-N3-001 and the Wave 6-10 lemmas, is a necessary count bound only, and does not resolve Conway-99. An omitted complement bridge, weak first checker, and platform-dependent certificate newlines failed review and were repaired publicly. No literature novelty is claimed."
 
+  - id: C-N3-EQUALITY-005
+    statement: "Conditional on the target-specific forced N3 occurrence and the verified Wave 6-11 auxiliary-graph properties, active-profile reduction, fixed-point incidence, an independent 112-type cubic catalog bridge, and exact support-factor rejection exclude n3=42, forcing n3>=45 and induced_C6_count>=209331."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave12-n3-42-proof-a.md"
+      - "agents/2026-07-22-wave12-n3-42-computational.md"
+      - "agents/2026-07-22-wave12-status-search.md"
+      - "verification/2026-07-22-wave12-n3-42-premise-audit.md"
+      - "verification/n3-42-equality/verify_reduction.py"
+      - "verification/test_n3_42_reduction.py"
+      - "verification/n3-42-equality/build_support_certificate.py"
+      - "verification/n3-42-equality/verify_support_certificate.py"
+      - "verification/n3-42-equality/n3-42-support-certificate.json"
+      - "verification/2026-07-22-n3-42-support-audit.md"
+      - "verification/2026-07-22-wave12-integration-audit.md"
+    limitations: "The result depends on C-N3-001 and the Wave 6-11 lemmas, is a necessary count bound only, and does not resolve Conway-99. GENREG and nauty completeness are external generator claims cross-checked by independent catalogs. The official GENREG binary is not redistributed because no license was stated. No literature novelty is claimed."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

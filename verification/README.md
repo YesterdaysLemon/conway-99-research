@@ -283,3 +283,42 @@ membership, linearity, the common-point rule, and the degree-zero-or-two
 crossing law. This remains a conditional replay companion to the human proof,
 not a standalone Conway-99 nonexistence certificate. The resulting `n3>=42`
 is a necessary bound and the target remains `UNKNOWN`.
+
+## `N3=42` equality exclusion
+
+`n3-42-equality/verify_reduction.py` independently checks the proof-side finite
+steps: all six active profiles, the degree-three obstruction, both size-four
+flower counts, the size-three `t` inequalities, the `(2,3,3)` fixed-point
+contradiction, the cubic `K3,3`/open-twin obstruction, and the strengthened
+global and branch bounds. Its bound output is guarded by an explicit external
+support-exclusion premise.
+
+```powershell
+python verification/n3-42-equality/verify_reduction.py
+python -m unittest -v verification/test_n3_42_reduction.py
+```
+
+The remaining all-size-two branch is checked by a separate proof-producing
+support search and a set-based certificate replayer that imports neither the
+builder nor the discovery code. The replay requires Meringer's official
+`14_3_4.scd` archive, expected SHA-256
+`6f3e9cf2b7e0d85c5df59c1638ab9d2fddbfc9905c49b35da01cc892f847e9a0`.
+The archive has no stated redistribution license and is intentionally ignored;
+download it from the official URL recorded in `REPRODUCING.md`.
+
+```powershell
+python verification/n3-42-equality/verify_support_certificate.py `
+  --certificate verification/n3-42-equality/n3-42-support-certificate.json `
+  --scd verification/n3-42-equality/14_3_4.scd `
+  --graph6 attempts/wave12-computation/n3-42-cubic-trianglefree-14.g6 `
+  --mutations
+```
+
+The certificate has SHA-256
+`8115b5f34568a463952afc399bc22db927121f3f1aa28cfc33ae191ea93dc68a`.
+The independent catalog bridge checks 110 connected and two disconnected cubic
+triangle-free types; four survive the mandatory-degree filter, and all four
+support rejection trees replay with zero survivors. The combined adversarial
+audit records the conditional strengthening `n3>=45` and
+`induced_C6_count>=209331`. It does not resolve Conway-99, and novelty remains
+`UNKNOWN`.
