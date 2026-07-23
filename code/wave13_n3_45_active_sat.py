@@ -39,11 +39,112 @@ K_DEGREE = 8
 ROOT_POINT = frozenset((0, 1, 2))
 ALLOWED_SIZE3_COUNTS = tuple(range(1, 12, 2))
 ROOT_MODES = ("111", "122", "222", "223")
+FULL_CANDIDATE_SCHEMA = "conway99-wave13-n3-45-active-local-v2"
+DIAGNOSTIC_CANDIDATE_SCHEMA = (
+    "conway99-wave13-n3-45-active-local-diagnostic-v2"
+)
+ROOT_JUSTIFICATION = (
+    "odd total incidence forces a size-three point; the full S_15 "
+    "active-label action names it {0,1,2}, and its setwise stabilizer "
+    "gives the recorded rooted-mode representative"
+)
+BASE_RESTRICTIONS = (
+    "active_labels_only",
+    "point_sizes_restricted_to_2_or_3_after_local_proof",
+    "one_size3_point_fixed_by_full_label_relabeling",
+    "one_of_four_root_modes_fixed_by_its_label_stabilizer",
+    "meeting_crossings_and_overlap_fixed_point_upper_bound_only",
+    "remaining_fixed_point_support_not_encoded",
+    "inactive_vertices_not_encoded",
+    "no_complete_99_vertex_adjacency_matrix",
+    "no_global_lambda_mu_equalities",
+)
+OMITTED_PREMISES = {
+    "no_overlap_cap": (
+        "size-three full-L overlap contribution at most twelve"
+    ),
+    "no_common_point": "common-point/Berge-triangle prohibition",
+    "k_degree_at_most": (
+        "exact K-degree eight weakened to K-degree at most eight"
+    ),
+}
 SCOUT_VARIANTS = (
     "full",
     "no_overlap_cap",
     "no_common_point",
     "k_degree_at_most",
+)
+ROOT_NORMALIZATION_KEYS = frozenset(
+    (
+        "point",
+        "local_mode",
+        "justification",
+        "completed_graph_automorphism_assumed",
+    )
+)
+DETERMINISTIC_SOLVER_STATISTIC_KEYS = frozenset(
+    (
+        "variant",
+        "python",
+        "python_sat",
+        "solver",
+        "conflict_budget",
+        "result",
+        "proof_trace",
+        "variables",
+        "clauses",
+        "cnf_sha256",
+        "candidate_point_variables",
+        "candidate_K_edge_variables",
+        "candidate_full_overlap_variables",
+    )
+)
+DIAGNOSTIC_CANDIDATE_KEYS = frozenset(
+    (
+        "schema",
+        "claim_label",
+        "target_result",
+        "novelty_status",
+        "proof_trace_status",
+        "variant",
+        "active_order",
+        "q_values",
+        "K_degree",
+        "size3_point_count",
+        "root_mode",
+        "point_sets",
+        "K_edges",
+        "root_normalization",
+        "restrictions",
+        "solver_statistics",
+        "diagnostics",
+        "omitted_premise",
+        "builder_source_sha256",
+        "core_semantic_sha256",
+        "integrity_sha256",
+    )
+)
+FULL_CANDIDATE_KEYS = frozenset(
+    (
+        "schema",
+        "claim_label",
+        "target_result",
+        "novelty_status",
+        "proof_trace_status",
+        "variant",
+        "active_order",
+        "q_values",
+        "K_degree",
+        "size3_point_count",
+        "root_mode",
+        "point_sets",
+        "K_edges",
+        "root_normalization",
+        "restrictions",
+        "solver_statistics",
+        "builder_source_sha256",
+        "integrity_sha256",
+    )
 )
 SCAN_BRANCHES = (
     (1, "111"),
@@ -95,6 +196,71 @@ def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
 
+def source_sha256() -> str:
+    return sha256_bytes(Path(__file__).resolve().read_bytes())
+
+
+def require_exact_keys(
+    value: object,
+    expected: frozenset[str],
+    *,
+    name: str,
+) -> dict[str, object]:
+    if not isinstance(value, dict):
+        raise AssertionError(f"{name} must be an object")
+    observed = frozenset(value)
+    if observed != expected:
+        missing = sorted(expected - observed)
+        unknown = sorted(observed - expected)
+        raise AssertionError(
+            f"{name} schema mismatch: missing={missing}, unknown={unknown}"
+        )
+    return value
+
+
+def canonical_point_records(value: object) -> tuple[tuple[int, ...], ...]:
+    if not isinstance(value, list):
+        raise AssertionError("point_sets must be a list")
+    records = []
+    for raw in value:
+        if not isinstance(raw, list) or len(raw) not in (2, 3):
+            raise AssertionError("point record must be a size-two/three list")
+        if any(type(vertex) is not int for vertex in raw):
+            raise AssertionError("point labels must be integers")
+        record = tuple(raw)
+        if tuple(sorted(record)) != record or len(set(record)) != len(record):
+            raise AssertionError("point record is not strictly canonical")
+        if not all(0 <= vertex < ORDER for vertex in record):
+            raise AssertionError("point label is out of range")
+        records.append(record)
+    canonical = sorted(records, key=lambda item: (len(item), item))
+    if records != canonical:
+        raise AssertionError("point_sets are not in canonical order")
+    if len(set(records)) != len(records):
+        raise AssertionError("duplicate point record")
+    return tuple(records)
+
+
+def canonical_edge_records(value: object) -> tuple[tuple[int, int], ...]:
+    if not isinstance(value, list):
+        raise AssertionError("K_edges must be a list")
+    records = []
+    for raw in value:
+        if not isinstance(raw, list) or len(raw) != 2:
+            raise AssertionError("K edge record must be a two-label list")
+        if any(type(vertex) is not int for vertex in raw):
+            raise AssertionError("K edge labels must be integers")
+        left, right = raw
+        if not (0 <= left < right < ORDER):
+            raise AssertionError("K edge record is not strictly canonical")
+        records.append((left, right))
+    if records != sorted(records):
+        raise AssertionError("K_edges are not in canonical order")
+    if len(set(records)) != len(records):
+        raise AssertionError("duplicate K edge record")
+    return tuple(records)
+
+
 def cnf_sha256(cnf: CNF, variable_count: int) -> str:
     """Hash the exact deterministic DIMACS clause stream without writing it."""
 
@@ -106,6 +272,63 @@ def cnf_sha256(cnf: CNF, variable_count: int) -> str:
         digest.update(" ".join(map(str, clause)).encode("ascii"))
         digest.update(b" 0\n")
     return digest.hexdigest()
+
+
+def deterministic_candidate_statistics(
+    runtime_statistics: dict[str, object],
+) -> dict[str, object]:
+    return {
+        "variant": runtime_statistics["variant"],
+        "python": runtime_statistics["python"],
+        "python_sat": runtime_statistics["python_sat"],
+        "solver": runtime_statistics["solver"],
+        "conflict_budget": runtime_statistics["conflict_budget"],
+        "result": "SAT_WEAKENED_MODEL",
+        "proof_trace": "NOT_EMITTED",
+        "variables": runtime_statistics["variables"],
+        "clauses": runtime_statistics["clauses"],
+        "cnf_sha256": runtime_statistics["cnf_sha256"],
+        "candidate_point_variables": runtime_statistics[
+            "candidate_point_variables"
+        ],
+        "candidate_K_edge_variables": runtime_statistics[
+            "candidate_K_edge_variables"
+        ],
+        "candidate_full_overlap_variables": runtime_statistics[
+            "candidate_full_overlap_variables"
+        ],
+    }
+
+
+def candidate_core_semantic(
+    candidate: dict[str, object],
+) -> dict[str, object]:
+    return {
+        "variant": candidate["variant"],
+        "point_sets": candidate["point_sets"],
+        "K_edges": candidate["K_edges"],
+        "diagnostics": candidate["diagnostics"],
+    }
+
+
+def candidate_integrity_payload(
+    candidate: dict[str, object],
+) -> dict[str, object]:
+    keys = (
+        DIAGNOSTIC_CANDIDATE_KEYS
+        if candidate.get("schema") == DIAGNOSTIC_CANDIDATE_SCHEMA
+        else FULL_CANDIDATE_KEYS
+    )
+    return {
+        key: candidate[key]
+        for key in sorted(keys - {"integrity_sha256"})
+    }
+
+
+def candidate_json_bytes(candidate: dict[str, object]) -> bytes:
+    return (
+        json.dumps(candidate, indent=2, sort_keys=True) + "\n"
+    ).encode("utf-8")
 
 
 def add_equals(
@@ -435,35 +658,50 @@ def vertex_degrees(
 
 
 def validate_candidate(candidate: dict[str, object]) -> dict[str, object]:
-    if candidate.get("schema") != "conway99-wave13-n3-45-active-local-v1":
+    require_exact_keys(
+        candidate,
+        FULL_CANDIDATE_KEYS,
+        name="full candidate",
+    )
+    if candidate["schema"] != FULL_CANDIDATE_SCHEMA:
         raise AssertionError("candidate schema mismatch")
-    if candidate.get("claim_label") != "CANDIDATE":
+    if candidate["claim_label"] != "CANDIDATE":
         raise AssertionError("candidate status inflation")
-    if candidate.get("target_result") != "UNKNOWN":
+    if candidate["target_result"] != "UNKNOWN":
         raise AssertionError("target status inflation")
-    if candidate.get("active_order") != ORDER:
+    if candidate["novelty_status"] != "UNKNOWN":
+        raise AssertionError("novelty status inflation")
+    if candidate["proof_trace_status"] != "NOT_EMITTED":
+        raise AssertionError("candidate falsely claims a proof trace")
+    if candidate["variant"] != "full":
+        raise AssertionError("full candidate has the wrong variant")
+    if candidate["active_order"] != ORDER:
         raise AssertionError("wrong active order")
-    if candidate.get("q_values") != [2] * ORDER:
+    if candidate["K_degree"] != K_DEGREE:
+        raise AssertionError("wrong K-degree metadata")
+    if candidate["q_values"] != [2] * ORDER:
         raise AssertionError("candidate is not the all-q=2 frontier")
-    size3_count = int(candidate.get("size3_point_count", -1))
-    if size3_count not in ALLOWED_SIZE3_COUNTS:
+    size3_count = candidate["size3_point_count"]
+    if type(size3_count) is not int or size3_count not in ALLOWED_SIZE3_COUNTS:
         raise AssertionError("invalid size-three count")
-    root_mode = candidate.get("root_mode")
+    root_mode = candidate["root_mode"]
     if root_mode not in ROOT_MODES:
         raise AssertionError("invalid rooted local mode")
+    root_metadata = require_exact_keys(
+        candidate["root_normalization"],
+        ROOT_NORMALIZATION_KEYS,
+        name="root_normalization",
+    )
+    if root_metadata != {
+        "point": sorted(ROOT_POINT),
+        "local_mode": root_mode,
+        "justification": ROOT_JUSTIFICATION,
+        "completed_graph_automorphism_assumed": False,
+    }:
+        raise AssertionError("root-normalization metadata mismatch")
 
-    raw_points = candidate.get("point_sets")
-    if not isinstance(raw_points, list):
-        raise AssertionError("point_sets must be a list")
-    points = tuple(frozenset(map(int, item)) for item in raw_points)
-    if len(points) != len(set(points)):
-        raise AssertionError("duplicate point set")
-    if any(
-        len(point) not in (2, 3)
-        or not point <= frozenset(range(ORDER))
-        for point in points
-    ):
-        raise AssertionError("invalid point set")
+    point_records = canonical_point_records(candidate["point_sets"])
+    points = tuple(frozenset(item) for item in point_records)
     if ROOT_POINT not in points:
         raise AssertionError("root normalization is absent")
     if sum(len(point) == 3 for point in points) != size3_count:
@@ -484,12 +722,8 @@ def validate_candidate(candidate: dict[str, object]) -> dict[str, object]:
             if frozenset(triple) not in points:
                 raise AssertionError("forbidden common-point Berge triangle")
 
-    raw_k = candidate.get("K_edges")
-    if not isinstance(raw_k, list):
-        raise AssertionError("K_edges must be a list")
-    k_edges = frozenset(edge(*map(int, item)) for item in raw_k)
-    if len(k_edges) != len(raw_k):
-        raise AssertionError("duplicate K edge")
+    edge_records = canonical_edge_records(candidate["K_edges"])
+    k_edges = frozenset(edge_records)
     if vertex_degrees(k_edges) != (K_DEGREE,) * ORDER:
         raise AssertionError("K is not 8-regular")
     if not set(pair_owner) <= k_edges:
@@ -555,20 +789,50 @@ def validate_candidate(candidate: dict[str, object]) -> dict[str, object]:
     if observed_root_mode != root_mode:
         raise AssertionError("rooted local mode mismatch")
 
-    restrictions = candidate.get("restrictions")
-    expected_restrictions = [
-        "active_labels_only",
-        "point_sizes_restricted_to_2_or_3_after_local_proof",
-        "one_size3_point_fixed_by_full_label_relabeling",
-        "one_of_four_root_modes_fixed_by_its_label_stabilizer",
-        "meeting_crossings_and_overlap_fixed_point_upper_bound_only",
-        "remaining_fixed_point_support_not_encoded",
-        "inactive_vertices_not_encoded",
-        "no_complete_99_vertex_adjacency_matrix",
-        "no_global_lambda_mu_equalities",
-    ]
-    if restrictions != expected_restrictions:
+    if candidate["restrictions"] != list(BASE_RESTRICTIONS):
         raise AssertionError("candidate restriction boundary changed")
+
+    statistics = require_exact_keys(
+        candidate["solver_statistics"],
+        DETERMINISTIC_SOLVER_STATISTIC_KEYS,
+        name="solver_statistics",
+    )
+    if (
+        statistics["variant"] != "full"
+        or statistics["python"] != sys.version.split()[0]
+        or statistics["python_sat"] != pysat.__version__
+        or statistics["solver"] != "cadical195"
+        or statistics["result"] != "SAT_WEAKENED_MODEL"
+        or statistics["proof_trace"] != "NOT_EMITTED"
+    ):
+        raise AssertionError("full candidate solver metadata mismatch")
+    (
+        cnf,
+        pool,
+        candidate_points,
+        _selected,
+        candidate_k_edges,
+        _f_edges,
+        full_overlap,
+    ) = build_instance(size3_count, root_mode, "full")
+    formula_statistics = {
+        "variables": pool.top,
+        "clauses": len(cnf.clauses),
+        "cnf_sha256": cnf_sha256(cnf, pool.top),
+        "candidate_point_variables": len(candidate_points),
+        "candidate_K_edge_variables": len(candidate_k_edges),
+        "candidate_full_overlap_variables": len(full_overlap),
+    }
+    for key, expected in formula_statistics.items():
+        if statistics[key] != expected:
+            raise AssertionError(f"formula metadata mismatch: {key}")
+    if candidate["builder_source_sha256"] != source_sha256():
+        raise AssertionError("candidate is not bound to the current builder")
+    integrity_sha256 = sha256_bytes(
+        canonical_json_bytes(candidate_integrity_payload(candidate))
+    )
+    if candidate["integrity_sha256"] != integrity_sha256:
+        raise AssertionError("candidate integrity hash mismatch")
 
     semantic = {
         "active_order": ORDER,
@@ -593,8 +857,11 @@ def validate_candidate(candidate: dict[str, object]) -> dict[str, object]:
             for key, value in sorted(local_types.items())
         },
         "semantic_sha256": sha256_bytes(canonical_json_bytes(semantic)),
+        "cnf_sha256": formula_statistics["cnf_sha256"],
+        "integrity_sha256": integrity_sha256,
         "claim_label": "CANDIDATE",
         "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
     }
 
 
@@ -704,30 +971,74 @@ def weakened_assignment_diagnostics(
 def validate_weakened_candidate(
     candidate: dict[str, object],
 ) -> dict[str, object]:
-    if (
-        candidate.get("schema")
-        != "conway99-wave13-n3-45-active-local-diagnostic-v1"
-    ):
-        raise AssertionError("diagnostic schema mismatch")
-    if candidate.get("claim_label") != "CANDIDATE":
-        raise AssertionError("diagnostic status inflation")
-    if candidate.get("target_result") != "UNKNOWN":
-        raise AssertionError("diagnostic target inflation")
-    variant = candidate.get("variant")
-    if variant not in {
-        "no_overlap_cap",
-        "no_common_point",
-        "k_degree_at_most",
-    }:
+    require_exact_keys(
+        candidate,
+        DIAGNOSTIC_CANDIDATE_KEYS,
+        name="diagnostic candidate",
+    )
+    expected_scalars = {
+        "schema": DIAGNOSTIC_CANDIDATE_SCHEMA,
+        "claim_label": "CANDIDATE",
+        "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
+        "proof_trace_status": "NOT_EMITTED",
+        "active_order": ORDER,
+        "K_degree": K_DEGREE,
+    }
+    for key, expected in expected_scalars.items():
+        if candidate[key] != expected:
+            raise AssertionError(f"diagnostic metadata mismatch: {key}")
+    if candidate["q_values"] != [2] * ORDER:
+        raise AssertionError("diagnostic q metadata mismatch")
+
+    variant = candidate["variant"]
+    if variant not in OMITTED_PREMISES:
         raise AssertionError("diagnostic variant mismatch")
-    points = tuple(
-        frozenset(map(int, item)) for item in candidate.get("point_sets", ())
+    if candidate["omitted_premise"] != OMITTED_PREMISES[variant]:
+        raise AssertionError("omitted-premise metadata mismatch")
+    expected_restrictions = [
+        *BASE_RESTRICTIONS,
+        f"diagnostic_variant_{variant}",
+    ]
+    if candidate["restrictions"] != expected_restrictions:
+        raise AssertionError("diagnostic restriction boundary changed")
+
+    size3_count = candidate["size3_point_count"]
+    if type(size3_count) is not int or size3_count not in ALLOWED_SIZE3_COUNTS:
+        raise AssertionError("invalid size-three metadata")
+    root_mode = candidate["root_mode"]
+    if root_mode not in ROOT_MODES:
+        raise AssertionError("invalid root-mode metadata")
+
+    root_metadata = require_exact_keys(
+        candidate["root_normalization"],
+        ROOT_NORMALIZATION_KEYS,
+        name="root_normalization",
     )
-    k_edges = frozenset(
-        edge(*map(int, item)) for item in candidate.get("K_edges", ())
-    )
+    if root_metadata != {
+        "point": sorted(ROOT_POINT),
+        "local_mode": root_mode,
+        "justification": ROOT_JUSTIFICATION,
+        "completed_graph_automorphism_assumed": False,
+    }:
+        raise AssertionError("root-normalization metadata mismatch")
+
+    point_records = canonical_point_records(candidate["point_sets"])
+    edge_records = canonical_edge_records(candidate["K_edges"])
+    points = tuple(frozenset(item) for item in point_records)
+    k_edges = frozenset(edge_records)
+    if ROOT_POINT not in points:
+        raise AssertionError("normalized root point is absent")
+    if sum(len(point) == 3 for point in points) != size3_count:
+        raise AssertionError("size-three metadata does not match the core")
+
     observed = weakened_assignment_diagnostics(points, k_edges)
-    if observed != candidate.get("diagnostics"):
+    archived_diagnostics = require_exact_keys(
+        candidate["diagnostics"],
+        frozenset(observed),
+        name="diagnostics",
+    )
+    if observed != archived_diagnostics:
         raise AssertionError("diagnostic recomputation mismatch")
     if observed["incidence_degrees"] != [3] * ORDER:
         raise AssertionError("diagnostic lost exact point incidence")
@@ -742,36 +1053,95 @@ def validate_weakened_candidate(
         raise AssertionError("diagnostic K is not 8-regular")
     if observed["meeting_crossing_violations"]:
         raise AssertionError("diagnostic lost the meeting-crossing premise")
+
+    t_values = tuple(
+        sum(len(point) == 3 and vertex in point for point in points)
+        for vertex in range(ORDER)
+    )
+    actual_root_mode = "".join(
+        map(str, sorted(t_values[vertex] for vertex in ROOT_POINT))
+    )
+    if actual_root_mode != root_mode:
+        raise AssertionError("claimed root mode is not present in the core")
+
     if variant == "no_common_point":
         if observed["common_point_Berge_triangle_count"] == 0:
             raise AssertionError("no-common-point diagnostic does not violate it")
         if observed["size3_points_over_fixed_point_cap"]:
             raise AssertionError("no-common-point diagnostic also violates overlap cap")
-    if variant == "no_overlap_cap":
+    elif variant == "no_overlap_cap":
         if observed["common_point_Berge_triangle_count"]:
             raise AssertionError("no-overlap diagnostic violates common-point premise")
         if observed["size3_points_over_fixed_point_cap"] == 0:
             raise AssertionError("no-overlap diagnostic does not violate its omission")
-    if variant == "k_degree_at_most":
+    else:
         if observed["common_point_Berge_triangle_count"]:
             raise AssertionError("K-upper-bound diagnostic violates common point")
         if observed["size3_points_over_fixed_point_cap"]:
             raise AssertionError("K-upper-bound diagnostic violates overlap cap")
         if observed["K_degree_sequence"] == [K_DEGREE] * ORDER:
             raise AssertionError("K-upper-bound diagnostic is already regular")
-    semantic = {
-        "variant": variant,
-        "point_sets": [sorted(point) for point in points],
-        "K_edges": [list(item) for item in sorted(k_edges)],
-        "diagnostics": observed,
+
+    statistics = require_exact_keys(
+        candidate["solver_statistics"],
+        DETERMINISTIC_SOLVER_STATISTIC_KEYS,
+        name="solver_statistics",
+    )
+    if statistics["variant"] != variant:
+        raise AssertionError("solver variant metadata mismatch")
+    if statistics["python"] != sys.version.split()[0]:
+        raise AssertionError("solver Python version metadata mismatch")
+    if statistics["python_sat"] != pysat.__version__:
+        raise AssertionError("solver PySAT version metadata mismatch")
+    if statistics["solver"] != "cadical195":
+        raise AssertionError("canonical diagnostic solver changed")
+    if statistics["conflict_budget"] != 300_000:
+        raise AssertionError("canonical diagnostic conflict budget changed")
+    if statistics["result"] != "SAT_WEAKENED_MODEL":
+        raise AssertionError("diagnostic solver result metadata mismatch")
+    if statistics["proof_trace"] != "NOT_EMITTED":
+        raise AssertionError("diagnostic falsely claims a proof trace")
+
+    (
+        cnf,
+        pool,
+        candidate_points,
+        _selected,
+        candidate_k_edges,
+        _f_edges,
+        full_overlap,
+    ) = build_instance(size3_count, root_mode, variant)
+    expected_formula_statistics = {
+        "variables": pool.top,
+        "clauses": len(cnf.clauses),
+        "cnf_sha256": cnf_sha256(cnf, pool.top),
+        "candidate_point_variables": len(candidate_points),
+        "candidate_K_edge_variables": len(candidate_k_edges),
+        "candidate_full_overlap_variables": len(full_overlap),
     }
-    semantic_sha256 = sha256_bytes(canonical_json_bytes(semantic))
-    if semantic_sha256 != candidate.get("semantic_sha256"):
-        raise AssertionError("diagnostic semantic digest mismatch")
+    for key, expected in expected_formula_statistics.items():
+        if statistics[key] != expected:
+            raise AssertionError(f"formula metadata mismatch: {key}")
+
+    current_source_sha256 = source_sha256()
+    if candidate["builder_source_sha256"] != current_source_sha256:
+        raise AssertionError("candidate is not bound to the current builder")
+    core_sha256 = sha256_bytes(
+        canonical_json_bytes(candidate_core_semantic(candidate))
+    )
+    if candidate["core_semantic_sha256"] != core_sha256:
+        raise AssertionError("diagnostic core semantic hash mismatch")
+    integrity_sha256 = sha256_bytes(
+        canonical_json_bytes(candidate_integrity_payload(candidate))
+    )
+    if candidate["integrity_sha256"] != integrity_sha256:
+        raise AssertionError("diagnostic integrity hash mismatch")
     return {
         "status": "PASS weakened active-local diagnostic",
         "variant": variant,
-        "semantic_sha256": semantic_sha256,
+        "cnf_sha256": expected_formula_statistics["cnf_sha256"],
+        "core_semantic_sha256": core_sha256,
+        "integrity_sha256": integrity_sha256,
         "omitted_premise_violation_count": (
             observed["common_point_Berge_triangle_count"]
             if variant == "no_common_point"
@@ -784,6 +1154,7 @@ def validate_weakened_candidate(
         ),
         "claim_label": "CANDIDATE",
         "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
     }
 
 
@@ -807,12 +1178,14 @@ def candidate_from_model(
     )
     candidate = {
         "schema": (
-            "conway99-wave13-n3-45-active-local-v1"
+            FULL_CANDIDATE_SCHEMA
             if variant == "full"
-            else "conway99-wave13-n3-45-active-local-diagnostic-v1"
+            else DIAGNOSTIC_CANDIDATE_SCHEMA
         ),
         "claim_label": "CANDIDATE",
         "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
+        "proof_trace_status": "NOT_EMITTED",
         "variant": variant,
         "active_order": ORDER,
         "q_values": [2] * ORDER,
@@ -824,52 +1197,34 @@ def candidate_from_model(
         "root_normalization": {
             "point": sorted(ROOT_POINT),
             "local_mode": root_mode,
-            "justification": (
-                "odd total incidence forces a size-three point; the full "
-                "S_15 active-label action names it {0,1,2}, and its setwise "
-                "stabilizer gives the recorded rooted-mode representative"
-            ),
+            "justification": ROOT_JUSTIFICATION,
             "completed_graph_automorphism_assumed": False,
         },
-        "restrictions": [
-            "active_labels_only",
-            "point_sizes_restricted_to_2_or_3_after_local_proof",
-            "one_size3_point_fixed_by_full_label_relabeling",
-            "one_of_four_root_modes_fixed_by_its_label_stabilizer",
-            "meeting_crossings_and_overlap_fixed_point_upper_bound_only",
-            "remaining_fixed_point_support_not_encoded",
-            "inactive_vertices_not_encoded",
-            "no_complete_99_vertex_adjacency_matrix",
-            "no_global_lambda_mu_equalities",
-        ],
-        "solver_statistics": solver_statistics,
+        "restrictions": list(BASE_RESTRICTIONS),
+        "solver_statistics": deterministic_candidate_statistics(
+            solver_statistics
+        ),
+        "builder_source_sha256": source_sha256(),
     }
     if variant != "full":
         candidate["restrictions"].append(f"diagnostic_variant_{variant}")
     if variant == "full":
-        candidate["validation"] = validate_candidate(candidate)
+        candidate["integrity_sha256"] = sha256_bytes(
+            canonical_json_bytes(candidate_integrity_payload(candidate))
+        )
+        validate_candidate(candidate)
     else:
         candidate["diagnostics"] = weakened_assignment_diagnostics(
             chosen_points, frozenset(chosen_k)
         )
-        candidate["omitted_premise"] = {
-            "no_overlap_cap": (
-                "size-three full-L overlap contribution at most twelve"
-            ),
-            "no_common_point": "common-point/Berge-triangle prohibition",
-            "k_degree_at_most": (
-                "exact K-degree eight weakened to K-degree at most eight"
-            ),
-        }[variant]
-        semantic = {
-            "variant": variant,
-            "point_sets": candidate["point_sets"],
-            "K_edges": candidate["K_edges"],
-            "diagnostics": candidate["diagnostics"],
-        }
-        candidate["semantic_sha256"] = sha256_bytes(
-            canonical_json_bytes(semantic)
+        candidate["omitted_premise"] = OMITTED_PREMISES[variant]
+        candidate["core_semantic_sha256"] = sha256_bytes(
+            canonical_json_bytes(candidate_core_semantic(candidate))
         )
+        candidate["integrity_sha256"] = sha256_bytes(
+            canonical_json_bytes(candidate_integrity_payload(candidate))
+        )
+        validate_weakened_candidate(candidate)
     return candidate
 
 
@@ -959,9 +1314,12 @@ def scan_all_branches(
                 "size3_point_count": size3_count,
                 "root_mode": root_mode,
                 "status": status,
+                "proof_trace_status": "NOT_EMITTED",
                 "statistics": statistics,
                 "candidate_validation": (
-                    candidate["validation"] if candidate is not None else None
+                    validate_candidate(candidate)
+                    if candidate is not None
+                    else None
                 ),
             }
         )
@@ -996,8 +1354,11 @@ def scan_all_branches(
             "solver UNSAT returns have no emitted or independently checked "
             "proof trace and are not nonexistence certificates"
         ),
+        "proof_trace_status": "NOT_EMITTED",
+        "builder_source_sha256": source_sha256(),
         "claim_label": "CANDIDATE",
         "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
     }
     semantic = {
         "schema": result["schema"],
@@ -1008,14 +1369,18 @@ def scan_all_branches(
                 "size3_point_count": row["size3_point_count"],
                 "root_mode": row["root_mode"],
                 "status": row["status"],
+                "proof_trace_status": row["proof_trace_status"],
                 "variables": row["statistics"]["variables"],
                 "clauses": row["statistics"]["clauses"],
                 "cnf_sha256": row["statistics"]["cnf_sha256"],
             }
             for row in rows
         ],
+        "proof_trace_status": result["proof_trace_status"],
+        "builder_source_sha256": result["builder_source_sha256"],
         "claim_label": result["claim_label"],
         "target_result": result["target_result"],
+        "novelty_status": result["novelty_status"],
     }
     result["semantic_sha256"] = sha256_bytes(canonical_json_bytes(semantic))
     return result
@@ -1042,7 +1407,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         result = (
             validate_weakened_candidate(candidate)
             if candidate.get("schema")
-            == "conway99-wave13-n3-45-active-local-diagnostic-v1"
+            == DIAGNOSTIC_CANDIDATE_SCHEMA
             else validate_candidate(candidate)
         )
         print(json.dumps(result, indent=2, sort_keys=True))
@@ -1081,11 +1446,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         if candidate is None:
             raise SystemExit("--candidate requested but no SAT model was found")
         arguments.candidate.parent.mkdir(parents=True, exist_ok=True)
-        arguments.candidate.write_text(
-            json.dumps(candidate, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
+        arguments.candidate.write_bytes(candidate_json_bytes(candidate))
     output = {
         "status": status,
         "size3_point_count": arguments.size3,
@@ -1099,8 +1460,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         ),
         "candidate_validation": (
             (
-                candidate.get("validation")
-                or candidate.get("diagnostics")
+                validate_candidate(candidate)
+                if candidate["variant"] == "full"
+                else validate_weakened_candidate(candidate)
             )
             if candidate is not None
             else None
@@ -1119,16 +1481,18 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("clauses", statistics["clauses"])
         print("solver_time_seconds", statistics["solver_time_seconds"])
         if candidate is not None:
-            if "validation" in candidate:
-                print(candidate["validation"]["status"])
+            if candidate["variant"] == "full":
+                validation = validate_candidate(candidate)
+                print(validation["status"])
                 print(
                     "semantic_sha256",
-                    candidate["validation"]["semantic_sha256"],
+                    validation["semantic_sha256"],
                 )
             else:
+                validation = validate_weakened_candidate(candidate)
                 print(
                     "weakened_candidate_diagnostics",
-                    json.dumps(candidate["diagnostics"], sort_keys=True),
+                    json.dumps(validation, sort_keys=True),
                 )
         print("claim_label CANDIDATE")
         print("target_result UNKNOWN")

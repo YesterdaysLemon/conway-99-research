@@ -73,6 +73,7 @@
   "branches": [
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "111",
       "size3_point_count": 1,
       "statistics": {
@@ -100,6 +101,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "111",
       "size3_point_count": 3,
       "statistics": {
@@ -119,7 +121,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 11.546875,
+        "solver_time_seconds": 12.140625,
         "variables": 15467,
         "variant": "full"
       },
@@ -127,6 +129,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "122",
       "size3_point_count": 3,
       "statistics": {
@@ -154,6 +157,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "111",
       "size3_point_count": 5,
       "statistics": {
@@ -173,7 +177,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 7.015625,
+        "solver_time_seconds": 6.78125,
         "variables": 328475,
         "variant": "full"
       },
@@ -181,6 +185,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "122",
       "size3_point_count": 5,
       "statistics": {
@@ -200,7 +205,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 2.609375,
+        "solver_time_seconds": 2.828125,
         "variables": 328475,
         "variant": "full"
       },
@@ -208,6 +213,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "222",
       "size3_point_count": 5,
       "statistics": {
@@ -227,7 +233,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 0.171875,
+        "solver_time_seconds": 0.21875,
         "variables": 328475,
         "variant": "full"
       },
@@ -235,6 +241,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "223",
       "size3_point_count": 5,
       "statistics": {
@@ -254,7 +261,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 0.015625,
+        "solver_time_seconds": 0.0,
         "variables": 328475,
         "variant": "full"
       },
@@ -262,6 +269,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "111",
       "size3_point_count": 7,
       "statistics": {
@@ -281,7 +289,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 5.828125,
+        "solver_time_seconds": 5.890625,
         "variables": 330247,
         "variant": "full"
       },
@@ -289,6 +297,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "122",
       "size3_point_count": 7,
       "statistics": {
@@ -308,7 +317,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 3.1875,
+        "solver_time_seconds": 3.078125,
         "variables": 330247,
         "variant": "full"
       },
@@ -316,6 +325,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "222",
       "size3_point_count": 7,
       "statistics": {
@@ -335,7 +345,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 3.46875,
+        "solver_time_seconds": 3.984375,
         "variables": 330247,
         "variant": "full"
       },
@@ -343,6 +353,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "223",
       "size3_point_count": 7,
       "statistics": {
@@ -362,7 +373,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 0.03125,
+        "solver_time_seconds": 0.015625,
         "variables": 330247,
         "variant": "full"
       },
@@ -370,6 +381,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "111",
       "size3_point_count": 9,
       "statistics": {
@@ -389,7 +401,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 6.78125,
+        "solver_time_seconds": 7.25,
         "variables": 332003,
         "variant": "full"
       },
@@ -397,6 +409,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "122",
       "size3_point_count": 9,
       "statistics": {
@@ -416,7 +429,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 3.453125,
+        "solver_time_seconds": 4.09375,
         "variables": 332003,
         "variant": "full"
       },
@@ -424,6 +437,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "222",
       "size3_point_count": 9,
       "statistics": {
@@ -443,7 +457,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 4.203125,
+        "solver_time_seconds": 4.796875,
         "variables": 332003,
         "variant": "full"
       },
@@ -451,6 +465,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "223",
       "size3_point_count": 9,
       "statistics": {
@@ -470,7 +485,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 0.03125,
+        "solver_time_seconds": 0.046875,
         "variables": 332003,
         "variant": "full"
       },
@@ -478,6 +493,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "222",
       "size3_point_count": 11,
       "statistics": {
@@ -497,7 +513,7 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 3.3125,
+        "solver_time_seconds": 3.703125,
         "variables": 333743,
         "variant": "full"
       },
@@ -505,6 +521,7 @@
     },
     {
       "candidate_validation": null,
+      "proof_trace_status": "NOT_EMITTED",
       "root_mode": "223",
       "size3_point_count": 11,
       "statistics": {
@@ -524,13 +541,14 @@
         "python": "3.13.14",
         "python_sat": "1.9.dev7",
         "solver": "cadical195",
-        "solver_time_seconds": 0.03125,
+        "solver_time_seconds": 0.046875,
         "variables": 333743,
         "variant": "full"
       },
       "status": "UNSAT_UNVERIFIED"
     }
   ],
+  "builder_source_sha256": "936cd43e3f0efcf38acf19af363d06cb14916a6bb405873c679c8f82d2e91532",
   "claim_label": "CANDIDATE",
   "cover_justification": [
     "point-incidence parity makes the number m of size-three points odd",
@@ -541,9 +559,11 @@
     "the named root point and each rooted representative use only the full active-label relabeling action",
     "no automorphism of a completed graph is assumed"
   ],
+  "novelty_status": "UNKNOWN",
   "proof_boundary": "solver UNSAT returns have no emitted or independently checked proof trace and are not nonexistence certificates",
+  "proof_trace_status": "NOT_EMITTED",
   "schema": "conway99-wave13-n3-45-active-local-sat-scan-v1",
-  "semantic_sha256": "6325eb4958a850289baede0ba8663317e3a1189bd508c09749a6960e0cefbe49",
+  "semantic_sha256": "b83e8dba483a4e17d1ae007a39b0dc68670f27391a47a84f71037d537f99b35a",
   "status": "COMPLETE_BRANCH_COVER_UNSAT_UNVERIFIED",
   "target_result": "UNKNOWN"
 }

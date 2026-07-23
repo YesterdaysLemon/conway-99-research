@@ -1,4 +1,5 @@
 {
+  "builder_source_sha256": "63f38178722cae08723c458e8fd1a3d6bcbadc3f0a9cec2ca50f45c27b13ce92",
   "claim_label": "CANDIDATE",
   "flower_censuses": {
     "order14_size4": {
@@ -196,7 +197,110 @@
         ]
       }
     ],
+    "q3_containing_assignment_count": 7,
+    "q3_containing_assignments_checked": [
+      [
+        2,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        3,
+        2,
+        2
+      ],
+      [
+        3,
+        2,
+        3
+      ],
+      [
+        3,
+        3,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ]
+    ],
     "q3_containing_local_modes": [],
+    "q3_containing_mode_census": [
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          2,
+          3,
+          2
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          3,
+          2,
+          2
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          3,
+          2,
+          3
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          3,
+          3,
+          2
+        ]
+      },
+      {
+        "mode_count": 0,
+        "modes": [],
+        "q_values": [
+          3,
+          3,
+          3
+        ]
+      }
+    ],
     "size_three_branch_survivors": 0,
     "small_cubic_census": {
       "4": {
@@ -214,6 +318,7 @@
     }
   },
   "n3": 45,
+  "novelty_status": "UNKNOWN",
   "order15_incidence_signature_count": 59,
   "order15_incidence_signatures": [
     {
@@ -2014,6 +2119,6 @@
   "raw_active_profiles": 9,
   "remaining_frontier": "r=15, q=2^15, K 8-regular, every active point has size 2 or 3",
   "schema": "conway99-wave13-n3-45-local-census-v1",
-  "semantic_sha256": "68b967efdd0d95500eddd0ebb1cd24460733c36f634858fc7019704d09844a0e",
+  "semantic_sha256": "45a3dabae5c6bf9a57eb3fdd88fd7bcc3aaa86c87f33105b8ab9703050e4e411",
   "target_result": "UNKNOWN"
 }

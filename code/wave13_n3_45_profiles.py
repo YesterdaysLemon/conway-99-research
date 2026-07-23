@@ -46,6 +46,10 @@ def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
 
+def source_sha256() -> str:
+    return sha256_bytes(Path(__file__).resolve().read_bytes())
+
+
 def active_q_profiles(n3_count: int = TARGET_N3) -> tuple[tuple[int, ...], ...]:
     """Enumerate every multiset with ``q>=2`` and ``3q<=r-1``."""
 
@@ -372,11 +376,30 @@ def mixed_order14_reduction() -> dict[str, object]:
     """Replay the finite local reduction of the mixed order-fourteen profile."""
 
     q2_modes = size_three_local_modes(14, (2, 2, 2))
-    mixed_modes = tuple(
-        mode
-        for q_values in sorted(set(itertools.permutations((2, 2, 3))))
-        for mode in size_three_local_modes(14, q_values)
+    q3_assignments = tuple(
+        values
+        for values in itertools.product((2, 3), repeat=3)
+        if 3 in values
     )
+    q3_mode_rows = tuple(
+        {
+            "q_values": list(q_values),
+            "mode_count": len(size_three_local_modes(14, q_values)),
+            "modes": list(size_three_local_modes(14, q_values)),
+        }
+        for q_values in q3_assignments
+    )
+    mixed_modes = tuple(
+        mode for row in q3_mode_rows for mode in row["modes"]
+    )
+    if len(q3_assignments) != 7:
+        raise AssertionError("the ordered q3-containing root cover changed")
+    if set(q3_assignments) != {
+        values
+        for values in itertools.product((2, 3), repeat=3)
+        if 3 in values
+    }:
+        raise AssertionError("a q3-containing root assignment is missing")
     if {
         tuple(mode["t_values"]) for mode in q2_modes
     } != {(2, 2, 2)}:
@@ -438,6 +461,11 @@ def mixed_order14_reduction() -> dict[str, object]:
         raise AssertionError("the q=3 all-size-two obstruction disappeared")
     return {
         "q2_only_local_modes": list(q2_modes),
+        "q3_containing_assignments_checked": [
+            list(values) for values in q3_assignments
+        ],
+        "q3_containing_assignment_count": len(q3_assignments),
+        "q3_containing_mode_census": list(q3_mode_rows),
         "q3_containing_local_modes": list(mixed_modes),
         "candidate_cubic_orders": candidate_orders,
         "small_cubic_census": small_cubic,
@@ -592,8 +620,10 @@ def audit() -> dict[str, object]:
 
     result = {
         "schema": "conway99-wave13-n3-45-local-census-v1",
+        "builder_source_sha256": source_sha256(),
         "claim_label": "CANDIDATE",
         "target_result": "UNKNOWN",
+        "novelty_status": "UNKNOWN",
         "n3": TARGET_N3,
         "q_sum": Q_SUM,
         "raw_active_profiles": len(profiles),

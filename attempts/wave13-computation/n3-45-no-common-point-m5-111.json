@@ -243,7 +243,9 @@
     ]
   ],
   "active_order": 15,
+  "builder_source_sha256": "936cd43e3f0efcf38acf19af363d06cb14916a6bb405873c679c8f82d2e91532",
   "claim_label": "CANDIDATE",
+  "core_semantic_sha256": "2492601fb4dbb6dd642d73e34404f446ff8d0f1cee6edfaec7babbba39424e03",
   "diagnostics": {
     "K_degree_sequence": [
       8,
@@ -351,6 +353,8 @@
       "3": 1
     }
   },
+  "integrity_sha256": "5c1758f2a4efc67289ab2e6c987fc31cd75ea4ac9e33eb032cf3a339a13290a1",
+  "novelty_status": "UNKNOWN",
   "omitted_premise": "common-point/Berge-triangle prohibition",
   "point_sets": [
     [
@@ -439,6 +443,7 @@
       11
     ]
   ],
+  "proof_trace_status": "NOT_EMITTED",
   "q_values": [
     2,
     2,
@@ -479,26 +484,20 @@
       2
     ]
   },
-  "schema": "conway99-wave13-n3-45-active-local-diagnostic-v1",
-  "semantic_sha256": "2492601fb4dbb6dd642d73e34404f446ff8d0f1cee6edfaec7babbba39424e03",
+  "schema": "conway99-wave13-n3-45-active-local-diagnostic-v2",
   "size3_point_count": 5,
   "solver_statistics": {
-    "accumulated_stats": {
-      "conflicts": 5973,
-      "decisions": 296834,
-      "propagations": 6844615,
-      "restarts": 571
-    },
     "candidate_K_edge_variables": 105,
     "candidate_full_overlap_variables": 45045,
     "candidate_point_variables": 560,
     "clauses": 1141796,
+    "cnf_sha256": "8260378538dccf0b3b3355619ceb237d7d6f89e1f3b26d86ea316f7e593df146",
     "conflict_budget": 300000,
-    "platform": "Windows-11-10.0.26200-SP0",
+    "proof_trace": "NOT_EMITTED",
     "python": "3.13.14",
     "python_sat": "1.9.dev7",
+    "result": "SAT_WEAKENED_MODEL",
     "solver": "cadical195",
-    "solver_time_seconds": 2.203125,
     "variables": 328475,
     "variant": "no_common_point"
   },
