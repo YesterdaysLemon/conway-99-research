@@ -45,12 +45,13 @@ Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
 the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
 39, 42, and 45, Wave 15 excludes equality at 48, Wave 16 excludes equality at
 51, Wave 17 excludes equality at 54, Wave 18 independently excludes equality
-at 57, and Wave 19 excludes equality at 60. The currently strongest
-internally verified project bound is
+at 57, and Wave 19 excludes equality at 60. Wave 20 then replaces the
+equality frontier with a global Schur-projector argument. The currently
+strongest internally verified project bound is
 
 ```text
-n3 >= 63,
-induced_C6_count >= 209,349.
+n3 >= 705,
+induced_C6_count >= 209,991.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -621,6 +622,85 @@ submitted checker. See `agents/2026-07-23-wave19-alternate-frontier.md` and
 of Graphs catalog completeness and nonisomorphism are explicit external
 premises. This remains a conditional necessary bound; Conway-99 and novelty
 remain `UNKNOWN`.
+
+Wave 20 uses only the target parameters and the full set of 231 graph
+triangles. Let `N` be the `99`-by-`231` vertex-triangle incidence matrix and
+let `Gamma` join intersecting triangles. Then
+
+```text
+N N^T = A + 7I,
+N^T N = 3I + Gamma,
+spec(Gamma) = 18^1, 7^54, 0^44, (-3)^132.
+```
+
+For
+
+```text
+C = Gamma^2 - 5Gamma - 18I,
+```
+
+the diagonal and intersecting entries vanish, while a disjoint pair entry is
+its number `r` of cross-edges, in `{0,1,2,3}`. If `a_r(T)` counts disjoint
+triangles with `r` cross-edges to a fixed triangle and
+`q(T)=12-a_3(T)`, exact zeroth, first, and second moments give
+
+```text
+(a0,a1,a2,a3) = (20+q, 180-3q, 3q, 12-q),
+2n3 = 3 sum_T q(T),
+3 divides n3.
+```
+
+The orthogonal projector onto the 44-dimensional zero eigenspace of `Gamma`
+is
+
+```text
+E = (3I + J - Gamma - C)/21.
+```
+
+Thus the integral matrix `M=21E` is positive semidefinite, has rank 44,
+satisfies `M^2=21M`, has diagonal 4, and has off-diagonal entries
+`0,1,-1,-2`. Put
+
+```text
+W = M o M,
+A4 = M W M.
+```
+
+Schur positivity makes `W` and `A4` positive semidefinite. Since
+`W=M (mod 2)`, one has `A4=M (mod 2)`, and every row is nonzero. Writing
+`D=(W-M)/2`, the matrix `D mod 2` is symmetric with zero diagonal, so its
+quadratic form is alternating. It follows that every diagonal of `A4` is
+divisible by four. A zero diagonal in a positive-semidefinite matrix would
+force the corresponding row to vanish, so all 231 diagonals are at least
+four. Finally,
+
+```text
+tr(A4) = 84(n3-693) >= 4*231 = 924.
+```
+
+Hence `n3-693>=11`; divisibility by three forces
+
+```text
+n3 >= 705,
+induced_C6_count >= 209991.
+```
+
+A blind verifier independently reconstructed the combinatorial entries,
+projector scaling, Schur trace, mod-two and mod-four arguments, and endpoint;
+its 16 tests and the submitted 18 tests pass with byte-identical regenerated
+JSON. See `agents/2026-07-23-wave20-global-schur.md` and
+`verification/2026-07-23-wave20-global-schur-audit.md`. The frozen
+`failed-routes.md` introduction retains the intermediate endpoint 699, while
+the later section and every operative artifact use 705; the correction and
+failed harness invocations are retained in `orchestrator-notes.md`.
+
+An independent status auditor froze the claim without opening the proof,
+verified the cited triangle-graph spectrum and induced-six-cycle identity, and
+found no accepted target resolution or exact published `705/209991` endpoint
+through 2026-07-23. Generic Schur/Krein positivity is prior art, and
+non-discovery cannot certify novelty. The argument is a conditional necessary
+bound rather than a construction, nonexistence proof, or formal-kernel proof;
+Conway-99 and novelty remain `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

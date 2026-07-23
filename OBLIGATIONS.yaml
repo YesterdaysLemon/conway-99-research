@@ -439,3 +439,47 @@ obligations:
       - "verification/n3-60-closure/2026-07-23T160756Z-independent-full.json"
       - "verification/n3-60-closure/2026-07-23T161951Z-final-audit.md"
     note: "The independent audit verifies the conditional exclusion of n3=60, subject to the audited structural framework and the official catalog completeness premise. It matches all 510,489 connected dispositions and 177 disconnected cases, checks all 748,825 nonempty labeled Z placements, and independently replays the sole exact Farkas obstruction. The prospective bounds are n3>=63 and induced_C6_count>=209349. Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE20-GLOBAL-SCHUR
+    requirement: "Adversarially reconstruct the triangle-incidence spectrum, the cross-edge matrix entries, all fixed-triangle moments and ordered-pair factors, the rank-44 zero-eigenspace projector, Schur positivity, the integral MWM lift, its nonzero mod-two rows, alternating mod-two quadratic form, positive mod-four diagonals, trace identity, divisibility endpoint, exact artifact provenance, and hostile mutations without importing any automorphism, catalog, solver-negative, or floating-point premise."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave20-global-schur.md"
+      - "attempts/wave20-global-obstruction/exact_check.py"
+      - "attempts/wave20-global-obstruction/test_exact_check.py"
+      - "attempts/wave20-global-obstruction/exact-checks.json"
+      - "attempts/wave20-global-obstruction/failed-routes.md"
+      - "attempts/wave20-global-obstruction/orchestrator-notes.md"
+      - "verification/2026-07-23-wave20-global-schur-audit.md"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent-reconstruction.md"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent_check.py"
+      - "attempts/wave20-global-obstruction/independent-verifier/test_independent_check.py"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent-results.json"
+      - "attempts/wave20-global-obstruction/independent-verifier/artifact-manifest.sha256"
+    note: "The independent verifier passes 16 separately written tests, replays all 18 submitted tests, regenerates both exact JSON artifacts byte-identically, and verifies the global conditional bound n3>=705 and induced_C6_count>=209991. The frozen failed-routes introduction retains the earlier 699 endpoint; all operative artifacts use 705 and the correction is public. This is a necessary bound, not a target resolution or formal-kernel proof. Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE20-STATUS
+    requirement: "Without inspecting the candidate proof, freeze and independently search current primary and maintained sources for a Conway-99 resolution, exact or stronger n3>=705 and induced_C6_count>=209991 bounds, equivalent N3 terminology, the 231-vertex triangle-graph spectrum, and the exact Schur/Hadamard projector specialization; retain source byte sizes and SHA-256 commitments, versions, queries, access failures, and the distinction between method prior art and exact novelty."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/global-schur/2026-07-23T162526Z-status-preinspection-freeze.md"
+      - "verification/global-schur/2026-07-23T170612Z-status-literature-audit.md"
+      - "verification/global-schur/2026-07-23T170612Z-status-source-query-ledger.json"
+      - "verification/global-schur/2026-07-23T170612Z-status-hashes.sha256"
+      - "SOURCES.bib"
+    note: "The separated source-first audit searched seven query families and thirteen pinned primary, maintained, or official sources through 2026-07-23. It verified Reimbayev's C6 identity and Petro--Phillips's triangle-graph spectrum, found no accepted target resolution or exact endpoint, and retained three access failures. Generic Schur/Krein machinery is prior art; non-discovery cannot establish novelty. Target status and exact-specialization novelty remain UNKNOWN."
+
+  - id: O-WAVE20-N3-63-STRUCTURAL
+    requirement: "Materially independently audit the repaired complete 18-profile n3=63 structural census, every r=18,19,20,21 branch, imported H/L and indexed-point semantics, exact arithmetic, and the rejected first two-profile generator claim."
+    critical: false
+    status: UNKNOWN
+    evidence:
+      - "agents/2026-07-23-wave20-n3-63-structural.md"
+      - "attempts/wave20-n3-63-structural/exact_check.py"
+      - "attempts/wave20-n3-63-structural/test_exact_check.py"
+      - "attempts/wave20-n3-63-structural/exact-results.json"
+      - "attempts/wave20-n3-63-structural/failed-runs.md"
+      - "attempts/wave20-n3-63-structural/manifest.json"
+    note: "The discovery lane passes 14 tests and preserves the false first two-profile census as REJECTED, but it has no fresh independent proof audit and therefore is not promoted. Its numerical n3=63 exclusion is superseded by the separately verified global n3>=705 theorem; supersession does not certify this derivation."

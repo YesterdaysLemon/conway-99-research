@@ -458,4 +458,46 @@ nineteenth_research_wave:
   clean_clone_verdict: PASS
   catalog_premise: "Official House of Graphs connected cubic catalogs are complete and pairwise nonisomorphic; their pinned bytes and every decoded record were independently validated, but the publisher's completeness assertion is external."
   caveat: "The independently reconstructed exact census excludes conditional n3=60 within the audited H/L indexed-point framework and yields n3>=63 and induced_C6_count>=209349. The verifier covered all connected and disconnected cubic F cases, all 120 two-Petersen L/R models, every Z placement through three edges, exact Gram systems, and the final Farkas separator. Failed v1/v2 releases, proofless SAT/PB outcomes, invalid eigenvalue and witness routes, and the first filename-mismatch replay remain public and non-evidentiary. This is not a 99-vertex nonexistence proof or a novelty determination; Conway-99 and novelty remain UNKNOWN."
+twentieth_research_wave:
+  global_discovery_commit: "832b52ad064faafaeb3ded9b41a7e39e578fc2e1"
+  global_verification_commit: "2f586ac29a8d9eb8da2eb64184b9936938467225"
+  n3_63_archive_commit: "74af1fa495971d04c7363ec05aa77ef15857b04a"
+  status_audit_commit: "21f53fb6314b7c1a704694a9b38f3a18292b769d"
+  publication_replay_notes_commit: "25c1bbdfdeddec2bdc9bf504a3486b31cd03b1d2"
+  verifier_verdict: PASS_FOR_CONDITIONAL_GLOBAL_N3_LOWER_BOUND_705
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  status_search_through: 2026-07-23
+  status_search_result: NO_RESOLUTION_FOUND
+  conditional_n3_lower_bound: 705
+  conditional_induced_C6_lower_bound: 209991
+  discovery_report: "agents/2026-07-23-wave20-global-schur.md"
+  discovery_report_sha256: "64352e1d96ed9a924e075c2d0659be8de887751194068a14b096e112a9320632"
+  submitted_checker: "attempts/wave20-global-obstruction/exact_check.py"
+  submitted_checker_sha256: "a3cbe6dfe018965043903c368932f89f9fade30cf301ffe3454cd638966d00c8"
+  submitted_result: "attempts/wave20-global-obstruction/exact-checks.json"
+  submitted_result_sha256: "6aea5c4688880a33d358ccc8992ef3aa63d40be70b5c450a8a39bf83b4878dc2"
+  verifier_audit: "verification/2026-07-23-wave20-global-schur-audit.md"
+  verifier_audit_sha256: "6311a893e1802382bfaaf00f8d366ba7f25ff036cda8032978dc5c6b4fdf35a3"
+  independent_checker: "attempts/wave20-global-obstruction/independent-verifier/independent_check.py"
+  independent_checker_sha256: "efd00777b38fc180c11434cb452111ae7745109844d68aba763460b219208cfc"
+  independent_result: "attempts/wave20-global-obstruction/independent-verifier/independent-results.json"
+  independent_result_sha256: "575939f9abe19e5578a2efd1155495877c2080944c75cc0db6702c21a9ce2637"
+  submitted_tests_passed: 18
+  independent_tests_passed: 16
+  status_preinspection_freeze: "verification/global-schur/2026-07-23T162526Z-status-preinspection-freeze.md"
+  status_preinspection_freeze_sha256: "e8a356a8947d6825c1415c837db099989848681c8affc9cc2cfbfb82141460e0"
+  status_audit: "verification/global-schur/2026-07-23T170612Z-status-literature-audit.md"
+  status_audit_sha256: "b3a7b0a882e7f822ae6e2ed08df4314357d5d554903f788305979e03b08fc651"
+  status_ledger: "verification/global-schur/2026-07-23T170612Z-status-source-query-ledger.json"
+  status_ledger_sha256: "127b5d99e5145291bcb3b307ebcd3047b5b3c891fccfd02fad25af0e5b422dd9"
+  catalog_or_automorphism_premise: NONE
+  n3_63_structural_lane_status: DERIVED_PENDING_INDEPENDENT_AUDIT_AND_NUMERICALLY_SUPERSEDED
+  n3_63_structural_report: "agents/2026-07-23-wave20-n3-63-structural.md"
+  n3_63_structural_report_sha256: "c24603b3dd00ea9542cfbbd43075060349fc6f5de4cee867c5ce141fb5db1668"
+  n3_63_rejected_intermediate_claim: "The first exploratory generator's two-profile census was false; the repaired complete census has 18 profiles."
+  publication_replay_notes: "attempts/wave20-global-obstruction/orchestrator-notes.md"
+  publication_replay_notes_sha256: "e1ec4d5f3b505f11ccb863d71d23e92e9f54aa3c5710c5188da48e520af6df18"
+  documentation_defect: "The frozen failed-routes introduction retains the intermediate endpoint n3>=699. All operative proof, code, results, and audit artifacts use n3>=705; orchestrator-notes.md records the correction without rewriting frozen evidence."
+  caveat: "The independently reconstructed global Schur-projector argument gives the conditional necessary bound n3>=705 and, through Reimbayev's cited identity, induced_C6_count>=209991. It assumes only a putative target graph and uses no automorphism, catalog, solver-negative, or floating-point premise. It is a human proof with exact arithmetic companions rather than a formal-kernel proof and does not construct or exclude a 99-vertex graph. A source-first audit located the generic Schur/Krein method and the triangle-graph spectrum as prior art but no exact endpoint; non-discovery is not a novelty certificate. Conway-99 and novelty remain UNKNOWN."
 last_updated: 2026-07-23

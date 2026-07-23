@@ -30,6 +30,8 @@ and the normalized search problem.
   2026-07-23; this is not a proof of openness.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
+- **Strongest internally verified conditional bound:** `n3>=705`, hence at
+  least `209,991` induced six-cycles; this does not resolve existence.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -482,6 +484,51 @@ explicit external premise; the pinned bytes and every derived case were
 independently checked. This is not a target nonexistence proof, formal-kernel
 proof, or novelty claim. Conway-99 and novelty remain `UNKNOWN`.
 
+Wave 20 replaces the equality-by-equality frontier with a global
+Schur-projector inequality. Let `Gamma` be the intersection graph on the 231
+target triangles and let `M=21E` be the integral scaling of its rank-44
+orthogonal projector onto the zero eigenspace. Exact incidence arithmetic
+gives
+
+```text
+M^2 = 21M,
+diag(M) = 4,
+offdiag(M) in {0,1,-1,-2}.
+```
+
+For `W=M∘M`, the matrix `A4=MWM` is positive semidefinite and integral. Every
+row is nonzero modulo two, while an alternating-form argument makes every
+diagonal entry a positive multiple of four. The exact trace identity is
+
+```text
+tr(A4) = 84(n3-693).
+```
+
+The 231 positive diagonals force `n3-693>=11`; because `3|n3`, this sharpens
+to the independently reconstructed conditional bound
+
+```text
+n3 >= 705,
+induced_C6_count >= 209,991.
+```
+
+The submitted and independent suites pass 18/18 and 16/16 tests and regenerate
+their exact JSON outputs byte-identically. See the
+[Wave 20 discovery report](agents/2026-07-23-wave20-global-schur.md) and
+[adversarial audit](verification/2026-07-23-wave20-global-schur-audit.md).
+The proof uses no automorphism, catalog, solver-negative, or floating-point
+premise. One frozen failed-routes sentence still names the intermediate 699
+endpoint; the operative proof, code, results, audit, and public correction all
+use 705.
+
+A separately frozen [Wave 20 source audit](verification/global-schur/2026-07-23T170612Z-status-literature-audit.md)
+did not inspect the proof. It verified Reimbayev's six-cycle identity and
+Petro--Phillips's triangle-graph spectrum, and found no accepted target
+resolution or exact published `705/209991` endpoint through 2026-07-23.
+Generic Schur/Krein positivity is established prior art; search non-discovery
+does not establish novelty. Conway-99 and exact-specialization novelty remain
+`UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -634,6 +681,14 @@ status.
   independent authentication and reconstruction of the repaired `m=27`
   proof, all 510,489 connected and 177 disconnected cubic cases, the complete
   two-Petersen `Z` census, exact Gram systems, and the final Farkas separator.
+- [Wave 20 global-Schur audit](verification/2026-07-23-wave20-global-schur-audit.md):
+  blind reconstruction of the triangle-incidence projector, Schur trace,
+  integral mod-four lift, 16 hostile tests, and byte-identical replay of all
+  18 submitted tests excluding every `n3<705`.
+- [Wave 20 literature/status audit](verification/global-schur/2026-07-23T170612Z-status-literature-audit.md):
+  proof-separated source/query ledger covering the exact endpoint, equivalent
+  projector terminology, current status, 13 pinned sources, and three retained
+  access failures without promoting search nonhits to novelty.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

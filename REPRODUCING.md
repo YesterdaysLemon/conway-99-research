@@ -730,6 +730,58 @@ an external premise. The audited consequence is the conditional bound
 `UNKNOWN`. The detached end-to-end replay is recorded in
 `verification/2026-07-23-wave19-clean-clone.md`.
 
+Replay the Wave 20 global Schur-projector arithmetic and the separately
+written independent implementation from the repository root:
+
+```powershell
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave20-global-obstruction `
+  -p test_exact_check.py -v
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave20-global-obstruction\independent-verifier `
+  -p test_independent_check.py -v
+
+$wave20ReplayStem = [guid]::NewGuid().ToString('N')
+$wave20ReplayRoot = [System.IO.Path]::GetTempPath()
+$wave20Submitted = Join-Path $wave20ReplayRoot `
+  "$wave20ReplayStem-submitted.json"
+$wave20Independent = Join-Path $wave20ReplayRoot `
+  "$wave20ReplayStem-independent.json"
+
+.venv\Scripts\python.exe -B `
+  attempts\wave20-global-obstruction\exact_check.py `
+  --output $wave20Submitted
+.venv\Scripts\python.exe -B `
+  attempts\wave20-global-obstruction\independent-verifier\independent_check.py `
+  --output $wave20Independent
+Get-FileHash -Algorithm SHA256 $wave20Submitted,$wave20Independent
+```
+
+The expected submitted and independent SHA-256 values are, respectively,
+
+```text
+6aea5c4688880a33d358ccc8992ef3aa63d40be70b5c450a8a39bf83b4878dc2
+575939f9abe19e5578a2efd1155495877c2080944c75cc0db6702c21a9ce2637
+```
+
+The submitted suite passes 18/18 and the independent suite passes 16/16.
+They reconstruct the triangle-incidence spectrum, all 13 fixed-triangle
+profiles, the rank-44 projector, the Schur trace, the mod-two nonzero-row
+condition, the alternating mod-two lemma, the mod-four diagonal floor, and
+the final divisibility endpoint. The audited conditional consequence is
+`n3>=705`, hence `induced_C6_count>=209991`. No automorphism, graph catalog,
+solver-negative, or floating-point premise is used. The source-first status
+record is
+`verification/global-schur/2026-07-23T170612Z-status-literature-audit.md`;
+its exact-search nonhits leave novelty and Conway-99 `UNKNOWN`.
+
+The separate `attempts/wave20-n3-63-structural` package is archival. Its
+14/14 tests and exact JSON replay pass, but its proof remains
+`DERIVED_PENDING_INDEPENDENT_AUDIT`; the first false two-profile census is
+retained as `REJECTED`, and the repaired census contains 18 profiles. The
+verified global theorem numerically supersedes that lane without certifying
+its derivation.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

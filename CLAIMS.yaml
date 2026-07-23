@@ -12,6 +12,18 @@ claims:
       - "SOURCES.bib"
     limitations: "A literature search cannot prove that no resolution exists."
 
+  - id: C-STATUS-002
+    statement: "A proof-separated source-first audit through 2026-07-23 found no accepted construction or nonexistence proof for srg(99,14,1,2), and no exact or stronger published n3>=705 or induced_C6_count>=209991 endpoint in the sources searched."
+    label: CITED
+    scope: LITERATURE_STATUS_ONLY
+    evidence:
+      - "verification/global-schur/2026-07-23T162526Z-status-preinspection-freeze.md"
+      - "verification/global-schur/2026-07-23T170612Z-status-literature-audit.md"
+      - "verification/global-schur/2026-07-23T170612Z-status-source-query-ledger.json"
+      - "verification/global-schur/2026-07-23T170612Z-status-hashes.sha256"
+      - "SOURCES.bib"
+    limitations: "The audit covers seven query families and thirteen pinned sources but cannot establish openness, completeness of the literature, exact-specialization novelty, or mathematical truth. Indexing lag, inaccessible work, and future revisions remain possible; target status and novelty are UNKNOWN."
+
   - id: C-EQUIV-001
     statement: "Conway's unique-triangle/unique-quadrilateral wording is equivalent to srg(99,14,1,2)."
     label: DERIVED
@@ -386,6 +398,22 @@ claims:
       - "verification/n3-60-closure/2026-07-23T160756Z-independent-full.json"
       - "verification/n3-60-closure/2026-07-23T161951Z-final-audit.md"
     limitations: "This is an internally verified conditional equality exclusion, not a formal-kernel proof or a Conway-99 resolution. The official catalog completeness/nonisomorphism assertion is external, although the frozen bytes and every derived case were independently checked. The H/L structural semantics are imported from prior audited work. Novelty remains UNKNOWN."
+
+  - id: C-N3-GLOBAL-SCHUR-012
+    statement: "Conditional only on the existence of a putative srg(99,14,1,2), the 99-by-231 vertex-triangle incidence matrix gives a triangle-intersection graph with spectrum 18^1,7^54,0^44,(-3)^132. The integral scaling M of its rank-44 zero-eigenspace projector has diagonal 4, satisfies M^2=21M, and has off-diagonal entries in {0,1,-1,-2}. For W=M∘M, the positive-semidefinite integral lift A4=MWM has every row nonzero modulo two and every diagonal a positive multiple of four. Since tr(A4)=84(n3-693), all 231 diagonals force n3-693>=11; the independently checked divisibility 3|n3 sharpens this to n3>=705 and induced_C6_count>=209991."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-23-wave20-global-schur.md"
+      - "attempts/wave20-global-obstruction/exact_check.py"
+      - "attempts/wave20-global-obstruction/test_exact_check.py"
+      - "attempts/wave20-global-obstruction/exact-checks.json"
+      - "verification/2026-07-23-wave20-global-schur-audit.md"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent-reconstruction.md"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent_check.py"
+      - "attempts/wave20-global-obstruction/independent-verifier/test_independent_check.py"
+      - "attempts/wave20-global-obstruction/independent-verifier/independent-results.json"
+    limitations: "This is an internally verified conditional necessary bound, not a construction, nonexistence proof, or formal-kernel proof. The exact scripts accompany rather than replace the human combinatorial bridge, and the induced-six-cycle endpoint also imports Reimbayev's cited identity. The frozen failed-routes introduction retains a stale intermediate 699 endpoint; all operative artifacts use 705 and the discrepancy is public. A source-first search found no exact prior endpoint, but non-discovery cannot establish novelty. Conway-99 and novelty remain UNKNOWN."
 
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
