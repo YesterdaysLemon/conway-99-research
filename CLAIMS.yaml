@@ -415,6 +415,168 @@ claims:
       - "attempts/wave20-global-obstruction/independent-verifier/independent-results.json"
     limitations: "This is an internally verified conditional necessary bound, not a construction, nonexistence proof, or formal-kernel proof. The exact scripts accompany rather than replace the human combinatorial bridge, and the induced-six-cycle endpoint also imports Reimbayev's cited identity. The frozen failed-routes introduction retains a stale intermediate 699 endpoint; all operative artifacts use 705 and the discrepancy is public. A source-first search found no exact prior endpoint, but non-discovery cannot establish novelty. Conway-99 and novelty remain UNKNOWN."
 
+  - id: C-WAVE21-COUNT-ENVELOPE-013
+    statement: "For the exact affine formulas printed in arXiv:2508.03377v2 and arXiv:2511.06572v1, after the separately recorded +n23 deletion-deck correction, simultaneous integrality and nonnegativity of all 62 six-vertex counts is equivalent to n3 in {0,3,...,4158}; simultaneous integrality and nonnegativity of all 19 Hamiltonian seven-vertex counts is then equivalent to h11=0 mod 4 and ceil_to_multiple_of_4(2*n3)<=h11<=4*n3. Intersecting the then-current Wave 20 bound left every n3=705,708,...,4158, so this encoded necessary-condition system supplied no stronger bound or contradiction."
+    label: VERIFIED
+    scope: PUBLISHED_AFFINE_NECESSARY_COUNT_SYSTEM_ONLY
+    evidence:
+      - "agents/2026-07-23-wave21-six-vertex-lp.md"
+      - "attempts/wave21-six-vertex-lp/exact_check.py"
+      - "attempts/wave21-six-vertex-lp/exact-results.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md"
+      - "verification/wave21-six-vertex-lp/independent_check.py"
+      - "verification/wave21-six-vertex-lp/independent-corrected-results.json"
+      - "verification/wave21-six-vertex-lp/candidate-comparison.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md"
+    limitations: "This is a verified negative result about an encoded set of necessary count identities, not an exhaustive graph search. The seven-vertex source covers Hamiltonian types only, and a feasible count vector is not a graph construction. This lane did not improve the historical n3>=705 bound; the later independently verified Wave 23 bound is n3>=708. It does not resolve Conway-99 or establish novelty."
+
+  - id: C-WAVE21-LOCAL-A4-014
+    statement: "Conditional on n3=705 and the independently audited Wave 20 Schur-projector premises, every triangle T satisfies A4[T,T]>=(99/43)(q(T)-2)^2 and hence q(T)<=8; moreover tr(A4^2)=441*t with t=4 mod 8 and t>=60, so tr(A4^2)>=26460."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_N3_705_LOCAL_CONSEQUENCES
+    evidence:
+      - "agents/2026-07-23-wave21-local-diagonal.md"
+      - "attempts/wave21-local-diagonal/exact_check.py"
+      - "attempts/wave21-local-diagonal/exact-checks.json"
+      - "verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md"
+      - "verification/wave21-local-diagonal/independent_check.py"
+      - "verification/wave21-local-diagonal/independent-checks.json"
+      - "verification/wave21-local-diagonal/artifact-manifest.json"
+    limitations: "The exact scalar relaxation retains 22,113 q profiles, including a simple surviving aggregate profile, and the two-moment spectral relaxation also survives. These inequalities do not instantiate A4 or M, exclude n3=705, construct a graph, resolve Conway-99, or determine novelty."
+
+  - id: C-WAVE21-LATTICE-015
+    statement: "For U=im(M), L=U intersect Z^231, and h=[L:21L*], the audited projector-lattice identities give EZ^231=L*, MZ^231=21L*, h=21^44/det(L), an even minimum-at-least-four lattice L, and an integral positive-definite endomorphism B=A4/21 with det(B)=h*det(Q). At n3=705, an independent even-Gram determinant congruence sharpens the necessary index condition to h in {1,9}."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_N3_705_LATTICE_REDUCTION
+    evidence:
+      - "agents/2026-07-23-wave21-lattice-extension.md"
+      - "attempts/wave21-lattice-extension/exact_check.py"
+      - "attempts/wave21-lattice-extension/exact-results.json"
+      - "verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md"
+      - "verification/wave21-lattice-extension/independent_check.py"
+      - "verification/wave21-lattice-extension/independent-results.json"
+      - "verification/wave21-lattice-extension/theorem-sources.md"
+      - "verification/wave21-lattice-extension/artifact-manifest.sha256"
+    limitations: "The index h is not determined. The condition h in {1,9} is necessary only at the first surviving endpoint and gives no unconditional improvement beyond n3>=705. No projector matrix, graph, target resolution, formal-kernel proof, or novelty result is supplied."
+
+  - id: C-WAVE22-FULL-SEVEN-DECK-016
+    statement: "At the historical endpoint n3=705 and h11=2820, the complete encoded 62-row vertex-deletion system over all 208 locally admissible seven-vertex isomorphism types has a nonnegative integer solution of total binom(99,7), support size 105, and exactly the 19 pinned published Hamiltonian-type counts."
+    label: VERIFIED
+    scope: AGGREGATE_ORDER_SEVEN_NECESSARY_COUNT_SYSTEM_ONLY
+    evidence:
+      - "agents/2026-07-23-wave22-full-seven-deck.md"
+      - "attempts/wave22-full-seven-deck/exact_check.py"
+      - "attempts/wave22-full-seven-deck/test_exact_check.py"
+      - "attempts/wave22-full-seven-deck/witness.json"
+      - "attempts/wave22-full-seven-deck/exact-results.json"
+      - "verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md"
+      - "verification/wave22-full-seven-deck/independent_verify.py"
+      - "verification/wave22-full-seven-deck/test_independent_verify.py"
+      - "verification/wave22-full-seven-deck/independent-results.json"
+    limitations: "This is an exact feasibility witness for an aggregate necessary-count relaxation, not a consistent assignment on overlapping subsets, a 99-by-99 adjacency matrix, or evidence for target existence. Wave 23 independently excludes n3=705 from stronger lattice constraints; that later exclusion does not invalidate this scoped relaxation result. The source-H mapping is tied to a pinned image transcription, and novelty is not assessed."
+
+  - id: C-WAVE23-INDEX-017
+    statement: "Conditional only on a putative srg(99,14,1,2) and the independently verified Wave 20/21 projector-lattice premises, n3=705 is impossible. At that endpoint the rank-44 positive integral endomorphism B=I+2C has tr(B)=48 and tr(C)=2; integral trace parity and positive-form self-adjointness force tr(B^2)>=60. A complete exact determinant-maximization audit gives det(B)<13. Combining det(B)=h*det(Q), the even-Gram determinant congruence, det(Q)>=5, and the h=1 even-unimodular rank-44 obstruction leaves no index h. Since 3 divides n3, every putative target therefore has n3>=708 and induced_C6_count>=209994."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-23-wave23-index-pranks.md"
+      - "attempts/wave23-index-pranks/exact_check.py"
+      - "attempts/wave23-index-pranks/test_exact_check.py"
+      - "attempts/wave23-index-pranks/exact-results.json"
+      - "verification/wave23-index-pranks/2026-07-23T192952Z-audit.md"
+      - "verification/wave23-index-pranks/independent_check.py"
+      - "verification/wave23-index-pranks/test_independent_check.py"
+      - "verification/wave23-index-pranks/independent-results.json"
+      - "verification/wave23-index-pranks/theorem-applicability.md"
+      - "verification/wave23-index-pranks/artifact-manifest.sha256"
+    limitations: "This is an internally verified conditional necessary bound, not a construction, target nonexistence proof, or formal-kernel proof. The finite checker accompanies a human compactness, KKT, lattice-index, and imported even-unimodular signature argument. It instantiates neither the projector nor a target graph, does not determine modular ranks away from the excluded endpoint, and does not establish literature novelty. Conway-99 and novelty remain UNKNOWN."
+
+  - id: C-WAVE23-ENDPOINT-CROSSCHECK-018
+    statement: "A structurally independent exact proof also excludes n3=705. For B=I+2C of rank 44 and trace 48, trace parity and Cauchy give tr(B^2)>=60, so Newton's identity gives e2<=1122. Applying AM-GM to all 946 pair products yields det(B)^(1/22)<=51/43, and the exact comparison 51^22<43^23 gives det(B)<=42. With det(B)=h*det(Q), det(Q)>=5, 3,7-smooth h, h=1 mod 4, and the even-unimodular obstructions at h=1 and det(Q)=1, no index survives. Hence n3>=708 and induced_C6_count>=209994."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "agents/2026-07-23-wave23-endpoint-crosscheck.md"
+      - "attempts/wave23-endpoint-crosscheck/exact_check.py"
+      - "attempts/wave23-endpoint-crosscheck/test_exact_check.py"
+      - "attempts/wave23-endpoint-crosscheck/exact-results.json"
+      - "verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md"
+      - "verification/wave23-endpoint-crosscheck/independent_check.py"
+      - "verification/wave23-endpoint-crosscheck/test_independent_check.py"
+      - "verification/wave23-endpoint-crosscheck/independent-results.json"
+      - "verification/wave23-endpoint-crosscheck/theorem-applicability.md"
+      - "verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md"
+      - "verification/wave23-endpoint-crosscheck/correction-artifact-manifest.sha256"
+    limitations: "The original verifier found a nonblocking defect in one discovery-side hostile control: (9,3,27) violates a retained determinant residue. The public ledgers preserve and refute that control; the corrected single-relaxation witness is (9,1,9), and the correction addendum verifies that the proof and result are unchanged outside hostile_relaxations. This remains a conditional necessary bound, not a construction, target nonexistence proof, or novelty result."
+
+  - id: C-WAVE23-LITERATURE-019
+    statement: "At the frozen 2026-07-23 source-audit cutoff, the inspected current primary, maintained, and official sources still treated srg(99,14,1,2) as open. Across 24 frozen query and citation searches, the audit located neither the exact values n3>=708 and induced_C6_count>=209994 nor the complete Wave 23 endpoint method."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave23-literature-audit/preinspection-query-plan.md"
+      - "verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md"
+      - "verification/wave23-literature-audit/source-query-ledger.json"
+      - "verification/wave23-literature-audit/run-report.yaml"
+      - "verification/wave23-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    limitations: "The status statements are tied to the inspected sources and cutoff. Search nonhits are bounded non-discovery, not proof of openness or a novelty certificate; inaccessible, unindexed, private, and future sources remain possible. Target existence and exact-specialization novelty remain UNKNOWN."
+
+  - id: C-WAVE23-WEIGHTED-EXTENSIONS-020
+    statement: "At the now-excluded historical endpoint n3=705, the complete encoded orbit-refined one-vertex extension relaxation from order six to all 208 locally admissible order-seven classes is exactly feasible for every allowed h11=4z with z=353,...,705. Its 712-by-208 integer matrix has row split 62 deletion, 207 vertex-orbit, 180 edge-pair-orbit, and 263 nonedge-pair-orbit; rank_Q(A)=207, adjoining the H11 coordinate raises the rank to 208, and the frozen affine integer family x(z)=base+(z-353)delta is nonnegative throughout the interval."
+    label: VERIFIED
+    scope: ENCODED_ORBIT_REFINED_NECESSARY_COUNT_RELAXATION_ONLY
+    evidence:
+      - "agents/2026-07-23-wave23-weighted-extensions.md"
+      - "attempts/wave23-weighted-extensions/affine-witness.json"
+      - "attempts/wave23-weighted-extensions/exact_check.py"
+      - "attempts/wave23-weighted-extensions/test_exact_check.py"
+      - "attempts/wave23-weighted-extensions/exact-results.json"
+      - "verification/wave23-weighted-extensions/preinspection-freeze.sha256"
+      - "verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md"
+      - "verification/wave23-weighted-extensions/independent_verifier.py"
+      - "verification/wave23-weighted-extensions/test_independent_verifier.py"
+      - "verification/wave23-weighted-extensions/independent-results.json"
+      - "verification/wave23-weighted-extensions/artifact-manifest.sha256"
+    limitations: "The certificate gives aggregate isomorphism-class counts only. It does not enforce consistency on overlapping subsets, construct a 99-by-99 adjacency matrix, or imply target existence. The Hamiltonian panel alignment remains a cited human transcription. This historical-endpoint relaxation result does not alter the separately verified current bound n3>=708; Conway-99 and novelty remain UNKNOWN."
+
+  - id: C-REIMBAYEV-DECK-001
+    statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
+    label: REFUTED
+    scope: PINNED_SOURCE_SUPPORTING_EQUATION_AS_PRINTED
+    evidence:
+      - "attempts/wave21-six-vertex-lp/exact-results.json"
+      - "verification/wave21-six-vertex-lp/source-manifest.json"
+      - "verification/wave21-six-vertex-lp/independent-raw-printed-results.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md"
+      - "verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md"
+      - "verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md"
+    limitations: "This refutes one supporting equation in the official v1 and v2 source bytes, not the paper's count formulas as a whole or any Conway-99 existence outcome. The source audit found v2 still current at its cutoff, but future or inaccessible corrections remain possible."
+
+  - id: C-REIMBAYEV-DECK-002
+    statement: "Adding +n23 to the right-hand side of the pinned source's m7(n-5) equation is the unique one-missing-card repair among the 21 possible M_i rows that matches an actual locally admissible six-vertex deletion deck; after this explicit correction all 62 deletion columns sum to six, all source indices align bijectively, and all 21 identities have zero residual."
+    label: VERIFIED
+    scope: EXPLICIT_CORRECTION_TO_PINNED_SOURCE_EQUATION
+    evidence:
+      - "agents/2026-07-23-wave21-six-vertex-lp.md"
+      - "verification/wave21-six-vertex-lp/independent_check.py"
+      - "verification/wave21-six-vertex-lp/independent-corrected-results.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md"
+      - "verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md"
+      - "verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md"
+    limitations: "The project records a mathematical correction; it does not claim that the author or arXiv has adopted it. The correction restores the deletion identity but does not strengthen the feasible n3 range or resolve Conway-99."
+
+  - id: C-REIMBAYEV-DECK-STATUS-001
+    statement: "At the 2026-07-23T18:28:43Z source-audit cutoff, the official arXiv record for 2508.03377 remained v2; the official v1 and v2 TeX both omitted +n23 from the m7(n-5) equation; and no later arXiv version, formal correction, journal/author corrected version, or exact primary source stating the repair was located in the bounded searches."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_ONLY
+    evidence:
+      - "verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md"
+      - "verification/wave21-six-vertex-lp/status/source-manifest.json"
+      - "SOURCES.bib"
+    limitations: "Each nonhit is bounded non-discovery, not proof that no correction or prior statement exists. Search indexing can lag, and private, inaccessible, or future materials were outside scope. The correction's novelty and Conway-99 remain UNKNOWN."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

@@ -46,13 +46,19 @@ the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
 39, 42, and 45, Wave 15 excludes equality at 48, Wave 16 excludes equality at
 51, Wave 17 excludes equality at 54, Wave 18 independently excludes equality
 at 57, and Wave 19 excludes equality at 60. Wave 20 then replaces the
-equality frontier with a global Schur-projector argument. The currently
-strongest internally verified project bound is
+equality frontier with a global Schur-projector argument, and Wave 23 excludes
+its first surviving endpoint. The currently strongest internally verified
+project bound is
 
 ```text
-n3 >= 705,
-induced_C6_count >= 209,991.
+n3 >= 708,
+induced_C6_count >= 209,994.
 ```
+
+Wave 21 independently exhausts the published six-vertex and Hamiltonian
+seven-vertex affine count systems. Relative to the then-current Wave 20
+bound, those necessary conditions retained every multiple of three from 705
+through 4,158 and therefore supplied no improvement.
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
 are opposite in a four-cycle. It is 12-regular, so has 4,158 edges. Its
@@ -701,6 +707,321 @@ through 2026-07-23. Generic Schur/Krein positivity is prior art, and
 non-discovery cannot certify novelty. The argument is a conditional necessary
 bound rather than a construction, nonexistence proof, or formal-kernel proof;
 Conway-99 and novelty remain `UNKNOWN`.
+
+## First surviving endpoint refinements (`VERIFIED_INCONCLUSIVE`)
+
+At the first surviving value `n3=705`, the integral Schur lift from Wave 20
+
+```text
+W = M o M,
+A4 = M W M
+```
+
+has trace 1,008. Representing `M` as the Gram matrix of norm-four vectors in
+dimension 44 and contracting the associated quadratic tensors gives, for
+every triangle `T`,
+
+```text
+A4[T,T] >= (99/43)*(q(T)-2)^2.
+```
+
+Every diagonal is already known to be a positive multiple of four. Since the
+other 230 diagonals contribute at least 920, a selected diagonal is at most
+88, and therefore
+
+```text
+q(T) <= 8.
+```
+
+The exact trace-square arithmetic also yields
+
+```text
+tr(A4^2) = 441*t,
+t = 4 (mod 8),
+t >= 60,
+tr(A4^2) >= 26,460.
+```
+
+These restrictions do not close the endpoint. Keeping `q=1`, the exact scalar
+relaxation has 22,113 aggregate profiles; one survivor has 223 rows with
+`q=2` and eight with `q=3`. A separate rank-44 two-moment spectrum also
+survives. Neither object is asserted to be a compatible matrix or graph.
+
+The parallel lattice reduction puts
+
+```text
+U = im(M),
+L = U intersect Z^231,
+h = [L : 21L*].
+```
+
+The independently audited identities include
+
+```text
+E Z^231 = L*,
+M Z^231 = 21L*,
+h = 21^44/det(L).
+```
+
+The lattice `L` is even with minimum at least four. On `L`, the operator
+`B=A4/21` is integral, self-adjoint, positive definite, and congruent to the
+identity modulo two. For an integral basis matrix `X` of `L`, the even
+positive-definite Gram matrix `Q=X^T W X` satisfies
+
+```text
+det(B) = h*det(Q).
+```
+
+At `n3=705`, `tr(B)=48` and exact AM--GM gives `det(B)<=45`. The discovery
+submission obtained the weaker necessary list `{1,3,7,9}`. The verifier
+separately proved that an even integral Gram matrix of rank 44 and odd
+determinant has determinant one modulo four. Together with the standard
+rank-44 even-unimodular signature obstruction, this sharpens the full endpoint
+condition to
+
+```text
+n3=705  ==>  h in {1,9}.
+```
+
+At the Wave 21 checkpoint the index `h` was not determined, so those lanes
+gave no improvement over `n3>=705`. Wave 23 later excludes the whole endpoint
+by a stronger argument. Full derivations and exact replays are in
+`agents/2026-07-23-wave21-local-diagonal.md`,
+`verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md`,
+`agents/2026-07-23-wave21-lattice-extension.md`, and
+`verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md`.
+
+## Six-/seven-vertex affine count envelope (`VERIFIED_INCONCLUSIVE`)
+
+The Wave 21 lane independently enumerates every locally admissible graph under
+the pairwise conditions inherited from `srg(n,k,1,2)`. Canonicalization under
+all vertex permutations gives exactly
+
+```text
+order 4:                  9 classes
+order 5:                 21 classes
+order 6:                 62 classes
+order 7, Hamiltonian:    19 classes
+```
+
+Reconstructing every vertex-deletion deck uniquely aligns these classes with
+the indices in Reimbayev's six-vertex and Hamiltonian seven-vertex tables.
+The aligned `N3` is exactly two vertex-disjoint triangles joined by two
+independent cross-edges, so the source parameter `n3` is the project parameter.
+No automorphism of a putative target is assumed.
+
+The printed five-to-six deletion equations in arXiv:2508.03377v2 have one
+defect. Sixty-one `N_j` columns have coefficient sum six, but the `N23` column
+has sum five. Substitution of the source's own affine formulas gives
+
+```text
+20 equations:                 residual 0
+printed m7(n-5) equation:     residual n23
+n23 at the Conway parameters: 1,496,880 + 4*n3
+```
+
+Trying the missing deletion card in each of the 21 possible `M_i` rows shows
+that only `M7` yields an actual locally admissible six-vertex deck. The narrow
+correction is therefore
+
+```text
+printed m7(n-5) right-hand side + n23.
+```
+
+The raw equation is retained as `REFUTED_AS_PRINTED`; the correction is a
+separately named and independently checked path. After that correction all 62
+deletion columns sum to six, all source indices align bijectively, and all 21
+deck identities have zero residual.
+
+At `n=99,k=14`, exact rational specialization of all 62 six-vertex formulas
+gives simultaneous integrality and nonnegativity exactly when
+
+```text
+n3 = 0 (mod 3),
+0 <= n3 <= 4158.
+```
+
+Writing the free Hamiltonian seven-vertex count as `h11`, all 19 displayed
+counts are simultaneously integral and nonnegative exactly when
+
+```text
+h11 = 0 (mod 4),
+ceil_to_multiple_of_4(2*n3) <= h11 <= 4*n3.
+```
+
+The universal choice `h11=4*n3` works for every six-vertex-feasible value.
+Consequently, the then-current Wave 20 bound left
+
+```text
+n3 = 705,708,...,4158:        1,152 values
+n3=705, h11=1412,1416,...,2820: 353 values
+```
+
+This is a complete exhaustion of the encoded formulas, not of global graphs.
+The seven-vertex source enumerates Hamiltonian types rather than all induced
+seven-vertex types, and a feasible count vector is not an adjacency matrix.
+The discovery suite passes 16 tests, the separately written verifier passes
+19, and all three exact JSON outputs replay byte-identically. See
+`agents/2026-07-23-wave21-six-vertex-lp.md`,
+`verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md`, and
+`verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md`.
+The source-first status record
+`verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md`
+confirms that official v1 and the still-current v2 both omit the term and
+records that no formal or corrected publication was located. That bounded
+non-discovery is not a novelty certificate. The count result supplies no
+stronger bound or target resolution.
+
+## Complete aggregate order-seven deck (`VERIFIED_INCONCLUSIVE`)
+
+Wave 22 enumerates all `2^21` labeled graphs on seven vertices, retains the
+394,020 that satisfy the inherited local common-neighbor upper bounds, and
+canonicalizes them into 208 isomorphism classes. Deleting every possible
+vertex produces the complete integer matrix
+
+```text
+D: 62 six-vertex types x 208 seven-vertex types.
+```
+
+Its exact row ranks over `F_2,F_3,F_5,F_7,F_11` are respectively
+`48,57,61,61,62`. At the historical endpoint
+`n3=705,h11=2820`, a frozen nonnegative integer vector has total
+`binom(99,7)`, support size 105, satisfies all 62 equations
+
+```text
+D*x = 93*(n1,...,n62),
+```
+
+and assigns all 19 pinned Hamiltonian classes their displayed published
+counts. The discovery and independent implementations separately reconstruct
+the complete order-six/order-seven censuses, deletion cards, Hamiltonian
+classes, source alignment, and exact arithmetic.
+
+This witness is not a graph: it does not impose consistency between
+overlapping seven-subsets and supplies no adjacency matrix. Its role is to
+show that the complete aggregate deletion relaxation alone does not exclude
+the old endpoint. See
+`agents/2026-07-23-wave22-full-seven-deck.md` and
+`verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md`.
+
+## Projector-index endpoint exclusion (`VERIFIED`)
+
+Wave 23 returns to the rank-44 projector lattice. At `n3=705`, write the
+integral positive self-adjoint endomorphism as
+
+```text
+B = I+2C,
+rank(B)=44,
+tr(B)=48,
+tr(C)=2.
+```
+
+For an integral matrix, `tr(C^2)=tr(C) (mod 2)`. Positive-form
+self-adjointness makes the eigenvalues of `C` real, so `tr(C^2)` is a
+positive even integer. Hence
+
+```text
+tr(B^2) >= 60.
+```
+
+The 44 positive eigenvalues of `B` therefore have sum 48 and square sum at
+least 60. A complete compactness/KKT argument puts any determinant maximizer
+on square sum 60 with exactly two eigenvalue values. The independent checker
+uses exact dyadic radical intervals for all 38 positive multiplicities and
+proves
+
+```text
+det(B) < 13.
+```
+
+Since `det(B)` is a positive integer congruent to one modulo four,
+`det(B)` is in `{1,5,9}`. The verified factorization
+`det(B)=h det(Q)`, the rank-44 even-Gram congruence, and the
+even-unimodular signature obstruction leave only `h=1`; but
+`h=1` would make `G/21` an even positive-definite unimodular form of
+signature 44, which is impossible. Thus the endpoint is excluded:
+
+```text
+n3 != 705,
+n3 >= 708,
+induced_C6_count >= 209994.
+```
+
+A second proof lane, isolated from this derivation, obtains the looser but
+sufficient exact cap `det(B)<43` directly from Newton and Maclaurin:
+
+```text
+e2 <= 1122,
+det(B)^(1/22) <= 1122/binom(44,2) = 51/43,
+51^22 < 43^23.
+```
+
+Together with the scaled-dual determinant congruence this also leaves no
+index. A separately written verifier reconstructs the proof and passes 17
+hostile tests. Its first audit also caught an ancillary discovery-ledger
+error: `(9,3,27)` violates the retained `det(B)=1 (mod 4)` condition. The bad
+control is preserved and refuted, `(9,1,9)` is the corrected
+single-relaxation witness, and a second frozen addendum verifies that the
+mathematical result is unchanged.
+
+The primary proof and blind audit are
+`agents/2026-07-23-wave23-index-pranks.md` and
+`verification/wave23-index-pranks/2026-07-23T192952Z-audit.md`; the isolated
+cross-check, audit, and correction record are
+`agents/2026-07-23-wave23-endpoint-crosscheck.md`,
+`verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md`, and
+`verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md`.
+
+Both arguments are conditional necessary bounds. Neither constructs a graph
+or proves that no target graph exists. A source-separated audit of 24 frozen
+query and citation paths found that its inspected current sources still treat
+the target as open and located neither the exact `708/209994` endpoint nor
+the complete method. This is bounded non-discovery, not proof of openness or
+novelty; both target existence and novelty remain `UNKNOWN`. See
+`verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md`.
+
+## Orbit-refined order-seven extensions (`VERIFIED_INCONCLUSIVE`)
+
+A parallel Wave 23 lane strengthens the aggregate seven-vertex deck by
+distinguishing every vertex and pair orbit inside each six-vertex card. Over
+all 208 locally admissible seven-vertex classes, the exact integer system has
+
+```text
+deletion rows:               62
+vertex-orbit rows:          207
+edge-pair-orbit rows:       180
+nonedge-pair-orbit rows:    263
+total:                      712
+```
+
+The independent verifier checks every canonicalizing isomorphism and confirms
+that these coefficients merely partition distinguished vertices and pairs;
+they impose no automorphism on the putative 99-vertex target. A separately
+rebuilt lower-order gate forces the counts through order five, and the source
+order-six vector passes all 171 orbit-refined `5->6` rows.
+
+At the now-excluded historical endpoint `n3=705`, the matrix `A` has rational
+rank 207. A frozen nonzero integer vector `delta` spans its checked kernel,
+and adjoining only the pinned `H11` coordinate raises the rank to 208. The
+exact family
+
+```text
+x(z) = base + (z-353) delta,
+z = 353,...,705,
+h11 = 4z
+```
+
+satisfies every row. Its endpoint minimum counts are two and zero, so every
+coordinate remains nonnegative throughout the interval. The other 18
+Hamiltonian formulas are post-hoc comparisons, not solver inputs, and all
+match.
+
+Thus this complete encoded necessary relaxation is feasible for all 353
+allowed values. It does not impose overlap consistency, provide an adjacency
+matrix, or contradict the stronger lattice exclusion. The current bound
+remains `n3>=708`, and target existence remains `UNKNOWN`. See
+`agents/2026-07-23-wave23-weighted-extensions.md` and
+`verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

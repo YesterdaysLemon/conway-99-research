@@ -777,6 +777,360 @@ its exact-search nonhits leave novelty and Conway-99 `UNKNOWN`. The detached
 end-to-end release replay is
 `verification/2026-07-23-wave20-clean-clone.md`.
 
+Replay the Wave 21 six-/seven-vertex affine-count audit from the repository
+root. The submitted checker is standard-library-only:
+
+```powershell
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave21-six-vertex-lp\test_exact_check.py
+
+$wave21Stem = [guid]::NewGuid().ToString('N')
+$wave21Root = Join-Path ([System.IO.Path]::GetTempPath()) "wave21-$wave21Stem"
+New-Item -ItemType Directory -Path $wave21Root | Out-Null
+$wave21Submitted = Join-Path $wave21Root "submitted.json"
+
+.venv\Scripts\python.exe -B `
+  attempts\wave21-six-vertex-lp\exact_check.py `
+  --output $wave21Submitted
+Get-FileHash -Algorithm SHA256 $wave21Submitted
+```
+
+The submitted suite passes 16/16 and the expected JSON SHA-256 is
+`5e7b6f526985fb719754145944579aacb0e8f38e9e14a54d2075552a3756ff2b`.
+
+The independent verifier parses fresh copies of the exact primary-source TeX.
+Download, inspect, and extract the two pinned arXiv archives:
+
+```powershell
+$wave21SixArchive = Join-Path $wave21Root "six-v2.tar"
+$wave21SevenArchive = Join-Path $wave21Root "seven-v1.tar"
+$wave21SixRoot = Join-Path $wave21Root "six"
+$wave21SevenRoot = Join-Path $wave21Root "seven"
+New-Item -ItemType Directory -Path $wave21SixRoot,$wave21SevenRoot | Out-Null
+
+Invoke-WebRequest -UseBasicParsing `
+  https://export.arxiv.org/e-print/2508.03377v2 `
+  -OutFile $wave21SixArchive
+Invoke-WebRequest -UseBasicParsing `
+  https://export.arxiv.org/e-print/2511.06572v1 `
+  -OutFile $wave21SevenArchive
+
+Get-FileHash -Algorithm SHA256 $wave21SixArchive,$wave21SevenArchive
+
+foreach ($wave21Archive in @($wave21SixArchive,$wave21SevenArchive)) {
+  $wave21Members = @(& tar -tf $wave21Archive)
+  if ($LASTEXITCODE -ne 0) { throw "Could not list $wave21Archive" }
+  foreach ($wave21Member in $wave21Members) {
+    $wave21Normalized = $wave21Member.Replace('\','/')
+    if ([System.IO.Path]::IsPathRooted($wave21Member) -or
+        $wave21Normalized -match '(^|/)\.\.(/|$)' -or
+        $wave21Normalized -match '^[A-Za-z]:') {
+      throw "Unsafe archive path: $wave21Member"
+    }
+  }
+}
+
+& tar -xf $wave21SixArchive -C $wave21SixRoot
+if ($LASTEXITCODE -ne 0) { throw "Six-vertex extraction failed" }
+& tar -xf $wave21SevenArchive -C $wave21SevenRoot
+if ($LASTEXITCODE -ne 0) { throw "Seven-vertex extraction failed" }
+
+$wave21SixTex = Join-Path $wave21SixRoot "The_Subgraphs_of_Order_Six.tex"
+$wave21SevenTex = Join-Path $wave21SevenRoot `
+  "Hamiltonian_Subgraphs_of_Order_Seven.tex"
+Get-FileHash -Algorithm SHA256 $wave21SixTex,$wave21SevenTex
+```
+
+Expected archive hashes, in order, are
+`f8429d2f839267e2aaf98b04451cb2f0252c0353f75bee6ec6e6947eab0d5834`
+and
+`10f8d9ea09dc72f4ca6bce4e9427ff1df32718d2978bb35a16db1af3c27cc39a`.
+Expected TeX hashes are
+`823bcaf636a99f6655af453b2a910b9953338db980480572bca81730cfa1b44f`
+and
+`0b06fdc1c2951a344592c6af23abd133c4a8a68d717f199e7a0e2d7ceb909d0a`.
+
+Preserve the raw source failure, then run only the explicit correction:
+
+```powershell
+$wave21Raw = Join-Path $wave21Root "raw.json"
+$wave21Corrected = Join-Path $wave21Root "corrected.json"
+
+.venv\Scripts\python.exe -B `
+  verification\wave21-six-vertex-lp\independent_check.py `
+  --six-tex $wave21SixTex --seven-tex $wave21SevenTex `
+  --mode raw --output $wave21Raw
+$wave21RawExit = $LASTEXITCODE
+if ($wave21RawExit -ne 1) {
+  throw "Expected raw printed equation to exit 1; got $wave21RawExit"
+}
+
+.venv\Scripts\python.exe -B `
+  verification\wave21-six-vertex-lp\independent_check.py `
+  --six-tex $wave21SixTex --seven-tex $wave21SevenTex `
+  --mode corrected --output $wave21Corrected
+if ($LASTEXITCODE -ne 0) { throw "Corrected replay failed" }
+
+$env:WAVE21_SIX_TEX = $wave21SixTex
+$env:WAVE21_SEVEN_TEX = $wave21SevenTex
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave21-six-vertex-lp\test_independent_check.py
+Get-FileHash -Algorithm SHA256 $wave21Raw,$wave21Corrected
+```
+
+The independent suite passes 19/19. The expected raw and corrected result
+hashes are, respectively,
+
+```text
+50129e12b180c4f7ad7655cb4febe229588a855042a04b28817eeb52a3b27fb6
+1c0cc560206ce388308573f2174a0a6189ae909f83a4acb86093063b5adfeacd
+```
+
+The raw process exit 1 is the expected `FAIL_AS_PRINTED`: the `m7(n-5)`
+equation has residual exactly `n23`. The corrected process changes only the
+named missing `+n23` deletion card. The verified exhaustion leaves
+`n3=705,708,...,4158`, so it supplies neither a stronger bound nor a graph
+construction. The public replay record is
+`verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md`.
+The bounded current-version and correction search is recorded separately in
+`verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md`;
+its companion manifest pins the official arXiv records, v1/v2 TeX and PDFs,
+and later author sources.
+
+Replay the two Wave 21 endpoint-refinement packages from the repository root:
+
+```powershell
+$wave21EndpointStem = [guid]::NewGuid().ToString('N')
+$wave21EndpointRoot = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave21-endpoint-$wave21EndpointStem"
+New-Item -ItemType Directory -Path $wave21EndpointRoot | Out-Null
+
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave21-local-diagonal\test_exact_check.py
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave21-local-diagonal\test_independent_check.py
+
+$wave21LocalSubmitted = Join-Path $wave21EndpointRoot "local-submitted.json"
+.venv\Scripts\python.exe -B `
+  attempts\wave21-local-diagonal\exact_check.py `
+  --output $wave21LocalSubmitted
+
+# The independent local checker writes beside its own script, so copy only
+# that checker into the temporary replay directory.
+$wave21LocalIndependentRoot = Join-Path $wave21EndpointRoot "local-independent"
+New-Item -ItemType Directory -Path $wave21LocalIndependentRoot | Out-Null
+Copy-Item -LiteralPath `
+  verification\wave21-local-diagonal\independent_check.py `
+  -Destination $wave21LocalIndependentRoot
+.venv\Scripts\python.exe -B `
+  (Join-Path $wave21LocalIndependentRoot "independent_check.py")
+
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave21-lattice-extension\test_exact_check.py
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave21-lattice-extension\test_independent_check.py
+
+$wave21LatticeSubmitted = Join-Path $wave21EndpointRoot `
+  "lattice-submitted.json"
+$wave21LatticeIndependent = Join-Path $wave21EndpointRoot `
+  "lattice-independent.json"
+.venv\Scripts\python.exe -B `
+  attempts\wave21-lattice-extension\exact_check.py `
+  --output $wave21LatticeSubmitted
+.venv\Scripts\python.exe -B `
+  verification\wave21-lattice-extension\independent_check.py `
+  --output $wave21LatticeIndependent
+
+Get-FileHash -Algorithm SHA256 `
+  $wave21LocalSubmitted,`
+  (Join-Path $wave21LocalIndependentRoot "independent-checks.json"),`
+  $wave21LatticeSubmitted,`
+  $wave21LatticeIndependent
+```
+
+The submitted/independent suites pass respectively 15/18 and 12/16 tests.
+The four expected replay hashes, in command order, are
+
+```text
+2d51c827f822183c7c3cfea60e429ae550c2d95270c76f2a5f469371e71b4ce8
+5150e0047e09cca5b09c15eb7d5a740ff6e0f1bf4291a7a4de0db61120da25af
+18235cf32229bcdf1616a7560aa2389c830e7e23fa25f0a0fc02377c174dc53b
+735ff677e7837f14ec2a52cbccd827d30abc5eee68ee5e4f8e2bd6a9e5bd21b1
+```
+
+The local package verifies `q(T)<=8` and
+`tr(A4^2)>=26460` at `n3=705`; its scalar and spectral survivors are
+relaxations only. The lattice package verifies the necessary endpoint
+condition `h in {1,9}` while leaving `h` undetermined. Neither package
+changes the unconditional project bound or target status.
+
+Replay the Wave 22 complete order-seven aggregate deck witness:
+
+```powershell
+$wave22ReplayStem = [guid]::NewGuid().ToString('N')
+$wave22ReplayRoot = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave22-seven-deck-$wave22ReplayStem"
+New-Item -ItemType Directory -Path $wave22ReplayRoot | Out-Null
+
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave22-full-seven-deck -p test_exact_check.py -v
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave22-full-seven-deck `
+  -p test_independent_verify.py -v
+
+$wave22Submitted = Join-Path $wave22ReplayRoot "submitted.json"
+$wave22Independent = Join-Path $wave22ReplayRoot "independent.json"
+.venv\Scripts\python.exe -B `
+  attempts\wave22-full-seven-deck\exact_check.py `
+  --output $wave22Submitted
+.venv\Scripts\python.exe -B `
+  verification\wave22-full-seven-deck\independent_verify.py `
+  --output $wave22Independent
+
+Get-FileHash -Algorithm SHA256 $wave22Submitted,$wave22Independent
+```
+
+The submitted and independent suites pass 15/15 and 26/26. Expected result
+hashes are:
+
+```text
+ca5d9d116f6a9d6e355600429652e2bf4474b73dcf281bbcb564420d820acbd2
+54a02ffda9fe13293d6732fc6bf51f47e28a876a92ebdece10dea187ae0d020c
+```
+
+Both programs reconstruct the 62-by-208 deletion system and verify all 62
+rows and all 19 pinned Hamiltonian counts at `n3=705,h11=2820`. The
+nonnegative integer vector is only an aggregate count-system witness; it is
+not a graph.
+
+Replay the primary Wave 23 endpoint exclusion:
+
+```powershell
+$wave23ReplayStem = [guid]::NewGuid().ToString('N')
+$wave23ReplayRoot = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave23-index-$wave23ReplayStem"
+New-Item -ItemType Directory -Path $wave23ReplayRoot | Out-Null
+
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave23-index-pranks -p test_exact_check.py -v
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave23-index-pranks `
+  -p test_independent_check.py -v
+
+$wave23Submitted = Join-Path $wave23ReplayRoot "submitted.json"
+$wave23Independent = Join-Path $wave23ReplayRoot "independent.json"
+.venv\Scripts\python.exe -B `
+  attempts\wave23-index-pranks\exact_check.py `
+  --output $wave23Submitted
+.venv\Scripts\python.exe -B `
+  verification\wave23-index-pranks\independent_check.py `
+  --output $wave23Independent
+
+Get-FileHash -Algorithm SHA256 $wave23Submitted,$wave23Independent
+```
+
+The submitted and independent suites pass 15/15 and 14/14. Expected result
+hashes are:
+
+```text
+64bf8192018376961ec88562d64928f73514697000c73cbf79a4a2a2def923b5
+5ddcc8f5dec1b9923e4c28d60fb998858f33a99e659b451632641f6cea62701b
+```
+
+The independent verifier also checks all 20 entries in
+`verification/wave23-index-pranks/artifact-manifest.sha256`. The verified
+scope is the conditional exclusion `n3!=705`, hence `n3>=708` and
+`induced_C6_count>=209994`; target existence remains `UNKNOWN`.
+
+The separately developed shorter Wave 23 cross-check can be replayed with:
+
+```powershell
+$wave23CrossStem = [guid]::NewGuid().ToString('N')
+$wave23CrossResult = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave23-cross-$wave23CrossStem.json"
+$wave23CrossIndependent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave23-cross-independent-$wave23CrossStem.json"
+
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave23-endpoint-crosscheck -p test_exact_check.py -v
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave23-endpoint-crosscheck `
+  -p test_independent_check.py -v
+.venv\Scripts\python.exe -B `
+  attempts\wave23-endpoint-crosscheck\exact_check.py `
+  --output $wave23CrossResult
+.venv\Scripts\python.exe -B `
+  verification\wave23-endpoint-crosscheck\independent_check.py `
+  --output $wave23CrossIndependent
+Get-FileHash -Algorithm SHA256 `
+  $wave23CrossResult,$wave23CrossIndependent
+```
+
+The corrected candidate and independent suites pass 25/25 and 17/17. Expected
+result hashes are:
+
+```text
+1b31074d0fe4872c14caf1e25842377e4ddab9860f241d87d2814a350ac100a4
+69fc4ee307e45f2f4a4ccf1d41817636d38c92d5094080e938ecad66d7d24693
+```
+
+The cross-check reaches the same endpoint exclusion using the exact
+Maclaurin bound `det(B)<43`. The first verifier audit preserves the original
+candidate snapshot and records a nonblocking invalid hostile control; the
+separate correction addendum verifies the corrected control and confirms that
+the mathematical result is unchanged.
+
+The current-head correction manifest has SHA-256
+
+```text
+43bcb9fe593e1c16fbeb0a130d7a064ed7d019d688624ea99302a586abbfc6cf
+```
+
+and all 13 entries in
+`verification/wave23-endpoint-crosscheck/correction-artifact-manifest.sha256`
+must match. The original `artifact-manifest.sha256` is intentionally frozen
+to the pre-correction candidate bytes; do not use its candidate-file entries
+as a current-head integrity check.
+
+Replay the Wave 23 orbit-refined weighted-extension result:
+
+```powershell
+$wave23WeightedStem = [guid]::NewGuid().ToString('N')
+$wave23WeightedSubmitted = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave23-weighted-submitted-$wave23WeightedStem.json"
+$wave23WeightedIndependent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave23-weighted-independent-$wave23WeightedStem.json"
+
+python -B -m unittest discover `
+  -s attempts\wave23-weighted-extensions `
+  -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave23-weighted-extensions `
+  -p test_independent_verifier.py -v
+python -B attempts\wave23-weighted-extensions\exact_check.py `
+  --output $wave23WeightedSubmitted
+python -B verification\wave23-weighted-extensions\independent_verifier.py `
+  --output $wave23WeightedIndependent
+Get-FileHash -Algorithm SHA256 `
+  $wave23WeightedSubmitted,$wave23WeightedIndependent
+```
+
+The discovery and independent suites pass 18/18 and 20/20. Expected result
+hashes are:
+
+```text
+83a41b78eac02d845650ccdcb5b9782aba80caff9bdb7be983ec3f9e91c65b4c
+fecd813402ddb3aabd2434833f020edaf11e82c4392fc6ecc7d1f300b7d97eb4
+```
+
+All nine entries in
+`verification/wave23-weighted-extensions/artifact-manifest.sha256` must
+match; the manifest itself has SHA-256
+`0de03a8000cdb83aa6c1c7dfbd5162c37459f3da5e033c0f63ff98f08bdd4cd6`.
+The verified statement is exact feasibility of the encoded 712-by-208
+necessary count relaxation for every allowed historical-endpoint parameter,
+not overlap consistency, a graph construction, or a bound change.
+
 The separate `attempts/wave20-n3-63-structural` package is archival. Its
 14/14 tests and exact JSON replay pass, but its proof remains
 `DERIVED_PENDING_INDEPENDENT_AUDIT`; the first false two-profile census is

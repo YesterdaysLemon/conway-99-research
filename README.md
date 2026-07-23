@@ -30,8 +30,8 @@ and the normalized search problem.
   2026-07-23; this is not a proof of openness.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
-- **Strongest internally verified conditional bound:** `n3>=705`, hence at
-  least `209,991` induced six-cycles; this does not resolve existence.
+- **Strongest internally verified conditional bound:** `n3>=708`, hence at
+  least `209,994` induced six-cycles; this does not resolve existence.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -529,6 +529,159 @@ Generic Schur/Krein positivity is established prior art; search non-discovery
 does not establish novelty. Conway-99 and exact-specialization novelty remain
 `UNKNOWN`.
 
+Wave 21 exhausts a different, published necessary-condition lane without
+improving the bound. Exact arithmetic and independent graph-deck
+reconstruction align all 62 six-vertex types in arXiv:2508.03377v2 and all 19
+Hamiltonian seven-vertex types in arXiv:2511.06572v1. They also expose a narrow
+source defect: the printed `m7(n-5)` deletion equation has residual exactly
+`n23` because its right-hand side omits `+n23`. An independent verifier tried
+every possible missing one-card row and found that this is the unique repair
+matching an actual six-vertex deletion deck.
+
+After applying only that named correction, complete integrality and
+nonnegativity are exactly
+
+```text
+n3 in {0,3,6,...,4158},
+h11 = 0 (mod 4),
+ceil_to_multiple_of_4(2*n3) <= h11 <= 4*n3.
+```
+
+Intersecting with `n3>=705` leaves all 1,152 values
+`705,708,...,4158`; at `n3=705`, 353 values of `h11` remain. Thus the
+published encoded count systems are internally verified but inconclusive:
+feasible count vectors are not graph constructions, and the seven-vertex
+source covers Hamiltonian types only. See the
+[Wave 21 discovery report](agents/2026-07-23-wave21-six-vertex-lp.md),
+[independent audit](verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md),
+and [orchestrator replay](verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md).
+The separate [source-status audit](verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md)
+confirms that the current official arXiv version is still v2 and that both v1
+and v2 omit the term; it found no formal correction or corrected
+journal/author version in its bounded search. Those nonhits do not establish
+novelty.
+At the end of Wave 21 the strongest bound was still `n3>=705`; Conway-99 and
+novelty remained `UNKNOWN`.
+
+Two independent Wave 21 endpoint audits then refine what a surviving
+`n3=705` case would have to look like. For the integral Schur lift
+`A4=M(M o M)M`, every triangle satisfies
+
+```text
+A4[T,T] >= (99/43)*(q(T)-2)^2,
+q(T) <= 8,
+tr(A4^2) >= 26460.
+```
+
+The exact scalar relaxation still has 22,113 profiles and a simple survivor,
+so these are restrictions rather than a contradiction. The parallel
+projector-lattice lane defines
+`L=im(M) intersect Z^231` and `h=[L:21L*]`. Its determinant factorization,
+combined with an independently supplied even-Gram congruence, gives the
+sharper necessary endpoint condition
+
+```text
+n3=705  ==>  h in {1,9}.
+```
+
+At the Wave 21 checkpoint, these lanes did not determine `h`. See the
+[local-diagonal audit](verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md)
+and [lattice audit](verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md).
+Neither lane then changed the bound or target status; Wave 23 later excludes
+the entire `n3=705` endpoint by a stronger argument.
+
+Wave 22 tests the complete aggregate order-seven vertex-deletion relaxation at
+that historical endpoint. It independently enumerates 394,020 locally
+admissible labeled order-seven graphs, forming 208 isomorphism classes, and
+builds the complete `62 x 208` deletion matrix. At
+`n3=705,h11=2820`, an exact nonnegative integer witness satisfies all 62
+deletion rows and all 19 pinned Hamiltonian-type formulas:
+
+```text
+sum of all class counts = binom(99,7) = 14,887,031,544
+positive support size   = 105
+```
+
+This is deliberately a negative result about the strength of the relaxation:
+the witness does not consistently assign types to overlapping subsets and is
+not a graph. Wave 23 later excludes the same endpoint using stronger lattice
+information, so the Wave 22 witness is not evidence for target existence. See
+the [Wave 22 report](agents/2026-07-23-wave22-full-seven-deck.md) and
+[independent audit](verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md).
+
+Wave 23 combines the verified global Schur lift with the projector lattice.
+At `n3=705`, the positive integral rank-44 endomorphism has
+`B=I+2C`, `tr(B)=48`, and `tr(C)=2`. Integral trace parity and
+positive-form self-adjointness force
+
+```text
+tr(B^2) >= 60.
+```
+
+A complete compactness and two-moment determinant audit then proves
+`det(B)<13` using exact rational radical brackets for every KKT multiplicity.
+The determinant factorization `det(B)=h det(Q)`, the even-Gram congruence, and
+the rank-44 even-unimodular signature obstruction eliminate every remaining
+index. Thus
+
+```text
+n3 != 705,
+n3 >= 708,
+induced_C6_count >= 209,994.
+```
+
+The [Wave 23 discovery report](agents/2026-07-23-wave23-index-pranks.md) and
+[blind independent audit](verification/wave23-index-pranks/2026-07-23T192952Z-audit.md)
+include separate implementations, 29 exact tests in total, exact
+regeneration, and the imported-theorem applicability check. This is a
+conditional necessary bound, not a construction or nonexistence proof.
+Conway-99 and literature novelty remain `UNKNOWN`.
+
+A structurally independent, shorter proof reaches the same endpoint without
+the KKT determinant maximization. Newton's identity and AM--GM on all 946 pair
+products give
+
+```text
+det(B)^(1/22) <= 51/43,
+51^22 < 43^23,
+det(B) <= 42.
+```
+
+The scaled-dual factorization and congruences then leave no lattice index. Its
+[separate audit](verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md)
+passes the proof and 17 independent tests. That audit also caught one
+nonblocking discovery-side hostile-control error: `(9,3,27)` violates a
+retained determinant residue. The public ledgers preserve and refute the bad
+control, replace it with the valid `(9,1,9)` single-relaxation witness, and a
+[correction addendum](verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md)
+confirms that the main proof is unchanged.
+
+Another Wave 23 lane strengthens the small-subgraph relaxation rather than
+the lattice proof. It independently rebuilds all 208 locally admissible
+seven-vertex classes and the complete orbit-refined extension matrix
+
+```text
+712 rows x 208 columns
+row split: 62 deletion + 207 vertex + 180 edge-pair + 263 nonedge-pair
+```
+
+At the now-excluded historical endpoint `n3=705`, this entire encoded system
+is exactly feasible for every allowed `h11=4z`, `z=353,...,705`, through a
+frozen affine nonnegative integer family. The
+[independent weighted-extension audit](verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md)
+reconstructs the census, coefficients, ranks, lower-order gate, all 353
+parameter values, and 20 hostile tests without importing discovery code. This
+closes that obstruction route negatively: aggregate class counts are not a
+graph, and the result neither constructs the target nor changes the current
+`n3>=708` bound.
+
+The proof-separated
+[Wave 23 literature audit](verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md)
+finds that its inspected current sources still treat the target as open and
+locates neither the exact `708/209994` endpoint nor the complete Wave 23
+method in 24 frozen query and citation searches. This is bounded
+non-discovery, not proof of openness or novelty.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -693,6 +846,41 @@ status.
   detached 18/16/14-test replay, three byte-identical regenerations, exact
   ledger/manifest/hash checks, public-hygiene scans, clean status, and
   `git fsck`.
+- [Wave 21 six-/seven-vertex count audit](verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md):
+  independent 9/21/62/19 local-class reconstruction, explicit source-equation
+  correction, exact affine feasibility exhaustion, and 19 hostile tests.
+- [Wave 21 orchestrator replay](verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md):
+  fresh pinned-source downloads, guarded archive extraction, expected raw
+  failure, corrected replay, 24 manifest checks, and byte-identical outputs.
+- [Wave 21 source-status audit](verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md):
+  current-version, v1/v2 equation, later-author-source, correction, and
+  publication-status checks with pinned bytes and bounded nonhit language.
+- [Wave 21 local-diagonal audit](verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md):
+  independent tensor, harmonic, trace-square, profile, and spectral-boundary
+  reconstruction with 18 hostile tests and byte-identical replays.
+- [Wave 21 lattice audit](verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md):
+  independent dual/index and determinant reconstruction, theorem audit,
+  16 hostile tests, and the exact endpoint strengthening `h in {1,9}`.
+- [Wave 22 full seven-deck audit](verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md):
+  independent 62-by-208 deletion system, Hamiltonian alignment, 26 hostile
+  tests, and strict replay of the aggregate integer witness.
+- [Wave 23 projector-index audit](verification/wave23-index-pranks/2026-07-23T192952Z-audit.md):
+  blind reconstruction of the trace-square floor, complete exact determinant
+  cap, lattice-index obstruction, 14 hostile tests, and the conditional
+  strengthening `n3>=708`.
+- [Wave 23 endpoint cross-check audit](verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md):
+  independent pair-product AM--GM proof, exact determinant/index exhaustion,
+  17 hostile tests, and transparent identification of one ancillary
+  discovery-ledger defect.
+- [Wave 23 cross-check correction addendum](verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md):
+  seven-file freeze, corrected hostile witness, byte-identical replay, and
+  confirmation that the endpoint proof is unchanged.
+- [Wave 23 weighted-extension audit](verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md):
+  independent complete census, 712-row orbit reconstruction, exact affine
+  feasibility for all 353 allowed values, and 20 hostile tests.
+- [Wave 23 literature/status audit](verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md):
+  current-source status, exact-value and method searches, source/query ledger,
+  and bounded non-discovery with novelty left `UNKNOWN`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

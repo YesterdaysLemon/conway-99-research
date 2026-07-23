@@ -483,3 +483,157 @@ obligations:
       - "attempts/wave20-n3-63-structural/failed-runs.md"
       - "attempts/wave20-n3-63-structural/manifest.json"
     note: "The discovery lane passes 14 tests and preserves the false first two-profile census as REJECTED, but it has no fresh independent proof audit and therefore is not promoted. Its numerical n3=63 exclusion is superseded by the separately verified global n3>=705 theorem; supersession does not certify this derivation."
+
+  - id: O-WAVE21-SIX-SEVEN-COUNT-SYSTEM
+    requirement: "Independently freeze and reconstruct the complete 9/21/62/19 locally admissible graph census, source-index alignment, four-to-five and five-to-six deletion decks, all 62 six-vertex and 19 Hamiltonian seven-vertex affine formulas, exact integrality and nonnegativity envelope, the raw printed m7 failure, every possible one-card repair, deterministic artifacts, hostile mutations, and the boundary between count-vector feasibility and global graph existence."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave21-six-vertex-lp.md"
+      - "attempts/wave21-six-vertex-lp/manifest.json"
+      - "attempts/wave21-six-vertex-lp/exact_check.py"
+      - "attempts/wave21-six-vertex-lp/exact-results.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T172537Z-preinspection-freeze.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md"
+      - "verification/wave21-six-vertex-lp/artifact-manifest.json"
+      - "verification/wave21-six-vertex-lp/independent_check.py"
+      - "verification/wave21-six-vertex-lp/independent-raw-printed-results.json"
+      - "verification/wave21-six-vertex-lp/independent-corrected-results.json"
+      - "verification/wave21-six-vertex-lp/candidate-comparison.json"
+      - "verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md"
+    note: "The independent verifier passes 19 separately written tests, replays the 16 submitted tests, reconstructs all local graph classes and source indices, preserves the raw equation as REFUTED_AS_PRINTED, uniquely verifies the +n23 correction, and reproduces all three exact JSON artifacts byte-identically. The corrected necessary-count system leaves n3=705,708,...,4158 and therefore gives no stronger bound, contradiction, construction, or target resolution. The seven-vertex source is Hamiltonian-only; Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE21-SOURCE-STATUS
+    requirement: "Freeze and independently audit the current official version of arXiv:2508.03377, whether v1/v2 or any later source contains the +n23 repair, formal correction and publication status, later primary sources by the author, exact-prior-source hits, byte-level provenance, archive safety, and access failures without promoting search nonhits to novelty."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md"
+      - "verification/wave21-six-vertex-lp/status/source-manifest.json"
+      - "SOURCES.bib"
+    note: "The source-first audit confirms that official v1 and the still-current v2 both omit +n23, the unversioned PDF matched v2 bytes at the cutoff, and the official Atom record had no journal reference or journal DOI. It located no v3, formal correction, corrected journal/author version, or exact primary source stating the repair. Every nonhit is explicitly bounded; correction novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE21-LOCAL-DIAGONAL
+    requirement: "Independently freeze and reconstruct the endpoint tensor-Gram contraction, traceless norm and coefficient, local A4 diagonal floors, endpoint cap, harmonic-cubic and centered-minor constants, trace-square cyclic factors, ordered parity count, scalar-profile enumeration, spectral witness boundary, exact artifacts, and hostile mutations without silently importing q!=1."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave21-local-diagonal.md"
+      - "attempts/wave21-local-diagonal/exact_check.py"
+      - "attempts/wave21-local-diagonal/test_exact_check.py"
+      - "attempts/wave21-local-diagonal/exact-checks.json"
+      - "verification/wave21-local-diagonal/preinspection-freeze.tsv"
+      - "verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md"
+      - "verification/wave21-local-diagonal/independent_check.py"
+      - "verification/wave21-local-diagonal/test_independent_check.py"
+      - "verification/wave21-local-diagonal/independent-checks.json"
+      - "verification/wave21-local-diagonal/artifact-manifest.json"
+    note: "The independent verifier passes 18 separately written tests, replays the submitted 15 tests, and regenerates both JSON results byte-identically. It verifies q(T)<=8 and tr(A4^2)>=26460 at n3=705 while retaining q=1 and 22,113 scalar profiles. The surviving scalar and spectral witnesses are relaxations only; the endpoint, target, and novelty remain UNKNOWN."
+
+  - id: O-WAVE21-LATTICE-EXTENSION
+    requirement: "Independently freeze and audit the primitive projector lattice, dual and index direction, evenness and minimum, binary-rank bridge, integral positive endomorphism, determinant factorization, even-unimodular theorem use, endpoint determinant cap, harmonic restriction, contraction dynamic program, exact artifacts, and hostile examples."
+    critical: false
+    status: PASS_WITH_NONBLOCKING_EXACT_STRENGTHENING
+    evidence:
+      - "agents/2026-07-23-wave21-lattice-extension.md"
+      - "attempts/wave21-lattice-extension/exact_check.py"
+      - "attempts/wave21-lattice-extension/test_exact_check.py"
+      - "attempts/wave21-lattice-extension/exact-results.json"
+      - "verification/wave21-lattice-extension/preinspection-freeze.sha256"
+      - "verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md"
+      - "verification/wave21-lattice-extension/independent_check.py"
+      - "verification/wave21-lattice-extension/test_independent_check.py"
+      - "verification/wave21-lattice-extension/independent-results.json"
+      - "verification/wave21-lattice-extension/theorem-sources.md"
+      - "verification/wave21-lattice-extension/artifact-manifest.sha256"
+    note: "The independent verifier passes 16 tests, replays the submitted 12 tests, and regenerates both JSON results byte-identically. It confirms the submitted conditional reduction and independently proves det(Q)=1 mod 4 for the rank-44 even odd-determinant Gram matrix, sharpening n3=705 to h in {1,9}. Since h remains undetermined, the unconditional bound stays n3>=705 and Conway-99 remains UNKNOWN."
+
+  - id: O-WAVE22-FULL-SEVEN-DECK
+    requirement: "Independently freeze and reconstruct all locally admissible order-six and order-seven graph classes, the complete 62-by-208 deletion matrix and modular ranks, the pinned 19-class Hamiltonian alignment, exact published formula values at n3=705 and h11=2820, and strict replay of a complete nonnegative integer witness without confusing aggregate feasibility with a graph construction."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave22-full-seven-deck.md"
+      - "attempts/wave22-full-seven-deck/witness.json"
+      - "attempts/wave22-full-seven-deck/exact_check.py"
+      - "attempts/wave22-full-seven-deck/test_exact_check.py"
+      - "attempts/wave22-full-seven-deck/exact-results.json"
+      - "verification/wave22-full-seven-deck/preinspection-freeze.tsv"
+      - "verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md"
+      - "verification/wave22-full-seven-deck/independent_verify.py"
+      - "verification/wave22-full-seven-deck/test_independent_verify.py"
+      - "verification/wave22-full-seven-deck/independent-results.json"
+    note: "The independent verifier passes 26 hostile tests, replays the submitted 15 tests, reconstructs 394,020 labeled and 208 unlabeled admissible order-seven graphs, verifies all 62 deletion rows and 19 Hamiltonian counts, and regenerates both exact results byte-identically. The witness is an aggregate relaxation only. Wave 23 later excludes n3=705 by stronger lattice constraints; neither result constructs or excludes the target graph."
+
+  - id: O-WAVE23-INDEX-ENDPOINT
+    requirement: "Blindly freeze and independently reconstruct the n3=705 projector-index exclusion, including integral trace-square parity, positive-form self-adjointness, every compactness and KKT boundary case, exact rational determinant caps for all positive multiplicities, determinant/index enumeration, even-Gram congruence, h=1 rescaling, imported signature-theorem applicability, hostile mutations, and byte-identical submitted replay."
+    critical: true
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave23-index-pranks.md"
+      - "attempts/wave23-index-pranks/input-freeze.sha256"
+      - "attempts/wave23-index-pranks/exact_check.py"
+      - "attempts/wave23-index-pranks/test_exact_check.py"
+      - "attempts/wave23-index-pranks/exact-results.json"
+      - "verification/wave23-index-pranks/preinspection-freeze.sha256"
+      - "verification/wave23-index-pranks/2026-07-23T192952Z-audit.md"
+      - "verification/wave23-index-pranks/independent_check.py"
+      - "verification/wave23-index-pranks/test_independent_check.py"
+      - "verification/wave23-index-pranks/independent-results.json"
+      - "verification/wave23-index-pranks/theorem-applicability.md"
+      - "verification/wave23-index-pranks/artifact-manifest.sha256"
+    note: "The blind verifier passes 14 independently written hostile tests, replays all 15 submitted tests, regenerates the submitted JSON byte-for-byte, validates all 20 manifest entries, and verifies n3!=705, hence the conditional bounds n3>=708 and induced_C6_count>=209994. This remains a necessary bound only; target existence and novelty are UNKNOWN."
+
+  - id: O-WAVE23-ENDPOINT-CROSSCHECK
+    requirement: "Blindly freeze and independently reconstruct the structurally separate n3=705 endpoint proof through scaled-dual parity, the trace-square floor, Newton's identity, pair-product AM-GM, the exact 51^22<43^23 comparison, determinant/index exhaustion, even-unimodular theorem applicability, submitted replay, hostile controls, and transparent correction of any ancillary defect."
+    critical: false
+    status: PASS_AFTER_RECORDED_NONBLOCKING_CORRECTION
+    evidence:
+      - "agents/2026-07-23-wave23-endpoint-crosscheck.md"
+      - "attempts/wave23-endpoint-crosscheck/exact_check.py"
+      - "attempts/wave23-endpoint-crosscheck/test_exact_check.py"
+      - "attempts/wave23-endpoint-crosscheck/exact-results.json"
+      - "attempts/wave23-endpoint-crosscheck/failed-routes.md"
+      - "attempts/wave23-endpoint-crosscheck/failed-runs.md"
+      - "verification/wave23-endpoint-crosscheck/preinspection-freeze.sha256"
+      - "verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md"
+      - "verification/wave23-endpoint-crosscheck/independent_check.py"
+      - "verification/wave23-endpoint-crosscheck/test_independent_check.py"
+      - "verification/wave23-endpoint-crosscheck/independent-results.json"
+      - "verification/wave23-endpoint-crosscheck/theorem-applicability.md"
+      - "verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md"
+      - "verification/wave23-endpoint-crosscheck/correction-artifact-manifest.sha256"
+    note: "The independent verifier passes 17 separately written tests and the corrected candidate passes 25 tests with byte-identical result hash 1b31074d0fe4872c14caf1e25842377e4ddab9860f241d87d2814a350ac100a4. The original audit correctly found that the discovery-side hostile control (9,3,27) violated the retained det(B)=1 mod 4 condition. The ledgers preserve and refute it, the corrected witness (9,1,9) survives exactly the stated single relaxation, and a separate correction addendum verifies that the main proof is unchanged. The scoped endpoint exclusion is VERIFIED; target existence and novelty remain UNKNOWN."
+
+  - id: O-WAVE23-LITERATURE-STATUS
+    requirement: "Freeze a source-first plan and independently audit current target status, the exact Wave 23 endpoint values and method, chronology and terminology, primary-source provenance, query coverage, access failures, and bounded non-discovery language without converting search nonhits into novelty."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave23-literature-audit/preinspection-query-plan.md"
+      - "verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md"
+      - "verification/wave23-literature-audit/source-query-ledger.json"
+      - "verification/wave23-literature-audit/run-report.yaml"
+      - "verification/wave23-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    note: "The frozen audit inspected 24 query/citation paths and current primary, maintained, or official sources through 2026-07-23. Those sources still treated the target as open, and no exact 708/209994 endpoint or complete Wave 23 method was located. These are source-specific status findings and bounded non-discovery only. Target existence and novelty remain UNKNOWN."
+
+  - id: O-WAVE23-WEIGHTED-EXTENSIONS
+    requirement: "Freeze and independently reconstruct the complete locally admissible graph census through order seven, all deletion and automorphism-orbit-refined one-vertex extension coefficients, isomorphism-choice invariance, the lower-order source-six gate, exact modular ranks, the affine integer witness for all allowed h11, post-hoc Hamiltonian comparisons, deterministic replay, hostile mutations, privacy, and the boundary between aggregate feasibility and graph construction."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave23-weighted-extensions.md"
+      - "attempts/wave23-weighted-extensions/affine-witness.json"
+      - "attempts/wave23-weighted-extensions/exact_check.py"
+      - "attempts/wave23-weighted-extensions/test_exact_check.py"
+      - "attempts/wave23-weighted-extensions/exact-results.json"
+      - "verification/wave23-weighted-extensions/preinspection-freeze.sha256"
+      - "verification/wave23-weighted-extensions/postinspection-candidate.sha256"
+      - "verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md"
+      - "verification/wave23-weighted-extensions/independent_verifier.py"
+      - "verification/wave23-weighted-extensions/test_independent_verifier.py"
+      - "verification/wave23-weighted-extensions/independent-results.json"
+      - "verification/wave23-weighted-extensions/artifact-manifest.sha256"
+      - "verification/wave23-weighted-extensions/verifier-failures.md"
+    note: "The discovery suite passes 18 tests and the separately implemented verifier passes 20 hostile tests. Both rebuild the 394,020 labeled and 208 unlabeled order-seven census; the verifier checks all 712 rows, 20,408 isomorphism choices, 38,688 coefficient partitions, the 171-row source gate, ranks 207 and 208, and all 353 affine parameter values. The exact results replay byte-identically. The relaxation is VERIFIED FEASIBLE at the historical endpoint only; no graph is constructed, the current n3>=708 bound is unchanged, and target existence and novelty remain UNKNOWN."

@@ -6,6 +6,12 @@ literature_audit:
   through: 2026-07-23
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
+  latest_audit: "verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md"
+  latest_audit_sha256: "4a57192cd08e7a7f4d10a8eeb355f189562a414ab3007c10e1075cfb55a1901e"
+  source_query_ledger: "verification/wave23-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "aa28a2a358e9e7243d800ad7229d57441cca561000155f36a47bca55f389c3eb"
+  exact_wave23_prior_hit: NONE_IN_BOUNDED_AUDIT
+  novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
@@ -505,4 +511,206 @@ twentieth_research_wave:
   publication_replay_notes_sha256: "e1ec4d5f3b505f11ccb863d71d23e92e9f54aa3c5710c5188da48e520af6df18"
   documentation_defect: "The frozen failed-routes introduction retains the intermediate endpoint n3>=699. All operative proof, code, results, and audit artifacts use n3>=705; orchestrator-notes.md records the correction without rewriting frozen evidence."
   caveat: "The independently reconstructed global Schur-projector argument gives the conditional necessary bound n3>=705 and, through Reimbayev's cited identity, induced_C6_count>=209991. It assumes only a putative target graph and uses no automorphism, catalog, solver-negative, or floating-point premise. It is a human proof with exact arithmetic companions rather than a formal-kernel proof and does not construct or exclude a 99-vertex graph. A source-first audit located the generic Schur/Krein method and the triangle-graph spectrum as prior art but no exact endpoint; non-discovery is not a novelty certificate. Conway-99 and novelty remain UNKNOWN."
+twenty_first_research_wave:
+  count_discovery_commit: "6e043043022e1c528088fa50a76507b8e84472a6"
+  count_verification_commit: "54dd37cc8bb68b8bc50a861e1e5f7e305ca93f3b"
+  orchestrator_replay_commit: "c8ea3d731722c07a99f4a875ca4e59cc9d8aa4a5"
+  source_status_commit: "3df6c9a1a8f6a9bad892f3b3ee0b451a9844a17d"
+  lattice_discovery_commit: "12e08c626e81e644caffc11949a5cbba11573279"
+  local_diagonal_discovery_commit: "121a2fda5d9d36d8a16825f2a29d0765d1285eb1"
+  local_diagonal_verification_commit: "2b3df89fc2505afe5ca592bc741bf97fc246b076"
+  lattice_verification_commit: "1590b81b982c19f728b39ca76dd6ef6655883ce1"
+  verifier_verdict: PASS_FOR_ENCODED_NECESSARY_COUNT_SYSTEM_ONLY
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 705
+  conditional_induced_C6_lower_bound: 209991
+  discovery_report: "agents/2026-07-23-wave21-six-vertex-lp.md"
+  discovery_report_sha256: "e4b7c4bbbd8a4faff552cd55a8f94f9949d3232811e6ef5aec139e50e34e55a8"
+  submitted_checker: "attempts/wave21-six-vertex-lp/exact_check.py"
+  submitted_checker_sha256: "0dd44ca37ca21aeaa757f3b2d7f7f9639907f22b95da39472ed9d836027a94a3"
+  submitted_result: "attempts/wave21-six-vertex-lp/exact-results.json"
+  submitted_result_sha256: "5e7b6f526985fb719754145944579aacb0e8f38e9e14a54d2075552a3756ff2b"
+  verifier_audit: "verification/wave21-six-vertex-lp/2026-07-23T174137Z-audit.md"
+  verifier_audit_sha256: "954978d992cb6896336ef457a1f2e1397422d90b9d2227317afac1506f9050cc"
+  independent_checker: "verification/wave21-six-vertex-lp/independent_check.py"
+  independent_checker_sha256: "d77a7bf134ab73975171245c004ddc0bc9405d428ed35f60c6ae1f004dc92f24"
+  independent_raw_result: "verification/wave21-six-vertex-lp/independent-raw-printed-results.json"
+  independent_raw_result_sha256: "50129e12b180c4f7ad7655cb4febe229588a855042a04b28817eeb52a3b27fb6"
+  independent_corrected_result: "verification/wave21-six-vertex-lp/independent-corrected-results.json"
+  independent_corrected_result_sha256: "1c0cc560206ce388308573f2174a0a6189ae909f83a4acb86093063b5adfeacd"
+  orchestrator_replay: "verification/wave21-six-vertex-lp/2026-07-23T175223Z-orchestrator-replay.md"
+  orchestrator_replay_sha256: "a1a7717bdebd21599cf430139cb90b369562a3efb9dad9109af7c891468c9c69"
+  submitted_tests_passed: 16
+  independent_tests_passed: 19
+  local_class_census: "9 order-four, 21 order-five, 62 order-six, 19 Hamiltonian order-seven"
+  raw_printed_equation_status: REFUTED_AS_PRINTED
+  raw_printed_equation_residual: "n23 = 1496880 + 4*n3"
+  explicit_correction: "Add +n23 to the right-hand side of the printed m7(n-5) equation."
+  explicit_correction_status: VERIFIED_UNIQUE_ONE_CARD_REPAIR
+  six_vertex_feasible_n3: "0,3,...,4158"
+  incumbent_feasible_n3: "705,708,...,4158 (1152 values)"
+  incumbent_h11_values: "At n3=705: 1412,1416,...,2820 (353 values)"
+  six_source_archive_sha256: "f8429d2f839267e2aaf98b04451cb2f0252c0353f75bee6ec6e6947eab0d5834"
+  seven_source_archive_sha256: "10f8d9ea09dc72f4ca6bce4e9427ff1df32718d2978bb35a16db1af3c27cc39a"
+  source_status_cutoff_utc: "2026-07-23T18:28:43Z"
+  source_status_audit: "verification/wave21-six-vertex-lp/status/2026-07-23T182843Z-source-status-audit.md"
+  source_status_audit_sha256: "0e1f6451edacd8e4558acbce0e5eaf9adc859b840fe136c1b33c83a3ec14bae0"
+  source_status_manifest: "verification/wave21-six-vertex-lp/status/source-manifest.json"
+  source_status_manifest_sha256: "a6b0a44f85481a4e9c36998a4558c9a62633f0e9907c910528abfcfab212da54"
+  source_version_status: CURRENT_OFFICIAL_ARXIV_IS_V2_AND_OMISSION_REMAINS
+  formal_correction_status: NO_CORRECTION_LOCATED_IN_BOUNDED_AUDIT
+  local_diagonal_report: "agents/2026-07-23-wave21-local-diagonal.md"
+  local_diagonal_report_sha256: "e8b2c37967d4114a9fb0b28a8811c685ce5125cffe148138fe8f5687afcc4081"
+  local_diagonal_audit: "verification/wave21-local-diagonal/2026-07-23T185252Z-audit.md"
+  local_diagonal_audit_sha256: "4683d18630695f257c5793a7cf99ce860129e9793df7f18d31d4b1bcab8a81f7"
+  local_diagonal_independent_result: "verification/wave21-local-diagonal/independent-checks.json"
+  local_diagonal_independent_result_sha256: "5150e0047e09cca5b09c15eb7d5a740ff6e0f1bf4291a7a4de0db61120da25af"
+  local_diagonal_submitted_tests_passed: 15
+  local_diagonal_independent_tests_passed: 18
+  endpoint_q_upper_bound: 8
+  endpoint_trace_A4_squared_lower_bound: 26460
+  endpoint_scalar_profile_count_with_q1: 22113
+  lattice_report: "agents/2026-07-23-wave21-lattice-extension.md"
+  lattice_report_sha256: "264027dc534d57aefd8f4d9037d041af2ca8e462efeb9ef22d07de4c40141b3e"
+  lattice_audit: "verification/wave21-lattice-extension/2026-07-23T184926Z-audit.md"
+  lattice_audit_sha256: "45814560f1d5bffb3b00144022a3a1f8d069e71dfe430247a1871822ac08f268"
+  lattice_independent_result: "verification/wave21-lattice-extension/independent-results.json"
+  lattice_independent_result_sha256: "735ff677e7837f14ec2a52cbccd827d30abc5eee68ee5e4f8e2bd6a9e5bd21b1"
+  lattice_submitted_tests_passed: 12
+  lattice_independent_tests_passed: 16
+  endpoint_lattice_index_h: "{1,9}"
+  endpoint_lattice_index_status: NECESSARY_CONDITION_ONLY_INDEX_UNDETERMINED
+  clean_clone_verdict: PENDING
+  caveat: "The independent count verifier confirms a complete exhaustion of the encoded six-vertex and Hamiltonian seven-vertex affine necessary conditions, not of global graphs. The raw pinned source equation is separately preserved as false as printed, and the +n23 correction is explicit rather than silent. A source-first audit confirms that official v1 and the still-current v2 omit the term, but its failure to locate an official correction or exact prior source is bounded non-discovery rather than a novelty certificate. The separately audited local-diagonal and lattice lanes restrict a putative n3=705 endpoint to q(T)<=8, tr(A4^2)>=26460, and h in {1,9}; scalar relaxations survive and h is undetermined. Feasible count vectors are not adjacency matrices, and the seven-vertex source omits non-Hamiltonian types. These lanes do not improve n3>=705, construct or exclude the target graph, establish adoption of the correction by the source author, or determine novelty. Conway-99 and novelty remain UNKNOWN."
+twenty_second_research_wave:
+  discovery_commit: "7178f822fe12d4b8804ed9952ceebc84fed6fd22"
+  verification_commit: "16e70f0f4ab45632c490eafc72819424f7e514fd"
+  normalization_correction_commit: "667463c93e9836085ba09428ca21bf57f2fd10c5"
+  verifier_verdict: PASS_FOR_AGGREGATE_ORDER_SEVEN_COUNT_FEASIBILITY
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  historical_test_endpoint_n3: 705
+  historical_test_endpoint_h11: 2820
+  discovery_report: "agents/2026-07-23-wave22-full-seven-deck.md"
+  discovery_report_sha256: "8075166af8bb0b9388888ade55826245441554396318ad8101b617d6aed66112"
+  submitted_checker: "attempts/wave22-full-seven-deck/exact_check.py"
+  submitted_checker_sha256: "e54f6ea9bac5fcc20d0583316051320dfe0dd7247657cf64e7515990a8438a5b"
+  submitted_result: "attempts/wave22-full-seven-deck/exact-results.json"
+  submitted_result_sha256: "ca5d9d116f6a9d6e355600429652e2bf4474b73dcf281bbcb564420d820acbd2"
+  witness: "attempts/wave22-full-seven-deck/witness.json"
+  witness_sha256: "d74453faa91e42abbe2343d428296818ae051be579305277eff6f113fe66c47d"
+  verifier_audit: "verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md"
+  verifier_audit_sha256: "112a8ac50ad6ccb09033ad6ed880ed0b3b5f97d3b8d0065df73bc4f14c605a55"
+  independent_checker: "verification/wave22-full-seven-deck/independent_verify.py"
+  independent_checker_sha256: "f058ca21c96d19a6f0784a8bdf4871ff8b4d55b03e4205bafb0a2fa62739857b"
+  independent_result: "verification/wave22-full-seven-deck/independent-results.json"
+  independent_result_sha256: "54a02ffda9fe13293d6732fc6bf51f47e28a876a92ebdece10dea187ae0d020c"
+  submitted_tests_passed: 15
+  independent_tests_passed: 26
+  order_7_labeled_masks: 394020
+  order_7_unlabeled_classes: 208
+  deletion_matrix_shape: [62, 208]
+  deletion_matrix_ranks_F2_F3_F5_F7_F11: [48, 57, 61, 61, 62]
+  deletion_rows_passed: 62
+  hamiltonian_counts_passed: 19
+  witness_support_size: 105
+  witness_total: 14887031544
+  graph_construction: false
+  clean_clone_verdict: PENDING
+  caveat: "The exact witness proves only that an aggregate order-seven necessary-count relaxation is feasible at the historical endpoint. It does not enforce overlap consistency or provide a 99-by-99 graph. Wave 23 independently excludes n3=705 using stronger projector-lattice constraints; that later exclusion does not invalidate the scoped relaxation witness. Conway-99 and novelty remain UNKNOWN."
+twenty_third_research_wave:
+  discovery_commit: "c5984f1556a5b4893f52fee5b9904c11898f4dd7"
+  verification_commit: "4552431e6b7b654d169d4024da5b659b54e01fd5"
+  simplified_crosscheck_discovery_commit: "b3763368049422b5f10f949a8ac02b14ec0fb54f"
+  simplified_crosscheck_verification_commit: "a6771108ec00bddfcc8ae5b41779760673fef22e"
+  simplified_crosscheck_correction_commit: "006b3482329e44de72f99595e4c62ef8ef677d94"
+  simplified_crosscheck_correction_verification_commit: "98f4693e0d1f806eabea78464145641de7eadcc4"
+  literature_audit_commit: "ac4250f8d849c365206c641d9c1945bf4ec41af4"
+  weighted_extensions_discovery_commit: "c82f49be256f79fed45b7a4f1458d751d2ec0d9f"
+  weighted_extensions_verification_commit: "cedbf9e7a5891e3e87ef8f34a48e5c0b43e82e26"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_705_ENDPOINT_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: true
+  conditional_n3_705_exclusion: EXCLUDED_VERIFIED
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  discovery_report: "agents/2026-07-23-wave23-index-pranks.md"
+  discovery_report_sha256: "7c62f9eb1d61a036c3dc415572a4ada58046410cb40e4455f7ec8256ec9c1a00"
+  submitted_checker: "attempts/wave23-index-pranks/exact_check.py"
+  submitted_checker_sha256: "bc8810043de2f27f52186fc19dfae3a4df5231db5dc7fd591ab0a537d6857048"
+  submitted_result: "attempts/wave23-index-pranks/exact-results.json"
+  submitted_result_sha256: "64bf8192018376961ec88562d64928f73514697000c73cbf79a4a2a2def923b5"
+  verifier_audit: "verification/wave23-index-pranks/2026-07-23T192952Z-audit.md"
+  verifier_audit_sha256: "bfd02ebc39515e27e9e2c79d8e286905086f5747a02a310036ce27dd29ff3116"
+  independent_checker: "verification/wave23-index-pranks/independent_check.py"
+  independent_checker_sha256: "7180a92814a2c6283104cab4576a40580ddb64afeafc9d60be9906eda1564213"
+  independent_result: "verification/wave23-index-pranks/independent-results.json"
+  independent_result_sha256: "5ddcc8f5dec1b9923e4c28d60fb998858f33a99e659b451632641f6cea62701b"
+  verifier_manifest: "verification/wave23-index-pranks/artifact-manifest.sha256"
+  verifier_manifest_sha256: "ce7a5b156887ac0c18b0e2703af679d3855cbef08204ae89715fb007a1b202e6"
+  submitted_tests_passed: 15
+  independent_tests_passed: 14
+  verifier_manifest_entries_passed: 20
+  determinant_strict_upper_bound: 13
+  endpoint_lattice_index_status: NO_SURVIVING_INDEX
+  independent_simplified_crosscheck: VERIFIED_AFTER_RECORDED_NONBLOCKING_HOSTILE_LEDGER_CORRECTION
+  simplified_crosscheck_initial_verdict: PASS_WITH_NONBLOCKING_HOSTILE_LEDGER_DEFECT
+  simplified_crosscheck_correction_verdict: PASS
+  simplified_crosscheck_report: "agents/2026-07-23-wave23-endpoint-crosscheck.md"
+  simplified_crosscheck_report_sha256: "11b0af31813748c903d67304d019c474a3d8660997744484d33f5d4c9c48c072"
+  simplified_crosscheck_result: "attempts/wave23-endpoint-crosscheck/exact-results.json"
+  simplified_crosscheck_result_sha256: "1b31074d0fe4872c14caf1e25842377e4ddab9860f241d87d2814a350ac100a4"
+  simplified_crosscheck_verifier_audit: "verification/wave23-endpoint-crosscheck/2026-07-23T195158Z-audit.md"
+  simplified_crosscheck_verifier_audit_sha256: "56cf0b8c14f9af50a58e60a8a6a273726a79d15782527ff8ea46194e9dea5d8c"
+  simplified_crosscheck_independent_result: "verification/wave23-endpoint-crosscheck/independent-results.json"
+  simplified_crosscheck_independent_result_sha256: "69fc4ee307e45f2f4a4ccf1d41817636d38c92d5094080e938ecad66d7d24693"
+  simplified_crosscheck_correction_audit: "verification/wave23-endpoint-crosscheck/2026-07-23T200645Z-correction-audit.md"
+  simplified_crosscheck_correction_audit_sha256: "791d74340c8a84a9993f9a5179c66baf0b2f7e431df5fb7eda2f593195f9bf53"
+  simplified_crosscheck_original_manifest: "verification/wave23-endpoint-crosscheck/artifact-manifest.sha256"
+  simplified_crosscheck_original_manifest_sha256: "ad2e8811eb598fb37c67c28515e9f755ab8728165c379afb23670098786c7575"
+  simplified_crosscheck_correction_freeze: "verification/wave23-endpoint-crosscheck/correction-freeze.sha256"
+  simplified_crosscheck_correction_freeze_sha256: "9b5954a3ce178c086e15b7b2f2835509b2b199579f0320c9d0520f3ab1bbe606"
+  simplified_crosscheck_correction_manifest: "verification/wave23-endpoint-crosscheck/correction-artifact-manifest.sha256"
+  simplified_crosscheck_correction_manifest_sha256: "43bcb9fe593e1c16fbeb0a130d7a064ed7d019d688624ea99302a586abbfc6cf"
+  simplified_crosscheck_submitted_tests_passed: 25
+  simplified_crosscheck_independent_tests_passed: 17
+  simplified_crosscheck_determinant_integer_cap: 42
+  simplified_crosscheck_ancillary_defect: "The original discovery-side hostile triple (9,3,27) violates the retained det(B)=1 mod 4 residue. It is preserved and refuted; (9,1,9) is a corrected single-relaxation witness, not a unique survivor (the addendum also finds (21,1,21)). The verified endpoint proof is unchanged."
+  source_status_audit: "verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md"
+  source_status_audit_sha256: "4a57192cd08e7a7f4d10a8eeb355f189562a414ab3007c10e1075cfb55a1901e"
+  source_query_ledger: "verification/wave23-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "aa28a2a358e9e7243d800ad7229d57441cca561000155f36a47bca55f389c3eb"
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  weighted_extensions_verdict: VERIFIED_FEASIBLE_ENCODED_RELAXATION_ONLY
+  weighted_extensions_report: "agents/2026-07-23-wave23-weighted-extensions.md"
+  weighted_extensions_report_sha256: "e4dea157445c467784219fa67fdd89477e17aa4e19628d37e76142f366ee8bc1"
+  weighted_extensions_witness: "attempts/wave23-weighted-extensions/affine-witness.json"
+  weighted_extensions_witness_sha256: "16ade54a77589b91478b3426dc3dbe57ebb2a5e0f7d209602ca282e42ac3ec77"
+  weighted_extensions_submitted_checker: "attempts/wave23-weighted-extensions/exact_check.py"
+  weighted_extensions_submitted_checker_sha256: "ab959ded2357af8e5d62e18fc9136af538e302a127838be590baeaa71528f37a"
+  weighted_extensions_submitted_result: "attempts/wave23-weighted-extensions/exact-results.json"
+  weighted_extensions_submitted_result_sha256: "83a41b78eac02d845650ccdcb5b9782aba80caff9bdb7be983ec3f9e91c65b4c"
+  weighted_extensions_verifier_audit: "verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md"
+  weighted_extensions_verifier_audit_sha256: "3991ccbc64753e867829a650c00bd64191e2a28ea8e947bb68f83e889ebe249d"
+  weighted_extensions_independent_checker: "verification/wave23-weighted-extensions/independent_verifier.py"
+  weighted_extensions_independent_checker_sha256: "1ea9e69646676016afb9b00494f60724d1e7f35fc8654994398b7c8008ad4a51"
+  weighted_extensions_independent_result: "verification/wave23-weighted-extensions/independent-results.json"
+  weighted_extensions_independent_result_sha256: "fecd813402ddb3aabd2434833f020edaf11e82c4392fc6ecc7d1f300b7d97eb4"
+  weighted_extensions_manifest: "verification/wave23-weighted-extensions/artifact-manifest.sha256"
+  weighted_extensions_manifest_sha256: "0de03a8000cdb83aa6c1c7dfbd5162c37459f3da5e033c0f63ff98f08bdd4cd6"
+  weighted_extensions_submitted_tests_passed: 18
+  weighted_extensions_independent_tests_passed: 20
+  weighted_extensions_matrix_shape: [712, 208]
+  weighted_extensions_row_breakdown: [62, 207, 180, 263]
+  weighted_extensions_rank_Q: 207
+  weighted_extensions_rank_with_H11: 208
+  weighted_extensions_allowed_z_values_checked: 353
+  weighted_extensions_graph_construction: false
+  weighted_extensions_bound_changed: false
+  clean_clone_verdict: PENDING
+  caveat: "Two structurally independent proof lanes verify the conditional exclusion n3!=705 and therefore n3>=708 and induced_C6_count>=209994. The shorter lane's original audit caught one ancillary hostile-ledger defect, now preserved, corrected, and separately reverified without changing the proof. The separately verified 712-by-208 weighted-extension family proves only that a necessary aggregate relaxation is feasible at the historical endpoint; it is not a graph and does not weaken the endpoint exclusion. These are human proofs with exact arithmetic companions and an imported even-unimodular signature theorem, not a graph construction, target nonexistence proof, or formal-kernel proof. They do not determine modular ranks away from the excluded endpoint. The source-first audit found no exact prior hit, but bounded non-discovery is not a novelty certificate. Target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23
