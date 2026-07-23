@@ -264,4 +264,5 @@ obligations:
       - "verification/n3-42-equality/n3-42-support-certificate.json"
       - "verification/2026-07-22-n3-42-support-audit.md"
       - "verification/2026-07-22-wave12-integration-audit.md"
+      - "verification/2026-07-22-wave12-clean-clone.md"
     note: "The proof-side checker explicitly requires the external support-exclusion premise. An official GENREG connected catalog and an independent nauty catalog were cross-matched, the two disconnected types were separately classified, and all four surviving support trees were replayed with mutations. The verified result is the conditional necessary bound n3>=45; novelty and Conway-99 remain UNKNOWN."

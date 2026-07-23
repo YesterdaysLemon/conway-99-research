@@ -321,4 +321,5 @@ triangle-free types; four survive the mandatory-degree filter, and all four
 support rejection trees replay with zero survivors. The combined adversarial
 audit records the conditional strengthening `n3>=45` and
 `induced_C6_count>=209331`. It does not resolve Conway-99, and novelty remains
-`UNKNOWN`.
+`UNKNOWN`. The detached full-suite replay and byte-identical regeneration are
+recorded in `2026-07-22-wave12-clean-clone.md`.

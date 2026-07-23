@@ -241,6 +241,7 @@ claims:
       - "verification/n3-42-equality/n3-42-support-certificate.json"
       - "verification/2026-07-22-n3-42-support-audit.md"
       - "verification/2026-07-22-wave12-integration-audit.md"
+      - "verification/2026-07-22-wave12-clean-clone.md"
     limitations: "The result depends on C-N3-001 and the Wave 6-11 lemmas, is a necessary count bound only, and does not resolve Conway-99. GENREG and nauty completeness are external generator claims cross-checked by independent catalogs. The official GENREG binary is not redistributed because no license was stated. No literature novelty is claimed."
 
   - id: C-N3-BOUNDARY-001

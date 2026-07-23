@@ -187,5 +187,7 @@ twelfth_research_wave:
   support_certificate_sha256: "8115b5f34568a463952afc399bc22db927121f3f1aa28cfc33ae191ea93dc68a"
   external_catalog_url: "https://www.mathe2.uni-bayreuth.de/markus/REGGRAPHS/SCD/14_3_4.scd"
   external_catalog_sha256: "6f3e9cf2b7e0d85c5df59c1638ab9d2fddbfc9905c49b35da01cc892f847e9a0"
+  clean_clone_commit: "32713074557d0c3fa845b111519ef0d690b262c9"
+  clean_clone_replay: "verification/2026-07-22-wave12-clean-clone.md"
   caveat: "The verified result is the conditional necessary bound n3>=45 and induced_C6_count>=209331. The official GENREG binary has no stated redistribution license and is downloaded by URL for replay rather than committed. Generator completeness remains an external premise cross-checked between independent catalogs; no literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

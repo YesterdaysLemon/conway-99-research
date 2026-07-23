@@ -334,6 +334,9 @@ status.
 - [Wave 11 clean-source replay](verification/2026-07-22-wave11-clean-clone.md):
   frozen-commit tests and byte-identical canonical certificate regeneration,
   including the retained newline-portability failure and repair.
+- [Wave 12 clean-source replay](verification/2026-07-22-wave12-clean-clone.md):
+  detached full-suite replay, fresh official-catalog download, and
+  byte-identical support-certificate regeneration.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

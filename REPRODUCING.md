@@ -366,7 +366,8 @@ Combined with the separately checked proof reduction, this establishes only the
 conditional necessary bound `n3>=45` and
 `induced_C6_count>=209331`. Conway-99 and novelty remain `UNKNOWN`. See
 `verification/2026-07-22-n3-42-support-audit.md` and
-`verification/2026-07-22-wave12-integration-audit.md`.
+`verification/2026-07-22-wave12-integration-audit.md`. The complete detached
+replay is recorded in `verification/2026-07-22-wave12-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
