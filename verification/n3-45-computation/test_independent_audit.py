@@ -4,9 +4,10 @@
 from __future__ import annotations
 
 import copy
-import importlib.util
 import json
+import subprocess
 import sys
+import types
 import unittest
 from pathlib import Path
 
@@ -16,23 +17,43 @@ import independent_formula_audit as formulas
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 ATTEMPTS = REPOSITORY / "attempts" / "wave13-computation"
-CANDIDATE_PATH = ATTEMPTS / "n3-45-no-common-point-m5-111.json"
-DISCOVERY_VALIDATOR_PATH = REPOSITORY / "code" / "wave13_n3_45_active_sat.py"
+FROZEN_BASELINE_COMMIT = "066d9c7fcf593c3b9d35cfef1031dbd9daab4145"
+
+
+def frozen_bytes(relative_path: str) -> bytes:
+    """Read a baseline artifact without changing the current worktree."""
+
+    command = [
+        "git",
+        "show",
+        f"{FROZEN_BASELINE_COMMIT}:{relative_path}",
+    ]
+    completed = subprocess.run(
+        command,
+        cwd=REPOSITORY,
+        check=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    return completed.stdout
+
+
+def frozen_json(relative_path: str) -> dict[str, object]:
+    return json.loads(frozen_bytes(relative_path).decode("utf-8"))
 
 
 def load_discovery_validator():
-    """Load only to attack its public validator, never for reconstruction."""
+    """Load the failed baseline validator, never the repaired current tip."""
 
     name = "_wave13_discovery_validator_under_attack"
-    specification = importlib.util.spec_from_file_location(
-        name,
-        DISCOVERY_VALIDATOR_PATH,
+    source_name = (
+        f"{FROZEN_BASELINE_COMMIT}:code/wave13_n3_45_active_sat.py"
     )
-    if specification is None or specification.loader is None:
-        raise RuntimeError("could not load frozen discovery validator")
-    module = importlib.util.module_from_spec(specification)
+    source = frozen_bytes("code/wave13_n3_45_active_sat.py")
+    module = types.ModuleType(name)
+    module.__file__ = source_name
     sys.modules[name] = module
-    specification.loader.exec_module(module)
+    exec(compile(source, source_name, "exec"), module.__dict__)
     return module
 
 
@@ -167,7 +188,10 @@ class IndependentFormulaTests(unittest.TestCase):
 class WitnessAndMutationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.candidate = json.loads(CANDIDATE_PATH.read_text(encoding="utf-8"))
+        cls.candidate = frozen_json(
+            "attempts/wave13-computation/"
+            "n3-45-no-common-point-m5-111.json"
+        )
         cls.discovery = load_discovery_validator()
 
     def test_strict_witness_validation_and_all_18_certificates(self) -> None:
@@ -243,7 +267,9 @@ class WitnessAndMutationTests(unittest.TestCase):
             "cnf_sha256",
             self.candidate["solver_statistics"],
         )
-        source = DISCOVERY_VALIDATOR_PATH.read_text(encoding="utf-8")
+        source = frozen_bytes(
+            "code/wave13_n3_45_active_sat.py"
+        ).decode("utf-8")
         self.assertIn('"cnf_sha256": formula_sha256', source)
         regenerated_formula = formulas.build_formula(
             5,
