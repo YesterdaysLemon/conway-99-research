@@ -76,3 +76,40 @@ The parser rejects duplicate keys, booleans masquerading as integers, unknown
 fields, and non-standard JSON constants. This certificate proves only the
 conditional finite branch cover. It neither establishes the upstream `N3`
 occurrence theorem nor solves a target branch.
+
+## Conditional refined `N3` checker
+
+`n3-refined-cover/verify.py` independently reconstructs the order-768 parent
+stabilizer, its twelve matching orbits, the order-384 oriented subgroup, and
+all 78 orbits on the `945 * 11 = 10,395` refined states. It also derives the
+forced coordinate profile, rebuilds SAT literal numbering, checks every
+orbit-stabilizer product and a Burnside sum of 29,952, and enforces a strict
+JSON schema.
+
+```powershell
+python verification/n3-refined-cover/verify.py
+python verification/n3-refined-cover/verify.py `
+  verification/n3-refined-cover/n3-refined-cover.json
+```
+
+The checker uses only the Python standard library and does not import search
+code. Its `PASS` establishes the conditional symmetry case split only; it is
+not a SAT/UNSAT result for any branch.
+
+## `N3` count-bound checker
+
+`n3-count-bound/verify.py` checks the exact arithmetic behind the auxiliary
+opposite-edge graph consequence. It exhausts the sub-24 degree-sequence cases,
+enumerates every forced local model for the remaining 18-edge case, rebuilds
+the twelve branch degree/signature table from the verified joint certificate,
+enumerates all 10,395 perfect matchings, and independently derives the
+normalized six-vertex boundary profile.
+
+```powershell
+python verification/n3-count-bound/verify.py
+```
+
+The accompanying human proof establishes why the auxiliary graph has the
+properties checked by the script. The resulting `n3 >= 24` is conditional on
+the target-specific theorem forcing an `N3`; it is a necessary bound, not a
+resolution of Conway-99.

@@ -114,6 +114,42 @@ claims:
       - "verification/2026-07-22-wave5-clean-clone.md"
     limitations: "Universal N3 occurrence remains DERIVED; no branch is solved and the target remains UNKNOWN. The legacy S_0 diagnostic has 78 orbits and is not the 12-branch cover."
 
+  - id: C-N3-REFINED-COVER-001
+    statement: "Conditional on the canonical N3 unit, the order-384 oriented stabilizer partitions the 945 shared-fiber matchings times 11 forced additional-neighbor choices into exactly 78 orbits, giving a complete symmetry-safe second-stage SAT cover."
+    label: VERIFIED
+    scope: CONDITIONAL_ENCODING_BRANCH_COVER
+    evidence:
+      - "agents/2026-07-22-wave6-n3-refined-cover.md"
+      - "code/matching_orbits.py"
+      - "code/sat_model.py"
+      - "verification/n3-refined-cover/n3-refined-cover.json"
+      - "verification/n3-refined-cover/verify.py"
+      - "verification/2026-07-22-n3-refined-cover-audit.md"
+      - "verification/2026-07-22-wave6-clean-clone.md"
+    limitations: "This refines the conditional normalized search only. No branch is solved; bounded scouts all returned UNKNOWN and the target remains UNKNOWN."
+
+  - id: C-N3-COUNT-001
+    statement: "Conditional on the target-specific forced N3 occurrence, the nontriangular-edge subgraph of the 12-regular opposite-edge graph is triangle-free with nonzero degrees in {4,6,8,10,12}, forcing n3>=24 and induced_C6_count>=209310."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave6-opposite-edge-graph.md"
+      - "verification/n3-count-bound/verify.py"
+      - "verification/2026-07-22-n3-count-bound-audit.md"
+    limitations: "Nonemptiness uses C-N3-001, whose universal occurrence premise remains DERIVED from cited work; the bound is necessary and gives no contradiction."
+
+  - id: C-N3-BOUNDARY-001
+    statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave6-opposite-edge-graph.md"
+      - "verification/n3-count-bound/verify.py"
+      - "verification/2026-07-22-n3-count-bound-audit.md"
+    limitations: "Percolation waves one and two are exact, but no exact cardinality is claimed for wave three because other outside vertices may also qualify."
+
   - id: C-PERCOLATION-001
     statement: "Each of the two central diagonal nonedges of any induced N3 2-percolates a putative Conway graph, so m(G,2)=2."
     label: DERIVED

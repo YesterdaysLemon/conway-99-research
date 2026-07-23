@@ -37,10 +37,28 @@ matching, so failure of the condition forces `N3`.
 Reimbayev's six-vertex identities then give
 
 ```text
-n3 >= 3,
 n3 = 0 (mod 3),
-induced_C6_count = 209,286 + n3 >= 209,289.
+induced_C6_count = 209,286 + n3.
 ```
+
+Wave 6 sharpens the target-specific count to
+
+```text
+n3 >= 24,
+induced_C6_count >= 209,310.
+```
+
+For the proof, form a graph `J` on the 693 graph edges, joining two when they
+are opposite in a four-cycle. It is 12-regular, so has 4,158 edges. Its
+triangles are exactly induced triangular prisms. The subgraph `H` of
+nontriangular `J` edges is triangle-free and its edges correspond bijectively
+to induced `N3` copies. At every `H` vertex the degree lies in
+`{0,4,6,8,10,12}`. Nonemptiness uses the target-specific forced `N3` theorem;
+minimum degree, Mantel's bound, and `n3 = 0 (mod 3)` reduce the sub-24 cases
+to 18 and 21 edges, and separate local arguments exclude both.
+The full proof and adversarial audit are in
+`agents/2026-07-22-wave6-opposite-edge-graph.md` and
+`verification/2026-07-22-n3-count-bound-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
@@ -51,6 +69,18 @@ unique `K3 square K3` contains no induced `N3`. Therefore
 ```text
 m(G,2) = 2.
 ```
+
+For normalized triangles `{x,u,v}`, `{a,b,c}` with cross-edges `xa,ub`, the
+only outside two-neighbor profiles, with multiplicity, are
+
+```text
+xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2.
+```
+
+The singleton profile is `(9,9,8,9,9,8)`, and 33 outside vertices see none of
+the six. From seed `{x,b}`, synchronous percolation wave 1 is exactly `{u,a}`
+and wave 2 is exactly `{v,c,P_xa,P_ub}`. Later waves may contain additional
+vertices beyond the remaining six pair-profile vertices.
 
 Fixing one labeled `N3` is an existentially safe search normalization: a
 putative graph has an occurrence that can be globally relabeled. This does not

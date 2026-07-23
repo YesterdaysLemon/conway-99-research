@@ -136,6 +136,35 @@ derivation, public certificate, and independent audit are in
 `agents/2026-07-22-wave5-n3-joint-cover.md` and
 `verification/2026-07-22-n3-joint-cover-audit.md`.
 
+Reproduce the verified second-stage refinement with:
+
+```powershell
+.venv\Scripts\python code\matching_orbits.py --n3-refined
+.venv\Scripts\python verification\n3-refined-cover\verify.py
+1..78 | ForEach-Object {
+  $branch = '{0:D3}' -f $_
+  .venv\Scripts\python code\sat_model.py --pair-count 7 `
+    --cardinality native --n3 --n3-refined-branch $_ `
+    --opb "logs/local/conway99-n3-refined-$branch.opb"
+}
+```
+
+The 78 cases cover the same normalized search more finely. They combine one
+of the twelve shared-fiber matchings with the forced choice of an additional
+coordinate-4 neighbor. The standalone checker verifies the full finite cover;
+generating or briefly solving the OPBs does not establish a target result.
+
+Replay the exact arithmetic for the conditional `n3 >= 24` structural bound
+and its twelve branch-local refinements with:
+
+```powershell
+.venv\Scripts\python verification\n3-count-bound\verify.py
+```
+
+The corresponding human derivation and its source boundary are recorded in
+`agents/2026-07-22-wave6-opposite-edge-graph.md` and
+`verification/2026-07-22-n3-count-bound-audit.md`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

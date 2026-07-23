@@ -108,6 +108,28 @@ six positive and 60 negative units; `+24` is already supplied by `--n3`, so
 the branch itself adds 65 clauses. The certificate and independent checker are
 under `verification/n3-joint-cover/`.
 
+## Refined `N3` common-neighbor cover
+
+The exact coordinate-4 profile of `label(0,2)` forces one additional neighbor
+besides the normalized `label(2,4)`. Orienting the witness reduces the safe
+stabilizer to `C2 wreath S4`, of order 384. Its action on 945 matchings times
+eleven additional-neighbor choices has 78 verified orbits:
+
+```powershell
+.venv\Scripts\python code\matching_orbits.py --n3-refined
+.venv\Scripts\python verification\n3-refined-cover\verify.py
+.venv\Scripts\python code\sat_model.py --pair-count 7 --n3 `
+  --n3-refined-branch 1 --cardinality native `
+  --opb logs\local\conway99-n3-refined-001.opb
+```
+
+One refined case contains the parent matching decisions plus one additional
+positive edge. From the unnormalized target base, `--n3` and the refined case
+add 67 unit clauses in total: seven positive and 60 negative. The option is
+mutually exclusive with `--n3-branch` and the legacy `--branch`. The public
+certificate and standard-library checker are under
+`verification/n3-refined-cover/`.
+
 ## Eleven complete matching branches
 
 `matching_orbits.py` exhausts all 10,395 perfect matchings in one 12-vertex

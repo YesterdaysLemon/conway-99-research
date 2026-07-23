@@ -9,3 +9,4 @@ verification/n3-joint-cover/*.json text eol=lf
 verification/n3-joint-cover/*.py text eol=lf
 verification/n3-refined-cover/*.json text eol=lf
 verification/n3-refined-cover/*.py text eol=lf
+verification/n3-count-bound/*.py text eol=lf

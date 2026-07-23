@@ -69,6 +69,26 @@ five-second scouts ended in checked `NO CONCLUSION`, so the target remains
 [certificate](verification/n3-joint-cover/n3-joint-cover.json), and
 [clean-clone replay](verification/2026-07-22-wave5-clean-clone.md).
 
+Wave 6 adds a verified 78-case second-stage refinement and a new conditional
+structural bound. The oriented stabilizer has order 384 and partitions the
+`945 * 11 = 10,395` matching/common-neighbor states into 78 exact orbits; its
+standalone checker reproduces the parent and refined covers, literal mapping,
+orbit-stabilizer data, and Burnside sum 29,952. Separately, an auxiliary graph
+on the 693 graph edges gives the project derivation
+
+```text
+n3 >= 24,
+induced_C6_count >= 209,310.
+```
+
+The bound uses the cited-and-derived theorem forcing an `N3` in the Conway
+target and has passed an independent adversarial audit. Bounded runs on all
+12 parent branches and an incremental scout of all 78 refined cases still
+ended `UNKNOWN`; checked partial proof traces say only `NO CONCLUSION`. See the
+[refined-cover audit](verification/2026-07-22-n3-refined-cover-audit.md),
+[N3-count audit](verification/2026-07-22-n3-count-bound-audit.md), and
+[Wave 6 clean replay](verification/2026-07-22-wave6-clean-clone.md).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -134,10 +154,16 @@ status.
 - [N3 joint-cover audit](verification/2026-07-22-n3-joint-cover-audit.md):
   independent proof of the conditional 12-branch split and strict certificate
   review.
+- [N3 refined-cover audit](verification/2026-07-22-n3-refined-cover-audit.md):
+  independent proof of the conditional 78-case second-stage split.
+- [N3-count audit](verification/2026-07-22-n3-count-bound-audit.md):
+  adversarial reconstruction of the auxiliary-edge graph and `n3 >= 24`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
   frozen-commit tests and byte-identical regeneration of all 12 branch OPBs.
+- [Wave 6 clean-source replay](verification/2026-07-22-wave6-clean-clone.md):
+  frozen-commit tests and byte-identical refined-certificate regeneration.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

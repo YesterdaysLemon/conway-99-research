@@ -82,4 +82,15 @@ fifth_research_wave:
   clean_clone_replay: "verification/2026-07-22-wave5-clean-clone.md"
   scout_manifest: "logs/2026-07-22-wave5-n3-joint-scout.json"
   caveat: "The 12 branches are complete conditional on the DERIVED universal N3 premise. Every scout returned UNKNOWN; checker replay reported VERIFIED NO CONCLUSION."
+sixth_research_wave:
+  source_commit: "a066170e452f31efe1e00610b8159a66b825b01f"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_REFINEMENT_AND_COUNT_BOUND
+  target_result: UNKNOWN
+  refined_cover_report: "agents/2026-07-22-wave6-n3-refined-cover.md"
+  refined_cover_audit: "verification/2026-07-22-n3-refined-cover-audit.md"
+  structural_report: "agents/2026-07-22-wave6-opposite-edge-graph.md"
+  structural_audit: "verification/2026-07-22-n3-count-bound-audit.md"
+  propagation_report: "agents/2026-07-22-wave6-branch-propagation.md"
+  clean_clone_replay: "verification/2026-07-22-wave6-clean-clone.md"
+  caveat: "The 78 cases refine the N3-normalized search and n3>=24 is a conditional necessary bound. All bounded target runs returned UNKNOWN; no graph or complete nonexistence proof exists."
 last_updated: 2026-07-22
