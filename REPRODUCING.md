@@ -644,6 +644,54 @@ separate literature reports are
 `agents/2026-07-23-wave17-status-search.md` and
 `verification/2026-07-23-wave17-status-audit.md`.
 
+Replay the Wave 18 direct exclusion of conditional `n3=57` and its separately
+written verifier without overwriting the committed discovery artifact:
+
+```powershell
+$wave18ReplayStem = [guid]::NewGuid().ToString('N')
+$wave18ReplayRoot = [System.IO.Path]::GetTempPath()
+$wave18Exact = Join-Path $wave18ReplayRoot "$wave18ReplayStem-exact.json"
+
+.venv\Scripts\python.exe -B `
+  attempts\wave18-n3-57-structural\exact_check.py `
+  --output $wave18Exact
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave18-n3-57-structural\test_exact_check.py
+.venv\Scripts\python.exe -B `
+  attempts\wave18-n3-57-structural\exact_check.py `
+  --verify attempts\wave18-n3-57-structural\exact-checks.json
+.venv\Scripts\python.exe -B `
+  verification\n3-57-structural\independent_checker.py
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\n3-57-structural\test_independent_checker.py
+
+Get-FileHash -Algorithm SHA256 $wave18Exact
+Get-FileHash -Algorithm SHA256 `
+  verification\n3-57-structural\checker-results.json, `
+  verification\n3-57-structural\mutation-results.json
+```
+
+The expected SHA-256 values are:
+
+```text
+regenerated exact checks: 76decce7f0af8e3bf2db483096a10a86321a9d7143e6123ad2081ec17d28604c
+independent results:      1e640f9e3a0d754f60f66638c481f01ce878ef6ccdc140c2ad79aada903aaf1d
+mutation results:         eb5f4204e625bfa07f1a4f1e3c99940adacde68d73a0ae07bec1429ea7c40f59
+```
+
+The submitted suite passes 10/10 tests and the independent suite passes 14/14.
+The independent checker detects all 24 frozen mutations and reconstructs all
+nine `sum q=38` profiles, the endpoint crossing tables, the `r=18` equality
+branches, both `r=19` active-set sizes, and exact rational spectral caps.
+Wave 18 excludes `n3=57` without importing Wave 17; combining the two audited
+waves gives the conditional necessary bound `n3>=60`, hence
+`induced_C6_count>=209346`. Conway-99 and novelty remain `UNKNOWN`.
+The source-first literature record and its independent audit are
+`agents/2026-07-23-wave18-status-search.md` and
+`verification/2026-07-23-wave18-status-audit.md`. They also preserve the
+exact `1^20,2^51` correction to Ishihara's equation (88), while keeping both
+target outcomes and Wave 18 novelty `UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

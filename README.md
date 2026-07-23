@@ -40,6 +40,13 @@ and a June 2026 lecture notice discusses only a possible similar approach.
 Those searches are evidence about the literature, not a mathematical proof of
 openness or novelty.
 
+A 2022 technical-report paper does state a nonexistence theorem, but two
+independent project audits find that its decisive equation (88) assumes a false
+uniform residual degree. Exact reconstruction gives residual-cut degrees
+`1^20,2^51` and corrected count `122=2(71)-20`, rather than the asserted 142.
+This refutes the displayed proof step, not the nonexistence statement itself;
+both existence outcomes remain `UNKNOWN`.
+
 Wave 3 added three advances, with independently checked structural and
 proof-pipeline components, without changing the target status. First, cited
 results force an induced six-vertex `N3` configuration in every putative graph;
@@ -409,6 +416,43 @@ describe Conway-99 as unresolved, and exact prior-art searches found no
 `n3>=57`, `n3=54` exclusion, or `209343` threshold. Those nonhits do not
 establish novelty. Conway-99 and novelty remain `UNKNOWN`.
 
+Wave 18 independently excludes the next equality `n3=57`, without importing
+the Wave 17 census. The exact `sum q=38` filter leaves nine active-label
+profiles. Profiles with at most 17 active labels have at most 25 active
+original vertices, contradicting the spectral minimum of 27. At `r=18`,
+incidence and spectral equality force 27 size-two points and a 6-regular
+induced subgraph; the two surviving label profiles are excluded by parity and
+the endpoint-local `(2,4)` degree bound. At `r=19`, the only label profile is
+`q=2^19`. Exact point-size excess leaves three cases at 27 active vertices and
+one case at 28; the former contradict 6-regularity or the fixed-point sum, and
+the latter forces degree sum at least 172 against the spectral upper cap 170.
+
+The discovery suite passes 10 focused tests. A separately written checker
+reconstructs the nine profiles, crossing tables, point-size partitions, and
+exact rational spectral bounds; it passes 14 hostile tests and detects all 24
+frozen mutations. Combining this independently verified exclusion with Wave
+17 gives the currently strongest internally verified conditional bounds
+
+```text
+n3 >= 60,
+induced_C6_count >= 209,346.
+```
+
+See the [Wave 18 structural report](agents/2026-07-23-wave18-n3-57-structural.md)
+and [independent structural audit](verification/2026-07-23-wave18-n3-57-structural-audit.md).
+This remains a conditional necessary bound over the audited active-triangle
+framework, not a raw 99-by-99 certificate, formal proof, target resolution, or
+novelty determination. Conway-99 and novelty remain `UNKNOWN`.
+
+The [Wave 18 status search](agents/2026-07-23-wave18-status-search.md) and
+[independent source audit](verification/2026-07-23-wave18-status-audit.md)
+checked current maintained tables, primary papers, exact numerical searches,
+the 2022 purported proof, and Ben Baker's May 2026 conference abstract. They
+found no exact published `n3=57` exclusion, `n3>=60`, or `209346` bound. The
+generic spectral subset-edge inequality is standard Rayleigh/Alon--Chung prior
+art; no exact prior match to the active-set endpoint argument was located.
+Those focused nonhits are not a novelty certificate.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -549,6 +593,14 @@ status.
   source-frozen audit of positive intriguing-set terminology, near-match
   exclusions, official cubic-catalog provenance, current status, and
   conservative novelty nonhits.
+- [Wave 18 structural audit](verification/2026-07-23-wave18-n3-57-structural-audit.md):
+  independent reconstruction of all nine `sum q=38` profiles, the `r=18` and
+  `r=19` endpoint cases, exact spectral arithmetic, 14 hostile tests, and 24
+  detected mutations excluding conditional `n3=57`.
+- [Wave 18 literature/status audit](verification/2026-07-23-wave18-status-audit.md):
+  independent primary-source and exact-query audit of current status, the
+  Reimbayev identity, focused prior-art nonhits, Baker's abstract, generic
+  Rayleigh attribution, and the exact defect in Ishihara's equation (88).
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

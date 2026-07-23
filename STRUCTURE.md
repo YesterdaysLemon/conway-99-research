@@ -44,12 +44,12 @@ induced_C6_count = 209,286 + n3.
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
 the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
 39, 42, and 45, Wave 15 excludes equality at 48, Wave 16 excludes equality at
-51, and Wave 17 excludes equality at 54. The currently strongest internally
-verified project bound is
+51, Wave 17 excludes equality at 54, and Wave 18 independently excludes
+equality at 57. The currently strongest internally verified project bound is
 
 ```text
-n3 >= 57,
-induced_C6_count >= 209,343.
+n3 >= 60,
+induced_C6_count >= 209,346.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -510,6 +510,70 @@ premises. See `agents/2026-07-23-wave17-n3-54-structural.md`,
 `verification/2026-07-23-wave17-n3-54-census-audit.md`. This is a conditional
 necessary bound, not a target resolution or novelty determination; both
 Conway-99 and novelty remain `UNKNOWN`.
+
+Wave 18 analyzes `n3=57` directly, without importing the Wave 17 exclusion.
+Here
+
+```text
+sum_T q(T)=38.
+```
+
+The exact `d_K>=4` filter gives nine profiles with `14<=r<=19`. Endpoint-local
+crossing arithmetic again yields `delta(G[X])>=6`, while non-singleton indexed
+points give `|X|<=floor(3r/2)`. The spectral subset bound requires `|X|>=27`,
+so every profile with `r<=17` is impossible.
+
+For `r=18`, equality forces 27 size-two points and exact 6-regularity of
+`G[X]`. The surviving profiles are `q=2^16 3^2` and `q=2^17 4`. The former
+would separate the two odd labels from the sixteen even labels in a simple
+cubic point graph, which cannot give either odd label degree three. In the
+latter, every point incident with the unique `q=4` label is of type `(2,4)`
+and has induced degree at least seven, contradicting 6-regularity.
+
+For `r=19`, the only profile is `q=2^19` and `27<=|X|<=28`. At 27 vertices,
+the exact point-size profiles are `2^26 5`, `2^25 3 4`, and `2^24 3^3`;
+meeting-neighbor counts or the fixed-point sum exclude all three. At 28
+vertices, the sole profile `2^27 3` forces the size-three point to have at
+least nine active neighbors. The even degree sum is therefore at least 172,
+whereas
+
+```text
+2e(G[X]) <= 3(28)+28^2/9 = 1540/9
+```
+
+permits at most 170. Thus conditional `n3=57` is impossible. A materially
+independent checker reconstructs the profiles, overlap-deleted crossings,
+point-size partitions, and exact rational bounds, passing 14 tests and
+detecting 24 hostile mutations. Combining this exclusion with Wave 17 yields
+
+```text
+n3 >= 60,
+induced_C6_count >= 209346.
+```
+
+See `agents/2026-07-23-wave18-n3-57-structural.md` and
+`verification/2026-07-23-wave18-n3-57-structural-audit.md`. This is a
+conditional necessary bound over authenticated audited framework premises,
+not a target resolution, formal-kernel proof, or novelty determination;
+Conway-99 and novelty remain `UNKNOWN`.
+
+The Wave 18 literature lanes independently checked the exact endpoint numbers,
+the standard Rayleigh ingredient, current sources, and two close 2022/2026
+status leads. No exact published `n3=57` exclusion, `n3>=60`, or `209346`
+endpoint was found; those focused nonhits do not establish novelty. Baker's May
+2026 conference abstract describes a related induced-subgraph paradigm but
+states no exact theorem or proof. Ishihara's 2022 Theorem 28 claims
+nonexistence, but its equation (88) assumes every second-layer residual vertex
+has two first-layer residual neighbors. Root-label reconstruction instead gives
+degrees `1^20,2^51` and the corrected double count
+
+```text
+10(10)+11(2)=122=2(71)-20,
+```
+
+not 142. Thus that displayed proof is `REFUTED`, while both target outcomes
+remain `UNKNOWN`. See `agents/2026-07-23-wave18-status-search.md` and
+`verification/2026-07-23-wave18-status-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

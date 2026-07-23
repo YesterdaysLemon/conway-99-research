@@ -396,3 +396,28 @@ obligations:
       - "verification/2026-07-23-wave17-status-audit.md"
       - "SOURCES.bib"
     note: "The independent audit verifies the intriguing-set terminology and Reimbayev identity, rejects inapplicable near-matches, and confirms the official 455+2 counts with a JavaScript/indexed-page access qualification. It found no exact prior bound or target resolution through 2026-07-23, but those nonhits do not establish novelty. Target and novelty remain UNKNOWN."
+
+  - id: O-WAVE18-STRUCTURAL
+    requirement: "Adversarially reconstruct the sum-q=38 profile census, d_K>=4 premise, endpoint-local crossing and actual-neighbor semantics, incidence and exact spectral thresholds, every r=18 and r=19 point-size branch, independence from Wave 17 and forbidden assumptions, exact artifact replay, and hostile mutations."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave18-n3-57-structural.md"
+      - "attempts/wave18-n3-57-structural/exact_check.py"
+      - "attempts/wave18-n3-57-structural/exact-checks.json"
+      - "verification/2026-07-23-wave18-n3-57-structural-audit.md"
+      - "verification/n3-57-structural/independent_checker.py"
+      - "verification/n3-57-structural/test_independent_checker.py"
+      - "verification/n3-57-structural/checker-results.json"
+      - "verification/n3-57-structural/mutation-results.json"
+    note: "The independent audit passes 14 tests, detects all 24 frozen hostile mutations, replays all 10 submitted tests and the exact JSON, and verifies the conditional exclusion of n3=57 without importing Wave 17. Combined with the separately audited Wave 17 exclusion, the necessary bounds are n3>=60 and induced_C6_count>=209346. Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE18-STATUS
+    requirement: "Search current primary and authoritative sources for a Conway-99 resolution, prior exclusion of n3=57, n3>=60, induced_C6_count>=209346, and the exact active-set endpoint argument; independently audit Reimbayev's identity, the generic spectral ingredient, Baker's 2026 abstract, and Ishihara's 2022 purported proof."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave18-status-search.md"
+      - "verification/2026-07-23-wave18-status-audit.md"
+      - "SOURCES.bib"
+    note: "Two source-first lanes found no authoritative target resolution or exact prior Wave 18 endpoint through 2026-07-23; those nonhits do not establish novelty. The generic Rayleigh subset-edge bound is standard. Baker's abstract gives no exact theorem. Ishihara's equation (88) premise is refuted by the exact residual-cut degree multiset 1^20,2^51 and corrected count 122=2(71)-20, but both target outcomes remain UNKNOWN."

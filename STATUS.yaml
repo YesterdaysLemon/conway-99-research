@@ -375,4 +375,45 @@ seventeenth_research_wave:
   clean_clone_verdict: PASS
   catalog_premise: "Official House of Graphs connected cubic catalogs: 455 order-18 and 2 order-12 girth-at-least-five isomorphism classes; pinned bytes and all records independently validated, generators not replayed locally."
   caveat: "The independently audited structural reduction and separately implemented exact census exclude conditional n3=54, yielding n3>=57 and induced_C6_count>=209343. The 457 proofless raw SAT UNSAT rows are retained but are not evidence. Official catalog completeness and one representative per isomorphism class are external premises; all pinned bytes and records were independently checked. Two source-audit lanes found no exact prior bound or target resolution through 2026-07-23, but non-discovery is not a novelty certificate. No formal proof, unconditional Conway-99 result, or novelty claim is supplied."
+eighteenth_research_wave:
+  structural_discovery_commit: "e78b6f9194d0d7aa2f0e73c4780aa5e042227190"
+  structural_audit_commit: "90cf1267b5d40781eb7e66a1ad72cee835678b74"
+  status_search_commit: "ba13ceec2a6672d1c8ab6fed9c5c9760da3bbcaf"
+  status_audit_commit: "456dfee48dee119a4d0598c7b8f59de6561d9148"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_57_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_57_exclusion: EXCLUDED_VERIFIED
+  conditional_n3_lower_bound_combined_with_wave17: 60
+  conditional_induced_C6_lower_bound_combined_with_wave17: 209346
+  structural_independence: "The n3=57 exclusion does not import the Wave 17 n3=54 exclusion; only the final n3>=60 combination uses both audited waves."
+  structural_discovery_report: "agents/2026-07-23-wave18-n3-57-structural.md"
+  structural_discovery_report_sha256: "fa1dde1f96aaaf2c9a90c73308afbc967fab892fe79246bf7eafa2831fea38f6"
+  structural_attempt: "attempts/wave18-n3-57-structural/exact_check.py"
+  structural_exact_artifact: "attempts/wave18-n3-57-structural/exact-checks.json"
+  structural_exact_artifact_sha256: "76decce7f0af8e3bf2db483096a10a86321a9d7143e6123ad2081ec17d28604c"
+  structural_audit: "verification/2026-07-23-wave18-n3-57-structural-audit.md"
+  structural_audit_sha256: "8534456ac92fd704ad7b24f5d7d2c262ea31476132018e9d14a8e4779b27ae5d"
+  structural_independent_checker: "verification/n3-57-structural/independent_checker.py"
+  structural_independent_result: "verification/n3-57-structural/checker-results.json"
+  structural_independent_result_sha256: "1e640f9e3a0d754f60f66638c481f01ce878ef6ccdc140c2ad79aada903aaf1d"
+  structural_mutation_result: "verification/n3-57-structural/mutation-results.json"
+  structural_mutation_result_sha256: "eb5f4204e625bfa07f1a4f1e3c99940adacde68d73a0ae07bec1429ea7c40f59"
+  structural_discovery_tests_passed: 10
+  structural_independent_tests_passed: 14
+  structural_hostile_mutations_detected: 24
+  status_search_report: "agents/2026-07-23-wave18-status-search.md"
+  status_search_report_sha256: "9197c32813bf749b0dde1c7d64ed3294a56e9b4e6c3c92dd0d693ffe3e290ad3"
+  status_audit: "verification/2026-07-23-wave18-status-audit.md"
+  status_audit_sha256: "597c0e9b259c6514f72e0e426eef2bbbd42a150018a8965ab33b1f50a4786c32"
+  status_search_through: 2026-07-23
+  status_search_result: NO_RESOLUTION_FOUND
+  status_novelty_result: UNKNOWN
+  ishihara_equation_88_premise: REFUTED
+  ishihara_correct_residual_cut_degrees: "1^20,2^51"
+  ishihara_correct_double_count: "122=2(71)-20"
+  baker_2026_overlap: UNKNOWN_ABSTRACT_ONLY
+  integration_commit: PENDING
+  clean_clone_verdict: PENDING
+  caveat: "The independently audited Wave 18 argument excludes conditional n3=57 without importing Wave 17. Combining the two audited exclusions yields n3>=60 and induced_C6_count>=209346. The result is a human conditional necessary-bound proof with exact arithmetic companions, not a raw graph certificate or formal-kernel proof. The 2022 Ishihara displayed proof is refuted at equation (88), but that defect resolves neither target outcome. Two source-first lanes found no exact prior Wave 18 endpoint through 2026-07-23; non-discovery is not a novelty certificate. Conway-99 and novelty remain UNKNOWN."
 last_updated: 2026-07-23

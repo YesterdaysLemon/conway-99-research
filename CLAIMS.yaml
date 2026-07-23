@@ -351,6 +351,23 @@ claims:
       - "verification/2026-07-23-wave17-status-audit.md"
     limitations: "This is an internally verified conditional necessary bound, not a formal-kernel proof or a Conway-99 resolution. Catalog completeness and one representative per isomorphism class are official external premises; the pinned bytes and all 457 records were independently checked, but the catalog generators were not replayed locally. All raw SAT UNSAT rows lack proof traces and are not evidence. Exact prior-art searches through 2026-07-23 were nonhits, so novelty remains UNKNOWN."
 
+  - id: C-N3-EQUALITY-010
+    statement: "Conditional on the authenticated active-triangle and indexed-point framework, exact sum-q=38 profile filtering, endpoint-local crossing arithmetic, incidence counting, and the target spectral subset bound exclude n3=57 without using Wave 17. Combining this independent exclusion with C-N3-EQUALITY-009 forces n3>=60 and induced_C6_count>=209346."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-23-wave18-n3-57-structural.md"
+      - "attempts/wave18-n3-57-structural/exact_check.py"
+      - "attempts/wave18-n3-57-structural/exact-checks.json"
+      - "verification/2026-07-23-wave18-n3-57-structural-audit.md"
+      - "verification/n3-57-structural/independent_checker.py"
+      - "verification/n3-57-structural/checker-results.json"
+      - "verification/n3-57-structural/mutation-results.json"
+      - "agents/2026-07-23-wave18-status-search.md"
+      - "verification/2026-07-23-wave18-status-audit.md"
+    limitations: "The Wave 18 exclusion is a human conditional proof with exact arithmetic companions, not a raw 99-by-99 certificate or formal-kernel proof. Its combination to n3>=60 additionally uses the separately audited Wave 17 exclusion of n3=54 and its official-catalog premise. No target existence/nonexistence conclusion or novelty claim is supplied; current status and novelty remain UNKNOWN."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED
@@ -445,6 +462,16 @@ claims:
     evidence:
       - "STRUCTURE.md"
       - "verification/2026-07-22-first-wave-audit.md"
+
+  - id: C-ISHIHARA-001
+    statement: "Ishihara's displayed proof of Theorem 28 establishes nonexistence of srg(99,14,1,2)."
+    label: REFUTED
+    scope: PUBLISHED_PROOF_ARGUMENT_ONLY
+    evidence:
+      - "agents/2026-07-23-wave18-status-search.md"
+      - "verification/2026-07-23-wave18-status-audit.md"
+      - "SOURCES.bib"
+    limitations: "The exact correction refutes equation (88)'s uniform H2-to-H1 degree premise: the degrees are 1^20,2^51 and the count is 122=2(71)-20, not 142. This does not refute the theorem statement or prove existence; both target outcomes remain UNKNOWN."
 
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
