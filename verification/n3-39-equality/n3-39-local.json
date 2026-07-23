@@ -11,7 +11,7 @@
     "conditional_n3_39_survivors": 0,
     "target_result": "UNKNOWN"
   },
-  "git_commit": "474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b",
+  "git_commit": "c299b88fbd956c813ff3379ff236b3123a90d242",
   "premises": [
     "active_triangle_count=13",
     "K_is_simple_complement_of_L_on_distinct_active_triangles",
