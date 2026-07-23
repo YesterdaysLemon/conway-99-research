@@ -519,6 +519,10 @@ status.
 - [Wave 15 clean-source replay](verification/2026-07-23-wave15-clean-clone.md):
   detached 52/12/104/10/7/5/11/7-test replay, 18 frozen hash checks, and
   byte-identical canonical-LF certificate regeneration.
+- [Wave 16 clean-source replay](verification/2026-07-23-wave16-clean-clone.md):
+  detached 252-test replay, six semantic checkers, five byte-identical
+  regenerations, seven status hashes, public-hygiene scans, clean status, and
+  `git fsck`.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

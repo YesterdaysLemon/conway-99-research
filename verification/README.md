@@ -516,3 +516,8 @@ The independent literature/status audit is
 searches, corrections, citations, and the June 2026 Shpectorov lecture scope.
 It found no target resolution or exact prior Wave 16 bound through 2026-07-23,
 but correctly leaves both target status and novelty `UNKNOWN`.
+
+The detached release replay is `2026-07-23-wave16-clean-clone.md`. It records
+252 passing tests, six semantic checker entry points, five byte-identical
+regenerations, all seven Wave 16 status hashes, every ledger evidence path,
+public-hygiene scans, clean detached status, and `git fsck`.

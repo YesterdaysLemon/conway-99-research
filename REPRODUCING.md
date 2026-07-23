@@ -572,7 +572,9 @@ The non-computational literature record is preserved in
 `verification/2026-07-23-wave16-status-audit.md`. These reports record their
 exact query families, source URLs, page locations, source-file hashes where
 available, access failures, and the 2026-07-23 cutoff. Their search nonhits do
-not reproduce a mathematical conclusion or establish novelty.
+not reproduce a mathematical conclusion or establish novelty. The complete
+detached replay is recorded in
+`verification/2026-07-23-wave16-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.

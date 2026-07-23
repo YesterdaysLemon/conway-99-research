@@ -313,6 +313,8 @@ sixteenth_research_wave:
   status_search_through: 2026-07-23
   status_search_result: NO_RESOLUTION_FOUND
   status_novelty_result: UNKNOWN
+  clean_clone_commit: "ff153bf55492c870199d6e5eb4b2dd12d9ddf8a8"
+  clean_clone_replay: "verification/2026-07-23-wave16-clean-clone.md"
   computational_scan_status:
     SAT_CANDIDATE: 1
     TIMEOUT_UNKNOWN: 5
