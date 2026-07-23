@@ -153,6 +153,29 @@ frozen commits. See the
 exact hit but explicitly leaves novelty `UNKNOWN`. The result is a conditional
 necessary bound, not a resolution; Conway-99 remains `UNKNOWN`.
 
+Wave 10 excludes `n3=36`. After singleton points eliminate both mixed active
+profiles, the all-`q=2` complement `K` is 5-regular on twelve triangles. Local
+crossing constraints leave point types `222`, `223`, `224`, and `233`. A
+common-point rule, an open-twin obstruction in a cubic line graph, and exact
+SRG common-neighbor saturation eliminate all points of sizes three and four.
+The remaining size-two incidence forces `K=2K6`; each component then induces
+the rook graph `L(K3,3)=srg(9,4,1,2)`, whose `lambda` and `mu` counts are
+already saturated. This gives
+
+```text
+n3 >= 39,
+induced_C6_count >= 209,325.
+```
+
+The first draft's unjustified closed-`K5` shortcut is retained and repaired in
+the proof report. A compact checker covers every finite local step. Two
+independent support enumerators recover the same 216 abstract survivors and
+show that each violates rook saturation in eighteen places, leaving zero.
+See the [Wave 10 derivation](agents/2026-07-22-wave10-n3-36-equality.md),
+[equality audit](verification/2026-07-22-n3-36-equality-audit.md), and
+[clean replay](verification/2026-07-22-wave10-clean-clone.md). The result is
+again only a conditional necessary bound; Conway-99 remains `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -231,6 +254,9 @@ status.
 - [N3=33 equality audit](verification/2026-07-22-n3-33-equality-audit.md):
   adversarial reconstruction and exact finite checks proving the conditional
   strengthening `n3 >= 36`.
+- [N3=36 equality audit](verification/2026-07-22-n3-36-equality-audit.md):
+  repaired adversarial reconstruction and independent support census proving
+  the conditional strengthening `n3 >= 39`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
@@ -243,6 +269,9 @@ status.
   frozen-commit tests and replay of the equality-exclusion arithmetic checker.
 - [Wave 9 clean-source replay](verification/2026-07-22-wave9-clean-clone.md):
   frozen-commit tests and replay of the `n3=33` equality-exclusion checker.
+- [Wave 10 clean-source replay](verification/2026-07-22-wave10-clean-clone.md):
+  frozen-commit tests, certificate replay, and independent regeneration of all
+  216 abstract support masks.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

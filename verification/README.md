@@ -202,3 +202,47 @@ The expected compressed catalog hash is
 Exact deterministic census digests and the external-source boundary are in
 `n3-33-equality/n3-33-census-manifest.json`. The resulting `n3>=36` remains a
 conditional necessary bound, not a Conway-99 resolution.
+
+## `N3=36` equality exclusion
+
+`n3-36-equality/verify.py` checks the Wave 10 proof's finite steps: all three
+active profiles, singleton forcing, local point types and crossings, the
+common-point obstructions, all seventy labeled cubic graphs on six vertices,
+the rook-graph parameters, the line-graph-twin endpoint configuration, the
+three forced triangle-group pairings, and the strengthened bounds.
+
+```powershell
+python verification/n3-36-equality/verify.py
+python -m unittest verification.test_n3_36_equality -v
+```
+
+The committed support certificate is a separate finite audit of the sole
+all-size-two `2K6` branch. The primary program decomposes the degree-two
+bipartite supports into two permutation matchings. The independent verifier
+constructs the complementary matching recursively and imports no code from
+the primary implementation. Both recover exactly 216 masks with SHA-256
+`6659fe1972cbacc6980a9792557714730572817b43224b5f1fac24bb0c4ca61a`.
+Every abstract mask passes the auxiliary-`H` checks and has eighteen decisive
+original-SRG rook-saturation violations.
+
+```powershell
+python verification/n3-36-equality/verify_support.py `
+  --certificate verification/n3-36-equality/n3-36-support.json
+python -m unittest verification.test_n3_36_support -v
+```
+
+To regenerate a scratch certificate from the technical commit:
+
+```powershell
+$wave10Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-36-support.json"
+python verification/n3-36-equality/audit_support.py `
+  --certificate $wave10Certificate `
+  --git-commit 2194c2b68ebd5c34491d64f15d30f1a3597baa74
+python verification/n3-36-equality/verify_support.py `
+  --certificate $wave10Certificate
+```
+
+The reduction from a putative graph to this finite domain is human-checked and
+recorded separately. The census is not a standalone Conway-99 certificate.
+The resulting `n3>=39` is a conditional necessary bound, and the target remains
+`UNKNOWN`.

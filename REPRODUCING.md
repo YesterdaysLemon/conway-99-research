@@ -244,6 +244,41 @@ adversarial audit, deterministic manifest, and clean replay are recorded in
 `verification/2026-07-22-wave9-clean-clone.md`. They establish the conditional
 necessary bound `n3>=36`; Conway-99 remains `UNKNOWN`.
 
+Replay the Wave 10 exclusion of `n3=36` with:
+
+```powershell
+.venv\Scripts\python verification\n3-36-equality\verify.py
+.venv\Scripts\python -m unittest verification.test_n3_36_equality -v
+.venv\Scripts\python verification\n3-36-equality\verify_support.py `
+  --certificate verification\n3-36-equality\n3-36-support.json
+.venv\Scripts\python -m unittest verification.test_n3_36_support -v
+```
+
+The primary and independent support implementations use different enumeration
+strategies. To regenerate the certificate in a scratch path from the technical
+commit and replay it independently:
+
+```powershell
+$wave10Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-36-support.json"
+.venv\Scripts\python verification\n3-36-equality\audit_support.py `
+  --certificate $wave10Certificate `
+  --git-commit 2194c2b68ebd5c34491d64f15d30f1a3597baa74
+.venv\Scripts\python verification\n3-36-equality\verify_support.py `
+  --certificate $wave10Certificate
+```
+
+The expected domain has 14 integer resource profiles before local pruning,
+100 labeled point families in the forced `2K6` case, one point-family orbit,
+216 abstract support masks, and zero survivors after the original-SRG
+`lambda`/`mu` saturation check. The mask digest is
+`6659fe1972cbacc6980a9792557714730572817b43224b5f1fac24bb0c4ca61a`.
+The derivation, status search, adversarial audit, and clean replay are recorded
+in `agents/2026-07-22-wave10-n3-36-equality.md`,
+`agents/2026-07-22-wave10-status-search.md`,
+`verification/2026-07-22-n3-36-equality-audit.md`, and
+`verification/2026-07-22-wave10-clean-clone.md`. They establish only the
+conditional necessary bound `n3>=39`; Conway-99 remains `UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

@@ -131,4 +131,18 @@ ninth_research_wave:
   exhaustive_manifest: "verification/n3-33-equality/n3-33-census-manifest.json"
   clean_clone_replay: "verification/2026-07-22-wave9-clean-clone.md"
   caveat: "The verified conditional necessary bound is n3>=36. The result depends on the committed Wave 6-8 framework, no literature novelty is claimed, and Conway-99 remains UNKNOWN."
+tenth_research_wave:
+  source_commit: "2194c2b68ebd5c34491d64f15d30f1a3597baa74"
+  exhaustive_commit: "6da2cb997ad091459b4d934675621671fe2ede42"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_36_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave10-n3-36-equality.md"
+  prior_art_status_report: "agents/2026-07-22-wave10-status-search.md"
+  verifier_report: "verification/2026-07-22-n3-36-equality-audit.md"
+  structured_checker: "verification/n3-36-equality/verify.py"
+  support_census: "verification/n3-36-equality/audit_support.py"
+  independent_support_verifier: "verification/n3-36-equality/verify_support.py"
+  support_certificate: "verification/n3-36-equality/n3-36-support.json"
+  clean_clone_replay: "verification/2026-07-22-wave10-clean-clone.md"
+  caveat: "The verified conditional necessary bound is n3>=39. An initial closed-K5 shortcut was rejected and repaired; the result depends on the committed Wave 6-9 framework, no literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

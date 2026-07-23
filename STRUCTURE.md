@@ -42,12 +42,13 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, Wave 8 excludes equality at 30, and Wave 9
-excludes equality at 33. The currently strongest project bound is
+the next two multiples of three, Wave 8 excludes equality at 30, Wave 9
+excludes equality at 33, and Wave 10 excludes equality at 36. The currently
+strongest project bound is
 
 ```text
-n3 >= 36,
-induced_C6_count >= 209,322.
+n3 >= 39,
+induced_C6_count >= 209,325.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -135,6 +136,31 @@ compact checker, and adversarial audit are in
 `agents/2026-07-22-wave9-n3-33-equality.md`,
 `verification/n3-33-equality/verify.py`, and
 `verification/2026-07-22-n3-33-equality-audit.md`.
+
+Wave 10 treats `n3=36`. The active arithmetic gives `(2^12)`, `(2^9,3^2)`,
+and `(2^6,3^4)`. The singleton lemma eliminates both mixed profiles because
+their `q=3` triangles have `K`-degree one or zero. In the all-`q=2` case,
+`K` is 5-regular on twelve active triangles and the only local point types are
+`222`, `223`, `224`, and `233`.
+
+Three point sets cannot pairwise meet at three distinct active triangles:
+their original vertices would form a second graph-triangle on each edge. This
+common-point rule, together with the local crossing alternatives, eliminates
+size-four points and both possible modes of size-three incidence. In the
+all-size-two branch, the consumed edges form a cubic graph `F`, while
+`K-E(F)` is forced to be `4C3`; symmetry gives `F=2K3,3` and `K=2K6`.
+Within either component the nine original point objects induce
+`L(K3,3)=srg(9,4,1,2)`. Every internal pair has already saturated its required
+`lambda=1` or `mu=2` common-neighbor count, whereas the fixed-point identity
+forces each opposite point to be adjacent to two of them. This contradiction
+excludes `n3=36` without a completed-graph automorphism assumption.
+
+The proof, compact checker, independent 216-support census, and adversarial
+audit are in `agents/2026-07-22-wave10-n3-36-equality.md`,
+`verification/n3-36-equality/verify.py`,
+`verification/n3-36-equality/n3-36-support.json`, and
+`verification/2026-07-22-n3-36-equality-audit.md`. An initially proposed
+closed-`K5` shortcut failed review and is not used in the repaired proof.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

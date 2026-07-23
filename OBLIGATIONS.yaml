@@ -16,6 +16,8 @@ obligations:
     evidence:
       - "agents/2026-07-22-statement-literature.md"
       - "agents/2026-07-22-wave8-status-search.md"
+      - "agents/2026-07-22-wave9-status-search.md"
+      - "agents/2026-07-22-wave10-status-search.md"
       - "SOURCES.bib"
 
   - id: O-POSITIVE-CERTIFICATE
@@ -52,7 +54,9 @@ obligations:
       - "verification/2026-07-22-wave6-clean-clone.md"
       - "verification/2026-07-22-wave7-clean-clone.md"
       - "verification/2026-07-22-wave8-clean-clone.md"
-    note: "Wave 2, Wave 3/N3, and Waves 5-8 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave9-clean-clone.md"
+      - "verification/2026-07-22-wave10-clean-clone.md"
+    note: "Wave 2, Wave 3/N3, and Waves 5-10 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
     requirement: "Prove the frozen root normalization and legacy 11-branch cover complete without assuming a nontrivial solution automorphism."
@@ -206,3 +210,20 @@ obligations:
       - "verification/2026-07-22-n3-33-equality-audit.md"
       - "verification/2026-07-22-wave9-clean-clone.md"
     note: "The verified result is the conditional necessary bound n3>=36. The proof assumes no completed-graph automorphism, no novelty is claimed, and Conway-99 remains UNKNOWN."
+
+  - id: O-WAVE10-STRUCTURAL
+    requirement: "Adversarially verify the active-q profiles, singleton forcing, local point types, common-point rule, K6/rook saturation lemma, size-three line-graph-twin argument, all-size-two reduction, and exclusion of n3=36."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave10-n3-36-equality.md"
+      - "agents/2026-07-22-wave10-status-search.md"
+      - "verification/n3-36-equality/verify.py"
+      - "verification/n3-36-equality/audit_support.py"
+      - "verification/n3-36-equality/verify_support.py"
+      - "verification/n3-36-equality/n3-36-support.json"
+      - "verification/test_n3_36_equality.py"
+      - "verification/test_n3_36_support.py"
+      - "verification/2026-07-22-n3-36-equality-audit.md"
+      - "verification/2026-07-22-wave10-clean-clone.md"
+    note: "The initial closed-K5 shortcut was rejected and publicly repaired. The verified result is the conditional necessary bound n3>=39; no completed-graph automorphism or novelty is claimed, and Conway-99 remains UNKNOWN."
