@@ -851,6 +851,9 @@ twenty_fifth_research_wave:
     - "Bacher--Venkov: integral lattices from rational association-scheme idempotents"
     - "Berget et al.: rational orthogonal graph-lattice decompositions and integral Gram presentations"
     - "Standard theorem: the rank of an even unimodular positive-definite lattice is divisible by eight"
-  clean_clone_verdict: PENDING
+  clean_clone_commit: "156756d4ef98dc7233e29a7f8c9feeb143548197"
+  clean_clone_replay: "verification/2026-07-23-wave25-clean-clone.md"
+  clean_clone_replay_sha256: "890b7f023bfdb627aa9fdce22467da5233333c2bfa28096d5b917a531e598dbd"
+  clean_clone_verdict: PASS
   caveat: "The independent verifier excludes the trace-square equality case and verifies the necessary combined determinant cap det(B)<=6525 at n3=708. In that hypothetical equality case, S0=Q0^-1 is used only on the ker(C) block, where B0 is the identity; S=Q^-1 is false globally. The exact h=9, det(B)=81 E8/A2 abstract coordinate-lattice survivor remains. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The endpoint is not excluded, the headline conditional bound remains n3>=708, and target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23

@@ -1180,6 +1180,14 @@ the even-unimodular rank theorem. This is bounded non-discovery only; novelty
 and priority remain `UNKNOWN`. See
 `verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md`.
 
+The detached Wave 25 publication replay is
+`verification/2026-07-23-wave25-clean-clone.md`. It records 39 passing tests,
+two byte-identical regenerated JSON files, two exact manifests, 129 verified
+status path/hash pairs, scoped link and line-ending checks, zero exact-blob
+privacy findings in the release tree and the four-commit unpublished range,
+a clean tracked tree, and Git object integrity at integration commit
+`156756d4ef98dc7233e29a7f8c9feeb143548197`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

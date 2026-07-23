@@ -974,6 +974,10 @@ status.
 - [Wave 25 literature/status audit](verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md):
   30 pre-frozen exact and conceptual queries, ten inspected sources, prior-art
   separation, and bounded non-discovery with novelty left `UNKNOWN`.
+- [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
+  detached 39-test replay, two byte-identical generated files, two exact
+  manifests, metadata and unpublished-history privacy gates, clean status,
+  and `git fsck`.
 - [Waves 21-24 clean-source replay](verification/2026-07-23-wave24-clean-clone.md):
   detached 278-test replay, 15 byte-identical regenerated files, seven exact
   manifests, metadata and full unpublished-history privacy gates, clean

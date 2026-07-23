@@ -1217,6 +1217,15 @@ necessary cap `det(B)<=6525`, while preserving the exact abstract
 a projector or graph, improve the headline `n3>=708` bound, or resolve
 Conway-99.
 
+The detached incremental replay is recorded in
+`verification/2026-07-23-wave25-clean-clone.md`. At integration commit
+`156756d4ef98dc7233e29a7f8c9feeb143548197`, it passes all 39 Wave 25 tests,
+regenerates both exact JSON files byte-identically, checks both manifests and
+all 129 status path/hash pairs, scans the release tree and all four commits
+after the prior public checkpoint for credential-shaped or private-path
+payloads, and finishes with a clean tracked tree and
+`git fsck --full --strict`.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
