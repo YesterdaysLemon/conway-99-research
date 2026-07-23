@@ -369,6 +369,10 @@ seventeenth_research_wave:
   status_search_through: 2026-07-23
   status_search_result: NO_RESOLUTION_FOUND
   status_novelty_result: UNKNOWN
+  integration_commit: "89ec3b9aee855027e871421abf35cbfa1c9b3317"
+  clean_clone_commit: "89ec3b9aee855027e871421abf35cbfa1c9b3317"
+  clean_clone_replay: "verification/2026-07-23-wave17-clean-clone.md"
+  clean_clone_verdict: PASS
   catalog_premise: "Official House of Graphs connected cubic catalogs: 455 order-18 and 2 order-12 girth-at-least-five isomorphism classes; pinned bytes and all records independently validated, generators not replayed locally."
   caveat: "The independently audited structural reduction and separately implemented exact census exclude conditional n3=54, yielding n3>=57 and induced_C6_count>=209343. The 457 proofless raw SAT UNSAT rows are retained but are not evidence. Official catalog completeness and one representative per isomorphism class are external premises; all pinned bytes and records were independently checked. Two source-audit lanes found no exact prior bound or target resolution through 2026-07-23, but non-discovery is not a novelty certificate. No formal proof, unconditional Conway-99 result, or novelty claim is supplied."
 last_updated: 2026-07-23
