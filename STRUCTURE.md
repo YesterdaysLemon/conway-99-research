@@ -1116,6 +1116,70 @@ unpublished-history privacy checks, a clean tracked tree, and Git object
 integrity at integration commit
 `4111abeea284d218af31cfb7d37ec8a697400998`.
 
+## Strict first-endpoint arithmetic (`VERIFIED_INCONCLUSIVE`)
+
+Wave 25 excludes the only equality case in the Wave 24 trace-square bound.
+If `tr(C^2)=8`, equality in the rank and Cauchy estimates gives
+
+```text
+C^2=C,
+spectrum(C)={1^8,0^36}.
+```
+
+Because `C` is integral, its image and kernel split `Z^44` in a unimodular
+adapted basis. Self-adjointness for the positive Gram matrix `G` makes that
+split orthogonal. On the hypothetical equality case's rank-36 kernel block,
+
+```text
+Q0=G0/21,
+S0=21G0^(-1)=Q0^(-1).
+```
+
+Both `Q0` and `S0` are even integral positive-definite forms, so `Q0` would
+be even unimodular of rank 36. This contradicts the standard theorem that
+the signature of an even unimodular lattice is divisible by eight. The
+restriction to this equality-case kernel block is essential: globally
+`SQ=B`, not `I`, and the identity `S=Q^(-1)` is false.
+
+Trace parity and the excluded equality case now give
+
+```text
+tr(C^2) >= 10,
+tr(B^2) >= 116,
+det(B) < 6561.
+```
+
+The congruence `det(B)=1 (mod 4)` first gives `det(B)<=6557`. Exhausting the
+323 exact factor pairs allowed by `det(B)=h det(Q)`, the scaled-dual index
+conditions, and `det(Q)=1 (mod 4)` sharpens the combined necessary cap to
+
+```text
+det(B) <= 6525,
+```
+
+uniquely maximized at `(h,det(Q))=(9,725)`. The surviving index set remains
+
+```text
+{9,21,49,81,189,441,729,1029}.
+```
+
+This stricter arithmetic still does not exclude the endpoint. The exact
+Wave 24 `E8^5 direct_sum A2^2` package has `h=9`, `det(B)=81`, and
+`tr(C^2)=32`, so it survives. It still lacks a primitive embedding in
+`Z^231`, projector columns, Hadamard/Schur-square origin, and graph
+realization. Thus the project bound remains `n3>=708`, while Conway-99
+existence remains `UNKNOWN`. See
+`agents/2026-07-23-wave25-n3-708-strictness.md` and
+`verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md`.
+
+The proof-separated Wave 25 source audit froze 30 queries before proof
+inspection and inspected ten primary or authoritative sources. It found no
+exact match for this Conway-99 synthesis, while recording established prior
+art for rational-idempotent lattices, rational orthogonal graph lattices, and
+the even-unimodular rank theorem. This is bounded non-discovery only; novelty
+and priority remain `UNKNOWN`. See
+`verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

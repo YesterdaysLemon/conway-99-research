@@ -1173,6 +1173,50 @@ The verified result restricts the endpoint to eight arithmetic index values
 and verifies an abstract `h=9` lattice survivor. It does not exclude
 `n3=708` or construct the projector or graph.
 
+Replay the Wave 25 strict endpoint refinement:
+
+```powershell
+$wave25Stem = [guid]::NewGuid().ToString('N')
+$wave25Submitted = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave25-submitted-$wave25Stem.json"
+$wave25Independent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave25-independent-$wave25Stem.json"
+
+python -B -m unittest discover `
+  -s attempts\wave25-n3-708-strictness -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave25-n3-708-strictness `
+  -p test_independent_check.py -v
+python -B attempts\wave25-n3-708-strictness\exact_check.py `
+  --output $wave25Submitted
+python -B verification\wave25-n3-708-strictness\independent_check.py `
+  --output $wave25Independent
+Get-FileHash -Algorithm SHA256 $wave25Submitted,$wave25Independent
+```
+
+The submitted and independent suites pass 21/21 and 18/18. Expected hashes
+are:
+
+```text
+6da9200adf19a5305913178c271ac584e9825aa4f3594fad20717f9418d2b40e
+8c147d7b9da422c9d9b3d646015d95d737efc57d81964fabb3b33574a1d69f77
+```
+
+All six entries in
+`verification/wave25-n3-708-strictness/artifact-manifest.sha256` must match;
+the manifest itself has SHA-256
+`473601e70d6c873e1b691d8fcf7c769d907ae2a9eadff198d72e0936e9fcc1ce`.
+All four entries in
+`verification/wave25-literature-audit/publication-hashes.sha256` must match;
+that manifest has SHA-256
+`df3621eefa727aac0a75e8562b31dcfda0c4eec313dcdb0bd5e2f3704941d395`.
+
+The verifier reproduces `tr(C^2)>=10`, `tr(B^2)>=116`, and the combined
+necessary cap `det(B)<=6525`, while preserving the exact abstract
+`h=9`, `det(B)=81` survivor. The result does not exclude `n3=708`, construct
+a projector or graph, improve the headline `n3>=708` bound, or resolve
+Conway-99.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

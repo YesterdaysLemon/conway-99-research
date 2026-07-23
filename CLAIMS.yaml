@@ -573,6 +573,40 @@ claims:
       - "SOURCES.bib"
     limitations: "The exact-match result is bounded non-discovery, not a novelty or priority certificate. A located 2022 technical report claims nonexistence, but its displayed equation (88) uses an unjustified layer common-neighbor count; this gap does not prove the theorem false or establish target existence. Search indexing, inaccessible work, alternative notation, and future sources remain possible. Target status and Wave 24 novelty remain UNKNOWN."
 
+  - id: C-WAVE25-N3-708-STRICTNESS-023
+    statement: "Conditional on a putative srg(99,14,1,2) with n3=708 and the verified projector-lattice premises, write B=I+2C with tr(C)=8. Equality tr(C^2)=8 would make C an integral self-adjoint idempotent and split the lattice orthogonally into ranks 8 and 36; on ker(C), the scaled-dual forms become mutually inverse even integral positive-definite forms, hence an even unimodular rank-36 lattice, impossible because such a lattice's rank must be divisible by eight whereas 36 is not. Therefore tr(C^2)>=10 and tr(B^2)>=116. The logarithmic determinant equality is excluded, det(B)<6561, integrality and congruence give det(B)<=6557, and complete exact index arithmetic sharpens the combined cap to det(B)<=6525, uniquely maximized at (h,det(Q))=(9,725), while retaining exactly h in {9,21,49,81,189,441,729,1029}."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_STRICT_TRACE_AND_COMBINED_DETERMINANT_REFINEMENT
+    evidence:
+      - "agents/2026-07-23-wave25-n3-708-strictness.md"
+      - "attempts/wave25-n3-708-strictness/exact_check.py"
+      - "attempts/wave25-n3-708-strictness/test_exact_check.py"
+      - "attempts/wave25-n3-708-strictness/exact-results.json"
+      - "attempts/wave25-n3-708-strictness/input-freeze.sha256"
+      - "attempts/wave25-n3-708-strictness/failed-routes.md"
+      - "attempts/wave25-n3-708-strictness/run-report.yaml"
+      - "verification/wave25-n3-708-strictness/preinspection-freeze.sha256"
+      - "verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md"
+      - "verification/wave25-n3-708-strictness/independent_check.py"
+      - "verification/wave25-n3-708-strictness/test_independent_check.py"
+      - "verification/wave25-n3-708-strictness/independent-results.json"
+      - "verification/wave25-n3-708-strictness/artifact-manifest.sha256"
+      - "verification/wave25-n3-708-strictness/run-report.yaml"
+    limitations: "In the hypothetical equality case only, the block identity S0=Q0^-1 is valid after restriction to ker(C), where B0 is the identity; S=Q^-1 is false globally and is explicitly rejected by both packages. The combined cap is a necessary arithmetic restriction, not a graph construction or endpoint exclusion. The exact h=9, det(B)=81 abstract E8^5 direct-sum A2^2 coordinate-lattice survivor remains. No primitive embedding in Z^231, projector/Hadamard origin, Schur-square origin, 231-vector realization, or graph is supplied. Thus n3=708 is not excluded, the current lower bound does not improve, and Conway-99 and novelty remain UNKNOWN."
+
+  - id: C-WAVE25-LITERATURE-024
+    statement: "At the frozen 2026-07-23 cutoff, a proof-separated audit froze 30 searches before inspecting any Wave 25 proof artifact, inspected ten primary or authoritative sources, and found no exact source combining Conway-99 or srg(99,14,1,2), n3=708, the integral self-adjoint idempotent split, the even-unimodular rank-36 obstruction, det(B)<=6525, and the ordered eight-index list. Current specialized sources inspected in the audit still treated the target as unresolved. The general idempotent-lattice, graph-lattice, and rank-divisibility ingredients have older cited prior art."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_CONCEPTUAL_PRIOR_ART_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave25-literature-audit/preinspection-query-plan.md"
+      - "verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md"
+      - "verification/wave25-literature-audit/source-query-ledger.json"
+      - "verification/wave25-literature-audit/run-report.yaml"
+      - "verification/wave25-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    limitations: "Thirty search nonhits are bounded non-discovery, not a novelty, priority, or openness certificate. MathSciNet and zbMATH subscription searches were unavailable; indexing can omit or lag theses, preprints, conference manuscripts, and alternative notation. The audit did not inspect the proof. Target status and Wave 25 novelty remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

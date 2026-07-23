@@ -6,11 +6,11 @@ literature_audit:
   through: 2026-07-23
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md"
-  latest_audit_sha256: "e8a9af0e7cbd72f4e34988a50ce487852e2520e6dcac081db8bf6a020b5a1c8d"
-  source_query_ledger: "verification/wave24-literature-audit/source-query-ledger.json"
-  source_query_ledger_sha256: "dc916317ca3930257afb2e93d444f75de97d2bc9fa8cf3be30784ae7d282a244"
-  exact_wave23_prior_hit: NONE_IN_BOUNDED_AUDIT
+  latest_audit: "verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md"
+  latest_audit_sha256: "76a839b16d2c7ac3bfe85548e33908943f32859d9a95a67833f02bab38feecbc"
+  source_query_ledger: "verification/wave25-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "9115c80e432d6d834497621f5e9e7238064afc2d02696285a3557f115d4bf053"
+  exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -778,4 +778,79 @@ twenty_fourth_research_wave:
   clean_clone_replay_sha256: "bcf419537ad2ebd5cdcd2b2bdfdd4956419102946174f35657f5eda023bbc481"
   clean_clone_verdict: PASS
   caveat: "The independently verified logarithmic argument gives det(B)<=6561 and exactly eight necessary arithmetic index survivors at n3=708. A complete exact E8/A2 coordinate-lattice package survives at h=9, proving that the abstract determinant, scaled-dual, parity, positivity, and minimum identities alone do not exclude the endpoint. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The source-first audit found no exact match but records older conceptual ingredient prior art; bounded non-discovery is not a novelty certificate. The current conditional bound remains n3>=708; target existence and novelty remain UNKNOWN."
+twenty_fifth_research_wave:
+  discovery_commit: "8e552d50efb9ecc5c5a7b0ec819801f8c7d6b96f"
+  verification_commit: "e41d6da44486281d8972437caafc9494b6d054cb"
+  literature_audit_commit: "dd49c162302f929374f8d64e454dd245f435d331"
+  verifier_verdict: PASS_SCOPED_STRICTNESS
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  trace_C2_lower_bound: 10
+  trace_B2_lower_bound: 116
+  logarithmic_determinant_bound: "det(B)<6561"
+  direct_integral_congruence_det_B_cap: 6557
+  combined_index_det_B_cap: 6525
+  combined_cap_unique_pair:
+    h: 9
+    det_Q: 725
+    det_B: 6525
+  surviving_lattice_indices: [9, 21, 49, 81, 189, 441, 729, 1029]
+  exact_factor_pair_count: 323
+  discovery_report: "agents/2026-07-23-wave25-n3-708-strictness.md"
+  discovery_report_sha256: "a341323921ad8e6ed5404a701abe9135b9b5c465c76280d80e52cc7daefd69c1"
+  submitted_checker: "attempts/wave25-n3-708-strictness/exact_check.py"
+  submitted_checker_sha256: "4da24d38e19583c73724a5bf7ed2ee279ad6b31a8b49cbb367b56ed7f7ca81b8"
+  submitted_result: "attempts/wave25-n3-708-strictness/exact-results.json"
+  submitted_result_sha256: "6da9200adf19a5305913178c271ac584e9825aa4f3594fad20717f9418d2b40e"
+  submitted_input_freeze: "attempts/wave25-n3-708-strictness/input-freeze.sha256"
+  submitted_input_freeze_sha256: "d7b2f8a24e7e481c920bbbc9a5a3af920b48f7540874760f4c9d218c98ebb203"
+  submitted_failed_routes: "attempts/wave25-n3-708-strictness/failed-routes.md"
+  submitted_failed_routes_sha256: "f1b9f4277a2a56b6b1a07332f01a7a7cff897d588e9a01b3f8e6199117c45452"
+  submitted_run_report: "attempts/wave25-n3-708-strictness/run-report.yaml"
+  submitted_run_report_sha256: "9829007ec2355b5b84b3997849bd7be19050a0610b2d5738604a6c5af4fa2166"
+  verifier_audit: "verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md"
+  verifier_audit_sha256: "642255098bf424654e1a3a8c926a924ae8bf068cd422f0f367f64f9e402648de"
+  verifier_input_freeze: "verification/wave25-n3-708-strictness/preinspection-freeze.sha256"
+  verifier_input_freeze_sha256: "a7d3bc3cdb34bd28ab22953db8891af873c82f42fcccb27fb5d104c45749cd10"
+  independent_checker: "verification/wave25-n3-708-strictness/independent_check.py"
+  independent_checker_sha256: "82c5c3078e34129927971838677fef1cdc54fef37972b4c88d6927506fcbf510"
+  independent_result: "verification/wave25-n3-708-strictness/independent-results.json"
+  independent_result_sha256: "8c147d7b9da422c9d9b3d646015d95d737efc57d81964fabb3b33574a1d69f77"
+  verifier_manifest: "verification/wave25-n3-708-strictness/artifact-manifest.sha256"
+  verifier_manifest_sha256: "473601e70d6c873e1b691d8fcf7c769d907ae2a9eadff198d72e0936e9fcc1ce"
+  verifier_run_report: "verification/wave25-n3-708-strictness/run-report.yaml"
+  verifier_run_report_sha256: "f1f3ef5c7c4c296d976dbb2f72d9ead7cc81cb7ae010f2220e230b2c7d9f5f90"
+  submitted_tests_passed: 21
+  independent_tests_passed: 18
+  global_S_equals_Q_inverse: false
+  equality_case_kernel_S0_equals_Q0_inverse: true
+  abstract_coordinate_lattice_survivor: VERIFIED_AT_H_9_DET_B_81
+  primitive_embedding_in_Z231: NOT_PROVED
+  projector_hadamard_origin: NOT_PROVED
+  schur_square_origin: NOT_PROVED
+  graph_construction: false
+  source_status_audit: "verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md"
+  source_status_audit_sha256: "76a839b16d2c7ac3bfe85548e33908943f32859d9a95a67833f02bab38feecbc"
+  source_query_ledger: "verification/wave25-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "9115c80e432d6d834497621f5e9e7238064afc2d02696285a3557f115d4bf053"
+  source_query_plan: "verification/wave25-literature-audit/preinspection-query-plan.md"
+  source_query_plan_sha256: "4558915702e5c52f2ce0280d58046d7055bb4037da111c61a665df9b17de2f6a"
+  source_run_report: "verification/wave25-literature-audit/run-report.yaml"
+  source_run_report_sha256: "2dd1ec9e68dd6336840af0b9b33defb314d5734f51970ecaa491637441b38166"
+  source_publication_manifest: "verification/wave25-literature-audit/publication-hashes.sha256"
+  source_publication_manifest_sha256: "df3621eefa727aac0a75e8562b31dcfda0c4eec313dcdb0bd5e2f3704941d395"
+  literature_query_count: 30
+  inspected_source_count: 10
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  conceptual_prior_art:
+    - "Bacher--Venkov: integral lattices from rational association-scheme idempotents"
+    - "Berget et al.: rational orthogonal graph-lattice decompositions and integral Gram presentations"
+    - "Standard theorem: the rank of an even unimodular positive-definite lattice is divisible by eight"
+  clean_clone_verdict: PENDING
+  caveat: "The independent verifier excludes the trace-square equality case and verifies the necessary combined determinant cap det(B)<=6525 at n3=708. In that hypothetical equality case, S0=Q0^-1 is used only on the ker(C) block, where B0 is the identity; S=Q^-1 is false globally. The exact h=9, det(B)=81 E8/A2 abstract coordinate-lattice survivor remains. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The endpoint is not excluded, the headline conditional bound remains n3>=708, and target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23

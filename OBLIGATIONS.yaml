@@ -671,3 +671,37 @@ obligations:
       - "verification/wave24-literature-audit/publication-hashes.sha256"
       - "SOURCES.bib"
     note: "The proof-separated audit verifies that its inspected current specialized sources still treat the target as unresolved and records 40 individual h-template searches plus exact endpoint, determinant, inequality, and method queries. No exact Wave 24 match was located. Knill's pseudodeterminant work and Bacher--Venkov's rational-idempotent lattice construction are recorded as conceptual analogues. The 2022 Ishihara claim is retained with a concrete equation-(88) gap. Every nonhit is bounded; target status, novelty, and priority remain UNKNOWN."
+
+  - id: O-WAVE25-N3-708-STRICTNESS
+    requirement: "Blindly freeze and independently reconstruct the n3=708 equality-spectrum exclusion, integral self-adjoint idempotent split, equality-case kernel-block scaled-dual inverse identity, even positive-definite unimodular rank-36 contradiction, trace-square parity, strict logarithmic determinant bound, complete 3,7-smooth h/det(Q) enumeration, hostile premise relaxations, deterministic submitted replay, retained abstract survivor, and the boundary between this arithmetic restriction and a projector/Schur-square/graph realization."
+    critical: true
+    status: PASS_SCOPED_STRICTNESS
+    evidence:
+      - "agents/2026-07-23-wave25-n3-708-strictness.md"
+      - "attempts/wave25-n3-708-strictness/exact_check.py"
+      - "attempts/wave25-n3-708-strictness/test_exact_check.py"
+      - "attempts/wave25-n3-708-strictness/exact-results.json"
+      - "attempts/wave25-n3-708-strictness/input-freeze.sha256"
+      - "attempts/wave25-n3-708-strictness/failed-routes.md"
+      - "attempts/wave25-n3-708-strictness/run-report.yaml"
+      - "verification/wave25-n3-708-strictness/preinspection-freeze.sha256"
+      - "verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md"
+      - "verification/wave25-n3-708-strictness/independent_check.py"
+      - "verification/wave25-n3-708-strictness/test_independent_check.py"
+      - "verification/wave25-n3-708-strictness/independent-results.json"
+      - "verification/wave25-n3-708-strictness/artifact-manifest.sha256"
+      - "verification/wave25-n3-708-strictness/run-report.yaml"
+    note: "The discovery suite passes 21 tests and the separately implemented verifier passes 18 hostile tests. Both exclude tr(C^2)=8, verify tr(C^2)>=10 and tr(B^2)>=116, enumerate all 323 allowed h/det(Q) factor pairs, and obtain the combined cap det(B)<=6525 with the same eight h values. In the hypothetical equality case, the verifier proves S0=Q0^-1 only on the ker(C) block and explicitly rejects the false global identity S=Q^-1. The h=9 abstract coordinate-lattice survivor remains, so n3=708 is not excluded; the current bound remains n3>=708, and target existence and novelty remain UNKNOWN."
+
+  - id: O-WAVE25-LITERATURE-STATUS
+    requirement: "Freeze a proof-separated source-first plan and audit current target status, the exact Wave 25 endpoint and determinant fingerprints, integral self-adjoint idempotent and kernel-splitting terminology, even-unimodular rank-36 prior theory, projector and graph-lattice analogues, source provenance, access failures, and bounded non-discovery language without promoting search nonhits to novelty."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave25-literature-audit/preinspection-query-plan.md"
+      - "verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md"
+      - "verification/wave25-literature-audit/source-query-ledger.json"
+      - "verification/wave25-literature-audit/run-report.yaml"
+      - "verification/wave25-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    note: "The audit froze 30 queries before inspecting proof artifacts and inspected ten primary or authoritative sources. It found no exact Wave 25 match. Bacher--Venkov, Berget et al., and the standard even-unimodular rank-divisibility theorem are recorded as conceptual or theorem-level prior art, not novel ingredients. Search coverage is bounded and subscription databases were unavailable; target status, novelty, and priority remain UNKNOWN."

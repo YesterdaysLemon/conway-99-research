@@ -32,6 +32,9 @@ and the normalized search problem.
 - **Resolution claim:** none.
 - **Strongest internally verified conditional bound:** `n3>=708`, hence at
   least `209,994` induced six-cycles; this does not resolve existence.
+- **First surviving endpoint:** at `n3=708`, the independently verified
+  necessary arithmetic now includes `tr(C^2)>=10` and `det(B)<=6525`; an
+  abstract lattice survivor remains, so the endpoint is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -717,6 +720,47 @@ records the concrete layer-counting gap in a 2022 report claiming
 nonexistence. Exact-match non-discovery is bounded; novelty and priority
 remain `UNKNOWN`.
 
+Wave 25 makes the Wave 24 endpoint inequality strict. Equality
+`tr(C^2)=8` would force the integral self-adjoint matrix `C` to be an
+idempotent and split the lattice orthogonally into ranks 8 and 36. On
+the hypothetical equality-case block `ker(C)`—and only there—the scaled-dual
+forms are inverse even integral positive-definite forms, producing an even
+unimodular rank-36 lattice. The
+standard rank-divisibility theorem rules this out. Consequently,
+
+```text
+tr(C^2) >= 10,
+tr(B^2) >= 116,
+det(B) < 6561.
+```
+
+Since `det(B)` is an integer congruent to one modulo four, the direct cap is
+`6557`; complete exact index arithmetic over all 323 allowed factor pairs
+sharpens the combined necessary cap to
+
+```text
+det(B) <= 6525,
+```
+
+with the maximum uniquely attained by `(h,det(Q))=(9,725)`. The same eight
+possible values of `h` survive. The
+[independent Wave 25 audit](verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md)
+rebuilds the argument without discovery internals, passes 18 hostile tests,
+and explicitly rejects the false global identity `S=Q^-1`: in the
+hypothetical equality case, `S0=Q0^(-1)` is used only on the `ker(C)` block,
+where `B0=I`. The exact abstract
+`h=9`, `det(B)=81` survivor from Wave 24 still passes, so this is a strict
+arithmetic refinement, not an exclusion of `n3=708`, a graph construction,
+or a resolution of Conway-99. The headline bound remains `n3>=708`.
+
+The proof-separated
+[Wave 25 literature audit](verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md)
+froze 30 queries before opening proof artifacts and inspected ten primary or
+authoritative sources. It found no exact Wave 25 match, while recording older
+prior art for idempotent lattices, rational orthogonal graph lattices, and the
+even-unimodular rank theorem. These are bounded search results; target status,
+novelty, and priority remain `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -923,6 +967,13 @@ status.
 - [Wave 24 literature/status audit](verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md):
   exact endpoint and method queries, 40 individual index templates,
   conceptual ingredient prior art, and bounded non-discovery.
+- [Wave 25 `n3=708` strictness audit](verification/wave25-n3-708-strictness/2026-07-23T215549Z-audit.md):
+  independent idempotent-split and rank-36 obstruction, complete 323-pair
+  determinant enumeration, 18 hostile tests, and explicit rejection of the
+  false global inverse identity.
+- [Wave 25 literature/status audit](verification/wave25-literature-audit/2026-07-23-wave25-literature-audit.md):
+  30 pre-frozen exact and conceptual queries, ten inspected sources, prior-art
+  separation, and bounded non-discovery with novelty left `UNKNOWN`.
 - [Waves 21-24 clean-source replay](verification/2026-07-23-wave24-clean-clone.md):
   detached 278-test replay, 15 byte-identical regenerated files, seven exact
   manifests, metadata and full unpublished-history privacy gates, clean
