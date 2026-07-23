@@ -304,3 +304,21 @@ obligations:
       - "verification/n3-48-computation/independent-audit-results.json"
       - "verification/2026-07-22-wave14-status-audit.md"
     note: "The scoped reduction and positive relaxation objects pass independent reconstruction. Wave 14 does not exclude n3=48: seven negative rows remain UNSAT_UNVERIFIED and the remaining bounded rows are SAT_CANDIDATE, BUDGET_UNKNOWN, or TIMEOUT_UNKNOWN. The strongest verified bound remains n3>=48 and induced_C6_count>=209334; novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE15-GLOBAL
+    requirement: "Adversarially verify the indexed active-point-to-original-vertex map, the active-set order bound, distinct active-triangle neighbors, the size-two support-neighbor separation, induced minimum degree six, the target spectral subset inequality, and the independent outside-degree second-moment contradiction; require two independent discovery and verification lanes plus exact public-byte provenance."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave15-global-lift.md"
+      - "attempts/wave15-global-lift/subset-moment-certificate.json"
+      - "attempts/wave15-global-lift/verify_subset_moment_certificate.py"
+      - "verification/2026-07-23-wave15-global-lift-audit.md"
+      - "verification/n3-48-global-lift/independent_check.py"
+      - "verification/n3-48-global-lift/regenerated-certificate.json"
+      - "agents/2026-07-23-wave15-algebraic.md"
+      - "attempts/wave15-algebraic/exact_checks.py"
+      - "attempts/wave15-algebraic/exact-checks.json"
+      - "verification/2026-07-23-wave15-algebraic-audit.md"
+      - "verification/n3-48-algebraic/independent_check.py"
+    note: "Two independent semantic audits pass the conditional exclusion of n3=48, yielding n3>=51 and induced_C6_count>=209337. The first algebraic JSON used an ambiguous moment key and the first global certificate had a Windows CRLF/public-LF hash mismatch; both failures, repairs, and re-audits are public. The proof is human with exact arithmetic companions, not a formal kernel proof. Novelty and Conway-99 remain UNKNOWN."

@@ -42,12 +42,13 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, and Waves 8--13 exclude equality at 30, 33,
-36, 39, 42, and 45. The currently strongest project bound is
+the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
+39, 42, and 45, and Wave 15 excludes equality at 48. The currently strongest
+project bound is
 
 ```text
-n3 >= 48,
-induced_C6_count >= 209,334.
+n3 >= 51,
+induced_C6_count >= 209,337.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -332,6 +333,55 @@ reduction and independent audits are in
 `verification/2026-07-22-wave14-n3-48-computation-audit.md`. Thus Wave 14
 does not improve the verified `n3>=48` bound. The equality exclusion, target,
 and novelty remain `UNKNOWN` at this checkpoint.
+
+Wave 15 excludes the Wave 14 `n3=48` residual with a global induced-subgraph
+obstruction. Let
+
+```text
+X = {u in V(G) : S_u is nonempty}.
+```
+
+The sixteen active triangle labels have point degree three, so
+`sum_u |S_u|=48`. Every nonempty point has size at least two; hence
+`|X|<=24`. Each active triangle through `u` supplies its other two vertices as
+distinct neighbors of `u` in `X`. Distinct triangles through `u` cannot share
+another vertex because every graph edge lies in exactly one triangle. Thus a
+point of size at least three already gives six induced neighbors.
+
+If `|S_u|=2`, the Wave 14 support graph has two distinct actual graph-edge
+neighbors at `S_u`. Neither is one of the four triangle neighbors. If such a
+support edge met `S_u` in an active label, deleting the shared label would
+leave one crossing row and at most two columns. The audited two-sided `0/2`
+crossing law makes its `H`-degree zero (and in any event below four), whereas
+a support edge has `H`-degree four. Therefore the two support neighbors are
+new, and every vertex of `G[X]` has induced degree at least six.
+
+The target spectrum is `14^1,3^54,(-4)^44`. For `m=|X|`, decomposing the
+characteristic vector of `X` into its all-ones and orthogonal parts gives
+
+```text
+2e(X) <= 14m^2/99 + 3(m-m^2/99)
+       = 3m + m^2/9.
+```
+
+But minimum degree six gives `2e(X)>=6m`, so `m>=27`, contradicting
+`m<=24`. A separate exact count of the first two moments of outside degrees
+reaches the same contradiction by Cauchy--Schwarz. Consequently `n3=48` is
+impossible; the divisibility `3|n3` and Reimbayev identity give
+
+```text
+n3 >= 51,
+induced_C6_count >= 209337.
+```
+
+Two discovery lanes and two independent audits reproduce the result. The
+explicit Wave 14 all-size-two object remains a valid countermodel to its
+stated active/local/support relaxation, but its lift to the full SRG equations
+is refuted. See `agents/2026-07-23-wave15-global-lift.md`,
+`agents/2026-07-23-wave15-algebraic.md`,
+`verification/2026-07-23-wave15-global-lift-audit.md`, and
+`verification/2026-07-23-wave15-algebraic-audit.md`. This is a conditional
+necessary bound only; Conway-99 and novelty remain `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

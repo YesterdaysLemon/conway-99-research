@@ -410,3 +410,50 @@ The literature/status audit also keeps the target and novelty `UNKNOWN`.
 The detached clean-source replay, four byte-identical regenerations, and the
 pre-release timestamp-determinism repair are recorded in
 `2026-07-23-wave14-clean-clone.md`.
+
+## `N3=48` global exclusion
+
+Wave 15 brings the full SRG equations back into the Wave 14 residual. The
+active original-vertex set has order at most 24 and induced minimum degree at
+least six. The target spectrum gives
+
+```text
+2e(X) <= 3|X| + |X|^2/9,
+```
+
+so minimum degree six forces `|X|>=27`, a contradiction. An independent
+outside-degree second-moment argument reaches the same obstruction.
+
+```powershell
+python -B attempts/wave15-global-lift/verify_subset_moment_certificate.py `
+  attempts/wave15-global-lift/subset-moment-certificate.json
+python -B -m unittest -v `
+  attempts/wave15-global-lift/test_subset_moment.py
+python -B verification/n3-48-global-lift/independent_check.py
+
+$wave15Python = (Resolve-Path '.venv\Scripts\python.exe').Path
+Push-Location verification/n3-48-global-lift
+& $wave15Python -B -m unittest -v test_independent_check.py
+Pop-Location
+
+python -B attempts/wave15-algebraic/exact_checks.py `
+  --output attempts/wave15-algebraic/exact-checks.json
+python -B verification/n3-48-algebraic/independent_check.py `
+  --artifact attempts/wave15-algebraic/exact-checks.json
+python -B -m unittest -v `
+  verification/n3-48-algebraic/test_independent_check.py
+```
+
+The two discovery lanes and their separate adversarial audits pass 5, 11,
+and 7 focused tests. The global certificate and independent regeneration are
+byte-identical canonical-LF files. The first CRLF/public-LF mismatch is kept
+at baseline commit `522260a` and repaired at `874af27`; the algebraic lane's
+ambiguous weighted-moment key is also preserved and re-audited. The verified
+conditional consequence is
+
+```text
+n3 >= 51,
+induced_C6_count >= 209337,
+Conway-99 = UNKNOWN,
+novelty = UNKNOWN.
+```

@@ -277,6 +277,43 @@ verified project bound therefore remains `n3>=48` and
 `induced_C6_count>=209334`; exclusion of equality, Conway-99, and novelty are
 all `UNKNOWN` at this checkpoint.
 
+Wave 15 closes that residual by bringing back a global SRG constraint. Let
+`X` be the original vertices whose active point `S_u` is nonempty. The Wave 14
+incidence count gives `|X|<=24`. A point of size `s` supplies `2s` distinct
+active-triangle neighbors inside `X`. Size-three points therefore already
+have six; a size-two point has four such neighbors plus two distinct support
+neighbors that cannot meet it in an active triangle. Hence
+`delta(G[X])>=6`.
+
+For every `m`-vertex induced subgraph of an `srg(99,14,1,2)`, the largest
+nontrivial eigenvalue gives
+
+```text
+2e(X) <= 3m + m^2/9.
+```
+
+Minimum degree six would require `2e(X)>=6m`, forcing `m>=27`, contrary to
+`m<=24`. An independent outside-common-neighbor second-moment calculation
+gives the same contradiction. Two discovery lanes reached the obstruction
+independently, and two adversarial verifiers reconstructed the delicate
+point-to-original-vertex and meeting/support bridges. Therefore
+
+```text
+n3 >= 51,
+induced_C6_count >= 209,337.
+```
+
+See the [global-lift proof](agents/2026-07-23-wave15-global-lift.md),
+[global-lift audit](verification/2026-07-23-wave15-global-lift-audit.md),
+[independent algebraic proof](agents/2026-07-23-wave15-algebraic.md), and
+[algebraic audit](verification/2026-07-23-wave15-algebraic-audit.md). The
+initial global certificate had a Windows CRLF/public-LF hash mismatch; failed
+baseline `522260a` and repair `874af27` preserve that provenance. The Wave 14
+active relaxation object remains valid in its narrow scope, while every lift
+of the audited residual to a full target graph is excluded. This is still a
+conditional necessary bound, not a resolution: Conway-99 and novelty remain
+`UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -389,6 +426,12 @@ status.
 - [Wave 14 literature/status audit](verification/2026-07-22-wave14-status-audit.md):
   source-frozen audit of the `N3` notation, hexagon identity, unresolved target
   status, and nonexhaustive novelty search.
+- [Wave 15 global-lift audit](verification/2026-07-23-wave15-global-lift-audit.md):
+  independent reconstruction of the active-set minimum-degree bridge, spectral
+  bound, outside second moment, and conditional exclusion of `n3=48`.
+- [Wave 15 algebraic audit](verification/2026-07-23-wave15-algebraic-audit.md):
+  blind second audit of the same exclusion plus exact triangle-intersection
+  moments and the repaired weighted-moment metadata.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

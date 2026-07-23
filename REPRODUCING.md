@@ -467,6 +467,56 @@ the seven negative rows has a checked proof trace. Wave 14 therefore leaves
 the verified bound at `n3>=48` and `induced_C6_count>=209334`; equality,
 Conway-99, and novelty remain `UNKNOWN`.
 
+Replay the Wave 15 global-lift certificate, submitted checks, and independent
+audit from the repository root:
+
+```powershell
+.venv\Scripts\python -B `
+  attempts\wave15-global-lift\build_subset_moment_certificate.py `
+  --countermodel attempts\wave14-proof-a\all2-active-countermodel.json `
+  --output verification\n3-48-global-lift\regenerated-certificate.json
+.venv\Scripts\python -B `
+  attempts\wave15-global-lift\verify_subset_moment_certificate.py `
+  attempts\wave15-global-lift\subset-moment-certificate.json
+.venv\Scripts\python -B -m unittest -v `
+  attempts\wave15-global-lift\test_subset_moment.py
+.venv\Scripts\python -B `
+  verification\n3-48-global-lift\independent_check.py
+
+$wave15Python = (Resolve-Path '.venv\Scripts\python.exe').Path
+Push-Location verification\n3-48-global-lift
+& $wave15Python -B -m unittest -v test_independent_check.py
+Pop-Location
+```
+
+The submitted certificate and independently regenerated certificate must be
+byte-identical LF files with SHA-256
+`cb02ab80f92d7d2c8ec5140e3be2916354976442aa2e1869524aa728c73bd386`.
+The verifier-directory change is intentional: that focused suite imports its
+sibling checker. The first repository-root invocation of that suite failed
+before collecting tests; the corrected working directory and failure are
+both recorded in the audit trail.
+
+Replay the independent algebraic lane and its adversarial checker from the
+repository root:
+
+```powershell
+.venv\Scripts\python -B attempts\wave15-algebraic\exact_checks.py `
+  --output attempts\wave15-algebraic\exact-checks.json
+.venv\Scripts\python -B `
+  verification\n3-48-algebraic\independent_check.py `
+  --artifact attempts\wave15-algebraic\exact-checks.json
+.venv\Scripts\python -B -m unittest -v `
+  verification\n3-48-algebraic\test_independent_check.py
+```
+
+The algebraic JSON must have SHA-256
+`a6c9109e4fcfcdd2f5a8f5d4299ac1b4cf4037b8f1e4c468b4ecd75aba762512`.
+These commands pass 5 submitted global tests, 11 independent global tests,
+and 7 independent algebraic tests. They verify the conditional exclusion
+`n3!=48`, hence `n3>=51` and `induced_C6_count>=209337`; they do not resolve
+Conway-99 or establish novelty.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

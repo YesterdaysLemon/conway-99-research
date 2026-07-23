@@ -250,4 +250,29 @@ fourteenth_research_wave:
   clean_clone_commit: "886f0a73cd4b0cb3ceffb1e8077021f73e7278ea"
   clean_clone_replay: "verification/2026-07-23-wave14-clean-clone.md"
   caveat: "Wave 14 verifies a sharp conditional residual and explicit countermodels to narrower active/local/support relaxations, but does not exclude n3=48. The positive objects are not partial or complete Conway graphs, every solver-negative row lacks a checked proof trace, and target existence, nonexistence, and novelty remain UNKNOWN."
+fifteenth_research_wave:
+  discovery_commit: "522260aa71d484c86477599de65f9e08ded437bb"
+  public_newline_repair_commit: "874af271c775f64d49148c31a20bca6583f29c82"
+  verification_commit: "1ecc0d40e91fbe736c26f73a5b74c5961c321654"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_48_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_lower_bound: 51
+  conditional_induced_C6_lower_bound: 209337
+  conditional_n3_48_exclusion: EXCLUDED_VERIFIED
+  global_discovery_report: "agents/2026-07-23-wave15-global-lift.md"
+  global_audit: "verification/2026-07-23-wave15-global-lift-audit.md"
+  global_independent_checker: "verification/n3-48-global-lift/independent_check.py"
+  global_certificate: "attempts/wave15-global-lift/subset-moment-certificate.json"
+  global_regenerated_certificate: "verification/n3-48-global-lift/regenerated-certificate.json"
+  global_certificate_sha256: "cb02ab80f92d7d2c8ec5140e3be2916354976442aa2e1869524aa728c73bd386"
+  global_submitted_tests_passed: 5
+  global_independent_tests_passed: 11
+  algebraic_discovery_report: "agents/2026-07-23-wave15-algebraic.md"
+  algebraic_audit: "verification/2026-07-23-wave15-algebraic-audit.md"
+  algebraic_independent_checker: "verification/n3-48-algebraic/independent_check.py"
+  algebraic_exact_artifact: "attempts/wave15-algebraic/exact-checks.json"
+  algebraic_exact_artifact_sha256: "a6c9109e4fcfcdd2f5a8f5d4299ac1b4cf4037b8f1e4c468b4ecd75aba762512"
+  algebraic_independent_tests_passed: 7
+  caveat: "The human conditional exclusion of n3=48 passed two independent semantic audits and yields n3>=51 and induced_C6_count>=209337. The initial global certificate's CRLF/public-LF mismatch is preserved at 522260a and repaired at 874af27; the algebraic metadata ambiguity is likewise retained and re-audited. No formal kernel proof or checked literature novelty claim is supplied, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-23
