@@ -576,6 +576,74 @@ not reproduce a mathematical conclusion or establish novelty. The complete
 detached replay is recorded in
 `verification/2026-07-23-wave16-clean-clone.md`.
 
+Replay the Wave 17 `n3=54` structural reduction and independent audit:
+
+```powershell
+.venv\Scripts\python.exe -B `
+  attempts\wave17-n3-54-structural\exact_check.py
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave17-n3-54-structural\test_exact_check.py
+.venv\Scripts\python.exe -B `
+  verification\n3-54-structural\independent_check.py
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\n3-54-structural\test_independent_check.py
+```
+
+The submitted suite passes 7 tests and the independent suite passes 21. They
+verify the six-profile reduction, equality/equitable cut, exact `F/R`
+representation, `3K3,3` parity exclusion, and the two remaining catalog
+families. The restricted SAT controls may also return raw `UNSAT`, but they
+emit no checked proof trace and are not evidence.
+
+Replay the exact 457-case census and its separately written verifier without
+overwriting committed artifacts:
+
+```powershell
+$wave17ReplayStem = [guid]::NewGuid().ToString('N')
+$wave17ReplayRoot = [System.IO.Path]::GetTempPath()
+$wave17Raw = Join-Path $wave17ReplayRoot "$wave17ReplayStem-raw.json"
+$wave17Certificate = Join-Path $wave17ReplayRoot "$wave17ReplayStem-certificate.json"
+$wave17Independent = Join-Path $wave17ReplayRoot "$wave17ReplayStem-independent.json"
+
+.venv\Scripts\python.exe -B `
+  attempts\wave17-n3-54-census\census.py `
+  --model-limit 100000 --output $wave17Raw
+.venv\Scripts\python.exe -B `
+  attempts\wave17-n3-54-census\build_certificate.py `
+  --output $wave17Certificate
+.venv\Scripts\python.exe -B `
+  attempts\wave17-n3-54-census\verify_certificate.py `
+  attempts\wave17-n3-54-census\exact-certificate.json
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave17-n3-54-census\test_certificate.py
+.venv\Scripts\python.exe -B `
+  verification\n3-54-census\independent_verifier.py `
+  --output $wave17Independent
+.venv\Scripts\python.exe -B -m unittest -v `
+  verification\n3-54-census\test_independent_verifier.py
+
+Get-FileHash -Algorithm SHA256 $wave17Raw,$wave17Certificate,$wave17Independent
+```
+
+The expected SHA-256 values are:
+
+```text
+raw census:            f81158e9dacbb4b83bdbc3f19724c304b9dc10a550297661f68272f0d83cdeb2
+exact certificate:     f5c66a2ba6ee0c8b0d4ea4a15411366000faf03fdcb431e19f26747d117ced12
+independent result:    159903af624a2df1975dd490ea5c267e453b5a96fe9744a9aa7a7be28390b056
+```
+
+Both implementations fetch the official House of Graphs catalogs into
+memory, validate compressed and decompressed hashes, decode every record, and
+reconstruct all 457 cases. The discovery tests pass 6/6 and the independent
+hostile tests pass 17/17. The exact proof uses parity-kernel exhaustion and a
+mixed-component degree count, not the archived proofless SAT statuses. The
+audited consequence is the conditional necessary bound `n3>=57`, hence
+`induced_C6_count>=209343`; Conway-99 and novelty remain `UNKNOWN`. The
+separate literature reports are
+`agents/2026-07-23-wave17-status-search.md` and
+`verification/2026-07-23-wave17-status-audit.md`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

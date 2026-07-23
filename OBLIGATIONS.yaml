@@ -359,3 +359,40 @@ obligations:
       - "verification/2026-07-23-wave16-status-audit.md"
       - "SOURCES.bib"
     note: "Two independent searches through 2026-07-23 found no target resolution or source for either exact Wave 16 bound. Reimbayev's published identity gives induced_C6_count=209286+n3, so 209340 is DERIVED from the separately verified n3>=54 bound. The June 2026 Shpectorov lecture notice announces only a possible similar approach. Target status and novelty remain UNKNOWN because non-discovery is not a certificate."
+
+  - id: O-WAVE17-STRUCTURAL
+    requirement: "Adversarially verify the sum-q=36 profile enumeration, dense-subset equality, equitable 27+72 cut, cubic point graph and 2-factor representation, exact rectangle matrix identity, no-codegree-two component reduction, 3K3,3 parity exclusion, binary restrictions, surface construction, outside moments, and strict status boundary."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave17-n3-54-structural.md"
+      - "attempts/wave17-n3-54-structural/exact_check.py"
+      - "verification/2026-07-23-wave17-n3-54-structural-audit.md"
+      - "verification/n3-54-structural/independent_check.py"
+      - "verification/n3-54-structural/test_independent_check.py"
+    note: "The independent audit passes 21 hostile tests and verifies the exact n3=54 residual while recording two nonblocking clarifications. It does not itself exclude n3=54. The raw restricted SAT outcomes and unrestricted timeout are non-evidentiary; Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE17-CENSUS
+    requirement: "Independently validate the official 455+2 fixed-F universe, graph6 inputs and hashes, compatible-support construction, GF(2) parity relaxation, all connected-case kernels, mixed-component degree obstruction, certificate commitments, deterministic replay, and hostile mutations without using proofless solver UNSAT as evidence."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave17-n3-54-census.md"
+      - "attempts/wave17-n3-54-census/exact-certificate.json"
+      - "attempts/wave17-n3-54-census/verify_certificate.py"
+      - "attempts/wave17-n3-54-census/test_certificate.py"
+      - "verification/2026-07-23-wave17-n3-54-census-audit.md"
+      - "verification/n3-54-census/independent_verifier.py"
+      - "verification/n3-54-census/test_independent_verifier.py"
+      - "verification/n3-54-census/independent-result.json"
+    note: "A separately written verifier reconstructs all 457 cases, checks 262,647 kernel vectors including the trivial cases, passes 17 hostile tests, and verifies the conditional exclusion of n3=54. Catalog completeness remains an official external premise; every raw SAT UNSAT row is non-evidentiary. The combined necessary bounds are n3>=57 and induced_C6_count>=209343."
+
+  - id: O-WAVE17-STATUS
+    requirement: "Search current primary and authoritative sources for a Conway-99 resolution, prior n3>=57 or n3=54 exclusion, induced_C6_count>=209343, the exact positive intriguing (6,3) 27-set, and the F/R residual; independently audit theorem scope, parameter substitutions, official cubic-catalog provenance, and access limitations."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave17-status-search.md"
+      - "verification/2026-07-23-wave17-status-audit.md"
+      - "SOURCES.bib"
+    note: "The independent audit verifies the intriguing-set terminology and Reimbayev identity, rejects inapplicable near-matches, and confirms the official 455+2 counts with a JavaScript/indexed-page access qualification. It found no exact prior bound or target resolution through 2026-07-23, but those nonhits do not establish novelty. Target and novelty remain UNKNOWN."

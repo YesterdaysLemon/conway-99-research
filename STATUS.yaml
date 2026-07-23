@@ -322,4 +322,53 @@ sixteenth_research_wave:
     BUDGET_UNKNOWN_HISTORICAL: 1
   computational_negative_evidence: false
   caveat: "The human structural exclusion of n3=51 passes an independent 24-test semantic audit and yields n3>=54 and induced_C6_count>=209340. The computational audit verifies only a seven-branch active-local archive and positive relaxation object; all timeout, budget, and proofless UNSAT outcomes remain non-evidentiary. The stale Wave 15 input hash is preserved at 09c20e6 and transparently repaired at 7530cae. A two-lane status search found no resolution or exact prior bound through 2026-07-23, but search non-discovery is not a novelty certificate. No formal proof or novelty claim is supplied, and Conway-99 remains UNKNOWN."
+seventeenth_research_wave:
+  structural_discovery_commit: "1eb7c18293a650316b81ca7e41bd9894b40550f3"
+  algebra_discovery_commit: "45c7a9af8cb79ff3ce01085f1e70e54561054796"
+  status_search_commit: "a9e83e1b1e0dcd1904e713d11f3750b752dc6e85"
+  structural_audit_commit: "5e0733e452223fc21bb5ffae5eaa9cab7edc191a"
+  census_discovery_commit: "0e5c09fcab45b0af0509a5832f559f355582e7f5"
+  status_audit_commit: "932c620e4cf2a8e1dac02a0c95a3c1eac15a9bd4"
+  census_audit_commit: "ada7785e48758b2aef6bf4f8cb558f8ac056f8fe"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_54_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_lower_bound: 57
+  conditional_induced_C6_lower_bound: 209343
+  conditional_n3_54_exclusion: EXCLUDED_VERIFIED
+  structural_discovery_report: "agents/2026-07-23-wave17-n3-54-structural.md"
+  structural_discovery_report_sha256: "ffae576057617b6d8e32f7df4a1cd9627c63bdfe40fb58f394fd2640d1d82d18"
+  algebra_discovery_report: "agents/2026-07-23-wave17-n3-54-algebra.md"
+  algebra_discovery_report_sha256: "4c46c718e05a5816d48b9529602fad94a1765fb8c6390166fc916b7e1bcf87b1"
+  structural_audit: "verification/2026-07-23-wave17-n3-54-structural-audit.md"
+  structural_audit_sha256: "2f466ebfabc5e52bb755c09556849414c43c042675aa1fde20c786e99abd64a5"
+  structural_independent_checker: "verification/n3-54-structural/independent_check.py"
+  structural_submitted_tests_passed: 7
+  structural_independent_tests_passed: 21
+  census_discovery_report: "agents/2026-07-23-wave17-n3-54-census.md"
+  census_discovery_report_sha256: "8ab3521ed116852bfe8f68db5826199c668c29bfec456e69c3a6204c985f1021"
+  census_certificate: "attempts/wave17-n3-54-census/exact-certificate.json"
+  census_certificate_sha256: "f5c66a2ba6ee0c8b0d4ea4a15411366000faf03fdcb431e19f26747d117ced12"
+  census_audit: "verification/2026-07-23-wave17-n3-54-census-audit.md"
+  census_audit_sha256: "904ce81fc41959367103f31f1418fc05caa022766a61f56d12ee1f195b93bc73"
+  census_independent_checker: "verification/n3-54-census/independent_verifier.py"
+  census_independent_result: "verification/n3-54-census/independent-result.json"
+  census_independent_result_sha256: "159903af624a2df1975dd490ea5c267e453b5a96fe9744a9aa7a7be28390b056"
+  census_catalog_cases_checked: 457
+  census_connected_trivial_kernels: 443
+  census_connected_nontrivial_kernels_exhausted: 12
+  census_mixed_degree_obstructions: 2
+  census_discovery_tests_passed: 6
+  census_independent_tests_passed: 17
+  census_raw_sat_status: "457 UNSAT_UNVERIFIED"
+  census_raw_sat_negative_evidence: false
+  status_search_report: "agents/2026-07-23-wave17-status-search.md"
+  status_search_report_sha256: "dfac5da305b2c11298eb768e27c8a2a32bc275942478683670af127d97c28698"
+  status_audit: "verification/2026-07-23-wave17-status-audit.md"
+  status_audit_sha256: "fbf6abfa075f6e1bf1682c426f44b514a91624e3e0e5a1755aff7c909a58194c"
+  status_search_through: 2026-07-23
+  status_search_result: NO_RESOLUTION_FOUND
+  status_novelty_result: UNKNOWN
+  catalog_premise: "Official House of Graphs connected cubic catalogs: 455 order-18 and 2 order-12 girth-at-least-five isomorphism classes; pinned bytes and all records independently validated, generators not replayed locally."
+  caveat: "The independently audited structural reduction and separately implemented exact census exclude conditional n3=54, yielding n3>=57 and induced_C6_count>=209343. The 457 proofless raw SAT UNSAT rows are retained but are not evidence. Official catalog completeness and one representative per isomorphism class are external premises; all pinned bytes and records were independently checked. Two source-audit lanes found no exact prior bound or target resolution through 2026-07-23, but non-discovery is not a novelty certificate. No formal proof, unconditional Conway-99 result, or novelty claim is supplied."
 last_updated: 2026-07-23

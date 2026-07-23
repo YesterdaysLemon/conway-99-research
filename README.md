@@ -360,6 +360,55 @@ notice. They independently recover the published identity
 That nonhit is not a novelty certificate: the target and novelty both remain
 `UNKNOWN`.
 
+Wave 17 excludes the sharp equality `n3=54`. Exact `sum q=36` profile
+filtering first removes every profile with at most 17 active labels. Equality
+forces 18 active labels, 27 active original vertices, and a 6-regular induced
+subgraph giving the equitable partition
+
+```text
+[[6,8],
+ [3,11]].
+```
+
+The 27 active vertices become the edges of a simple cubic triangle-free graph
+`F` on 18 labels. Their two remaining neighbors form a 2-factor `R` on
+`E(F)`, with exact rectangle identity
+
+```text
+N A_R N^T = 2 A_L.
+```
+
+An independently audited parity argument excludes `F=3K3,3`. The remaining
+finite universe is 455 connected order-18 cubic graphs of girth at least five
+and two graphs `K3,3` plus a connected order-12 component, using the official
+House of Graphs catalogs. For the 455 connected cases, a binary parity kernel
+is trivial in 443 cases; all vectors in the other 12 kernels are exhaustively
+checked, with none giving point-degree two. In the two mixed cases, degree
+counting forces nine internal order-12 support edges although only one or zero
+compatible candidates exist. A separately written verifier reconstructed all
+457 cases, fetched and hash-validated the official catalog bytes, and passed
+17 hostile tests. The earlier 457 raw SAT `UNSAT` statuses have no proof
+traces and are not used.
+
+Consequently the internally verified conditional necessary bounds are
+
+```text
+n3 >= 57,
+induced_C6_count >= 209,343.
+```
+
+See the [structural reduction](agents/2026-07-23-wave17-n3-54-structural.md),
+[structural audit](verification/2026-07-23-wave17-n3-54-structural-audit.md),
+[exact census](agents/2026-07-23-wave17-n3-54-census.md),
+[independent census audit](verification/2026-07-23-wave17-n3-54-census-audit.md),
+[status search](agents/2026-07-23-wave17-status-search.md), and
+[status audit](verification/2026-07-23-wave17-status-audit.md). Catalog
+completeness and one representative per isomorphism class remain official
+external premises; no local generator proof is claimed. Current sources still
+describe Conway-99 as unresolved, and exact prior-art searches found no
+`n3>=57`, `n3=54` exclusion, or `209343` threshold. Those nonhits do not
+establish novelty. Conway-99 and novelty remain `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -489,6 +538,17 @@ status.
   independent source-page verification of the current target status, induced
   hexagon identity, exact-number nonhits, and conservative `UNKNOWN` novelty
   label.
+- [Wave 17 structural audit](verification/2026-07-23-wave17-n3-54-structural-audit.md):
+  independent reconstruction of the equality/equitable-cut reduction, cubic
+  point graph, 2-factor identity, component classification, and `3K3,3`
+  parity exclusion.
+- [Wave 17 exact-census audit](verification/2026-07-23-wave17-n3-54-census-audit.md):
+  separate 457-case catalog replay, parity-kernel exhaustion, mixed-component
+  degree obstruction, and 17 hostile tests excluding conditional `n3=54`.
+- [Wave 17 literature/status audit](verification/2026-07-23-wave17-status-audit.md):
+  source-frozen audit of positive intriguing-set terminology, near-match
+  exclusions, official cubic-catalog provenance, current status, and
+  conservative novelty nonhits.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

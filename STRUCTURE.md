@@ -43,12 +43,13 @@ induced_C6_count = 209,286 + n3.
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
 the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
-39, 42, and 45, Wave 15 excludes equality at 48, and Wave 16 excludes equality
-at 51. The currently strongest project bound is
+39, 42, and 45, Wave 15 excludes equality at 48, Wave 16 excludes equality at
+51, and Wave 17 excludes equality at 54. The currently strongest internally
+verified project bound is
 
 ```text
-n3 >= 54,
-induced_C6_count >= 209,340.
+n3 >= 57,
+induced_C6_count >= 209,343.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -446,6 +447,69 @@ the exclusion; its one raw UNSAT return has no proof trace. See
 `agents/2026-07-23-wave16-n3-51-structural.md` and
 `verification/2026-07-23-wave16-n3-51-structural-audit.md`. This remains a
 conditional necessary bound; Conway-99 and novelty are `UNKNOWN`.
+
+Wave 17 applies the same framework at `n3=54`, where
+
+```text
+sum_T q(T)=36.
+```
+
+The exact `d_K>=4` filter leaves six profiles. Five have `r<=17`, hence
+`|X|<=25`, while the endpoint-local crossing arithmetic still gives
+`delta(G[X])>=6`; the spectral subset bound excludes them. The last profile is
+
+```text
+r=18, q=2^18, |X|=27.
+```
+
+Equality forces every active point to have size two, `G[X]` to be 6-regular,
+and the cut to be equitable with quotient `[[6,8],[3,11]]`. Let `F` be the
+simple cubic triangle-free graph on the 18 active labels whose 27 edges are
+the active points. The remaining two neighbors of each point form a simple
+2-factor `R` on `E(F)`. If `N` is the vertex-edge incidence matrix of `F`,
+then
+
+```text
+G[X] = line(F) union R,
+N A_R N^T = 2 A_L.
+```
+
+No nonadjacent pair of `F` has codegree exactly two. Hence each component is
+`K3,3` or has girth at least five. Component sizes reduce to `(18)`, `(6,12)`,
+or `(6,6,6)`; an exact binary parity argument excludes `3K3,3`. The two
+remaining families contain exactly 455 connected cubic girth-at-least-five
+graphs of order 18 and two disjoint unions of `K3,3` with a connected such
+graph of order 12, according to the official House of Graphs catalogs.
+
+For a fixed `F`, a compatible support variable joins two disjoint `F`-edges
+whose endpoint rectangle avoids every forced `K`-pair. Reducing point-degree
+two and rectangle-coverage zero-or-two modulo two gives a `180`-row binary
+system. Among the 455 connected cases, 443 kernels are trivial. The remaining
+12 have nullities `1^4,2^5,4^2,18`; exhaustive enumeration of all 262,204
+vectors in those nontrivial kernels finds no vector with integer degree two at
+all 27 points. In each mixed case, the nine `K3,3` point-edges force 18 cross
+edges and therefore nine internal order-12 edges, but only one or zero such
+candidates exist.
+
+An independent implementation fetched and hash-validated both official
+catalogs, reconstructed all 457 cases, reproduced every certificate field,
+and passed 17 hostile tests. This exact obstruction excludes `n3=54`.
+Divisibility by three and the induced-cycle identity give
+
+```text
+n3 >= 57,
+induced_C6_count >= 209343.
+```
+
+The raw SAT scout also returned `UNSAT` on all 457 fixed-`F` cases, but it
+produced no checked proof traces and is non-evidentiary. Catalog completeness
+and one representative per isomorphism class remain external official
+premises. See `agents/2026-07-23-wave17-n3-54-structural.md`,
+`verification/2026-07-23-wave17-n3-54-structural-audit.md`,
+`agents/2026-07-23-wave17-n3-54-census.md`, and
+`verification/2026-07-23-wave17-n3-54-census-audit.md`. This is a conditional
+necessary bound, not a target resolution or novelty determination; both
+Conway-99 and novelty remain `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

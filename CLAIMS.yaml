@@ -318,6 +318,39 @@ claims:
       - "verification/2026-07-23-wave16-status-audit.md"
     limitations: "This is a human conditional necessary-bound proof with exact arithmetic companions, not a formal-kernel proof or a Conway-99 resolution. It uses an endpoint-local size-two crossing law, not a global H-degree restriction or a point-size cap. Baseline 09c20e6 preserves a transient Wave 15 input hash and repair 7530cae pins the final public input before re-audit. The separate active-local SAT archive is not used as negative evidence. Two independent status searches found no exact prior bound through 2026-07-23, but search non-discovery is not a novelty certificate; novelty remains UNKNOWN."
 
+  - id: C-N3-FRONTIER-002
+    statement: "Conditional on a putative srg(99,14,1,2) with n3=54 and the verified active-triangle framework, equality forces 18 active labels with q=2, 27 size-two active points, a 6-regular positive intriguing set with quotient [[6,8],[3,11]], and an exact residual G[X]=line(F) union R where F is cubic triangle-free on 18 labels and N A_R N^T=2A_L. The 3K3,3 component branch is excluded by parity, leaving exactly the official-catalog 455 connected order-18 and two K3,3-plus-order-12 F types."
+    label: VERIFIED
+    scope: CONDITIONAL_EQUALITY_FRONTIER_ONLY
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-23-wave17-n3-54-structural.md"
+      - "attempts/wave17-n3-54-structural/exact_check.py"
+      - "verification/2026-07-23-wave17-n3-54-structural-audit.md"
+      - "verification/n3-54-structural/independent_check.py"
+      - "verification/n3-54-structural/test_independent_check.py"
+      - "agents/2026-07-23-wave17-status-search.md"
+      - "verification/2026-07-23-wave17-status-audit.md"
+    limitations: "This is a scoped equality reduction, not by itself an exclusion of n3=54 or a Conway-99 result. The structural audit records a wording clarification for the no-codegree-two bridge and treats every proofless SAT status and historical timeout as non-evidentiary. The House of Graphs class counts are an official external premise. Novelty remains UNKNOWN."
+
+  - id: C-N3-EQUALITY-009
+    statement: "Conditional on the verified Wave 17 n3=54 structural reduction and the official House of Graphs catalog coverage, an exact parity-kernel certificate excludes all 455 connected residual F types and a direct degree count excludes both mixed F types. Thus n3=54 is impossible, forcing n3>=57 and induced_C6_count>=209343."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-23-wave17-n3-54-structural.md"
+      - "verification/2026-07-23-wave17-n3-54-structural-audit.md"
+      - "agents/2026-07-23-wave17-n3-54-census.md"
+      - "attempts/wave17-n3-54-census/exact-certificate.json"
+      - "attempts/wave17-n3-54-census/verify_certificate.py"
+      - "verification/2026-07-23-wave17-n3-54-census-audit.md"
+      - "verification/n3-54-census/independent_verifier.py"
+      - "verification/n3-54-census/independent-result.json"
+      - "agents/2026-07-23-wave17-status-search.md"
+      - "verification/2026-07-23-wave17-status-audit.md"
+    limitations: "This is an internally verified conditional necessary bound, not a formal-kernel proof or a Conway-99 resolution. Catalog completeness and one representative per isomorphism class are official external premises; the pinned bytes and all 457 records were independently checked, but the catalog generators were not replayed locally. All raw SAT UNSAT rows lack proof traces and are not evidence. Exact prior-art searches through 2026-07-23 were nonhits, so novelty remains UNKNOWN."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED
