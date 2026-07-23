@@ -457,3 +457,8 @@ induced_C6_count >= 209337,
 Conway-99 = UNKNOWN,
 novelty = UNKNOWN.
 ```
+
+The detached clean-source replay at
+`2026-07-23-wave15-clean-clone.md` records the full historical suites, all 23
+focused Wave 15 tests, all 18 frozen file hashes, byte-identical canonical-LF
+certificate regeneration, clean detached status, and `git fsck`.

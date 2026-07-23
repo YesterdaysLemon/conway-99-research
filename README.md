@@ -459,6 +459,9 @@ status.
 - [Wave 14 clean-source replay](verification/2026-07-23-wave14-clean-clone.md):
   detached 52/12/104/10/7-test replay, byte-identical regeneration of four
   Wave 14 artifacts, and the preserved pre-release determinism repair.
+- [Wave 15 clean-source replay](verification/2026-07-23-wave15-clean-clone.md):
+  detached 52/12/104/10/7/5/11/7-test replay, 18 frozen hash checks, and
+  byte-identical canonical-LF certificate regeneration.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

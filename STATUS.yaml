@@ -274,5 +274,7 @@ fifteenth_research_wave:
   algebraic_exact_artifact: "attempts/wave15-algebraic/exact-checks.json"
   algebraic_exact_artifact_sha256: "a6c9109e4fcfcdd2f5a8f5d4299ac1b4cf4037b8f1e4c468b4ecd75aba762512"
   algebraic_independent_tests_passed: 7
+  clean_clone_commit: "9215f06a45cb1477b46ebb29d350155e0abd0d08"
+  clean_clone_replay: "verification/2026-07-23-wave15-clean-clone.md"
   caveat: "The human conditional exclusion of n3=48 passed two independent semantic audits and yields n3>=51 and induced_C6_count>=209337. The initial global certificate's CRLF/public-LF mismatch is preserved at 522260a and repaired at 874af27; the algebraic metadata ambiguity is likewise retained and re-audited. No formal kernel proof or checked literature novelty claim is supplied, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-23
