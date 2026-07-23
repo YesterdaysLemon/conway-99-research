@@ -266,3 +266,24 @@ obligations:
       - "verification/2026-07-22-wave12-integration-audit.md"
       - "verification/2026-07-22-wave12-clean-clone.md"
     note: "The proof-side checker explicitly requires the external support-exclusion premise. An official GENREG connected catalog and an independent nauty catalog were cross-matched, the two disconnected types were separately classified, and all four surviving support trees were replayed with mutations. The verified result is the conditional necessary bound n3>=45; novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE13-STRUCTURAL
+    requirement: "Adversarially verify the n3=45 active-profile reductions, mixed-profile exclusions, order-fifteen flower bounds, four rooted local modes, elimination of types 223 and 111, and the final H-degree handshake contradiction; separately audit the auxiliary computation without treating solver negatives as proof."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave13-n3-45-proof-a.md"
+      - "agents/2026-07-22-wave13-status-search.md"
+      - "verification/n3-45-equality/verify.py"
+      - "verification/test_n3_45_audit.py"
+      - "verification/2026-07-22-wave13-n3-45-audit.md"
+      - "verification/n3-45-equality-b/audit_semantics.py"
+      - "verification/n3-45-equality-b/precomparison-verdict.md"
+      - "verification/2026-07-22-wave13-n3-45-audit-b.md"
+      - "verification/2026-07-22-wave13-status-audit.md"
+      - "verification/2026-07-22-wave13-computation-audit.md"
+      - "agents/2026-07-22-wave13-n3-45-computational-repair.md"
+      - "verification/n3-45-computation-repair/independent_repair_audit.py"
+      - "verification/n3-45-computation-repair/test_repair_regressions.py"
+      - "verification/2026-07-22-wave13-computation-repair-audit.md"
+    note: "Two independent semantic verifiers pass the human conditional exclusion of n3=45, yielding n3>=48 and induced_C6_count>=209334. The initial computation bundle failed self-validation; that failure is preserved, its repair passed independent formula/provenance/mutation checks, and every solver-negative row remains UNSAT_UNVERIFIED. Novelty and Conway-99 remain UNKNOWN."

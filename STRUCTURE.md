@@ -42,12 +42,12 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, and Waves 8--12 exclude equality at 30, 33,
-36, 39, and 42. The currently strongest project bound is
+the next two multiples of three, and Waves 8--13 exclude equality at 30, 33,
+36, 39, 42, and 45. The currently strongest project bound is
 
 ```text
-n3 >= 45,
-induced_C6_count >= 209,331.
+n3 >= 48,
+induced_C6_count >= 209,334.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -237,6 +237,53 @@ does not resolve Conway-99. The proof, support certificate, and final audit are
 in `agents/2026-07-22-wave12-n3-42-proof-a.md`,
 `verification/n3-42-equality/`, and
 `verification/2026-07-22-wave12-integration-audit.md`.
+
+Wave 13 treats `n3=45`. Exact partitioning of `sum q(T)=30` gives nine raw
+active profiles. The inherited no-singleton and degree-three obstructions
+leave only
+
+```text
+r=14: q-profile (2^12,3^2),
+r=15: q-profile (2^15).
+```
+
+In the mixed case, active points have size at most three. A size-three point
+containing a `q=3` label has no admissible local mode. An ordinary size-three
+point can have only mode `222` or `233`; fixed-crossing capacity removes
+`233`, while `222` would make the intersection graph cubic and triangle-free.
+It reduces to `K3,3`, whose line graph has distinct open neighborhoods, forcing
+an impossible injection of nine labels into three. If all points instead have
+size two, either special label needs at least five `K`-neighbors although its
+capacity is four. Thus the mixed profile is impossible.
+
+For the all-`q=2` order-fifteen profile, flower enumeration removes point sizes
+five and four. Let `t_i` count size-three points through label `i`. Exact
+crossing and fixed-point capacities leave four local types:
+
+```text
+111, 122, 222, 223.
+```
+
+Type `223` would induce a one-regular graph on three labels and is impossible.
+For type `111`, the six co-point endpoints saturate every root label in `K`;
+the remaining labels cannot supply the required fixed support. Hence only
+types `122` and `222` remain. A size-two point then has positive crossing
+degree four, while a size-three point already consumes eight or twelve units,
+so every vertex of the edge-auxiliary graph `H` has degree zero or four. But
+`|E(H)|=n3=45`, and the handshake sum `90` is not divisible by four. This
+conditionally excludes `n3=45`, forcing `n3>=48` and
+`induced_C6_count>=209334`.
+
+Two independent semantic audits reconstruct this argument without assuming a
+completed-graph automorphism, connectedness, or transitivity. The separate
+active-local SAT scan is not part of the proof and its 17 negative rows remain
+`UNSAT_UNVERIFIED`; its initial self-validation bundle failed audit and was
+repaired and re-audited without erasing the failure. See
+`agents/2026-07-22-wave13-n3-45-proof-a.md`,
+`verification/2026-07-22-wave13-n3-45-audit.md`,
+`verification/2026-07-22-wave13-n3-45-audit-b.md`, and
+`verification/2026-07-22-wave13-computation-repair-audit.md`. The result is a
+conditional necessary bound only. Conway-99 and novelty remain `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

@@ -323,3 +323,47 @@ audit records the conditional strengthening `n3>=45` and
 `induced_C6_count>=209331`. It does not resolve Conway-99, and novelty remains
 `UNKNOWN`. The detached full-suite replay and byte-identical regeneration are
 recorded in `2026-07-22-wave12-clean-clone.md`.
+
+## `N3=45` equality exclusion
+
+`n3-45-equality/verify.py` independently reconstructs the nine active
+profiles, mixed order-fourteen reductions, order-fifteen flower census, four
+rooted modes, type-`223` parity obstruction, type-`111` saturation
+obstruction, and final degree-zero-or-four handshake contradiction. Its
+mutation mode attacks the imported premise boundary.
+
+```powershell
+python verification/n3-45-equality/verify.py --mutations
+python -m unittest -v verification/test_n3_45_audit.py
+```
+
+`n3-45-equality-b/audit_semantics.py` is a second semantic reconstruction. It
+froze `precomparison-verdict.md` before reading the first audit and then found
+no disagreement. Both audits pass only the conditional equality exclusion:
+
+```text
+n3 >= 48,
+induced_C6_count >= 209334,
+Conway-99 = UNKNOWN,
+novelty = UNKNOWN.
+```
+
+The companion SAT bundle is audited separately. The original bundle retains a
+public FAIL report under `2026-07-22-wave13-computation-audit.md`. Its repaired
+v2 artifacts pass `n3-45-computation-repair/independent_repair_audit.py` and
+six focused regressions:
+
+```powershell
+python verification/n3-45-computation-repair/independent_repair_audit.py
+python -m unittest discover `
+  -s verification/n3-45-computation-repair -p 'test_*.py' -v
+```
+
+The repair audit independently reproduces all 17 formula hashes, checks the
+1,141,796-clause positive diagnostic, certifies its 18 deliberately omitted
+common-point violations, verifies direct artifact provenance, and rejects 31
+hostile mutations. The historical 15-test suite now loads the failed baseline
+directly from commit `066d9c7fcf593c3b9d35cfef1031dbd9daab4145`, while
+the repaired 12-test suite exercises the current files. No negative proof
+trace was emitted or checked, so every solver-negative branch remains
+`UNSAT_UNVERIFIED`; none is used in the human proof.

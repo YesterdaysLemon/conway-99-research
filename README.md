@@ -226,6 +226,35 @@ SHA-256 rather than committed. See the [Wave 12 proof reduction](agents/2026-07-
 No checked source was found for the exact exclusion; novelty and Conway-99 both
 remain `UNKNOWN`.
 
+Wave 13 conditionally excludes `n3=45`. Exact partitioning of
+`sum q(T)=30` gives nine raw active profiles. The inherited degree and
+point-clique obstructions leave a mixed order-fourteen profile and an
+all-`q=2` order-fifteen profile. The mixed case is eliminated by its local
+crossings and a cubic `K3,3`/open-twin obstruction. In the order-fifteen
+case, flower arguments reduce every active point to size two or three; the
+four possible size-three modes are then reduced to modes `122` and `222`.
+Every vertex of the auxiliary graph `H` consequently has degree zero or four,
+contradicting `|E(H)|=45` by the handshake lemma. Thus
+
+```text
+n3 >= 48,
+induced_C6_count >= 209,334.
+```
+
+Two independent semantic verifiers reconstruct the human proof, including a
+blind verdict frozen before comparison. The discovery SAT scan is not used in
+that proof: its 17 negative rows remain `UNSAT_UNVERIFIED`. The first
+computational bundle failed audit because its census and validator were not
+self-sufficient; that failure remains public, followed by a separate repair
+and fresh 17/17 formula, 31-mutation, and clause-by-clause audit. See the
+[Wave 13 proof](agents/2026-07-22-wave13-n3-45-proof-a.md),
+[first proof audit](verification/2026-07-22-wave13-n3-45-audit.md),
+[blind proof audit](verification/2026-07-22-wave13-n3-45-audit-b.md), and
+[computation-repair audit](verification/2026-07-22-wave13-computation-repair-audit.md).
+This is a conditional necessary bound, not a Conway-99 resolution. No checked
+source was found for the exact strengthening; novelty and the target remain
+`UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -316,6 +345,18 @@ status.
 - [Wave 12 integration audit](verification/2026-07-22-wave12-integration-audit.md):
   adversarial reconstruction of the full conditional reduction and the
   strengthening `n3 >= 45`.
+- [Wave 13 `n3=45` audit](verification/2026-07-22-wave13-n3-45-audit.md):
+  independent proof reconstruction and finite checks proving the conditional
+  strengthening `n3 >= 48`.
+- [Wave 13 blind semantic audit](verification/2026-07-22-wave13-n3-45-audit-b.md):
+  a separately frozen semantic reconstruction of the same conditional
+  exclusion.
+- [Wave 13 computation audit](verification/2026-07-22-wave13-computation-audit.md):
+  preserved FAIL verdict for the original self-validation bundle, while
+  retaining the independently checked formula semantics and positive control.
+- [Wave 13 computation-repair audit](verification/2026-07-22-wave13-computation-repair-audit.md):
+  fresh 17-formula reconstruction, clause-by-clause positive replay, direct
+  provenance, and 31 hostile mutations; solver negatives remain uncertified.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

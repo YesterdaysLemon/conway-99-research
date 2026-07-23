@@ -369,6 +369,68 @@ conditional necessary bound `n3>=45` and
 `verification/2026-07-22-wave12-integration-audit.md`. The complete detached
 replay is recorded in `verification/2026-07-22-wave12-clean-clone.md`.
 
+Replay the Wave 13 conditional exclusion of `n3=45` with two independent
+semantic checkers:
+
+```powershell
+.venv\Scripts\python verification\n3-45-equality\verify.py --mutations
+.venv\Scripts\python -m unittest verification.test_n3_45_audit -v
+.venv\Scripts\python verification\n3-45-equality-b\audit_semantics.py
+```
+
+The frozen proof report has SHA-256
+`e721614256f003d7266d0b3d1bb2f884febbdec33893f92ed18bf8961c6958e8`.
+Both semantic audits return the conditional bounds `n3>=48` and
+`induced_C6_count>=209334`, with target and novelty `UNKNOWN`. The second
+verdict was frozen before it read the first audit. Neither checker assumes a
+completed-graph automorphism, connectedness, or transitivity.
+
+Replay the repaired Wave 13 computation bundle separately:
+
+```powershell
+$env:PYTHONPATH='code'
+.venv\Scripts\python code\wave13_n3_45_test.py -v
+.venv\Scripts\python verification\n3-45-computation-repair\independent_repair_audit.py
+.venv\Scripts\python -m unittest discover `
+  -s verification\n3-45-computation-repair -p 'test_*.py' -v
+.venv\Scripts\python -m unittest discover `
+  -s verification\n3-45-computation -p 'test_*.py' -v
+```
+
+The last command is the historical FAIL-audit suite. At the current tip it
+loads the defective validator and artifact directly from frozen commit
+`066d9c7fcf593c3b9d35cfef1031dbd9daab4145`, so its 15 tests continue to
+exercise the original defects rather than the repaired v2 files. The current
+repair suite has 12 tests and the independent repair suite has six.
+
+For direct provenance replay, regenerate the census and positive diagnostic:
+
+```powershell
+$wave13Census = Join-Path ([System.IO.Path]::GetTempPath()) `
+  'n3-45-local-census.json'
+$wave13Candidate = Join-Path ([System.IO.Path]::GetTempPath()) `
+  'n3-45-no-common-point-m5-111.json'
+.venv\Scripts\python code\wave13_n3_45_profiles.py `
+  --output $wave13Census --json
+.venv\Scripts\python code\wave13_n3_45_active_sat.py `
+  --size3 5 --root-mode 111 --variant no_common_point `
+  --solver cadical195 --conflict-budget 300000 `
+  --candidate $wave13Candidate --json
+.venv\Scripts\python code\wave13_n3_45_active_sat.py `
+  --validate $wave13Candidate
+```
+
+The expected census SHA-256 is
+`6546819c11dbecbf21a4cfaff00b71d338629c045c7bf156493426391b25ac55`;
+the expected positive artifact SHA-256 is
+`629cf0dd9f67b71072e94037161d99891f16c90c330b7d5746ed8a86ac8ba1e8`.
+The independent audit rebuilds all 17 formula streams, checks all 1,141,796
+positive clauses, certifies exactly 18 violations of the deliberately omitted
+common-point premise, and rejects 31 hostile mutations. The original bundle's
+FAIL audit and its later repair are both retained. No checked proof trace
+exists for any solver-negative row, so every such row remains
+`UNSAT_UNVERIFIED` and is not evidence for the `n3=45` exclusion.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

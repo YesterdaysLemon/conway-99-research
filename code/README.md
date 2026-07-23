@@ -191,3 +191,37 @@ kept as `CANDIDATE` evidence. The promoted conditional exclusion depends on
 the independent proof reduction, second catalog, proof certificate, and
 adversarial reports under `verification/n3-42-equality/`; the discovery code
 does not certify itself.
+
+## Wave 13 `n3=45` discovery tools
+
+The Wave 13 programs enumerate the nine `sum q=30` profiles, mixed-profile
+local reductions, order-fifteen flower and root-mode censuses, and a restricted
+active-local SAT model:
+
+- `wave13_n3_45_profiles.py` regenerates the exact local census;
+- `wave13_n3_45_active_sat.py` builds and validates the restricted formulas;
+- `wave13_n3_45_test.py` supplies 12 current v2 regression, provenance, and
+  hostile-mutation tests.
+
+```powershell
+$env:PYTHONPATH='code'
+.venv\Scripts\python code\wave13_n3_45_profiles.py --json
+.venv\Scripts\python code\wave13_n3_45_test.py -v
+.venv\Scripts\python code\wave13_n3_45_active_sat.py `
+  --validate attempts\wave13-computation\n3-45-no-common-point-m5-111.json
+```
+
+The first archived bundle failed independent self-validation: its mixed census
+omitted four ordered `q=3` subcases, its validator left material fields and the
+root claim unbound, and its archived positive object was not direct output of
+the frozen source. Those artifacts and the FAIL report remain in Git history.
+The repaired v2 schema checks all seven ordered subcases, raw canonicality,
+root/status/restriction/formula/source metadata, and complete integrity
+coverage. A fresh audit reproduced all 17 exact formula streams, checked the
+positive model clause-by-clause, and rejected 31 hostile mutations.
+
+The 17 solver-negative branches still have no checked proof trace and remain
+`UNSAT_UNVERIFIED`. This discovery computation is not the proof of the
+conditional `n3=45` exclusion; that promotion depends on the separately
+written and twice-audited human reduction. Conway-99 and novelty remain
+`UNKNOWN`.

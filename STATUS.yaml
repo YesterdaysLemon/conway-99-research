@@ -190,4 +190,30 @@ twelfth_research_wave:
   clean_clone_commit: "32713074557d0c3fa845b111519ef0d690b262c9"
   clean_clone_replay: "verification/2026-07-22-wave12-clean-clone.md"
   caveat: "The verified result is the conditional necessary bound n3>=45 and induced_C6_count>=209331. The official GENREG binary has no stated redistribution license and is downloaded by URL for replay rather than committed. Generator completeness remains an external premise cross-checked between independent catalogs; no literature novelty is claimed, and Conway-99 remains UNKNOWN."
-last_updated: 2026-07-22
+thirteenth_research_wave:
+  source_commit: "066d9c7fcf593c3b9d35cfef1031dbd9daab4145"
+  verification_commit: "fd02baec74a5cc19dd415277f9d2504e2d022a9f"
+  computation_repair_commit: "3e4da49df2743529bf2d565dbee9580f09eb77e2"
+  computation_repair_verification_commit: "05901c7bec3954ea2c5185e6246b1ef3d4fefc9c"
+  historical_suite_gate_commit: "3abb9a0cb3155c96090b0b1493a9bd3916e01926"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_45_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_lower_bound: 48
+  conditional_induced_C6_lower_bound: 209334
+  discovery_report: "agents/2026-07-22-wave13-n3-45-proof-a.md"
+  prior_art_status_report: "agents/2026-07-22-wave13-status-search.md"
+  computational_report: "agents/2026-07-22-wave13-n3-45-computational.md"
+  first_proof_audit: "verification/2026-07-22-wave13-n3-45-audit.md"
+  second_blind_proof_audit: "verification/2026-07-22-wave13-n3-45-audit-b.md"
+  prior_art_status_audit: "verification/2026-07-22-wave13-status-audit.md"
+  structured_checker: "verification/n3-45-equality/verify.py"
+  second_semantic_checker: "verification/n3-45-equality-b/audit_semantics.py"
+  computation_initial_audit: "verification/2026-07-22-wave13-computation-audit.md"
+  computation_initial_audit_verdict: FAIL_SELF_VALIDATION
+  computation_repair_report: "agents/2026-07-22-wave13-n3-45-computational-repair.md"
+  computation_repair_audit: "verification/2026-07-22-wave13-computation-repair-audit.md"
+  computation_repair_audit_verdict: PASS_FOR_REPAIRED_BUNDLE_PROPERTIES
+  computation_negative_status: UNSAT_UNVERIFIED
+  caveat: "The human conditional exclusion of n3=45 passed two independent semantic audits and yields n3>=48 and induced_C6_count>=209334. The separate SAT computation is not used as negative evidence: its first self-validation bundle failed publicly, the repair passed a fresh audit, and all 17 solver-negative rows remain UNSAT_UNVERIFIED. No checked literature source establishes novelty, and Conway-99 remains UNKNOWN."
+last_updated: 2026-07-23
