@@ -25,6 +25,23 @@ verification package, the two `.pyc` files and now-empty directory were removed
 with explicit .NET file and nonrecursive directory deletion calls.  No research
 artifact was removed.
 
+## Git line-ending normalization correction
+
+The first verifier report hashed `independent-results.json` as generated in
+the Windows working tree.  `Path.write_text` had used the platform newline,
+so those bytes contained CRLF line endings and had SHA-256
+`c8ad850e2bfc17ae72729b4cd7d85397061fe98f54e6d9f3c54e7bc36bcb20c5`.
+The repository's `.gitattributes` normalized the committed blob to LF, whose
+SHA-256 is
+`54a02ffda9fe13293d6732fc6bf51f47e28a876a92ebdece10dea187ae0d020c`.
+This made the originally recorded output hash fail against the published
+blob even though the parsed JSON and mathematics were unchanged.
+
+The writer now passes `newline="\n"` explicitly.  The result was regenerated
+with LF bytes, all dependent verifier hashes were updated, and the complete
+26-test independent suite was rerun.  No candidate file or mathematical
+claim changed.
+
 ## Mathematical and certificate discrepancies
 
 None found.  All candidate claims within the stated aggregate-count scope

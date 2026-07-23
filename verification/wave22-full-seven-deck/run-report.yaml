@@ -37,13 +37,13 @@ outputs:
   - path: verification/wave22-full-seven-deck/preinspection-freeze.tsv
     sha256: 83af376d375e4a26edf10a629aa085f8d18156fcc0d9d95acf6dc4654987966c
   - path: verification/wave22-full-seven-deck/independent_verify.py
-    sha256: 4c5a45f74750715deec0d21383569ef05775c50c022a6c92df9c19d2e54abe30
+    sha256: f058ca21c96d19a6f0784a8bdf4871ff8b4d55b03e4205bafb0a2fa62739857b
   - path: verification/wave22-full-seven-deck/test_independent_verify.py
     sha256: 4faccfafee070ceb0f28a9494ec146708d413c0b5189b860a8d34b1c6dc66465
   - path: verification/wave22-full-seven-deck/independent-results.json
-    sha256: c8ad850e2bfc17ae72729b4cd7d85397061fe98f54e6d9f3c54e7bc36bcb20c5
+    sha256: 54a02ffda9fe13293d6732fc6bf51f47e28a876a92ebdece10dea187ae0d020c
   - path: verification/wave22-full-seven-deck/2026-07-23T191133Z-audit.md
-    sha256: a0140e847a2a7fe240252866fc2ee6d97fe2b852da686ee06e8434bc1bb5710e
+    sha256: 112a8ac50ad6ccb09033ad6ed880ed0b3b5f97d3b8d0065df73bc4f14c605a55
 limitations:
   - Aggregate type counts do not enforce consistency on overlapping subsets.
   - No 99-vertex adjacency matrix or graph is constructed.
@@ -55,6 +55,8 @@ result:
   independent_tests: "26/26 PASS"
   candidate_tests_after_independent_audit: "15/15 PASS"
   candidate_result_replay_byte_identical: true
+  independent_result_newlines: LF
+  publication_hash_normalization_corrected: true
   order_6_unlabeled_classes: 62
   order_7_labeled_masks: 394020
   order_7_unlabeled_classes: 208
