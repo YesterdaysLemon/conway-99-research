@@ -1023,6 +1023,92 @@ remains `n3>=708`, and target existence remains `UNKNOWN`. See
 `agents/2026-07-23-wave23-weighted-extensions.md` and
 `verification/wave23-weighted-extensions/2026-07-23T202156Z-audit.md`.
 
+## Next-endpoint lattice boundary (`VERIFIED_INCONCLUSIVE`)
+
+At the first surviving endpoint `n3=708`, the same rank-44 endomorphism has
+
+```text
+B = I+2C,
+tr(B)=60,
+tr(C)=8.
+```
+
+Because `C` is integral and self-adjoint for a positive Gram form, its
+nonzero eigenvalues are real and their product is a nonzero integer. If their
+number is `r`, AM--GM and Cauchy give
+
+```text
+tr(C^2) >= r,
+tr(C^2) >= 64/r,
+tr(C^2) >= 8,
+tr(B^2) >= 108.
+```
+
+For every real `x>-1/2`, `x!=0`, an exact calculus argument proves
+
+```text
+log(1+2x)
+  <= x log(3) - (log(3)-2/3) log|x|.
+```
+
+Summing over the nonzero eigenvalues and using their integral
+pseudodeterminant yields
+
+```text
+det(B) <= 3^8 = 6561.
+```
+
+The factorization `det(B)=h det(Q)`, the floor `det(Q)>=5`, and the
+scaled-dual conditions reduce the endpoint to exactly
+
+```text
+h in {9,21,49,81,189,441,729,1029}.
+```
+
+The harmonic local identities separately imply `q(T)<=11` and permit at most
+one triangle with `q(T)=11`. A scalar profile with 221 values equal to two
+and ten equal to three still survives.
+
+Most importantly, the remaining abstract lattice conditions are genuinely
+feasible. With `E8` the even unimodular rank-eight Gram matrix and
+`A2=[[2,-1],[-1,2]]`, define
+
+```text
+S = E8^5 direct_sum A2^2,
+Q = (E8^-1)^5 direct_sum A2^2,
+G = 21 S^-1,
+B = S Q.
+```
+
+Exact 44-by-44 arithmetic gives
+
+```text
+det(S)=h=9,
+det(Q)=9,
+det(B)=81,
+tr(B)=60,
+S G=21I,
+G B=21Q,
+B=I (mod 2),
+minimum(G)>=14.
+```
+
+This is a hostile control against overclaiming the lattice route. It is not a
+primitive sublattice of `Z^231`, a 231-column projector Gram realization, a
+matrix with proved `W=M o M` origin, or a graph. Thus `n3=708` remains open
+inside the project, and a further contradiction must use one of those omitted
+structural bridges. See
+`agents/2026-07-23-wave24-n3-708-index-boundary.md` and
+`verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md`.
+
+A proof-separated source audit found no exact match for `n3=708`,
+`det(B)<=3^8`, the ordered eight-value index list, or the complete logarithmic
+argument in its frozen searches. It records Knill's general
+pseudodeterminant work and Bacher--Venkov's rational-idempotent lattice
+construction as conceptual prior art, not exact target matches. This is
+bounded non-discovery; novelty and priority remain `UNKNOWN`. See
+`verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

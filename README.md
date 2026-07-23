@@ -682,6 +682,41 @@ locates neither the exact `708/209994` endpoint nor the complete Wave 23
 method in 24 frozen query and citation searches. This is bounded
 non-discovery, not proof of openness or novelty.
 
+Wave 24 attacks the first surviving endpoint `n3=708`. Here
+`B=I+2C` has `tr(C)=8`. The nonzero eigenvalue product of the integral,
+real-diagonalizable matrix `C` is a nonzero integer, and an exact pointwise
+logarithmic inequality gives
+
+```text
+det(B) <= 3^8 = 6561.
+```
+
+Combining this with `det(B)=h det(Q)`, `det(Q)>=5`, and the scaled-dual
+congruences leaves exactly
+
+```text
+h in {9,21,49,81,189,441,729,1029}.
+```
+
+The local harmonic argument also gives `q(T)<=11` with at most one
+`q(T)=11`. This is not an endpoint exclusion: a complete exact
+`E8^5 direct-sum A2^2` coordinate-lattice package survives the current
+abstract identities at `h=9`. The
+[blind Wave 24 audit](verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md)
+reconstructs the proof, verifies every 44-by-44 matrix entry, passes 17
+independent tests, and preserves the crucial scope wall. No primitive
+`Z^231` embedding, projector/Hadamard origin, Schur-square origin, or graph
+is known. The lower bound remains `n3>=708`, and Conway-99 remains `UNKNOWN`.
+
+The proof-separated
+[Wave 24 literature audit](verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md)
+finds no exact endpoint, determinant-cap, eight-index-list, or logarithmic
+method match in its frozen searches. It records older conceptual prior art
+for pseudodeterminants and lattices from rational idempotents, and again
+records the concrete layer-counting gap in a 2022 report claiming
+nonexistence. Exact-match non-discovery is bounded; novelty and priority
+remain `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -881,6 +916,13 @@ status.
 - [Wave 23 literature/status audit](verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md):
   current-source status, exact-value and method searches, source/query ledger,
   and bounded non-discovery with novelty left `UNKNOWN`.
+- [Wave 24 `n3=708` index-boundary audit](verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md):
+  independent pseudodeterminant/log-bound proof, eight-value index
+  exhaustion, full abstract lattice certificate, 17 hostile tests, and
+  fail-closed separation from a projector or graph realization.
+- [Wave 24 literature/status audit](verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md):
+  exact endpoint and method queries, 40 individual index templates,
+  conceptual ingredient prior art, and bounded non-discovery.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

@@ -637,3 +637,37 @@ obligations:
       - "verification/wave23-weighted-extensions/artifact-manifest.sha256"
       - "verification/wave23-weighted-extensions/verifier-failures.md"
     note: "The discovery suite passes 18 tests and the separately implemented verifier passes 20 hostile tests. Both rebuild the 394,020 labeled and 208 unlabeled order-seven census; the verifier checks all 712 rows, 20,408 isomorphism choices, 38,688 coefficient partitions, the 171-row source gate, ranks 207 and 208, and all 353 affine parameter values. The exact results replay byte-identically. The relaxation is VERIFIED FEASIBLE at the historical endpoint only; no graph is constructed, the current n3>=708 bound is unchanged, and target existence and novelty remain UNKNOWN."
+
+  - id: O-WAVE24-N3-708-INDEX
+    requirement: "Blindly freeze and independently reconstruct the n3=708 endpoint specialization, integral characteristic-pseudodeterminant floor, positive- and negative-domain logarithmic inequality, determinant cap, complete 3,7-smooth index exhaustion, local harmonic restrictions, full E8/A2 coordinate-lattice survivor matrices, theorem applicability, active hostile premises, deterministic submitted replay, and the boundary between an abstract lattice package and the required projector/Schur-square/graph origin."
+    critical: true
+    status: PASS_SCOPED_CONDITIONAL_RESTRICTION
+    evidence:
+      - "agents/2026-07-23-wave24-n3-708-index-boundary.md"
+      - "attempts/wave24-n3-708-index/exact_check.py"
+      - "attempts/wave24-n3-708-index/test_exact_check.py"
+      - "attempts/wave24-n3-708-index/exact-results.json"
+      - "attempts/wave24-n3-708-index/failed-routes.md"
+      - "verification/wave24-n3-708-index/preinspection-freeze.sha256"
+      - "verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md"
+      - "verification/wave24-n3-708-index/independent_check.py"
+      - "verification/wave24-n3-708-index/test_independent_check.py"
+      - "verification/wave24-n3-708-index/independent-results.json"
+      - "verification/wave24-n3-708-index/survivor-certificate.json"
+      - "verification/wave24-n3-708-index/theorem-applicability.md"
+      - "verification/wave24-n3-708-index/artifact-manifest.sha256"
+      - "verification/wave24-n3-708-index/verifier-failures.md"
+    note: "The independent verifier passes 17 tests, replays all 15 submitted tests, regenerates the submitted JSON byte-identically, emits and verifies every entry of the 44-by-44 survivor matrices, and validates all ten manifest entries. It verifies det(B)<=6561, the exact eight-value h list, q<=11 with at most one q=11, and the abstract h=9 survivor. It does not verify a primitive Z^231 embedding, projector/Hadamard origin, Schur-square origin, graph, or n3=708 exclusion. The current bound remains n3>=708; target existence and novelty remain UNKNOWN."
+
+  - id: O-WAVE24-LITERATURE-STATUS
+    requirement: "Freeze a source-first plan and audit current target status, every exact Wave 24 endpoint value and index template, the logarithmic characteristic-pseudodeterminant method, equivalent projector-lattice terminology, conceptual ingredient prior art, the located 2022 nonexistence claim, source provenance, access/tool failures, and bounded non-discovery language without promoting search nonhits to novelty."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave24-literature-audit/preinspection-query-plan.md"
+      - "verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md"
+      - "verification/wave24-literature-audit/source-query-ledger.json"
+      - "verification/wave24-literature-audit/run-report.yaml"
+      - "verification/wave24-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    note: "The proof-separated audit verifies that its inspected current specialized sources still treat the target as unresolved and records 40 individual h-template searches plus exact endpoint, determinant, inequality, and method queries. No exact Wave 24 match was located. Knill's pseudodeterminant work and Bacher--Venkov's rational-idempotent lattice construction are recorded as conceptual analogues. The 2022 Ishihara claim is retained with a concrete equation-(88) gap. Every nonhit is bounded; target status, novelty, and priority remain UNKNOWN."

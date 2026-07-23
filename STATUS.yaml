@@ -6,10 +6,10 @@ literature_audit:
   through: 2026-07-23
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave23-literature-audit/2026-07-23-wave23-literature-audit.md"
-  latest_audit_sha256: "4a57192cd08e7a7f4d10a8eeb355f189562a414ab3007c10e1075cfb55a1901e"
-  source_query_ledger: "verification/wave23-literature-audit/source-query-ledger.json"
-  source_query_ledger_sha256: "aa28a2a358e9e7243d800ad7229d57441cca561000155f36a47bca55f389c3eb"
+  latest_audit: "verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md"
+  latest_audit_sha256: "e8a9af0e7cbd72f4e34988a50ce487852e2520e6dcac081db8bf6a020b5a1c8d"
+  source_query_ledger: "verification/wave24-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "dc916317ca3930257afb2e93d444f75de97d2bc9fa8cf3be30784ae7d282a244"
   exact_wave23_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
@@ -713,4 +713,57 @@ twenty_third_research_wave:
   weighted_extensions_bound_changed: false
   clean_clone_verdict: PENDING
   caveat: "Two structurally independent proof lanes verify the conditional exclusion n3!=705 and therefore n3>=708 and induced_C6_count>=209994. The shorter lane's original audit caught one ancillary hostile-ledger defect, now preserved, corrected, and separately reverified without changing the proof. The separately verified 712-by-208 weighted-extension family proves only that a necessary aggregate relaxation is feasible at the historical endpoint; it is not a graph and does not weaken the endpoint exclusion. These are human proofs with exact arithmetic companions and an imported even-unimodular signature theorem, not a graph construction, target nonexistence proof, or formal-kernel proof. They do not determine modular ranks away from the excluded endpoint. The source-first audit found no exact prior hit, but bounded non-discovery is not a novelty certificate. Target existence and novelty remain UNKNOWN."
+twenty_fourth_research_wave:
+  discovery_commit: "821b162f7ff31f92bd1982bc31164c6b767838f4"
+  verification_commit: "26a2a92fe66b060bc4989e8705daecd2322efe07"
+  literature_audit_commit: "60b6973bb292fd0da44e38bf1359617e9d88a0c0"
+  verifier_verdict: PASS_SCOPED_CONDITIONAL_RESTRICTION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  n3_708_excluded: false
+  determinant_upper_bound: 6561
+  surviving_lattice_indices: [9, 21, 49, 81, 189, 441, 729, 1029]
+  local_q_upper_bound: 11
+  local_q11_multiplicity_upper_bound: 1
+  discovery_report: "agents/2026-07-23-wave24-n3-708-index-boundary.md"
+  discovery_report_sha256: "461bbcff6399ae18c2764f68ea498b7eebba9780af0032b8e2e8fa18ca26af28"
+  submitted_checker: "attempts/wave24-n3-708-index/exact_check.py"
+  submitted_checker_sha256: "60bec6067383de3d9b6ecf57a5ce2a532deaf4759cc65faf4c63a6b8ce98b709"
+  submitted_result: "attempts/wave24-n3-708-index/exact-results.json"
+  submitted_result_sha256: "a4241cdeea64a8f6073037d564e72fb7ef545287d45aca4759cec6c31d26a463"
+  verifier_audit: "verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md"
+  verifier_audit_sha256: "958b9b2d13d697c281ba490d21b170f453d059bfaa952f8e92a9709b6c8d3cd8"
+  independent_checker: "verification/wave24-n3-708-index/independent_check.py"
+  independent_checker_sha256: "6b0ca0c1db48d60da0803ef67632d299c71b1f07a0121b809d6f86975d4c1308"
+  independent_result: "verification/wave24-n3-708-index/independent-results.json"
+  independent_result_sha256: "726807402388c02909171a689f3a7fe2d8d1b74307c24e322ae013d0a9cd486a"
+  survivor_certificate: "verification/wave24-n3-708-index/survivor-certificate.json"
+  survivor_certificate_sha256: "a217ec7211128f51e684030a7fe8d3c60ac80935f356ba5193dc34d36d4077a2"
+  theorem_applicability: "verification/wave24-n3-708-index/theorem-applicability.md"
+  theorem_applicability_sha256: "bea67ef5cac84c34ed7ed336ee947532a25a27b05dda653a50693af52cc4b2d1"
+  verifier_manifest: "verification/wave24-n3-708-index/artifact-manifest.sha256"
+  verifier_manifest_sha256: "36b3a3b39264e502346960acf00e2b1e054bda88b21ec1559c9076dd340edb84"
+  submitted_tests_passed: 15
+  independent_tests_passed: 17
+  abstract_coordinate_lattice_survivor: VERIFIED_AT_H_9
+  primitive_embedding_in_Z231: NOT_PROVED
+  projector_hadamard_origin: NOT_PROVED
+  schur_square_origin: NOT_PROVED
+  graph_construction: false
+  source_status_audit: "verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md"
+  source_status_audit_sha256: "e8a9af0e7cbd72f4e34988a50ce487852e2520e6dcac081db8bf6a020b5a1c8d"
+  source_query_ledger: "verification/wave24-literature-audit/source-query-ledger.json"
+  source_query_ledger_sha256: "dc916317ca3930257afb2e93d444f75de97d2bc9fa8cf3be30784ae7d282a244"
+  source_query_plan: "verification/wave24-literature-audit/preinspection-query-plan.md"
+  source_query_plan_sha256: "9e4d1cff10092aa1fd171ad0c94dc17e8d4cd08fd6463fbb83bdd2374329ddd1"
+  source_publication_manifest: "verification/wave24-literature-audit/publication-hashes.sha256"
+  source_publication_manifest_sha256: "1a6c5822b7c41a5aa485668fab0977b09a61f2ec365a9cfededd0d45b1c8ce4d"
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  conceptual_prior_art:
+    - "Knill: general characteristic pseudodeterminant"
+    - "Bacher--Venkov: integral lattices from rational idempotents"
+  clean_clone_verdict: PENDING
+  caveat: "The independently verified logarithmic argument gives det(B)<=6561 and exactly eight necessary arithmetic index survivors at n3=708. A complete exact E8/A2 coordinate-lattice package survives at h=9, proving that the abstract determinant, scaled-dual, parity, positivity, and minimum identities alone do not exclude the endpoint. No primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. The source-first audit found no exact match but records older conceptual ingredient prior art; bounded non-discovery is not a novelty certificate. The current conditional bound remains n3>=708; target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23

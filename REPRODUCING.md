@@ -1131,6 +1131,48 @@ The verified statement is exact feasibility of the encoded 712-by-208
 necessary count relaxation for every allowed historical-endpoint parameter,
 not overlap consistency, a graph construction, or a bound change.
 
+Replay the Wave 24 `n3=708` index-boundary result:
+
+```powershell
+$wave24Stem = [guid]::NewGuid().ToString('N')
+$wave24Submitted = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave24-submitted-$wave24Stem.json"
+$wave24Independent = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave24-independent-$wave24Stem.json"
+$wave24Survivor = Join-Path ([System.IO.Path]::GetTempPath()) `
+  "wave24-survivor-$wave24Stem.json"
+
+python -B -m unittest discover `
+  -s attempts\wave24-n3-708-index -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave24-n3-708-index `
+  -p test_independent_check.py -v
+python -B attempts\wave24-n3-708-index\exact_check.py `
+  --output $wave24Submitted
+python -B verification\wave24-n3-708-index\independent_check.py `
+  --output $wave24Independent `
+  --matrix-certificate $wave24Survivor
+Get-FileHash -Algorithm SHA256 `
+  $wave24Submitted,$wave24Independent,$wave24Survivor
+```
+
+The submitted and independent suites pass 15/15 and 17/17. Expected hashes
+are:
+
+```text
+a4241cdeea64a8f6073037d564e72fb7ef545287d45aca4759cec6c31d26a463
+726807402388c02909171a689f3a7fe2d8d1b74307c24e322ae013d0a9cd486a
+a217ec7211128f51e684030a7fe8d3c60ac80935f356ba5193dc34d36d4077a2
+```
+
+All ten entries in
+`verification/wave24-n3-708-index/artifact-manifest.sha256` must match; the
+manifest itself has SHA-256
+`36b3a3b39264e502346960acf00e2b1e054bda88b21ec1559c9076dd340edb84`.
+The verified result restricts the endpoint to eight arithmetic index values
+and verifies an abstract `h=9` lattice survivor. It does not exclude
+`n3=708` or construct the projector or graph.
+
 The separate `attempts/wave20-n3-63-structural` package is archival. Its
 14/14 tests and exact JSON replay pass, but its proof remains
 `DERIVED_PENDING_INDEPENDENT_AUDIT`; the first false two-profile census is

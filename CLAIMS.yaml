@@ -541,6 +541,38 @@ claims:
       - "verification/wave23-weighted-extensions/artifact-manifest.sha256"
     limitations: "The certificate gives aggregate isomorphism-class counts only. It does not enforce consistency on overlapping subsets, construct a 99-by-99 adjacency matrix, or imply target existence. The Hamiltonian panel alignment remains a cited human transcription. This historical-endpoint relaxation result does not alter the separately verified current bound n3>=708; Conway-99 and novelty remain UNKNOWN."
 
+  - id: C-WAVE24-N3-708-INDEX-021
+    statement: "Conditional on a putative srg(99,14,1,2) with n3=708 and the verified projector-lattice premises, write the positive integral rank-44 endomorphism as B=I+2C. Then tr(C)=8, the nonzero integral characteristic coefficient and a pointwise logarithmic inequality imply det(B)<=3^8=6561, and the complete scaled-dual exhaustion leaves exactly h in {9,21,49,81,189,441,729,1029}. The local harmonic constraints also give q(T)<=11 with at most one triangle having q(T)=11. An exact rank-44 E8^5 direct-sum A2^2 coordinate-lattice package survives the current determinant, parity, positivity, minimum, and endomorphism identities at h=9."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_INDEX_AND_ABSTRACT_LATTICE_RELAXATION
+    evidence:
+      - "agents/2026-07-23-wave24-n3-708-index-boundary.md"
+      - "attempts/wave24-n3-708-index/exact_check.py"
+      - "attempts/wave24-n3-708-index/test_exact_check.py"
+      - "attempts/wave24-n3-708-index/exact-results.json"
+      - "verification/wave24-n3-708-index/preinspection-freeze.sha256"
+      - "verification/wave24-n3-708-index/2026-07-23T204222Z-audit.md"
+      - "verification/wave24-n3-708-index/independent_check.py"
+      - "verification/wave24-n3-708-index/test_independent_check.py"
+      - "verification/wave24-n3-708-index/independent-results.json"
+      - "verification/wave24-n3-708-index/survivor-certificate.json"
+      - "verification/wave24-n3-708-index/theorem-applicability.md"
+      - "verification/wave24-n3-708-index/artifact-manifest.sha256"
+    limitations: "The eight h values are necessary arithmetic survivors, not determined modular ranks. The exact E8/A2 object is only an abstract coordinate-lattice package: no primitive embedding in Z^231, 231-column projector Gram matrix, Hadamard/Schur-square origin, or graph is supplied. Thus n3=708 is not excluded, the current lower bound does not improve, and Conway-99 and novelty remain UNKNOWN."
+
+  - id: C-WAVE24-LITERATURE-022
+    statement: "At the frozen 2026-07-23 cutoff, the inspected current specialized and maintained sources still treated srg(99,14,1,2) as unresolved. The enumerated searches located no exact n3=708, det(B)<=6561=3^8, ordered eight-index list, or complete logarithmic characteristic-pseudodeterminant argument. General pseudodeterminant and rational-idempotent lattice ingredients have older cited analogues."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave24-literature-audit/preinspection-query-plan.md"
+      - "verification/wave24-literature-audit/2026-07-23-wave24-literature-audit.md"
+      - "verification/wave24-literature-audit/source-query-ledger.json"
+      - "verification/wave24-literature-audit/run-report.yaml"
+      - "verification/wave24-literature-audit/publication-hashes.sha256"
+      - "SOURCES.bib"
+    limitations: "The exact-match result is bounded non-discovery, not a novelty or priority certificate. A located 2022 technical report claims nonexistence, but its displayed equation (88) uses an unjustified layer common-neighbor count; this gap does not prove the theorem false or establish target existence. Search indexing, inaccessible work, alternative notation, and future sources remain possible. Target status and Wave 24 novelty remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED
