@@ -366,6 +366,7 @@ claims:
       - "verification/n3-57-structural/mutation-results.json"
       - "agents/2026-07-23-wave18-status-search.md"
       - "verification/2026-07-23-wave18-status-audit.md"
+      - "verification/2026-07-23-wave18-clean-clone.md"
     limitations: "The Wave 18 exclusion is a human conditional proof with exact arithmetic companions, not a raw 99-by-99 certificate or formal-kernel proof. Its combination to n3>=60 additionally uses the separately audited Wave 17 exclusion of n3=54 and its official-catalog premise. No target existence/nonexistence conclusion or novelty claim is supplied; current status and novelty remain UNKNOWN."
 
   - id: C-N3-BOUNDARY-001

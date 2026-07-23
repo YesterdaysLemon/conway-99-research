@@ -413,7 +413,9 @@ eighteenth_research_wave:
   ishihara_correct_residual_cut_degrees: "1^20,2^51"
   ishihara_correct_double_count: "122=2(71)-20"
   baker_2026_overlap: UNKNOWN_ABSTRACT_ONLY
-  integration_commit: PENDING
-  clean_clone_verdict: PENDING
+  integration_commit: "1c128e2144803a129b8d34dcef4a1386b3c78c78"
+  clean_clone_commit: "1c128e2144803a129b8d34dcef4a1386b3c78c78"
+  clean_clone_replay: "verification/2026-07-23-wave18-clean-clone.md"
+  clean_clone_verdict: PASS
   caveat: "The independently audited Wave 18 argument excludes conditional n3=57 without importing Wave 17. Combining the two audited exclusions yields n3>=60 and induced_C6_count>=209346. The result is a human conditional necessary-bound proof with exact arithmetic companions, not a raw graph certificate or formal-kernel proof. The 2022 Ishihara displayed proof is refuted at equation (88), but that defect resolves neither target outcome. Two source-first lanes found no exact prior Wave 18 endpoint through 2026-07-23; non-discovery is not a novelty certificate. Conway-99 and novelty remain UNKNOWN."
 last_updated: 2026-07-23

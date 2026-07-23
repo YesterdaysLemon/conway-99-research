@@ -691,6 +691,8 @@ The source-first literature record and its independent audit are
 `verification/2026-07-23-wave18-status-audit.md`. They also preserve the
 exact `1^20,2^51` correction to Ishihara's equation (88), while keeping both
 target outcomes and Wave 18 novelty `UNKNOWN`.
+The detached end-to-end release replay is recorded in
+`verification/2026-07-23-wave18-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
