@@ -707,7 +707,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     result = replay(arguments.certificate)
     if arguments.output is not None:
         arguments.output.parent.mkdir(parents=True, exist_ok=True)
-        arguments.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        payload = (json.dumps(result, indent=2, sort_keys=True) + "\n").encode("utf-8")
+        arguments.output.write_bytes(payload)
     print(result["status"])
     print("records", result["combined"]["records"])
     print("combined_sha256", result["combined"]["sha256"])

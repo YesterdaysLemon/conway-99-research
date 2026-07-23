@@ -126,6 +126,15 @@ class N339LocalReplayTests(unittest.TestCase):
                 rebuilt["combined"]["bytes"],
             )
 
+    def test_certificate_writer_is_canonical_lf(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "certificate.json"
+            PRIMARY.write_certificate(path, self.certificate)
+            payload = path.read_bytes()
+            self.assertTrue(payload.endswith(b"\n"))
+            self.assertNotIn(b"\r\n", payload)
+            self.assertEqual(json.loads(payload), self.certificate)
+
 
 if __name__ == "__main__":
     unittest.main()
