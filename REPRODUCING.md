@@ -310,7 +310,9 @@ SHA-256 `4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261`.
 The two implementations use different enumeration mechanisms, freeze all nine
 stream hashes, and reject eight premise, digest, conclusion, and status
 mutations. The result is only the conditional necessary bound `n3>=42`;
-Conway-99 remains `UNKNOWN`.
+Conway-99 remains `UNKNOWN`. The detached-clone procedure, first failed
+newline-portability gate, canonical-LF repair, and exact byte comparison are
+recorded in `verification/2026-07-22-wave11-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.

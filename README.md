@@ -196,7 +196,9 @@ now replay 8,907 premise-bound records with combined SHA-256
 `452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
 See the [Wave 11 derivation](agents/2026-07-22-wave11-n3-39-equality.md),
 [adversarial audit](verification/2026-07-22-n3-39-equality-audit.md), and
-[local replay audit](agents/2026-07-22-wave11-local-replay-audit.md). No
+[local replay audit](agents/2026-07-22-wave11-local-replay-audit.md). A
+[clean-source replay](verification/2026-07-22-wave11-clean-clone.md) records
+the initial LF/CRLF portability failure and the byte-stable repair. No
 checked source was found for the exact exclusion, but novelty remains
 `UNKNOWN`; the Conway-99 target itself also remains `UNKNOWN`.
 
@@ -299,6 +301,9 @@ status.
 - [Wave 10 clean-source replay](verification/2026-07-22-wave10-clean-clone.md):
   frozen-commit tests, certificate replay, and independent regeneration of all
   216 abstract support masks.
+- [Wave 11 clean-source replay](verification/2026-07-22-wave11-clean-clone.md):
+  frozen-commit tests and byte-identical canonical certificate regeneration,
+  including the retained newline-portability failure and repair.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

@@ -56,7 +56,8 @@ obligations:
       - "verification/2026-07-22-wave8-clean-clone.md"
       - "verification/2026-07-22-wave9-clean-clone.md"
       - "verification/2026-07-22-wave10-clean-clone.md"
-    note: "Wave 2, Wave 3/N3, and Waves 5-10 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
+      - "verification/2026-07-22-wave11-clean-clone.md"
+    note: "Wave 2, Wave 3/N3, and Waves 5-11 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY
     requirement: "Prove the frozen root normalization and legacy 11-branch cover complete without assuming a nontrivial solution automorphism."
@@ -244,4 +245,5 @@ obligations:
       - "verification/test_n3_39_equality.py"
       - "verification/test_n3_39_local.py"
       - "verification/2026-07-22-n3-39-equality-audit.md"
-    note: "The initial exposition omitted the explicit K=complement(L) bridge and the first compact checker hid a six-profile overlap with weak mutation guards. Both failures are public and repaired. The verified result is the conditional necessary bound n3>=42; novelty and Conway-99 remain UNKNOWN."
+      - "verification/2026-07-22-wave11-clean-clone.md"
+    note: "The initial exposition omitted the explicit K=complement(L) bridge, the first compact checker hid a six-profile overlap with weak mutation guards, and the first detached replay exposed platform-dependent newlines. All three failures are public and repaired. The verified result is the conditional necessary bound n3>=42; novelty and Conway-99 remain UNKNOWN."

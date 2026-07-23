@@ -165,5 +165,8 @@ eleventh_research_wave:
   replay_certificate: "verification/n3-39-equality/n3-39-local.json"
   replay_records: 8907
   replay_sha256: "452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1"
-  caveat: "The verified conditional necessary bound is n3>=42. The original proof omitted an explicit complement bridge and the first checker had weak semantic guards; both failures are public and repaired. No literature novelty is claimed, and Conway-99 remains UNKNOWN."
+  certificate_file_sha256: "4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261"
+  clean_clone_commit: "7895a7da129a5d5415b21603872c3a002e6c7f6d"
+  clean_clone_replay: "verification/2026-07-22-wave11-clean-clone.md"
+  caveat: "The verified conditional necessary bound is n3>=42. The original proof omitted an explicit complement bridge, the first checker had weak semantic guards, and the first detached replay exposed platform-dependent outer newlines; all three failures are public and repaired. No literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

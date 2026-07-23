@@ -274,6 +274,10 @@ python -m unittest -v verification/test_n3_39_local.py
 
 The certificate contains 8,907 records and has combined stream SHA-256
 `452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
+Its canonical-LF outer JSON has SHA-256
+`4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261`;
+the exact detached-clone replay is recorded in
+`2026-07-22-wave11-clean-clone.md`.
 Its premise stream explicitly binds `K=overline(L)`, 6-regularity, point-clique
 membership, linearity, the common-point rule, and the degree-zero-or-two
 crossing law. This remains a conditional replay companion to the human proof,
