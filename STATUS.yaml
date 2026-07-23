@@ -938,5 +938,9 @@ twenty_sixth_research_wave:
     - "Barg et al.: strongly regular graph and two-distance tight-frame embeddings"
     - "Nebe and Sunada: eutaxy, spherical designs, and root-system tight frames"
     - "Peng--Waldron: Hadamard products of frame Gram matrices"
+  clean_clone_commit: "4f1f3be35e712789dcba10fda5ec8d2bc569bc17"
+  clean_clone_replay: "verification/2026-07-23-wave26-clean-clone.md"
+  clean_clone_replay_sha256: "2e7c8234cf55677637552202ced74a2b51da34c2359119e521a27e11ee333395"
+  clean_clone_verdict: PASS
   caveat: "Two independently verified arguments refute the required projector-frame and full Schur-square origins of the one explicit Wave 24 E8^5 orthogonal-sum A2^2 abstract survivor. The abstract matrices remain exact, and no classification of all h=9 forms, exclusion of n3=708, graph construction, or target resolution follows. The stronger det(B)<=3645 proposal is retained as UNKNOWN. The proof-separated source audit found no direct or near-direct match, but bounded non-discovery is not novelty evidence; target existence and novelty remain UNKNOWN."
 last_updated: 2026-07-23

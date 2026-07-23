@@ -1256,6 +1256,14 @@ parameter-specific 231-row exclusion was found. This is bounded
 non-discovery only; novelty and priority remain `UNKNOWN`. See
 `verification/wave26-literature-audit/audit-report.md`.
 
+The detached Wave 26 publication replay is
+`verification/2026-07-23-wave26-clean-clone.md`. It records 65 passing tests,
+four byte-identical regenerated JSON files, three exact manifests, 151
+verified status path/hash pairs, link and line-ending checks, zero exact-blob
+privacy findings in the integration tree and three-commit unpublished range,
+a clean tracked tree, and Git object integrity at integration commit
+`4f1f3be35e712789dcba10fda5ec8d2bc569bc17`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

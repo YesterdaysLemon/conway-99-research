@@ -802,6 +802,13 @@ with tightness and strong eutaxy, so the extra discrete row/count/trace rules
 are essential. These are bounded search results; novelty and priority remain
 `UNKNOWN`.
 
+The detached
+[Wave 26 clean-source replay](verification/2026-07-23-wave26-clean-clone.md)
+passes all 65 tests, regenerates four JSON files byte-identically, verifies
+all three manifests, checks 151 status hashes and 172 local links, scans the
+integration tree and all three then-unpublished commits with zero privacy
+findings, and finishes with a clean tree and strict Git object integrity.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1025,6 +1032,10 @@ status.
 - [Wave 26 literature/status audit](verification/wave26-literature-audit/audit-report.md):
   28 frozen queries, 15 inspected sources, Schur-product terminology repair,
   conceptual prior art, and bounded non-discovery with novelty `UNKNOWN`.
+- [Wave 26 clean-source replay](verification/2026-07-23-wave26-clean-clone.md):
+  detached 65-test replay, four byte-identical generated files, three exact
+  manifests, metadata and unpublished-history privacy gates, clean status,
+  and `git fsck`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

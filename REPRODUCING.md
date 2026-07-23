@@ -1294,6 +1294,16 @@ full Schur-square origins of the one `E8^5 orthogonal-sum A2^2` hostile
 control. They do not classify all `h=9` forms, exclude `n3=708`, improve the
 headline `n3>=708` bound, or resolve Conway-99.
 
+The detached incremental replay is recorded in
+`verification/2026-07-23-wave26-clean-clone.md`. At integration commit
+`4f1f3be35e712789dcba10fda5ec8d2bc569bc17`, it passes all 65 Wave 26 tests,
+regenerates four exact JSON files byte-identically, checks all three
+manifests, 60 claims, 54 obligations, 151 status hashes, 172 local links, 47
+BibTeX keys, and 50 LF-only Wave 26/central files. Exact-blob scans of the
+integration tree and all three commits after public baseline `930cb99` find
+zero credential-shaped or private-path payloads. The detached clone finishes
+with a clean tracked tree and `git fsck --full --strict`.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
