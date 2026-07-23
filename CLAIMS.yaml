@@ -369,6 +369,24 @@ claims:
       - "verification/2026-07-23-wave18-clean-clone.md"
     limitations: "The Wave 18 exclusion is a human conditional proof with exact arithmetic companions, not a raw 99-by-99 certificate or formal-kernel proof. Its combination to n3>=60 additionally uses the separately audited Wave 17 exclusion of n3=54 and its official-catalog premise. No target existence/nonexistence conclusion or novelty claim is supplied; current status and novelty remain UNKNOWN."
 
+  - id: C-N3-EQUALITY-011
+    statement: "Conditional on the authenticated H/L indexed-point reduction and the official House of Graphs cubic-catalog completeness premise, exhaustive exact classification excludes n3=60. Therefore every putative srg(99,14,1,2) satisfies n3>=63 and induced_C6_count>=209349."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-23-wave19-alternate-frontier.md"
+      - "attempts/wave19-alternate-frontier/manifest.json"
+      - "attempts/wave19-alternate-frontier/exact-results.json"
+      - "attempts/wave19-alternate-frontier/connected20-dispositions.txt"
+      - "attempts/wave19-alternate-frontier/disconnected20-dispositions.json"
+      - "verification/n3-60-closure/2026-07-23-wave19-m27-human-proof-audit.md"
+      - "verification/n3-60-closure/2026-07-23-wave19-gram-theory-audit.md"
+      - "verification/n3-60-closure/independent_closure_verifier.py"
+      - "verification/n3-60-closure/2026-07-23T160756Z-independent-full.json"
+      - "verification/n3-60-closure/2026-07-23T161951Z-final-audit.md"
+    limitations: "This is an internally verified conditional equality exclusion, not a formal-kernel proof or a Conway-99 resolution. The official catalog completeness/nonisomorphism assertion is external, although the frozen bytes and every derived case were independently checked. The H/L structural semantics are imported from prior audited work. Novelty remains UNKNOWN."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

@@ -694,6 +694,41 @@ target outcomes and Wave 18 novelty `UNKNOWN`.
 The detached end-to-end release replay is recorded in
 `verification/2026-07-23-wave18-clean-clone.md`.
 
+Replay the canonical Wave 19 `n3=60` release and its separately written
+verifier without overwriting committed artifacts:
+
+```powershell
+.venv\Scripts\python.exe -B -m unittest -v `
+  attempts.wave19-alternate-frontier.test_exact_frontier
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\n3-60-closure `
+  -p test_independent_baseline.py -v
+.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\n3-60-closure `
+  -p test_independent_closure_verifier.py -v
+
+$wave19ReplayStem = [guid]::NewGuid().ToString('N')
+$wave19ReplayRoot = [System.IO.Path]::GetTempPath()
+$wave19Independent = Join-Path $wave19ReplayRoot `
+  "$wave19ReplayStem-independent-full.json"
+.venv\Scripts\python.exe -B `
+  verification\n3-60-closure\independent_closure_verifier.py `
+  --phase all --output $wave19Independent
+Get-FileHash -Algorithm SHA256 $wave19Independent
+```
+
+The expected independent JSON SHA-256 is
+`c8fb3af52d5a929d7d88b59ef53b8825a3b2d922fdb3fad1ac4208078a27a2a2`.
+The submitted suite passes 7/7 tests, the independent baseline passes 27/27,
+and the focused independent verifier passes 10/10. The full verifier downloads
+and validates the six pinned official cubic catalogs, reproduces all 510,489
+connected and 177 disconnected dispositions, reconstructs the two-Petersen
+orbit, exhausts every allowed `Z` through three edges, and replays the exact
+Gram/Farkas obstruction. The official catalog completeness assertion remains
+an external premise. The audited consequence is the conditional bound
+`n3>=63`, hence `induced_C6_count>=209349`; Conway-99 and novelty remain
+`UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

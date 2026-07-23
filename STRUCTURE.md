@@ -44,12 +44,13 @@ induced_C6_count = 209,286 + n3.
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
 the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
 39, 42, and 45, Wave 15 excludes equality at 48, Wave 16 excludes equality at
-51, Wave 17 excludes equality at 54, and Wave 18 independently excludes
-equality at 57. The currently strongest internally verified project bound is
+51, Wave 17 excludes equality at 54, Wave 18 independently excludes equality
+at 57, and Wave 19 excludes equality at 60. The currently strongest
+internally verified project bound is
 
 ```text
-n3 >= 60,
-induced_C6_count >= 209,346.
+n3 >= 63,
+induced_C6_count >= 209,349.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -574,6 +575,52 @@ degrees `1^20,2^51` and the corrected double count
 not 142. Thus that displayed proof is `REFUTED`, while both target outcomes
 remain `UNKNOWN`. See `agents/2026-07-23-wave18-status-search.md` and
 `verification/2026-07-23-wave18-status-audit.md`.
+
+Wave 19 treats `n3=60`, so `sum_T q(T)=40`. The `m=27` equality profile
+forces 21 size-two and six size-three indexed points. The positive-meeting
+graph on the six size-three points is either a triangular prism or `K3,3`;
+exact twofold witness multiplicity excludes both after making the grid-label
+injectivity step explicit.
+
+At `m=30`, every active point has size two. Writing the 30 points as the edges
+of a triangle-free cubic graph `F` on 20 active labels gives
+
+```text
+D = L(F) union R union Z,
+N A_R N^T = 2 A_L,
+|Z| <= 3,
+B = 12I - D - D^2 + 2J = C C^T.
+```
+
+Here each local `L` row is a remote induced six-cycle, the choices are
+symmetric, `R` is the resulting point 2-factor, and `Z` contains the remaining
+allowed point edges. Exact enumeration of all official connected cubic
+order-20 records and all disconnected component types leaves only two Petersen
+components. Its 120 `L/R` models form one orbit with stabilizer 240. Exhausting
+all `1+165+C(165,2)+C(165,3)=748826` labeled `Z` placements leaves 16 PSD Gram
+orbits. Fifteen coefficient systems are inconsistent. For the sole residual
+
+```text
+Z = {(0,23),(1,22),(2,17)},
+```
+
+an integer Farkas functional has target `-6` and nonnegative score on every one
+of the 232 possible nonzero binary outside columns. Hence no nonnegative column
+multiplicities can realize `B`, excluding conditional `n3=60` and yielding
+
+```text
+n3 >= 63,
+induced_C6_count >= 209349.
+```
+
+A materially independent verifier authenticates the canonical-LF release,
+reconstructs every connected and disconnected disposition, re-enumerates all
+`Z` placements and Gram systems, checks hostile mutations, and replays the
+submitted checker. See `agents/2026-07-23-wave19-alternate-frontier.md` and
+`verification/n3-60-closure/2026-07-23T161951Z-final-audit.md`. Official House
+of Graphs catalog completeness and nonisomorphism are explicit external
+premises. This remains a conditional necessary bound; Conway-99 and novelty
+remain `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

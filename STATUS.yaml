@@ -418,4 +418,39 @@ eighteenth_research_wave:
   clean_clone_replay: "verification/2026-07-23-wave18-clean-clone.md"
   clean_clone_verdict: PASS
   caveat: "The independently audited Wave 18 argument excludes conditional n3=57 without importing Wave 17. Combining the two audited exclusions yields n3>=60 and induced_C6_count>=209346. The result is a human conditional necessary-bound proof with exact arithmetic companions, not a raw graph certificate or formal-kernel proof. The 2022 Ishihara displayed proof is refuted at equation (88), but that defect resolves neither target outcome. Two source-first lanes found no exact prior Wave 18 endpoint through 2026-07-23; non-discovery is not a novelty certificate. Conway-99 and novelty remain UNKNOWN."
+nineteenth_research_wave:
+  discovery_commit: "13b2a90604e78a400eb05be5e7bf261f29d46f77"
+  coarse_audit_commit: "a7b81ec6ef4e84655f6f46e439dbe3bc7fb804a1"
+  source_status_commit: "d4e8b9df7800ec1aeda599f2bd90f49cf75d8d81"
+  m27_audit_commit: "a562e7e250ab99631a109d66dec62c07e27a22fb"
+  canonical_release_commit: "a121e789e03a32c3d29bce8947b16033c0061ce7"
+  independent_verification_commit: "08ba71f3f9e61fa032723f24d517aded32fff49f"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_60_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_60_exclusion: EXCLUDED_VERIFIED
+  conditional_n3_lower_bound: 63
+  conditional_induced_C6_lower_bound: 209349
+  discovery_report: "agents/2026-07-23-wave19-alternate-frontier.md"
+  discovery_report_sha256: "ea28f4104bcdd479cf1a2ea59652cb9f541893851a26cef1450755e1d0827dc0"
+  release_manifest: "attempts/wave19-alternate-frontier/manifest.json"
+  release_manifest_sha256: "428505294e69481e3a45fc4a3b1ca93e7ec92aff0a22a869f3692866db43a782"
+  discovery_result: "attempts/wave19-alternate-frontier/exact-results.json"
+  discovery_result_sha256: "3e6c3016572c55aa15acc7b629a6a11b73cfce48f33e61ab1def2ebaf9b6f000"
+  final_audit: "verification/n3-60-closure/2026-07-23T161951Z-final-audit.md"
+  final_audit_sha256: "fc3dc2eedb479e9f8cb07bbb1622027f384eb5a2dc7e136b7b7385a5304fc943"
+  independent_checker: "verification/n3-60-closure/independent_closure_verifier.py"
+  independent_checker_sha256: "b58d13a29497a55c87eacec0cf8c268adff73f9cf458ddf8fe3be68438773ad6"
+  independent_result: "verification/n3-60-closure/2026-07-23T160756Z-independent-full.json"
+  independent_result_sha256: "c8fb3af52d5a929d7d88b59ef53b8825a3b2d922fdb3fad1ac4208078a27a2a2"
+  connected_catalog_cases: 510489
+  disconnected_cases: 177
+  labeled_Z_placements_nonempty: 748825
+  entrywise_survivors: 8935
+  PSD_orbits: 16
+  discovery_tests_passed: 7
+  independent_tests_passed: 10
+  independent_baseline_tests_passed: 27
+  catalog_premise: "Official House of Graphs connected cubic catalogs are complete and pairwise nonisomorphic; their pinned bytes and every decoded record were independently validated, but the publisher's completeness assertion is external."
+  caveat: "The independently reconstructed exact census excludes conditional n3=60 within the audited H/L indexed-point framework and yields n3>=63 and induced_C6_count>=209349. The verifier covered all connected and disconnected cubic F cases, all 120 two-Petersen L/R models, every Z placement through three edges, exact Gram systems, and the final Farkas separator. Failed v1/v2 releases, proofless SAT/PB outcomes, invalid eigenvalue and witness routes, and the first filename-mismatch replay remain public and non-evidentiary. This is not a 99-vertex nonexistence proof or a novelty determination; Conway-99 and novelty remain UNKNOWN."
 last_updated: 2026-07-23

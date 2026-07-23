@@ -421,3 +421,21 @@ obligations:
       - "verification/2026-07-23-wave18-status-audit.md"
       - "SOURCES.bib"
     note: "Two source-first lanes found no authoritative target resolution or exact prior Wave 18 endpoint through 2026-07-23; those nonhits do not establish novelty. The generic Rayleigh subset-edge bound is standard. Baker's abstract gives no exact theorem. Ishihara's equation (88) premise is refuted by the exact residual-cut degree multiset 1^20,2^51 and corrected count 122=2(71)-20, but both target outcomes remain UNKNOWN."
+
+  - id: O-WAVE19-CLOSURE
+    requirement: "Adversarially reconstruct the n3=60 profile reduction, repaired m=27 prism/K3,3 exclusion, residual-B bridge, official connected and disconnected cubic catalogs, symmetric local-C6 choices, two-Petersen orbit, every allowed Z placement through three edges, exact PSD/Gram systems, final Farkas separator, release provenance, and hostile mutations."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave19-alternate-frontier.md"
+      - "attempts/wave19-alternate-frontier/manifest.json"
+      - "attempts/wave19-alternate-frontier/exact-results.json"
+      - "verification/n3-60-closure/2026-07-23T140227Z-preinspection-freeze.md"
+      - "verification/n3-60-closure/2026-07-23T143251Z-independent-baseline.md"
+      - "verification/n3-60-closure/2026-07-23-wave19-m27-human-proof-audit.md"
+      - "verification/n3-60-closure/2026-07-23-wave19-gram-theory-audit.md"
+      - "verification/n3-60-closure/independent_closure_verifier.py"
+      - "verification/n3-60-closure/test_independent_closure_verifier.py"
+      - "verification/n3-60-closure/2026-07-23T160756Z-independent-full.json"
+      - "verification/n3-60-closure/2026-07-23T161951Z-final-audit.md"
+    note: "The independent audit verifies the conditional exclusion of n3=60, subject to the audited structural framework and the official catalog completeness premise. It matches all 510,489 connected dispositions and 177 disconnected cases, checks all 748,825 nonempty labeled Z placements, and independently replays the sole exact Farkas obstruction. The prospective bounds are n3>=63 and induced_C6_count>=209349. Conway-99 and novelty remain UNKNOWN."

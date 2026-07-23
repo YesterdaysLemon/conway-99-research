@@ -431,7 +431,7 @@ The discovery suite passes 10 focused tests. A separately written checker
 reconstructs the nine profiles, crossing tables, point-size partitions, and
 exact rational spectral bounds; it passes 14 hostile tests and detects all 24
 frozen mutations. Combining this independently verified exclusion with Wave
-17 gives the currently strongest internally verified conditional bounds
+17 gives
 
 ```text
 n3 >= 60,
@@ -452,6 +452,35 @@ found no exact published `n3=57` exclusion, `n3>=60`, or `209346` bound. The
 generic spectral subset-edge inequality is standard Rayleigh/Alon--Chung prior
 art; no exact prior match to the active-set endpoint argument was located.
 Those focused nonhits are not a novelty certificate.
+
+Wave 19 excludes the next equality `n3=60`. The equality reduction first
+eliminates the remaining `m=27` prism and `K3,3` point profiles by exact
+witness multiplicity. At `m=30`, it reduces the residual to a triangle-free
+cubic graph `F` on 20 labels, a symmetric family of local six-cycles, a
+2-factor `R`, and at most three extra point edges `Z`. The released census
+checks all 510,489 connected cubic catalog records and all 177 disconnected
+types. Only the two-Petersen residual reaches the final Gram stage.
+
+For that residual, all 120 `L/R` models form one orbit. The exact search covers
+all 748,825 nonempty labeled `Z` placements through three edges, leaving 8,935
+entrywise survivors, 66 symmetry orbits, and 16 PSD Gram systems. Fifteen are
+exactly inconsistent. The last has an integer Farkas separator of target
+value `-6` whose 232 support scores are all nonnegative. A separately written
+verifier reproduces every catalog disposition, orbit, Gram system, and hostile
+mutation, then replays the submitted checker in an isolated canonical-path
+sandbox. Its verdict is the conditional bound
+
+```text
+n3 >= 63,
+induced_C6_count >= 209,349.
+```
+
+See the [Wave 19 discovery report](agents/2026-07-23-wave19-alternate-frontier.md)
+and [independent closure audit](verification/n3-60-closure/2026-07-23T161951Z-final-audit.md).
+The official House of Graphs completeness/nonisomorphism assertion is an
+explicit external premise; the pinned bytes and every derived case were
+independently checked. This is not a target nonexistence proof, formal-kernel
+proof, or novelty claim. Conway-99 and novelty remain `UNKNOWN`.
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
@@ -601,6 +630,10 @@ status.
   independent primary-source and exact-query audit of current status, the
   Reimbayev identity, focused prior-art nonhits, Baker's abstract, generic
   Rayleigh attribution, and the exact defect in Ishihara's equation (88).
+- [Wave 19 independent closure audit](verification/n3-60-closure/2026-07-23T161951Z-final-audit.md):
+  independent authentication and reconstruction of the repaired `m=27`
+  proof, all 510,489 connected and 177 disconnected cubic cases, the complete
+  two-Petersen `Z` census, exact Gram systems, and the final Farkas separator.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
