@@ -413,6 +413,9 @@ status.
 - [Wave 13 clean-source replay](verification/2026-07-22-wave13-clean-clone.md):
   detached 52/12/104-test replay and byte-identical census and positive-v2
   diagnostic regeneration.
+- [Wave 14 clean-source replay](verification/2026-07-23-wave14-clean-clone.md):
+  detached 52/12/104/10/7-test replay, byte-identical regeneration of four
+  Wave 14 artifacts, and the preserved pre-release determinism repair.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

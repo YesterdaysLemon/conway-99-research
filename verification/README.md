@@ -407,3 +407,6 @@ The archived JSON output is deterministic under replay. The scan status is
 `1 SAT_CANDIDATE`, `7 UNSAT_UNVERIFIED`, `1 BUDGET_UNKNOWN`, and
 `2 TIMEOUT_UNKNOWN`; negative solver exits are explicitly non-evidentiary.
 The literature/status audit also keeps the target and novelty `UNKNOWN`.
+The detached clean-source replay, four byte-identical regenerations, and the
+pre-release timestamp-determinism repair are recorded in
+`2026-07-23-wave14-clean-clone.md`.

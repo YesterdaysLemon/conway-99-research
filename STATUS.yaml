@@ -247,5 +247,7 @@ fourteenth_research_wave:
     BUDGET_UNKNOWN: 1
     TIMEOUT_UNKNOWN: 2
   computation_negative_evidence: false
+  clean_clone_commit: "886f0a73cd4b0cb3ceffb1e8077021f73e7278ea"
+  clean_clone_replay: "verification/2026-07-23-wave14-clean-clone.md"
   caveat: "Wave 14 verifies a sharp conditional residual and explicit countermodels to narrower active/local/support relaxations, but does not exclude n3=48. The positive objects are not partial or complete Conway graphs, every solver-negative row lacks a checked proof trace, and target existence, nonexistence, and novelty remain UNKNOWN."
 last_updated: 2026-07-23
