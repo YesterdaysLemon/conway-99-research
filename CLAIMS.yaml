@@ -139,6 +139,20 @@ claims:
       - "verification/2026-07-22-n3-count-bound-audit.md"
     limitations: "Nonemptiness uses C-N3-001, whose universal occurrence premise remains DERIVED from cited work; the bound is necessary and gives no contradiction."
 
+  - id: C-N3-SIDE-INCIDENCE-001
+    statement: "Conditional on the target-specific forced N3 occurrence and the verified opposite-edge graph properties, active triangle-side incidence excludes n3=24 and n3=27, forcing n3>=30 and induced_C6_count>=209316."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave7-triangle-side-incidence.md"
+      - "agents/2026-07-22-wave7-status-search.md"
+      - "verification/n3-side-incidence/verify.py"
+      - "verification/n3-side-incidence/audit_generic.py"
+      - "verification/2026-07-22-n3-side-incidence-audit.md"
+      - "verification/2026-07-22-wave7-clean-clone.md"
+    limitations: "The result depends on C-N3-001 and C-N3-COUNT-001, is a necessary condition only, and does not exclude n3=30 or resolve the target."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

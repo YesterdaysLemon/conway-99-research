@@ -89,6 +89,24 @@ ended `UNKNOWN`; checked partial proof traces say only `NO CONCLUSION`. See the
 [N3-count audit](verification/2026-07-22-n3-count-bound-audit.md), and
 [Wave 6 clean replay](verification/2026-07-22-wave6-clean-clone.md).
 
+Wave 7 strengthens the conditional structural bound by studying an auxiliary
+graph on the 231 graph-triangles and its incidence with the support of the
+Wave 6 graph `H`. Two independent exact enumerators exclude the extremal
+values 24 and 27, giving
+
+```text
+n3 >= 30,
+induced_C6_count >= 209,316.
+```
+
+The finite reduction, crossing multiplicities, and clean-source replay all
+passed independent audits. This is a necessary condition, not a construction
+or nonexistence proof; Conway-99 remains `UNKNOWN`. See the
+[Wave 7 derivation](agents/2026-07-22-wave7-triangle-side-incidence.md),
+[side-incidence audit](verification/2026-07-22-n3-side-incidence-audit.md),
+[precise-status search](agents/2026-07-22-wave7-status-search.md), and
+[clean replay](verification/2026-07-22-wave7-clean-clone.md).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -158,12 +176,17 @@ status.
   independent proof of the conditional 78-case second-stage split.
 - [N3-count audit](verification/2026-07-22-n3-count-bound-audit.md):
   adversarial reconstruction of the auxiliary-edge graph and `n3 >= 24`.
+- [N3 side-incidence audit](verification/2026-07-22-n3-side-incidence-audit.md):
+  two independent reconstructions and finite checks proving the conditional
+  strengthening `n3 >= 30`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
   frozen-commit tests and byte-identical regeneration of all 12 branch OPBs.
 - [Wave 6 clean-source replay](verification/2026-07-22-wave6-clean-clone.md):
   frozen-commit tests and byte-identical refined-certificate regeneration.
+- [Wave 7 clean-source replay](verification/2026-07-22-wave7-clean-clone.md):
+  frozen-commit tests and replay of two independent incidence checkers.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

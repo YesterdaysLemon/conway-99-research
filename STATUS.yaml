@@ -93,4 +93,15 @@ sixth_research_wave:
   propagation_report: "agents/2026-07-22-wave6-branch-propagation.md"
   clean_clone_replay: "verification/2026-07-22-wave6-clean-clone.md"
   caveat: "The 78 cases refine the N3-normalized search and n3>=24 is a conditional necessary bound. All bounded target runs returned UNKNOWN; no graph or complete nonexistence proof exists."
+seventh_research_wave:
+  source_commit: "0728b260e1282afdbaeaa9215659a4175cab25de"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_SIDE_INCIDENCE_BOUND
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave7-triangle-side-incidence.md"
+  novelty_status_report: "agents/2026-07-22-wave7-status-search.md"
+  verifier_report: "verification/2026-07-22-n3-side-incidence-audit.md"
+  structured_checker: "verification/n3-side-incidence/verify.py"
+  generic_checker: "verification/n3-side-incidence/audit_generic.py"
+  clean_clone_replay: "verification/2026-07-22-wave7-clean-clone.md"
+  caveat: "The verified conditional necessary bound is n3>=30. No checked primary source stated this exact bound, but novelty is not established. The extremal n3=30 case and the Conway-99 target remain UNKNOWN."
 last_updated: 2026-07-22

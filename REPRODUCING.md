@@ -165,6 +165,21 @@ The corresponding human derivation and its source boundary are recorded in
 `agents/2026-07-22-wave6-opposite-edge-graph.md` and
 `verification/2026-07-22-n3-count-bound-audit.md`.
 
+Replay the Wave 7 strengthening from `n3>=24` to `n3>=30` with two
+independent standard-library implementations:
+
+```powershell
+.venv\Scripts\python verification\n3-side-incidence\verify.py
+.venv\Scripts\python verification\n3-side-incidence\audit_generic.py
+```
+
+The first checker follows the complement-component analysis directly. The
+second generates all admissible point-clique families, permits unused
+complement edges, and adds singleton fillers. Their scope and clean-source
+replay are recorded in
+`verification/2026-07-22-n3-side-incidence-audit.md` and
+`verification/2026-07-22-wave7-clean-clone.md`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

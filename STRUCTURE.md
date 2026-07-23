@@ -41,11 +41,13 @@ n3 = 0 (mod 3),
 induced_C6_count = 209,286 + n3.
 ```
 
-Wave 6 sharpens the target-specific count to
+Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
+the next two multiples of three and gives the currently strongest project
+bound
 
 ```text
-n3 >= 24,
-induced_C6_count >= 209,310.
+n3 >= 30,
+induced_C6_count >= 209,316.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -55,10 +57,38 @@ nontriangular `J` edges is triangle-free and its edges correspond bijectively
 to induced `N3` copies. At every `H` vertex the degree lies in
 `{0,4,6,8,10,12}`. Nonemptiness uses the target-specific forced `N3` theorem;
 minimum degree, Mantel's bound, and `n3 = 0 (mod 3)` reduce the sub-24 cases
-to 18 and 21 edges, and separate local arguments exclude both.
-The full proof and adversarial audit are in
+to 18 and 21 edges, and separate local arguments exclude both. The Wave 6
+proof and adversarial audit are in
 `agents/2026-07-22-wave6-opposite-edge-graph.md` and
 `verification/2026-07-22-n3-count-bound-audit.md`.
+
+For the Wave 7 strengthening, form a graph `L` on the 231 graph-triangles,
+joining two when they are the sides of an induced `N3`. If `p(T)` is the
+number of prism partners of triangle `T` and `q(T)=12-p(T)`, exact cross-edge
+counts give
+
+```text
+d_L(T)=3q(T),
+sum_T q(T)=2n3/3.
+```
+
+The local two-matching structure makes the `N3`s with fixed side `T` a
+2-regular subgraph of triangle-free `H`, so `q(T)` is zero or at least two.
+For `n3=24` and 27 this forces respectively eight and nine active triangles,
+all with `q=2`. Their `L`-complements are a perfect matching and a 2-regular
+graph. For each graph vertex `u`, the active triangles containing `u` form an
+independent set `S_u` in `L`, and every actual graph edge satisfies
+
+```text
+d_H(uv)=e_L(S_u,S_v).
+```
+
+Exact point-incidence enumeration bounds the support of `H` by six when
+`n3=24`, and by nine or eight in the only surviving 27-edge cases. These
+contradict the required support sizes. Two materially different standard-
+library checkers reproduce the finite reduction. The proof and independent
+audit are in `agents/2026-07-22-wave7-triangle-side-incidence.md` and
+`verification/2026-07-22-n3-side-incidence-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

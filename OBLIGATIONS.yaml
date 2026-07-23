@@ -159,3 +159,16 @@ obligations:
       - "verification/n3-count-bound/verify.py"
       - "verification/2026-07-22-n3-count-bound-audit.md"
     note: "The verified result is the conditional necessary bound n3>=24; target existence and nonexistence both remain UNKNOWN."
+
+  - id: O-WAVE7-STRUCTURAL
+    requirement: "Adversarially verify the triangle-partner identities, q-gap, support identity, and complete finite incidence exclusions of n3=24 and n3=27."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave7-triangle-side-incidence.md"
+      - "agents/2026-07-22-wave7-status-search.md"
+      - "verification/n3-side-incidence/verify.py"
+      - "verification/n3-side-incidence/audit_generic.py"
+      - "verification/2026-07-22-n3-side-incidence-audit.md"
+      - "verification/2026-07-22-wave7-clean-clone.md"
+    note: "The verified result is the conditional necessary bound n3>=30; n3=30 and the target existence question remain UNKNOWN."

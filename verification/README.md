@@ -113,3 +113,21 @@ The accompanying human proof establishes why the auxiliary graph has the
 properties checked by the script. The resulting `n3 >= 24` is conditional on
 the target-specific theorem forcing an `N3`; it is a necessary bound, not a
 resolution of Conway-99.
+
+## `N3` side-incidence checkers
+
+`n3-side-incidence/verify.py` checks the Wave 7 active-triangle reduction and
+explicitly enumerates the complement-component point patterns forced by
+`n3=24` and `n3=27`. `n3-side-incidence/audit_generic.py` is a separate
+implementation that generates every clique family, permits unused complement
+edges, enforces disjoint intersection resources, and adds singleton fillers.
+
+```powershell
+python verification/n3-side-incidence/verify.py
+python verification/n3-side-incidence/audit_generic.py
+```
+
+Both reproduce support maxima `6`, `9`, and `8`, giving the conditional
+necessary bound `n3>=30`. The human proof supplies the upstream graph-theoretic
+reduction; neither finite checker is a Conway-99 existence or nonexistence
+certificate.
