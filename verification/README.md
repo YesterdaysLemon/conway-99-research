@@ -160,3 +160,45 @@ python verification/n3-equality/audit_exhaustive.py `
 The human derivation and adversarial audit establish why these finite
 conditions follow from the Wave 6/7 framework. The resulting `n3>=33` is a
 conditional necessary bound; it does not resolve Conway-99.
+
+## `N3=33` equality exclusion
+
+`n3-33-equality/verify.py` checks the Wave 9 classification-free proof's
+finite steps: both active-`q` profiles, the labeled singleton crossing
+obstruction, the point-size equations, the forced local `K5`, every residual
+`K6`-minus-matching choice, and the strengthened global and branch bounds.
+
+```powershell
+python verification/n3-33-equality/verify.py
+python -m unittest verification.test_n3_33_equality -v
+```
+
+Two optional standard-library programs give a materially different exhaustive
+audit. They enumerate all 266 quartic types on eleven vertices and all 610
+admissible point-clique families; the second program independently
+canonicalizes the graph types, regenerates the family set with a different
+recursion, checks every contradiction witness, and rejects certificate
+mutations. The connected catalog is an external House of Graphs/Meringer
+input, so it is attributed and hashed rather than redistributed.
+
+```powershell
+$wave9Catalog = Join-Path ([System.IO.Path]::GetTempPath()) "11_4_3.g6.gz"
+$wave9Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-33-audit.json"
+$wave9Replay = Join-Path ([System.IO.Path]::GetTempPath()) "n3-33-replay.json"
+Invoke-WebRequest `
+  -Uri "https://houseofgraphs.org/data/quartics/11_4_3.g6.gz" `
+  -OutFile $wave9Catalog
+(Get-FileHash $wave9Catalog -Algorithm SHA256).Hash.ToLower()
+python verification/n3-33-equality/audit_exhaustive.py `
+  --catalog $wave9Catalog --certificate $wave9Certificate `
+  --git-commit 19f27d1ede9cdb0b4110540f52eeb3ad9c94cc94
+python verification/n3-33-equality/verify_exhaustive.py `
+  --catalog $wave9Catalog --certificate $wave9Certificate `
+  --output $wave9Replay
+```
+
+The expected compressed catalog hash is
+`05ee6bb0c2b40d63d5c44efc8e89ed1c0a381a170d81a3d052749c8edf6b14fd`.
+Exact deterministic census digests and the external-source boundary are in
+`n3-33-equality/n3-33-census-manifest.json`. The resulting `n3>=36` remains a
+conditional necessary bound, not a Conway-99 resolution.

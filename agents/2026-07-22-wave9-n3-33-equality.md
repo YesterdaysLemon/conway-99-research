@@ -3,7 +3,7 @@
 ```yaml
 role: proof_a
 date_utc: 2026-07-23T02:00:29Z
-git_commit: 5bf6467a7f138b6f41b277e880aa6f2c21203825
+git_commit: 3d47bb260a71c5c2606347d8bb53e3ad766236e8
 claim_label: DERIVED
 scope: conditional exclusion of n3=33 for a putative srg(99,14,1,2)
 inputs:
@@ -11,6 +11,7 @@ inputs:
   agents/2026-07-22-wave6-opposite-edge-graph.md: 4197c40e1b43d72d5a2ad9a6203099ffed2e1dbf4f0b3c07186aaad54cae4fa2
   agents/2026-07-22-wave7-triangle-side-incidence.md: 7b4693420eae7e6f13ce0d66c786424c18863a1b1c350da83097f8e982ebe324
   agents/2026-07-22-wave8-n3-equality.md: 010fe1e2a9752ac18067b44c9e6cf1114e2d1651364c49a574adbe22fe5461f3
+  agents/2026-07-22-wave9-status-search.md: add0d9d2afc335b7de9f9f6d5ffab72d66af97a568141cc8e885725984dc6b05
   verification/n3-33-equality/verify.py: fdac28fb0daf7a9af09dd490d878a3c848b187d64a8716e0bdabe2ce36d2aea8
   verification/test_n3_33_equality.py: 8e2adceda27399d948844820f48718c3588ada9e16987af13a5bda411e5a113f
 method: active-q enumeration, labeled crossing-graph incidence, point-clique edge accounting, local K5 closure, and a complement matching obstruction
@@ -216,6 +217,14 @@ The twelve normalized branch bounds strengthen to
 The compact checker enumerates both active profiles, the local singleton
 crossing graphs, the point-size solutions, all local size-three closures, all
 15 perfect matchings on the residual six vertices, and all 360 labeled local
-unused-edge choices. It has no survivor. This is a regression companion to
-the human proof, not a standalone Conway-99 certificate. The target remains
-`UNKNOWN`.
+unused-edge choices. It has no survivor. A separate two-implementation census
+of all 266 quartic types and 610 admissible point-clique families likewise has
+zero survivors: every family already contains an internal actual graph edge
+of forbidden `H`-degree one or two.
+
+A focused primary-source search found no checked occurrence of the exact
+`n3=33` exclusion or this proof chain. That is not evidence of novelty. The
+result is described only as a conditional project derivation pending external
+review, while the upstream Lou--Murin, Makhnev, and Reimbayev ingredients keep
+their cited attribution. The checkers are regression companions to the human
+proof, not standalone Conway-99 certificates. The target remains `UNKNOWN`.

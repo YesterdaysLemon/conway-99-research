@@ -117,4 +117,18 @@ eighth_research_wave:
   exhaustive_certificate: "verification/n3-equality/n3-30-audit.json"
   clean_clone_replay: "verification/2026-07-22-wave8-clean-clone.md"
   caveat: "The verified conditional necessary bound is n3>=33. Lou-Murin 2014 already contains the upstream fixed-triangle profile and q-gap; no novelty is claimed. Conway-99 remains UNKNOWN."
+ninth_research_wave:
+  source_commit: "3d47bb260a71c5c2606347d8bb53e3ad766236e8"
+  exhaustive_commit: "19f27d1ede9cdb0b4110540f52eeb3ad9c94cc94"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_33_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave9-n3-33-equality.md"
+  prior_art_status_report: "agents/2026-07-22-wave9-status-search.md"
+  verifier_report: "verification/2026-07-22-n3-33-equality-audit.md"
+  structured_checker: "verification/n3-33-equality/verify.py"
+  exhaustive_checker: "verification/n3-33-equality/audit_exhaustive.py"
+  independent_exhaustive_verifier: "verification/n3-33-equality/verify_exhaustive.py"
+  exhaustive_manifest: "verification/n3-33-equality/n3-33-census-manifest.json"
+  clean_clone_replay: "verification/2026-07-22-wave9-clean-clone.md"
+  caveat: "The verified conditional necessary bound is n3>=36. The result depends on the committed Wave 6-8 framework, no literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

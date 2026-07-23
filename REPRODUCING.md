@@ -203,6 +203,47 @@ The derivation, adversarial audit, and frozen-commit replay are recorded in
 `verification/2026-07-22-wave8-clean-clone.md`. They establish the conditional
 necessary bound `n3>=33`, not a target construction or nonexistence proof.
 
+Replay the Wave 9 exclusion of `n3=33` with:
+
+```powershell
+.venv\Scripts\python verification\n3-33-equality\verify.py
+.venv\Scripts\python -m unittest verification.test_n3_33_equality -v
+```
+
+The optional exhaustive secondary audit uses the complete connected quartic
+order-11 catalog from House of Graphs, attributed there to Meringer's
+`genreg`. The catalog is hashed but not vendored. Download and verify it, then
+regenerate the scratch certificate and replay it independently:
+
+```powershell
+$wave9Catalog = Join-Path ([System.IO.Path]::GetTempPath()) "11_4_3.g6.gz"
+$wave9Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-33-audit.json"
+$wave9Replay = Join-Path ([System.IO.Path]::GetTempPath()) "n3-33-replay.json"
+Invoke-WebRequest `
+  -Uri "https://houseofgraphs.org/data/quartics/11_4_3.g6.gz" `
+  -OutFile $wave9Catalog
+$wave9CatalogHash = (Get-FileHash $wave9Catalog -Algorithm SHA256).Hash.ToLower()
+if ($wave9CatalogHash -ne "05ee6bb0c2b40d63d5c44efc8e89ed1c0a381a170d81a3d052749c8edf6b14fd") {
+  throw "unexpected Wave 9 catalog hash: $wave9CatalogHash"
+}
+.venv\Scripts\python verification\n3-33-equality\audit_exhaustive.py `
+  --catalog $wave9Catalog --certificate $wave9Certificate `
+  --git-commit 19f27d1ede9cdb0b4110540f52eeb3ad9c94cc94
+.venv\Scripts\python verification\n3-33-equality\verify_exhaustive.py `
+  --catalog $wave9Catalog --certificate $wave9Certificate `
+  --output $wave9Replay
+```
+
+The expected census is 266 quartic types, 610 admissible point-clique
+families, and zero survivors. The derivation, precise-status search,
+adversarial audit, deterministic manifest, and clean replay are recorded in
+`agents/2026-07-22-wave9-n3-33-equality.md`,
+`agents/2026-07-22-wave9-status-search.md`,
+`verification/2026-07-22-n3-33-equality-audit.md`,
+`verification/n3-33-equality/n3-33-census-manifest.json`, and
+`verification/2026-07-22-wave9-clean-clone.md`. They establish the conditional
+necessary bound `n3>=36`; Conway-99 remains `UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

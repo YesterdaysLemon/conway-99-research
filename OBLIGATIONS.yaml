@@ -189,3 +189,20 @@ obligations:
       - "verification/2026-07-22-n3-equality-audit.md"
       - "verification/2026-07-22-wave8-clean-clone.md"
     note: "The verified result is the conditional necessary bound n3>=33. The upstream fixed-triangle profile/q-gap is credited to Lou-Murin 2014, novelty is not claimed, and Conway-99 remains UNKNOWN."
+
+  - id: O-WAVE9-STRUCTURAL
+    requirement: "Adversarially verify the active-q profiles, labeled crossing singleton lemma, point-clique budget, forced K5 components, residual complement-matching argument, and exclusion of n3=33."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave9-n3-33-equality.md"
+      - "agents/2026-07-22-wave9-status-search.md"
+      - "verification/n3-33-equality/verify.py"
+      - "verification/n3-33-equality/audit_exhaustive.py"
+      - "verification/n3-33-equality/verify_exhaustive.py"
+      - "verification/n3-33-equality/n3-33-census-manifest.json"
+      - "verification/test_n3_33_equality.py"
+      - "verification/test_n3_33_census.py"
+      - "verification/2026-07-22-n3-33-equality-audit.md"
+      - "verification/2026-07-22-wave9-clean-clone.md"
+    note: "The verified result is the conditional necessary bound n3>=36. The proof assumes no completed-graph automorphism, no novelty is claimed, and Conway-99 remains UNKNOWN."

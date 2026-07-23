@@ -42,12 +42,12 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, and Wave 8 excludes the remaining equality
-case at 30. The currently strongest project bound is
+the next two multiples of three, Wave 8 excludes equality at 30, and Wave 9
+excludes equality at 33. The currently strongest project bound is
 
 ```text
-n3 >= 33,
-induced_C6_count >= 209,319.
+n3 >= 36,
+induced_C6_count >= 209,322.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -116,6 +116,25 @@ cubic graphs. An independent slow audit also exhausts all 21 cubic types and
 674,880 point-clique families. The proof and audit are in
 `agents/2026-07-22-wave8-n3-equality.md` and
 `verification/2026-07-22-n3-equality-audit.md`.
+
+Wave 9 treats `n3=33`. The active-`q` arithmetic leaves only a mixed profile
+`(2^8,3^2)` on ten triangles and an all-`q=2` profile on eleven. A labeled
+crossing graph between possibly overlapping point sets shows that an active
+singleton point would give incident `H`-degree zero or two; the global allowed
+degree set eliminates two, while the fixed-point identity eliminates zero.
+This immediately rules out the mixed profile.
+
+In the eleven-triangle case the complement `K` is 4-regular. Disjoint
+point-clique edge consumption leaves only size profiles
+`(x2,x3)=(12,3),(15,1)`. Every size-three point forces a saturated `K5`
+component. Three such points need fifteen vertices; one leaves
+`K6` minus a perfect matching, where the three consumed neighbors of any
+vertex would have to be a clique but never can be. This excludes `n3=33`
+without assuming connectedness or a completed-graph automorphism. The proof,
+compact checker, and adversarial audit are in
+`agents/2026-07-22-wave9-n3-33-equality.md`,
+`verification/n3-33-equality/verify.py`, and
+`verification/2026-07-22-n3-33-equality-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

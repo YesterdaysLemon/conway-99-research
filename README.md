@@ -128,6 +128,31 @@ facts. See the [Wave 8 derivation](agents/2026-07-22-wave8-n3-equality.md),
 [clean replay](verification/2026-07-22-wave8-clean-clone.md). Conway-99 itself
 remains `UNKNOWN`.
 
+Wave 9 excludes the next equality case `n3=33`. The active-triangle arithmetic
+has two profiles. A labeled crossing-graph lemma rules out active singleton
+points and eliminates the mixed profile; in the all-`q=2` profile,
+point-clique resources force either three saturated `K5` components or one
+`K5` plus `K6` minus a perfect matching, and both alternatives contradict the
+allowed `H`-degrees. This gives
+
+```text
+n3 >= 36,
+induced_C6_count >= 209,322.
+```
+
+The overlap, actual-edge, disconnected, and residual-matching steps passed an
+independent adversarial reconstruction. A compact standard-library checker
+replays every finite case split. A separate two-implementation census rejects
+all 610 admissible point-clique families across 266 quartic types, and a
+detached no-local clone passes all tests and both census programs at the
+frozen commits. See the
+[Wave 9 derivation](agents/2026-07-22-wave9-n3-33-equality.md),
+[equality audit](verification/2026-07-22-n3-33-equality-audit.md), and
+[clean replay](verification/2026-07-22-wave9-clean-clone.md). A focused
+[status search](agents/2026-07-22-wave9-status-search.md) found no checked
+exact hit but explicitly leaves novelty `UNKNOWN`. The result is a conditional
+necessary bound, not a resolution; Conway-99 remains `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -203,6 +228,9 @@ status.
 - [N3 equality audit](verification/2026-07-22-n3-equality-audit.md):
   adversarial proof reconstruction and exhaustive secondary audit proving the
   conditional strengthening `n3 >= 33`.
+- [N3=33 equality audit](verification/2026-07-22-n3-33-equality-audit.md):
+  adversarial reconstruction and exact finite checks proving the conditional
+  strengthening `n3 >= 36`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
@@ -213,6 +241,8 @@ status.
   frozen-commit tests and replay of two independent incidence checkers.
 - [Wave 8 clean-source replay](verification/2026-07-22-wave8-clean-clone.md):
   frozen-commit tests and replay of the equality-exclusion arithmetic checker.
+- [Wave 9 clean-source replay](verification/2026-07-22-wave9-clean-clone.md):
+  frozen-commit tests and replay of the `n3=33` equality-exclusion checker.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.
