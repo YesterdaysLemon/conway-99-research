@@ -279,6 +279,37 @@ in `agents/2026-07-22-wave10-n3-36-equality.md`,
 `verification/2026-07-22-wave10-clean-clone.md`. They establish only the
 conditional necessary bound `n3>=39`; Conway-99 remains `UNKNOWN`.
 
+Replay the Wave 11 exclusion of `n3=39` with:
+
+```powershell
+.venv\Scripts\python verification\n3-39-equality\verify.py
+.venv\Scripts\python verification\n3-39-equality\verify_local.py `
+  --certificate verification\n3-39-equality\n3-39-local.json
+.venv\Scripts\python -m unittest -v `
+  verification/test_n3_39_equality.py verification/test_n3_39_local.py
+```
+
+The committed certificate is bound to replay-code commit
+`474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b`. To regenerate it in a scratch
+path and replay it independently:
+
+```powershell
+$wave11Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-39-local.json"
+.venv\Scripts\python verification\n3-39-equality\audit_local.py `
+  --certificate $wave11Certificate `
+  --git-commit 474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b
+.venv\Scripts\python verification\n3-39-equality\verify_local.py `
+  --certificate $wave11Certificate
+```
+
+The expected replay has 8,907 records, 1,730,729 canonical JSONL bytes, and
+combined SHA-256
+`452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
+The two implementations use different enumeration mechanisms, freeze all nine
+stream hashes, and reject eight premise, digest, conclusion, and status
+mutations. The result is only the conditional necessary bound `n3>=42`;
+Conway-99 remains `UNKNOWN`.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

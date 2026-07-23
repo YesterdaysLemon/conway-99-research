@@ -145,4 +145,23 @@ tenth_research_wave:
   support_certificate: "verification/n3-36-equality/n3-36-support.json"
   clean_clone_replay: "verification/2026-07-22-wave10-clean-clone.md"
   caveat: "The verified conditional necessary bound is n3>=39. An initial closed-K5 shortcut was rejected and repaired; the result depends on the committed Wave 6-9 framework, no literature novelty is claimed, and Conway-99 remains UNKNOWN."
+eleventh_research_wave:
+  source_commit: "b46ae8affce3692d9c10aaaa42d33f5a579f5c86"
+  semantic_repair_commit: "b825d5184075e0562301fc996d86e794a905b00e"
+  replay_commit: "474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b"
+  certificate_commit: "867d875197e5c628113c285ee9de24c834790056"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_39_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  discovery_report: "agents/2026-07-22-wave11-n3-39-equality.md"
+  prior_art_status_report: "agents/2026-07-22-wave11-status-search.md"
+  computational_report: "agents/2026-07-22-wave11-computational.md"
+  local_replay_audit: "agents/2026-07-22-wave11-local-replay-audit.md"
+  verifier_report: "verification/2026-07-22-n3-39-equality-audit.md"
+  structured_checker: "verification/n3-39-equality/verify.py"
+  replay_generator: "verification/n3-39-equality/audit_local.py"
+  independent_replay_verifier: "verification/n3-39-equality/verify_local.py"
+  replay_certificate: "verification/n3-39-equality/n3-39-local.json"
+  replay_records: 8907
+  replay_sha256: "452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1"
+  caveat: "The verified conditional necessary bound is n3>=42. The original proof omitted an explicit complement bridge and the first checker had weak semantic guards; both failures are public and repaired. No literature novelty is claimed, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-22

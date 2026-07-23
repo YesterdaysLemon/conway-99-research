@@ -176,6 +176,30 @@ See the [Wave 10 derivation](agents/2026-07-22-wave10-n3-36-equality.md),
 [clean replay](verification/2026-07-22-wave10-clean-clone.md). The result is
 again only a conditional necessary bound; Conway-99 remains `UNKNOWN`.
 
+Wave 11 excludes `n3=39`. Singleton forcing removes the three mixed active
+profiles, leaving thirteen active triangles, all with `q=2`, and a 6-regular
+complement `K`. Point-hypergraph linearity and the common-point rule give an
+expansion bound of four on every active point set. Exact singleton-side
+crossing witnesses then eliminate sizes four and three; if every point has
+size two, the total incidence 39 has impossible parity. Thus
+
+```text
+n3 >= 42,
+induced_C6_count >= 209,328.
+```
+
+The first proof exposition failed audit because it did not explicitly carry
+the premise `K=overline(L)` into the singleton-crossing step. The first compact
+checker also hid a six-profile overlap and had weak semantic mutation tests.
+Both failures and their repairs are public. Two independent implementations
+now replay 8,907 premise-bound records with combined SHA-256
+`452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
+See the [Wave 11 derivation](agents/2026-07-22-wave11-n3-39-equality.md),
+[adversarial audit](verification/2026-07-22-n3-39-equality-audit.md), and
+[local replay audit](agents/2026-07-22-wave11-local-replay-audit.md). No
+checked source was found for the exact exclusion, but novelty remains
+`UNKNOWN`; the Conway-99 target itself also remains `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -257,6 +281,9 @@ status.
 - [N3=36 equality audit](verification/2026-07-22-n3-36-equality-audit.md):
   repaired adversarial reconstruction and independent support census proving
   the conditional strengthening `n3 >= 39`.
+- [N3=39 equality audit](verification/2026-07-22-n3-39-equality-audit.md):
+  repaired adversarial reconstruction and two-implementation rooted-flower
+  replay proving the conditional strengthening `n3 >= 42`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

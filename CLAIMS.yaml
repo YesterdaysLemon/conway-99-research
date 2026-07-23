@@ -204,6 +204,25 @@ claims:
       - "verification/2026-07-22-wave10-clean-clone.md"
     limitations: "The result depends on C-N3-001 and the Wave 6-9 lemmas, is a necessary count bound only, and does not resolve Conway-99. An initial closed-K5 shortcut failed review and was replaced; no literature novelty is claimed."
 
+  - id: C-N3-EQUALITY-004
+    statement: "Conditional on the target-specific forced N3 occurrence and the verified Wave 6-10 auxiliary-graph properties, point-hypergraph expansion and exact singleton-crossing F/U degree witnesses exclude n3=39, forcing n3>=42 and induced_C6_count>=209328."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-22-wave11-n3-39-equality.md"
+      - "agents/2026-07-22-wave11-status-search.md"
+      - "agents/2026-07-22-wave11-computational.md"
+      - "agents/2026-07-22-wave11-local-replay-audit.md"
+      - "verification/n3-39-equality/verify.py"
+      - "verification/n3-39-equality/audit_local.py"
+      - "verification/n3-39-equality/verify_local.py"
+      - "verification/n3-39-equality/n3-39-local.json"
+      - "verification/test_n3_39_equality.py"
+      - "verification/test_n3_39_local.py"
+      - "verification/2026-07-22-n3-39-equality-audit.md"
+    limitations: "The result depends on C-N3-001 and the Wave 6-10 lemmas, is a necessary count bound only, and does not resolve Conway-99. An omitted complement bridge and weak first checker failed review and were repaired publicly. No literature novelty is claimed."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

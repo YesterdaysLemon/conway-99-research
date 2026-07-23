@@ -227,3 +227,21 @@ obligations:
       - "verification/2026-07-22-n3-36-equality-audit.md"
       - "verification/2026-07-22-wave10-clean-clone.md"
     note: "The initial closed-K5 shortcut was rejected and publicly repaired. The verified result is the conditional necessary bound n3>=39; no completed-graph automorphism or novelty is claimed, and Conway-99 remains UNKNOWN."
+
+  - id: O-WAVE11-STRUCTURAL
+    requirement: "Adversarially verify the n3=39 active profiles, explicit K-complement bridge, point-hypergraph expansion, size-four flower obstruction, F/U degree witnesses, size-three propagation, parity contradiction, and two-implementation replay."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-22-wave11-n3-39-equality.md"
+      - "agents/2026-07-22-wave11-status-search.md"
+      - "agents/2026-07-22-wave11-computational.md"
+      - "agents/2026-07-22-wave11-local-replay-audit.md"
+      - "verification/n3-39-equality/verify.py"
+      - "verification/n3-39-equality/audit_local.py"
+      - "verification/n3-39-equality/verify_local.py"
+      - "verification/n3-39-equality/n3-39-local.json"
+      - "verification/test_n3_39_equality.py"
+      - "verification/test_n3_39_local.py"
+      - "verification/2026-07-22-n3-39-equality-audit.md"
+    note: "The initial exposition omitted the explicit K=complement(L) bridge and the first compact checker hid a six-profile overlap with weak mutation guards. Both failures are public and repaired. The verified result is the conditional necessary bound n3>=42; novelty and Conway-99 remain UNKNOWN."

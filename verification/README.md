@@ -246,3 +246,36 @@ The reduction from a putative graph to this finite domain is human-checked and
 recorded separately. The census is not a standalone Conway-99 certificate.
 The resulting `n3>=39` is a conditional necessary bound, and the target remains
 `UNKNOWN`.
+
+## `N3=39` equality exclusion
+
+`n3-39-equality/verify.py` checks the Wave 11 proof's finite steps and exact
+semantic witnesses: the four active profiles, singleton forcing, point-size
+expansion, all `3^8` rooted size-four petal words, all `2^6` rooted
+size-three words, literal forced `K`/`U` edge sets, forbidden point owners,
+final parity, and the strengthened global and branch bounds.
+
+```powershell
+python verification/n3-39-equality/verify.py
+python -m unittest -v verification/test_n3_39_equality.py
+```
+
+The committed local replay is a second layer. The primary generator explicitly
+constructs canonical point sets, point-clique edges, singleton-forced
+complement edges, and owner-intersection witnesses. The independent verifier
+imports no primary code, uses integer-coded enumeration and a closed crossing
+table, freezes nine stream hashes, and attacks the result with eight mutations.
+
+```powershell
+python verification/n3-39-equality/verify_local.py `
+  --certificate verification/n3-39-equality/n3-39-local.json
+python -m unittest -v verification/test_n3_39_local.py
+```
+
+The certificate contains 8,907 records and has combined stream SHA-256
+`452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
+Its premise stream explicitly binds `K=overline(L)`, 6-regularity, point-clique
+membership, linearity, the common-point rule, and the degree-zero-or-two
+crossing law. This remains a conditional replay companion to the human proof,
+not a standalone Conway-99 nonexistence certificate. The resulting `n3>=42`
+is a necessary bound and the target remains `UNKNOWN`.

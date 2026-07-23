@@ -42,13 +42,12 @@ induced_C6_count = 209,286 + n3.
 ```
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
-the next two multiples of three, Wave 8 excludes equality at 30, Wave 9
-excludes equality at 33, and Wave 10 excludes equality at 36. The currently
-strongest project bound is
+the next two multiples of three, Waves 8--11 exclude equality at 30, 33, 36,
+and 39. The currently strongest project bound is
 
 ```text
-n3 >= 39,
-induced_C6_count >= 209,325.
+n3 >= 42,
+induced_C6_count >= 209,328.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -161,6 +160,40 @@ audit are in `agents/2026-07-22-wave10-n3-36-equality.md`,
 `verification/n3-36-equality/n3-36-support.json`, and
 `verification/2026-07-22-n3-36-equality-audit.md`. An initially proposed
 closed-`K5` shortcut failed review and is not used in the repaired proof.
+
+Wave 11 treats `n3=39`. The active arithmetic leaves four profiles. Singleton
+forcing eliminates the three mixed profiles, while the all-`q=2` profile has
+thirteen active triangles and a 6-regular complement `K`. Every active point
+set is a clique in `K`; linearity and the common-point rule show that a point
+of size `s` needs `2s` distinct representatives outside itself, so `s<=4`.
+
+A size-four point has eight external petals in nine available places. At
+least three occurrences are `224`; two such occurrences provide four distinct
+endpoints adjacent in `K` to all four root vertices, forcing root degree at
+least seven. With only sizes two and three left, let `F` be the point-clique
+edges and `U=K-E(F)`. If `t_i` size-three points pass through active triangle
+`i`, then
+
+```text
+d_F(i)=3+t_i and d_U(i)=3-t_i.
+```
+
+At a `233` occurrence, the size-two endpoint has four singleton-crossing
+neighbors. The common-point rule prevents any of their edges from lying in
+`F`, contradicting `d_U<=3`. A size-three point cannot be all `333` by the
+same external-capacity argument; hence it has a `223` occurrence. Its five
+forced `U`-edges propagate `223` to the other two root occurrences, whose four
+distinct endpoints then force `U`-degree four at the original root, although
+its available degree is two. Finally, an all-size-two point family would have
+even total incidence, contradicting `13*3=39`.
+
+The derivation and all checkers explicitly require that `K` is the simple
+complement of `L` on distinct active triangles. An earlier exposition omitted
+that bridge and failed audit. The repaired compact checker, independent
+8,907-record replay, and public audit are in
+`agents/2026-07-22-wave11-n3-39-equality.md`,
+`verification/n3-39-equality/`, and
+`verification/2026-07-22-n3-39-equality-audit.md`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
