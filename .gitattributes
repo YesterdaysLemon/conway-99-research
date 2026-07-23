@@ -12,3 +12,7 @@ verification/n3-refined-cover/*.py text eol=lf
 verification/n3-count-bound/*.py text eol=lf
 verification/n3-42-equality/*.json text eol=lf
 verification/n3-42-equality/*.py text eol=lf
+
+# Wave 19 verifier logs are checksum-pinned raw Windows process streams.
+# Preserve their exact bytes so clean clones reproduce the audit hashes.
+verification/n3-60-closure/*.log -text -diff
