@@ -676,6 +676,10 @@ status.
   detached 343-test replay, 22 semantic/reproduction commands, 13
   byte-identical regenerations, seven Wave 18 status hashes, public-hygiene
   scans, clean status, and `git fsck`.
+- [Wave 19 clean-source replay](verification/2026-07-23-wave19-clean-clone.md):
+  detached 7/27/10-test replay, complete independent 510,489-record census,
+  byte-identical final certificate, frozen hash checks, clean tracked diff,
+  and `git fsck`.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

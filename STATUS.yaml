@@ -451,6 +451,11 @@ nineteenth_research_wave:
   discovery_tests_passed: 7
   independent_tests_passed: 10
   independent_baseline_tests_passed: 27
+  integration_commit: "e4b86b42c06bf41b8222b8a815d5b85cda4fa2ec"
+  clean_clone_commit: "e4b86b42c06bf41b8222b8a815d5b85cda4fa2ec"
+  clean_clone_replay: "verification/2026-07-23-wave19-clean-clone.md"
+  clean_clone_replay_sha256: "41fe8c0cd1f8101d546f56455db6585fb643a2b07b591674e5f82555c3363b78"
+  clean_clone_verdict: PASS
   catalog_premise: "Official House of Graphs connected cubic catalogs are complete and pairwise nonisomorphic; their pinned bytes and every decoded record were independently validated, but the publisher's completeness assertion is external."
   caveat: "The independently reconstructed exact census excludes conditional n3=60 within the audited H/L indexed-point framework and yields n3>=63 and induced_C6_count>=209349. The verifier covered all connected and disconnected cubic F cases, all 120 two-Petersen L/R models, every Z placement through three edges, exact Gram systems, and the final Farkas separator. Failed v1/v2 releases, proofless SAT/PB outcomes, invalid eigenvalue and witness routes, and the first filename-mismatch replay remain public and non-evidentiary. This is not a 99-vertex nonexistence proof or a novelty determination; Conway-99 and novelty remain UNKNOWN."
 last_updated: 2026-07-23

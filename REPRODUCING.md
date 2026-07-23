@@ -727,7 +727,8 @@ orbit, exhausts every allowed `Z` through three edges, and replays the exact
 Gram/Farkas obstruction. The official catalog completeness assertion remains
 an external premise. The audited consequence is the conditional bound
 `n3>=63`, hence `induced_C6_count>=209349`; Conway-99 and novelty remain
-`UNKNOWN`.
+`UNKNOWN`. The detached end-to-end replay is recorded in
+`verification/2026-07-23-wave19-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
