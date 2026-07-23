@@ -290,14 +290,14 @@ Replay the Wave 11 exclusion of `n3=39` with:
 ```
 
 The committed certificate is bound to replay-code commit
-`474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b`. To regenerate it in a scratch
+`c299b88fbd956c813ff3379ff236b3123a90d242`. To regenerate it in a scratch
 path and replay it independently:
 
 ```powershell
 $wave11Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-39-local.json"
 .venv\Scripts\python verification\n3-39-equality\audit_local.py `
   --certificate $wave11Certificate `
-  --git-commit 474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b
+  --git-commit c299b88fbd956c813ff3379ff236b3123a90d242
 .venv\Scripts\python verification\n3-39-equality\verify_local.py `
   --certificate $wave11Certificate
 ```
@@ -305,6 +305,8 @@ $wave11Certificate = Join-Path ([System.IO.Path]::GetTempPath()) "n3-39-local.js
 The expected replay has 8,907 records, 1,730,729 canonical JSONL bytes, and
 combined SHA-256
 `452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1`.
+The outer JSON certificate is emitted with canonical LF bytes and has
+SHA-256 `4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261`.
 The two implementations use different enumeration mechanisms, freeze all nine
 stream hashes, and reject eight premise, digest, conclusion, and status
 mutations. The result is only the conditional necessary bound `n3>=42`;

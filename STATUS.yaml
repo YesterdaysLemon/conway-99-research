@@ -148,8 +148,10 @@ tenth_research_wave:
 eleventh_research_wave:
   source_commit: "b46ae8affce3692d9c10aaaa42d33f5a579f5c86"
   semantic_repair_commit: "b825d5184075e0562301fc996d86e794a905b00e"
-  replay_commit: "474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b"
-  certificate_commit: "867d875197e5c628113c285ee9de24c834790056"
+  initial_replay_commit: "474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b"
+  replay_commit: "c299b88fbd956c813ff3379ff236b3123a90d242"
+  initial_certificate_commit: "867d875197e5c628113c285ee9de24c834790056"
+  certificate_commit: "19d77662fe6885b12eef731cdc04ca08652f4917"
   verifier_verdict: PASS_FOR_CONDITIONAL_N3_39_EQUALITY_EXCLUSION
   target_result: UNKNOWN
   discovery_report: "agents/2026-07-22-wave11-n3-39-equality.md"

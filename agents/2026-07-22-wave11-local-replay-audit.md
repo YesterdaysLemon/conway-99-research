@@ -7,19 +7,19 @@ target result remains `UNKNOWN`.
 ```yaml
 role: verifier
 date_utc: 2026-07-23T05:29:54Z
-git_commit: 867d875197e5c628113c285ee9de24c834790056
+git_commit: 19d77662fe6885b12eef731cdc04ca08652f4917
 claim_label: VERIFIED
 scope: independent verification of the conditional n3=39 rooted-local-flower replay
 inputs:
-  verification/n3-39-equality/audit_local.py: deb78e5c5dc2697ae3af663f8c41fe1160827bfaa83210f339382dc087439fdc
-  verification/n3-39-equality/verify_local.py: 69408e1fba26e5e03edbad9b29ed6665610cbdb33c479a0a84f649508dfff2e8
-  verification/test_n3_39_local.py: 7e07677a1c12bb66ee295df0824b34faeed24b8d96a0f0a3c4ec6465a0305f45
-  verification/n3-39-equality/n3-39-local.json: 48f14aaff09ab0a7fd9fa2bb7e07c643849f6094acbded4c8a05f22113c09e3e
+  verification/n3-39-equality/audit_local.py: 8db04ec4bb4db4266226581f70e1abc1f74a2e00ddde3277206da634d36c5a9b
+  verification/n3-39-equality/verify_local.py: 0113924cc8c36f8cbccad31630e54174de49aeaadcb874c1005f2e8e5622d887
+  verification/test_n3_39_local.py: c90029a2a1a452456804efe0a2dd43739dfa7e83cd6baa844eed7842fcd87603
+  verification/n3-39-equality/n3-39-local.json: 4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261
 method: adversarial source review, explicit local-flower reconstruction, bytewise comparison of two standard-library implementations, scratch certificate regeneration, frozen-digest replay, semantic mutation fixtures, and unit tests
 command: |
   python verification/n3-39-equality/audit_local.py `
     --certificate "<scratch>/n3-39-local.json" `
-    --git-commit 474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b `
+    --git-commit c299b88fbd956c813ff3379ff236b3123a90d242 `
     --dump-dir "<scratch>/streams"
   python verification/n3-39-equality/verify_local.py `
     --certificate "<scratch>/n3-39-local.json" `
@@ -32,13 +32,13 @@ command: |
 outputs:
   initial_verdict: FAIL
   final_conditional_replay_verdict: PASS
-  tests: 6_passed
+  tests: 7_passed
   certificate_records: 8907
   certificate_bytes: 1730729
   combined_stream_sha256: 452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1
-  certificate_file_sha256: 48f14aaff09ab0a7fd9fa2bb7e07c643849f6094acbded4c8a05f22113c09e3e
-  certificate_git_commit: 474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b
-  archive_git_commit: 867d875197e5c628113c285ee9de24c834790056
+  certificate_file_sha256: 4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261
+  certificate_git_commit: c299b88fbd956c813ff3379ff236b3123a90d242
+  archive_git_commit: 19d77662fe6885b12eef731cdc04ca08652f4917
   conditional_n3_39_survivors: 0
   conditional_global_n3_lower_bound: 42
   conditional_induced_C6_lower_bound: 209328
@@ -177,10 +177,10 @@ sha256:  452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1
 ```
 
 The committed certificate file has SHA-256
-`48f14aaff09ab0a7fd9fa2bb7e07c643849f6094acbded4c8a05f22113c09e3e`.
+`4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261`.
 Its embedded source commit is
-`474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b`; commit
-`867d875197e5c628113c285ee9de24c834790056` archives the certificate and
+`c299b88fbd956c813ff3379ff236b3123a90d242`; commit
+`19d77662fe6885b12eef731cdc04ca08652f4917` archives the certificate and
 verification record.
 
 ## Semantic fixtures
@@ -306,8 +306,15 @@ SHA-256 and the combined digest.
 
 ## Final status boundary
 
+The first detached clone found that the original outer JSON writer used
+platform-default newlines. Git's LF copy and a Windows CRLF regeneration had
+different file hashes even though their parsed JSON and internal canonical
+stream hashes agreed. The writer now emits LF bytes explicitly, and a seventh
+test rejects CRLF output. Five hash seeds reproduce both the file hash and the
+combined stream hash recorded above.
+
 The two standard-library implementations now agree exactly, the committed
-certificate independently replays, all six tests pass, the semantic mutation
+certificate independently replays, all seven tests pass, the semantic mutation
 fixtures pass, and the proof boundary is hash-bound. This verifies the
 conditional local replay from the stated thirteen-active-triangle premises to
 the contradiction at `n3=39`.

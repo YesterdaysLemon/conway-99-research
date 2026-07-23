@@ -6,7 +6,7 @@ resulting necessary bound `n3>=42`. Target result: `UNKNOWN`.
 ```yaml
 role: verifier
 date_utc: 2026-07-23T05:29:58Z
-git_commit: 867d875197e5c628113c285ee9de24c834790056
+git_commit: 19d77662fe6885b12eef731cdc04ca08652f4917
 claim_label: VERIFIED
 scope: conditional exclusion of n3=39 for a putative srg(99,14,1,2)
 inputs:
@@ -17,10 +17,10 @@ inputs:
   agents/2026-07-22-wave10-n3-36-equality.md: 9a1e2ad7cac5e26f9fe4117c8ced2390ca15a4dfda7b1e67faa02b8e90ba507e
   verification/n3-39-equality/verify.py: 195f0c87ddca000839ea41edf5569fd4791b1068f2edaaff72c05e0b327c17c5
   verification/test_n3_39_equality.py: bcbe59dc51aa261481010148c936da9e48c08efdd63d28e5d02c31d8692b8b67
-  verification/n3-39-equality/audit_local.py: deb78e5c5dc2697ae3af663f8c41fe1160827bfaa83210f339382dc087439fdc
-  verification/n3-39-equality/verify_local.py: 69408e1fba26e5e03edbad9b29ed6665610cbdb33c479a0a84f649508dfff2e8
-  verification/n3-39-equality/n3-39-local.json: 48f14aaff09ab0a7fd9fa2bb7e07c643849f6094acbded4c8a05f22113c09e3e
-  verification/test_n3_39_local.py: 7e07677a1c12bb66ee295df0824b34faeed24b8d96a0f0a3c4ec6465a0305f45
+  verification/n3-39-equality/audit_local.py: 8db04ec4bb4db4266226581f70e1abc1f74a2e00ddde3277206da634d36c5a9b
+  verification/n3-39-equality/verify_local.py: 0113924cc8c36f8cbccad31630e54174de49aeaadcb874c1005f2e8e5622d887
+  verification/n3-39-equality/n3-39-local.json: 4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261
+  verification/test_n3_39_local.py: c90029a2a1a452456804efe0a2dd43739dfa7e83cd6baa844eed7842fcd87603
 method: independent proof reconstruction, explicit diagnostic countermodel, adversarial proof-to-code audit, repaired semantic witnesses, two-implementation local replay, digest validation, and mutation tests
 command: |
   python verification/n3-39-equality/verify.py
@@ -28,13 +28,13 @@ command: |
   python -m unittest verification/test_n3_39_equality.py verification/test_n3_39_local.py
 outputs:
   verdict: PUBLISH
-  current_audit_commit: 867d875197e5c628113c285ee9de24c834790056
-  certificate_commit: 474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b
+  current_audit_commit: 19d77662fe6885b12eef731cdc04ca08652f4917
+  certificate_source_commit: c299b88fbd956c813ff3379ff236b3123a90d242
   conditional_global_n3_lower_bound: 42
   conditional_induced_C6_lower_bound: 209328
   compact_checker_verdict_initial: FAIL
   compact_checker_verdict_final: PASS
-  focused_tests: 16_passed
+  focused_tests: 17_passed
   certificate_records: 8907
   certificate_bytes: 1730729
   certificate_combined_sha256: 452850018ad13362694f5bfff2e4beac03288a113a0391c3456a47cd6fbfe9a1
@@ -454,10 +454,10 @@ implementations. The committed certificate is
 ```text
 verification/n3-39-equality/n3-39-local.json
 file sha256:
-48f14aaff09ab0a7fd9fa2bb7e07c643849f6094acbded4c8a05f22113c09e3e
+4cd23939cfb8ec5080b57fb0626e9579b68250a219ea17876a8e1f4066ad2261
 
 certificate git commit:
-474b9b876c3466c4eb0ca90f198a1a9a2d9b6e2b
+c299b88fbd956c813ff3379ff236b3123a90d242
 
 combined stream:
 records = 8907
@@ -500,10 +500,19 @@ restore_false_survivor,
 inflate_target_status.
 ```
 
-The current compact and replay suites pass all sixteen focused tests.
+The current compact and replay suites pass all seventeen focused tests.
 Regenerating the certificate in memory from its recorded commit reproduces
 the same manifest and combined digest. The replay reports zero survivors only
 inside the conditional local domain and prints `target_result UNKNOWN`.
+
+The first detached clone found that the initial writer used platform-default
+newlines: Git's LF-normalized certificate and a Windows CRLF regeneration had
+different whole-file hashes even though their parsed JSON and canonical stream
+digests agreed. That packaging check received `FAIL` for byte portability.
+Commit `c299b88fbd956c813ff3379ff236b3123a90d242` now emits canonical LF bytes
+for both certificate and replay output and adds a seventh local test. Five hash
+seeds reproduce the exact outer file hash shown above as well as the internal
+stream hash. The focused total is therefore seventeen tests.
 
 ## Limitations and final status
 
