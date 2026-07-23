@@ -3,7 +3,7 @@
 ```yaml
 role: literature
 date_utc: 2026-07-23T06:08:46Z
-git_commit: PENDING_ROOT_INTEGRATION
+git_commit: 4d561fb8b5e0b335d430c2ac93962cbf0ae40184
 claim_label: UNKNOWN
 scope: exclusion n3=42; consequent bounds n3>=45 and induced_C6_count>=209331; fourteen-active-triangle equality framework
 inputs:
