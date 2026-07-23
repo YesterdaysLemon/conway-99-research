@@ -36,10 +36,10 @@ command: |
   python -B attempts/wave15-global-lift/verify_subset_moment_certificate.py attempts/wave15-global-lift/subset-moment-certificate.json
   python -B -m unittest -v attempts/wave15-global-lift/test_subset_moment.py
 outputs:
-  attempts/wave15-global-lift/build_subset_moment_certificate.py: d8bff71e134666d45b8e08f995967f0765b9be41a062d3b7b532abcaa043a0be
+  attempts/wave15-global-lift/build_subset_moment_certificate.py: 22c87bb40fb860c981b61fca66af49f896548e8083fd069007f8b2b94cfd32ba
   attempts/wave15-global-lift/verify_subset_moment_certificate.py: 0429db33fa0a61864ff8456326379fab47a09e7b8ea7234130d12b018cd041c2
   attempts/wave15-global-lift/test_subset_moment.py: a1c981666166b97d0d84d9f90c4c977e3dff9f3e5cc61b1e57711b9d9ce642f7
-  attempts/wave15-global-lift/subset-moment-certificate.json: 42d1da171274d82fa87c9489f1ed3e3334c404ea7f8f1ddce27021893831a4df
+  attempts/wave15-global-lift/subset-moment-certificate.json: cb02ab80f92d7d2c8ec5140e3be2916354976442aa2e1869524aa728c73bd386
   arithmetic_verifier: PASS
   focused_tests: "5/5 PASS"
   conditional_n3_48_exclusion: DERIVED_PENDING_INDEPENDENT_VERIFICATION
@@ -56,6 +56,19 @@ During root integration, the pre-commit whitespace gate removed one trailing
 blank line at EOF from this report and from the preinspection freeze.  The
 freeze hash declared above is the resulting normalized hash.  This was a
 metadata-only normalization; no mathematical statement or status changed.
+
+### Public-newline repair
+
+The initial discovery baseline commit `522260a` is retained as the failed
+baseline for a public-provenance mismatch.  Before repair, the Windows
+worktree certificate used CRLF bytes and had SHA-256
+`42d1da171274d82fa87c9489f1ed3e3334c404ea7f8f1ddce27021893831a4df`,
+while `.gitattributes` normalized its public Git blob to LF with SHA-256
+`cb02ab80f92d7d2c8ec5140e3be2916354976442aa2e1869524aa728c73bd386`.
+The generator now opens certificate output with `newline="\n"` explicitly.
+Regeneration makes the worktree bytes identical to the public LF bytes and
+the output hash declared above.  This repair changes only byte-level
+provenance; no mathematical statement or status changed.
 
 ## 1. Independence and inspection timing
 
