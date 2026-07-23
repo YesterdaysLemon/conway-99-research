@@ -26,16 +26,19 @@ and the normalized search problem.
 
 ## Current status
 
-- **Literature status:** open as of the audit dated 2026-07-22.
+- **Literature status:** no resolution found in the sources searched through
+  2026-07-23; this is not a proof of openness.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
-A peer-reviewed 2025 paper calls existence an open problem. A targeted
-freshness search through 2026-07-22 found no credible construction or
-nonexistence proof. That search is evidence about the literature, not a
-mathematical proof of openness.
+A peer-reviewed 2025 paper calls existence an open problem. Two independent
+freshness searches through 2026-07-23 found no credible construction or
+nonexistence proof. Current 2026 SAT work reports an unsuccessful computation,
+and a June 2026 lecture notice discusses only a possible similar approach.
+Those searches are evidence about the literature, not a mathematical proof of
+openness or novelty.
 
 Wave 3 added three advances, with independently checked structural and
 proof-pipeline components, without changing the target status. First, cited
@@ -314,6 +317,49 @@ of the audited residual to a full target graph is excluded. This is still a
 conditional necessary bound, not a resolution: Conway-99 and novelty remain
 `UNKNOWN`.
 
+Wave 16 excludes the next equality `n3=51` without assuming the Wave 14
+point-size classification. Exact `sum q=34` partitioning and the audited
+`d_K>=4` obstruction leave four profiles with `14<=r<=17` and only
+`q=2,3`. If `X={u:S_u is nonempty}`, indexed incidence gives
+
+```text
+|X| <= floor(3r/2) <= 25.
+```
+
+A point of size at least three has six distinct active-triangle neighbors.
+At a size-two point, the two-sided crossing law makes every meeting crossing
+zero and every positive disjoint crossing a four-edge `K_(2,2)`. The fixed
+sum `2(q(i)+q(j))` therefore supplies two positive nonmeeting neighbors for
+type `(2,2)`, excludes mixed type `(2,3)`, and supplies three for `(3,3)`.
+Thus every vertex of `G[X]` has at least six neighbors in `X`.
+
+The same exact spectral bound used in Wave 15 requires `|X|>=27`, a
+contradiction. Since `3|n3`, the new internally verified necessary bounds are
+
+```text
+n3 >= 54,
+induced_C6_count >= 209,340.
+```
+
+The [structural proof](agents/2026-07-23-wave16-n3-51-structural.md) and
+[independent audit](verification/2026-07-23-wave16-n3-51-structural-audit.md)
+explicitly rule out hidden point-size, global `H`-degree, and support-graph
+assumptions. The separate [computational audit](verification/2026-07-23-wave16-n3-51-computation-audit.md)
+rebuilds seven active-local CNFs and one positive relaxation candidate, but
+its `1 UNSAT_UNVERIFIED`, `5 TIMEOUT_UNKNOWN`, and historical
+`1 BUDGET_UNKNOWN` are not evidence for the proof. Baseline `09c20e6` and
+repair `7530cae` preserve a transient Wave 15 input-hash failure and its
+public-provenance correction. Conway-99 and novelty remain `UNKNOWN`.
+
+The [Wave 16 status search](agents/2026-07-23-wave16-status-search.md) and
+[independent status audit](verification/2026-07-23-wave16-status-audit.md)
+checked exact numbers, alternate terminology, recent citations, corrections,
+maintained tables, current preprints, and the June 2026 Shpectorov lecture
+notice. They independently recover the published identity
+`induced_C6_count=209286+n3` and find no source for `n3>=54` or `209340`.
+That nonhit is not a novelty certificate: the target and novelty both remain
+`UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -432,6 +478,17 @@ status.
 - [Wave 15 algebraic audit](verification/2026-07-23-wave15-algebraic-audit.md):
   blind second audit of the same exclusion plus exact triangle-intersection
   moments and the repaired weighted-moment metadata.
+- [Wave 16 structural audit](verification/2026-07-23-wave16-n3-51-structural-audit.md):
+  independent reconstruction of the 16-to-4 profile filter, endpoint-local
+  crossing bridge, spectral contradiction, and conditional exclusion of
+  `n3=51`.
+- [Wave 16 computation audit](verification/2026-07-23-wave16-n3-51-computation-audit.md):
+  independent seven-CNF reconstruction, positive active-local replay, 38
+  hostile mutations, and strict preservation of unknown solver outcomes.
+- [Wave 16 literature/status audit](verification/2026-07-23-wave16-status-audit.md):
+  independent source-page verification of the current target status, induced
+  hexagon identity, exact-number nonhits, and conservative `UNKNOWN` novelty
+  label.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):
@@ -478,6 +535,7 @@ status.
 - [Cesarz and Woldar, *Algebraic Combinatorics* 8 (2025)](https://doi.org/10.5802/alco.418)
 - [Keramatipour, *Approaching the Conway-99 problem using SAT solvers*](https://arxiv.org/abs/2604.23037)
 - [Petro and Phillips, *On clique graphs and clique regular graphs*](https://doi.org/10.1016/j.disc.2025.114862)
+- [Reimbayev, *The lower bound for number of hexagons in strongly regular graphs with parameters lambda=1 and mu=2*](https://doi.org/10.62780/ejaam/2024-001)
 
 An older public code repository is tracked only as prior art because no license
 was found during the initial audit. Its source must not be copied here.

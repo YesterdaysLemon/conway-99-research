@@ -43,12 +43,12 @@ induced_C6_count = 209,286 + n3.
 
 Wave 6 first sharpened the target-specific count to `n3>=24`. Wave 7 excludes
 the next two multiples of three, Waves 8--13 exclude equality at 30, 33, 36,
-39, 42, and 45, and Wave 15 excludes equality at 48. The currently strongest
-project bound is
+39, 42, and 45, Wave 15 excludes equality at 48, and Wave 16 excludes equality
+at 51. The currently strongest project bound is
 
 ```text
-n3 >= 51,
-induced_C6_count >= 209,337.
+n3 >= 54,
+induced_C6_count >= 209,340.
 ```
 
 For the proof, form a graph `J` on the 693 graph edges, joining two when they
@@ -382,6 +382,70 @@ is refuted. See `agents/2026-07-23-wave15-global-lift.md`,
 `verification/2026-07-23-wave15-global-lift-audit.md`, and
 `verification/2026-07-23-wave15-algebraic-audit.md`. This is a conditional
 necessary bound only; Conway-99 and novelty remain `UNKNOWN`.
+
+Wave 16 applies the same global obstruction directly at `n3=51`, without a
+Wave 14 point-size classification. Here
+
+```text
+sum_T q(T)=34,
+q(T)>=2,
+d_K(T)=r-1-3q(T).
+```
+
+Exact partitioning gives sixteen raw active profiles. Every active label lies
+in three non-singleton linear points, so `d_K>=3`; the independently audited
+degree-three obstruction strengthens this to `d_K>=4`. Exactly four profiles
+remain:
+
+```text
+r=14: q=2^8 3^6,
+r=15: q=2^11 3^4,
+r=16: q=2^14 3^2,
+r=17: q=2^17.
+```
+
+For the indexed active original-vertex set
+
+```text
+X={u:S_u is nonempty},
+sum_{u in X}|S_u|=3r.
+```
+
+No active point is a singleton, so `|X|<=floor(3r/2)<=25`. A point of size
+at least three already supplies six distinct active-triangle neighbors. For a
+size-two point `P={i,j}`, the complete two-sided crossing classification is
+endpoint-local:
+
+```text
+P and Q meet:                  d_H(uv)=0,
+P and Q are disjoint:          d_H(uv) is 0 or 4.
+```
+
+The fixed-point sum is `2(q(i)+q(j))`. Thus a `(2,2)` point has exactly two
+positive nonmeeting neighbors, a mixed `(2,3)` point is impossible modulo
+four, and a `(3,3)` point has exactly three positive nonmeeting neighbors.
+All positive terms are distinct actual graph neighbors in `X`, not support
+multiplicities. Consequently every vertex of `G[X]` has induced degree at
+least six.
+
+The Wave 15 spectral inequality requires every nonempty induced set of
+minimum degree six to have order at least 27, contradicting `|X|<=25`.
+Therefore `n3=51` is impossible. Divisibility by three and the exact cycle
+identity give
+
+```text
+n3 >= 54,
+induced_C6_count >= 209340.
+```
+
+The independent audit explicitly tests that the proof does not assume a
+point-size-at-most-three bound, a global `H`-degree `{0,4}` law, or the Wave 14
+support-graph identity. A separate computation verifies a seven-branch
+active-local archive and one positive relaxation object but is not used in
+the exclusion; its one raw UNSAT return has no proof trace. See
+`agents/2026-07-23-wave16-n3-51-structural.md` and
+`verification/2026-07-23-wave16-n3-51-structural-audit.md`. This remains a
+conditional necessary bound; Conway-99 and novelty are `UNKNOWN`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

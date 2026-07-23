@@ -517,6 +517,63 @@ and 7 independent algebraic tests. They verify the conditional exclusion
 `n3!=48`, hence `n3>=51` and `induced_C6_count>=209337`; they do not resolve
 Conway-99 or establish novelty.
 
+Replay the Wave 16 structural proof companion and independent verifier:
+
+```powershell
+.venv\Scripts\python -B `
+  attempts\wave16-n3-51-structural\exact_check.py `
+  --verify attempts\wave16-n3-51-structural\exact-checks.json
+.venv\Scripts\python -B -m unittest -v `
+  attempts\wave16-n3-51-structural\test_exact_check.py
+.venv\Scripts\python -B `
+  verification\n3-51-structural\independent_check.py
+
+$wave16Python = (Resolve-Path '.venv\Scripts\python.exe').Path
+Push-Location verification\n3-51-structural
+& $wave16Python -B -m unittest -v test_independent_check.py
+Pop-Location
+```
+
+The submitted suite passes 8 tests and the independent suite passes 24. The
+checker pins repaired discovery report hash
+`95d04a774397332417c9613718fe6699a5392ef5222fef1cfa00b12e2860af3f`
+and final Wave 15 audit hash
+`edda3785d080db464028f10c22bcae5c0bf17f1e61432a8641bfa6ffdccab036`,
+while retaining the failed baseline and intermediate hashes as historical
+provenance. These checks verify the conditional `n3=51` exclusion and the
+bounds `n3>=54`, `induced_C6_count>=209340`.
+
+Replay the separate Wave 16 active-local computational archive:
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE='1'
+.venv\Scripts\python -B code\wave16_n3_51_profiles.py `
+  --output verification\n3-51-computation\regenerated-profile-census.json
+.venv\Scripts\python -B code\wave16_n3_51_verify.py `
+  --output verification\n3-51-computation\submitted-validation-replay.json
+.venv\Scripts\python -B code\wave16_n3_51_test.py -v
+.venv\Scripts\python -B `
+  verification\n3-51-computation\independent_check.py `
+  --output verification\n3-51-computation\independent-audit.json
+.venv\Scripts\python -B `
+  verification\n3-51-computation\test_independent_check.py -v
+```
+
+The independent audit rebuilds all seven DIMACS streams, fixes the raw
+24-point/69-edge candidate into its rebuilt positive CNF, rejects 38 hostile
+mutations, and passes 4 tests; the submitted suite passes 8. Regenerated
+profile and validation artifacts are byte-identical. The archive status is
+exactly `1 SAT_CANDIDATE`, `5 TIMEOUT_UNKNOWN`, `1 UNSAT_UNVERIFIED`, plus
+one historical `BUDGET_UNKNOWN`. No negative row has a checked proof trace,
+and none is used in the human exclusion.
+
+The non-computational literature record is preserved in
+`agents/2026-07-23-wave16-status-search.md` and independently checked in
+`verification/2026-07-23-wave16-status-audit.md`. These reports record their
+exact query families, source URLs, page locations, source-file hashes where
+available, access failures, and the 2026-07-23 cutoff. Their search nonhits do
+not reproduce a mathematical conclusion or establish novelty.
+
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.
 The alternative sequential-counter CNF/LRAT route remains available. No

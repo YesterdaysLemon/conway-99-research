@@ -3,9 +3,9 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-22
-  status: OPEN_IN_CHECKED_PRIMARY_SOURCES
-  caveat: "A literature search cannot prove that no resolution exists."
+  through: 2026-07-23
+  status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
+  caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
@@ -277,4 +277,47 @@ fifteenth_research_wave:
   clean_clone_commit: "9215f06a45cb1477b46ebb29d350155e0abd0d08"
   clean_clone_replay: "verification/2026-07-23-wave15-clean-clone.md"
   caveat: "The human conditional exclusion of n3=48 passed two independent semantic audits and yields n3>=51 and induced_C6_count>=209337. The initial global certificate's CRLF/public-LF mismatch is preserved at 522260a and repaired at 874af27; the algebraic metadata ambiguity is likewise retained and re-audited. No formal kernel proof or checked literature novelty claim is supplied, and Conway-99 remains UNKNOWN."
+sixteenth_research_wave:
+  discovery_baseline_commit: "09c20e6c8774ff8676de789b631fd7b0973cf1f5"
+  provenance_repair_commit: "7530caebc2705dd3b5a6682cf89c51b55810db7a"
+  structural_verification_commit: "7a166b7547ed6f9c7287a24c1a697f5a0d405ae0"
+  computational_verification_commit: "b218f3a21f1d23b60e7ad1ece8884c9e7a3697d9"
+  status_search_commit: "03488522cc5547dafbab9104320f323488072560"
+  status_audit_commit: "9831114c5b5b84b23a1714daa2e9812862b2a8c1"
+  verifier_verdict: PASS_FOR_CONDITIONAL_N3_51_EQUALITY_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  conditional_n3_lower_bound: 54
+  conditional_induced_C6_lower_bound: 209340
+  conditional_n3_51_exclusion: EXCLUDED_VERIFIED
+  structural_discovery_report: "agents/2026-07-23-wave16-n3-51-structural.md"
+  structural_discovery_report_sha256: "95d04a774397332417c9613718fe6699a5392ef5222fef1cfa00b12e2860af3f"
+  structural_audit: "verification/2026-07-23-wave16-n3-51-structural-audit.md"
+  structural_audit_sha256: "99203a15db2646a759edbb2241eb4bd5e6001733ac862952c9db57446c58ead6"
+  structural_independent_checker: "verification/n3-51-structural/independent_check.py"
+  structural_submitted_tests_passed: 8
+  structural_independent_tests_passed: 24
+  computational_discovery_report: "agents/2026-07-23-wave16-n3-51-computational.md"
+  computational_discovery_report_sha256: "b3acf2d1efd7940811320e69307810716f2ec7c34c175f3816b104668c7bb0cc"
+  computational_audit: "verification/2026-07-23-wave16-n3-51-computation-audit.md"
+  computational_audit_sha256: "31ae36bd4d54702fe08c39d5c34565ab23f7dd217c6ca0da7ec49c776bbfe901"
+  computational_independent_checker: "verification/n3-51-computation/independent_check.py"
+  computational_independent_artifact: "verification/n3-51-computation/independent-audit.json"
+  computational_independent_artifact_sha256: "fbb0b17393eacabed38b37644ecc66fca962b00ca8db8b8bb6b35499794084a0"
+  computational_submitted_tests_passed: 8
+  computational_independent_tests_passed: 4
+  status_search_report: "agents/2026-07-23-wave16-status-search.md"
+  status_search_report_sha256: "27e90e9af127678c46f907bcf41fa75ec69caab60b342043b38b1cbf68100605"
+  status_audit: "verification/2026-07-23-wave16-status-audit.md"
+  status_audit_sha256: "e3c43c4bdcb1111740b1b30448dff55746ffcb8dca87d4df970ca9e4a3e9ec95"
+  status_search_through: 2026-07-23
+  status_search_result: NO_RESOLUTION_FOUND
+  status_novelty_result: UNKNOWN
+  computational_scan_status:
+    SAT_CANDIDATE: 1
+    TIMEOUT_UNKNOWN: 5
+    UNSAT_UNVERIFIED: 1
+    BUDGET_UNKNOWN_HISTORICAL: 1
+  computational_negative_evidence: false
+  caveat: "The human structural exclusion of n3=51 passes an independent 24-test semantic audit and yields n3>=54 and induced_C6_count>=209340. The computational audit verifies only a seven-branch active-local archive and positive relaxation object; all timeout, budget, and proofless UNSAT outcomes remain non-evidentiary. The stale Wave 15 input hash is preserved at 09c20e6 and transparently repaired at 7530cae. A two-lane status search found no resolution or exact prior bound through 2026-07-23, but search non-discovery is not a novelty certificate. No formal proof or novelty claim is supplied, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-23

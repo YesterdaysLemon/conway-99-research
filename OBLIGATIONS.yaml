@@ -322,3 +322,40 @@ obligations:
       - "verification/2026-07-23-wave15-algebraic-audit.md"
       - "verification/n3-48-algebraic/independent_check.py"
     note: "Two independent semantic audits pass the conditional exclusion of n3=48, yielding n3>=51 and induced_C6_count>=209337. The first algebraic JSON used an ambiguous moment key and the first global certificate had a Windows CRLF/public-LF hash mismatch; both failures, repairs, and re-audits are public. The proof is human with exact arithmetic companions, not a formal kernel proof. Novelty and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE16-STRUCTURAL
+    requirement: "Adversarially verify the sum-q=34 profile enumeration, d_K>=4 filter, indexed active-set bound, complete endpoint-local size-two crossing classification, fixed-point support counts, distinct actual-neighbor bridge, minimum degree six without a point-size cap, exact spectral threshold, divisibility consequence, and final public-input provenance."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave16-n3-51-structural.md"
+      - "attempts/wave16-n3-51-structural/exact_check.py"
+      - "attempts/wave16-n3-51-structural/exact-checks.json"
+      - "verification/2026-07-23-wave16-n3-51-structural-audit.md"
+      - "verification/n3-51-structural/independent_check.py"
+      - "verification/n3-51-structural/test_independent_check.py"
+    note: "The independent audit passes the conditional exclusion of n3=51 and yields n3>=54 and induced_C6_count>=209340. It explicitly rejects a hidden point-size-at-most-three assumption, a global H-degree zero-or-four assumption, and reuse of support multiplicities as vertices. Baseline 09c20e6 and repair 7530cae preserve and repair the transient Wave 15 provenance without changing the mathematics. Conway-99 and novelty remain UNKNOWN."
+
+  - id: O-WAVE16-COMPUTATION
+    requirement: "Independently reconstruct the sixteen-to-seven active-local branch cover, all seven exact CNF streams, raw positive relaxation candidate, deterministic provenance, solver-status boundary, and hostile mutations without treating proofless UNSAT, timeout, or budget outcomes as nonexistence evidence."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave16-n3-51-computational.md"
+      - "attempts/wave16-n3-51-computation/n3-51-profile-census.json"
+      - "attempts/wave16-n3-51-computation/n3-51-active-local-scan.json"
+      - "attempts/wave16-n3-51-computation/n3-51-r16-q2x14-q3x2-no-size3-active-local-candidate.json"
+      - "verification/2026-07-23-wave16-n3-51-computation-audit.md"
+      - "verification/n3-51-computation/independent_check.py"
+      - "verification/n3-51-computation/independent-audit.json"
+    note: "The audit verifies the scoped active-local archive, seven formula hashes, and positive candidate. The exact scan remains one SAT_CANDIDATE, five TIMEOUT_UNKNOWN, one UNSAT_UNVERIFIED, plus one historical BUDGET_UNKNOWN; none of the negative statuses is evidence for the structural exclusion or Conway-99."
+
+  - id: O-WAVE16-STATUS
+    requirement: "Search current primary and authoritative sources for a resolution of srg(99,14,1,2), exact prior statements of n3>=54 or induced_C6_count>=209340, alternate notation and terminology, corrections, citations, and later work; independently audit the closest six-vertex identity and keep search nonhits separate from proof or novelty claims."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-23-wave16-status-search.md"
+      - "verification/2026-07-23-wave16-status-audit.md"
+      - "SOURCES.bib"
+    note: "Two independent searches through 2026-07-23 found no target resolution or source for either exact Wave 16 bound. Reimbayev's published identity gives induced_C6_count=209286+n3, so 209340 is DERIVED from the separately verified n3>=54 bound. The June 2026 Shpectorov lecture notice announces only a possible similar approach. Target status and novelty remain UNKNOWN because non-discovery is not a certificate."

@@ -303,6 +303,21 @@ claims:
       - "verification/n3-48-algebraic/independent_check.py"
     limitations: "The result depends on the independently audited Wave 14 reduction and is a necessary count bound only, not a Conway-99 resolution. The proof is human with exact arithmetic companions rather than a formal kernel proof. The initial global certificate had a CRLF/public-LF provenance mismatch; failed baseline 522260a and repair 874af27 preserve the failure and canonical-LF correction. No literature novelty is claimed."
 
+  - id: C-N3-EQUALITY-008
+    statement: "Conditional on the verified active-triangle framework and a putative srg(99,14,1,2) with n3=51, exact profile filtering gives at most 25 active original vertices, while endpoint-local crossing arithmetic forces their induced minimum degree to be at least six. The target spectrum requires at least 27 such vertices, excluding n3=51 and forcing n3>=54 and induced_C6_count>=209340."
+    label: VERIFIED
+    scope: CONDITIONAL_ON_EXISTENCE
+    evidence:
+      - "STRUCTURE.md"
+      - "agents/2026-07-23-wave16-n3-51-structural.md"
+      - "attempts/wave16-n3-51-structural/exact_check.py"
+      - "attempts/wave16-n3-51-structural/exact-checks.json"
+      - "verification/2026-07-23-wave16-n3-51-structural-audit.md"
+      - "verification/n3-51-structural/independent_check.py"
+      - "agents/2026-07-23-wave16-status-search.md"
+      - "verification/2026-07-23-wave16-status-audit.md"
+    limitations: "This is a human conditional necessary-bound proof with exact arithmetic companions, not a formal-kernel proof or a Conway-99 resolution. It uses an endpoint-local size-two crossing law, not a global H-degree restriction or a point-size cap. Baseline 09c20e6 preserves a transient Wave 15 input hash and repair 7530cae pins the final public input before re-audit. The separate active-local SAT archive is not used as negative evidence. Two independent status searches found no exact prior bound through 2026-07-23, but search non-discovery is not a novelty certificate; novelty remains UNKNOWN."
+
   - id: C-N3-BOUNDARY-001
     statement: "A normalized induced N3 has exactly eight outside two-neighbor vertices with pair multiplicities xa:1, ub:1, xc:1, uc:1, va:1, vb:1, vc:2; singleton counts (9,9,8,9,9,8); and 33 outside vertices seeing none of the six."
     label: VERIFIED

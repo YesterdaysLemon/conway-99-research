@@ -462,3 +462,57 @@ The detached clean-source replay at
 `2026-07-23-wave15-clean-clone.md` records the full historical suites, all 23
 focused Wave 15 tests, all 18 frozen file hashes, byte-identical canonical-LF
 certificate regeneration, clean detached status, and `git fsck`.
+
+## `N3=51` equality exclusion and active-local archive
+
+Wave 16 independently verifies a shorter global obstruction. Sixteen raw
+`sum q=34` profiles reduce to four. Their indexed active original-vertex set
+has order at most 25, while exact size-two endpoint crossings and distinct
+triangle neighbors force induced minimum degree at least six. The target
+spectrum requires order at least 27.
+
+```powershell
+python -B attempts/wave16-n3-51-structural/exact_check.py `
+  --verify attempts/wave16-n3-51-structural/exact-checks.json
+python -B verification/n3-51-structural/independent_check.py
+$wave16Python = (Resolve-Path '.venv\Scripts\python.exe').Path
+Push-Location verification/n3-51-structural
+& $wave16Python -B -m unittest -v test_independent_check.py
+Pop-Location
+```
+
+The 24-test adversarial suite verifies the endpoint-local scope and contains
+countercontrols against a global `H`-degree law, a point-size cap, the old
+support-graph identity, reused support indices, and weakened spectral inputs.
+It also pins the final Wave 15 public hash while preserving two transient
+historical hashes. The verified conditional consequence is
+
+```text
+n3 >= 54,
+induced_C6_count >= 209340,
+Conway-99 = UNKNOWN,
+novelty = UNKNOWN.
+```
+
+The computational lane is deliberately separate:
+
+```powershell
+python -B verification/n3-51-computation/independent_check.py `
+  --output verification/n3-51-computation/independent-audit.json
+python -B verification/n3-51-computation/test_independent_check.py -v
+python -B code/wave16_n3_51_test.py -v
+```
+
+It independently rebuilds seven exact DIMACS streams, validates one positive
+active-local relaxation candidate, rejects 38 hostile mutations, and passes
+4 independent plus 8 submitted tests. Its final bounded status remains
+`1 SAT_CANDIDATE / 5 TIMEOUT_UNKNOWN / 1 UNSAT_UNVERIFIED`, with one earlier
+`BUDGET_UNKNOWN` retained separately. No solver-negative outcome is used as
+mathematical evidence.
+
+The independent literature/status audit is
+`2026-07-23-wave16-status-audit.md`. It checks the exact source pages behind
+`induced_C6_count=209286+n3`, current target-specific sources, exact-number
+searches, corrections, citations, and the June 2026 Shpectorov lecture scope.
+It found no target resolution or exact prior Wave 16 bound through 2026-07-23,
+but correctly leaves both target status and novelty `UNKNOWN`.

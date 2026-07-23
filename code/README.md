@@ -256,3 +256,33 @@ proof traces. The positive objects encode only the active-local layer and are
 not `H`, partial Conway graphs, or target certificates. The independently
 audited human lane reduces equality to a finite support residual but does not
 exclude it; the verified bound stays `n3>=48`.
+
+## Wave 16 `n3=51` discovery tools
+
+The Wave 16 programs enumerate all sixteen `sum q=34` profiles, derive a
+seven-branch active-local cover, materialize exact CNF streams, and validate
+their public archive:
+
+- `wave16_n3_51_profiles.py` regenerates the profile and rooted-local census;
+- `wave16_n3_51_active_sat.py` builds the branch CNFs, bounded scan, and raw
+  positive relaxation candidate;
+- `wave16_n3_51_verify.py` checks profiles, finite reductions, raw candidate,
+  all seven formula hashes, provenance, and 20 hostile mutations; and
+- `wave16_n3_51_test.py` supplies eight focused regressions.
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE='1'
+.venv\Scripts\python code\wave16_n3_51_profiles.py `
+  --output attempts\wave16-n3-51-computation\n3-51-profile-census.json
+.venv\Scripts\python code\wave16_n3_51_verify.py `
+  --output attempts\wave16-n3-51-computation\n3-51-discovery-validation.json
+.venv\Scripts\python code\wave16_n3_51_test.py -v
+```
+
+The independently audited archive contains seven deterministic formulas and
+one complete positive object for its restricted active-local encoding. Its
+bounded solver outcomes remain `1 SAT_CANDIDATE`, `5 TIMEOUT_UNKNOWN`, and
+`1 UNSAT_UNVERIFIED`, plus a separately preserved historical
+`BUDGET_UNKNOWN`. The encoding omits inactive structure, complete fixed
+support, `H`, and the global SRG equations. It is not the proof of the
+conditional `n3=51` exclusion and supplies no target certificate.

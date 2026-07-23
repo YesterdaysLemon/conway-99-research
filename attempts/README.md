@@ -22,3 +22,22 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   transparently and re-audited.
 - Boundary: this is a necessary count bound, not a proof or counterexample for
   Conway-99; target and novelty remain `UNKNOWN`.
+
+## Wave 16: conditional `n3=51`
+
+- Structural scope: all sixteen `sum q=34` profiles under the audited
+  active-triangle framework.
+- Structural result: `VERIFIED` conditional equality exclusion, hence
+  `n3>=54` and `induced_C6_count>=209340`.
+- Smallest obstruction: the four surviving profiles give at most 25 active
+  original vertices, endpoint-local crossing arithmetic forces minimum
+  induced degree six, and the target spectrum requires at least 27 vertices.
+- Computational scope: a separate seven-branch active-local relaxation with
+  exact CNF hashes and one raw positive candidate.
+- Computational result: `PASS_FOR_CONDITIONAL_ACTIVE_LOCAL_ARCHIVE_ONLY`;
+  one proofless UNSAT, five timeouts, and one historical budget stop are
+  explicitly non-evidentiary.
+- Retained failure: discovery baseline `09c20e6` pinned a transient Wave 15
+  audit hash; repair `7530cae` pins the final public input and an independent
+  re-audit preserves all historical hashes.
+- Boundary: neither lane resolves Conway-99 or establishes novelty.
