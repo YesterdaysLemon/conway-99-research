@@ -264,6 +264,7 @@ claims:
       - "verification/n3-45-computation-repair/independent_repair_audit.py"
       - "verification/n3-45-computation-repair/test_repair_regressions.py"
       - "verification/2026-07-22-wave13-computation-repair-audit.md"
+      - "verification/2026-07-22-wave13-clean-clone.md"
     limitations: "The result depends on C-N3-001 and the Wave 6-12 conditional framework, is a necessary count bound only, and does not resolve Conway-99. The proof is human and internally audited rather than formally kernel-checked. The auxiliary SAT scan is not part of the exclusion and all 17 negative rows remain UNSAT_UNVERIFIED. The original computation bundle failed audit and is preserved before its separately verified repair. No literature novelty is claimed."
 
   - id: C-N3-BOUNDARY-001

@@ -429,7 +429,9 @@ positive clauses, certifies exactly 18 violations of the deliberately omitted
 common-point premise, and rejects 31 hostile mutations. The original bundle's
 FAIL audit and its later repair are both retained. No checked proof trace
 exists for any solver-negative row, so every such row remains
-`UNSAT_UNVERIFIED` and is not evidence for the `n3=45` exclusion.
+`UNSAT_UNVERIFIED` and is not evidence for the `n3=45` exclusion. The detached
+52-code-test, 12-focused-test, and 104-verification-test replay is recorded in
+`verification/2026-07-22-wave13-clean-clone.md`.
 
 An archival UNSAT claim would require the complete public OPB formula, a
 complete proof from a pinned producer, and successful independent checking.

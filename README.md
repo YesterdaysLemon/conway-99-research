@@ -378,6 +378,9 @@ status.
 - [Wave 12 clean-source replay](verification/2026-07-22-wave12-clean-clone.md):
   detached full-suite replay, fresh official-catalog download, and
   byte-identical support-certificate regeneration.
+- [Wave 13 clean-source replay](verification/2026-07-22-wave13-clean-clone.md):
+  detached 52/12/104-test replay and byte-identical census and positive-v2
+  diagnostic regeneration.
 - `agents/`: role prompts and immutable run reports.
 - `attempts/`: proof and search attempts, including failed ones.
 - `candidates/`: machine-readable candidate objects and quarantined artifacts.

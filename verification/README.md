@@ -366,4 +366,7 @@ hostile mutations. The historical 15-test suite now loads the failed baseline
 directly from commit `066d9c7fcf593c3b9d35cfef1031dbd9daab4145`, while
 the repaired 12-test suite exercises the current files. No negative proof
 trace was emitted or checked, so every solver-negative branch remains
-`UNSAT_UNVERIFIED`; none is used in the human proof.
+`UNSAT_UNVERIFIED`; none is used in the human proof. The detached clean-source
+replay at `2026-07-22-wave13-clean-clone.md` records 52 code tests, 12 focused
+Wave 13 tests, 104 verification tests, and byte-identical census and positive
+diagnostic regeneration.

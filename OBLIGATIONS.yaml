@@ -286,4 +286,5 @@ obligations:
       - "verification/n3-45-computation-repair/independent_repair_audit.py"
       - "verification/n3-45-computation-repair/test_repair_regressions.py"
       - "verification/2026-07-22-wave13-computation-repair-audit.md"
+      - "verification/2026-07-22-wave13-clean-clone.md"
     note: "Two independent semantic verifiers pass the human conditional exclusion of n3=45, yielding n3>=48 and induced_C6_count>=209334. The initial computation bundle failed self-validation; that failure is preserved, its repair passed independent formula/provenance/mutation checks, and every solver-negative row remains UNSAT_UNVERIFIED. Novelty and Conway-99 remain UNKNOWN."

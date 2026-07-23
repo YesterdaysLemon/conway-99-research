@@ -215,5 +215,7 @@ thirteenth_research_wave:
   computation_repair_audit: "verification/2026-07-22-wave13-computation-repair-audit.md"
   computation_repair_audit_verdict: PASS_FOR_REPAIRED_BUNDLE_PROPERTIES
   computation_negative_status: UNSAT_UNVERIFIED
+  clean_clone_commit: "4e354b80101b24cd9ef0861e9f65f948b912621f"
+  clean_clone_replay: "verification/2026-07-22-wave13-clean-clone.md"
   caveat: "The human conditional exclusion of n3=45 passed two independent semantic audits and yields n3>=48 and induced_C6_count>=209334. The separate SAT computation is not used as negative evidence: its first self-validation bundle failed publicly, the repair passed a fresh audit, and all 17 solver-negative rows remain UNSAT_UNVERIFIED. No checked literature source establishes novelty, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-23
