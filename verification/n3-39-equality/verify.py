@@ -15,13 +15,27 @@ from __future__ import annotations
 
 from collections import Counter
 from itertools import combinations, combinations_with_replacement, product
-from typing import Sequence
+from typing import Iterable, Sequence
 
 
 ACTIVE_ORDER = 13
 K_DEGREE = 6
 K_EDGE_COUNT = ACTIVE_ORDER * K_DEGREE // 2
 WAVE6_BRANCH_DEGREES = (4, 8, 10, 12, 12, 6, 10, 12, 8, 12, 10, 12)
+COMPLEMENT_PREMISE = "K_is_simple_complement_of_L_on_distinct_active_triangles"
+POINT_CLIQUE_PREMISE = "every_active_point_set_is_a_clique_in_K"
+LINEARITY_PREMISE = "point_hypergraph_is_linear"
+COMMON_POINT_PREMISE = "common_point_Berge_triangle_is_forbidden"
+CROSSING_PREMISE = "every_labeled_crossing_degree_is_zero_or_two"
+PROOF_PREMISES = frozenset(
+    (
+        COMPLEMENT_PREMISE,
+        POINT_CLIQUE_PREMISE,
+        LINEARITY_PREMISE,
+        COMMON_POINT_PREMISE,
+        CROSSING_PREMISE,
+    )
+)
 
 
 def active_q_sequences(n3_count: int) -> tuple[tuple[int, ...], ...]:
@@ -110,6 +124,189 @@ def forbidden_common_point_triple(point_sets: Sequence[frozenset[int]]) -> bool:
     return all(len(item) == 1 for item in intersections) and len(set().union(*intersections)) == 3
 
 
+def require_premises(premises: Iterable[str], required: Iterable[str]) -> None:
+    """Reject a local witness when a proof bridge it uses is absent."""
+
+    available = frozenset(premises)
+    missing = frozenset(required) - available
+    if missing:
+        raise ValueError(f"missing proof premises: {sorted(missing)}")
+
+
+def edge(left: int, right: int) -> tuple[int, int]:
+    if left == right:
+        raise ValueError("loops are not edges")
+    return (left, right) if left < right else (right, left)
+
+
+def clique_edges(vertices: Iterable[int]) -> frozenset[tuple[int, int]]:
+    return frozenset(edge(left, right) for left, right in combinations(sorted(vertices), 2))
+
+
+def type_233_u_witness(
+    premises: Iterable[str] = PROOF_PREMISES,
+) -> dict[str, object]:
+    """Build the exact four-edge U-degree witness at a 233 occurrence."""
+
+    require_premises(
+        premises,
+        (
+            COMPLEMENT_PREMISE,
+            POINT_CLIQUE_PREMISE,
+            LINEARITY_PREMISE,
+            COMMON_POINT_PREMISE,
+            CROSSING_PREMISE,
+        ),
+    )
+    if crossing_masks(2, 1) != (0,) or crossing_masks(1, 2) != (0,):
+        raise AssertionError("a singleton-side type-233 crossing was nonempty")
+    root = frozenset((0, 1, 2))
+    size_two = frozenset((0, 3))
+    size_three = frozenset((0, 4, 5))
+    attempted = (
+        (root, size_two, 1, 3),
+        (root, size_two, 2, 3),
+        (size_two, size_three, 3, 4),
+        (size_two, size_three, 3, 5),
+    )
+    forced_k_edges = frozenset(edge(left, right) for _p, _q, left, right in attempted)
+    forbidden_f_owners = frozenset(
+        edge(left, right)
+        for point_left, point_right, left, right in attempted
+        if forbidden_common_point_triple(
+            (point_left, point_right, frozenset((left, right)))
+        )
+    )
+    if forbidden_f_owners != forced_k_edges:
+        raise AssertionError("a forced type-233 edge acquired an F-owner")
+    endpoint_degree = sum(3 in item for item in forced_k_edges)
+    if endpoint_degree != 4:
+        raise AssertionError("the type-233 four-edge witness changed")
+    return {
+        "forced_k_edges": forced_k_edges,
+        "forbidden_f_owners": forbidden_f_owners,
+        "forced_u_edges": forced_k_edges,
+        "size_two_endpoint": 3,
+        "size_two_endpoint_u_degree": endpoint_degree,
+        "maximum_available_u_degree": 3,
+    }
+
+
+def two_224_root_degree_witness(
+    premises: Iterable[str] = PROOF_PREMISES,
+    *,
+    use_complement: bool = True,
+) -> dict[str, object]:
+    """Build two 224 occurrences and list every forced K-neighbor."""
+
+    required = (POINT_CLIQUE_PREMISE, LINEARITY_PREMISE, COMMON_POINT_PREMISE)
+    if use_complement:
+        required = (*required, COMPLEMENT_PREMISE, CROSSING_PREMISE)
+    require_premises(premises, required)
+    if use_complement and crossing_masks(3, 1) != (0,):
+        raise AssertionError("a singleton-side 224 crossing was nonempty")
+    root = frozenset((0, 1, 2, 3))
+    based_endpoints = {0: frozenset((4, 5)), 1: frozenset((6, 7))}
+    endpoints = frozenset().union(*based_endpoints.values())
+    point_clique_endpoint_edges = frozenset(
+        edge(base, endpoint)
+        for base, values in based_endpoints.items()
+        for endpoint in values
+    )
+    complement_edges = frozenset()
+    if use_complement:
+        complement_edges = frozenset(
+            edge(root_vertex, endpoint)
+            for base, values in based_endpoints.items()
+            for endpoint in values
+            for root_vertex in root - {base}
+        )
+    forced_edges = clique_edges(root) | point_clique_endpoint_edges | complement_edges
+    neighbors = {
+        vertex: frozenset(
+            right if left == vertex else left
+            for left, right in forced_edges
+            if vertex in (left, right)
+        )
+        for vertex in root
+    }
+    return {
+        "root": root,
+        "endpoints": endpoints,
+        "point_clique_endpoint_edges": point_clique_endpoint_edges,
+        "complement_inferred_endpoint_edges": complement_edges,
+        "neighbors": neighbors,
+        "degrees": tuple(len(neighbors[vertex]) for vertex in sorted(root)),
+    }
+
+
+def homogeneous_root3_u_witness(
+    pairs: Sequence[tuple[int, int]],
+    premises: Iterable[str] = PROOF_PREMISES,
+) -> dict[str, object]:
+    """Construct exact forced-U endpoint sets for a no-233 flower."""
+
+    if len(pairs) != 3 or any(pair not in ((2, 2), (3, 3)) for pair in pairs):
+        raise ValueError("three homogeneous 223/333 occurrence pairs are required")
+    require_premises(
+        premises,
+        (
+            COMPLEMENT_PREMISE,
+            POINT_CLIQUE_PREMISE,
+            LINEARITY_PREMISE,
+            COMMON_POINT_PREMISE,
+            CROSSING_PREMISE,
+        ),
+    )
+    if crossing_masks(2, 1) != (0,):
+        raise AssertionError("a singleton-side root/petal crossing was nonempty")
+    root_point = frozenset((0, 1, 2))
+    endpoints = {
+        root: frozenset((3 + 2 * root, 4 + 2 * root))
+        for root, pair in enumerate(pairs)
+        if pair == (2, 2)
+    }
+    petal_points = {
+        base: tuple(frozenset((base, endpoint)) for endpoint in sorted(values))
+        for base, values in endpoints.items()
+    }
+    forced_edge_sets: dict[int, frozenset[tuple[int, int]]] = {}
+    owner_veto_sets: dict[int, frozenset[tuple[int, int]]] = {}
+    for root_vertex in range(3):
+        forced = frozenset(
+            edge(root_vertex, endpoint)
+            for base, values in endpoints.items()
+            if base != root_vertex
+            for endpoint in values
+        )
+        vetoes = frozenset(
+            edge(root_vertex, endpoint)
+            for base, points in petal_points.items()
+            if base != root_vertex
+            for point in points
+            for endpoint in point - {base}
+            if forbidden_common_point_triple(
+                (root_point, point, frozenset((root_vertex, endpoint)))
+            )
+        )
+        if vetoes != forced:
+            raise AssertionError("a forced propagation edge acquired an F-owner")
+        forced_edge_sets[root_vertex] = forced
+        owner_veto_sets[root_vertex] = vetoes
+    capacities = tuple(2 - pair.count(3) for pair in pairs)
+    forced = tuple(len(forced_edge_sets[root]) for root in range(3))
+    return {
+        "capacities": capacities,
+        "endpoint_sets": endpoints,
+        "forced_u_edges": forced_edge_sets,
+        "forbidden_f_owners": owner_veto_sets,
+        "forced_u_cardinalities": forced,
+        "violating_roots": tuple(
+            root for root in range(3) if forced[root] > capacities[root]
+        ),
+    }
+
+
 def expansion_bound(point_size: int) -> tuple[int, int, bool]:
     """Return available vertices, required external representatives, feasibility."""
 
@@ -160,6 +357,10 @@ def size_four_flower_statistics() -> dict[str, int]:
     minimum_224 = 4
     crossing_extensions = 0
     minimum_root_degree = ACTIVE_ORDER
+    type_224_histogram = Counter()
+    witness = two_224_root_degree_witness()
+    if witness["degrees"] != (7, 7, 7, 7):
+        raise AssertionError("the explicit two-224 complement witness changed")
     for petals in product((2, 3, 4), repeat=8):
         total += 1
         external_slots = sum(size - 1 for size in petals)
@@ -171,11 +372,12 @@ def size_four_flower_statistics() -> dict[str, int]:
             petals[offset] == petals[offset + 1] == 2
             for offset in range(0, 8, 2)
         )
+        type_224_histogram[type_224] += 1
         minimum_224 = min(minimum_224, type_224)
         extensions = flower_crossing_extensions(4, petals)
         crossing_extensions += extensions
-        # Two 224 occurrences give four pairwise-distinct external endpoints.
-        root_degree_lower = (4 - 1) + 2 * min(2, type_224)
+        # Any two 224 occurrences instantiate the exact seven-neighbor witness.
+        root_degree_lower = min(witness["degrees"])
         minimum_root_degree = min(minimum_root_degree, root_degree_lower)
         if type_224 < 3 or root_degree_lower <= K_DEGREE:
             raise AssertionError("a size-four flower escaped its degree contradiction")
@@ -186,6 +388,7 @@ def size_four_flower_statistics() -> dict[str, int]:
         "minimum_type_224_occurrences": minimum_224,
         "crossing_extensions": crossing_extensions,
         "minimum_root_degree_lower": minimum_root_degree,
+        "type_224_histogram": dict(sorted(type_224_histogram.items())),
     }
 
 
@@ -201,49 +404,71 @@ def size_three_flower_statistics() -> dict[str, int]:
     """Exhaust all ordered size-2/3 petals around a size-three point."""
 
     classifications = Counter()
+    overlap = Counter()
     extension_totals = Counter()
+    homogeneous_223_histogram = Counter()
     total = 0
     for petals in product((2, 3), repeat=6):
         total += 1
         external_slots = sum(size - 1 for size in petals)
-        if external_slots > ACTIVE_ORDER - 3:
-            classifications["capacity"] += 1
-            continue
-
         pairs = tuple((petals[offset], petals[offset + 1]) for offset in range(0, 6, 2))
         extensions = flower_crossing_extensions(3, petals)
+        over_capacity = external_slots > ACTIVE_ORDER - 3
         if any(left != right for left, right in pairs):
-            # At a 233 occurrence, the size-two mate has four forced U-neighbors.
-            if 4 <= max(u_degree(value) for value in range(4)):
+            classifications["has_233"] += 1
+            overlap[("has_233", over_capacity)] += 1
+            witness = type_233_u_witness()
+            if witness["size_two_endpoint_u_degree"] <= witness["maximum_available_u_degree"]:
                 raise AssertionError("the type-233 U-degree contradiction disappeared")
-            classifications["type_233"] += 1
-            extension_totals["type_233"] += extensions
+            extension_totals["type_233_raw"] += extensions
+            extension_totals[
+                "type_233_over_capacity" if over_capacity else "type_233_capacity_feasible"
+            ] += extensions
             continue
 
         type_223 = sum(pair == (2, 2) for pair in pairs)
         type_333 = 3 - type_223
-        violating_roots = []
-        for index, pair in enumerate(pairs):
-            petal_size_three_count = sum(size == 3 for size in pair)
-            capacity = 2 - petal_size_three_count
-            forced = 2 * (type_223 - int(pair == (2, 2)))
-            if forced > capacity:
-                violating_roots.append(index)
-        if not violating_roots:
+        if type_333 == 3:
+            classifications["all_333"] += 1
+            overlap[("all_333", over_capacity)] += 1
+            extension_totals["all_333_raw"] += extensions
+            if not over_capacity or external_slots != 12:
+                raise AssertionError("the unique all-333 capacity witness changed")
+            continue
+
+        classifications["has_223_no_233"] += 1
+        overlap[("has_223_no_233", over_capacity)] += 1
+        homogeneous_223_histogram[type_223] += 1
+        witness = homogeneous_root3_u_witness(pairs)
+        if not witness["violating_roots"]:
             raise AssertionError(
                 f"a 223/333 root pattern survived: petals={petals}, types={(type_223, type_333)}"
             )
-        classifications["root_u_degree"] += 1
-        extension_totals["root_u_degree"] += extensions
+        extension_totals["root_223_333"] += extensions
 
     return {
         "total_profiles": total,
-        "capacity_rejections": classifications["capacity"],
-        "type_233_rejections": classifications["type_233"],
-        "root_u_degree_rejections": classifications["root_u_degree"],
-        "type_233_crossing_extensions": extension_totals["type_233"],
-        "root_u_crossing_extensions": extension_totals["root_u_degree"],
-        "feasible_crossing_extensions": sum(extension_totals.values()),
+        "profiles_with_type_233": classifications["has_233"],
+        "all_333_profiles": classifications["all_333"],
+        "profiles_with_223_no_233": classifications["has_223_no_233"],
+        "type_233_capacity_feasible_profiles": overlap[("has_233", False)],
+        "type_233_over_capacity_profiles": overlap[("has_233", True)],
+        "all_333_over_capacity_profiles": overlap[("all_333", True)],
+        "homogeneous_223_over_capacity_profiles": overlap[("has_223_no_233", True)],
+        "profiles_by_type_223_count": dict(sorted(homogeneous_223_histogram.items())),
+        "type_233_raw_crossing_extensions": extension_totals["type_233_raw"],
+        "type_233_capacity_feasible_crossing_extensions": extension_totals[
+            "type_233_capacity_feasible"
+        ],
+        "type_233_over_capacity_crossing_extensions": extension_totals[
+            "type_233_over_capacity"
+        ],
+        "all_333_raw_crossing_extensions": extension_totals["all_333_raw"],
+        "root_223_333_crossing_extensions": extension_totals["root_223_333"],
+        "all_raw_crossing_extensions": sum(
+            extension_totals[key]
+            for key in ("type_233_raw", "all_333_raw", "root_223_333")
+        ),
     }
 
 
@@ -313,6 +538,7 @@ def verify() -> None:
         "minimum_type_224_occurrences": 3,
         "crossing_extensions": 33,
         "minimum_root_degree_lower": 7,
+        "type_224_histogram": {3: 8, 4: 1},
     }
     if size4 != expected_size4:
         raise AssertionError(f"size-four flower census changed: {size4}")
@@ -322,12 +548,20 @@ def verify() -> None:
     size3 = size_three_flower_statistics()
     expected_size3 = {
         "total_profiles": 64,
-        "capacity_rejections": 7,
-        "type_233_rejections": 50,
-        "root_u_degree_rejections": 7,
-        "type_233_crossing_extensions": 700,
-        "root_u_crossing_extensions": 217,
-        "feasible_crossing_extensions": 917,
+        "profiles_with_type_233": 56,
+        "all_333_profiles": 1,
+        "profiles_with_223_no_233": 7,
+        "type_233_capacity_feasible_profiles": 50,
+        "type_233_over_capacity_profiles": 6,
+        "all_333_over_capacity_profiles": 1,
+        "homogeneous_223_over_capacity_profiles": 0,
+        "profiles_by_type_223_count": {1: 3, 2: 3, 3: 1},
+        "type_233_raw_crossing_extensions": 1_468,
+        "type_233_capacity_feasible_crossing_extensions": 700,
+        "type_233_over_capacity_crossing_extensions": 768,
+        "all_333_raw_crossing_extensions": 512,
+        "root_223_333_crossing_extensions": 217,
+        "all_raw_crossing_extensions": 2_197,
     }
     if size3 != expected_size3:
         raise AssertionError(f"size-three flower census changed: {size3}")
@@ -352,7 +586,7 @@ def verify() -> None:
     print("size4_flower_statistics", size4)
     print("size3_flower_statistics", size3)
     print("global_n3_lower_bound", 42)
-    print("global_p6_lower_bound", 209_286 + 42)
+    print("global_induced_C6_lower_bound", 209_286 + 42)
     print("branch_n3_bounds", list(branch_bounds))
     print("target_result", "UNKNOWN")
 
