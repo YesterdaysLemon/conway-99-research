@@ -74,3 +74,11 @@ say private correspondence is outside the audit's coverage, and exited one;
 the subsequent `git diff --no-index` also has a normal exit-one convention for
 new content. Neither was a content failure. A corrected credential/local-path
 scan omitted that prose phrase and treated diff exit codes separately.
+
+In the first uncommitted `STATUS.yaml` integration patch, the orchestrator
+expanded the known short status-audit commit label into an unverified
+40-character string. Before staging, `git rev-parse` exposed the mistake and
+the field was replaced with the actual commit
+`21f53fb6314b7c1a704694a9b38f3a18292b769d`; the replay-notes field was likewise
+expanded from Git rather than guessed. The incorrect metadata was never
+committed or used as mathematical evidence.
