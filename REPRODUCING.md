@@ -773,7 +773,9 @@ the final divisibility endpoint. The audited conditional consequence is
 solver-negative, or floating-point premise is used. The source-first status
 record is
 `verification/global-schur/2026-07-23T170612Z-status-literature-audit.md`;
-its exact-search nonhits leave novelty and Conway-99 `UNKNOWN`.
+its exact-search nonhits leave novelty and Conway-99 `UNKNOWN`. The detached
+end-to-end release replay is
+`verification/2026-07-23-wave20-clean-clone.md`.
 
 The separate `attempts/wave20-n3-63-structural` package is archival. Its
 14/14 tests and exact JSON replay pass, but its proof remains

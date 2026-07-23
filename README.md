@@ -689,6 +689,10 @@ status.
   proof-separated source/query ledger covering the exact endpoint, equivalent
   projector terminology, current status, 13 pinned sources, and three retained
   access failures without promoting search nonhits to novelty.
+- [Wave 20 clean-source replay](verification/2026-07-23-wave20-clean-clone.md):
+  detached 18/16/14-test replay, three byte-identical regenerations, exact
+  ledger/manifest/hash checks, public-hygiene scans, clean status, and
+  `git fsck`.
 - [Wave 3/N3 clean-clone replay](verification/2026-07-22-wave3-clean-clone.md):
   frozen-commit tests and byte-identical proof regeneration.
 - [Wave 5 clean-clone replay](verification/2026-07-22-wave5-clean-clone.md):

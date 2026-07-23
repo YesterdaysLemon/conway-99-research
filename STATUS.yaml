@@ -491,6 +491,11 @@ twentieth_research_wave:
   status_audit_sha256: "b3a7b0a882e7f822ae6e2ed08df4314357d5d554903f788305979e03b08fc651"
   status_ledger: "verification/global-schur/2026-07-23T170612Z-status-source-query-ledger.json"
   status_ledger_sha256: "127b5d99e5145291bcb3b307ebcd3047b5b3c891fccfd02fad25af0e5b422dd9"
+  integration_commit: "442671d6926ade4ffde2754f804f34b6fbd7ee16"
+  clean_clone_commit: "442671d6926ade4ffde2754f804f34b6fbd7ee16"
+  clean_clone_replay: "verification/2026-07-23-wave20-clean-clone.md"
+  clean_clone_replay_sha256: "65661573ffca5418f97953424204b98bc637739006a5f9b147b4b091ac01d2e9"
+  clean_clone_verdict: PASS
   catalog_or_automorphism_premise: NONE
   n3_63_structural_lane_status: DERIVED_PENDING_INDEPENDENT_AUDIT_AND_NUMERICALLY_SUPERSEDED
   n3_63_structural_report: "agents/2026-07-23-wave20-n3-63-structural.md"
