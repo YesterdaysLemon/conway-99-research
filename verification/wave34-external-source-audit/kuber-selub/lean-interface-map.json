@@ -94,7 +94,7 @@
     "native_eval": 0,
     "implemented_by": 0,
     "run_tac": 0,
-    "note": "The source contains #print axioms commands; those are queries, not axiom declarations."
+    "note": "The audited Conway99C3Orbits/Basic.lean file contains #print axioms commands; those are queries, not axiom declarations."
   },
   "strongest_safe_statement": "At the pinned commit, Lean checks a conditional arithmetic/matrix restriction. The repository does not prove that a Conway 99-graph with a fixed-point-free order-three automorphism yields the supplied certificate, and it does not prove a graph-level 6-or-27 theorem.",
   "target_status": "UNKNOWN",

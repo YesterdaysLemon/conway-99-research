@@ -25,7 +25,7 @@
       "pages": "4-5",
       "finding": "The displayed Q'_{i,j,E} disjoins every quadrilateral auxiliary variable and has no printed restriction tying the opposite pair (a,b) to (i,j). On the printed formula, a quadrilateral anywhere can satisfy every nonedge's existence clause.",
       "effect": "The claimed equisatisfiability of the displayed quadrilateral CNF conversion is not established as printed.",
-      "claim_label": "REFUTED"
+      "claim_label": "UNKNOWN"
     },
     {
       "pages": "6-7",

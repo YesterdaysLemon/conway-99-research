@@ -31,6 +31,7 @@
     "solver_result_claimed": false,
     "machine_certificate_supplied": false,
     "printed_cnf_conversion_has_indexing_gap": true,
+    "printed_cnf_equivalence_status": "NOT_VERIFIED_AS_PRINTED",
     "rooted_preprocessing_has_index_notation_defect": true
   },
   "conway_99_target_status": "UNKNOWN",

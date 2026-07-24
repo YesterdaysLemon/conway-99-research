@@ -11,7 +11,7 @@ Kuber principal theorem axiom set:               VERIFIED standard Lean axioms
 Kuber graph-to-matrix bridge:                    NOT FORMALIZED
 Selub metadata and framework scope:              VERIFIED
 Selub completed solver result or certificate:    NONE
-Selub printed quadrilateral CNF equivalence:      REFUTED AS PRINTED
+Selub printed quadrilateral CNF equivalence:      NOT VERIFIED AS PRINTED
 Conway-99 / n3=708 / novelty:                    UNKNOWN
 ```
 
@@ -53,18 +53,20 @@ git -C <external-clone> checkout --detach be7b0ae3394721a4c3a1375008a1dbfca44981
 
 The cache command downloaded and unpacked all 7,869 requested mathlib cache
 files. The build completed successfully with 3,068 jobs and no warning
-promoted by `--wfail`. The compact raw records are `cache-get-summary.txt`
-and `lean-build.log`.
+promoted by `--wfail`. Curated compact summaries of the observed command
+outcomes are retained in `cache-get-summary.txt` and `lean-build.log`; they
+are not complete raw stdout transcripts.
 
-The source's seven `#print axioms` commands all reported exactly:
+The seven `#print axioms` commands in
+`Conway99C3Orbits/Basic.lean` all reported exactly:
 
 ```text
 [propext, Classical.choice, Quot.sound]
 ```
 
-These are standard Lean axioms. A source scan found no `sorry`, `admit`,
-custom axiom declaration, `unsafe`, `native_decide`, `native_eval`,
-`implemented_by`, or `run_tac`.
+These are standard Lean axioms. A scan of that audited Lean file found no
+`sorry`, `admit`, custom axiom declaration, `unsafe`, `native_decide`,
+`native_eval`, `implemented_by`, or `run_tac`.
 
 ### Exact theorem boundary
 
@@ -128,7 +130,9 @@ Two printed-formula qualifications are material:
    opposite pair `(a,b)` to the target nonedge `(i,j)`. As printed, a
    quadrilateral elsewhere can satisfy the clause. The claimed
    equisatisfiability of that displayed conversion is therefore
-   **REFUTED AS PRINTED**.
+   **NOT VERIFIED AS PRINTED**. This audit records the visible indexing gap;
+   it does not supply a complete Boolean counterassignment for every other
+   printed clause.
 2. On pages 6–7, the root is introduced as `v1` but the neighborhood switches
    to `N(v0)`. The intended root-plus-14-neighbors construction is inferable,
    but the notation is inconsistent and no preprocessing artifact is supplied.

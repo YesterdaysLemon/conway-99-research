@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -8,6 +9,11 @@ from audit_sources import scan_lean_source
 
 
 HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 class LeanScannerTests(unittest.TestCase):
@@ -57,6 +63,10 @@ class FinalArtifactTests(unittest.TestCase):
             ["propext", "Classical.choice", "Quot.sound"],
         )
         self.assertFalse(results["selub"]["solver_result_claimed"])
+        self.assertEqual(
+            results["selub"]["printed_cnf_equivalence_status"],
+            "NOT_VERIFIED_AS_PRINTED",
+        )
         self.assertFalse(
             sources["retention"]["third_party_source_bytes_present_in_final_package"]
         )
@@ -87,6 +97,43 @@ class FinalArtifactTests(unittest.TestCase):
         self.assertFalse(solver["completed_run_claimed"])
         self.assertFalse(solver["sat_or_unsat_result_claimed"])
         self.assertFalse(solver["proof_or_model_certificate_reported"])
+        self.assertEqual(
+            selub["printed_formula_caveats"][0]["claim_label"],
+            "UNKNOWN",
+        )
+
+    def test_frozen_inputs_and_publication_manifest(self) -> None:
+        frozen = (HERE / "input-freeze.sha256").read_text(encoding="utf-8").splitlines()
+        self.assertEqual(len(frozen), 8)
+        for line in frozen:
+            expected, relative = line.split("  ", 1)
+            self.assertEqual(sha256(ROOT / relative), expected, relative)
+
+        manifest_path = HERE / "artifact-manifest.sha256"
+        entries = manifest_path.read_text(encoding="utf-8").splitlines()
+        self.assertEqual(len(entries), 14)
+        for line in entries:
+            expected, relative = line.split("  ", 1)
+            self.assertNotEqual((ROOT / relative).resolve(), manifest_path.resolve())
+            self.assertEqual(sha256(ROOT / relative), expected, relative)
+
+    def test_retained_build_and_cache_summaries(self) -> None:
+        build = (HERE / "lean-build.log").read_text(encoding="utf-8")
+        axiom_lines = [
+            line.strip() for line in build.splitlines() if "depends on axioms:" in line
+        ]
+        self.assertEqual(len(axiom_lines), 7)
+        self.assertEqual(
+            set(axiom_lines),
+            {"depends on axioms: [propext, Classical.choice, Quot.sound]"},
+        )
+        self.assertIn("EXIT CODE: 0", build)
+        self.assertIn("Build completed successfully (3068 jobs).", build)
+
+        cache = (HERE / "cache-get-summary.txt").read_text(encoding="utf-8")
+        self.assertIn("EXIT CODE: 0", cache)
+        self.assertIn("Attempting to download 7869 file(s)", cache)
+        self.assertIn("Unpacked successfully.", cache)
 
 
 if __name__ == "__main__":
