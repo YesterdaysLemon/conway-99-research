@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-23
+as_of: 2026-07-24
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -768,3 +768,120 @@ obligations:
       - "verification/wave26-literature-audit/manifest.sha256"
       - "SOURCES.bib"
     note: "The audit attempted all 28 frozen queries across five search surfaces, inspected 15 primary or authoritative sources, and found no direct or near-direct match. It records established general machinery and the important fact that generic A2 tightness, strong eutaxy, and antipodal odd-moment cancellation do not imply the target exclusion. Raw responses were reduced to a compact ledger. Every nonhit is bounded; proof validity, target status, novelty, and priority remain UNKNOWN."
+
+  - id: O-WAVE27-A2FREE-CONSTRUCTION
+    requirement: "Independently freeze and reconstruct the explicit E8^4 orthogonal-sum E6^2 rank-44 determinant-nine form, complete norm-two root-component census and no-orthogonal-A2 argument, exact E6 rank-one projector block, full S,Q,G,B,C matrices, parity, determinants, traces, self-adjointness, minima, discriminant data, bounded seed-scan restrictions, hostile mutations, deterministic submitted replay, and strict arithmetic-only scope wall."
+    critical: false
+    status: PASS_SCOPED_CANDIDATE
+    evidence:
+      - "agents/2026-07-23-wave27-a2free-construction.md"
+      - "attempts/wave27-a2free-construction/exact_check.py"
+      - "attempts/wave27-a2free-construction/test_exact_check.py"
+      - "attempts/wave27-a2free-construction/exact-results.json"
+      - "attempts/wave27-a2free-construction/input-freeze.sha256"
+      - "attempts/wave27-a2free-construction/failed-routes.md"
+      - "attempts/wave27-a2free-construction/run-report.yaml"
+      - "verification/wave27-a2free-construction/preinspection-freeze.sha256"
+      - "verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md"
+      - "verification/wave27-a2free-construction/independent_check.py"
+      - "verification/wave27-a2free-construction/test_independent_check.py"
+      - "verification/wave27-a2free-construction/independent-results.json"
+      - "verification/wave27-a2free-construction/submitted-regenerated.json"
+      - "verification/wave27-a2free-construction/artifact-manifest.sha256"
+      - "verification/wave27-a2free-construction/run-report.yaml"
+      - "verification/wave27-a2free-construction/verifier-failures.md"
+    note: "The submitted suite passes 15 tests and the independently implemented verifier passes 16 hostile tests, reproduces the submitted result byte-for-byte, and validates all frozen package hashes. The explicit abstract h=9 arithmetic/lattice package is VERIFIED within that scope and has no orthogonal A2 direct summand, although embedded A2 root subsystems occur. Its full projector/Schur origin is impossible because it contains orthogonal E6 summands; it is not a graph or an endpoint realization. All h=9 forms, n3=708, Conway-99 existence, and novelty remain UNKNOWN."
+
+  - id: O-WAVE27-E6-TRACE
+    requirement: "Independently freeze and reconstruct the unrestricted theorem that even integral positive-definite Q with E6 Q=I mod 2 satisfies tr(E6 Q)>=14, including determinant congruence, trace parity, the trace-ten kernel obstruction, the characteristic-pseudodeterminant and product bounds, the explicit trace-14 equality witness, hostile controls, deterministic submitted replay, and transparent handling of any discovery-documentation gap."
+    critical: false
+    status: PASS_WITH_RECORDED_DOCUMENTATION_DEFECT
+    evidence:
+      - "agents/2026-07-23-wave27-h9-classification.md"
+      - "attempts/wave27-h9-classification/exact_check.py"
+      - "attempts/wave27-h9-classification/test_exact_check.py"
+      - "attempts/wave27-h9-classification/exact-results.json"
+      - "attempts/wave27-h9-classification/input-freeze.sha256"
+      - "attempts/wave27-h9-classification/failed-routes.md"
+      - "attempts/wave27-h9-classification/run-report.yaml"
+      - "verification/wave27-h9-classification/input-freeze.sha256"
+      - "verification/wave27-h9-classification/2026-07-24T002029Z-audit.md"
+      - "verification/wave27-h9-classification/independent_check.py"
+      - "verification/wave27-h9-classification/test_independent_check.py"
+      - "verification/wave27-h9-classification/independent-results.json"
+      - "verification/wave27-h9-classification/submitted-regenerated.json"
+      - "verification/wave27-h9-classification/artifact-manifest.sha256"
+      - "verification/wave27-h9-classification/run-report.yaml"
+      - "verification/wave27-h9-classification/verifier-failures.md"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+    note: "The submitted suite passes 16 tests and the separately implemented verifier passes 21 hostile tests, with byte-identical submitted regeneration and all manifest entries checked. The theorem and equality witness are VERIFIED. The immutable discovery prose omitted the explicit parity bridge tr(C^2)=tr(C) mod 2 between excluding value two and using the next admissible value four; the verifier records and supplies the nonfatal bridge. This local algebraic minimum is 14, distinct from the frame/Schur cubic floor 24, and does not classify h=9 forms or resolve the endpoint."
+
+  - id: O-WAVE27-ROOT-TENSOR
+    requirement: "Blindly freeze and independently reconstruct the full endpoint projector-frame and cubic-tensor compression identities, arbitrary-cross-Q complement bound, repeated-index parity cosets, exact symmetric-cubic Gram and Fraction-LDL enumeration, zero-sum energy divisibility by six, orthogonal A6 and E6 exclusions, trace-14 hostile algebraic block, complete ADE component integrality screen, complete rank-44 determinant census, hostile controls, deterministic core replay, and the boundary retaining the core A20 orthogonal-sum E8^3 survivor."
+    critical: true
+    status: PASS_SCOPED_CORE_TENSOR_AND_ADE_SCREEN
+    evidence:
+      - "agents/2026-07-23-wave27-general-root-tensor.md"
+      - "attempts/wave27-general-root-tensor/exact_check.py"
+      - "attempts/wave27-general-root-tensor/test_exact_check.py"
+      - "attempts/wave27-general-root-tensor/exact-results.json"
+      - "attempts/wave27-general-root-tensor/input-freeze.sha256"
+      - "attempts/wave27-general-root-tensor/failed-routes.md"
+      - "attempts/wave27-general-root-tensor/run-report.yaml"
+      - "attempts/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/intake-freeze.json"
+      - "verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md"
+      - "verification/wave27-general-root-tensor/independent_check.py"
+      - "verification/wave27-general-root-tensor/test_independent_check.py"
+      - "verification/wave27-general-root-tensor/independent-results.json"
+      - "verification/wave27-general-root-tensor/submitted-regenerated.json"
+      - "verification/wave27-general-root-tensor/replay-summary.json"
+      - "verification/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/run-report.yaml"
+      - "verification/wave27-general-root-tensor/failed-runs.md"
+    note: "The submitted core suite passes 17 tests and the blind verifier passes 23 independently written tests. It reproduces exact E6 and A6 affine-sphere searches with 10,011 and 105,185 accepted partial nodes and zero leaves, verifies cubic floors 24 and 66, checks all 88 ADE components and all 17 rank-44 determinant-compatible decompositions, and regenerates the submitted JSON byte-identically. Orthogonal E6 and A6 summands are VERIFIED impossible under the endpoint identities. The core census intentionally leaves A20 orthogonal-sum E8^3; its later exclusion is a separate obligation."
+
+  - id: O-WAVE27-A20-TRACE
+    requirement: "Separately freeze and independently verify the A_n Cartan rank-one decomposition, the even positive-definite trace floor tr(A20 Q_AA)>=42, the rank-24 complement floor 24, the resulting contradiction with global trace 60, deterministic addendum replay, and the combined conditional exclusion of a full orthogonal ADE form after importing the separately verified A2, A6, and E6 component theorems."
+    critical: true
+    status: PASS_SCOPED_A20_AND_CONDITIONAL_FULL_ADE_EXCLUSION
+    evidence:
+      - "agents/2026-07-24-wave27-a20-trace-addendum.md"
+      - "attempts/wave27-a20-trace-addendum/exact_check.py"
+      - "attempts/wave27-a20-trace-addendum/test_exact_check.py"
+      - "attempts/wave27-a20-trace-addendum/exact-results.json"
+      - "attempts/wave27-a20-trace-addendum/input-freeze.sha256"
+      - "attempts/wave27-a20-trace-addendum/failed-routes.md"
+      - "attempts/wave27-a20-trace-addendum/run-report.yaml"
+      - "attempts/wave27-a20-trace-addendum/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/addendum-intake-freeze.json"
+      - "verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md"
+      - "verification/wave27-general-root-tensor/independent_check.py"
+      - "verification/wave27-general-root-tensor/test_independent_check.py"
+      - "verification/wave27-general-root-tensor/independent-results.json"
+      - "verification/wave27-general-root-tensor/addendum-submitted-regenerated.json"
+      - "verification/wave27-general-root-tensor/replay-summary.json"
+      - "verification/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+    note: "The submitted addendum suite passes eight tests and the independent verifier checks it separately from the frozen core package, regenerating its JSON byte-identically. The orthogonal A20 summand and, after composition with the separately verified A2, A6, and E6 exclusions, every full orthogonal ADE endpoint form are VERIFIED conditionally impossible. This does not exclude general even rank-44 scaled-dual forms, nonorthogonal root subsystems, n3=708, Conway-99, or any target outcome; novelty remains UNKNOWN."
+
+  - id: O-WAVE27-LITERATURE-STATUS
+    requirement: "Freeze a proof-separated source-first protocol and corrective protocol, then audit current Conway-99 status and direct or near-direct prior art for the Wave 27 E6 trace theorem and witness, E6/A6 scale-21 cubic parity, E8^4 orthogonal-sum E6^2 comparison, orthogonal-root screen, and separately frozen A20 trace addendum, while recording chronology, source quality, service failures, exact query counts, and bounded non-discovery language."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave27-literature-audit/protocol.md"
+      - "verification/wave27-literature-audit/protocol-correction.md"
+      - "verification/wave27-literature-audit/protocol-a20-addendum.md"
+      - "verification/wave27-literature-audit/audit.md"
+      - "verification/wave27-literature-audit/query-ledger.md"
+      - "verification/wave27-literature-audit/query-log.jsonl"
+      - "verification/wave27-literature-audit/sources.md"
+      - "verification/wave27-literature-audit/references.bib"
+      - "verification/wave27-literature-audit/failures.md"
+      - "verification/wave27-literature-audit/run-report.yaml"
+      - "verification/wave27-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    note: "The audit executed 56 service-query pairs and inspected 303 returned records. It found current qualifying sources that still treat Conway-99 as open and no direct or near-direct Wave 27 match, while recording standard ADE data as conceptual prior art. The initial protocol's factor-2 reading of 21E6^-1 is preserved and corrected before five corrective pairs; the later A20 result has a separately frozen six-pair addendum. Ten zbMATH 404s are service failures rather than zero-result evidence. Bounded non-discovery does not establish openness, novelty, or priority, all of which remain UNKNOWN."

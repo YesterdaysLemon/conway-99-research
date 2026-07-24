@@ -1304,6 +1304,149 @@ integration tree and all three commits after public baseline `930cb99` find
 zero credential-shaped or private-path payloads. The detached clone finishes
 with a clean tracked tree and `git fsck --full --strict`.
 
+Replay the seven Wave 27 discovery and independent-verification suites:
+
+```powershell
+$wave27Stem = [guid]::NewGuid().ToString('N')
+$wave27Temp = [System.IO.Path]::GetTempPath()
+$wave27A2FreeSubmitted = Join-Path $wave27Temp `
+  "wave27-a2free-submitted-$wave27Stem.json"
+$wave27A2FreeIndependent = Join-Path $wave27Temp `
+  "wave27-a2free-independent-$wave27Stem.json"
+$wave27E6TraceSubmitted = Join-Path $wave27Temp `
+  "wave27-e6-trace-submitted-$wave27Stem.json"
+$wave27E6TraceIndependent = Join-Path $wave27Temp `
+  "wave27-e6-trace-independent-$wave27Stem.json"
+$wave27TensorSubmitted = Join-Path $wave27Temp `
+  "wave27-tensor-submitted-$wave27Stem.json"
+$wave27A20Submitted = Join-Path $wave27Temp `
+  "wave27-a20-submitted-$wave27Stem.json"
+$wave27TensorIndependent = Join-Path $wave27Temp `
+  "wave27-tensor-independent-$wave27Stem.json"
+$wave27Generated = @(
+  $wave27A2FreeSubmitted,
+  $wave27A2FreeIndependent,
+  $wave27E6TraceSubmitted,
+  $wave27E6TraceIndependent,
+  $wave27TensorSubmitted,
+  $wave27A20Submitted,
+  $wave27TensorIndependent
+)
+
+function Assert-Wave27ByteEqual {
+  param(
+    [Parameter(Mandatory = $true)][string]$Expected,
+    [Parameter(Mandatory = $true)][string]$Actual
+  )
+  $expectedBytes = [Convert]::ToBase64String(
+    [System.IO.File]::ReadAllBytes((Resolve-Path $Expected))
+  )
+  $actualBytes = [Convert]::ToBase64String(
+    [System.IO.File]::ReadAllBytes($Actual)
+  )
+  if ($expectedBytes -cne $actualBytes) {
+    throw "Byte mismatch: $Expected versus $Actual"
+  }
+}
+
+try {
+  python -B -m unittest discover `
+    -s attempts\wave27-a2free-construction -p test_exact_check.py -v
+  python -B -m unittest discover `
+    -s verification\wave27-a2free-construction `
+    -p test_independent_check.py -v
+  python -B -m unittest discover `
+    -s attempts\wave27-h9-classification -p test_exact_check.py -v
+  python -B -m unittest discover `
+    -s verification\wave27-h9-classification `
+    -p test_independent_check.py -v
+  python -B -m unittest discover `
+    -s attempts\wave27-general-root-tensor -p test_exact_check.py -v
+  python -B -m unittest discover `
+    -s attempts\wave27-a20-trace-addendum -p test_exact_check.py -v
+  python -B -m unittest discover `
+    -s verification\wave27-general-root-tensor `
+    -p test_independent_check.py -v
+
+  python -B attempts\wave27-a2free-construction\exact_check.py `
+    --output $wave27A2FreeSubmitted
+  python -B verification\wave27-a2free-construction\independent_check.py `
+    --output $wave27A2FreeIndependent
+  python -B attempts\wave27-h9-classification\exact_check.py `
+    --output $wave27E6TraceSubmitted
+  python -B verification\wave27-h9-classification\independent_check.py `
+    --output $wave27E6TraceIndependent
+  python -B attempts\wave27-general-root-tensor\exact_check.py `
+    --output $wave27TensorSubmitted
+  python -B attempts\wave27-a20-trace-addendum\exact_check.py `
+    --output $wave27A20Submitted
+  python -B verification\wave27-general-root-tensor\independent_check.py `
+    --output $wave27TensorIndependent
+
+  Assert-Wave27ByteEqual `
+    attempts\wave27-a2free-construction\exact-results.json `
+    $wave27A2FreeSubmitted
+  Assert-Wave27ByteEqual `
+    verification\wave27-a2free-construction\independent-results.json `
+    $wave27A2FreeIndependent
+  Assert-Wave27ByteEqual `
+    attempts\wave27-h9-classification\exact-results.json `
+    $wave27E6TraceSubmitted
+  Assert-Wave27ByteEqual `
+    verification\wave27-h9-classification\independent-results.json `
+    $wave27E6TraceIndependent
+  Assert-Wave27ByteEqual `
+    attempts\wave27-general-root-tensor\exact-results.json `
+    $wave27TensorSubmitted
+  Assert-Wave27ByteEqual `
+    attempts\wave27-a20-trace-addendum\exact-results.json `
+    $wave27A20Submitted
+  Assert-Wave27ByteEqual `
+    verification\wave27-general-root-tensor\independent-results.json `
+    $wave27TensorIndependent
+
+  Get-FileHash -Algorithm SHA256 $wave27Generated
+}
+finally {
+  Remove-Item -LiteralPath $wave27Generated -Force -ErrorAction SilentlyContinue
+}
+```
+
+The suites pass, in command order, 15/15, 16/16, 16/16, 21/21, 17/17,
+8/8, and 23/23: 116 tests total. The generated files are byte-identical to
+their seven stored JSON counterparts. Their expected SHA-256 values, in the
+same order, are:
+
+```text
+3b1d30b6110d937f1bd4bb9ff570419625063afc5c0915382baa2466d349946d
+ee0b100806de66252a9795622881adb5651e5b46f8ae0b5757fc15874257e31f
+377b4edc9498ad71cb655f084970aed234ea809c8413643cb5e9cfd03b75fde2
+4b0532842e506cb5de4e8d131c48da6d078be7d69b459af50b3207a8900d788a
+98aba5a30b2f3a83b9f6ce6fd6a20458505b668249d97b0810907de50cae678d
+dc5716cbf2537cd214906f1bf2eae96d4886e4bd88008cd7508c6a64d78f089c
+7e87796980a43df199713865fed920bc094778f1828431a673938484c026e6fd
+```
+
+The six Wave 27 manifests below must validate from their containing
+directories:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| `attempts/wave27-general-root-tensor` | 7 | `3ba7ee4683dfac361b6f2d1b09a90d485210e2debd87cbe9d4ecb62f607ebf32` |
+| `attempts/wave27-a20-trace-addendum` | 7 | `8f8ef9538a4070d569cfd4415296206214af3d3b2d8fe136ec7536257ead9949` |
+| `verification/wave27-a2free-construction` | 8 | `a4ab58cf5f2e1f7cd635b4ec7d7dca801d878b4ce596e85d161c2a2b7c2c1023` |
+| `verification/wave27-h9-classification` | 8 | `7b9584b72e59bfeff8430cfe13b2eac8b08e02481eac7c89219cfb454332686f` |
+| `verification/wave27-general-root-tensor` | 11 | `e72b134623d95ea054b348b641ca23a57ee7d29b5edd8033527cca1f8c68914c` |
+| `verification/wave27-literature-audit` | 10 | `f439b850eeecbb519208200aa908434a3d7908faff9021694c6fcd3f2aeadfe1` |
+
+The replays verify an abstract `E8^4 orthogonal-sum E6^2` arithmetic
+survivor, the unrestricted local `E6` trace minimum 14, the stronger
+frame/Schur cubic exclusions for orthogonal `E6` and `A6` summands, and the
+separate `A20` trace addendum. Combined with the Wave 26 `A2` result, they
+exclude a full orthogonal ADE endpoint form under the stated projector/Schur
+premises. They do not classify general even rank-44 forms, exclude `n3=708`,
+improve the headline `n3>=708` bound, resolve Conway-99, or establish novelty.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

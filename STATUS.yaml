@@ -3,15 +3,16 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-23
+  through: 2026-07-24
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave26-literature-audit/audit-report.md"
-  latest_audit_sha256: "ccb3dbbbb1dcff3b8d6f4278a144d29ea4cfe05596031598b6aecbd731a3a566"
-  source_query_ledger: "verification/wave26-literature-audit/query-ledger.json"
-  source_query_ledger_sha256: "a0f2b2b19848313e676f455ec72e0cc0a5383871e394f7f1f394177582353e0d"
+  latest_audit: "verification/wave27-literature-audit/audit.md"
+  latest_audit_sha256: "835f4b517ce10bce33570d45656be23f3ae4f8135df345734dfecb59a531ebe2"
+  source_query_ledger: "verification/wave27-literature-audit/query-ledger.md"
+  source_query_ledger_sha256: "8ecfa635a5dc82207108b54d986c6bbde449c6a6a5e16a65631851ca32b576ec"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
+  exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -943,4 +944,173 @@ twenty_sixth_research_wave:
   clean_clone_replay_sha256: "2e7c8234cf55677637552202ced74a2b51da34c2359119e521a27e11ee333395"
   clean_clone_verdict: PASS
   caveat: "Two independently verified arguments refute the required projector-frame and full Schur-square origins of the one explicit Wave 24 E8^5 orthogonal-sum A2^2 abstract survivor. The abstract matrices remain exact, and no classification of all h=9 forms, exclusion of n3=708, graph construction, or target resolution follows. The stronger det(B)<=3645 proposal is retained as UNKNOWN. The proof-separated source audit found no direct or near-direct match, but bounded non-discovery is not novelty evidence; target existence and novelty remain UNKNOWN."
-last_updated: 2026-07-23
+twenty_seventh_research_wave:
+  arithmetic_discovery_commit: "9ff5500dec0c0378dbafc8522066c4fed47050cd"
+  tensor_discovery_commit: "a733e11b51a75947c4cddaa66e85bea2584b8e6b"
+  a20_addendum_commit: "1c4d6650252ceaa77d7ad4e1bd0d31489edf62da"
+  arithmetic_verification_commit: "9cc3f1e063ef63954102908c1b852dce7948a84f"
+  tensor_verification_commit: "bf6200ec9f460a19482131767d8ce3baab8e093e"
+  literature_audit_commit: "75a92d7d95301ce2f18a1490cf0999ffa5efd102"
+  a2free_verifier_verdict: PASS_SCOPED_CANDIDATE
+  e6_trace_verifier_verdict: PASS_WITH_RECORDED_DOCUMENTATION_DEFECT
+  root_tensor_verifier_verdict: PASS_SCOPED_CORE_TENSOR_AND_ADE_SCREEN
+  a20_verifier_verdict: PASS_SCOPED_A20_AND_CONDITIONAL_FULL_ADE_EXCLUSION
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  general_even_rank_44_scaled_dual_form: UNKNOWN
+  all_h9_forms_classified: false
+  abstract_h9_arithmetic_lattice_survivor: VERIFIED_E8_4_ORTHOGONAL_E6_2
+  abstract_h9_survivor_full_projector_schur_origin: IMPOSSIBLE_FOR_THIS_EXPLICIT_FORM
+  orthogonal_A2_endpoint_summand: IMPOSSIBLE
+  orthogonal_A6_endpoint_summand: IMPOSSIBLE
+  orthogonal_E6_endpoint_summand: IMPOSSIBLE
+  orthogonal_A20_endpoint_summand: IMPOSSIBLE
+  core_ADE_screen_survivor: A20_ORTHOGONAL_E8_CUBED
+  core_ADE_screen_survivor_count: 1
+  full_orthogonal_ADE_endpoint_form: VERIFIED_CONDITIONAL_IMPOSSIBLE
+  nonorthogonal_root_subsystems: OUT_OF_SCOPE
+  local_E6_trace_minimum: 14
+  local_E6_cubic_floor: 24
+  local_A6_cubic_floor: 66
+  local_A20_trace_floor: 42
+  rank_24_complement_trace_floor: 24
+  global_trace: 60
+  a2free_discovery_report: "agents/2026-07-23-wave27-a2free-construction.md"
+  a2free_discovery_report_sha256: "3e80a13c71f227d394dbbbd5e82d2d9afa781b60a523f7470d6c6d74c3b6dbe9"
+  a2free_submitted_checker: "attempts/wave27-a2free-construction/exact_check.py"
+  a2free_submitted_checker_sha256: "1bd20f820a5d4467f29860a03a93c4ef3192bb9df4b1c87901080ffa8b793f1e"
+  a2free_submitted_result: "attempts/wave27-a2free-construction/exact-results.json"
+  a2free_submitted_result_sha256: "3b1d30b6110d937f1bd4bb9ff570419625063afc5c0915382baa2466d349946d"
+  a2free_submitted_input_freeze: "attempts/wave27-a2free-construction/input-freeze.sha256"
+  a2free_submitted_input_freeze_sha256: "19beda0a2cfd430bde00d39c9371b9f76df36b7e3ee9ee612b73db21bae43f93"
+  a2free_submitted_failed_routes: "attempts/wave27-a2free-construction/failed-routes.md"
+  a2free_submitted_failed_routes_sha256: "724e2daf4604cd7fb779b686acc9bdf5b6a1398ed020846bcbebc0968482e120"
+  a2free_submitted_run_report: "attempts/wave27-a2free-construction/run-report.yaml"
+  a2free_submitted_run_report_sha256: "249078954019aad3256456470a2a677e4b85f3b7c734bad80c0f29a4effa05d7"
+  a2free_verifier_audit: "verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md"
+  a2free_verifier_audit_sha256: "a5c28949832b0b1aadf642f7ab638dd40867b8676132fb49d0ee6139ab76a463"
+  a2free_verifier_input_freeze: "verification/wave27-a2free-construction/preinspection-freeze.sha256"
+  a2free_verifier_input_freeze_sha256: "a9b7cadd03015b5a0cc9a6335e5f2401a58f7dc33db93925db3e3929a02bfb1f"
+  a2free_independent_checker: "verification/wave27-a2free-construction/independent_check.py"
+  a2free_independent_checker_sha256: "4c7f0328940fd9df3ba156a5c9c6d538a5aa9a4522f9458c29b1f2c643c24aa1"
+  a2free_independent_result: "verification/wave27-a2free-construction/independent-results.json"
+  a2free_independent_result_sha256: "ee0b100806de66252a9795622881adb5651e5b46f8ae0b5757fc15874257e31f"
+  a2free_verifier_manifest: "verification/wave27-a2free-construction/artifact-manifest.sha256"
+  a2free_verifier_manifest_sha256: "a4ab58cf5f2e1f7cd635b4ec7d7dca801d878b4ce596e85d161c2a2b7c2c1023"
+  a2free_verifier_run_report: "verification/wave27-a2free-construction/run-report.yaml"
+  a2free_verifier_run_report_sha256: "88d7df80ed515b391398e9ca72feda4de95135b01e52ed5c23084e0165e03f14"
+  a2free_submitted_tests_passed: 15
+  a2free_independent_tests_passed: 16
+  e6_trace_discovery_report: "agents/2026-07-23-wave27-h9-classification.md"
+  e6_trace_discovery_report_sha256: "9b55de17a76cc087e5d83d94f94e8f48338e4d0382b1f18ef03614e0451100db"
+  e6_trace_submitted_checker: "attempts/wave27-h9-classification/exact_check.py"
+  e6_trace_submitted_checker_sha256: "49e9d60fe536c98d10e2b7f837aaa40574fc3a517436faa9bca017a7d4a7996d"
+  e6_trace_submitted_result: "attempts/wave27-h9-classification/exact-results.json"
+  e6_trace_submitted_result_sha256: "377b4edc9498ad71cb655f084970aed234ea809c8413643cb5e9cfd03b75fde2"
+  e6_trace_submitted_input_freeze: "attempts/wave27-h9-classification/input-freeze.sha256"
+  e6_trace_submitted_input_freeze_sha256: "ccad8eb65c61f7e66e15cdd26d9766984d1ccff0d04834943446cefaf78a1284"
+  e6_trace_submitted_failed_routes: "attempts/wave27-h9-classification/failed-routes.md"
+  e6_trace_submitted_failed_routes_sha256: "fa0f06964999c9fb08117e19ad5001004d23564b383532282763a9732fb9c59b"
+  e6_trace_submitted_run_report: "attempts/wave27-h9-classification/run-report.yaml"
+  e6_trace_submitted_run_report_sha256: "8ccacc1f321abc04b1f0768360a210b599edbb138a1bd6c2174308507bbc3549"
+  e6_trace_verifier_audit: "verification/wave27-h9-classification/2026-07-24T002029Z-audit.md"
+  e6_trace_verifier_audit_sha256: "97016014a12e2a691d31d694c1bcac208a3d14d1cdf2956f8edc43c8ec28bb4a"
+  e6_trace_verifier_input_freeze: "verification/wave27-h9-classification/input-freeze.sha256"
+  e6_trace_verifier_input_freeze_sha256: "ba471e49c537296ea5a0ff943eebcfb730c2a139b6d88b5fe2e839fa4e6fd99f"
+  e6_trace_independent_checker: "verification/wave27-h9-classification/independent_check.py"
+  e6_trace_independent_checker_sha256: "3a42cf62fa3852eedae05733d0a26f9f2f1cd70b035d1ad8d2fa9de0b14a8010"
+  e6_trace_independent_result: "verification/wave27-h9-classification/independent-results.json"
+  e6_trace_independent_result_sha256: "4b0532842e506cb5de4e8d131c48da6d078be7d69b459af50b3207a8900d788a"
+  e6_trace_verifier_manifest: "verification/wave27-h9-classification/artifact-manifest.sha256"
+  e6_trace_verifier_manifest_sha256: "7b9584b72e59bfeff8430cfe13b2eac8b08e02481eac7c89219cfb454332686f"
+  e6_trace_verifier_run_report: "verification/wave27-h9-classification/run-report.yaml"
+  e6_trace_verifier_run_report_sha256: "7366784bf776880b48d41ed7a04f782646f6b4801bdeaa031aa797d26bcf7886"
+  e6_trace_submitted_tests_passed: 16
+  e6_trace_independent_tests_passed: 21
+  root_tensor_discovery_report: "agents/2026-07-23-wave27-general-root-tensor.md"
+  root_tensor_discovery_report_sha256: "456a4ad6f27c1c9c09f84b2ff41796473f519b5aaabda36b71022a51bbbe7f38"
+  root_tensor_submitted_checker: "attempts/wave27-general-root-tensor/exact_check.py"
+  root_tensor_submitted_checker_sha256: "107907f610b83ddbb526daddeaa1fe850a0bd73e2dfeeaa386ca578a875bf8d5"
+  root_tensor_submitted_result: "attempts/wave27-general-root-tensor/exact-results.json"
+  root_tensor_submitted_result_sha256: "98aba5a30b2f3a83b9f6ce6fd6a20458505b668249d97b0810907de50cae678d"
+  root_tensor_submitted_input_freeze: "attempts/wave27-general-root-tensor/input-freeze.sha256"
+  root_tensor_submitted_input_freeze_sha256: "13c5327b27ad81311e7857460c777db85064141fbdd8b33b5a8906f456647eaa"
+  root_tensor_submitted_failed_routes: "attempts/wave27-general-root-tensor/failed-routes.md"
+  root_tensor_submitted_failed_routes_sha256: "e806127f2140212277651ffa47b24087f79d6ba59c91b5aa290f1d73ac51f1d4"
+  root_tensor_submitted_run_report: "attempts/wave27-general-root-tensor/run-report.yaml"
+  root_tensor_submitted_run_report_sha256: "4073f21de51b09b04436d471a192017420a85e1286bd5c4d3b3d5e6471c43499"
+  root_tensor_submitted_manifest: "attempts/wave27-general-root-tensor/artifact-manifest.sha256"
+  root_tensor_submitted_manifest_sha256: "3ba7ee4683dfac361b6f2d1b09a90d485210e2debd87cbe9d4ecb62f607ebf32"
+  a20_discovery_report: "agents/2026-07-24-wave27-a20-trace-addendum.md"
+  a20_discovery_report_sha256: "97c7296752e0ef2126bd8da50cdf8b0abe07b3c72a939233d15aae6d7c413659"
+  a20_submitted_checker: "attempts/wave27-a20-trace-addendum/exact_check.py"
+  a20_submitted_checker_sha256: "7762acf33bf519e3a91f442d4dcae6da34e770d98491b02d995a14550840de7c"
+  a20_submitted_result: "attempts/wave27-a20-trace-addendum/exact-results.json"
+  a20_submitted_result_sha256: "dc5716cbf2537cd214906f1bf2eae96d4886e4bd88008cd7508c6a64d78f089c"
+  a20_submitted_input_freeze: "attempts/wave27-a20-trace-addendum/input-freeze.sha256"
+  a20_submitted_input_freeze_sha256: "c0a85ebaf10f53b9ab456147b77d021d0e2d4892123c8939c1a15413c09f9679"
+  a20_submitted_failed_routes: "attempts/wave27-a20-trace-addendum/failed-routes.md"
+  a20_submitted_failed_routes_sha256: "178c8578eebe32d10e6d8c5c8862ba05e5c0a2b661c62813310371db6c9b17b5"
+  a20_submitted_run_report: "attempts/wave27-a20-trace-addendum/run-report.yaml"
+  a20_submitted_run_report_sha256: "5098a03cf12c4cd94891a354d92fb620f334372e7fc3330671a51da0bb2e4781"
+  a20_submitted_manifest: "attempts/wave27-a20-trace-addendum/artifact-manifest.sha256"
+  a20_submitted_manifest_sha256: "8f8ef9538a4070d569cfd4415296206214af3d3b2d8fe136ec7536257ead9949"
+  root_tensor_verifier_audit: "verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md"
+  root_tensor_verifier_audit_sha256: "68747c2b09a86f10eb58f7bccce6670b4d99856a073a87a3dcae2c0555f37033"
+  root_tensor_verifier_input_freeze: "verification/wave27-general-root-tensor/intake-freeze.json"
+  root_tensor_verifier_input_freeze_sha256: "160d0967d59ddacb9a03fdc7866bae4346d3c0177d34edb3a195faaf11fd6d52"
+  a20_verifier_input_freeze: "verification/wave27-general-root-tensor/addendum-intake-freeze.json"
+  a20_verifier_input_freeze_sha256: "937b0b3d9cbfcdea0e9453c568e8c1a702dce5dd2052163e3c6ee75b612075a3"
+  root_tensor_independent_checker: "verification/wave27-general-root-tensor/independent_check.py"
+  root_tensor_independent_checker_sha256: "b9b98f86ffe3e8c7bbe9a5f094175602b115176e4bbd7e02ac01564652e2834b"
+  root_tensor_independent_result: "verification/wave27-general-root-tensor/independent-results.json"
+  root_tensor_independent_result_sha256: "7e87796980a43df199713865fed920bc094778f1828431a673938484c026e6fd"
+  root_tensor_replay_summary: "verification/wave27-general-root-tensor/replay-summary.json"
+  root_tensor_replay_summary_sha256: "9e06eb1054f597bc8e1f813ba6072f6d5ddd6bb1dd4448580bd0501fbc7cd2b4"
+  root_tensor_verifier_manifest: "verification/wave27-general-root-tensor/artifact-manifest.sha256"
+  root_tensor_verifier_manifest_sha256: "e72b134623d95ea054b348b641ca23a57ee7d29b5edd8033527cca1f8c68914c"
+  root_tensor_verifier_run_report: "verification/wave27-general-root-tensor/run-report.yaml"
+  root_tensor_verifier_run_report_sha256: "ddf0bffe7505e4fe464a200fae94f622b162599b6397c4a60654fc2a059b03c8"
+  root_tensor_submitted_tests_passed: 17
+  a20_submitted_tests_passed: 8
+  root_tensor_independent_tests_passed: 23
+  ADE_components_checked: 88
+  ADE_components_accepted: 5
+  ADE_components_rejected: 83
+  rank_44_ADE_decompositions_checked: 17
+  source_status_audit: "verification/wave27-literature-audit/audit.md"
+  source_status_audit_sha256: "835f4b517ce10bce33570d45656be23f3ae4f8135df345734dfecb59a531ebe2"
+  source_query_protocol: "verification/wave27-literature-audit/protocol.md"
+  source_query_protocol_sha256: "f52683741f227d8e9c4f80b5474e73744a235b5e4383a2996a1439ed4b84742f"
+  source_protocol_correction: "verification/wave27-literature-audit/protocol-correction.md"
+  source_protocol_correction_sha256: "3f59914da8f23386ac85a5f58e3d5c1e205d004c0a245939d1f49e569ce33f55"
+  source_A20_protocol_addendum: "verification/wave27-literature-audit/protocol-a20-addendum.md"
+  source_A20_protocol_addendum_sha256: "ed09b9fa84da60fe6fa782af4bc2e6907a60fe3107946add53a8462086b73a86"
+  source_query_ledger: "verification/wave27-literature-audit/query-ledger.md"
+  source_query_ledger_sha256: "8ecfa635a5dc82207108b54d986c6bbde449c6a6a5e16a65631851ca32b576ec"
+  source_query_log: "verification/wave27-literature-audit/query-log.jsonl"
+  source_query_log_sha256: "312d2b0fac7b5ebb7a8cfcc03028b8dd9e16b378a62f2c75cdf8b57a25b2c539"
+  source_summary: "verification/wave27-literature-audit/sources.md"
+  source_summary_sha256: "fa4e81d15c3b89a1f6371b3d956ef283d734cb48a58aa88feb583c82dbc6f7f5"
+  source_local_bibliography: "verification/wave27-literature-audit/references.bib"
+  source_local_bibliography_sha256: "a058ffea61b60971afa81829ad2c1f6e0808529a1a0007327658d7bd7898cabb"
+  source_failures: "verification/wave27-literature-audit/failures.md"
+  source_failures_sha256: "504f585b492b3257de748e1df5fd6251168dc190865347952dbcb9a14bd7235e"
+  source_run_report: "verification/wave27-literature-audit/run-report.yaml"
+  source_run_report_sha256: "55c6c21bf3031b61885e9a54c3c31dbf06755afef85cdacea2be02cfadd36df0"
+  source_publication_manifest: "verification/wave27-literature-audit/artifact-manifest.sha256"
+  source_publication_manifest_sha256: "f439b850eeecbb519208200aa908434a3d7908faff9021694c6fcd3f2aeadfe1"
+  literature_service_query_pair_count: 56
+  literature_inspected_record_count: 303
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  runtime_metadata: "agents/2026-07-24-wave27-runtime-metadata.md"
+  runtime_metadata_sha256: "90fa48156ce34d8442aba69fb53e69b16ee3100ee5a32fa44af79d52815da400"
+  orchestrator_correction_ledger: "verification/2026-07-24-wave27-orchestrator-corrections.md"
+  orchestrator_correction_ledger_sha256: "c4bef6c43ca98cc990c268d302f199fa64831377b6ac58e229b8f3d700052d6e"
+  caveat: "Wave 27 verifies an exact A2-direct-summand-free abstract h=9 arithmetic/lattice survivor and the unrestricted local E6 trace minimum 14, but the full endpoint projector/Schur identities make this explicit survivor impossible because it has orthogonal E6 summands. The core tensor screen excludes orthogonal A6 and E6 and intentionally leaves A20 orthogonal-sum E8^3; the separately frozen and verified A20 trace addendum then excludes that survivor. Hence, conditional on n3=708, the full projector/Schur endpoint identities, and the additional hypothesis that S is an orthogonal direct sum of irreducible ADE root lattices, no such S exists. General even rank-44 scaled-dual lattices, nonorthogonal root subsystems, n3=708, Conway-99 existence, and novelty remain UNKNOWN; the headline bound remains n3>=708."
+last_updated: 2026-07-24

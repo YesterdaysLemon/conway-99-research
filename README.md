@@ -27,23 +27,26 @@ and the normalized search problem.
 ## Current status
 
 - **Literature status:** no resolution found in the sources searched through
-  2026-07-23; this is not a proof of openness.
+  2026-07-24; this is not a proof of openness.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
 - **Strongest internally verified conditional bound:** `n3>=708`, hence at
   least `209,994` induced six-cycles; this does not resolve existence.
-- **First surviving endpoint:** at `n3=708`, the independently verified
-  necessary arithmetic now includes `tr(C^2)>=10` and `det(B)<=6525`; an
-  abstract lattice survivor remains, so the endpoint is not excluded.
+- **Endpoint arithmetic:** at `n3=708`, the independently verified
+  necessary arithmetic includes `tr(C^2)>=10` and `det(B)<=6525`. Wave 27
+  conditionally excludes every full orthogonal ADE root-lattice form. An
+  abstract A2-direct-summand-free arithmetic package still exists, but its
+  required projector/Schur origin is excluded; unrestricted general lattices
+  remain, so the endpoint is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
-A peer-reviewed 2025 paper calls existence an open problem. Two independent
-freshness searches through 2026-07-23 found no credible construction or
-nonexistence proof. Current 2026 SAT work reports an unsuccessful computation,
-and a June 2026 lecture notice discusses only a possible similar approach.
-Those searches are evidence about the literature, not a mathematical proof of
-openness or novelty.
+A peer-reviewed 2025 paper calls existence an open problem. The latest
+proof-separated freshness audit, through 2026-07-24, found no credible
+construction or nonexistence proof. Current 2026 SAT work reports an
+unsuccessful computation, and a June 2026 lecture notice discusses only a
+possible similar approach. Those searches are evidence about the literature,
+not a mathematical proof of openness or novelty.
 
 A 2022 technical-report paper does state a nonexistence theorem, but two
 independent project audits find that its decisive equation (88) assumes a false
@@ -809,6 +812,87 @@ all three manifests, checks 151 status hashes and 172 local links, scans the
 integration tree and all three then-unpublished commits with zero privacy
 findings, and finishes with a clean tree and strict Git object integrity.
 
+Wave 27 first supplies an exact hostile control that survives the abstract
+endpoint arithmetic without an orthogonal `A2` direct summand:
+
+```text
+S = E8^4 orthogonal_sum E6^2,
+det(S)=9,
+Q = (E8^(-1))^4 orthogonal_sum Q6^2,
+tr(SQ)=60,
+det(SQ)=81.
+```
+
+The complete integral `S,Q,G,B,C` package has `tr(C)=8`,
+`tr(C^2)=32`, and satisfies the scaled-dual and coupled endomorphism
+identities. Complete root enumeration gives four components of size 240 and
+two of size 72, so no component can be the six-root system of an orthogonal
+`A2` direct summand. This statement does **not** exclude embedded `A2` root
+subsystems: each displayed `E6` block contains them. See the
+[construction report](agents/2026-07-23-wave27-a2free-construction.md) and
+[independent scoped-candidate audit](verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md).
+
+The same wave proves a separate unrestricted algebraic theorem. For the
+displayed `E6` Cartan matrix, every symmetric even integral
+positive-definite `Q` satisfying `E6 Q=I (mod 2)` obeys
+
+```text
+tr(E6 Q) >= 14,
+```
+
+and the local block `Q6` above attains equality. The
+[proof report](agents/2026-07-23-wave27-h9-classification.md) and
+[independent trace audit](verification/wave27-h9-classification/2026-07-24T002029Z-audit.md)
+verify this algebraic floor. It must not be confused with the stronger
+projector-frame cubic restriction below: trace 14 is feasible for the
+algebraic relaxation, while a genuine orthogonal `E6` frame block has cubic
+energy at least 24.
+
+For a full projector/Schur origin, exact affine-lattice enumeration and the
+zero-sum congruence force cubic-energy floors 24 for an orthogonal `E6`
+summand and 66 for an orthogonal `A6` summand. The rank-38 complement limits
+an `E6` compression to 22, while the `A6` floor already exceeds the global
+trace 60. These contradictions allow arbitrary cross-block entries in `Q`;
+they require an orthogonal integral summand and say nothing about a merely
+embedded root subsystem.
+
+The frozen core
+[tensor report](agents/2026-07-23-wave27-general-root-tensor.md) then screens
+all irreducible ADE components compatible with `21R^(-1)` integrality.
+Together with the Wave 26 `A2` theorem, its `A6` and `E6` obstructions leave
+exactly
+
+```text
+h=21, S = A20 orthogonal_sum E8^3
+```
+
+as the sole full-ADE type surviving that core screen. A later, separately
+frozen [A20 addendum](agents/2026-07-24-wave27-a20-trace-addendum.md) proves
+`tr(A20 Q_AA)>=42`; the rank-24 complement contributes at least 24, giving
+`66>60` and excluding that last type. The
+[independent tensor/addendum audit](verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md)
+reconstructs both stages and explicitly treats the later strengthening as an
+addendum, not as a defect in the narrower core census.
+
+Consequently, conditional on `n3=708`, the full projector/Schur endpoint
+identities, and the additional hypothesis that the entire rank-44 scaled-dual
+form is an orthogonal sum of irreducible ADE root lattices, no such form
+survives. General even rank-44 scaled-dual lattices need not have that
+decomposition: glued, non-root, and otherwise nonorthogonal cases remain
+outside the theorem. Therefore the headline bound stays `n3>=708`, the
+endpoint remains open, and Conway-99 existence remains `UNKNOWN`.
+
+The proof-separated
+[Wave 27 literature audit](verification/wave27-literature-audit/audit.md)
+searched 56 frozen or separately frozen service-query pairs and inspected 303
+records through 2026-07-24. It found standard component and Cartan-matrix
+precedent but no direct match for the trace-14 theorem, scale-21 cubic
+obstructions, A20 exclusion, or exact rank-44 comparison. These are bounded
+non-discovery results only; novelty and priority remain `UNKNOWN`.
+The retained exposition, protocol, and addendum chronology corrections are
+collected in the
+[Wave 27 correction ledger](verification/2026-07-24-wave27-orchestrator-corrections.md).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1036,6 +1120,22 @@ status.
   detached 65-test replay, four byte-identical generated files, three exact
   manifests, metadata and unpublished-history privacy gates, clean status,
   and `git fsck`.
+- [Wave 27 A2-summand-free construction audit](verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md):
+  independent reconstruction of the `E8^4 orthogonal_sum E6^2` coupled
+  package, complete roots and discriminants, 16 independent tests, and exact
+  separation of an orthogonal `A2` summand from embedded `A2` subsystems.
+- [Wave 27 unrestricted `E6` trace audit](verification/wave27-h9-classification/2026-07-24T002029Z-audit.md):
+  independent verification of the algebraic trace floor 14 and equality
+  witness, 21 independent tests, byte-identical replay, and one retained
+  nonfatal exposition correction.
+- [Wave 27 tensor and A20 audit](verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md):
+  fresh affine-CVP reconstruction of the orthogonal `E6`/`A6` cubic floors,
+  exact ADE census, and separately frozen verification of the later `A20`
+  addendum and conditional full-orthogonal-ADE exclusion.
+- [Wave 27 literature/status audit](verification/wave27-literature-audit/audit.md):
+  56 frozen or separately frozen query pairs, 303 inspected records,
+  a retained protocol correction and service failures, conceptual prior art,
+  and bounded non-discovery with novelty `UNKNOWN`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

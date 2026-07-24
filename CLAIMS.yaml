@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-23
+as_of: 2026-07-24
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -667,6 +667,118 @@ claims:
       - "verification/wave26-literature-audit/manifest.sha256"
       - "SOURCES.bib"
     limitations: "No-match results are bounded non-discovery, not novelty or priority evidence. Five Crossref queries were rate-limited, DuckDuckGo automated requests were blocked, the zbMATH public endpoint returned its no-results 404 response, all services were first-page or first-20 limited, and MathSciNet was unavailable. The audit did not verify the proof. Target status and Wave 26 novelty remain UNKNOWN."
+
+  - id: C-WAVE27-A2FREE-028
+    statement: "An explicit independently checked abstract h=9 arithmetic/lattice package has S=E8^4 orthogonal-sum E6^2, rank(S)=44, det(S)=det(Q)=9, det(B)=81, tr(B)=60, B=I mod 2, tr(C)=8, tr(C^2)=32, and the required exact coupled S,Q,G,B,C identities. Its complete norm-two root-component census proves that S has no orthogonal A2 direct summand."
+    label: VERIFIED
+    scope: ABSTRACT_N3_708_H9_ARITHMETIC_LATTICE_PACKAGE_ONLY
+    evidence:
+      - "agents/2026-07-23-wave27-a2free-construction.md"
+      - "attempts/wave27-a2free-construction/exact_check.py"
+      - "attempts/wave27-a2free-construction/test_exact_check.py"
+      - "attempts/wave27-a2free-construction/exact-results.json"
+      - "attempts/wave27-a2free-construction/input-freeze.sha256"
+      - "attempts/wave27-a2free-construction/failed-routes.md"
+      - "attempts/wave27-a2free-construction/run-report.yaml"
+      - "verification/wave27-a2free-construction/preinspection-freeze.sha256"
+      - "verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md"
+      - "verification/wave27-a2free-construction/independent_check.py"
+      - "verification/wave27-a2free-construction/test_independent_check.py"
+      - "verification/wave27-a2free-construction/independent-results.json"
+      - "verification/wave27-a2free-construction/artifact-manifest.sha256"
+      - "verification/wave27-a2free-construction/run-report.yaml"
+    limitations: "A2-free means no orthogonal direct summand; embedded A2 root subsystems occur inside each E6 block. This is an abstract arithmetic/lattice survivor, while its required full projector/Schur origin is excluded by the separately verified orthogonal-E6 obstruction. It supplies no primitive embedding in Z^231, 231-row projector frame, Schur-square certificate, graph, endpoint realization, or classification of all h=9 forms. The bound remains n3>=708, and Conway-99 existence and novelty remain UNKNOWN."
+
+  - id: C-WAVE27-E6-TRACE-029
+    statement: "For every symmetric even integral positive-definite rank-six form Q satisfying E6 Q=I mod 2, tr(E6 Q)>=14; the bound is sharp, with an explicit integral equality witness having spectrum(E6 Q)={9,1,1,1,1,1} and det(Q)=3."
+    label: VERIFIED
+    scope: UNRESTRICTED_LOCAL_E6_EVEN_INTEGRAL_TRACE_THEOREM
+    evidence:
+      - "agents/2026-07-23-wave27-h9-classification.md"
+      - "attempts/wave27-h9-classification/exact_check.py"
+      - "attempts/wave27-h9-classification/test_exact_check.py"
+      - "attempts/wave27-h9-classification/exact-results.json"
+      - "attempts/wave27-h9-classification/input-freeze.sha256"
+      - "attempts/wave27-h9-classification/failed-routes.md"
+      - "attempts/wave27-h9-classification/run-report.yaml"
+      - "verification/wave27-h9-classification/input-freeze.sha256"
+      - "verification/wave27-h9-classification/2026-07-24T002029Z-audit.md"
+      - "verification/wave27-h9-classification/independent_check.py"
+      - "verification/wave27-h9-classification/test_independent_check.py"
+      - "verification/wave27-h9-classification/independent-results.json"
+      - "verification/wave27-h9-classification/artifact-manifest.sha256"
+      - "verification/wave27-h9-classification/run-report.yaml"
+      - "verification/wave27-h9-classification/verifier-failures.md"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+    limitations: "The discovery prose omitted the explicit parity bridge tr(C^2)=tr(C) mod 2 when passing from exclusion of tr(C^2)=2 to the next admissible value; the independent verifier records and supplies that nonfatal step without silently altering the discovery report. This algebraic trace-14 theorem is distinct from the stronger frame/Schur cubic floor 24. It neither classifies all h=9 forms nor supplies a projector, Schur certificate, graph, endpoint exclusion, or novelty result."
+
+  - id: C-WAVE27-ROOT-TENSOR-030
+    statement: "Under the full n3=708 projector-frame and Schur-square endpoint premises, an orthogonal A6 or E6 summand of S is impossible. Exact cubic-parity enumeration gives local floors 66 for A6 and 24 for E6; the latter contradicts the independent rank-38 complement cap 22. The complete core ADE component and rank-44 determinant census leaves exactly one core-screen survivor, S=A20 orthogonal-sum E8^3 at h=21."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_ORTHOGONAL_A6_E6_TENSOR_AND_CORE_ADE_SCREEN
+    evidence:
+      - "agents/2026-07-23-wave27-general-root-tensor.md"
+      - "attempts/wave27-general-root-tensor/exact_check.py"
+      - "attempts/wave27-general-root-tensor/test_exact_check.py"
+      - "attempts/wave27-general-root-tensor/exact-results.json"
+      - "attempts/wave27-general-root-tensor/input-freeze.sha256"
+      - "attempts/wave27-general-root-tensor/failed-routes.md"
+      - "attempts/wave27-general-root-tensor/run-report.yaml"
+      - "attempts/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/intake-freeze.json"
+      - "verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md"
+      - "verification/wave27-general-root-tensor/independent_check.py"
+      - "verification/wave27-general-root-tensor/test_independent_check.py"
+      - "verification/wave27-general-root-tensor/independent-results.json"
+      - "verification/wave27-general-root-tensor/replay-summary.json"
+      - "verification/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/run-report.yaml"
+      - "verification/wave27-general-root-tensor/failed-runs.md"
+    limitations: "Every component conclusion requires an orthogonal integral summand; nonorthogonal root subsystems are outside scope. The core theorem intentionally retains A20 orthogonal-sum E8^3 and does not import the later A20 addendum. General even rank-44 forms, n3=708, Conway-99 existence, and novelty remain UNKNOWN. No primitive embedding, projector, Schur certificate, graph, unrestricted endpoint exclusion, or formal-kernel proof is supplied."
+
+  - id: C-WAVE27-A20-TRACE-031
+    statement: "Under the full n3=708 endpoint premises, an orthogonal A20 summand is impossible: the exact rank-one decomposition of the A20 Cartan form gives tr(A20 Q_AA)>=42 for every even integral positive-definite principal block Q_AA, while the rank-24 complement contributes at least 24, contradicting the global trace 60. Combining this separately frozen addendum with the verified Wave 26 orthogonal-A2 theorem and C-WAVE27-ROOT-TENSOR-030 conditionally excludes every full orthogonal ADE root-lattice form for S."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_ORTHOGONAL_A20_AND_FULL_ORTHOGONAL_ADE_EXCLUSION
+    evidence:
+      - "agents/2026-07-24-wave27-a20-trace-addendum.md"
+      - "attempts/wave27-a20-trace-addendum/exact_check.py"
+      - "attempts/wave27-a20-trace-addendum/test_exact_check.py"
+      - "attempts/wave27-a20-trace-addendum/exact-results.json"
+      - "attempts/wave27-a20-trace-addendum/input-freeze.sha256"
+      - "attempts/wave27-a20-trace-addendum/failed-routes.md"
+      - "attempts/wave27-a20-trace-addendum/run-report.yaml"
+      - "attempts/wave27-a20-trace-addendum/artifact-manifest.sha256"
+      - "verification/wave27-general-root-tensor/addendum-intake-freeze.json"
+      - "verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md"
+      - "verification/wave27-general-root-tensor/independent_check.py"
+      - "verification/wave27-general-root-tensor/test_independent_check.py"
+      - "verification/wave27-general-root-tensor/independent-results.json"
+      - "verification/wave27-general-root-tensor/replay-summary.json"
+      - "verification/wave27-general-root-tensor/artifact-manifest.sha256"
+      - "verification/wave26-a2-frame-obstruction/2026-07-23T225015Z-audit.md"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+    limitations: "The combined conclusion requires the additional hypothesis that all of S is an orthogonal direct sum of irreducible ADE root lattices, as well as the full endpoint projector/Schur identities. It does not exclude general even rank-44 scaled-dual lattices or nonorthogonal root subsystems. The headline bound remains n3>=708; n3=708, Conway-99 existence, and novelty remain UNKNOWN."
+
+  - id: C-WAVE27-LITERATURE-032
+    statement: "At the frozen 2026-07-24 cutoff, a proof-separated audit executed 56 service-query pairs and inspected 303 returned records across Crossref, OpenAlex, zbMATH Open, arXiv, and attributable general-web results. Qualifying current sources still treated Conway-99 as open, and the audit found no direct or near-direct source for the Wave 27 E6 trace-14 witness, scale-21 E6/A6 cubic-parity obstruction, E8^4 orthogonal-sum E6^2 comparison, or A20 trace/complement exclusion. Standard ADE Cartan, root, determinant, and inverse data are conceptual prior art."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_CONCEPTUAL_PRIOR_ART_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave27-literature-audit/protocol.md"
+      - "verification/wave27-literature-audit/protocol-correction.md"
+      - "verification/wave27-literature-audit/protocol-a20-addendum.md"
+      - "verification/wave27-literature-audit/audit.md"
+      - "verification/wave27-literature-audit/query-ledger.md"
+      - "verification/wave27-literature-audit/query-log.jsonl"
+      - "verification/wave27-literature-audit/sources.md"
+      - "verification/wave27-literature-audit/references.bib"
+      - "verification/wave27-literature-audit/failures.md"
+      - "verification/wave27-literature-audit/run-report.yaml"
+      - "verification/wave27-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave27-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    limitations: "Bounded non-discovery is not a novelty, priority, or openness certificate. The initially frozen protocol misread the factor 21 in 21E6^-1 as 2; the error is preserved and corrected before the corrective searches. Ten zbMATH requests returned service-failure 404 responses and are not counted as zero-result evidence; broad service totals and first-page limits also constrain coverage. The audit did not verify any mathematical claim. Target status and Wave 27 novelty remain UNKNOWN."
 
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."

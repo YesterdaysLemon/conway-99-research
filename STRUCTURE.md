@@ -1264,6 +1264,164 @@ privacy findings in the integration tree and three-commit unpublished range,
 a clean tracked tree, and Git object integrity at integration commit
 `4f1f3be35e712789dcba10fda5ec8d2bc569bc17`.
 
+## A2-summand-free control and orthogonal ADE screen (`VERIFIED_INCONCLUSIVE`)
+
+Wave 27 first supplies a different exact hostile control after Wave 26
+excluded the old Wave 24 package's required projector/Schur origins:
+
+```text
+S = E8^4 orthogonal_sum E6^2,
+Q = (E8^(-1))^4 orthogonal_sum Q6^2,
+G = 21 S^(-1),
+B = S Q,
+C = (B-I)/2.
+```
+
+The full integral package satisfies
+
+```text
+rank(S)=44,
+det(S)=det(Q)=9,
+det(B)=81,
+tr(B)=60,
+tr(C)=8,
+tr(C^2)=32,
+B=I (mod 2),
+G B=21Q.
+```
+
+Complete exact root enumeration gives component sizes
+
+```text
+240,240,240,240,72,72.
+```
+
+An orthogonal `A2` direct summand would contribute a complete connected
+six-root component, so none is present, even after an integral basis change.
+This is a direct-summand statement only. Each `E6` component contains
+embedded `A2` root subsystems, and the positive control deliberately retains
+one so the two notions cannot be conflated. The package remains an abstract
+arithmetic/lattice candidate: it supplies no 231-row frame, projector,
+Schur-square tensor, or graph. See the
+[construction report](agents/2026-07-23-wave27-a2free-construction.md) and
+[independent audit](verification/wave27-a2free-construction/2026-07-24T001657Z-audit.md).
+
+A separate local optimization is unrestricted within its stated algebraic
+class. For the frozen `E6` Cartan form,
+
+```text
+Q symmetric, even integral, positive definite
+E6 Q=I (mod 2)
+  implies
+tr(E6 Q)>=14.
+```
+
+The displayed `Q6` attains 14. This algebraic minimum is not the
+projector-frame cubic minimum. Its verifier records one nonfatal prose
+omission: the discovery report needs
+`tr(C^2)=tr(C) (mod 2)` when passing from the excluded value two to the next
+admissible trace-square value. The theorem and equality witness are
+unchanged. See the
+[trace report](agents/2026-07-23-wave27-h9-classification.md) and
+[independent audit](verification/wave27-h9-classification/2026-07-24T002029Z-audit.md).
+
+The full frame/Schur origin supplies more structure. For an orthogonal
+integral summand `R`, the projected rows obey
+
+```text
+sum_i z_i z_i^T=21R^(-1),
+sum_i z_i=0.
+```
+
+Repeated coordinates of the symmetric cubic tensor consequently lie in an
+explicit affine parity lattice. Exact rational affine-CVP enumeration gives
+empty closed balls through energy 18 for `E6` and through energy 60 for
+`A6`. The zero-sum identity makes the actual cubic energy divisible by six,
+so the safe floors are
+
+```text
+orthogonal E6 cubic energy >=24,
+orthogonal A6 cubic energy >=66.
+```
+
+The complementary positive compression has trace at least its rank. Hence a
+rank-six component has local trace at most `60-38=22`, contradicting the
+`E6` floor, while the `A6` floor already exceeds the full trace 60. Arbitrary
+cross-block entries in `Q` are allowed. These theorems require an orthogonal
+summand; an embedded nonorthogonal root subsystem is outside their scope.
+In particular, the algebraic trace-14 `E6` block is a valid hostile control
+for the weaker arithmetic problem and is rejected only after the cubic
+origin is imposed.
+
+The frozen core ADE census first tests the necessary integrality of
+`21R^(-1)`. Among all irreducible simply-laced Cartan forms through rank 44,
+only
+
+```text
+A2, A6, A20, E6, E8
+```
+
+pass. The Wave 26 `A2` theorem and the Wave 27 `A6`/`E6` tensor theorems
+leave exactly
+
+```text
+h=21, A20 orthogonal_sum E8^3
+```
+
+among the 17 full rank-44 ADE decompositions. This was the sole survivor of
+the frozen **core** screen, not a claimed realization.
+
+A later, separately frozen orchestrator addendum factors the path Cartan
+matrix as
+
+```text
+A_n=e_1e_1^T+e_ne_n^T
+    +sum_(i=1)^(n-1)(e_i-e_(i+1))(e_i-e_(i+1))^T.
+```
+
+For every even integral positive-definite `Q`,
+
+```text
+tr(A_n Q)>=2(n+1).
+```
+
+At `n=20`, the local floor 42 plus the rank-24 complement floor 24 gives
+`66>60`, excluding an orthogonal `A20` summand. Thus the core
+`A20 orthogonal_sum E8^3` survivor is removed only by this later addendum.
+The independent audit preserves that chronology and verifies both packages
+separately. See the
+[core tensor report](agents/2026-07-23-wave27-general-root-tensor.md),
+[later A20 addendum](agents/2026-07-24-wave27-a20-trace-addendum.md), and
+[independent combined audit](verification/wave27-general-root-tensor/2026-07-24T010548Z-audit.md).
+
+Combining the component results gives the conditional statement
+
+```text
+full n3=708 projector/Schur endpoint identities
+and S is a full orthogonal ADE root lattice
+  implies
+no n3=708 endpoint package.
+```
+
+This does not classify general even rank-44 scaled-dual lattices. Such a
+lattice may be glued, non-root, or otherwise not an orthogonal ADE sum, so
+the endpoint and all unrestricted `h` rows remain `UNKNOWN`. The project
+bound is still `n3>=708`; Conway-99 existence remains `UNKNOWN`.
+
+The proof-separated Wave 27 literature audit executed 56 frozen or separately
+frozen service-query pairs and inspected 303 records through 2026-07-24. It
+found standard component tables and `A_n` Cartan data as conceptual precedent,
+but no direct match for the trace-14 optimization, scale-21 cubic
+obstructions, A20 use, or exact rank-44 comparison. One frozen interpretation
+defect was corrected in a separately retained protocol correction, and failed
+zbMATH requests remain failures rather than zero-result evidence. Novelty and
+priority remain `UNKNOWN`. See the
+[Wave 27 literature audit](verification/wave27-literature-audit/audit.md).
+The
+[Wave 27 correction ledger](verification/2026-07-24-wave27-orchestrator-corrections.md)
+preserves the E6 exposition bridge, the literature-protocol correction, and
+the later A20-addendum chronology without rewriting their frozen inputs.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

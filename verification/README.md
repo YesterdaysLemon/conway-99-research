@@ -3,6 +3,9 @@
 Verification code must be small, deterministic, exact, and independent of the
 search implementation where practical. Reports should include commands,
 versions, hashes, expected failures on mutated fixtures, and a clear verdict.
+This file is a selected orientation index, not a chronologically complete
+catalog of every verification artifact; the repository map and dated
+subdirectories remain authoritative for omitted waves.
 
 ## Baseline validator
 
@@ -521,3 +524,85 @@ The detached release replay is `2026-07-23-wave16-clean-clone.md`. It records
 252 passing tests, six semantic checker entry points, five byte-identical
 regenerations, all seven Wave 16 status hashes, every ledger evidence path,
 public-hygiene scans, clean detached status, and `git fsck`.
+
+## Wave 27 endpoint lattice and orthogonal-root audits
+
+The Wave 27 verification package has three deliberately separated
+mathematical layers.
+
+First, the
+[A2-summand-free construction audit](wave27-a2free-construction/2026-07-24T001657Z-audit.md)
+independently reconstructs the abstract coupled package
+
+```text
+S=E8^4 orthogonal_sum E6^2
+```
+
+and passes 16 independent tests plus the submitted 15-test replay. Complete
+root enumeration proves that `S` has no orthogonal `A2` direct summand.
+Embedded `A2` root subsystems do occur inside its `E6` blocks; the audit
+explicitly preserves that distinction. The verified object is still only a
+candidate for the arithmetic/lattice relaxation, with no frame, projector,
+Schur-square, or graph origin. The submitted account is the
+[construction report](../agents/2026-07-23-wave27-a2free-construction.md).
+
+Second, the
+[unrestricted E6 trace audit](wave27-h9-classification/2026-07-24T002029Z-audit.md)
+proves
+
+```text
+E6 Q=I (mod 2), Q symmetric even integral positive definite
+  implies tr(E6 Q)>=14,
+```
+
+with equality attained by the displayed `Q6`. Its independent suite passes
+21 tests and its submitted suite passes 16. The report retains one nonfatal
+exposition correction, the missing parity bridge
+`tr(C^2)=tr(C) (mod 2)`. This algebraic trace floor is not the later
+projector-frame cubic floor: the trace-14 block is a valid hostile control for
+the weaker algebraic problem. See the
+[trace report](../agents/2026-07-23-wave27-h9-classification.md).
+
+Third, the
+[general-root tensor audit](wave27-general-root-tensor/2026-07-24T010548Z-audit.md)
+uses an independent affine-CVP enumerator to verify cubic-energy floors 24
+for an orthogonal `E6` summand and 66 for an orthogonal `A6` summand. The
+`E6` floor contradicts its complement-imposed compression cap 22; the `A6`
+floor exceeds the global trace 60. Arbitrary cross-block `Q` entries are
+allowed, but every conclusion requires an orthogonal integral summand.
+
+The frozen [core tensor report](../agents/2026-07-23-wave27-general-root-tensor.md)
+leaves exactly `A20 orthogonal_sum E8^3` at `h=21` among 17 full rank-44 ADE
+decompositions. A later, separately frozen
+[A20 addendum](../agents/2026-07-24-wave27-a20-trace-addendum.md) proves a
+local trace floor 42; the rank-24 complement raises the total floor to 66 and
+excludes that core survivor. The audit verifies the core and addendum
+separately, passing 23 independent, 17 submitted-core, and 8
+submitted-addendum tests with byte-identical regenerations.
+
+The combined conclusion is conditional on `n3=708`, the full projector/Schur
+endpoint identities, and the additional hypothesis that the scaled-dual form
+is a full orthogonal sum of irreducible ADE root lattices:
+
+```text
+full orthogonal ADE rank-44 endpoint form: impossible
+general even rank-44 scaled-dual form: UNKNOWN
+n3=708 / Conway-99 / novelty: UNKNOWN
+```
+
+Glued, non-root, and otherwise nonorthogonal general lattices are not
+classified or excluded. The headline conditional bound therefore remains
+`n3>=708`.
+
+The
+[Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
+preserves the E6 exposition bridge, the corrected literature-protocol
+interpretation, and the later A20-addendum chronology.
+
+The proof-separated
+[Wave 27 literature audit](wave27-literature-audit/audit.md) covers 56 frozen
+or separately frozen service-query pairs and 303 inspected records through
+2026-07-24. It records conceptual component and Cartan-matrix prior art, a
+retained protocol correction, and failed-service results without treating
+them as nonexistence evidence. No direct match was found within the bounded
+search, but novelty and priority remain `UNKNOWN`.
