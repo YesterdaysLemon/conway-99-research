@@ -7,7 +7,7 @@ literature_audit:
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current searched sources and the independently audited external packages do not resolve either unrestricted Wave 34 endpoint, but a bounded search cannot prove openness, novelty, or priority."
   latest_audit: "verification/wave34-external-source-audit/audit.md"
-  latest_audit_sha256: "f4432e58224a484cc56230b82dd84b07b53edcf19d34e775e45e41c20d9dc4c1"
+  latest_audit_sha256: "6e57da410dad58447f9e85229f12d3cea215a90d3bb9140794938e872067a2ce"
   source_query_ledger: "attempts/wave34-current-literature/query-ledger.json"
   source_query_ledger_sha256: "ece460c54282b45ce013083756bc421ea2427d91800b65e16f9049734225843d"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
