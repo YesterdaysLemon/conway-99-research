@@ -1345,7 +1345,7 @@ twenty_ninth_research_wave:
   integration_commit: "ae8fd70baaeb35302f957653e20ad710e5e77281"
   clean_clone_commit: "ae8fd70baaeb35302f957653e20ad710e5e77281"
   clean_clone_replay: "verification/2026-07-24-wave29-clean-clone.md"
-  clean_clone_replay_sha256: "88b45f98de832c9dbd8f5c2442135ef9b5a6744547b781ebe5597e8059e15135"
+  clean_clone_replay_sha256: "d55ee01e12a2539e002c2510a47cdae492ac953924a75b3e11ea38f2b18e660d"
   clean_clone_verdict: PASS
   clean_clone_tests_passed: 45
   clean_clone_regenerations_byte_identical: 2

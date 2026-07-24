@@ -121,6 +121,11 @@ source object's unreachable local history, `git fsck` listed pre-existing
 dangling objects; it reported no corrupt, missing, or invalid reachable
 object.
 
+One preliminary exact-blob wrapper timed out because its output pipe filled.
+It supplied no evidence and was discarded. The buffered batch implementation
+was then run over the complete release tree and unpublished range and produced
+the reported passing result.
+
 ## Scope
 
 This replay verifies reproducibility and publication hygiene for the scoped
