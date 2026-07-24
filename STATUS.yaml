@@ -1759,9 +1759,9 @@ thirty_second_research_wave:
   frozen_public_base: "f0783b82d9b0260f5461cd68c647f62f646cdd81"
   discovery_commit: "dd3f3fcf692741b51a496233911f46a09cc400e3"
   verification_commit: "a88cfd38805f420bf1717a9513d9c47e12686b19"
-  integration_commit: "PENDING_CLEAN_CLONE_REPLAY"
-  clean_clone_commit: "PENDING_CLEAN_CLONE_REPLAY"
-  integration_state: CURRENT_TREE_PASS
+  integration_commit: "ad6329f80acb4a1cb6214a7ac2923f8436256b58"
+  clean_clone_commit: "ad6329f80acb4a1cb6214a7ac2923f8436256b58"
+  integration_state: CLEAN_CLONE_PASS
   target_result: UNKNOWN
   novelty_status: UNKNOWN
   strongest_bound_changed: false
@@ -1830,10 +1830,37 @@ thirty_second_research_wave:
   literature_independent_manifest_sha256: "b333f77785db6495040e5137b8cc8c9c70f283ed5dfac513ff92f98fd15f6b24"
   corrections_ledger: "verification/2026-07-24-wave32-orchestrator-corrections.md"
   corrections_ledger_sha256: "2c9a638b3b54fcbc9aa80cd216cd0d8eb600f45653129817e05b613a79de5f36"
+  clean_clone_replay: "verification/2026-07-24-wave32-clean-clone.md"
+  clean_clone_replay_sha256: "125f33304867ddd0b0031e9e35e582c47ef9cf400e0fe8fda18251b2a5d35f0c"
   sources_bib_sha256: "3c93b322ee4b0a61cf1407fdf5b082dbb90801459300289c7097b56833914a8e"
   current_tree_unit_tests_passed: 79
   deterministic_outputs_checked: 5
   manifest_count: 6
   manifest_entries: 42
+  clean_clone_unit_tests_passed: 79
+  clean_clone_generator_commands: 5
+  clean_clone_manifests: 6
+  clean_clone_manifest_entries: 42
+  clean_clone_claims_unique: 80
+  clean_clone_obligations_unique: 75
+  clean_clone_evidence_references_resolved: 1430
+  clean_clone_status_path_sha256_pairs: 376
+  clean_clone_wave32_status_path_sha256_pairs: 15
+  clean_clone_bibtex_keys_unique: 87
+  clean_clone_markdown_files: 324
+  clean_clone_local_markdown_links: 337
+  clean_clone_release_diff_files: 57
+  clean_clone_release_tree_files: 989
+  clean_clone_release_tree_bytes: 15646391
+  clean_clone_unpublished_commits: 3
+  clean_clone_range_objects: 74
+  clean_clone_new_blobs: 57
+  clean_clone_new_blob_bytes: 1076850
+  clean_clone_privacy_findings: 0
+  clean_clone_largest_new_blob_bytes: 134661
+  clean_clone_largest_tracked_blob_bytes: 654824
+  clean_clone_integration_tree: "12fabdda1adc156dcbbc4eb6813a793c9c08f04a"
+  clean_clone_strict_fsck: PASS
+  clean_clone_verdict: PASS
   caveat: "Wave 32 verifies necessary rooted Fano-support and rootless indecomposable motif reductions under their stated actual-incidence hypotheses. It neither excludes either surviving endpoint, excludes n3=708, improves n3>=708, constructs or excludes the target graph, resolves Conway-99, nor establishes novelty."
 last_updated: 2026-07-24

@@ -910,6 +910,14 @@ The
 retains every discovery defect, verifier objection, repair, scope wall, and
 the unchanged global `UNKNOWN` status.
 
+The detached
+[Wave 32 clean-clone replay](2026-07-24-wave32-clean-clone.md) freezes
+integration commit `ad6329f...`. It passes all 79 tests, regenerates five
+accepted outputs, validates all 42 manifest entries, checks the complete
+central ledgers and links, scans exact release and new-blob bytes with zero
+privacy findings, and finishes with clean detached status and strict
+Git-object integrity.
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

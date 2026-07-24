@@ -1346,6 +1346,15 @@ All discovery failures, verifier objections, metadata repairs, and unchanged
 status walls are retained in the
 [Wave 32 orchestrator ledger](verification/2026-07-24-wave32-orchestrator-corrections.md).
 
+The detached
+[Wave 32 clean-clone replay](verification/2026-07-24-wave32-clean-clone.md)
+freezes integration commit `ad6329f...` in a no-local, no-hardlink clone. It
+passes all 79 tests, regenerates five accepted outputs byte for byte,
+validates six manifests with 42 entries, resolves all 1,430 central evidence
+references and 337 local links, scans the 989-file release tree and all 57
+new Git blobs with zero privacy findings, and finishes with clean detached
+status and strict object verification.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

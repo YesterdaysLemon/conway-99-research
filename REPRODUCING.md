@@ -2088,6 +2088,16 @@ and
 [correction ledger](verification/2026-07-24-wave32-orchestrator-corrections.md)
 record every premise, repair, hostile control, and nonpromotion wall.
 
+The detached
+[Wave 32 clean-clone replay](verification/2026-07-24-wave32-clean-clone.md)
+freezes integration commit
+`ad6329f80acb4a1cb6214a7ac2923f8436256b58`. In a no-local,
+no-hardlink clone checked out in detached state, it repeats all 79 tests,
+runs the five generators outside the checkout, validates all six manifests
+and 42 entries, checks duplicate-ID-free YAML, 80 claims, 75 obligations,
+1,430 evidence references, 87 BibTeX keys, 337 local links, exact Git-blob
+privacy, clean status, and `git fsck --full --strict`.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
