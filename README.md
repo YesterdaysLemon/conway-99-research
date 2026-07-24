@@ -47,9 +47,14 @@ and the normalized search problem.
   of `h=729`. Wave 32 independently verifies that every actual-incidence
   norm-two root has one signed Fano-complement support and triangle pattern
   `(+1)^21,0^189,(-1)^21`. It also proves that every surviving rootless
-  actual-incidence endpoint is indecomposable and that rootlessness forbids the exact
-  `{-2,-2,-1}` three-row motif. Neither reduction excludes its surviving
-  branch, so `n3=708` remains unexcluded.
+  actual-incidence endpoint is indecomposable and that rootlessness forbids
+  the exact `{-2,-2,-1}` three-row motif. Wave 33 turns the rooted support
+  into an exact `14+70+15` graph-extension criterion with a simple
+  `2-(15,3,2)` design and a forced 70-vertex spectrum. On the rootless side,
+  it exhibits a formal local null trade invisible to two precisely named
+  contraction families and reduces every actual `R2` pair to an
+  eight-vertex board with four transversal candidates. Neither lane closes
+  its surviving branch, so `n3=708` remains unexcluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1354,6 +1359,114 @@ validates six manifests with 42 entries, resolves all 1,430 central evidence
 references and 337 local links, scans the 989-file release tree and all 57
 new Git blobs with zero privacy findings, and finishes with clean detached
 status and strict object verification.
+
+## Wave 33: finite rooted extension and rootless contraction wall
+
+Wave 33 continues both surviving endpoint branches without adding an
+automorphism assumption.  In the rooted branch, the signed Fano support
+forces an equitable partition
+
+```text
+|S|,|O|,|Q| = 14,70,15,
+
+quotient =
+[[4,10,0],
+ [2, 9,3],
+ [0,14,0]].
+```
+
+The 15-vertex cell `Q` is independent, and the `70 x 15` O-Q incidence is a
+simple `2-(15,3,2)` design.  If `F` is the fixed support-to-O incidence,
+`A_S` the Fano-complement support adjacency, `D` the induced O graph, and
+`B` the O-Q incidence, then a rooted graph extension exists if and only if
+binary `D,B` satisfy the six blocks
+
+```text
+A_S^2+F F^T             =12I-A_S+2J,
+A_S F+F D               =2J-F,
+F B                     =2J,
+F^T F+D^2+B B^T         =12I-D+2J,
+D B                     =2J-B,
+B^T B                   =12I+2J.
+```
+
+This is necessary and sufficient for the **graph extension**, not for every
+projector, lattice, tensor, and Schur endpoint condition.  Every solution
+would force the 70-vertex graph to be connected and 9-regular with spectrum
+
+```text
+9^1, (-1)^14, (-1-sqrt(2))^6, (-1+sqrt(2))^6,
+3^27, (-4)^16,
+```
+
+hence 315 edges, 56 triangles, 294 four-cycles, and determinant
+`2^32 3^29`.  The
+[clean-room rooted audit and static comparison](verification/wave33-rooted-extension/comparison-audit.md)
+pass 33 tests.  No binary solution or infeasibility certificate was
+obtained.
+
+The restricted
+[rooted construction package](verification/wave33-rooted-construction/audit.md)
+verifies one hostile O-Q object and the exact boundary of one bounded
+search.  The object is a simple `2-(15,3,2)` design with exact row, column,
+and Q-pair counts, but it fails ten entries of `FB=2J`, with squared defect
+10, and supplies no O-O layer.  A 25-second SciPy/HiGHS run encoded all
+`70!` assignments of that one fixed design only; it timed out with no
+primal and never entered the O-O phase.  Its timeout and every heuristic
+nonhit are non-evidentiary.  The independent verifier passed 37 tests in
+its frozen historical input state and supplies strict JSON and scope gates
+missing from the discovery checker.
+
+Adding this Wave 33 exposition to the mutable central `STRUCTURE.md` changed
+one deliberately frozen input hash, so direct integrated-root replay of the
+unchanged construction packages now fails closed.  The
+[chronology audit](verification/wave33-rooted-construction-chronology/audit.md)
+authenticates all eight historical inputs in an isolated temporary root and
+replays the unchanged 14 discovery plus 37 verifier tests.  Its 15 outer
+tamper, path, status, and no-write tests pass.  The 15 and embedded 51 are
+separate accounting layers, not 66 independent theorem tests.
+
+In the rootless branch, the
+[independent motif audit](verification/wave33-rootless-motif/audit.md)
+verifies the following exact local boundary.  At a formally allowed
+`q(T)=q(U)=2` `R2` pair, two nonnegative integral third-triangle tables
+have identical margins but respectively zero and one common `R3` triangle.
+At such a formal pair, every bilinear `Q[Gamma]` contraction and every
+`N^T p(A) N` contraction is blind to the displayed null trade, where
+`Q[Gamma]=span_Q{I,J,Gamma,C}`. This is a formal local control, not a
+globally realizable relation tensor, and the statement does not cover
+arbitrary two-leg statistics. Actual
+`lambda/mu` incidence independently forces every `R2` pair to have the
+eight-vertex board
+
+```text
+[[1,0,1],
+ [0,1,1],
+ [1,1,2]],
+```
+
+which has exactly four pair-indexed transversal candidates.  Rootlessness
+requires all `4*708=2832` candidates, counted with base-pair multiplicity,
+to remain open.  No checked argument proves that this is globally possible
+or impossible.  The rootless verifier passes 48 tests and returns
+`PASS_SCOPED_WITH_NONBLOCKING_WORDING_QUALIFIER`; the unqualified phrase
+"all two-leg contractions" is not accepted.
+
+Wave 33 therefore leaves the publication-safe wall unchanged:
+
+```text
+rooted partition/design/finite graph criterion:       VERIFIED scoped
+binary rooted criterion solution or exclusion:        UNKNOWN
+rootless fused-algebra and R2-board reductions:        VERIFIED scoped
+actual global mixed-motif forcing or avoidance:        UNKNOWN
+rooted / rootless indecomposable endpoints:            UNKNOWN
+n3=708 / Conway-99 / novelty:                         UNKNOWN
+strongest conditional bound:                          n3>=708
+```
+
+The complete correction, replay, scope, and manifest chronology is retained
+in the
+[Wave 33 orchestrator ledger](verification/2026-07-24-wave33-orchestrator-corrections.md).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

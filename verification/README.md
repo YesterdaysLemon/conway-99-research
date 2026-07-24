@@ -918,6 +918,90 @@ central ledgers and links, scans exact release and new-blob bytes with zero
 privacy findings, and finishes with clean detached status and strict
 Git-object integrity.
 
+## Wave 33 finite rooted extension and rootless contraction wall
+
+The [rooted extension audit](wave33-rooted-extension/comparison-audit.md)
+independently verifies the conditional `14+70+15` equitable partition, the
+simple `2-(15,3,2)` O-Q design, all six blocks of the exact strongly regular
+graph-extension equation, and the forced induced-O spectrum. The criterion
+is necessary and sufficient for a graph extension only; it does not certify
+the remaining projector, lattice, tensor, or Schur endpoint conditions.
+The precomparison and comparison suites pass `18+15=33` tests. No binary
+solution and no complete infeasibility certificate is supplied.
+
+The separate
+[rooted construction audit](wave33-rooted-construction/audit.md) verifies
+one hostile O-Q design, its ten exact `FB=2J` defects, and the precise scope
+of a bounded search over all `70!` assignments of that one fixed design.
+The package supplies no O-O layer. Its 25-second SciPy/HiGHS timeout has no
+primal and carries no positive or negative evidence. Independent
+precomparison and comparison suites pass `27+10=37` tests, and a separate
+replay regenerates the hostile certificate byte-identically in the frozen
+historical input state. The
+[chronology audit](wave33-rooted-construction-chronology/audit.md) preserves
+every original byte, authenticates all eight historical inputs, and replays
+the unchanged `14+37` construction tests in an isolated temporary root.
+Its 15 outer hostile chronology tests pass. Direct live-root replay is
+expected to reject the later integrated `STRUCTURE.md` byte.
+
+The [rootless motif audit](wave33-rootless-motif/audit.md) returns
+`PASS_SCOPED_WITH_NONBLOCKING_WORDING_QUALIFIER` after `21+27=48`
+independent tests. At a formally allowed `q(T)=q(U)=2` `R2` pair, every
+bilinear `Q[Gamma]` contraction and every `N^T p(A) N` contraction is blind
+to the displayed null trade. The two formal nonnegative integral tables
+have zero versus one common `R3` triangle. This does not establish global
+realizability, occurrence, forcing, or avoidance, and it must not be
+generalized to an unqualified statement about all two-leg contractions.
+The exact actual-incidence board has four pair-indexed transversal
+candidates, hence `4*708=2832` candidates with multiplicity rather than
+2,832 distinct realized triangles.
+
+Run the four live-input packages and the construction chronology package
+from the integrated repository root:
+
+```powershell
+python -B -m unittest discover -s attempts\wave33-rooted-extension -p test_*.py -v
+python -B -m unittest discover -s attempts\wave33-rootless-motif -p test_*.py -v
+python -B -m unittest discover -s verification\wave33-rooted-extension -p test_*.py -v
+python -B -m unittest discover -s verification\wave33-rootless-motif -p test_*.py -v
+python -B -m unittest discover -s verification\wave33-rooted-construction-chronology -p "test_*.py" -v
+```
+
+The five commands report `15+14+33+48+15=125` outer tests. One chronology
+test embeds the unchanged construction `14+37=51` replay. The original
+historical package accounting remains `15+14+14+33+48+37=161`; the 15
+chronology tests are a separate layer and are not added to the embedded 51
+as independent theorem tests.
+
+The seven original artifact manifests contain 73 entries. The chronology
+repair adds a seven-entry eighth manifest, for 80 entries in all:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| rooted discovery | 8 | `153860d39fe7274a2f55ee952bcad1135cf4134ccc36d9aec07f6da379c5ca04` |
+| rootless discovery | 8 | `384081a967153059399b4e0724e901ef28183cedab8d7e253e45af560e16df95` |
+| rooted construction discovery | 16 | `0cd192c0182506b3c901806cc96abb9fe53f04dc906b0b5cd73bc9b602558ff4` |
+| rooted precomparison verifier | 8 | `a0cd7d284a23aba5576f2da2a1282c9acb209953c3da5d01e706d793f61d3ea7` |
+| rooted comparison verifier | 6 | `50571e1870b7fafb245e2eaf79f8331a3b5d6c7cbd282a8bd2d8937b44898f76` |
+| rootless verifier | 13 | `e51811d3dd5a35d21a1e6c7f88625b9dfdabdd1097de1898f988b40747e82822` |
+| rooted construction verifier | 14 | `20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf` |
+| rooted construction chronology | 7 | `22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23` |
+
+The
+[Wave 33 orchestrator correction ledger](2026-07-24-wave33-orchestrator-corrections.md)
+retains the discovery-report manifest typo, the construction replay
+argument mistake, every verifier objection and checker gap, the mandatory
+rootless wording qualifier, and the unchanged publication wall:
+
+```text
+rooted graph criterion:                  VERIFIED scoped
+binary rooted solution or exclusion:    UNKNOWN
+rootless fused-algebra/local reduction:  VERIFIED scoped
+global mixed-motif forcing or avoidance: UNKNOWN
+rooted/rootless endpoints:               UNKNOWN
+n3=708 / Conway-99 / novelty:            UNKNOWN
+```
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

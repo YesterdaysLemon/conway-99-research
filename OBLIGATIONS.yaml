@@ -1280,3 +1280,135 @@ obligations:
       indecomposable motif. No complete positive or negative continuation
       certificate exists. Rooted endpoint, rootless indecomposable endpoint,
       n3=708, Conway-99 existence/nonexistence, and novelty remain UNKNOWN.
+
+  - id: O-WAVE33-ROOTED-EXTENSION
+    requirement: >-
+      Conditional on the frozen Wave 32 signed Fano support, independently
+      reconstruct the 14+70+15 equitable partition, the O-Q
+      2-(15,3,2) design, all six blocks of the strongly regular equation,
+      the binary/symmetry/zero-diagonal sufficiency gates, the induced-O
+      spectrum and finite invariants, hostile premise mutations, manifest
+      chronology, and the boundary between graph extension and the full
+      projector/lattice/tensor/Schur endpoint.
+    critical: true
+    status: PASS_SCOPED_GRAPH_EXTENSION_CRITERION
+    evidence:
+      - "agents/2026-07-24-wave33-rooted-extension.md"
+      - "attempts/wave33-rooted-extension/artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension/independent_check.py"
+      - "verification/wave33-rooted-extension/test_independent_check.py"
+      - "verification/wave33-rooted-extension/independent-results.json"
+      - "verification/wave33-rooted-extension/static_compare.py"
+      - "verification/wave33-rooted-extension/test_static_compare.py"
+      - "verification/wave33-rooted-extension/comparison-results.json"
+      - "verification/wave33-rooted-extension/audit.md"
+      - "verification/wave33-rooted-extension/comparison-audit.md"
+      - "verification/wave33-rooted-extension/artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension/comparison-artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    note: >-
+      The discovery suite passes 15 tests and verifier-owned suites pass
+      33. The exact finite graph-extension criterion and its conditional
+      spectrum are VERIFIED. No binary solution, exhaustive infeasibility
+      proof, full endpoint, n3=708 outcome, Conway-99 outcome, or novelty
+      conclusion is supplied.
+
+  - id: O-WAVE33-ROOTED-CONSTRUCTION
+    requirement: >-
+      Freeze the hostile O-Q candidate before comparison; independently
+      verify its exact design and coupling counts, reproduce its
+      deterministic search, inspect the full MILP row system and search
+      metadata, distinguish one fixed design from all designs, verify that
+      no O-O layer or solver witness exists, preserve the timeout as
+      non-evidence, and adversarially gate duplicate JSON keys and
+      scope/status metadata omitted by the discovery checker.
+    critical: true
+    status: PASS_SCOPED_FINITE_EVIDENCE_WITH_NONBLOCKING_CHECKER_GAPS
+    evidence:
+      - "agents/2026-07-24-wave33-rooted-construction.md"
+      - "attempts/wave33-rooted-construction/partial-design-certificate.json"
+      - "attempts/wave33-rooted-construction/bounded-search-manifest.json"
+      - "attempts/wave33-rooted-construction/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction/precomparison-freeze.sha256"
+      - "verification/wave33-rooted-construction/precomparison-results.json"
+      - "verification/wave33-rooted-construction/independent_check.py"
+      - "verification/wave33-rooted-construction/test_independent_check.py"
+      - "verification/wave33-rooted-construction/candidate_comparison.py"
+      - "verification/wave33-rooted-construction/test_candidate_comparison.py"
+      - "verification/wave33-rooted-construction/candidate-comparison-results.json"
+      - "verification/wave33-rooted-construction/audit.md"
+      - "verification/wave33-rooted-construction/failed-objections.md"
+      - "verification/wave33-rooted-construction/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction-chronology/chronology_replay.py"
+      - "verification/wave33-rooted-construction-chronology/test_chronology_replay.py"
+      - "verification/wave33-rooted-construction-chronology/chronology-results.json"
+      - "verification/wave33-rooted-construction-chronology/audit.md"
+      - "verification/wave33-rooted-construction-chronology/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    note: >-
+      Thirty-seven independent tests pass and the deterministic hostile
+      certificate replay is byte-identical. This verifies the frozen finite
+      facts only. The object violates ten fixed-label coupling equations,
+      supplies no O-O layer, and the one-fixed-design timeout is neither a
+      construction nor an exclusion. Fifteen separate chronology tests
+      authenticate the historical input state and embed the unchanged
+      14+37 replay; they are a reproducibility layer, not 66 independent
+      theorem tests.
+
+  - id: O-WAVE33-ROOTLESS-MOTIF
+    requirement: >-
+      Independently reconstruct the four-dimensional fused algebra and its
+      multiplication table, the q=2 R2-pair null trade, every audited
+      bilinear Q[Gamma] and N^T p(A) N contraction, the actual
+      lambda/mu-incidence board and weighted candidate count, the
+      mixed-trace factor, full-size partial hostile controls, candidate
+      provenance separation, and the exact boundary between local
+      contraction blindness and global realizability or motif forcing.
+    critical: true
+    status: PASS_SCOPED_WITH_NONBLOCKING_WORDING_QUALIFIER
+    evidence:
+      - "agents/2026-07-24-wave33-rootless-motif.md"
+      - "attempts/wave33-rootless-motif/artifact-manifest.sha256"
+      - "verification/wave33-rootless-motif/precomparison-results.json"
+      - "verification/wave33-rootless-motif/independent_check.py"
+      - "verification/wave33-rootless-motif/test_independent_check.py"
+      - "verification/wave33-rootless-motif/candidate_static_check.py"
+      - "verification/wave33-rootless-motif/test_candidate_static.py"
+      - "verification/wave33-rootless-motif/comparison-results.json"
+      - "verification/wave33-rootless-motif/audit.md"
+      - "verification/wave33-rootless-motif/failed-objections.md"
+      - "verification/wave33-rootless-motif/artifact-manifest.sha256"
+      - "verification/wave33-rootless-motif-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    note: >-
+      Forty-eight independent tests pass. The only publication-safe
+      blindness claim is restricted to bilinear Q[Gamma] contractions and
+      N^T p(A) N contractions at the formal q=2 R2 pair. Global table
+      realizability, actual motif forcing or avoidance, rootless endpoint
+      existence, n3=708, Conway-99, and novelty remain UNKNOWN.
+
+  - id: O-WAVE33-CONTINUATION
+    requirement: >-
+      Produce a complete independently verified continuation certificate
+      for the surviving endpoint split. The rooted lane must construct
+      binary D,B satisfying all six graph equations and every remaining
+      endpoint condition, or completely exclude the domain without an
+      automorphism restriction. The rootless lane must promote the local
+      fused-algebra and incidence-board reductions to a globally realizable
+      construction or a complete actual-incidence obstruction. Restricted
+      design searches, timeouts, local formal tables, and partial controls
+      cannot resolve this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave33-rooted-extension/comparison-audit.md"
+      - "verification/wave33-rooted-construction/audit.md"
+      - "verification/wave33-rootless-motif/audit.md"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    note: >-
+      No complete positive or negative continuation certificate exists.
+      Both endpoints, n3=708, Conway-99 existence and nonexistence, and
+      novelty remain UNKNOWN; the strongest conditional bound remains
+      n3>=708.

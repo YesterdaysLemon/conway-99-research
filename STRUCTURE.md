@@ -1972,6 +1972,186 @@ both surviving endpoints, `n3=708`, Conway-99, and novelty remain `UNKNOWN`.
 The full repair and scope chronology is retained in the
 [Wave 32 orchestrator ledger](verification/2026-07-24-wave32-orchestrator-corrections.md).
 
+## Wave 33 finite rooted extension and rootless contraction wall
+
+Wave 33 continues from the two independently verified Wave 32 endpoints.
+Nothing in this section assumes an automorphism outside the already-forced
+relabeling of the signed Fano support.
+
+### Rooted three-cell structure
+
+Let `S` be the signed 14-vertex support, `O` the 70 vertices with one
+neighbor in each sign class, and `Q` the 15 vertices with no support
+neighbor.  Summing target common-neighbor counts over `S` gives
+
+```text
+o in O: 2*lambda+12*mu = 8+2 deg_O(o),
+q in Q: 14*mu          = 2 deg_O(q).
+```
+
+At `lambda=1, mu=2`, this forces
+
+```text
+       S  O  Q
+S      4 10  0
+O      2  9  3
+Q      0 14  0.
+```
+
+In particular, `Q` is independent.  If `B` is the `70 x 15` O-Q incidence,
+then
+
+```text
+B 1=3 1,
+B^T 1=14 1,
+B^T B=12I+2J.
+```
+
+No two rows of `B` can repeat: two O vertices with the same three Q
+neighbors would have at least three common neighbors, exceeding both
+`lambda` and `mu`.  Thus the rows are a simple `2-(15,3,2)` design.
+
+Let `A_S` be the fixed signed-support adjacency and `F` the fixed
+support-to-O incidence.  Naming the induced O adjacency `D`, the full
+adjacency has block form
+
+```text
+    [ A_S  F  0 ]
+A = [ F^T  D  B ].
+    [  0  B^T 0 ]
+```
+
+The target identity is equivalent, block for block, to
+
+```text
+A_S^2+F F^T             =12I-A_S+2J,
+A_S F+F D               =2J-F,
+F B                     =2J,
+F^T F+D^2+B B^T         =12I-D+2J,
+D B                     =2J-B,
+B^T B                   =12I+2J.
+```
+
+Necessity follows by multiplication.  Conversely, binary `B`, symmetric
+binary zero-diagonal `D`, and all six equations reassemble
+`A^2=12I-A+2J`; the diagonal and off-diagonal entries then give the target
+degree and common-neighbor counts.  This is a necessary-and-sufficient
+finite criterion for the **graph extension**.  It does not by itself
+enforce the endpoint projector, lattice, tensor, or Schur conditions.
+
+The equations split `R^70` into exact invariant spaces and force
+
+```text
+spec(D)=
+9^1, (-1)^14,
+(-1-sqrt(2))^6, (-1+sqrt(2))^6,
+3^27, (-4)^16.
+```
+
+Consequently any solution has
+
+```text
+edges(D)=315,
+triangles(D)=56,
+C4(D)=294,
+det(D)=2^32 3^29.
+```
+
+The independent
+[rooted comparison audit](verification/wave33-rooted-extension/comparison-audit.md)
+passes 33 tests and finds no material defect.  It verifies the criterion,
+spectrum, cycles, determinant, and hostile two-`PG(3,2)` design without
+importing or executing discovery code.  It does not supply or exclude a
+binary solution.
+
+### Restricted rooted construction evidence
+
+The [construction audit](verification/wave33-rooted-construction/audit.md)
+checks one explicit O-Q certificate.  It has exact
+`2-(15,3,2)` row/column/pair data but support-point count histogram
+
+```text
+1^5, 2^200, 3^5,
+```
+
+so exactly ten entries of `FB=2J` fail and the squared defect is ten.  The
+O-O layer is unsupplied.  An empty O-O layer appears only as a verifier
+hostile control.
+
+A separate zero-objective MILP encodes all `70!` assignments of this one
+fixed simple design to the 70 labeled O vertices.  It does not cover other
+nonisomorphic designs.  The 25-second run returned a time limit with no
+primal and never entered the O-O phase.  This has no mathematical status.
+The verifier passes 37 tests, independently regenerates the hostile
+certificate, and supplies strict duplicate-key and scope gates absent from
+the discovery checker.  These are historical frozen-context tests.  Once
+this Wave 33 section changed the mutable `STRUCTURE.md`, direct live-root
+replay correctly failed the original input hash.  The separate
+[chronology audit](verification/wave33-rooted-construction-chronology/audit.md)
+authenticates the exact eight historical inputs in an isolated temporary
+root, replays the unchanged `14+37` construction suites, and passes 15
+outer tamper, path, status, and no-write tests.  The outer and embedded
+counts are distinct evidence layers.
+
+### Rootless fused-algebra boundary
+
+Write
+
+```text
+C=Gamma^2-5Gamma-18I,
+Q[Gamma]=span_Q{I,J,Gamma,C}.
+```
+
+The exact multiplication table includes
+
+```text
+Gamma^2 =18I+5Gamma+C,
+Gamma C =-18I+18J-2Gamma-C,
+C^2     =72I+216J-16Gamma-14C.
+```
+
+At a formally allowed `q(T)=q(U)=2` `R2` pair, two nonnegative integral
+third-triangle tables have the same margins and every bilinear contraction
+against this algebra, while their `(R3,R3)` entries are zero and one.
+Also
+
+```text
+N^T A^k N=(3I+Gamma)(Gamma-4I)^k in Q[Gamma]
+```
+
+for every `k>=0`.  Hence the displayed local trade is invisible to
+bilinear `Q[Gamma]` and `N^T p(A)N` contractions.  This is the verified
+scope; it is not a statement about arbitrary uncontracted, three-leg, or
+globally compatible incidence arguments.
+
+Actual target incidence around any `R2` pair independently forces the
+outside double-neighbor board
+
+```text
+[[1,0,1],
+ [0,1,1],
+ [1,1,2]].
+```
+
+A common `R3` triangle is exactly a triangular transversal of this board.
+There are four pair-indexed transversal candidates.  At `n3=708`, this is
+`2832` candidates counted with base-pair multiplicity.  Rootlessness
+requires all of them to remain open, but neither their global avoidance nor
+their forced closure is proved.
+
+The [rootless audit](verification/wave33-rootless-motif/audit.md) passes 48
+tests and returns
+`PASS_SCOPED_WITH_NONBLOCKING_WORDING_QUALIFIER`.  The unqualified
+discovery headline "all two-leg contractions" is replaced by the exact
+local algebraic scope above.
+
+Thus Wave 33 verifies a finite rooted reformulation, conditional spectral
+consequences, a scoped formal rootless null-trade control, and exact local
+incidence data.  Binary rooted solvability, actual global motif forcing or
+avoidance, both endpoints, `n3=708`, Conway-99, and novelty remain
+`UNKNOWN`.  The complete chronology is in the
+[Wave 33 orchestrator ledger](verification/2026-07-24-wave33-orchestrator-corrections.md).
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

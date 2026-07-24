@@ -52,3 +52,20 @@ Wave 31 reports:
   relaxation witness and one named radius-two nonhit. Independent
   verification promotes only those finite facts, not an unrestricted frame
   or endpoint conclusion.
+
+Wave 33 reports:
+
+- `2026-07-24-wave33-rooted-extension.md`: `DERIVED` discovery report for
+  the forced `14+70+15` partition, simple `2-(15,3,2)` O-Q design, exact
+  induced-70 spectrum, and six-block necessary-and-sufficient graph-extension
+  criterion. Independent verification promotes the structural reduction
+  only; no binary solution or exclusion is supplied.
+- `2026-07-24-wave33-rootless-motif.md`: `UNKNOWN` discovery report retaining
+  a formal local null trade and the actual eight-vertex R2 board with four
+  transversal candidates. Read it with the independent verifier's mandatory
+  wording qualifier: the checked blindness statement is local to a formal
+  `q=2` R2 pair and to bilinear `Q[Gamma]` / `N^T p(A)N` contractions.
+- `2026-07-24-wave33-rooted-construction.md`: `CANDIDATE` finite construction
+  report for one hostile O-Q object and one bounded assignment MILP over a
+  fixed simple design. The timeout is non-evidentiary, ten support-coupling
+  equations fail, and no O-O layer or graph is supplied.

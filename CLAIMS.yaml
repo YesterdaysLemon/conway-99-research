@@ -1164,6 +1164,136 @@ claims:
       triangle spectrum is identified as prior art. Both endpoints, n3=708,
       Conway-99, novelty, and priority remain UNKNOWN.
 
+  - id: C-WAVE33-ROOTED-EXTENSION-048
+    statement: >-
+      Conditional on the verified Wave 32 signed Fano-complement root
+      support, the 99 vertices split into cells S,O,Q of sizes 14,70,15
+      with quotient matrix [[4,10,0],[2,9,3],[0,14,0]]. Q is independent,
+      and the O-Q incidence is a simple 2-(15,3,2) design. With the fixed
+      support adjacency A_S and support-to-O incidence F, binary symmetric
+      zero-diagonal O adjacency D and binary O-Q incidence B extend the
+      rooted support to an srg(99,14,1,2) graph exactly when the six block
+      equations recorded in the Wave 33 audit hold. Any such D has spectrum
+      9^1,(-1)^14,(-1-sqrt(2))^6,(-1+sqrt(2))^6,3^27,(-4)^16, hence 315
+      edges, 56 triangles, 294 four-cycles, and determinant 2^32*3^29.
+    label: VERIFIED
+    scope: CONDITIONAL_WAVE32_ROOTED_SUPPORT_GRAPH_EXTENSION_CRITERION_ONLY
+    evidence:
+      - "agents/2026-07-24-wave33-rooted-extension.md"
+      - "attempts/wave33-rooted-extension/exact-results.json"
+      - "attempts/wave33-rooted-extension/artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension/independent-results.json"
+      - "verification/wave33-rooted-extension/comparison-results.json"
+      - "verification/wave33-rooted-extension/audit.md"
+      - "verification/wave33-rooted-extension/comparison-audit.md"
+      - "verification/wave33-rooted-extension/artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension/comparison-artifact-manifest.sha256"
+      - "verification/wave33-rooted-extension-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    limitations: >-
+      The criterion is necessary and sufficient only for the strongly
+      regular graph extension of the already forced support. It is not a
+      complete projector, lattice, tensor, A4, or Schur endpoint
+      certificate. No binary (D,B) solution, exhaustive search, or
+      infeasibility certificate is supplied. Rooted endpoint existence,
+      n3=708, Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE33-ROOTED-CONSTRUCTION-049
+    statement: >-
+      The frozen hostile O-Q certificate is an exact simple 2-(15,3,2)
+      design with row degrees 3^70, column degrees 14^15, and every Q-pair
+      intersection equal to two. Against the fixed rooted support incidence
+      it fails exactly ten of the 210 FB=2J entries, five by -1 and five by
+      +1, with squared defect ten. The frozen MILP has 4,900 binary
+      variables and 350 equalities and ranges over all 70! assignments of
+      this one fixed design; its 25-second status-1 timeout returned no
+      primal, objective, node count, gap, or O-O search result.
+    label: VERIFIED
+    scope: FROZEN_HOSTILE_OQ_OBJECT_AND_ONE_FIXED_DESIGN_SEARCH_METADATA_ONLY
+    evidence:
+      - "agents/2026-07-24-wave33-rooted-construction.md"
+      - "attempts/wave33-rooted-construction/partial-design-certificate.json"
+      - "attempts/wave33-rooted-construction/bounded-search-manifest.json"
+      - "attempts/wave33-rooted-construction/exact-results.json"
+      - "attempts/wave33-rooted-construction/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction/precomparison-results.json"
+      - "verification/wave33-rooted-construction/candidate-comparison-results.json"
+      - "verification/wave33-rooted-construction/audit.md"
+      - "verification/wave33-rooted-construction/failed-objections.md"
+      - "verification/wave33-rooted-construction/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction-chronology/chronology-results.json"
+      - "verification/wave33-rooted-construction-chronology/audit.md"
+      - "verification/wave33-rooted-construction-chronology/artifact-manifest.sha256"
+      - "verification/wave33-rooted-construction-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    limitations: >-
+      This is no construction and no exclusion. The fixed design is not a
+      without-loss-of-generality representative of all nonisomorphic
+      2-(15,3,2) designs. No O-O layer is supplied. The timeout and
+      heuristic nonhits carry no existence or nonexistence evidence. The
+      discovery checker has recorded nonblocking metadata and duplicate-key
+      coverage gaps that the independent verifier gates. The chronology
+      package replays the unchanged historical packages without treating
+      later central-document drift as a candidate mutation. Every endpoint
+      and global status remains UNKNOWN.
+
+  - id: C-WAVE33-ROOTLESS-MOTIF-050
+    statement: >-
+      For the frozen rootless relation algebra,
+      Q[Gamma]=span{I,J,Gamma,C} has dimension four and the exact
+      multiplication table recorded in the Wave 33 audit. At a formally
+      allowed q(T)=q(U)=2 R2 pair, every bilinear Q[Gamma] contraction and
+      every N^T p(A) N contraction is blind to the displayed null trade:
+      two nonnegative integral local third-triangle tables share all audited
+      contractions but have respectively zero and one common R3 triangle.
+      Independently, the actual R2 incidence board is
+      [[1,0,1],[0,1,1],[1,1,2]], with exactly four pair-indexed transversal
+      candidates and therefore 2,832 candidates counted with multiplicity
+      over the 708 R2 pairs.
+    label: VERIFIED
+    scope: FORMAL_Q2_R2_LOCAL_CONTRACTION_AND_ACTUAL_INCIDENCE_BOARD_REDUCTIONS_ONLY
+    evidence:
+      - "agents/2026-07-24-wave33-rootless-motif.md"
+      - "attempts/wave33-rootless-motif/exact-results.json"
+      - "attempts/wave33-rootless-motif/artifact-manifest.sha256"
+      - "verification/wave33-rootless-motif/precomparison-results.json"
+      - "verification/wave33-rootless-motif/comparison-results.json"
+      - "verification/wave33-rootless-motif/audit.md"
+      - "verification/wave33-rootless-motif/failed-objections.md"
+      - "verification/wave33-rootless-motif/artifact-manifest.sha256"
+      - "verification/wave33-rootless-motif-candidate-freeze.sha256"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    limitations: >-
+      The local tables are formal controls, not globally realizable relation
+      tensors. Occurrence of the formal q=2 pair, global realizability,
+      partial-control extendibility, motif forcing, and motif avoidance are
+      UNKNOWN. The contraction statement does not cover arbitrary two-leg
+      statistics, uncontracted labels, genuine three-leg incidence, or
+      global projector/Schur compatibility. The 2,832 count is not a count
+      of distinct realized triangles. Rootless endpoint existence, n3=708,
+      Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE33-CONTINUATION-051
+    statement: >-
+      The Wave 33 rooted finite graph-extension system has a binary solution
+      compatible with every remaining endpoint condition, or the rootless
+      local motif boundary can be promoted to a complete globally valid
+      construction or obstruction resolving the surviving n3=708 endpoint
+      split.
+    label: UNKNOWN
+    scope: WAVE33_SURVIVING_ROOTED_AND_ROOTLESS_ENDPOINT_CONTINUATION
+    evidence:
+      - "verification/wave33-rooted-extension/comparison-audit.md"
+      - "verification/wave33-rooted-construction/audit.md"
+      - "verification/wave33-rootless-motif/audit.md"
+      - "verification/2026-07-24-wave33-orchestrator-corrections.md"
+    limitations: >-
+      No full graph, endpoint realization, complete-domain UNSAT
+      certificate, global motif-forcing theorem, or global motif-avoidance
+      construction exists in the checked packages. Both endpoint branches,
+      n3=708, Conway-99 existence and nonexistence, and novelty remain
+      UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

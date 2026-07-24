@@ -41,3 +41,28 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   audit hash; repair `7530cae` pins the final public input and an independent
   re-audit preserves all historical hashes.
 - Boundary: neither lane resolves Conway-99 or establishes novelty.
+
+## Wave 33: rooted extension and rootless motif boundary
+
+- `wave33-rooted-extension/` derives the forced `14+70+15` quotient,
+  simple `2-(15,3,2)` O-Q design, exact induced-70 spectrum, and the full
+  six-block binary graph-extension criterion. Its 15-test discovery suite
+  supplies no satisfying pair and no infeasibility certificate.
+- `wave33-rootless-motif/` gives two formal local third-triangle tables
+  invisible to the checked fused algebra while changing the common-R3 count,
+  plus the actual eight-vertex R2 board with four transversal candidates.
+  Its 14-test suite does not prove global realization, motif forcing, or
+  motif avoidance. The independent audit narrows the headline to the formal
+  `q=2` R2 and bilinear `Q[Gamma]` / `N^T p(A)N` scope.
+- `wave33-rooted-construction/` retains an exact hostile O-Q certificate,
+  a deterministic search replay, and a bounded MILP record for all `70!`
+  assignments of one fixed simple design. The certificate fails ten
+  central-notation `F B=2J` entries with squared defect ten and supplies no
+  O-O layer. The
+  status-1 timeout, heuristic nonhits, and every missing layer are explicitly
+  non-evidentiary. Because its input freeze predates the mutable central
+  Wave 33 exposition, replay the unchanged 14-test package through
+  `verification/wave33-rooted-construction-chronology/`, not directly
+  against the integrated root.
+- The full correction and nonpromotion chronology is in
+  `verification/2026-07-24-wave33-orchestrator-corrections.md`.
