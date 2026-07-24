@@ -1,0 +1,52 @@
+role: verifier
+date_utc: 2026-07-24T11:18:05Z
+git_commit: b2595baa40d50e9c259051751fe27090bee6a449
+package_state: UNCOMMITTED_CHRONOLOGY_REPAIR_WITH_GIT_ACTIONS_PROHIBITED
+claim_label: VERIFIED
+scope: >-
+  Historical-byte reproducibility of the unchanged Wave 33 rooted
+  construction discovery and verifier packages only. This does not verify a
+  graph construction, graph nonexistence, or any broader endpoint claim.
+inputs:
+  verification/wave33-rooted-construction-candidate-freeze.sha256: 441465c157f28e658afde31e6ca0cff49ccb5841a001150bd3e3af616c5bf63a
+  attempts/wave33-rooted-construction/artifact-manifest.sha256: 0cd192c0182506b3c901806cc96abb9fe53f04dc906b0b5cd73bc9b602558ff4
+  verification/wave33-rooted-construction/precomparison-freeze.sha256: 4ccbbad9c01eab764d9aa6fb207114e43f8c5a36bec3ec5bf0d161708ce0360d
+  verification/wave33-rooted-construction/artifact-manifest.sha256: 20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf
+  verification/wave33-rooted-construction-chronology/historical-inputs.json: d62fc4311577d56cbf34f8bd4e63aefb3b796457b3d020f4322324073d82f7dd
+method: >-
+  Authenticate the original four package roots and the exact eight-input
+  structured snapshot; materialize a new temporary historical repository;
+  copy only hash-accepted candidate, verifier, and six solver-provenance
+  files; run the unchanged discovery and verifier suites with bytecode
+  disabled; regenerate exact output outside the synthetic checkout; replay
+  the independent hostile search; bind the accepted compact result to core
+  recomputation; and prove both source anchors and the synthetic tree remain
+  unchanged.
+command: |-
+  python -B -m unittest discover -s verification/wave33-rooted-construction-chronology -p "test_*.py" -v
+  python -B verification/wave33-rooted-construction-chronology/chronology_replay.py --output <scratch>/chronology-results.json
+outputs:
+  verification/wave33-rooted-construction-chronology/chronology_replay.py: eb100bcdecb349d27a2c39375945b31c5896cd261aa0be95264e8a8d26c0ebf9
+  verification/wave33-rooted-construction-chronology/test_chronology_replay.py: 3d0e6c055f63b7beb09142e49efe74aeb437885612ed23bebfc10ab6f0ebee3a
+  verification/wave33-rooted-construction-chronology/chronology-results.json: 06bc23423425feb49f37491fc7165aefaf62f50f54ef49992a0da373782bf19a
+  verification/wave33-rooted-construction-chronology/audit.md: b3f629b1e0582017f0c60db201ed6acdc5c58abfd402cba15a6b698e3c4743da
+  verification/wave33-rooted-construction-chronology/failed-objections.md: a10689393b1605c4c964a1d8cae6b94219b08612889a26713c6b96f20cdbedff
+  current_tree_chronology_tests_passed: 15
+  isolated_historical_discovery_tests_passed: 14
+  isolated_historical_verifier_tests_passed: 37
+  isolated_historical_package_tests_passed: 51
+  exact_results_sha256: ba6640eacd041bc8349024a1d3f13e3d74bd67cdad64d2d78c9a94927319c496
+  comparison_cli_stdout_sha256: 7025cc30551e219c224fe068d641a202db9f1c7a39e480908933e9a93fe597c5
+  accepted_comparison_summary_sha256: c0476fb877e0e7d6a6fc63b1a4c72bda0d7804a18a4e4b2b6d5a1bcbc4b6b459
+  reproduced_certificate_sha256: 340e5df716ad63bceba25c745ab04c22ea1a3dca01e939072f09775a5fc5f634
+limitations:
+  - The recorded git_commit is the frozen public input base, not a commit
+    containing this new package; Git actions were prohibited for this repair.
+  - Direct integrated-root replay of the unchanged construction packages is
+    expected to fail because mutable STRUCTURE.md no longer has historical
+    bytes. The isolated replay is the publication command.
+  - The structured snapshot proves exact historical inputs but does not
+    promote any mathematical claim.
+  - The MILP covers one fixed design only, and its timeout is no evidence.
+  - No O-O layer, complete graph extension, endpoint, n3=708 conclusion,
+    Conway-99 outcome, or novelty result is supplied.

@@ -1,0 +1,53 @@
+{
+  "chronology": {
+    "archive_sha256": "d62fc4311577d56cbf34f8bd4e63aefb3b796457b3d020f4322324073d82f7dd",
+    "archive_status": "PASS",
+    "historical_input_count": 8,
+    "historical_structure_sha256": "45640fecaa5834b24063c682c7edd0898f2746253a7708a2c70c3610e4bcb99a",
+    "live_structure_is_not_historical_input": true
+  },
+  "claim_label": "VERIFIED",
+  "freeze_anchors": {
+    "candidate_artifact_manifest_sha256": "0cd192c0182506b3c901806cc96abb9fe53f04dc906b0b5cd73bc9b602558ff4",
+    "candidate_freeze_sha256": "441465c157f28e658afde31e6ca0cff49ccb5841a001150bd3e3af616c5bf63a",
+    "precomparison_manifest_sha256": "4ccbbad9c01eab764d9aa6fb207114e43f8c5a36bec3ec5bf0d161708ce0360d",
+    "status": "UNCHANGED",
+    "verifier_artifact_manifest_sha256": "20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf"
+  },
+  "materialized": {
+    "candidate_artifact_entries": 16,
+    "candidate_freeze_entries": 17,
+    "historical_input_count": 8,
+    "precomparison_entries": 5,
+    "solver_provenance_files": 6,
+    "verifier_artifact_entries": 14
+  },
+  "replay": {
+    "checkout_outputs_written": 0,
+    "comparison_accepted_summary_core_bound": true,
+    "comparison_cli_stdout_sha256": "7025cc30551e219c224fe068d641a202db9f1c7a39e480908933e9a93fe597c5",
+    "comparison_results_sha256": "c0476fb877e0e7d6a6fc63b1a4c72bda0d7804a18a4e4b2b6d5a1bcbc4b6b459",
+    "exact_results_byte_identical": true,
+    "exact_results_sha256": "ba6640eacd041bc8349024a1d3f13e3d74bd67cdad64d2d78c9a94927319c496",
+    "historical_package_tests_passed": 51,
+    "hostile_search_certificate_byte_identical": true,
+    "hostile_search_certificate_sha256": "340e5df716ad63bceba25c745ab04c22ea1a3dca01e939072f09775a5fc5f634",
+    "pycache_created": false,
+    "status": "PASS",
+    "synthetic_tree_unchanged": true,
+    "unchanged_discovery_tests_passed": 14,
+    "unchanged_verifier_tests_passed": 37
+  },
+  "role": "verifier",
+  "schema_version": 1,
+  "scope": "Historical-byte replay of the unchanged Wave 33 rooted construction discovery and verifier packages only.",
+  "status_wall": {
+    "Conway_99": "UNKNOWN",
+    "complete_domain_UNSAT_certificate": "NONE",
+    "complete_graph_extension": "UNKNOWN",
+    "full_rooted_endpoint": "UNKNOWN",
+    "n3_708": "UNKNOWN",
+    "novelty": "UNKNOWN",
+    "timeout_negative_evidence": false
+  }
+}
