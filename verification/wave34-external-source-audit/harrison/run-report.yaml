@@ -52,11 +52,11 @@ outputs:
   - path: verification/wave34-external-source-audit/harrison/six-non-gram-cores.json
     sha256: f9d25fd5d9e00103b0a0759ab1a14c504409e6b0c19ebb00781bc0aa5d9dd9aa
   - path: verification/wave34-external-source-audit/harrison/rung-ledger.csv
-    sha256: 77ff87362be80eca8261012d2ac55dc841d299e795fdfb12e9b42d16bf312407
+    sha256: efa04c9e4ea5e826ecc12db7616e190779520478b89fe70f1432579a2e2b971a
   - path: verification/wave34-external-source-audit/harrison/r230-lfs-ledger.csv
-    sha256: 089dcf030018ce7008ec89b88cfedefe6ce5ae8ee133c8d31e06f88b8cdfd336
+    sha256: 540512a116a38cac49b8cdc4d5c68f32d31a9fa4527b5d6eed7994265c0ec94a
   - path: verification/wave34-external-source-audit/harrison/verify_harrison_source.py
-    sha256: c51f2c5ea6ce7427bad84da3fe1aa5575ac1e249ab26091a92a6d471d3c2849e
+    sha256: 44d41e96f6c7d2dfd5281c641ba24bf4203dee74f4a7f99881deb312a88339f0
   - path: verification/wave34-external-source-audit/harrison/reproducibility-correction.md
     sha256: 42295c0ca3b1d6871aff2b548c3992cdf80c7831f7e14cae1fd632ac034931eb
 subclaims:

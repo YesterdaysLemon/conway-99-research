@@ -878,7 +878,9 @@ def inspect_r230_lfs(bundle: Path, output_dir: Path) -> dict[str, Any]:
             })
     csv_path = output_dir / "r230-lfs-ledger.csv"
     with csv_path.open("w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(rows_out[0]))
+        writer = csv.DictWriter(
+            fh, fieldnames=list(rows_out[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows_out)
 
@@ -1016,7 +1018,9 @@ def summarize_rungs(ledger: list[dict[str, Any]], output_dir: Path) -> list[dict
             })
     csv_path = output_dir / "rung-ledger.csv"
     with csv_path.open("w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(summaries[0]))
+        writer = csv.DictWriter(
+            fh, fieldnames=list(summaries[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(summaries)
     return summaries
