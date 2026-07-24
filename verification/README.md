@@ -625,6 +625,8 @@ protocol tests with the commands in [`REPRODUCING.md`](../REPRODUCING.md).
 The 16 publication manifests contain 130 entries. Exact corrections and
 nonpromotion walls are in the
 [Wave 34 orchestrator ledger](2026-07-24-wave34-orchestrator-corrections.md).
+The exact public detached replay is in the
+[Wave 34 clean-clone audit](2026-07-24-wave34-clean-clone.md).
 
 ```text
 rooted structural/encoding facts: VERIFIED scoped

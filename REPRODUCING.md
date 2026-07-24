@@ -2486,6 +2486,9 @@ n3=708 / Conway-99 / novelty:                  UNKNOWN
 strongest conditional bound:                  n3>=708
 ```
 
+The exact detached publication replay is recorded in
+[`verification/2026-07-24-wave34-clean-clone.md`](verification/2026-07-24-wave34-clean-clone.md).
+
 See the
 [rooted structural audit](verification/wave34-rooted-structural/comparison-audit.md),
 [rooted encoding audit](verification/wave34-rooted-encoding/comparison-audit.md),

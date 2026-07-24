@@ -2167,6 +2167,10 @@ thirty_fourth_research_wave:
   publication_manifest_entries: 130
   corrections_ledger: "verification/2026-07-24-wave34-orchestrator-corrections.md"
   corrections_ledger_sha256: "849c218a5ae4cc64cdb33b9bf426607a530f36986ebac6d0343af36644bf79ec"
-  clean_clone_status: PENDING_INTEGRATION_REPLAY
+  clean_clone_status: PASS
+  clean_clone_commit: "9cbc9d5f92490c4be972c7f4b69683a6015ae62e"
+  clean_clone_tree: "6a3a565a60bd7e70099c43124455118a0d6fd792"
+  clean_clone_report: "verification/2026-07-24-wave34-clean-clone.md"
+  clean_clone_report_sha256: "ebc9e13ea0262f69e8edbe9d88b044d01e45147989af6ff14229f34aaa7ef0d3"
   caveat: "Wave 34 verifies an unrestricted labeled rooted encoding, a strict rooted reparameterization and necessary duplicate-free single-column domain, scoped actual-incidence rootless lemmas and moment bounds, and bounded external-source characterizations. It supplies no graph, no complete-domain UNSAT proof, no compatible rooted 15-column/projector realization, no rootless mixed-motif forcing theorem, no endpoint resolution, no n3=708 exclusion, no Conway-99 resolution, and no novelty or priority result."
 last_updated: 2026-07-24

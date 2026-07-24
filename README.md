@@ -1598,6 +1598,13 @@ status blob, and passes the unchanged 11-test full-census suite. This repairs
 reproducibility without weakening the freeze or changing any mathematical
 status.
 
+The
+[Wave 34 detached clean-clone audit](verification/2026-07-24-wave34-clean-clone.md)
+passes 149 direct tests plus the 11-test authenticated historical replay,
+validates 16 publication manifests with 130 entries, reconstructs and checks
+all 4,323,943 CNF clauses, and finishes with a clean detached checkout and
+strict repository-integrity gates. Conway-99 remains `UNKNOWN`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
