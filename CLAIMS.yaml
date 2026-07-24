@@ -780,6 +780,90 @@ claims:
       - "SOURCES.bib"
     limitations: "Bounded non-discovery is not a novelty, priority, or openness certificate. The initially frozen protocol misread the factor 21 in 21E6^-1 as 2; the error is preserved and corrected before the corrective searches. Ten zbMATH requests returned service-failure 404 responses and are not counted as zero-result evidence; broad service totals and first-page limits also constrain coverage. The audit did not verify any mathematical claim. Target status and Wave 27 novelty remain UNKNOWN."
 
+  - id: C-WAVE28-GLUE-033
+    statement: "For every unrestricted even positive-definite rank-44 n3=708 endpoint lattice S with 21S^-1 even integral and determinant in the frozen eight-row list, the 3- and 7-primary discriminant components are elementary, the exact level is 3, 7, or 21, and exactly twelve formal finite quadratic modules satisfy the frozen Milgram phase. The scaled dual has the same local determinant sign at 3 and 7. A primitive root has divisibility one and index-two glue with complement determinant 2h; the complete one-root projector count census has 46 second-moment patterns and 32 after the cubic-energy bound."
+    label: VERIFIED
+    scope: CONDITIONAL_N3_708_NECESSARY_GLUE_AND_ROOT_IMAGE_RESTRICTIONS
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-glue-discriminant.md"
+      - "attempts/wave28-glue-discriminant/exact_check.py"
+      - "attempts/wave28-glue-discriminant/test_exact_check.py"
+      - "attempts/wave28-glue-discriminant/exact-results.json"
+      - "attempts/wave28-glue-discriminant/failed-routes.md"
+      - "attempts/wave28-glue-discriminant/run-report.yaml"
+      - "attempts/wave28-glue-discriminant/artifact-manifest.sha256"
+      - "verification/wave28-glue-discriminant/audit.md"
+      - "verification/wave28-glue-discriminant/independent_check.py"
+      - "verification/wave28-glue-discriminant/test_independent_check.py"
+      - "verification/wave28-glue-discriminant/independent-results.json"
+      - "verification/wave28-glue-discriminant/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    limitations: "The verifier assigns PASS_WITH_CORRECTION. The frozen discovery sentence excluding cyclic order-21 invariant factors is false: Z/21 is killed by 21, so invariant factors may have order 21 although each p-primary part is elementary. The corrected primary decomposition and all downstream calculations pass independently. The twelve modules are formal local candidates, the 32 patterns are necessary counts rather than realizations, root-preserving glue and rootless complements remain unclassified, and no determinant row, n3=708, Conway-99 outcome, or novelty claim is established."
+
+  - id: C-WAVE28-THETA-034
+    statement: "The exact theta levels, scalar characters, Poisson/Weil laws, Sturm bounds 7/14/58, and determinant vetoes against modular and strongly 21-modular shortcuts hold for all eight endpoint rows. The exact bare control S0=K12 orthogonal-sum LAMBDA(F) has rank 44, determinant 729, minimum 4, no roots, 147636 norm-four vectors, and min(21S0^-1)=28. Its finite discriminant quadratic module and Weil representation are isometric to those of E6^6 orthogonal-sum E8, which has 672 roots."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_THETA_RESTRICTIONS_AND_BARE_S_G_CONTROL_ONLY
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-theta-modular.md"
+      - "attempts/wave28-theta-modular/exact_check.py"
+      - "attempts/wave28-theta-modular/test_exact_check.py"
+      - "attempts/wave28-theta-modular/exact-results.json"
+      - "attempts/wave28-theta-modular/failed-routes.md"
+      - "attempts/wave28-theta-modular/run-report.yaml"
+      - "attempts/wave28-theta-modular/artifact-manifest.sha256"
+      - "verification/wave28-theta-modular/audit.md"
+      - "verification/wave28-theta-modular/independent_check.py"
+      - "verification/wave28-theta-modular/test_independent_check.py"
+      - "verification/wave28-theta-modular/independent-results.json"
+      - "verification/wave28-theta-modular/catalogue-data.json"
+      - "verification/wave28-theta-modular/source-manifest.json"
+      - "verification/wave28-theta-modular/theorem-source-manifest.json"
+      - "verification/wave28-theta-modular/run-report.yaml"
+      - "verification/wave28-theta-modular/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    limitations: "A complete 15053011-node exact enumeration verifies the LAMBDA(F) shell, but S0 supplies only S and G. Ordinary theta data lose the selected 231-row orientation and pairwise Gram/cubic information. No primitive embedding, X, M, Q, B, Schur-square certificate, endpoint realization or exclusion, graph, target result, or novelty conclusion follows."
+
+  - id: C-WAVE28-NEIGHBOR-035
+    statement: "Two simultaneous even two-neighbors of the Wave 27 E8^4 orthogonal-sum E6^2 paired-form package preserve the complete abstract S,Q,G,B,C arithmetic. The preferred all-six-block control has 568 roots spanning rank 43 with components A1^4, A5, D5, D8, and E7^3, primitive root-closure determinant 12, complement <12>, and total glue index 128. The retained initial control has 568 roots spanning rank 44 with root-lattice index 32."
+    label: VERIFIED
+    scope: ABSTRACT_ARITHMETIC_AND_LATTICE_CONTROLS_ONLY
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-simultaneous-neighbor-freeze.md"
+      - "verification/wave28-simultaneous-neighbor/intake-freeze.json"
+      - "verification/wave28-simultaneous-neighbor/independent_check.py"
+      - "verification/wave28-simultaneous-neighbor/test_independent_check.py"
+      - "verification/wave28-simultaneous-neighbor/independent-results.json"
+      - "verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md"
+      - "verification/wave28-simultaneous-neighbor/failed-runs.md"
+      - "verification/wave28-simultaneous-neighbor/run-report.yaml"
+      - "verification/wave28-simultaneous-neighbor/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    limitations: "The controls have no primitive Z^231 embedding, 231-row norm-four frame, required M alphabet/profile, Q=X^T(M o M)X check, Schur-square origin, or graph. The direct unreduced 44-dimensional enumeration timeout is non-evidentiary. These examples show that orthogonal-ADE component screens do not classify general neighbors; they do not realize or exclude n3=708, resolve Conway-99, or establish novelty."
+
+  - id: C-WAVE28-LITERATURE-036
+    statement: "At the frozen 2026-07-24 cutoff, the proof-separated Wave 28 audit executed all 35 pre-frozen queries and retained 17 metadata-only source records. A 2025 refereed article explicitly describes existence of srg(99,14,1,2) as open, and a 2026 SAT preprint reports attempts without resolution. The audit found standard discriminant, theta, neighbor, modular-lattice, and frame ingredients but no direct source for any exact combined Wave 28 result."
+    label: CITED
+    scope: PUBLIC_SOURCE_STATUS_CONCEPTUAL_PRIOR_ART_AND_BOUNDED_NONDISCOVERY_ONLY
+    evidence:
+      - "verification/wave28-literature-audit/protocol-freeze.md"
+      - "verification/wave28-literature-audit/query-ledger.json"
+      - "verification/wave28-literature-audit/query-results.json"
+      - "verification/wave28-literature-audit/audit.md"
+      - "verification/wave28-literature-audit/sources/bibliography.json"
+      - "verification/wave28-literature-audit/sources/notes/target-status.md"
+      - "verification/wave28-literature-audit/sources/notes/lattice-discriminant.md"
+      - "verification/wave28-literature-audit/sources/notes/theta-controls.md"
+      - "verification/wave28-literature-audit/sources/notes/neighbor-frame-root-patterns.md"
+      - "verification/wave28-literature-audit/run-report.yaml"
+      - "verification/wave28-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    limitations: "The official Brouwer table could not be opened through the search service, and no authenticated zbMATH connector was available; both are access limitations, not nonhit evidence. A bounded source search cannot prove openness after its cutoff, novelty, or priority. The audit verifies attribution and theorem boundaries, not the repository arithmetic. Target existence, n3=708, and Wave 28 novelty remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

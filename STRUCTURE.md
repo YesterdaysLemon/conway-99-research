@@ -1431,6 +1431,99 @@ seven-commit unpublished range, clean status, and strict Git object
 verification at integration commit
 `4a2f65d20f8fa403a3a245815799070cf126173f`.
 
+## Wave 28 general-lattice controls
+
+At `n3=708`, write
+
+```text
+G=X^T X,
+S=21G^(-1),
+M=XSX^T,
+W=M o M,
+Q=X^T W X,
+B=SQ=I+2C.
+```
+
+Wave 28 keeps this full endpoint package frozen while dropping every
+root-lattice, orthogonal-decomposition, strong-modularity, and automorphism
+assumption from its generic reductions.
+
+For
+
+```text
+h=det(S) in {9,21,49,81,189,441,729,1029},
+```
+
+the discriminant group has elementary 3- and 7-primary parts and exact level
+`3`, `7`, or `21`. The exact Milgram calculation leaves twelve formal finite
+quadratic modules. A primitive root has divisibility one but need not split:
+its orthogonal complement has determinant `2h`, and the primitive
+root-closure is governed by root-preserving isotropic glue against a rootless
+complement. The exact projector moments leave 46 one-root coordinate
+patterns, reduced to 32 by the cubic-energy bound. These are necessary count
+patterns, not frame realizations.
+
+The frozen discovery sentence excluding cyclic order-21 invariant factors is
+false. The correct statement is:
+
+```text
+no p-primary cyclic factor has order p^2 or higher;
+invariant factors divide 21 and may have order 21.
+```
+
+The independent
+[glue audit](verification/wave28-glue-discriminant/audit.md) verifies the
+corrected primary decomposition and every downstream finite calculation. It
+excludes no determinant row.
+
+The theta lane proves the exact generic level, character, Poisson/Weil, Sturm,
+and modularity-veto statements and constructs the bare control
+
+```text
+S0=K12 orthogonal_sum LAMBDA(F),
+det(S0)=729,
+min(S0)=4,
+r_S0(2)=0,
+r_S0(4)=147636,
+min(21S0^(-1))=28.
+```
+
+The rooted lattice `E6^6 orthogonal_sum E8` has the same finite discriminant
+quadratic module and Weil representation but 672 roots. Hence these bare
+lattice/theta data do not determine the root coefficient. The complete
+fraction-free enumeration of the 32-dimensional component visits 15,053,011
+closed-ellipsoid nodes. See the
+[theta audit](verification/wave28-theta-modular/audit.md). Neither comparison
+object includes the marked 231-vector frame.
+
+Finally, a simultaneous two-neighbor transformation of the Wave 27 paired
+forms produces two exact abstract controls. The preferred control has 568
+roots of rank 43 and components
+
+```text
+A1^4 orthogonal_sum A5 orthogonal_sum D5 orthogonal_sum D8
+  orthogonal_sum E7^3,
+```
+
+while the retained initial control has 568 roots of full rank 44. Their
+complete matrices, roots, closures, and glue indices pass independent exact
+reconstruction. See the
+[neighbor audit](verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md).
+
+These controls establish sharp boundary information:
+
+```text
+bare scaled-dual lattice data do not force roots;
+general neighbors need not retain an orthogonal ADE decomposition;
+full projector/Schur endpoint compatibility remains UNKNOWN.
+```
+
+No Wave 28 object supplies all of `X,M,W,Q,B`. Thus no `h` row, `n3=708`,
+or Conway-99 outcome is excluded. The bound remains `n3>=708`, with at least
+209,994 induced six-cycles. Corrections and failed routes are collected in
+the
+[Wave 28 correction ledger](verification/2026-07-24-wave28-orchestrator-corrections.md).
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

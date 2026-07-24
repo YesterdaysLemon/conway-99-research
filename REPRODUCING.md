@@ -1458,6 +1458,136 @@ across the seven-commit unpublished range with zero credential-shaped or
 private-path findings. The detached clone finishes clean, and
 `git fsck --full --strict` returns success.
 
+## Wave 28 unrestricted-lattice controls
+
+Replay the five Wave 28 discovery and independent-verification suites:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave28-glue-discriminant -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s attempts\wave28-theta-modular -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave28-glue-discriminant `
+  -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s verification\wave28-theta-modular `
+  -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s verification\wave28-simultaneous-neighbor `
+  -p test_independent_check.py -v
+```
+
+The suites pass `13`, `14`, `16`, `20`, and `25` tests respectively: 88
+tests total. The theta unit tests validate the stored complete shell
+certificate without repeating the 15-million-node enumeration.
+
+Regenerate all five mathematical JSON files outside the checkout:
+
+```powershell
+$wave28Generated = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave28-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave28Generated | Out-Null
+
+function Assert-Wave28ByteEqual {
+  param([string]$Expected, [string]$Actual)
+  $left = [IO.File]::ReadAllBytes((Resolve-Path $Expected))
+  $right = [IO.File]::ReadAllBytes((Resolve-Path $Actual))
+  if (-not [System.Linq.Enumerable]::SequenceEqual($left, $right)) {
+    throw "byte mismatch: $Expected versus $Actual"
+  }
+}
+
+try {
+  $glueSubmitted = Join-Path $wave28Generated "glue-submitted.json"
+  $thetaSubmitted = Join-Path $wave28Generated "theta-submitted.json"
+  $glueIndependent = Join-Path $wave28Generated "glue-independent.json"
+  $thetaIndependent = Join-Path $wave28Generated "theta-independent.json"
+  $neighborIndependent = Join-Path $wave28Generated "neighbor-independent.json"
+
+  python -B attempts\wave28-glue-discriminant\exact_check.py `
+    --output $glueSubmitted
+  python -B attempts\wave28-theta-modular\exact_check.py `
+    --output $thetaSubmitted
+  python -B verification\wave28-glue-discriminant\independent_check.py `
+    --output $glueIndependent
+  python -B verification\wave28-theta-modular\independent_check.py `
+    --output $thetaIndependent
+  python -B verification\wave28-simultaneous-neighbor\independent_check.py `
+    --output $neighborIndependent
+
+  Assert-Wave28ByteEqual `
+    attempts\wave28-glue-discriminant\exact-results.json `
+    $glueSubmitted
+  Assert-Wave28ByteEqual `
+    attempts\wave28-theta-modular\exact-results.json `
+    $thetaSubmitted
+  Assert-Wave28ByteEqual `
+    verification\wave28-glue-discriminant\independent-results.json `
+    $glueIndependent
+  Assert-Wave28ByteEqual `
+    verification\wave28-theta-modular\independent-results.json `
+    $thetaIndependent
+  Assert-Wave28ByteEqual `
+    verification\wave28-simultaneous-neighbor\independent-results.json `
+    $neighborIndependent
+}
+finally {
+  Remove-Item -LiteralPath $wave28Generated -Recurse -Force `
+    -ErrorAction SilentlyContinue
+}
+```
+
+The expected SHA-256 values, in the same order, are:
+
+```text
+13a3bb8f83c56ff899991362736089b772114cff840a2cb20d68845e231b3cf1
+9d7b1ffcc0cef2441aa6dd381228abaa1018f721594e930cdd7227c0647470d6
+0d15724c772300072c565030e88080c05333af8f75241b633d5801e5c4ac83fe
+24298ae282c7baa252a39ffe96fc37b7c696cb51f14b9ddea2318a59b4335b7f
+d9f6829dc967fb3777f541b4fd16cd27acb3478d96479b8ad9c3e9fbad2afedd
+```
+
+The six Wave 28 manifests validate 46 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| `attempts/wave28-glue-discriminant` | 7 | `5ac509e960c3b2e5e8b949aa88958f9bce6ae7b5b34a7baad140d20d3487bcbb` |
+| `attempts/wave28-theta-modular` | 8 | `1a7a68019241b5f83b4f9154a1361d1ebcf8da72d287175a13e8400b83b07692` |
+| `verification/wave28-glue-discriminant` | 4 | `d25e446673fcb80cb21afc87cd1f271c4c5e4d6d36f6ec6a564e7d6fbb2296a7` |
+| `verification/wave28-theta-modular` | 10 | `50a5e3d4b5bb066b4b281c80d6d2caa0906afc21b9de99e12731177f661c6fed` |
+| `verification/wave28-simultaneous-neighbor` | 7 | `068d9270a83b0d99a39bbc8cda8a18773c62d5899fcba202c42755f79145e985` |
+| `verification/wave28-literature-audit` | 10 | `102bb4e5200a1a62dee8b8094b2b32b594d18067deef61508eae377d4db2898f` |
+
+The exact theta replay is offline by default and uses the attributed,
+hash-bound numeric matrices in `catalogue-data.json`. The optional live
+source refresh rewrites `source-manifest.json` with the new access timestamp,
+so run it only in a disposable clone. To refetch the two catalogue pages,
+verify their frozen response hashes, parse the matrix data, and discard the
+HTML, run there:
+
+```powershell
+$wave28RefreshOutput = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave28-refresh-" + [guid]::NewGuid().ToString("N") + ".json")
+python -B verification\wave28-theta-modular\independent_check.py `
+  --refresh-sources `
+  --output $wave28RefreshOutput
+Remove-Item -LiteralPath $wave28RefreshOutput -Force
+```
+
+This optional command requires network access and deliberately fails closed
+on source drift. Its refreshed `source-manifest.json` should be treated as
+new evidence and reviewed before retention. The public package contains no
+copied HTML or paper.
+
+The verified Wave 28 scope is limited to corrected necessary
+discriminant/glue and theta restrictions, a rootless bare `S/G` control, and
+two abstract simultaneous-neighbor controls. It does not classify general
+rank-44 forms, construct `X,M,W,Q,B`, exclude `n3=708`, improve the
+`n3>=708` bound, resolve Conway-99, or establish novelty.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

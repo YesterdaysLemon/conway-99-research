@@ -6,13 +6,14 @@ literature_audit:
   through: 2026-07-24
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave27-literature-audit/audit.md"
-  latest_audit_sha256: "835f4b517ce10bce33570d45656be23f3ae4f8135df345734dfecb59a531ebe2"
-  source_query_ledger: "verification/wave27-literature-audit/query-ledger.md"
-  source_query_ledger_sha256: "8ecfa635a5dc82207108b54d986c6bbde449c6a6a5e16a65631851ca32b576ec"
+  latest_audit: "verification/wave28-literature-audit/audit.md"
+  latest_audit_sha256: "31d21d2acc92c20f5f1342eb8466484a573a5c5a71d26fc1d191b78d4881ee10"
+  source_query_ledger: "verification/wave28-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
+  exact_wave28_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -1126,4 +1127,133 @@ twenty_seventh_research_wave:
   orchestrator_correction_ledger: "verification/2026-07-24-wave27-orchestrator-corrections.md"
   orchestrator_correction_ledger_sha256: "c4bef6c43ca98cc990c268d302f199fa64831377b6ac58e229b8f3d700052d6e"
   caveat: "Wave 27 verifies an exact A2-direct-summand-free abstract h=9 arithmetic/lattice survivor and the unrestricted local E6 trace minimum 14, but the full endpoint projector/Schur identities make this explicit survivor impossible because it has orthogonal E6 summands. The core tensor screen excludes orthogonal A6 and E6 and intentionally leaves A20 orthogonal-sum E8^3; the separately frozen and verified A20 trace addendum then excludes that survivor. Hence, conditional on n3=708, the full projector/Schur endpoint identities, and the additional hypothesis that S is an orthogonal direct sum of irreducible ADE root lattices, no such S exists. General even rank-44 scaled-dual lattices, nonorthogonal root subsystems, n3=708, Conway-99 existence, and novelty remain UNKNOWN; the headline bound remains n3>=708."
+twenty_eighth_research_wave:
+  discovery_commit: "a9f87c730aba35bfaebb0a3e6e793ff728b11e10"
+  glue_and_neighbor_verification_commit: "84e42e432b28d0da7faf38bc20ddc084758c65fc"
+  literature_audit_commit: "6fc9e470245bdc88a1cee2205a7dc541ce374c32"
+  theta_verification_commit: "74b6f3adcee19ca2b0480258bb7bf51198bd085a"
+  theta_telemetry_retention_commit: "c3694e97e49427edacbbca9504c70604f81dcda9"
+  theta_telemetry_normalization_commit: "379d8555cf9ca34149ad6a39e21e40e9f9df4f8f"
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  general_even_rank_44_scaled_dual_form: UNKNOWN
+  determinant_rows_excluded: 0
+  glue_verifier_verdict: PASS_WITH_CORRECTION
+  formal_discriminant_modules: 12
+  stale_formal_module_count_11: REFUTED
+  cyclic_order_21_invariant_factor_excluded: false
+  corrected_primary_statement: "The 3-primary and 7-primary components are elementary; invariant factors divide 21 and may have order 21."
+  one_root_second_moment_patterns: 46
+  one_root_cubic_filtered_patterns: 32
+  root_preserving_glue_classified: false
+  theta_verifier_verdict: PASS_SCOPED_BARE_LATTICE_CONTROL
+  bare_rootless_control: "K12 orthogonal-sum LAMBDA(F)"
+  bare_rootless_control_determinant: 729
+  bare_rootless_control_minimum: 4
+  bare_rootless_control_roots: 0
+  bare_rootless_control_norm_four_vectors: 147636
+  bare_rootless_control_scaled_dual_minimum: 28
+  rooted_comparator: "E6^6 orthogonal-sum E8"
+  rooted_comparator_roots: 672
+  finite_discriminant_quadratic_modules_isometric: true
+  bare_root_forcing_by_theta_data: REFUTED
+  bare_control_full_endpoint_compatibility: NOT_CONSTRUCTED
+  simultaneous_neighbor_verifier_verdict: PASS_SCOPED_ABSTRACT_CONTROLS
+  preferred_neighbor_root_count: 568
+  preferred_neighbor_root_rank: 43
+  preferred_neighbor_components: ["A1", "A1", "A1", "A1", "A5", "D5", "D8", "E7", "E7", "E7"]
+  preferred_neighbor_primitive_root_closure_determinant: 12
+  preferred_neighbor_total_glue_index: 128
+  initial_neighbor_root_count: 568
+  initial_neighbor_root_rank: 44
+  initial_neighbor_root_lattice_index: 32
+  direct_44d_timeout_status: NON_EVIDENTIARY
+  full_primitive_embedding_X: UNKNOWN
+  full_projector_M: UNKNOWN
+  full_schur_square_Q: UNKNOWN
+  orchestrator_brief: "agents/2026-07-24-wave28-orchestrator-brief.md"
+  orchestrator_brief_sha256: "6a15446551b78822706a8e005bef49a411b904cf05f9459b6b3350239839ee1e"
+  glue_discovery_report: "agents/2026-07-24-wave28-glue-discriminant.md"
+  glue_discovery_report_sha256: "3c1354a04f33602c6e339875c8de4f77d1874bd6e8f83dbcb712b91717d6c1ff"
+  glue_submitted_checker: "attempts/wave28-glue-discriminant/exact_check.py"
+  glue_submitted_checker_sha256: "9b58940cf9f3d732593e03bde69974b56145950f28e5012ccc0735082dd2cf51"
+  glue_submitted_result: "attempts/wave28-glue-discriminant/exact-results.json"
+  glue_submitted_result_sha256: "13a3bb8f83c56ff899991362736089b772114cff840a2cb20d68845e231b3cf1"
+  glue_submitted_run_report: "attempts/wave28-glue-discriminant/run-report.yaml"
+  glue_submitted_run_report_sha256: "bb12cb91b9db78231a447c2e3f6adee7d3b4fe3e6e21f96beaa7c3057f0a2a67"
+  glue_submitted_manifest: "attempts/wave28-glue-discriminant/artifact-manifest.sha256"
+  glue_submitted_manifest_sha256: "5ac509e960c3b2e5e8b949aa88958f9bce6ae7b5b34a7baad140d20d3487bcbb"
+  glue_verifier_audit: "verification/wave28-glue-discriminant/audit.md"
+  glue_verifier_audit_sha256: "5c1dc7978d571a9471837b45a36663c7c457b6434800776501e4967146956b86"
+  glue_independent_checker: "verification/wave28-glue-discriminant/independent_check.py"
+  glue_independent_checker_sha256: "787884dc0278c1280f236e71783cc883c314e898bcf7ac3c2a3a4aacb361aa4c"
+  glue_independent_result: "verification/wave28-glue-discriminant/independent-results.json"
+  glue_independent_result_sha256: "0d15724c772300072c565030e88080c05333af8f75241b633d5801e5c4ac83fe"
+  glue_verifier_manifest: "verification/wave28-glue-discriminant/artifact-manifest.sha256"
+  glue_verifier_manifest_sha256: "d25e446673fcb80cb21afc87cd1f271c4c5e4d6d36f6ec6a564e7d6fbb2296a7"
+  glue_submitted_tests_passed: 13
+  glue_independent_tests_passed: 16
+  theta_discovery_report: "agents/2026-07-24-wave28-theta-modular.md"
+  theta_discovery_report_sha256: "8783be7e730306637ed863b4d9fbe8f4193ad756e7ec86d697c7407688a5423a"
+  theta_submitted_checker: "attempts/wave28-theta-modular/exact_check.py"
+  theta_submitted_checker_sha256: "8185f7c483dc5dfa7ca31dd60058ee48ef6cdf8b29074c4f02f9dfcccdb095e1"
+  theta_submitted_result: "attempts/wave28-theta-modular/exact-results.json"
+  theta_submitted_result_sha256: "9d7b1ffcc0cef2441aa6dd381228abaa1018f721594e930cdd7227c0647470d6"
+  theta_submitted_run_report: "attempts/wave28-theta-modular/run-report.yaml"
+  theta_submitted_run_report_sha256: "b8df638151623436079fca5dadc86fc6a255375cd02c23841c483550b93d5565"
+  theta_submitted_manifest: "attempts/wave28-theta-modular/artifact-manifest.sha256"
+  theta_submitted_manifest_sha256: "1a7a68019241b5f83b4f9154a1361d1ebcf8da72d287175a13e8400b83b07692"
+  theta_verifier_audit: "verification/wave28-theta-modular/audit.md"
+  theta_verifier_audit_sha256: "adc90e404735ca147bc0a5418974d8af0bde71c4ddc2dc62a8c07dee670dbfeb"
+  theta_independent_checker: "verification/wave28-theta-modular/independent_check.py"
+  theta_independent_checker_sha256: "513efd1a915bc14adc3003c41e6758839375d9a36a0055f08faa56417c942b18"
+  theta_independent_result: "verification/wave28-theta-modular/independent-results.json"
+  theta_independent_result_sha256: "24298ae282c7baa252a39ffe96fc37b7c696cb51f14b9ddea2318a59b4335b7f"
+  theta_verifier_run_report: "verification/wave28-theta-modular/run-report.yaml"
+  theta_verifier_run_report_sha256: "16af82dcc5db7d5664f0a68ba855e4e60bd79c7b401a4575568e6fd8c6fac640"
+  theta_verifier_manifest: "verification/wave28-theta-modular/artifact-manifest.sha256"
+  theta_verifier_manifest_sha256: "50a5e3d4b5bb066b4b281c80d6d2caa0906afc21b9de99e12731177f661c6fed"
+  theta_submitted_tests_passed: 14
+  theta_independent_tests_passed: 20
+  theta_full_enumeration_nodes: 15053011
+  simultaneous_neighbor_freeze: "agents/2026-07-24-wave28-simultaneous-neighbor-freeze.md"
+  simultaneous_neighbor_freeze_sha256: "7b8fce3763e2f6d4db2e0f7841e680d01486195d3ea4b6b04c5f59ace768d90a"
+  simultaneous_neighbor_audit: "verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md"
+  simultaneous_neighbor_audit_sha256: "79876274f467b4a13b3f95bf03961177cc56940d1ceecd206f6eff1647738aa3"
+  simultaneous_neighbor_independent_checker: "verification/wave28-simultaneous-neighbor/independent_check.py"
+  simultaneous_neighbor_independent_checker_sha256: "2c8021769d47faebbcd544b364649a2cb93c066a369f76f725cffab1588982db"
+  simultaneous_neighbor_independent_result: "verification/wave28-simultaneous-neighbor/independent-results.json"
+  simultaneous_neighbor_independent_result_sha256: "d9f6829dc967fb3777f541b4fd16cd27acb3478d96479b8ad9c3e9fbad2afedd"
+  simultaneous_neighbor_run_report: "verification/wave28-simultaneous-neighbor/run-report.yaml"
+  simultaneous_neighbor_run_report_sha256: "71bcb257872d6695b2dcbabd75c8ad2929ba59e7b4872175d47e14bae323067e"
+  simultaneous_neighbor_manifest: "verification/wave28-simultaneous-neighbor/artifact-manifest.sha256"
+  simultaneous_neighbor_manifest_sha256: "068d9270a83b0d99a39bbc8cda8a18773c62d5899fcba202c42755f79145e985"
+  simultaneous_neighbor_independent_tests_passed: 25
+  source_status_audit: "verification/wave28-literature-audit/audit.md"
+  source_status_audit_sha256: "31d21d2acc92c20f5f1342eb8466484a573a5c5a71d26fc1d191b78d4881ee10"
+  source_query_ledger: "verification/wave28-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde"
+  source_query_results: "verification/wave28-literature-audit/query-results.json"
+  source_query_results_sha256: "02e1a0b293d7bd8534597119079f9aec2be9736cc40c387b58a96bccc35af380"
+  source_bibliography: "verification/wave28-literature-audit/sources/bibliography.json"
+  source_bibliography_sha256: "b59946f585b817f751300411fc8e45ebf2c04e7941abfd13ae2e8db75545a427"
+  source_run_report: "verification/wave28-literature-audit/run-report.yaml"
+  source_run_report_sha256: "0fabd2ab7ce96a01ed3cefd4811e1cb0f972d05d4b84ae161eb15d7d47d19a99"
+  source_publication_manifest: "verification/wave28-literature-audit/artifact-manifest.sha256"
+  source_publication_manifest_sha256: "102bb4e5200a1a62dee8b8094b2b32b594d18067deef61508eae377d4db2898f"
+  literature_query_count: 35
+  literature_source_record_count: 17
+  literature_access_limitations: 2
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  corrections_ledger: "verification/2026-07-24-wave28-orchestrator-corrections.md"
+  corrections_ledger_sha256: "c6392fbd50ce11bcb9a8bcd2257f1642fa5c37bdb3ded4899153fd91c9c2708c"
+  total_tests_passed: 88
+  manifest_count: 6
+  manifest_entries: 46
+  caveat: "Wave 28 verifies corrected necessary discriminant/root-glue and theta restrictions, a rootless bare h=729 S/G control, and two simultaneous-neighbor abstract arithmetic/lattice controls. It does not classify general even rank-44 scaled-dual lattices, construct a primitive Z^231 embedding or marked 231-row frame, verify Q=X^T(M o M)X for any control, exclude a determinant row or n3=708, improve the headline bound, construct a graph, resolve Conway-99, or establish novelty."
 last_updated: 2026-07-24

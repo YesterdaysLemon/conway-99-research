@@ -886,3 +886,92 @@ obligations:
       - "verification/2026-07-24-wave27-orchestrator-corrections.md"
       - "SOURCES.bib"
     note: "The audit executed 56 service-query pairs and inspected 303 returned records. It found current qualifying sources that still treat Conway-99 as open and no direct or near-direct Wave 27 match, while recording standard ADE data as conceptual prior art. The initial protocol's factor-2 reading of 21E6^-1 is preserved and corrected before five corrective pairs; the later A20 result has a separately frozen six-pair addendum. Ten zbMATH 404s are service failures rather than zero-result evidence. Bounded non-discovery does not establish openness, novelty, or priority, all of which remain UNKNOWN."
+
+  - id: O-WAVE28-GLUE
+    requirement: "Independently reconstruct the unrestricted endpoint discriminant groups and exact levels, complete Milgram-compatible formal-module census, scaled-dual local determinant signs, primitive-root index-two complement theorem, exact 46-to-32 root-image pattern census, and primitive root-closure/glue reduction, while adversarially checking the submitted prose and retaining every correction."
+    critical: true
+    status: PASS_WITH_CORRECTION
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-glue-discriminant.md"
+      - "attempts/wave28-glue-discriminant/exact_check.py"
+      - "attempts/wave28-glue-discriminant/test_exact_check.py"
+      - "attempts/wave28-glue-discriminant/exact-results.json"
+      - "attempts/wave28-glue-discriminant/input-freeze.sha256"
+      - "attempts/wave28-glue-discriminant/failed-routes.md"
+      - "attempts/wave28-glue-discriminant/run-report.yaml"
+      - "attempts/wave28-glue-discriminant/artifact-manifest.sha256"
+      - "verification/wave28-glue-discriminant/audit.md"
+      - "verification/wave28-glue-discriminant/independent_check.py"
+      - "verification/wave28-glue-discriminant/test_independent_check.py"
+      - "verification/wave28-glue-discriminant/independent-results.json"
+      - "verification/wave28-glue-discriminant/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    note: "The submitted 13-test and independent 16-test suites pass, both JSON files replay byte-identically, and the independent implementation confirms twelve formal modules, local signs, root complement/glue statements, and the 46-to-32 census. It rejects both the stale count eleven and the discovery sentence excluding cyclic order-21 invariant factors. The corrected statement permits Z/21 while keeping the p-primary parts elementary. No formal module is promoted to a rank-44 realization, no determinant row is excluded, and the endpoint and target remain UNKNOWN."
+
+  - id: O-WAVE28-THETA
+    requirement: "Independently verify every exact level and scalar character, Poisson and Weil convention, Sturm bound, modularity and strong-modularity veto, ADE shell control, the K12 and LAMBDA(F) source matrices, complete norm-four shells, exact scaled-dual minimum, explicit finite-discriminant-form isometry, rooted comparator, deterministic replay, and strict separation of bare lattice data from a marked endpoint frame."
+    critical: true
+    status: PASS_SCOPED_BARE_LATTICE_CONTROL
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-theta-modular.md"
+      - "attempts/wave28-theta-modular/exact_check.py"
+      - "attempts/wave28-theta-modular/test_exact_check.py"
+      - "attempts/wave28-theta-modular/exact-results.json"
+      - "attempts/wave28-theta-modular/input-freeze.sha256"
+      - "attempts/wave28-theta-modular/source-freeze.sha256"
+      - "attempts/wave28-theta-modular/failed-routes.md"
+      - "attempts/wave28-theta-modular/run-report.yaml"
+      - "attempts/wave28-theta-modular/artifact-manifest.sha256"
+      - "verification/wave28-theta-modular/audit.md"
+      - "verification/wave28-theta-modular/independent_check.py"
+      - "verification/wave28-theta-modular/test_independent_check.py"
+      - "verification/wave28-theta-modular/independent-results.json"
+      - "verification/wave28-theta-modular/catalogue-data.json"
+      - "verification/wave28-theta-modular/source-manifest.json"
+      - "verification/wave28-theta-modular/theorem-source-manifest.json"
+      - "verification/wave28-theta-modular/full-run.stdout.log"
+      - "verification/wave28-theta-modular/full-run.stderr.log"
+      - "verification/wave28-theta-modular/run-report.yaml"
+      - "verification/wave28-theta-modular/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    note: "The submitted 14-test and independent 20-test suites pass. A complete 15053011-node fraction-free enumeration finds exactly 146880 norm-four LAMBDA(F) vectors, and deterministic full replay preserves the independent JSON hash. The verifier strengthens min(21S0^-1)>=14 to exact value 28 and verifies the explicit F3 discriminant-form isometry. Raw source pages are hash-checked and discarded. The control has no X, M, Q, B, Schur-square origin, graph, or endpoint status."
+
+  - id: O-WAVE28-SIMULTANEOUS-NEIGHBOR
+    requirement: "Freeze and independently reconstruct both simultaneous even two-neighbors of the paired Wave 27 arithmetic package, including deterministic rational bases and inverses, every transformed matrix and endpoint invariant, complete roots in both cosets, ADE component identification, root spans, primitive closures, complements, H0/H1 glue indices, hostile mutations, freeze drift, and non-evidentiary timeout chronology."
+    critical: false
+    status: PASS_SCOPED_ABSTRACT_CONTROLS
+    evidence:
+      - "agents/2026-07-24-wave28-orchestrator-brief.md"
+      - "agents/2026-07-24-wave28-simultaneous-neighbor-freeze.md"
+      - "verification/wave28-simultaneous-neighbor/intake-freeze.json"
+      - "verification/wave28-simultaneous-neighbor/independent_check.py"
+      - "verification/wave28-simultaneous-neighbor/test_independent_check.py"
+      - "verification/wave28-simultaneous-neighbor/independent-results.json"
+      - "verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md"
+      - "verification/wave28-simultaneous-neighbor/failed-runs.md"
+      - "verification/wave28-simultaneous-neighbor/run-report.yaml"
+      - "verification/wave28-simultaneous-neighbor/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+    note: "The independent suite passes all 25 tests and regenerates its complete matrix/root JSON byte-identically. It verifies the preferred rank-43 and retained initial rank-44 root systems and all glue data. The first proposed mutation remained valid and is retained as a positive control; a replacement mutation fails. The direct 44-dimensional timeout is non-evidentiary. Both objects remain abstract lattice/arithmetic controls with no endpoint frame, Schur certificate, or graph."
+
+  - id: O-WAVE28-LITERATURE-STATUS
+    requirement: "Freeze a candidate-independent source-first protocol, execute and account for all queries concerning current Conway-99 status, weak scaled-dual rank-44 lattices, discriminant forms and root glue, K12 and LAMBDA(F), modularity and theta laws, simultaneous neighbors, marked frames, Schur products, and root-image patterns, while retaining metadata only and separating standard ingredients, nearby results, service limitations, and bounded non-discovery."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave28-literature-audit/protocol-freeze.md"
+      - "verification/wave28-literature-audit/query-ledger.json"
+      - "verification/wave28-literature-audit/query-results.json"
+      - "verification/wave28-literature-audit/audit.md"
+      - "verification/wave28-literature-audit/sources/bibliography.json"
+      - "verification/wave28-literature-audit/sources/notes/target-status.md"
+      - "verification/wave28-literature-audit/sources/notes/lattice-discriminant.md"
+      - "verification/wave28-literature-audit/sources/notes/theta-controls.md"
+      - "verification/wave28-literature-audit/sources/notes/neighbor-frame-root-patterns.md"
+      - "verification/wave28-literature-audit/run-report.yaml"
+      - "verification/wave28-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave28-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    note: "All 35 frozen query IDs have matched outcomes; the package retains 17 metadata-only records, two explicit access/service limitations, and no raw HTML or papers. A 2025 refereed source calls Conway-99 open and a 2026 SAT preprint reports no resolution. No exact combined Wave 28 hit was found, but bounded non-discovery does not prove openness after the cutoff, novelty, or priority. The audit verifies source scope rather than arithmetic."

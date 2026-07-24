@@ -34,10 +34,11 @@ and the normalized search problem.
   least `209,994` induced six-cycles; this does not resolve existence.
 - **Endpoint arithmetic:** at `n3=708`, the independently verified
   necessary arithmetic includes `tr(C^2)>=10` and `det(B)<=6525`. Wave 27
-  conditionally excludes every full orthogonal ADE root-lattice form. An
-  abstract A2-direct-summand-free arithmetic package still exists, but its
-  required projector/Schur origin is excluded; unrestricted general lattices
-  remain, so the endpoint is not excluded.
+  conditionally excludes every full orthogonal ADE root-lattice form. Wave 28
+  adds corrected discriminant/glue restrictions, a rootless bare-lattice
+  control, and nonorthogonal two-neighbor controls, but none supplies the
+  required 231-row projector/Schur origin. General lattices remain
+  unclassified, so the endpoint is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -901,6 +902,73 @@ finds no credential-shaped or private-path payload in the release tree or
 seven-commit unpublished range. The clone remains clean and strict Git object
 verification succeeds.
 
+Wave 28 removes the full-orthogonal-ADE hypothesis from several necessary
+reductions without claiming a general classification. The independently
+checked glue lane proves that every endpoint discriminant group has elementary
+3- and 7-primary parts, exact level `3`, `7`, or `21`, and one of exactly
+twelve formal Milgram-compatible quadratic modules. It also verifies the
+single-root index-two complement theorem, a primitive root-closure/glue
+reduction, and a complete `46 -> 32` census of root-image coordinate
+patterns. No determinant row is excluded. The frozen discovery prose
+incorrectly ruled out a cyclic order-21 invariant factor; the verifier
+corrects this to say that invariant factors divide 21 and may have order 21.
+See the
+[glue report](agents/2026-07-24-wave28-glue-discriminant.md),
+[independent audit](verification/wave28-glue-discriminant/audit.md), and
+[correction ledger](verification/2026-07-24-wave28-orchestrator-corrections.md).
+
+The theta lane supplies a sharp hostile control:
+
+```text
+S0 = K12 orthogonal_sum LAMBDA(F),
+rank(S0)=44,
+det(S0)=729,
+min(S0)=4,
+r_S0(2)=0,
+r_S0(4)=147636,
+min(21S0^(-1))=28.
+```
+
+An exact 15,053,011-node closed-ellipsoid enumeration independently verifies
+the complete norm-four shell of `LAMBDA(F)`. The rooted comparator
+`E6^6 orthogonal_sum E8` has the same finite discriminant quadratic module
+and Weil representation but 672 roots. Thus the bare scaled-dual and theta
+data do not force a root. This is only an `S/G` lattice control: it has no
+primitive embedding, marked 231-row frame, `Q`, `B`, Schur-square
+certificate, or graph. See the
+[theta report](agents/2026-07-24-wave28-theta-modular.md) and
+[independent theta audit](verification/wave28-theta-modular/audit.md).
+
+A separate exact construction applies one rational basis change
+simultaneously to the Wave 27 paired forms. The preferred two-neighbor has 568
+roots spanning rank 43 with components
+
+```text
+A1^4 orthogonal_sum A5 orthogonal_sum D5 orthogonal_sum D8
+  orthogonal_sum E7^3.
+```
+
+The initial cross-control has full root rank 44. Both preserve the frozen
+abstract `S,Q,G,B,C` arithmetic, but neither supplies `X`, `M`, the
+projector/Schur identities, or a graph. They demonstrate why orthogonal
+component screens do not classify general neighbors; they do not realize the
+endpoint. See the
+[candidate freeze](agents/2026-07-24-wave28-simultaneous-neighbor-freeze.md)
+and
+[independent neighbor audit](verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md).
+
+The proof-separated
+[Wave 28 literature audit](verification/wave28-literature-audit/audit.md)
+executes all 35 frozen queries and retains 17 metadata-only source records.
+A 2025 refereed paper still calls Conway-99 open, and a 2026 SAT preprint
+reports attempts without resolution. No direct match was found for the exact
+combined Wave 28 results, but bounded non-discovery does not establish
+openness after the cutoff, novelty, or priority. All remain `UNKNOWN`.
+
+Across the five mathematical suites, Wave 28 passes 88 tests and validates 46
+entries in six manifests. These results do not improve `n3>=708`, exclude
+`n3=708`, construct a graph, or resolve Conway-99.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1148,6 +1216,19 @@ status.
   detached 116-test replay, seven byte-identical generated files, six exact
   manifests, metadata/link/privacy gates, clean status, and strict Git object
   verification.
+- [Wave 28 glue/discriminant audit](verification/wave28-glue-discriminant/audit.md):
+  independent twelve-form census, scaled-dual local signs, root-glue
+  reduction, `46 -> 32` pattern check, and the mandatory order-21 correction.
+- [Wave 28 theta/modular audit](verification/wave28-theta-modular/audit.md):
+  exact levels and characters, Sturm and modularity boundaries, complete
+  `K12`/`LAMBDA(F)` shell verification, and the rootless bare-lattice control.
+- [Wave 28 simultaneous-neighbor audit](verification/wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md):
+  two independently reconstructed paired-form neighbors, complete root
+  systems and glue indices, and a strict abstract-control scope wall.
+- [Wave 28 literature/status audit](verification/wave28-literature-audit/audit.md):
+  35 frozen queries, 17 metadata-only source records, standard-ingredient
+  attribution, access limits, and bounded non-discovery with novelty
+  `UNKNOWN`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

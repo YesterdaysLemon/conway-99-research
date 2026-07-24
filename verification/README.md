@@ -612,3 +612,73 @@ The detached
 passing tests, seven byte-identical regenerations, six exact manifests,
 central metadata and link gates, exact-blob privacy scans, clean status, and
 strict Git object verification.
+
+## Wave 28 unrestricted-lattice reductions and controls
+
+Wave 28 has four independently separated packages.
+
+The
+[glue/discriminant audit](wave28-glue-discriminant/audit.md) reconstructs
+the elementary 3- and 7-primary discriminant groups, exact levels, twelve
+formal Milgram-compatible quadratic modules, scaled-dual local signs,
+single-root complement theorem, primitive root-closure/glue reduction, and
+the exact `46 -> 32` root-image pattern census. Its verdict is
+`PASS_WITH_CORRECTION`: the frozen discovery report falsely excludes cyclic
+order-21 invariant factors. The correct statement permits order 21 while
+excluding `p`-primary factors of order `p^2` or higher.
+
+The
+[theta/modular audit](wave28-theta-modular/audit.md) independently checks all
+eight levels and characters, the Poisson/Weil conventions, Sturm bounds,
+modularity vetoes, ADE controls, and the rootless bare lattice
+
+```text
+K12 orthogonal_sum LAMBDA(F).
+```
+
+A complete fraction-free closed-ellipsoid recursion visits 15,053,011 nodes
+and finds all 146,880 norm-four vectors of `LAMBDA(F)`. The resulting
+rank-44 control has determinant 729, no roots, 147,636 norm-four vectors, and
+exact scaled-dual minimum 28. Its finite discriminant quadratic module is
+explicitly isometric to that of the rooted comparator
+`E6^6 orthogonal_sum E8`. This verifies that the bare data do not force a
+root; it does not construct the endpoint frame.
+
+The
+[simultaneous-neighbor audit](wave28-simultaneous-neighbor/2026-07-24-wave28-simultaneous-neighbor-audit.md)
+reconstructs two rational basis changes of the Wave 27 paired-form package,
+all transformed matrices, both root cosets, ADE components, primitive
+closures, and glue indices. The preferred neighbor has root rank 43; the
+retained initial neighbor has root rank 44. Both are abstract arithmetic and
+lattice controls only.
+
+The proof-separated
+[literature audit](wave28-literature-audit/audit.md) executes all 35 frozen
+queries, retains 17 metadata-only source records and two explicit access
+limitations, and finds no exact target resolution or combined Wave 28
+precedent. A 2025 refereed source calls the problem open, and a 2026 SAT
+preprint reports no resolution. Non-discovery does not establish novelty,
+priority, or openness after the cutoff.
+
+The five mathematical suites pass, in discovery/verification order,
+
+```text
+13, 14, 16, 20, 25 tests: 88 total.
+```
+
+All 46 entries of the six Wave 28 manifests validate. The
+[correction ledger](2026-07-24-wave28-orchestrator-corrections.md) records
+the order-21 prose defect, the stale eleven-form count, freeze and mutation
+chronology, non-evidentiary direct-enumeration timeout, metadata repair,
+theta preprocessing failures, source-retention boundary, and telemetry
+packaging repair.
+
+The accepted scope is:
+
+```text
+corrected necessary glue/theta restrictions: VERIFIED
+rootless bare S/G control: VERIFIED
+two abstract simultaneous neighbors: VERIFIED
+full X/M/W/Q/B endpoint package: UNKNOWN
+n3=708 / Conway-99 / novelty: UNKNOWN
+```
