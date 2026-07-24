@@ -38,8 +38,8 @@ outputs:
   test_independent_check.py: b1cf879f8eb4452c1ac2f168ef6030022f54e1500a6b242acb2bbc7cbfb8ca83
   independent-results.json: 24298ae282c7baa252a39ffe96fc37b7c696cb51f14b9ddea2318a59b4335b7f
   audit.md: adc90e404735ca147bc0a5418974d8af0bde71c4ddc2dc62a8c07dee670dbfeb
-  full-run.stdout.log: 3d6d11cfaa08143d722663b842802c83292067349bf30e6a92e88e830218733e
-  full-run.stderr.log: 31ece5dfafef7582dff6f0c96d180b6aaead54b06d8294514b7519a518c52b90
+  full-run.stdout.log: a21299a0550fc98ff1125ded66a5cabc5bef8c74569019fc545eec64758dfc8e
+  full-run.stderr.log: a17fdbaddd4d15025df3dbc1cae9afdfc8341eab75979c0e9fb15b2e036fba8b
 limitations:
   - S0 is only a bare S/G lattice control.
   - No primitive embedding, X, M, Q, B, Schur-square certificate, or graph exists here.
