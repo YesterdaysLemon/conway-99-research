@@ -2374,7 +2374,8 @@ The independent comparison then regenerates and compares all 4,323,943
 clauses. Remove the ignored raw file after the replay; it is not a tracked
 publication artifact.
 
-Regenerate the compact accepted machine results to paths outside the checkout:
+Regenerate the five live-root compact accepted machine results to paths
+outside the checkout:
 
 ```powershell
 $wave34Tmp = Join-Path `
@@ -2384,8 +2385,6 @@ New-Item -ItemType Directory -Path $wave34Tmp | Out-Null
 
 python -B verification\wave34-rooted-structural\precomparison\exact_check.py `
   --output (Join-Path $wave34Tmp "rooted-structural-stage1.json")
-python -B verification\wave34-rooted-structural\static_compare.py `
-  --output (Join-Path $wave34Tmp "rooted-structural-stage2.json")
 python -B verification\wave34-rooted-structural\pair-census-crosscheck\crosscheck.py `
   --output (Join-Path $wave34Tmp "rooted-pair-census.json")
 python -B verification\wave34-rooted-encoding\independent_compare.py `
@@ -2395,6 +2394,60 @@ python -B verification\wave34-rootless-global\precomparison\independent_check.py
 python -B verification\wave34-rootless-global\comparison_check.py `
   --output (Join-Path $wave34Tmp "rootless-stage2.json")
 ```
+
+The Stage-2 structural result freezes the pre-integration `STATUS.yaml` and
+must not be regenerated in the integrated root. Export the exact integration
+commit to an isolated tree, replace only that file with the authenticated
+continuation-base blob, and check both the frozen input and regenerated
+output:
+
+```powershell
+$wave34I0 = "0e11485de2ccdf0c1f2aa1c3e2d53a3413d9b6ea"
+$wave34Base = "0fa5b8161baf8b2a5404a67051b7d61cbc906da3"
+$wave34Shadow = Join-Path $wave34Tmp "rooted-structural-shadow"
+$wave34Frozen = Join-Path $wave34Tmp "rooted-structural-frozen"
+$wave34IntegratedZip = Join-Path $wave34Tmp "integrated.zip"
+$wave34StatusZip = Join-Path $wave34Tmp "status.zip"
+New-Item -ItemType Directory -Path $wave34Shadow,$wave34Frozen | Out-Null
+
+git archive --format=zip -o $wave34IntegratedZip $wave34I0
+if ($LASTEXITCODE) { throw "integrated archive failed" }
+git archive --format=zip -o $wave34StatusZip $wave34Base STATUS.yaml
+if ($LASTEXITCODE) { throw "frozen STATUS archive failed" }
+Expand-Archive -LiteralPath $wave34IntegratedZip -DestinationPath $wave34Shadow
+Expand-Archive -LiteralPath $wave34StatusZip -DestinationPath $wave34Frozen
+
+$frozenStatus = Join-Path $wave34Frozen "STATUS.yaml"
+$frozenHash = (Get-FileHash -LiteralPath $frozenStatus `
+  -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($frozenHash -ne `
+  "feda17934162602804015e17130c029ffdba7bf0307cdf234f4a7d8979298864") {
+  throw "frozen STATUS hash mismatch"
+}
+[IO.File]::WriteAllBytes(
+  (Join-Path $wave34Shadow "STATUS.yaml"),
+  [IO.File]::ReadAllBytes($frozenStatus)
+)
+
+$stage2Out = Join-Path $wave34Tmp "rooted-structural-stage2.json"
+Push-Location $wave34Shadow
+try {
+  python -B verification\wave34-rooted-structural\static_compare.py `
+    --output $stage2Out
+  if ($LASTEXITCODE) { throw "Stage-2 regeneration failed" }
+} finally {
+  Pop-Location
+}
+$stage2Hash = (Get-FileHash -LiteralPath $stage2Out `
+  -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($stage2Hash -ne `
+  "d73e302d6af8bbd3df28c80ded5dc922e4e6ea5084234ed15531330646fc26d8") {
+  throw "Stage-2 output mismatch"
+}
+```
+
+The chronology wrapper above performs the same authenticated one-file
+substitution for the unchanged 11-test suite.
 
 Sixteen nonoverlapping publication manifests contain 130 entries:
 

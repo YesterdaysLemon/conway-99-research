@@ -22,3 +22,10 @@ verification/n3-60-closure/*.log -text -diff
 attempts/wave34-rooted-encoding/compression-audit.json -text -diff
 attempts/wave34-rooted-encoding/dimacs-audit.json -text -diff
 attempts/wave34-rooted-encoding/test-results.txt -text -diff
+
+# Preserve authenticated Wave 34 prose bytes while recognizing deliberate
+# Markdown hard breaks and one checksum-pinned terminal blank line.
+agents/2026-07-24-wave34-external-source-verifier-harrison.md whitespace=-blank-at-eol
+verification/wave34-external-source-audit/harrison/audit.md whitespace=-blank-at-eol
+verification/wave34-external-source-audit/status-designs/audit.md whitespace=-blank-at-eol
+verification/wave34-rootless-global/precomparison/failed-routes.md whitespace=-blank-at-eof
