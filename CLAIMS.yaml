@@ -1046,6 +1046,124 @@ claims:
       - "SOURCES.bib"
     limitations: "The source audit historically froze before the proof and therefore correctly records the sign-involution constancy lemma as UNKNOWN; the post-freeze addendum records the later search signature without rewriting chronology. No exact prior result found in searched sources is not a novelty, priority, nonexistence, or global-openness certificate. Google Scholar, MathSciNet, zbMATH, citation networks, non-English sources, nonindexed work, and inaccessible material were not comprehensively audited. Novelty and global target status remain UNKNOWN."
 
+  - id: C-WAVE32-ROOTED-045
+    statement: >-
+      Under the full actual vertex-triangle incidence and frozen n3=708
+      endpoint projector/Schur package, every norm-two root r has y=XSr
+      with coordinate pattern (+1)^21,0^189,(-1)^21. Its transport z=Ny
+      equals 3k, where k has seven +1 and seven -1 entries, and the induced
+      14-vertex signed support is, up to relabeling, the bipartite complement
+      of the Fano incidence graph. Matrix-only extreme-fiber positivity reduces the 32
+      Wave 28 tensor patterns to 16; actual incidence reduces them to this
+      unique pattern.
+    label: VERIFIED
+    scope: ACTUAL_TARGET_INCIDENCE_N3_708_ROOTED_ENDPOINT_NECESSARY_REDUCTION_ONLY
+    evidence:
+      - "agents/2026-07-24-wave32-rooted-proof.md"
+      - "attempts/wave32-rooted-vector/exact_check.py"
+      - "attempts/wave32-rooted-vector/test_exact_check.py"
+      - "attempts/wave32-rooted-vector/exact-results.json"
+      - "attempts/wave32-rooted-vector/input-freeze.sha256"
+      - "attempts/wave32-rooted-vector/failed-routes.md"
+      - "attempts/wave32-rooted-vector/correction-ledger.md"
+      - "attempts/wave32-rooted-vector/run-report.yaml"
+      - "attempts/wave32-rooted-vector/artifact-manifest.sha256"
+      - "verification/wave32-rooted-vector/independent_check.py"
+      - "verification/wave32-rooted-vector/test_independent_check.py"
+      - "verification/wave32-rooted-vector/independent-results.json"
+      - "verification/wave32-rooted-vector/input-freeze.sha256"
+      - "verification/wave32-rooted-vector/audit.md"
+      - "verification/wave32-rooted-vector/failed-objections.md"
+      - "verification/wave32-rooted-vector/run-report.yaml"
+      - "verification/wave32-rooted-vector/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    limitations: >-
+      This depends on the verified projector, lattice, root-image, Schur, and
+      actual-incidence premises represented by C-N3-GLOBAL-SCHUR-012,
+      C-WAVE21-LATTICE-015, and C-WAVE28-GLUE-033. It is a necessary
+      reduction, not root exclusion. The partial 99-vertex control is not
+      extendibility evidence. The superseded v1 residual-degree error is
+      retained and corrected in v2. Rooted endpoint existence, n3=708,
+      Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE32-INDECOMPOSABLE-046
+    statement: >-
+      For the frozen rootless n3=708 endpoint branch, primitivity makes the
+      231 frame rows generate the full rank-44 lattice, and under minimum
+      four integral indecomposability is equivalent to connectivity of the
+      row nonorthogonality graph. The Wave 31 actual-incidence divisibilities
+      force that graph to be connected, so every surviving rootless actual
+      endpoint is integrally indecomposable. Rootlessness also forbids the
+      unique switched endpoint-alphabet {-2,-2,-1} three-row norm-two motif and therefore
+      forces tr(A_-1 A_-2^2)=0. The exact unordered pair census is
+      2546,22161,708,1150 for M=+1,0,-1,-2 respectively.
+    label: VERIFIED
+    scope: ACTUAL_TARGET_INCIDENCE_N3_708_ROOTLESS_ENDPOINT_NECESSARY_INDECOMPOSABILITY_AND_MOTIF_REDUCTIONS_ONLY
+    evidence:
+      - "agents/2026-07-24-wave32-indecomposable-proof.md"
+      - "attempts/wave32-indecomposable/exact_check.py"
+      - "attempts/wave32-indecomposable/test_exact_check.py"
+      - "attempts/wave32-indecomposable/exact-results.json"
+      - "attempts/wave32-indecomposable/input-freeze.sha256"
+      - "attempts/wave32-indecomposable/failed-routes.md"
+      - "attempts/wave32-indecomposable/run-report.yaml"
+      - "attempts/wave32-indecomposable/artifact-manifest.sha256"
+      - "verification/wave32-indecomposable/precomparison-freeze.sha256"
+      - "verification/wave32-indecomposable/input-freeze.sha256"
+      - "verification/wave32-indecomposable/independent_check.py"
+      - "verification/wave32-indecomposable/test_independent_check.py"
+      - "verification/wave32-indecomposable/independent-results.json"
+      - "verification/wave32-indecomposable/audit.md"
+      - "verification/wave32-indecomposable/failed-objections.md"
+      - "verification/wave32-indecomposable/run-report.yaml"
+      - "verification/wave32-indecomposable/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant/audit.md"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    limitations: >-
+      The connectivity conclusion depends on the actual-incidence Wave 31
+      theorem C-WAVE31-SIGN-COMMUTANT-042; it is unavailable for a
+      matrix-only realization. Pair counts and the verified finite-field
+      hostile controls do not force the forbidden motif. Whether actual
+      incidence forces tr(A_-1 A_-2^2)>0 is UNKNOWN. No rootless
+      indecomposable endpoint, graph, n3=708 outcome, Conway-99 outcome, or
+      novelty conclusion is constructed or excluded.
+
+  - id: C-WAVE32-LITERATURE-047
+    statement: >-
+      At the frozen 2026-07-24 cutoff, the corrected Wave 32 literature
+      audit retained 68 distinct query strings in 17 batches, eight direct
+      inspection events, 15 primary or authoritative metadata records
+      consisting of 14 originally frozen records plus one post-audit
+      inherited source, and zero raw source payloads. It found no exact prior
+      result for either the rooted or rootless integrally indecomposable
+      endpoint branch in the searched sources.
+    label: CITED
+    scope: BOUNDED_WAVE32_ROOTED_AND_ROOTLESS_INDECOMPOSABLE_ENDPOINT_PRIOR_ART_AUDIT_ONLY
+    evidence:
+      - "agents/2026-07-24-wave32-statement-literature.md"
+      - "verification/wave32-literature-audit/protocol-freeze.md"
+      - "verification/wave32-literature-audit/query-ledger.json"
+      - "verification/wave32-literature-audit/source-metadata.json"
+      - "verification/wave32-literature-audit/correction-ledger.md"
+      - "verification/wave32-literature-audit/audit.md"
+      - "verification/wave32-literature-audit/run-report.yaml"
+      - "verification/wave32-literature-audit/artifact-manifest.sha256"
+      - "verification/wave32-literature-audit-independent/input-freeze.sha256"
+      - "verification/wave32-literature-audit-independent/independent_check.py"
+      - "verification/wave32-literature-audit-independent/test_independent_check.py"
+      - "verification/wave32-literature-audit-independent/independent-results.json"
+      - "verification/wave32-literature-audit-independent/audit.md"
+      - "verification/wave32-literature-audit-independent/run-report.yaml"
+      - "verification/wave32-literature-audit-independent/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    limitations: >-
+      Bounded non-discovery is not a novelty, priority, nonexistence, or
+      global-openness certificate. Search coverage did not comprehensively
+      include several subscription databases, private and unindexed work,
+      and retained no replayable raw search payload. The Petro-Phillips
+      triangle spectrum is identified as prior art. Both endpoints, n3=708,
+      Conway-99, novelty, and priority remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

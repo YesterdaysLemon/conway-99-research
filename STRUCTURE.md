@@ -1872,6 +1872,106 @@ chronology is retained in the
 Rooted and rootless integrally indecomposable endpoints, `n3=708`,
 Conway-99, and novelty remain `UNKNOWN`.
 
+## Wave 32 rooted Fano support and indecomposable motif reductions
+
+Wave 32 attacks the two exhaustive endpoint branches that remain after
+Wave 31, for every determinant value
+
+```text
+h in {9,21,49,81,189,441,729,1029}.
+```
+
+In the rooted branch, let `r` be a norm-two vector, `y=XSr`, and let `N`
+be actual vertex-triangle incidence. Primitivity makes `X^T` onto, so
+`y` lies in `M Z^231`. The exact identity
+
+```text
+NM=(9I-3A)N+J
+```
+
+therefore makes `z=Ny` constant modulo three. The two nonzero residue
+classes contradict the exact sum and norm, leaving
+
+```text
+z=3k,  Ak=-4k,  sum(k)=0,  ||k||^2=14.
+```
+
+The integral `-4` eigenvector equations force seven `+1` and seven `-1`
+entries and no other nonzero amplitudes. The `lambda=1`, `mu=2`
+common-neighbor equations then force the induced signed support, up to
+relabeling, to be the bipartite complement of the Fano incidence graph.
+Consequently every root has the necessary triangle-image pattern
+
+```text
+y: (+1)^21, 0^189, (-1)^21.
+```
+
+This refines the earlier root-pattern sieve:
+
+```text
+46 moment patterns -> 32 tensor patterns -> 16 matrix-only patterns
+                   -> 1 actual-incidence pattern.
+```
+
+The clean-room [rooted verifier](verification/wave32-rooted-vector/audit.md)
+passes 19 tests without importing or executing discovery code. It independently
+reconstructs the primitive-image bridge, modular transport, support saturation,
+outside census, tensor and fourth-moment contractions, and adversarial
+premise deletions. A discovery-v1 residual-degree error is retained and
+corrected in
+[the rooted correction ledger](attempts/wave32-rooted-vector/correction-ledger.md).
+The partial 99-vertex control is not an extension certificate, and the unique
+pattern is not excluded.
+
+For the rootless branch, primitivity makes the 231 frame rows generate
+`Z^44`. Under minimum four, an integral orthogonal decomposition is therefore
+equivalent to disconnected nonzero support of `M`. The Wave 31
+actual-incidence theorem forces that support graph to be connected, so every
+surviving rootless actual-incidence endpoint is integrally indecomposable.
+This implication is unavailable for a matrix-only realization.
+
+Independently, three frame rows with pair products
+
+```text
+{-2,-2,-1}
+```
+
+have positive-definite Gram matrix but sum to a norm-two vector. This is the
+unique switched three-row motif over the endpoint entry alphabet with that
+property. Rootlessness therefore requires
+
+```text
+tr(A_-1 A_-2^2)=0,
+```
+
+where the trace is exactly twice the unordered motif count. The exact
+unordered pair census
+
+```text
+M=+1,0,-1,-2: 2546,22161,708,1150
+```
+
+does not force this mixed trace. The clean-room
+[indecomposable verifier](verification/wave32-indecomposable/audit.md)
+passes 19 tests, including full-size hostile controls, while leaving the
+actual-incidence motif-forcing step `UNKNOWN`.
+
+The corrected [literature package](verification/wave32-literature-audit/audit.md)
+and [independent source audit](verification/wave32-literature-audit-independent/audit.md)
+preserve 68 exact queries in 17 batches, 15 metadata records with explicit
+14-plus-one chronology, eight direct inspection events, three access
+failures, and no raw source payload. Petro--Phillips's conditional
+triangle-intersection spectrum is prior art. No exact resolution of either
+surviving endpoint was found in the searched sources, which is not a novelty
+or openness certificate.
+
+Thus the rooted Fano-support reduction, actual-incidence rootless
+indecomposability, and rootless motif exclusion are `VERIFIED` only in their
+stated necessary scopes. Root exclusion, actual-incidence motif forcing,
+both surviving endpoints, `n3=708`, Conway-99, and novelty remain `UNKNOWN`.
+The full repair and scope chronology is retained in the
+[Wave 32 orchestrator ledger](verification/2026-07-24-wave32-orchestrator-corrections.md).
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

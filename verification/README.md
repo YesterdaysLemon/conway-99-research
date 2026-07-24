@@ -829,6 +829,87 @@ entries, checks the complete central ledgers and links, scans exact release
 and new-blob bytes with zero privacy findings, and finishes with clean
 detached status and strict Git-object integrity.
 
+## Wave 32 rooted and indecomposable endpoint reductions
+
+The corrected
+[rooted discovery package](../attempts/wave32-rooted-vector/) proves a
+necessary reduction under the full actual vertex-triangle incidence and
+frozen `n3=708` endpoint package. Every norm-two root has triangle image
+
+```text
+(+1)^21,0^189,(-1)^21
+```
+
+transported from a signed seven-plus-seven vertex support whose induced
+graph is, up to relabeling, the bipartite complement of the Fano incidence
+graph. This reduces
+the earlier `46 -> 32` root census to 16 matrix-only patterns and one
+actual-incidence pattern. The package does not exclude that last pattern.
+
+The [clean-room rooted audit](wave32-rooted-vector/audit.md) returns a scoped
+`VERIFIED` verdict after 19 independent tests. It does not import or execute
+discovery code. It reconstructs the primitive-image bridge, incidence
+transport, residue elimination, support saturation, outside census, tensor
+and fourth-moment constraints, reflection consequences, and hostile premise
+deletions. It also preserves and repairs the discovery-v1 residual-degree
+error; the corrected remaining degrees are `10,12,14`.
+
+The separate
+[indecomposable discovery package](../attempts/wave32-indecomposable/)
+proves two necessary rootless reductions. Under minimum four, primitive row
+generation makes integral indecomposability equivalent to connected
+nonorthogonality support; the Wave 31 actual-incidence theorem supplies that
+connectedness. Rootlessness also forbids the unique switched
+`{-2,-2,-1}` three-row norm-two motif and forces
+
+```text
+tr(A_-1 A_-2^2)=0.
+```
+
+The [clean-room indecomposable audit](wave32-indecomposable/audit.md)
+returns `PASS_SCOPED_WITH_NONBLOCKING_COVERAGE_GAPS` after 19 tests. It
+independently supplies the checks omitted by the candidate suite, verifies
+the exact pair census and factor-two trace normalization, and builds
+full-size hostile controls. Neither pair counts nor those controls force the
+motif under actual incidence.
+
+The corrected [literature package](wave32-literature-audit/audit.md) and
+[independent literature audit](wave32-literature-audit-independent/audit.md)
+preserve 68 exact queries in 17 batches, eight direct inspections, 15
+metadata records with explicit 14-plus-one chronology, three access
+failures, and no raw source payload. The independent suite passes 17 tests
+and records Petro--Phillips's conditional triangle spectrum as prior art.
+No exact endpoint resolution was found in the searched sources; novelty,
+priority, openness, and the global target status remain `UNKNOWN`.
+
+Run the five suites from the repository root:
+
+```powershell
+python -B -m unittest discover -s attempts\wave32-rooted-vector -p test_exact_check.py -v
+python -B -m unittest discover -s verification\wave32-rooted-vector -p test_independent_check.py -v
+python -B -m unittest discover -s attempts\wave32-indecomposable -p test_exact_check.py -v
+python -B -m unittest discover -s verification\wave32-indecomposable -p test_independent_check.py -v
+python -B -m unittest discover -s verification\wave32-literature-audit-independent -p test_independent_check.py -v
+```
+
+The exact test breakdown is `14 + 19 + 10 + 19 + 17 = 79`. Five
+deterministic JSON outputs regenerate byte-identically. Six Wave 32
+manifests contain 42 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| rooted discovery | 8 | `ba6c7099e06e24fe2feee4d19021dac9ddf49cbfe99acdd54f905a6c40728b8e` |
+| rooted verifier | 7 | `2607c3000944e6d31ab5491a7d959ae4f97f05ac3e0d754baaf2830efcd085df` |
+| indecomposable discovery | 7 | `451ca652a83b3a93fd11278c25dafe43bafabc3e06e1cac429064d32211d7138` |
+| indecomposable verifier | 8 | `67dd65dd491ef28b4848bbb6c1e0ae47d3814db5b0a466462d7e9f79d5d4d6cd` |
+| literature package | 6 | `9bdf458203beb32c76b993af2cb6130641546b5a7816f8bed507661e640173c6` |
+| literature verifier | 6 | `b333f77785db6495040e5137b8cc8c9c70f283ed5dfac513ff92f98fd15f6b24` |
+
+The
+[Wave 32 orchestrator correction ledger](2026-07-24-wave32-orchestrator-corrections.md)
+retains every discovery defect, verifier objection, repair, scope wall, and
+the unchanged global `UNKNOWN` status.
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

@@ -1992,6 +1992,102 @@ validates all six manifests and 42 entries, checks duplicate-key-free YAML,
 local links, exact Git-blob privacy, clean status, and
 `git fsck --full --strict`.
 
+## Wave 32 rooted and indecomposable endpoint reductions
+
+Run the five Wave 32 suites from the repository root:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave32-rooted-vector -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave32-rooted-vector -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s attempts\wave32-indecomposable -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave32-indecomposable -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s verification\wave32-literature-audit-independent `
+  -p test_independent_check.py -v
+```
+
+They pass `14`, `19`, `10`, `19`, and `17` tests, respectively: 79 tests
+in total. The rooted and indecomposable verifiers are clean-room
+implementations and do not import or execute the corresponding discovery
+checker. The literature verifier freezes the corrected candidate and
+supporting inputs byte for byte.
+
+Regenerate the five deterministic outputs outside the checkout:
+
+```powershell
+$wave32Tmp = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave32-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave32Tmp | Out-Null
+
+python -B attempts\wave32-rooted-vector\exact_check.py `
+  --output (Join-Path $wave32Tmp "rooted-discovery.json")
+python -B verification\wave32-rooted-vector\independent_check.py `
+  --output (Join-Path $wave32Tmp "rooted-independent.json")
+python -B attempts\wave32-indecomposable\exact_check.py `
+  --output (Join-Path $wave32Tmp "indecomposable-discovery.json")
+python -B verification\wave32-indecomposable\independent_check.py `
+  --output (Join-Path $wave32Tmp "indecomposable-independent.json")
+python -B verification\wave32-literature-audit-independent\independent_check.py `
+  --output (Join-Path $wave32Tmp "literature-independent.json")
+```
+
+The expected SHA-256 values are:
+
+```text
+rooted discovery:
+9fa31703b5c4721476b1b88f217d7455615c0d92c0d6db7f150abadfc069c2a0
+
+rooted independent:
+4ed239e997e4485abdab4e26a2e28e2a981b6fff069c4d926ccff3d2241dbe6f
+
+indecomposable discovery:
+bccde9635d973e030e004800abc08c37089e036faca1edc2bb85ed70ee731472
+
+indecomposable independent:
+4b90ef54358a14abc92c925c8e0f94ed9510b4f80857fde5aa4e2abf4ba89e2a
+
+literature independent:
+f884699b464a8b1b46b63cc15546f01b72c492ae54530750fcf00226b13d913b
+```
+
+Each regenerated file must also be byte-identical to its accepted JSON in
+the corresponding package. Six Wave 32 manifests validate 42 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| rooted discovery | 8 | `ba6c7099e06e24fe2feee4d19021dac9ddf49cbfe99acdd54f905a6c40728b8e` |
+| rooted verifier | 7 | `2607c3000944e6d31ab5491a7d959ae4f97f05ac3e0d754baaf2830efcd085df` |
+| indecomposable discovery | 7 | `451ca652a83b3a93fd11278c25dafe43bafabc3e06e1cac429064d32211d7138` |
+| indecomposable verifier | 8 | `67dd65dd491ef28b4848bbb6c1e0ae47d3814db5b0a466462d7e9f79d5d4d6cd` |
+| literature package | 6 | `9bdf458203beb32c76b993af2cb6130641546b5a7816f8bed507661e640173c6` |
+| literature verifier | 6 | `b333f77785db6495040e5137b8cc8c9c70f283ed5dfac513ff92f98fd15f6b24` |
+
+The exact Wave 32 scope wall is:
+
+```text
+rooted necessary Fano-support pattern:                 VERIFIED scoped
+rooted partial-control extendibility:                  UNKNOWN
+root exclusion / rooted endpoint:                      UNKNOWN
+rootless decomposable actual-incidence endpoint:       VERIFIED impossible
+rootless indecomposable necessary reductions:          VERIFIED scoped
+actual incidence forces the forbidden row motif:       UNKNOWN
+rootless indecomposable endpoint:                      UNKNOWN
+n3=708 / Conway-99 / novelty:                          UNKNOWN
+strongest conditional bound:                          n3>=708
+```
+
+The [rooted audit](verification/wave32-rooted-vector/audit.md),
+[indecomposable audit](verification/wave32-indecomposable/audit.md),
+[literature audit](verification/wave32-literature-audit-independent/audit.md),
+and
+[correction ledger](verification/2026-07-24-wave32-orchestrator-corrections.md)
+record every premise, repair, hostile control, and nonpromotion wall.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

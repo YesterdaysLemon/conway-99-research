@@ -1156,3 +1156,127 @@ obligations:
       - "verification/2026-07-24-wave31-orchestrator-corrections.md"
       - "SOURCES.bib"
     note: "The audit records 80 exact web-search queries in 20 batches, four direct metadata or abstract open attempts, 14 retained metadata records, and zero retained raw payloads. It finds no exact prior result in the searched sources. The frozen pre-proof UNKNOWN sign-lemma status is preserved rather than silently rewritten. Coverage remains incomplete, so novelty, priority, global target status, n3=708, and Conway-99 remain UNKNOWN."
+
+  - id: O-WAVE32-ROOTED-REDUCTION
+    requirement: >-
+      Freeze the corrected rooted package; independently reconstruct the
+      primitive transpose-surjectivity bridge, modulo-three incidence
+      transport, residue exclusion, integer -4 amplitude bound,
+      seven-plus-seven support, Fano-complement saturation, outside census,
+      21/189/21 pattern, matrix-only 32-to-16 lemma, tensor/A4 constraints,
+      root reflection, adversarial mutations, and all nonexistence and
+      extendibility status walls.
+    critical: true
+    status: PASS_SCOPED_CONDITIONAL_REDUCTION_WITH_RECORDED_V1_CORRECTION
+    evidence:
+      - "agents/2026-07-24-wave32-rooted-proof.md"
+      - "attempts/wave32-rooted-vector/correction-ledger.md"
+      - "attempts/wave32-rooted-vector/artifact-manifest.sha256"
+      - "verification/wave32-rooted-vector/independent_check.py"
+      - "verification/wave32-rooted-vector/test_independent_check.py"
+      - "verification/wave32-rooted-vector/independent-results.json"
+      - "verification/wave32-rooted-vector/audit.md"
+      - "verification/wave32-rooted-vector/failed-objections.md"
+      - "verification/wave32-rooted-vector/run-report.yaml"
+      - "verification/wave32-rooted-vector/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    note: >-
+      The clean-room verifier passes 19 tests and independently replays the
+      corrected v2 manifest. The historical v1 8-versus-10 residual-degree
+      defect is retained. The theorem is a necessary rooted reduction only;
+      extension, root exclusion, endpoint existence, n3=708, Conway-99, and
+      novelty remain UNKNOWN.
+
+  - id: O-WAVE32-INDECOMPOSABLE-REDUCTIONS
+    requirement: >-
+      Independently reconstruct primitive row generation, the minimum-four
+      connectivity/decomposition equivalence, the inherited actual-incidence
+      connectivity consequence, the unique switched endpoint-alphabet
+      {-2,-2,-1} norm-two motif, mixed-trace normalization, exact endpoint pair counts, corrected
+      odd-prime ranks, binary hostile controls, premise deletions, and the
+      boundary between verified reductions and unproved motif forcing.
+    critical: true
+    status: PASS_SCOPED_WITH_NONBLOCKING_COVERAGE_GAPS
+    evidence:
+      - "agents/2026-07-24-wave32-indecomposable-proof.md"
+      - "attempts/wave32-indecomposable/artifact-manifest.sha256"
+      - "verification/wave32-indecomposable/precomparison-freeze.sha256"
+      - "verification/wave32-indecomposable/input-freeze.sha256"
+      - "verification/wave32-indecomposable/independent_check.py"
+      - "verification/wave32-indecomposable/test_independent_check.py"
+      - "verification/wave32-indecomposable/independent-results.json"
+      - "verification/wave32-indecomposable/audit.md"
+      - "verification/wave32-indecomposable/failed-objections.md"
+      - "verification/wave32-indecomposable/run-report.yaml"
+      - "verification/wave32-indecomposable/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant/audit.md"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    note: >-
+      The clean-room verifier passes 19 tests. Candidate executable coverage
+      gaps are nonblocking because the independent verifier supplies the
+      omitted checks. Actual-incidence motif forcing, rootless
+      indecomposable endpoint existence, n3=708, Conway-99, and novelty
+      remain UNKNOWN.
+
+  - id: O-WAVE32-LITERATURE-STATUS
+    requirement: >-
+      Preserve the frozen actual-incidence versus matrix-only scope, execute
+      and account for all 68 queries and direct inspections, retain source
+      metadata and access limits without raw payload, preserve the original
+      14-record chronology plus the post-audit inherited source,
+      independently verify all three v1 corrections, distinguish exact prior
+      art from nearby methods, and keep bounded non-discovery separate from
+      novelty, priority, nonexistence, or global openness.
+    critical: false
+    status: PASS_CORRECTIONS_INTEGRATED
+    evidence:
+      - "agents/2026-07-24-wave32-statement-literature.md"
+      - "verification/wave32-literature-audit/protocol-freeze.md"
+      - "verification/wave32-literature-audit/query-ledger.json"
+      - "verification/wave32-literature-audit/source-metadata.json"
+      - "verification/wave32-literature-audit/correction-ledger.md"
+      - "verification/wave32-literature-audit/audit.md"
+      - "verification/wave32-literature-audit/run-report.yaml"
+      - "verification/wave32-literature-audit/artifact-manifest.sha256"
+      - "verification/wave32-literature-audit-independent/independent-results.json"
+      - "verification/wave32-literature-audit-independent/audit.md"
+      - "verification/wave32-literature-audit-independent/run-report.yaml"
+      - "verification/wave32-literature-audit-independent/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    note: >-
+      Seventeen independent tests pass. The only permitted no-hit statement
+      is that no exact prior result for either surviving endpoint was found
+      in the sources searched as of 2026-07-24. Novelty, priority, and global
+      target status remain UNKNOWN.
+
+  - id: O-WAVE32-CONTINUATION
+    requirement: >-
+      Produce a complete independently checked continuation certificate for
+      the exhaustive actual-incidence n3=708 endpoint split: either construct
+      a full valid target realization in one surviving branch, or exclude
+      both branches. The rooted continuation must either extend the canonical
+      signed Fano-complement support to a full target realization or
+      completely exclude all such extensions under every outside-only
+      strongly-regular, projector, tensor, A4, and Schur constraint. A
+      rootless exclusion must derive positive mixed motif trace from actual
+      incidence or supply another complete obstruction to every integrally
+      indecomposable marked endpoint. Matrix-only and actual-incidence
+      premises must remain separated.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave32-rooted-vector/audit.md"
+      - "verification/wave32-rooted-vector/failed-objections.md"
+      - "verification/wave32-rooted-vector/independent-results.json"
+      - "verification/wave32-indecomposable/audit.md"
+      - "verification/wave32-indecomposable/failed-objections.md"
+      - "verification/wave32-indecomposable/independent-results.json"
+      - "agents/2026-07-24-wave32-statement-literature.md"
+      - "verification/wave31-sign-commutant/audit.md"
+      - "verification/2026-07-24-wave32-orchestrator-corrections.md"
+    note: >-
+      The rooted partial control is not extendibility evidence, and exact
+      pair counts or finite-field hostile controls do not force the
+      indecomposable motif. No complete positive or negative continuation
+      certificate exists. Rooted endpoint, rootless indecomposable endpoint,
+      n3=708, Conway-99 existence/nonexistence, and novelty remain UNKNOWN.

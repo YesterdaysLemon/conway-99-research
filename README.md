@@ -44,8 +44,12 @@ and the normalized search problem.
   control of that rank/determinant shape. Wave 31 uses the actual
   vertex-triangle incidence projector to exclude every nontrivial rootless
   integral orthogonal decomposition, including that survivor and independently
-  of `h=729`. Rooted and rootless integrally indecomposable endpoint forms
-  remain unclassified, so `n3=708` is not excluded.
+  of `h=729`. Wave 32 independently verifies that every actual-incidence
+  norm-two root has one signed Fano-complement support and triangle pattern
+  `(+1)^21,0^189,(-1)^21`. It also proves that every surviving rootless
+  actual-incidence endpoint is indecomposable and that rootlessness forbids the exact
+  `{-2,-2,-1}` three-row motif. Neither reduction excludes its surviving
+  branch, so `n3=708` remains unexcluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1237,6 +1241,110 @@ accepted outputs, validates 42 manifest entries, resolves all 1,331 central
 evidence references and 312 local links, scans the 938-file release tree and
 all 58 new Git blobs with zero privacy findings, and finishes with clean
 detached status and strict object verification.
+
+Wave 32 attacks both exhaustive endpoint branches left after Wave 31, across
+all eight determinant values
+
+```text
+h in {9,21,49,81,189,441,729,1029}.
+```
+
+For the rooted branch, let `r` be a norm-two endpoint vector and put
+`y=XSr`. Primitivity makes `X^T:Z^231 -> Z^44` onto, so `y` lies in the exact
+integral image `M Z^231`. With `N` the actual vertex-triangle incidence
+matrix, `z=Ny` is therefore constant modulo three because
+
+```text
+NM=(9I-3A)N+J.
+```
+
+The alternatives `z=3k+/-1` contradict the exact sum and norm, leaving
+
+```text
+z=3k,  Ak=-4k,  sum(k)=0,  ||k||^2=14.
+```
+
+Local neighbor and nonneighbor sums force
+
+```text
+k in {0,+1,-1}^99,
+|k^-1(+1)|=|k^-1(-1)|=7.
+```
+
+The `lambda=1, mu=2` common-neighbor equations then force the signed support,
+up to relabeling, to be the bipartite complement of the Fano incidence
+graph. Consequently every root has the unique triangle-image census
+
+```text
+y: (+1)^21, 0^189, (-1)^21.
+```
+
+This reduces the Wave 28 root-pattern count
+
+```text
+46 moment patterns -> 32 tensor patterns -> 16 matrix-only patterns
+                   -> 1 actual-incidence pattern.
+```
+
+It does not exclude that pattern. The
+[clean-room rooted audit](verification/wave32-rooted-vector/audit.md)
+passes 19 tests without importing discovery code. It also caught a
+nonblocking discovery-v1 metadata error: the partial hostile control needs
+remaining outside degrees `10,12,14`, not `8,12,14`. The original hashes and
+repair are public in the
+[rooted correction ledger](attempts/wave32-rooted-vector/correction-ledger.md).
+
+For the rootless branch, primitive row generation makes integral
+indecomposability equivalent to connected nonzero support of `M` under
+minimum four. Wave 31 supplies that connectedness under actual incidence, so
+every surviving rootless endpoint is indecomposable. Independently, three
+frame rows with pair products
+
+```text
+{-2,-2,-1}
+```
+
+have a positive-definite Gram matrix but sum to a norm-two vector. Hence
+rootlessness requires
+
+```text
+tr(A_-1 A_-2^2)=0,
+```
+
+where the trace is twice the number of unordered forbidden motifs. The exact
+pair census does not determine that mixed trace; an adversarial connected
+pair-count control has zero motifs after deliberately dropping the endpoint
+projector realization. The
+[independent indecomposable audit](verification/wave32-indecomposable/audit.md)
+passes 19 clean-room tests and leaves actual-incidence motif forcing
+`UNKNOWN`.
+
+The corrected, proof-separated
+[Wave 32 literature audit](verification/wave32-literature-audit-independent/audit.md)
+passes 17 tests. It preserves 68 exact queries in 17 batches, the original
+14-record chronology, one post-audit inherited-source addition, three access
+failures, and no raw source payload. Petro--Phillips's conditional
+`231`-triangle spectrum is cited prior art. No exact theorem for either
+surviving endpoint was found in the searched sources, but that bounded
+nonhit is not a novelty or openness certificate.
+
+The Wave 32 status is therefore:
+
+```text
+rooted Fano-support and 21/189/21 reduction:       VERIFIED scoped
+rooted endpoint exclusion:                        NOT OBTAINED
+rootless decomposable actual-incidence endpoint:  VERIFIED impossible
+surviving rootless endpoint is indecomposable:    VERIFIED reduction
+rootless {-2,-2,-1} motif exclusion:              VERIFIED reduction
+actual incidence forces the forbidden motif:      UNKNOWN
+rooted / rootless indecomposable endpoints:        UNKNOWN
+n3=708 / Conway-99 / novelty:                     UNKNOWN
+strongest conditional bound:                      n3>=708
+```
+
+All discovery failures, verifier objections, metadata repairs, and unchanged
+status walls are retained in the
+[Wave 32 orchestrator ledger](verification/2026-07-24-wave32-orchestrator-corrections.md).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
