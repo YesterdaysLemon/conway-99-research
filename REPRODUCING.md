@@ -2328,8 +2328,8 @@ rooted structural, excluding frozen-status comparison: 44
 rooted encoding:   28
 rootless:          63
 Kuber/Selub:        6
-chronology protocol: 6
-outer total:       147
+chronology protocol: 7
+outer total:       148
 ```
 
 The unchanged 11-test rooted structural comparison suite must be run through
@@ -2341,8 +2341,8 @@ python -B verification\wave34-integration-chronology\chronology_replay.py `
   --output <temporary-rooted-structural-chronology.json>
 ```
 
-That gives 152 original Wave 34 source/verifier cases plus six chronology
-protocol cases, or 158 executed cases across the current and authenticated
+That gives 152 original Wave 34 source/verifier cases plus seven chronology
+protocol cases, or 159 executed cases across the current and authenticated
 historical-input contexts. Direct integrated-root execution of
 `test_static_compare.py` is expected to reject the later `STATUS.yaml`; the
 retained failure and exact one-file substitution rule are in
@@ -2396,7 +2396,7 @@ python -B verification\wave34-rootless-global\comparison_check.py `
   --output (Join-Path $wave34Tmp "rootless-stage2.json")
 ```
 
-Fifteen nonoverlapping publication manifests contain 123 entries:
+Sixteen nonoverlapping publication manifests contain 130 entries:
 
 | package | entries | manifest SHA-256 |
 |---|---:|---|
@@ -2415,6 +2415,7 @@ Fifteen nonoverlapping publication manifests contain 123 entries:
 | Harrison source audit | 11 | `af2faaf07ea83173342da3703b5729c02d28ae6003636b1e29bdb27d6426728a` |
 | Kuber/Selub source audit | 14 | `5053217d6432365b903b787cb53e923996e96feef404904caad89dd7ebd686bc` |
 | consolidated external audit | 7 | `b737c2afc002ae9a3ae0b0c36be2568f3ef67d7379796f129eacaf328e8acc39` |
+| integration chronology | 7 | `8225664a580fe4f81b8496368dd1d32e9d8d4b9bf79f959bfd818b855350f7e6` |
 
 The encoding candidate's overlapping 18-entry local manifest and its run
 manifest are validated separately but are not double-counted in the

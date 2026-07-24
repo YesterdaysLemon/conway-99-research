@@ -43,6 +43,16 @@ class ChronologyProtocolTests(unittest.TestCase):
         self.assertIn("replace that one file", protocol)
         self.assertIn("No verifier code", protocol)
 
+    def test_published_command_is_portable(self) -> None:
+        self.assertEqual(
+            replay.PORTABLE_TEST_COMMAND,
+            "python -B -m unittest discover "
+            "-s verification/wave34-rooted-structural "
+            "-p test_static_compare.py -v",
+        )
+        self.assertNotIn("\\", replay.PORTABLE_TEST_COMMAND)
+        self.assertNotIn(":", replay.PORTABLE_TEST_COMMAND)
+
 
 if __name__ == "__main__":
     unittest.main()

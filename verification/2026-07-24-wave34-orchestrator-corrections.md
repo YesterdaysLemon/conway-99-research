@@ -147,6 +147,16 @@ runs the unchanged 11-test comparison suite with the full census enabled.
 The procedure and the retained failure are in
 `verification/wave34-integration-chronology/`.
 
+The first wrapper invocation used an invalid guessed expansion of the short
+integration commit. `git rev-parse` rejected it before creating an archive or
+running a test. The next invocation passed all 11 tests but its draft JSON
+serialized the host's absolute Python executable path. That draft, hash
+`ef7eed35236fe5b75696564d85a08d7f6f95826f2dabdbb535c71564158c8aa1`,
+is not published. The serializer now emits a portable command, a regression
+test enforces that boundary, and the complete replay was rerun. The accepted
+result hash is
+`b18a3e402a23f39924dd282482a64404443b8aaa2f1fbfcfb32cec09a2d59cb4`.
+
 ## Current-source lane
 
 Brouwer's maintained `?` marker, McKay's contextual approximate

@@ -1590,6 +1590,13 @@ strongest conditional bound:                            n3>=708
 Every failed replay, wording repair, provenance defect, and nonpromotion wall
 is retained in the
 [Wave 34 orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
+Central integration changed the exact `STATUS.yaml` frozen by the structural
+verifier, so a direct later-root replay correctly failed closed. The
+[integration-chronology audit](verification/wave34-integration-chronology/audit.md)
+exports commit `0e11485`, substitutes only the authenticated pre-integration
+status blob, and passes the unchanged 11-test full-census suite. This repairs
+reproducibility without weakening the freeze or changing any mathematical
+status.
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

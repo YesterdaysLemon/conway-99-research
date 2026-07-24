@@ -619,11 +619,11 @@ formula identities replay but the theorem proof bodies are missing or
 unpulled; Selub supplies historical SAT-framework prior art without a solver
 certificate.
 
-Run the 147 current-tree outer tests, the authenticated 11-test structural
-chronology replay, the separate source validator, and the six chronology
+Run the 148 current-tree outer tests, the authenticated 11-test structural
+chronology replay, the separate source validator, and the seven chronology
 protocol tests with the commands in [`REPRODUCING.md`](../REPRODUCING.md).
-The 15 pre-chronology publication manifests contain 123 entries. Exact
-corrections and nonpromotion walls are in the
+The 16 publication manifests contain 130 entries. Exact corrections and
+nonpromotion walls are in the
 [Wave 34 orchestrator ledger](2026-07-24-wave34-orchestrator-corrections.md).
 
 ```text

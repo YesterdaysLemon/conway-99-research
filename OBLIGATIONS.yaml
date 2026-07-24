@@ -1434,6 +1434,8 @@ obligations:
       - "verification/wave34-rooted-structural/pair-census-crosscheck/audit.md"
       - "verification/wave34-rooted-structural/pair-census-crosscheck/exact-results.json"
       - "verification/wave34-rooted-structural/pair-census-crosscheck/artifact-manifest.sha256"
+      - "verification/wave34-integration-chronology/audit.md"
+      - "verification/wave34-integration-chronology/artifact-manifest.sha256"
     note: >-
       The verified 448,879,368 count is a necessary single-column domain,
       not a count of compatible 15-column designs or graph solutions. Binary

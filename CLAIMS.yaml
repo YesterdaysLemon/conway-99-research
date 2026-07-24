@@ -1317,6 +1317,8 @@ claims:
       - "verification/wave34-rooted-structural/pair-census-crosscheck/exact-results.json"
       - "verification/wave34-rooted-structural/pair-census-crosscheck/audit.md"
       - "verification/wave34-rooted-structural/pair-census-crosscheck/artifact-manifest.sha256"
+      - "verification/wave34-integration-chronology/audit.md"
+      - "verification/wave34-integration-chronology/artifact-manifest.sha256"
       - "verification/2026-07-24-wave34-orchestrator-corrections.md"
     limitations: >-
       The two census values count individual necessary columns, not

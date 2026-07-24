@@ -21,6 +21,11 @@ FROZEN_STATUS_SHA256 = (
 TEST_PATH = "verification/wave34-rooted-structural"
 TEST_PATTERN = "test_static_compare.py"
 EXPECTED_TESTS = 11
+PORTABLE_TEST_COMMAND = (
+    "python -B -m unittest discover "
+    "-s verification/wave34-rooted-structural "
+    "-p test_static_compare.py -v"
+)
 
 
 def sha256_bytes(payload: bytes) -> str:
@@ -185,7 +190,7 @@ def build_result(commit: str) -> dict[str, object]:
         "unchanged_verifier_path": (
             "verification/wave34-rooted-structural/static_compare.py"
         ),
-        "command": " ".join(command),
+        "command": PORTABLE_TEST_COMMAND,
         "full_census_enabled": True,
         "exit_code": replay.returncode,
         "tests_run": summary["tests_run"],
