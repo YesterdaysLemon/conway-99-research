@@ -1422,6 +1422,15 @@ The
 preserves the E6 exposition bridge, the literature-protocol correction, and
 the later A20-addendum chronology without rewriting their frozen inputs.
 
+The detached
+[Wave 27 clean-source replay](verification/2026-07-24-wave27-clean-clone.md)
+records 116 passing tests, seven byte-identical JSON regenerations, all 51
+entries of six manifests, 211 status path/hash pairs, scoped link and
+line-ending gates, exact-blob privacy checks of the release tree and
+seven-commit unpublished range, clean status, and strict Git object
+verification at integration commit
+`4a2f65d20f8fa403a3a245815799070cf126173f`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

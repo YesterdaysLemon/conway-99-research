@@ -606,3 +606,9 @@ or separately frozen service-query pairs and 303 inspected records through
 retained protocol correction, and failed-service results without treating
 them as nonexistence evidence. No direct match was found within the bounded
 search, but novelty and priority remain `UNKNOWN`.
+
+The detached
+[Wave 27 clean-source replay](2026-07-24-wave27-clean-clone.md) records 116
+passing tests, seven byte-identical regenerations, six exact manifests,
+central metadata and link gates, exact-blob privacy scans, clean status, and
+strict Git object verification.

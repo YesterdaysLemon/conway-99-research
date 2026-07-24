@@ -893,6 +893,14 @@ The retained exposition, protocol, and addendum chronology corrections are
 collected in the
 [Wave 27 correction ledger](verification/2026-07-24-wave27-orchestrator-corrections.md).
 
+The detached
+[Wave 27 clean-source replay](verification/2026-07-24-wave27-clean-clone.md)
+passes all 116 tests, regenerates seven JSON files byte-identically, validates
+six manifests and 211 status hashes, resolves 205 scoped local links, and
+finds no credential-shaped or private-path payload in the release tree or
+seven-commit unpublished range. The clone remains clean and strict Git object
+verification succeeds.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1136,6 +1144,10 @@ status.
   56 frozen or separately frozen query pairs, 303 inspected records,
   a retained protocol correction and service failures, conceptual prior art,
   and bounded non-discovery with novelty `UNKNOWN`.
+- [Wave 27 clean-source replay](verification/2026-07-24-wave27-clean-clone.md):
+  detached 116-test replay, seven byte-identical generated files, six exact
+  manifests, metadata/link/privacy gates, clean status, and strict Git object
+  verification.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

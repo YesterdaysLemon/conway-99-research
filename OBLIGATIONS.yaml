@@ -57,6 +57,7 @@ obligations:
       - "verification/2026-07-22-wave9-clean-clone.md"
       - "verification/2026-07-22-wave10-clean-clone.md"
       - "verification/2026-07-22-wave11-clean-clone.md"
+      - "verification/2026-07-24-wave27-clean-clone.md"
     note: "Wave 2, Wave 3/N3, and Waves 5-11 infrastructure and conditional-bound replays pass from clean source trees, but no decisive target artifact exists."
 
   - id: O-SYMMETRY-SAFETY

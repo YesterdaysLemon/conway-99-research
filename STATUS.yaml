@@ -1108,6 +1108,19 @@ twenty_seventh_research_wave:
   literature_service_query_pair_count: 56
   literature_inspected_record_count: 303
   exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  integration_commit: "4a2f65d20f8fa403a3a245815799070cf126173f"
+  clean_clone_commit: "4a2f65d20f8fa403a3a245815799070cf126173f"
+  clean_clone_replay: "verification/2026-07-24-wave27-clean-clone.md"
+  clean_clone_replay_sha256: "acc067d5a87476e7c8a514eb9c1b32880107b98ecfa6445dc36c092628bcc008"
+  clean_clone_verdict: PASS
+  clean_clone_tests_passed: 116
+  clean_clone_regenerations_byte_identical: 7
+  clean_clone_manifest_count: 6
+  clean_clone_manifest_entries: 51
+  clean_clone_status_hash_pairs: 211
+  clean_clone_scoped_local_links: 205
+  clean_clone_privacy_tree_files: 761
+  clean_clone_privacy_new_blobs: 77
   runtime_metadata: "agents/2026-07-24-wave27-runtime-metadata.md"
   runtime_metadata_sha256: "90fa48156ce34d8442aba69fb53e69b16ee3100ee5a32fa44af79d52815da400"
   orchestrator_correction_ledger: "verification/2026-07-24-wave27-orchestrator-corrections.md"

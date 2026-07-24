@@ -1447,6 +1447,17 @@ exclude a full orthogonal ADE endpoint form under the stated projector/Schur
 premises. They do not classify general even rank-44 forms, exclude `n3=708`,
 improve the headline `n3>=708` bound, resolve Conway-99, or establish novelty.
 
+The detached Wave 27 publication replay is
+`verification/2026-07-24-wave27-clean-clone.md`. At integration commit
+`4a2f65d20f8fa403a3a245815799070cf126173f`, it passes all 116 tests,
+regenerates seven JSON files byte-identically, validates all 51 entries in
+six manifests, checks 65 claims, 59 obligations, 211 status path/hash pairs,
+205 scoped local links, 52 unique BibTeX keys, and 81 LF-only Wave 27/central
+files. Exact-blob scans cover 761 release-tree files and all 77 new blobs
+across the seven-commit unpublished range with zero credential-shaped or
+private-path findings. The detached clone finishes clean, and
+`git fsck --full --strict` returns success.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
