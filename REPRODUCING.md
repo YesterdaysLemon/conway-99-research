@@ -2284,6 +2284,162 @@ regenerations, validates 80 manifest entries and 401 status path/hash pairs,
 checks 358 local links, scans the exact tree and all 118 new blobs, and
 finishes with clean status and `git fsck --full --strict`.
 
+## Wave 34 rooted and rootless continuation
+
+Run the complete current-tree unit-test set from the repository root. The
+full structural census is opt-in and must be enabled:
+
+```powershell
+$env:WAVE34_FULL_CENSUS = '1'
+
+python -B -m unittest discover `
+  -s verification\wave34-rooted-structural\precomparison -p "test_*.py" -v
+python -B -m unittest discover `
+  -s attempts\wave34-rooted-structural -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave34-rooted-structural\pair-census-crosscheck -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave34-integration-chronology -p "test_*.py" -v
+
+python -B -m unittest discover `
+  -s verification\wave34-rooted-encoding\precomparison -p "test_*.py" -v
+python -B -m unittest discover `
+  -s attempts\wave34-rooted-encoding -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave34-rooted-encoding -p "test_independent_compare.py" -v
+
+python -B -m unittest discover `
+  -s verification\wave34-rootless-global\precomparison -p "test_*.py" -v
+python -B -m unittest discover `
+  -s attempts\wave34-rootless-global -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave34-rootless-global -p "test_comparison_check.py" -v
+
+python -B -m unittest discover `
+  -s verification\wave34-external-source-audit\kuber-selub `
+  -p "test_audit_sources.py" -v
+python verification\wave34-external-source-audit\status-designs\validate_results.py
+```
+
+The direct current-tree unit-test commands report
+
+```text
+rooted structural, excluding frozen-status comparison: 44
+rooted encoding:   28
+rootless:          63
+Kuber/Selub:        6
+chronology protocol: 6
+outer total:       147
+```
+
+The unchanged 11-test rooted structural comparison suite must be run through
+the authenticated chronology wrapper after the integrated commit exists:
+
+```powershell
+python -B verification\wave34-integration-chronology\chronology_replay.py `
+  --commit <exact-integrated-commit> `
+  --output <temporary-rooted-structural-chronology.json>
+```
+
+That gives 152 original Wave 34 source/verifier cases plus six chronology
+protocol cases, or 158 executed cases across the current and authenticated
+historical-input contexts. Direct integrated-root execution of
+`test_static_compare.py` is expected to reject the later `STATUS.yaml`; the
+retained failure and exact one-file substitution rule are in
+`verification/wave34-integration-chronology/`.
+
+The status/design validator is a separate machine-result gate. Harrison's
+external-clone source replay requires its pinned dependency environment and
+is not counted as a clean-clone unit test; its deterministic outputs and
+missing-artifact boundaries are bound by its manifest.
+
+The raw 89,546,779-byte CNF is intentionally ignored by Git. A clean clone
+contains the deterministic gzip:
+
+```text
+attempts/wave34-rooted-encoding/rooted-complete.cnf.gz
+SHA-256:
+6b6beb5d49c7fe75b9b475162cc4bd97de2793389df150dfab9765ba497305f0
+```
+
+Before running the encoding comparison suite in a clean clone, decompress
+that file to the ignored expected raw path and verify:
+
+```text
+raw SHA-256:
+2362d15f3a20df0a0d7745eb619a94061cee9911c8dda36c191fb6d728c1c3d3
+```
+
+The independent comparison then regenerates and compares all 4,323,943
+clauses. Remove the ignored raw file after the replay; it is not a tracked
+publication artifact.
+
+Regenerate the compact accepted machine results to paths outside the checkout:
+
+```powershell
+$wave34Tmp = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave34-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave34Tmp | Out-Null
+
+python -B verification\wave34-rooted-structural\precomparison\exact_check.py `
+  --output (Join-Path $wave34Tmp "rooted-structural-stage1.json")
+python -B verification\wave34-rooted-structural\static_compare.py `
+  --output (Join-Path $wave34Tmp "rooted-structural-stage2.json")
+python -B verification\wave34-rooted-structural\pair-census-crosscheck\crosscheck.py `
+  --output (Join-Path $wave34Tmp "rooted-pair-census.json")
+python -B verification\wave34-rooted-encoding\independent_compare.py `
+  --output (Join-Path $wave34Tmp "rooted-encoding-comparison.json")
+python -B verification\wave34-rootless-global\precomparison\independent_check.py `
+  --output (Join-Path $wave34Tmp "rootless-stage1.json")
+python -B verification\wave34-rootless-global\comparison_check.py `
+  --output (Join-Path $wave34Tmp "rootless-stage2.json")
+```
+
+Fifteen nonoverlapping publication manifests contain 123 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| current literature | 5 | `496085f741e2cda7904e23888f3723b3d51544af6ba5393a35f47c81ecda6766` |
+| rooted structural candidate | 5 | `fd1372a3e0013eec265f828a33249f5bb0872e505f7e8479d2946a0e917f32de` |
+| rooted structural Stage 1 | 8 | `233a32ac6cb67bcb23b7b269cc6f3f889d943bd5d0714c4f54ead9cbf28c7681` |
+| rooted structural Stage 2 | 7 | `ce4bb77f33e919c3086b09521acd80297a9dcfffbc6bb2b72b331c2ee650ae3c` |
+| rooted pair-census crosscheck | 7 | `de3152c245367bdc8907983e9d0d3528d153a184d9690ed45e94e2b56b5b0891` |
+| rooted encoding publication | 16 | `7cba8a082545cbfcbf01785e6e15a0198bd1cf2357ed0a2b3f353b564a1433e7` |
+| rooted encoding Stage 1 | 11 | `3f1bdcb0ca2d08ee0380cd1435673fddb499db8c3a8273f6676c18f17ad3550c` |
+| rooted encoding Stage 2 | 8 | `f76ae0aeac6c06ca5a0de1171b619664f558710dfe060cc1c41590b697098acd` |
+| rootless candidate | 5 | `bda35ed81dcca9918cff3c544956039b8949a61bfa8a232e4e2d40edcd8d5af2` |
+| rootless Stage 1 | 7 | `eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6` |
+| rootless Stage 2 | 7 | `667535faef9a1dceed0ee40c22ed06232665a624f0937f6863434fb6c9dacc5e` |
+| status/design sources | 5 | `127035fb50940241e2934e59e241f90527694246245d75de95e2f944feb05af8` |
+| Harrison source audit | 11 | `af2faaf07ea83173342da3703b5729c02d28ae6003636b1e29bdb27d6426728a` |
+| Kuber/Selub source audit | 14 | `5053217d6432365b903b787cb53e923996e96feef404904caad89dd7ebd686bc` |
+| consolidated external audit | 7 | `b737c2afc002ae9a3ae0b0c36be2568f3ef67d7379796f129eacaf328e8acc39` |
+
+The encoding candidate's overlapping 18-entry local manifest and its run
+manifest are validated separately but are not double-counted in the
+publication total. The exact Wave 34 scope wall is:
+
+```text
+rooted structural reduction and pair census: VERIFIED scoped
+rooted complete-domain CNF:                   VERIFIED encoding-only
+rooted SAT/UNSAT or binary endpoint:           UNKNOWN
+rootless local-fibre and endpoint lemmas:      VERIFIED scoped
+rootless wedge/four-cycle/moment bounds:       DERIVED scoped
+rootless motif forcing/avoidance:              UNKNOWN
+external graph-level result imported:          NONE
+n3=708 / Conway-99 / novelty:                  UNKNOWN
+strongest conditional bound:                  n3>=708
+```
+
+See the
+[rooted structural audit](verification/wave34-rooted-structural/comparison-audit.md),
+[rooted encoding audit](verification/wave34-rooted-encoding/comparison-audit.md),
+[rootless audit](verification/wave34-rootless-global/audit.md),
+[external-source audit](verification/wave34-external-source-audit/audit.md),
+and
+[orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

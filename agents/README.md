@@ -69,3 +69,24 @@ Wave 33 reports:
   report for one hostile O-Q object and one bounded assignment MILP over a
   fixed simple design. The timeout is non-evidentiary, ten support-coupling
   equations fail, and no O-O layer or graph is supplied.
+
+Wave 34 reports:
+
+- `2026-07-24-wave34-rooted-structural.md`: discovery reparameterization of
+  the exact rooted criterion through support SNF, a `13+14+43` decomposition,
+  an integral rank-16 projector, and a full Pb-only single-column census.
+  Read it with the independent comparison and pair-census crosscheck; the
+  reduced counts are not compatible 15-column designs.
+- `2026-07-24-wave34-rooted-encoding.md`: complete-domain labeled CNF
+  candidate with no symmetry restriction. Independent regeneration verifies
+  the encoding only; SAT and UNSAT remain `UNKNOWN`.
+- `2026-07-24-wave34-rootless-global.md`: actual-incidence local-fibre,
+  relation-degree, endpoint-cap, and partial-control candidate. The
+  independent audit retains its wrong Wave 33 provenance hash and does not
+  promote the partial 45-vertex object to extension evidence.
+- `2026-07-24-wave34-current-literature.md`: bounded current-source discovery
+  handoff. Every no-hit remains a non-novelty result.
+- `2026-07-24-wave34-external-source-verifier.md`: consolidated independent
+  source audit. Kuber is conditional without a graph bridge; Harrison lacks
+  theorem-ladder proof bodies; Selub reports no solver result; no external
+  graph theorem is imported.

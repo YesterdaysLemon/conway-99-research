@@ -1416,3 +1416,111 @@ obligations:
       Both endpoints, n3=708, Conway-99 existence and nonexistence, and
       novelty remain UNKNOWN; the strongest conditional bound remains
       n3>=708.
+
+  - id: O-WAVE34-ROOTED-STRUCTURAL
+    requirement: >-
+      Independently reconstruct the Wave 34 rooted structural candidate,
+      bind its coordinates to Wave 33, verify the SNF and projector
+      equivalence in both directions, reproduce the Pb-only census without
+      candidate code, and independently cross-check the stricter
+      duplicate-free necessary single-column domain.
+    critical: true
+    status: PASS_SCOPED_REPARAMETERIZATION_AND_PAIR_CENSUS
+    evidence:
+      - "agents/2026-07-24-wave34-rooted-structural.md"
+      - "verification/wave34-rooted-structural/comparison-audit.md"
+      - "verification/wave34-rooted-structural/comparison-results.json"
+      - "verification/wave34-rooted-structural/comparison-artifact-manifest.sha256"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/audit.md"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/exact-results.json"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/artifact-manifest.sha256"
+    note: >-
+      The verified 448,879,368 count is a necessary single-column domain,
+      not a count of compatible 15-column designs or graph solutions. Binary
+      existence and exclusion remain UNKNOWN.
+
+  - id: O-WAVE34-ROOTED-ENCODING
+    requirement: >-
+      Independently reconstruct the unrestricted labeled rooted criterion as
+      a complete-domain exact formula, check every semantic family and
+      auxiliary gadget in both directions, match the complete emitted bytes,
+      and retain a graph-checker route for any future model without assuming
+      an automorphism or selected design.
+    critical: true
+    status: PASS_SCOPED_COMPLETE_DOMAIN_ENCODING_ONLY
+    evidence:
+      - "agents/2026-07-24-wave34-rooted-encoding.md"
+      - "attempts/wave34-rooted-encoding/publication-manifest.sha256"
+      - "verification/wave34-rooted-encoding/comparison-audit.md"
+      - "verification/wave34-rooted-encoding/comparison-results.json"
+      - "verification/wave34-rooted-encoding/correction-ledger.md"
+      - "verification/wave34-rooted-encoding/artifact-manifest.sha256"
+    note: >-
+      Formula equivalence passes. The formula has not been solved and no
+      model, graph, UNSAT proof, or proof-checker result exists. SAT and
+      UNSAT remain UNKNOWN.
+
+  - id: O-WAVE34-ROOTLESS-GLOBAL
+    requirement: >-
+      Independently replay the actual-incidence local-fibre lemmas,
+      relation-degree arithmetic, mixed-trace normalization, endpoint cap,
+      restricted factor scan, and partial-control construction; retain every
+      provenance or scope defect; and separate local moment consequences
+      from complete global motif forcing.
+    critical: true
+    status: PASS_SCOPED_WITH_NONBLOCKING_PROVENANCE_AND_SCOPE_QUALIFIERS
+    evidence:
+      - "agents/2026-07-24-wave34-rootless-global.md"
+      - "verification/wave34-rootless-global/precomparison/results.json"
+      - "verification/wave34-rootless-global/comparison-results.json"
+      - "verification/wave34-rootless-global/audit.md"
+      - "verification/wave34-rootless-global/failed-objections.md"
+      - "verification/wave34-rootless-global/artifact-manifest.sha256"
+    note: >-
+      The candidate provenance typo is retained, and the 45-vertex object is
+      partial. The Stage 1 wedge/four-cycle/moment bounds are
+      DERIVED_SCOPED. Global motif forcing, construction, and endpoint
+      resolution remain UNKNOWN.
+
+  - id: O-WAVE34-LITERATURE-AND-EXTERNAL-SOURCES
+    requirement: >-
+      Search bounded current sources, then independently audit the direct
+      status/design sources and pinned Kuber, Harrison, and Selub materials;
+      check source scope, build or formula evidence where available, retain
+      missing proof bodies, and import no graph-level result without its
+      bridge and certificate.
+    critical: true
+    status: PASS_SCOPED_CURRENT_SOURCE_AUDIT
+    evidence:
+      - "agents/2026-07-24-wave34-current-literature.md"
+      - "agents/2026-07-24-wave34-external-source-verifier.md"
+      - "attempts/wave34-current-literature/audit.md"
+      - "verification/wave34-external-source-audit/audit.md"
+      - "verification/wave34-external-source-audit/results.json"
+      - "verification/wave34-external-source-audit/artifact-manifest.sha256"
+    note: >-
+      Scoped source characterizations and conditional subclaims pass. No
+      graph-level external theorem is imported; bounded non-discovery cannot
+      establish openness, novelty, or priority.
+
+  - id: O-WAVE34-CONTINUATION
+    requirement: >-
+      Produce a complete independently verified certificate resolving one
+      surviving branch: a valid 99-vertex graph, a checked complete-domain
+      exclusion, a compatible rooted design/projector realization or
+      obstruction, or a complete actual-incidence rootless
+      construction/forcing theorem. Formula validation, necessary
+      single-column counts, partial controls, timeouts, and bounded source
+      searches do not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave34-rooted-structural/comparison-audit.md"
+      - "verification/wave34-rooted-encoding/comparison-audit.md"
+      - "verification/wave34-rootless-global/audit.md"
+      - "verification/wave34-external-source-audit/audit.md"
+      - "verification/2026-07-24-wave34-orchestrator-corrections.md"
+    note: >-
+      No complete positive or negative endpoint certificate exists.
+      Conway-99, n3=708, and novelty remain UNKNOWN; the strongest
+      conditional bound remains n3>=708.

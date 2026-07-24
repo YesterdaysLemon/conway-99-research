@@ -590,6 +590,50 @@ general even rank-44 scaled-dual form: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
 
+## Wave 34 exact encoding and actual-incidence continuation
+
+Wave 34 has separated Stage 1, candidate, Stage 2, and crosscheck packages.
+
+The rooted structural verifier binds the candidate coordinates to the exact
+Wave 33 labeling, proves `SNF(P)=diag(1^13,0)`, reconciles the projector
+splits, checks the integral rank-16 formulation in both directions, and
+independently reproduces the `574,118,037` Pb-only column census. The
+pair-census crosscheck derives the nine O-pair states directly and uses
+weighted permanents to reproduce the stricter `448,879,368`
+duplicate-free necessary-column count.
+
+The rooted encoding verifier independently regenerates all 4,323,943 clauses
+of the 1,233,001-variable complete-domain CNF and matches the raw
+89,546,779-byte stream. This is encoding verification only. No SAT model,
+UNSAT proof, or target graph exists in the package.
+
+The rootless verifier reconstructs the fibre holonomy,
+`deg(R2)=3q`, `deg(R3)=12-q`, `|E(R3)|=1150`, the 383-triangle upper cap,
+mixed-trace normalization, and the partial control. The separate Stage 1
+derivation records at least 6,860 R0-centered wedges, 3,041 four-cycles, and
+`tr(A_R3^4)>=67848`. It does not force the forbidden motif.
+
+The consolidated external-source package imports no graph-level theorem:
+Kuber's Lean theorem is conditional without the graph bridge; Harrison's
+formula identities replay but the theorem proof bodies are missing or
+unpulled; Selub supplies historical SAT-framework prior art without a solver
+certificate.
+
+Run the 147 current-tree outer tests, the authenticated 11-test structural
+chronology replay, the separate source validator, and the six chronology
+protocol tests with the commands in [`REPRODUCING.md`](../REPRODUCING.md).
+The 15 pre-chronology publication manifests contain 123 entries. Exact
+corrections and nonpromotion walls are in the
+[Wave 34 orchestrator ledger](2026-07-24-wave34-orchestrator-corrections.md).
+
+```text
+rooted structural/encoding facts: VERIFIED scoped
+rooted formula SAT/UNSAT:          UNKNOWN
+rootless local/global bounds:      VERIFIED or DERIVED scoped
+rootless motif forcing/avoidance:  UNKNOWN
+n3=708 / Conway-99 / novelty:      UNKNOWN
+```
+
 ## Wave 29 single-lattice endpoint exclusion
 
 The

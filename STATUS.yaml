@@ -5,11 +5,11 @@ target_frozen_on: 2026-07-22
 literature_audit:
   through: 2026-07-24
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "Current searched sources do not resolve either surviving Wave 32 endpoint, but a bounded literature search cannot prove openness, novelty, or priority."
-  latest_audit: "verification/wave32-literature-audit-independent/audit.md"
-  latest_audit_sha256: "c52798833d4edf18542975495c39525c6c6d5537a9ab7c5489a4dd85b0b3592d"
-  source_query_ledger: "verification/wave32-literature-audit/query-ledger.json"
-  source_query_ledger_sha256: "7e7812a3dbf8c19a31eec58cc43c764aa1b61e7ad0fa1b8147b02fccfadef2c6"
+  caveat: "Current searched sources and the independently audited external packages do not resolve either unrestricted Wave 34 endpoint, but a bounded search cannot prove openness, novelty, or priority."
+  latest_audit: "verification/wave34-external-source-audit/audit.md"
+  latest_audit_sha256: "f4432e58224a484cc56230b82dd84b07b53edcf19d34e775e45e41c20d9dc4c1"
+  source_query_ledger: "attempts/wave34-current-literature/query-ledger.json"
+  source_query_ledger_sha256: "ece460c54282b45ce013083756bc421ea2427d91800b65e16f9049734225843d"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -18,6 +18,8 @@ literature_audit:
   exact_wave30_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave31_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave32_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave33_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave34_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -2027,4 +2029,133 @@ thirty_third_research_wave:
   clean_clone_strict_fsck: PASS
   clean_clone_verdict: PASS
   caveat: "Wave 33 verifies a conditional finite rooted graph-extension criterion, its forced spectrum, one hostile fixed-design construction record, a formal rootless null trade in exactly named contraction families, and an actual R2 incidence board. It supplies neither a binary rooted solution nor exclusion, neither global rootless motif forcing nor avoidance, no endpoint realization, no n3=708 exclusion, no stronger bound, no Conway-99 resolution, and no novelty result."
+thirty_fourth_research_wave:
+  public_base_commit: "0fa5b8161baf8b2a5404a67051b7d61cbc906da3"
+  rooted_structural_candidate_commit: "52c94e915927f791d30f680d12181a08567248fb"
+  rooted_encoding_candidate_commit: "79a11c6121c53155ac5a18dea391be7b8bd619b7"
+  rootless_candidate_commit: "0c8e54fab5023988699dfa44062f870ace89c719"
+  external_audit_freeze_commit: "1be9b6f61136763ce77d3927984979205e7fb23a"
+  verifier_verdict: PASS_FOR_SCOPED_STRUCTURAL_ENCODING_INCIDENCE_AND_SOURCE_RESULTS
+  target_result: UNKNOWN
+  n3_708_status: UNKNOWN
+  novelty_status: UNKNOWN
+  priority_status: UNKNOWN
+  strongest_conditional_bound: "n3>=708"
+  external_graph_result_imported: NONE
+  unrestricted_automorphism_assumption: false
+  selected_design_assumption: false
+  protocol: "verification/wave34-continuation-protocol.md"
+  protocol_sha256: "60e6c3aba152e924a51bd2503e82de3d05bb39fada258da4a2796e344ae23cd4"
+  external_source_protocol: "verification/wave34-external-source-audit-protocol.md"
+  external_source_protocol_sha256: "055d6e519a58ad763b6f067ebefd67ab7fb7bd43648226923bbd05f7dda140c6"
+  literature_discovery_audit: "attempts/wave34-current-literature/audit.md"
+  literature_discovery_audit_sha256: "1be6c6904314763031968c47dde8b4187caf1118ca4c2a1c9cf5f93d9496abc3"
+  literature_query_ledger: "attempts/wave34-current-literature/query-ledger.json"
+  literature_query_ledger_sha256: "ece460c54282b45ce013083756bc421ea2427d91800b65e16f9049734225843d"
+  literature_manifest: "attempts/wave34-current-literature/artifact-manifest.sha256"
+  literature_manifest_sha256: "496085f741e2cda7904e23888f3723b3d51544af6ba5393a35f47c81ecda6766"
+  exact_unrestricted_wave34_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  literature_nonhit_scope: BOUNDED_NON_DISCOVERY_ONLY
+  rooted_structural_status: VERIFIED_SCOPED_REPARAMETERIZATION
+  rooted_structural_snf: "diag(1^13,0)"
+  rooted_structural_pb_only_columns: 574118037
+  rooted_structural_duplicate_free_columns: 448879368
+  rooted_structural_removed_columns: 125238669
+  rooted_structural_compatible_15_column_design_status: UNKNOWN
+  rooted_structural_binary_solution_status: UNKNOWN
+  rooted_structural_exclusion_status: UNKNOWN
+  rooted_structural_stage1_result: "verification/wave34-rooted-structural/precomparison/exact-results.json"
+  rooted_structural_stage1_result_sha256: "9b4c2e00d50e142b4ae551741b8b5b9afda8ecaad0a3085c3cd549c07975ca60"
+  rooted_structural_candidate_result: "attempts/wave34-rooted-structural/results.json"
+  rooted_structural_candidate_result_sha256: "bd68070b172329e161f46d85e634aecf2348da16de785331e60e4b93a1f4dfc5"
+  rooted_structural_comparison_result: "verification/wave34-rooted-structural/comparison-results.json"
+  rooted_structural_comparison_result_sha256: "d73e302d6af8bbd3df28c80ded5dc922e4e6ea5084234ed15531330646fc26d8"
+  rooted_structural_audit: "verification/wave34-rooted-structural/comparison-audit.md"
+  rooted_structural_audit_sha256: "dc4d9b060ff8bfb9b49ecdba28eebbcc784ebc165d2f399b00f46e0bc7ee5a93"
+  rooted_structural_manifest: "verification/wave34-rooted-structural/comparison-artifact-manifest.sha256"
+  rooted_structural_manifest_sha256: "ce4bb77f33e919c3086b09521acd80297a9dcfffbc6bb2b72b331c2ee650ae3c"
+  rooted_pair_census_status: VERIFIED_SCOPED_INDEPENDENT_CROSSCHECK
+  rooted_pair_census_result: "verification/wave34-rooted-structural/pair-census-crosscheck/exact-results.json"
+  rooted_pair_census_result_sha256: "9165ea2dedcc0f263245335440dcb9dae3a9d1b42425ffbbef3fe4090666f85b"
+  rooted_pair_census_audit: "verification/wave34-rooted-structural/pair-census-crosscheck/audit.md"
+  rooted_pair_census_audit_sha256: "73dd60edd7f9188723800c0eb15d74625ed29c498a13ec497fc1f636dc7cb2b3"
+  rooted_pair_census_manifest: "verification/wave34-rooted-structural/pair-census-crosscheck/artifact-manifest.sha256"
+  rooted_pair_census_manifest_sha256: "de3152c245367bdc8907983e9d0d3528d153a184d9690ed45e94e2b56b5b0891"
+  rooted_encoding_status: VERIFIED_COMPLETE_DOMAIN_ENCODING_ONLY
+  rooted_encoding_variables: 1233001
+  rooted_encoding_clauses: 4323943
+  rooted_encoding_raw_bytes: 89546779
+  rooted_encoding_raw_sha256: "2362d15f3a20df0a0d7745eb619a94061cee9911c8dda36c191fb6d728c1c3d3"
+  rooted_encoding_sat_status: UNKNOWN
+  rooted_encoding_unsat_status: UNKNOWN
+  rooted_encoding_solver_run_status: NOT_RUN
+  rooted_encoding_proof_checker_status: NOT_RUN
+  rooted_encoding_spec: "attempts/wave34-rooted-encoding/criterion-spec.json"
+  rooted_encoding_spec_sha256: "3429a093c682877a3a14848620860f8ffb5e4cc0b0ca70f0fc5a2f85697d1d82"
+  rooted_encoding_gzip: "attempts/wave34-rooted-encoding/rooted-complete.cnf.gz"
+  rooted_encoding_gzip_sha256: "6b6beb5d49c7fe75b9b475162cc4bd97de2793389df150dfab9765ba497305f0"
+  rooted_encoding_publication_manifest: "attempts/wave34-rooted-encoding/publication-manifest.sha256"
+  rooted_encoding_publication_manifest_sha256: "7cba8a082545cbfcbf01785e6e15a0198bd1cf2357ed0a2b3f353b564a1433e7"
+  rooted_encoding_comparison_result: "verification/wave34-rooted-encoding/comparison-results.json"
+  rooted_encoding_comparison_result_sha256: "05bfd6d0d7e5971c8d8ee15bc5f5b2d88260a2288a00963125ae8b1e2f300015"
+  rooted_encoding_audit: "verification/wave34-rooted-encoding/comparison-audit.md"
+  rooted_encoding_audit_sha256: "07bac181bdc360d01df5ebed644f0a99e7ce6b723a6bf00c3d0871207d7e1491"
+  rooted_encoding_manifest: "verification/wave34-rooted-encoding/artifact-manifest.sha256"
+  rooted_encoding_manifest_sha256: "f76ae0aeac6c06ca5a0de1171b619664f558710dfe060cc1c41590b697098acd"
+  rootless_status: VERIFIED_SCOPED_WITH_RETAINED_PROVENANCE_DEFECT
+  rootless_relation_r3_edges: 1150
+  rootless_r3_triangle_upper_cap: 383
+  rootless_r0_centered_r3_wedges_lower_bound: 6860
+  rootless_r3_four_cycle_lower_bound: 3041
+  rootless_r3_fourth_trace_lower_bound: 67848
+  rootless_stage1_bounds_label: DERIVED_SCOPED
+  rootless_candidate_provenance_status: REFUTED_ONE_INPUT_HASH
+  rootless_partial_control_status: VERIFIED_PARTIAL_NOT_EXTENSION_EVIDENCE
+  rootless_motif_forcing_status: UNKNOWN
+  rootless_motif_avoidance_status: UNKNOWN
+  rootless_endpoint_status: UNKNOWN
+  rootless_stage1_result: "verification/wave34-rootless-global/precomparison/results.json"
+  rootless_stage1_result_sha256: "450f01d15b8eaaad2ca7e9f8114c028b96f06bdf4b3944dc69e70525931ec8f9"
+  rootless_candidate_result: "attempts/wave34-rootless-global/exact-results.json"
+  rootless_candidate_result_sha256: "fd4ff04bd13128a26d9a5ecb4bd1c2a8832d29d0056a592d4d90074747a0c331"
+  rootless_comparison_result: "verification/wave34-rootless-global/comparison-results.json"
+  rootless_comparison_result_sha256: "5c560765a439b90838cc661e4203675d689f6471b21a364d580af4ba58de533a"
+  rootless_audit: "verification/wave34-rootless-global/audit.md"
+  rootless_audit_sha256: "c7765cf98b7754a6853f84917579bc441add49c7daaba5d7951a4930c89def70"
+  rootless_manifest: "verification/wave34-rootless-global/artifact-manifest.sha256"
+  rootless_manifest_sha256: "667535faef9a1dceed0ee40c22ed06232665a624f0937f6863434fb6c9dacc5e"
+  external_source_status: PASS_WITH_SCOPED_IMPORTS_AND_EXPLICIT_NON_IMPORTS
+  external_source_audit: "verification/wave34-external-source-audit/audit.md"
+  external_source_audit_sha256: "f4432e58224a484cc56230b82dd84b07b53edcf19d34e775e45e41c20d9dc4c1"
+  external_source_result: "verification/wave34-external-source-audit/results.json"
+  external_source_result_sha256: "86d1c1ba7cead388a54a7e031086e95b71e3169999110c02e2d9645d1132271c"
+  external_source_run_report: "verification/wave34-external-source-audit/run-report.yaml"
+  external_source_run_report_sha256: "5253b20719ac6e7c73b62a16066c3ed85ae0bad009aba35cc2fb0786f4a5bf0c"
+  external_source_manifest: "verification/wave34-external-source-audit/artifact-manifest.sha256"
+  external_source_manifest_sha256: "b737c2afc002ae9a3ae0b0c36be2568f3ef67d7379796f129eacaf328e8acc39"
+  original_wave34_unit_tests: 152
+  current_tree_outer_tests: 147
+  rooted_structural_tests: 55
+  rooted_encoding_tests: 28
+  rootless_tests: 63
+  kuber_selub_tests: 6
+  chronology_protocol_tests: 6
+  chronology_isolated_structural_tests_expected: 11
+  direct_integrated_root_structural_status: EXPECTED_FAIL_FROZEN_STATUS_HASH
+  integration_chronology_status: PROTOCOL_FROZEN_REPLAY_PENDING
+  integration_chronology_protocol: "verification/wave34-integration-chronology/protocol.md"
+  integration_chronology_protocol_sha256: "c280df5d8503c3097cad63d04cb60870d022d25f7dc1ce2c1406449d6322f772"
+  integration_chronology_failed_run: "verification/wave34-integration-chronology/failed-integrated-root-replay.md"
+  integration_chronology_failed_run_sha256: "09f6cf68ee1a0363d3823f482abf23968e3026ca1748f304f9cdbdae293869e3"
+  integration_chronology_script: "verification/wave34-integration-chronology/chronology_replay.py"
+  integration_chronology_script_sha256: "471918a923ab72e98b005c342a74dd2550e45b0833b433ab55e4e224e2d91613"
+  integration_chronology_test: "verification/wave34-integration-chronology/test_chronology_replay.py"
+  integration_chronology_test_sha256: "6777a20c64d495788a2b1718395764385b60e78be3f78f330553bf5e3b8baeb3"
+  status_design_validator: PASS
+  publication_manifest_count: 15
+  publication_manifest_entries: 123
+  corrections_ledger: "verification/2026-07-24-wave34-orchestrator-corrections.md"
+  corrections_ledger_sha256: "45ea28bce4c59e5110267f4abfdb42711baba9a9f0870c5dc0627c21e683a129"
+  clean_clone_status: PENDING_INTEGRATION_REPLAY
+  caveat: "Wave 34 verifies an unrestricted labeled rooted encoding, a strict rooted reparameterization and necessary duplicate-free single-column domain, scoped actual-incidence rootless lemmas and moment bounds, and bounded external-source characterizations. It supplies no graph, no complete-domain UNSAT proof, no compatible rooted 15-column/projector realization, no rootless mixed-motif forcing theorem, no endpoint resolution, no n3=708 exclusion, no Conway-99 resolution, and no novelty or priority result."
 last_updated: 2026-07-24

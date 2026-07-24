@@ -54,7 +54,11 @@ and the normalized search problem.
   it exhibits a formal local null trade invisible to two precisely named
   contraction families and reduces every actual `R2` pair to an
   eight-vertex board with four transversal candidates. Neither lane closes
-  its surviving branch, so `n3=708` remains unexcluded.
+  its surviving branch. Wave 34 verifies an exact unrestricted rooted CNF,
+  a projector reparameterization and necessary single-column reduction, and
+  new rootless relation/moment bounds. The CNF is unsolved, the reduced
+  columns are not compatible designs, and the rootless control is partial,
+  so `n3=708` remains unexcluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1480,6 +1484,112 @@ strongest conditional bound:                          n3>=708
 The complete correction, replay, scope, and manifest chronology is retained
 in the
 [Wave 33 orchestrator ledger](verification/2026-07-24-wave33-orchestrator-corrections.md).
+
+## Wave 34: exact rooted encoding, structural reduction, and rootless bounds
+
+Wave 34 attacks both surviving endpoints without assuming an automorphism,
+transitivity, a selected O-Q design, or a restricted corpus.
+
+In the rooted structural lane, the fixed support incidence has Smith form
+
+```text
+diag(1^13,0).
+```
+
+The independently checked `13+14+43` projector split is exactly the Wave 33
+`27+43` split, and the integral `C/L` formulations are equivalent in both
+directions. An independent line-side recursion counts
+`574,118,037` labeled binary columns satisfying only `Pb=2*1`. The full
+criterion forbids doubled-support pairs; a second weighted-permanent
+crosscheck leaves exactly
+
+```text
+448,879,368 duplicate-free necessary single columns,
+125,238,669 Pb-only columns removed.
+```
+
+These are single-column counts, not compatible 15-column
+`2-(15,3,2)` designs, rank-16 integral projectors, or graphs. See the
+[structural comparison audit](verification/wave34-rooted-structural/comparison-audit.md)
+and
+[pair-census crosscheck](verification/wave34-rooted-structural/pair-census-crosscheck/audit.md).
+
+Independently, the rooted encoding lane emits the complete unrestricted
+labeled six-block criterion as CNF:
+
+```text
+variables: 1,233,001
+clauses:   4,323,943
+raw bytes: 89,546,779
+raw SHA-256:
+2362d15f3a20df0a0d7745eb619a94061cee9911c8dda36c191fb6d728c1c3d3
+```
+
+The verifier regenerated every clause without importing the candidate
+generator and matched the raw bytes exactly. Hollow/symmetry gates are an
+exact ordered representation, not symmetry breaking; every product and
+cardinality gadget was checked in both directions. The formula has not been
+solved. There is no model, target graph, UNSAT proof, or proof-checker run.
+Encoding verification therefore changes neither existence outcome. See the
+[complete-domain encoding audit](verification/wave34-rooted-encoding/comparison-audit.md).
+
+In the rootless actual-incidence lane, the local-fibre verifier proves
+pointwise
+
+```text
+deg_R2(T)=3q(T),
+deg_R3(T)=12-q(T),
+q(T) != 1.
+```
+
+At the frozen endpoint this gives `|E(R3)|=1,150`. Every `R3` edge belongs
+to at most one `R3` triangle, so there are at most 383 such triangles. The
+mixed trace counts each unordered `R2-R3-R3` closure twice. Separately, the
+verifier-owned Stage 1 derivation records the scoped necessary consequences
+
+```text
+R0-centered R3 wedges: at least 6,860
+four-cycles in A_R3:   at least 3,041
+tr(A_R3^4):            at least 67,848.
+```
+
+Those inequalities do not force the forbidden mixed motif. The emitted
+45-vertex object is explicitly partial; read as a complete graph it fails
+42 degree checks, 24 edge-common-neighbor checks, and 713 nonedge checks.
+The candidate's incorrect Wave 33 input hash is retained as a provenance
+failure, while the scoped mathematics was reconstructed from the correctly
+frozen input. See the
+[rootless Stage 2 audit](verification/wave34-rootless-global/audit.md).
+
+The
+[consolidated external-source audit](verification/wave34-external-source-audit/audit.md)
+also checks newly located public work. Kuber's pinned Lean project builds
+cleanly and verifies a conditional matrix/arithmetic theorem, but not its
+graph-to-matrix bridge. Harrison's honest rooted model and 1,302 CNF recipe
+identities replay, but the proof bodies required for the advertised
+theorem-ladder exclusions are absent or unpulled. Selub's 2023 paper is
+historical SAT-framework prior art with no solver result or certificate.
+Brouwer's maintained `?`, McKay's approximate design scale, and the Rijeka
+restricted corpus pass only as scoped source facts. No graph-level external
+result is imported.
+
+Wave 34 therefore leaves the publication-safe wall:
+
+```text
+rooted reparameterization and necessary column domain: VERIFIED scoped
+rooted complete-domain CNF encoding:                    VERIFIED encoding-only
+rooted CNF SAT or UNSAT:                                UNKNOWN
+rootless local-fibre and endpoint-count lemmas:         VERIFIED scoped
+rootless new moment/count consequences:                 DERIVED scoped
+rootless mixed-motif forcing or avoidance:              UNKNOWN
+rooted / rootless endpoint resolution:                  UNKNOWN
+n3=708 / Conway-99 / novelty:                           UNKNOWN
+strongest conditional bound:                            n3>=708
+```
+
+Every failed replay, wording repair, provenance defect, and nonpromotion wall
+is retained in the
+[Wave 34 orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

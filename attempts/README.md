@@ -70,3 +70,22 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   such files and observes zero environment hashes.
 - The full correction and nonpromotion chronology is in
   `verification/2026-07-24-wave33-orchestrator-corrections.md`.
+
+## Wave 34: exact rooted formula and rootless actual-incidence continuation
+
+- `wave34-rooted-structural/` records the discovery-side support/SNF,
+  projector, and Pb-only 2-factor census candidate. Its five-file manifest
+  is frozen; independent verification and a structurally different
+  pair-census crosscheck live under `verification/`.
+- `wave34-rooted-encoding/` contains the complete labeled CNF publication
+  package. The tracked deterministic gzip expands to an 89,546,779-byte raw
+  formula with 1,233,001 variables and 4,323,943 clauses. The raw CNF is
+  ignored locally; no solver result or proof is claimed.
+- `wave34-rootless-global/` contains the candidate local-fibre model,
+  restricted factor scan, and partial 45-vertex control. It is not a target
+  graph and supplies no global motif-forcing or avoidance result.
+- `wave34-current-literature/` freezes the bounded search and six source
+  records. No exact unrestricted Wave 34 prior result was found in the
+  searched windows, which is not a novelty or openness claim.
+- Corrections, failed routes, and the unchanged target wall are collected in
+  `verification/2026-07-24-wave34-orchestrator-corrections.md`.

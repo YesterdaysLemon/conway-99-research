@@ -2159,6 +2159,187 @@ avoidance, both endpoints, `n3=708`, Conway-99, and novelty remain
 `UNKNOWN`.  The complete chronology is in the
 [Wave 33 orchestrator ledger](verification/2026-07-24-wave33-orchestrator-corrections.md).
 
+## Wave 34 rooted reparameterization and rootless overlap bounds
+
+Wave 34 keeps the exact Wave 33 labeled domains and assumes no completed-graph
+symmetry.
+
+### Rooted support kernel and residual projector (`VERIFIED`)
+
+Let `P` be the fixed `14 x 70` support-to-O incidence matrix. Exact labeled
+minors give
+
+```text
+rank(P)=13,
+SNF(P)=diag(1^13,0),
+dim ker(P)=57.
+```
+
+For an admissible O-Q incidence `B`, the fixed Fano-image, centered-B, and
+joint-kernel spaces have dimensions
+
+```text
+13+14+43=70.
+```
+
+This is exactly the earlier `27+43` split because the Fano and B images share
+the one-dimensional constant space. On the 43-space the O-O adjacency
+restriction satisfies
+
+```text
+H^2+H-12I=0
+```
+
+with multiplicities `3^27,(-4)^16`. If `E_-4` is its minus-four projector,
+then
+
+```text
+H=H_R-E_W+3Q_U-7E_-4.
+```
+
+Equivalently, for the fixed integral matrix `C_star`,
+
+```text
+L=C_star-7BB^T-21H=147E_-4,
+PL=0,
+B^T L=0,
+L^2=147L.
+```
+
+Hollow binary recovery forces
+
+```text
+diag(L)=30^28,36^42,
+tr(L)=2352=147*16,
+```
+
+so the integral formulation also forces rank 16. The verifier checked both
+directions on every invariant summand. This is an exact reparameterization,
+not an existence proof.
+
+For distinct O-vertices, put
+
+```text
+g_ij=(P^T P)_ij,
+r_ij=(BB^T)_ij,
+h_ij=H_ij,
+c_ij=(H^2)_ij.
+```
+
+The O-O equation gives
+
+```text
+g_ij+r_ij+h_ij+c_ij=2.
+```
+
+Nonnegativity and binary/design bounds leave exactly nine states:
+
+```text
+(0,0,0,2), (0,0,1,1), (0,1,0,1), (0,1,1,0),
+(0,2,0,0), (1,0,0,1), (1,0,1,0), (1,1,0,0),
+(2,0,0,0).
+```
+
+The 21 duplicated-support pairs are forced into `(2,0,0,0)`, so their B
+rows are disjoint and they are neither adjacent nor distance-two through O.
+The `(1,1,0,0)` relation is 6-regular on 70 vertices and has 210 edges.
+
+A column `b` with `Pb=2*1` is a spanning 2-factor of the fixed bipartite
+seven-point/seven-line multigraph. Two independent exact enumerations give
+
+```text
+all labeled Pb-only columns:       574,118,037
+duplicate-free necessary columns: 448,879,368.
+```
+
+The second number removes precisely the half-cycle types containing a
+one-cycle. It does not impose compatibility among 15 columns or the
+remaining graph/projector equations.
+
+### Complete rooted CNF (`VERIFIED ENCODING ONLY`)
+
+An independently reconstructed CNF encodes every binary, hollow, symmetry,
+degree, design, coupling, and common-neighbor equation in the six Wave 33
+blocks. It has
+
+```text
+1,233,001 variables,
+4,323,943 clauses,
+89,546,779 raw bytes,
+SHA-256 2362d15f3a20df0a0d7745eb619a94061cee9911c8dda36c191fb6d728c1c3d3.
+```
+
+The ordered `D` variables are tied by explicit hollow/symmetry gates and do
+not restrict the labeled domain. Every AND and exact-cardinality gadget is
+bidirectional. The verifier regenerated all clauses without importing the
+candidate generator. No SAT/UNSAT solve or proof replay exists.
+
+### Rootless triangle-fibre holonomy (`VERIFIED SCOPED`)
+
+For a graph triangle `T={t0,t1,t2}`, the three outside neighbor fibres have
+size 12. Each induces `6K2`, and every pair of fibres is joined by a perfect
+matching. After transporting labels, the third cross-fibre matching is a
+permutation. If `q(T)` is its number of moved labels, then
+
+```text
+deg_R3(T)=12-q(T),
+deg_R2(T)=3q(T),
+q(T) != 1.
+```
+
+At `n3=708`,
+
+```text
+sum_T q(T)=472,
+|E(R3)|=1150.
+```
+
+The projector Gram matrix shows that an `R3` edge has at most one common
+`R3` neighbor. Hence `R3` contains at most 383 edge-disjoint triangles.
+Actual incidence sharpens the common-`R3` codegree caps for
+
+```text
+Gamma,R0,R1,R2,R3
+```
+
+to
+
+```text
+0,5,1,1,1.
+```
+
+In particular, each `R2` pair has at most one globally compatible closure,
+and
+
+```text
+tr(A_R2 A_R3^2)
+ =2 * #{unordered R2 pairs whose unique closure is realized}.
+```
+
+Rootlessness sets this trace to zero but does not prove that a closure must
+occur.
+
+The verifier-owned Stage 1 derivation also gives the necessary global
+constraints
+
+```text
+sum of R0-centered R3 wedges >= 6860,
+#C4(A_R3)                    >= 3041,
+tr(A_R3^4)                   >= 67848.
+```
+
+These are `DERIVED_SCOPED`. They remain numerically feasible and do not force
+the forbidden mixed motif.
+
+The 45-vertex control and the sharp scalar degree profile are partial local
+objects, not graph or endpoint certificates. Binary rooted
+solvability/exclusion, rootless motif forcing/avoidance, both endpoints,
+`n3=708`, Conway-99, and novelty remain `UNKNOWN`. Full scope and correction
+details are in the
+[Wave 34 structural audit](verification/wave34-rooted-structural/comparison-audit.md),
+[rootless audit](verification/wave34-rootless-global/audit.md), and
+[orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

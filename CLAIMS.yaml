@@ -1298,6 +1298,133 @@ claims:
       n3=708, Conway-99 existence and nonexistence, and novelty remain
       UNKNOWN.
 
+  - id: C-WAVE34-ROOTED-STRUCTURAL-052
+    statement: >-
+      Conditional on the exact Wave 33 rooted criterion, the fixed support
+      incidence has Smith form diag(1^13,0); the Stage 1 and Stage 2
+      projector decompositions are exactly equivalent; the Pb-only
+      single-column census is 574,118,037; and the full criterion's
+      duplicate-pair rule leaves exactly 448,879,368 necessary
+      duplicate-free single columns. The nine pair states and this reduced
+      census were independently cross-checked by a second method.
+    label: VERIFIED
+    scope: WAVE34_ROOTED_REPARAMETERIZATION_AND_NECESSARY_SINGLE_COLUMN_DOMAIN
+    evidence:
+      - "agents/2026-07-24-wave34-rooted-structural.md"
+      - "verification/wave34-rooted-structural/comparison-results.json"
+      - "verification/wave34-rooted-structural/comparison-audit.md"
+      - "verification/wave34-rooted-structural/comparison-artifact-manifest.sha256"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/exact-results.json"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/audit.md"
+      - "verification/wave34-rooted-structural/pair-census-crosscheck/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave34-orchestrator-corrections.md"
+    limitations: >-
+      The two census values count individual necessary columns, not
+      compatible 15-column designs, integral projectors, rooted graphs, or
+      endpoint realizations. No binary solution and no exclusion
+      certificate is supplied. Rooted existence/exclusion, n3=708,
+      Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE34-ROOTED-ENCODING-053
+    statement: >-
+      The released CNF is an exact unrestricted labeled, complete-domain,
+      no-symmetry-breaking encoding of the conditional Wave 33 six-block
+      rooted graph criterion. It has 1,233,001 variables and 4,323,943
+      clauses; the verifier independently regenerated all 89,546,779 raw
+      bytes and matched SHA-256
+      2362d15f3a20df0a0d7745eb619a94061cee9911c8dda36c191fb6d728c1c3d3.
+    label: VERIFIED
+    scope: WAVE34_ROOTED_COMPLETE_DOMAIN_ENCODING_ONLY
+    evidence:
+      - "agents/2026-07-24-wave34-rooted-encoding.md"
+      - "attempts/wave34-rooted-encoding/publication-manifest.sha256"
+      - "verification/wave34-rooted-encoding/comparison-results.json"
+      - "verification/wave34-rooted-encoding/comparison-audit.md"
+      - "verification/wave34-rooted-encoding/correction-ledger.md"
+      - "verification/wave34-rooted-encoding/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave34-orchestrator-corrections.md"
+    limitations: >-
+      The formula has not been solved. There is no SAT model, target graph,
+      UNSAT proof, or proof-checker run. Encoding equivalence is not
+      existence or nonexistence evidence; the rooted endpoint, n3=708,
+      Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE34-ROOTLESS-GLOBAL-054
+    statement: >-
+      Under the exact actual-incidence rootless endpoint premises, the
+      independently replayed local-fibre lemmas give
+      deg(R2)=3q, deg(R3)=12-q with q not equal to 1,
+      |E(R3)|=1,150, an upper cap of 383 edge-disjoint R3 triangles, the
+      correct factor-two mixed-trace normalization, and the stated
+      45-vertex partial-control reconstruction.
+    label: VERIFIED
+    scope: WAVE34_ROOTLESS_ACTUAL_INCIDENCE_LEMMAS_AND_PARTIAL_CONTROL
+    evidence:
+      - "agents/2026-07-24-wave34-rootless-global.md"
+      - "verification/wave34-rootless-global/precomparison/results.json"
+      - "verification/wave34-rootless-global/precomparison/derivation.md"
+      - "verification/wave34-rootless-global/comparison-results.json"
+      - "verification/wave34-rootless-global/audit.md"
+      - "verification/wave34-rootless-global/failed-objections.md"
+      - "verification/wave34-rootless-global/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave34-orchestrator-corrections.md"
+    limitations: >-
+      The verifier-owned Stage 1 lane separately records the
+      DERIVED_SCOPED consequences of at least 6,860 R0-centered R3 wedges,
+      at least 3,041 four-cycles in A_R3, and tr(A_R3^4)>=67,848; these are
+      not promoted to a global forcing theorem. The 45-vertex object is
+      partial and fails many full-graph conditions. The candidate's Wave 33
+      input hash claim is REFUTED and retained. Motif forcing or avoidance,
+      rootless realization, n3=708, Conway-99, and novelty remain UNKNOWN.
+
+  - id: C-WAVE34-LITERATURE-055
+    statement: >-
+      At the 2026-07-24 audit cutoff, direct current sources support
+      Brouwer's maintained question-mark target status, McKay's contextual
+      approximate design-scale statement, and the restricted parent scope
+      of the Rijeka derived corpus. Kuber's pinned Lean project verifies a
+      conditional matrix/arithmetic theorem, Harrison's pinned source
+      verifies an honest rooted bridge and formula identities, and Selub is
+      historical SAT-framework prior art. No graph-level external result is
+      imported.
+    label: CITED
+    scope: WAVE34_BOUNDED_CURRENT_AND_EXTERNAL_SOURCE_CHARACTERIZATION
+    evidence:
+      - "agents/2026-07-24-wave34-current-literature.md"
+      - "attempts/wave34-current-literature/audit.md"
+      - "verification/wave34-external-source-audit/audit.md"
+      - "verification/wave34-external-source-audit/results.json"
+      - "verification/wave34-external-source-audit/artifact-manifest.sha256"
+      - "SOURCES.bib"
+    limitations: >-
+      A bounded current-source search cannot prove openness, novelty, or
+      priority. McKay's count is approximate, the Rijeka corpus is not an
+      unrestricted complete catalogue, Kuber lacks the graph bridge,
+      Harrison's theorem proof bodies are absent or unpulled, and Selub
+      reports no solver result. Conway-99 remains UNKNOWN.
+
+  - id: C-WAVE34-CONTINUATION-056
+    statement: >-
+      The verified rooted encoding has a model or a complete checked UNSAT
+      proof, the rooted structural reduction has a compatible binary
+      15-column/projector realization or exclusion, or the rootless
+      actual-incidence bounds can be promoted to a complete motif-forcing,
+      construction, or obstruction certificate resolving the surviving
+      endpoint split.
+    label: UNKNOWN
+    scope: WAVE34_SURVIVING_ROOTED_AND_ROOTLESS_ENDPOINT_CONTINUATION
+    evidence:
+      - "verification/wave34-rooted-structural/comparison-audit.md"
+      - "verification/wave34-rooted-encoding/comparison-audit.md"
+      - "verification/wave34-rootless-global/audit.md"
+      - "verification/wave34-external-source-audit/audit.md"
+      - "verification/2026-07-24-wave34-orchestrator-corrections.md"
+    limitations: >-
+      No graph, complete-domain UNSAT certificate, compatible rooted
+      realization, rootless mixed-motif forcing theorem, endpoint
+      certificate, n3=708 exclusion, Conway-99 resolution, or novelty result
+      exists in the checked packages.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED
