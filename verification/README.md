@@ -821,6 +821,14 @@ Six Wave 31 manifests contain 42 entries:
 | skeptical sign verifier | 5 | `c9dd19b9df24e22bcfff7533bb0251582c737153dbbe9ad28e8ea23f2085c1c0` |
 | T20 finite verifier | 8 | `73072c577eff876b4799455a6e0ea0080e54f5370ed8790eda6b85fe3687e1bb` |
 
+The detached
+[Wave 31 clean-clone replay](2026-07-24-wave31-clean-clone.md) freezes
+integration commit `f591e75...`. It passes 57 unit tests and the skeptical
+checker, regenerates five accepted outputs, validates all 42 manifest
+entries, checks the complete central ledgers and links, scans exact release
+and new-blob bytes with zero privacy findings, and finishes with clean
+detached status and strict Git-object integrity.
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

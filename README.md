@@ -1229,6 +1229,15 @@ n3=708 / Conway-99 / novelty:                                 UNKNOWN
 strongest conditional bound:                                 n3>=708
 ```
 
+The detached
+[Wave 31 clean-clone replay](verification/2026-07-24-wave31-clean-clone.md)
+freezes integration commit `f591e75...` in a no-local, no-hardlink clone. It
+passes all 57 unit tests and the skeptical checker, regenerates all five
+accepted outputs, validates 42 manifest entries, resolves all 1,331 central
+evidence references and 312 local links, scans the 938-file release tree and
+all 58 new Git blobs with zero privacy findings, and finishes with clean
+detached status and strict object verification.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

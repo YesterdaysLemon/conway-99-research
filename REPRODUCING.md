@@ -1981,6 +1981,17 @@ The [primary audit](verification/wave31-sign-commutant/audit.md),
 record the proof obligations, failed harness invocations, exact restrictions,
 and nonpromotion wall.
 
+The detached
+[Wave 31 clean-clone replay](verification/2026-07-24-wave31-clean-clone.md)
+freezes integration commit
+`f591e756ca8cca179ee35b511bb61d720dcbc42d`. In a no-local,
+no-hardlink clone checked out in detached state, it repeats all 57 unit tests
+and the skeptical checker, runs the five generators outside the checkout,
+validates all six manifests and 42 entries, checks duplicate-key-free YAML,
+77 claims, 71 obligations, 1,331 evidence references, 87 BibTeX keys, 312
+local links, exact Git-blob privacy, clean status, and
+`git fsck --full --strict`.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

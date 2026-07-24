@@ -1559,7 +1559,9 @@ thirty_first_research_wave:
   T20_construction_discovery_commit: "67a0e4585c9c378dcd658784a3876564557b70e3"
   sign_verification_commit: "2a3705dac7de871d23855a12e0d0ddb7aa36d862"
   T20_verification_commit: "682de9a0b3cba43266911736fb0bf275a15741d8"
-  integration_state: LOCAL_INTEGRATION_PENDING_COMMIT_AND_CLEAN_CLONE
+  integration_commit: "f591e756ca8cca179ee35b511bb61d720dcbc42d"
+  clean_clone_commit: "f591e756ca8cca179ee35b511bb61d720dcbc42d"
+  integration_state: CLEAN_CLONE_PASS
   target_result: UNKNOWN
   novelty_status: UNKNOWN
   strongest_bound_changed: false
@@ -1718,11 +1720,38 @@ thirty_first_research_wave:
   T20_verifier_manifest_sha256: "73072c577eff876b4799455a6e0ea0080e54f5370ed8790eda6b85fe3687e1bb"
   corrections_ledger: "verification/2026-07-24-wave31-orchestrator-corrections.md"
   corrections_ledger_sha256: "5c8e5b0b1b552785b650715539d30f9426f07077a15b87545e16df57d944625a"
+  clean_clone_replay: "verification/2026-07-24-wave31-clean-clone.md"
+  clean_clone_replay_sha256: "d9b194176a0bb6b92b410172fa47831d484063be92599c6653e5e42f18b1bf7f"
   sources_bib_sha256: "3c93b322ee4b0a61cf1407fdf5b082dbb90801459300289c7097b56833914a8e"
   current_tree_unit_tests_passed: 57
   skeptic_checker_passed: true
   deterministic_outputs_checked: 6
   manifest_count: 6
   manifest_entries: 42
+  clean_clone_unit_tests_passed: 57
+  clean_clone_skeptic_checker: PASS_NO_FATAL_GAP
+  clean_clone_generator_commands: 5
+  clean_clone_manifests: 6
+  clean_clone_manifest_entries: 42
+  clean_clone_claims_unique: 77
+  clean_clone_obligations_unique: 71
+  clean_clone_evidence_references_resolved: 1331
+  clean_clone_status_path_sha256_pairs: 360
+  clean_clone_wave31_status_path_sha256_pairs: 50
+  clean_clone_bibtex_keys_unique: 87
+  clean_clone_markdown_files: 308
+  clean_clone_local_markdown_links: 312
+  clean_clone_release_diff_files: 59
+  clean_clone_release_tree_files: 938
+  clean_clone_release_tree_bytes: 15181325
+  clean_clone_unpublished_commits: 6
+  clean_clone_range_objects: 86
+  clean_clone_new_blobs: 58
+  clean_clone_new_blob_bytes: 1737482
+  clean_clone_privacy_findings: 0
+  clean_clone_largest_blob_bytes: 654824
+  clean_clone_integration_tree: "9db5a8df2fde0aa011812a96de976f9ef56e2b61"
+  clean_clone_strict_fsck: PASS
+  clean_clone_verdict: PASS
   caveat: "Wave 31 verifies that actual target vertex-triangle incidence is incompatible with every nontrivial rootless integral orthogonal decomposition of the endpoint S-form, and separately verifies exact finite T20 shell, rational-relaxation, cap-one, named radius-two, and conditional trace facts. It does not treat rooted or rootless integrally indecomposable endpoint forms, exclude n3=708, improve n3>=708, construct or exclude the target graph, resolve Conway-99, or establish novelty. The finite T20 lane neither finds nor excludes an unrestricted frame."
 last_updated: 2026-07-24
