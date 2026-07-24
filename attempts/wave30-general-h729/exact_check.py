@@ -31,7 +31,7 @@ FROZEN_INPUTS = {
     "agents/2026-07-24-wave29-s0-frame-exclusion.md":
         "e6ae61331a54d53f2a98712296ebac855f45b46de32ff2ec4d85018f2d8a5045",
     "verification/wave29-s0-frame-exclusion/audit.md":
-        "4101a394252807fb9de8c39fb32b780bc88410d99e47dfe698da251b49f3e061",
+        "dbdcb88bf309cbfa47a42b9fb63dd7cf483e07cac8b92c475094c96be3723b7d",
 }
 
 RANK = 44
@@ -534,7 +534,7 @@ def derive(enabled: Iterable[str] = ESSENTIAL_PREMISES) -> dict[str, object]:
             "decomposable h=729 S-forms under the full n3=708 endpoint "
             "package; no endpoint or graph resolution."
         ),
-        "status": "DERIVED_PENDING_INDEPENDENT_VERIFIER",
+        "status": "DERIVED_REPAIR_PENDING_INDEPENDENT_REVERIFICATION",
         "public_base_commit": PUBLIC_BASE_COMMIT,
         "runtime": {
             "python": platform.python_version(),
