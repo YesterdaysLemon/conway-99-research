@@ -16,3 +16,9 @@ verification/n3-42-equality/*.py text eol=lf
 # Wave 19 verifier logs are checksum-pinned raw Windows process streams.
 # Preserve their exact bytes so clean clones reproduce the audit hashes.
 verification/n3-60-closure/*.log -text -diff
+
+# Wave 34 encoding audits were emitted as checksum-pinned raw Windows streams.
+# Preserve their exact bytes so the published manifests survive clean clones.
+attempts/wave34-rooted-encoding/compression-audit.json -text -diff
+attempts/wave34-rooted-encoding/dimacs-audit.json -text -diff
+attempts/wave34-rooted-encoding/test-results.txt -text -diff
