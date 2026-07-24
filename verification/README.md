@@ -743,6 +743,84 @@ link, exact-blob privacy, clean-status, and strict Git-object gates. Its scope
 is reproducibility and publication hygiene for the conditional decomposable
 reduction and bare `T20` construction only.
 
+## Wave 31 sign-commutant obstruction and T20 finite boundary
+
+The [primary sign-commutant audit](wave31-sign-commutant/audit.md) freezes
+discovery commit `a8b0c34040f6857b3c5ebcc44f108e03a4159088` and independently
+reconstructs the complete conditional proof. Under actual target
+vertex-triangle incidence, a rootless integral orthogonal split induces a
+nonempty proper triangle-coordinate projector block. Its diagonal sign
+commutes with the zero-projector; transport by the incidence matrix produces
+a symmetric graph operator commuting with the exact `-4` projector.
+
+The full local commutator expansion gives constant signed vertex incidence.
+The signed triangle double count forces `33 | b`, while the independent
+projector-block trace argument forces `21 | b`. Hence `231 | b`, impossible
+for a proper block. The primary verdict is `PASS_SCOPED`: 21 independent
+tests pass, the submitted 15-test suite passes, and the submitted JSON
+regenerates byte-identically.
+
+The separate
+[skeptical audit](wave31-sign-commutant-skeptic/audit.md) returns
+`PASS_NO_FATAL_GAP`. It independently checks the contragredient unimodular
+basis change, one-block row support, incidence eigenspace transport,
+projector normalization, every local summand and sign, multiblock and
+complement cases, both divisibility routes, and exact hostile controls.
+It corroborates rather than replaces the designated verifier.
+
+The resulting conditional status is:
+
+```text
+rootless integrally decomposable actual-incidence endpoint: impossible
+Wave 30 20+24 survivor under those premises:                impossible
+rooted endpoint forms:                                      UNKNOWN
+rootless integrally indecomposable endpoint forms:          UNKNOWN
+n3=708 / Conway-99 / novelty:                               UNKNOWN
+```
+
+The independent
+[T20 finite-evidence audit](wave31-t20-frame/audit.md) freezes construction
+commit `67a0e4585c9c378dcd658784a3876564557b70e3`. Its separate
+implementation enumerates the complete norm-four shell in two exact bases,
+matches all 2,538 ordered antipodal lines, scans all 3,219,453 unordered
+pairs, recomputes separate coefficient and augmented GF(2) ranks, verifies
+all rational weights and 210 moments, and exhausts the named radius-one/two
+domain with a collision-free base-257 encoding. The discovery and verifier
+suites pass 10 and 11 tests.
+
+Its verdict is `PASS_SCOPED_FINITE_EVIDENCE`. It verifies the exact
+5,076-vector shell, pair geometry, 243-support rational box witness,
+cap-one-coordinate exclusion, named radius-two nonhit, and conditional
+84-unit `A4` transfer. It does not find or exclude an unrestricted Boolean
+or oriented frame. The sign-commutant theorem independently supersedes this
+as a rootless decomposable endpoint construction route without changing the
+finite result.
+
+The proof-separated
+[literature audit](wave31-literature-audit/audit.md) preserves its
+pre-verification chronology, logs 80 exact queries in 20 batches, makes four
+direct metadata/abstract open attempts, retains 14 metadata records and no
+raw source payload, and finds no exact prior result in searched sources.
+That is not a novelty or openness certificate.
+
+The
+[Wave 31 correction ledger](2026-07-24-wave31-orchestrator-corrections.md)
+records the primary-verifier wording correction, discarded wrong-directory
+zero-test invocations, secondary-checker status, construction embedded-parent
+hash, runtime-field portability caveat, literature chronology, logical
+supersession, and unchanged global wall.
+
+Six Wave 31 manifests contain 42 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| sign proof discovery | 7 | `c1d3b8d2a2ca25c4dcdb20fbc1d974f1561fa7c110524359443161d79bebd7f6` |
+| literature audit | 6 | `ccbc52b0089484b153251fe4c37759d49618c59a78e449c61dde122e64465d25` |
+| T20 finite discovery | 8 | `972640b51dd31dc6037ae26b676d1f7c39626f25d038606a71bf18728e9ea3d4` |
+| primary sign verifier | 8 | `e91d4ec72d7921688700bdc5e68b1e610db1d031b1ec7ffae9b927ecd4494122` |
+| skeptical sign verifier | 5 | `c9dd19b9df24e22bcfff7533bb0251582c737153dbbe9ad28e8ea23f2085c1c0` |
+| T20 finite verifier | 8 | `73072c577eff876b4799455a6e0ea0080e54f5370ed8790eda6b85fe3687e1bb` |
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

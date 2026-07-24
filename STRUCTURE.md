@@ -1718,6 +1718,160 @@ establishing novelty. The surviving decomposable type, rooted and integrally
 indecomposable `h=729` forms, the entire determinant row, `n3=708`,
 Conway-99, and novelty remain `UNKNOWN`.
 
+## Wave 31 actual-incidence sign-commutant obstruction
+
+Wave 31 returns from the free matrix/Schur realization to the actual
+vertex-triangle incidence semantics of a putative `srg(99,14,1,2)`. Let
+`N` be its `99 x 231` vertex-triangle incidence matrix and `Gamma` the
+triangle-intersection adjacency matrix. Exact counting gives
+
+```text
+N*N^T=7I+A,
+N^T*N=3I+Gamma.
+```
+
+The endpoint projector is the rank-44 projector `E=M/21` onto
+`ker(Gamma)`, with constant diagonal `4/21`. For `u` in `im(E)`,
+
+```text
+||Nu||^2=3||u||^2,
+(7I+A)Nu=3Nu.
+```
+
+Thus `N` maps `im(E)` bijectively, with squared scale three, onto the
+44-dimensional graph eigenspace
+
+```text
+V=ker(A+4I).
+```
+
+Suppose the rootless even integral endpoint form `S` had a nontrivial
+integral orthogonal decomposition. After the corresponding unimodular basis
+change, the frame remains integral. Each row has `S`-norm four, while every
+nonzero component in any lattice block has norm at least four. Hence every
+row is supported on exactly one block. Cross-block `S`-products vanish, so
+`M` and `E` become coordinate-block diagonal across a nonempty proper
+triangle subset `I`.
+
+Let `b=|I|` and let `D=diag(s)` have sign `+1` on `I` and `-1` on its
+complement. Coordinate-block diagonality is equivalent to
+
+```text
+D*E=E*D.
+```
+
+The symmetric vertex operator
+
+```text
+K=N*D*N^T
+```
+
+therefore preserves `V`; symmetry also preserves `V` orthogonal complement.
+It commutes with the exact spectral projector
+
+```text
+P_-4=(27I-9A+J)/63.
+```
+
+With `d=Ns`, expansion gives
+
+```text
+3(KA-AK)=d*1^T-1*d^T.
+```
+
+For adjacent vertices `x,y`, the strongly regular parameter `lambda=1`
+provides a unique common neighbor `z`, and `{x,y,z}` is one of the graph
+triangles indexing `D`. Writing `K=diag(d)+Z`, a complete partition of all
+99 local summands shows that the same triangle sign is the only surviving
+contribution to both `(ZA)_xy` and `(AZ)_xy`. Hence
+
+```text
+(ZA-AZ)_xy=0,
+(KA-AK)_xy=d_x-d_y.
+```
+
+The exact commutator identity now gives
+
+```text
+3(d_x-d_y)=d_x-d_y,
+```
+
+so `d_x=d_y`. The target graph is connected because `mu=2` gives a
+length-two path between every nonadjacent pair, so `d` is constant.
+
+Summing signed triangle incidences in two ways yields
+
+```text
+99d=3(2b-231),
+```
+
+and hence `33 | b`. The discovery proof combines this with the block
+tight-frame relation `4b=21r` and checks all proper ranks. The independent
+verifier found a shorter route: the principal coordinate block `E_I` is
+itself a projector and
+
+```text
+rank(E_I)=trace(E_I)=4b/21.
+```
+
+Therefore `21 | b`. Since `lcm(21,33)=231`, every nonempty proper block is
+impossible.
+
+The [primary verifier](verification/wave31-sign-commutant/audit.md) passes
+21 independent tests and the frozen 15-test submitted replay. The
+[secondary skeptic](verification/wave31-sign-commutant-skeptic/audit.md)
+independently checks the integral basis transport, all local summands,
+multiblock/complement cases, and deleted-premise controls. The conclusion
+applies across endpoint determinant rows because `h=729` is absent from the
+argument. It does not exclude any whole determinant row: rooted and
+rootless integrally indecomposable forms remain untreated.
+
+## Wave 31 exact T20 finite geometry
+
+The parallel construction lane enumerates the complete norm-four shell of
+the displayed Wave 30 lattice `T20`:
+
+```text
+norm-four vectors: 5076
+antipodal lines:   2538
+line-list SHA-256:
+25af9df21492a5b9022c1888424f4892e0e1cb56d82adee73b49197a536f569e
+```
+
+All `3,219,453` unordered distinct-line pairs have inner product in
+`{0,+/-1,+/-2}`. The absolute-two graph has 242,649 edges. The exact
+105-line second-moment formulation has 2,538 Boolean variables, 210 moment
+equations, and an odd-cardinality equation. Its coefficient and augmented
+GF(2) ranks are both 210, so parity does not obstruct it.
+
+An exact rational box witness has 33 unit weights, 210 strictly fractional
+weights, 2,295 zero weights, total weight 105, and satisfies all 210 moments.
+It is not a Boolean frame. The named 105-line near-frame has residual score
+121. A complete exact scan of all 105-by-2,433 one-exchanges and all
+5,460-by-2,958,528 two-exchange pair combinations finds no repair. The
+independent verifier uses an injective base-257 code on this bounded domain
+and separately replays the submitted modulo-`2^64` filter.
+
+Only that named radius-two neighborhood is excluded. Supports at distance at
+least three and all other supports remain `UNKNOWN`. The cap-one-coordinate
+domain is separately excluded, and the conditional `B_U=I` identities force
+`A4_U=M_U`, transferring all 84 excess diagonal units to the T20 block.
+No orientation, compatible `Q_A/B_A/A4_A`, coupled endpoint, or graph is
+supplied.
+
+The [independent finite audit](verification/wave31-t20-frame/audit.md)
+passes 11 tests after the discovery suite's 10 tests. Its finite conclusions
+remain valid, but the sign-commutant theorem independently excludes every
+rootless decomposable actual endpoint that could use this block.
+
+The bounded [Wave 31 literature audit](verification/wave31-literature-audit/audit.md)
+found no exact prior result in 80 logged queries and 14 retained metadata
+records, without establishing novelty. The exact correction and scope
+chronology is retained in the
+[Wave 31 correction ledger](verification/2026-07-24-wave31-orchestrator-corrections.md).
+Rooted and rootless integrally indecomposable endpoints, `n3=708`,
+Conway-99, and novelty remain `UNKNOWN`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

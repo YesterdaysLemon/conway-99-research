@@ -972,6 +972,80 @@ claims:
       - "SOURCES.bib"
     limitations: "No exact prior result found in searched sources is not a novelty, priority, or global-openness certificate. One Crossref query returned HTTP 429; Google Scholar, MathSciNet, zbMATH, citation networks, non-English sources, and nonindexed work were not comprehensively audited. The audit retained no raw source payload and did not verify the mathematics. Novelty, global target status, the surviving 20+24 type, the full h=729 row, and n3=708 remain UNKNOWN."
 
+  - id: C-WAVE31-SIGN-COMMUTANT-042
+    statement: "Under the actual vertex-triangle incidence and rank-44 zero-projector semantics of a putative srg(99,14,1,2), a rootless even positive-definite integral endpoint S-form cannot admit a nontrivial integral orthogonal decomposition. A coordinate block of b triangles induces a diagonal sign commuting with the projector; incidence transport and the exact -4 graph projector force constant signed vertex incidence and hence 33 divides b, while the coordinate projector trace gives 21 divides b. Thus 231 divides b, contradicting 0<b<231. In particular, the Wave 30 rootless decomposable 20+24 survivor is excluded."
+    label: VERIFIED
+    scope: ACTUAL_TARGET_INCIDENCE_ROOTLESS_INTEGRALLY_ORTHOGONALLY_DECOMPOSABLE_ENDPOINT_EXCLUSION_ONLY
+    evidence:
+      - "agents/2026-07-24-wave31-survivor-proof.md"
+      - "attempts/wave31-survivor-proof/exact_check.py"
+      - "attempts/wave31-survivor-proof/test_exact_check.py"
+      - "attempts/wave31-survivor-proof/exact-results.json"
+      - "attempts/wave31-survivor-proof/input-freeze.sha256"
+      - "attempts/wave31-survivor-proof/failed-routes.md"
+      - "attempts/wave31-survivor-proof/run-report.yaml"
+      - "attempts/wave31-survivor-proof/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant/independent_check.py"
+      - "verification/wave31-sign-commutant/test_independent_check.py"
+      - "verification/wave31-sign-commutant/independent-results.json"
+      - "verification/wave31-sign-commutant/submitted-regenerated.json"
+      - "verification/wave31-sign-commutant/input-freeze.sha256"
+      - "verification/wave31-sign-commutant/audit.md"
+      - "verification/wave31-sign-commutant/failed-objections.md"
+      - "verification/wave31-sign-commutant/run-report.yaml"
+      - "verification/wave31-sign-commutant/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant-skeptic/skeptic_check.py"
+      - "verification/wave31-sign-commutant-skeptic/results.json"
+      - "verification/wave31-sign-commutant-skeptic/input-freeze.sha256"
+      - "verification/wave31-sign-commutant-skeptic/audit.md"
+      - "verification/wave31-sign-commutant-skeptic/run-report.yaml"
+      - "verification/wave31-sign-commutant-skeptic/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+    limitations: "The actual target incidence identities, rootlessness/minimum four, integrality, and a nontrivial integral orthogonal decomposition are essential. The argument does not classify rooted endpoint forms or rootless integrally indecomposable endpoint forms, construct or exclude a graph, exclude n3=708, improve n3>=708, resolve Conway-99, or establish novelty."
+
+  - id: C-WAVE31-T20-FRAME-043
+    statement: "For the displayed rank-20 determinant-729 lattice T20, a complete exact norm-at-most-four enumeration gives 5076 norm-four vectors and 2538 antipodal lines with canonical-line SHA-256 25af9df21492a5b9022c1888424f4892e0e1cb56d82adee73b49197a536f569e. All 3,219,453 distinct-line pairs have inner product only 0,+/-1,+/-2. The 105-line second-moment system has equal coefficient and augmented GF(2) rank 210, admits an exact 33-unit plus 210-fractional rational box witness, and has no repair within one or two exchanges of the named near-frame support under a complete collision-free exact scan. The cap-one-coordinate restriction is excluded and the conditional U-block A4 trace transfer is exact."
+    label: VERIFIED
+    scope: EXACT_T20_FINITE_SHELL_RELAXATION_CAP_ONE_NAMED_RADIUS_TWO_AND_CONDITIONAL_A4_ONLY
+    evidence:
+      - "agents/2026-07-24-wave31-t20-construction.md"
+      - "attempts/wave31-t20-frame/exact_check.py"
+      - "attempts/wave31-t20-frame/test_exact_check.py"
+      - "attempts/wave31-t20-frame/solver_scout.py"
+      - "attempts/wave31-t20-frame/exact-results.json"
+      - "attempts/wave31-t20-frame/input-freeze.sha256"
+      - "attempts/wave31-t20-frame/failure-ledger.md"
+      - "attempts/wave31-t20-frame/run-report.yaml"
+      - "attempts/wave31-t20-frame/artifact-manifest.sha256"
+      - "verification/wave31-t20-frame/protocol-freeze.md"
+      - "verification/wave31-t20-frame/independent_check.py"
+      - "verification/wave31-t20-frame/test_independent_check.py"
+      - "verification/wave31-t20-frame/independent-results.json"
+      - "verification/wave31-t20-frame/input-freeze.sha256"
+      - "verification/wave31-t20-frame/audit.md"
+      - "verification/wave31-t20-frame/failure-ledger.md"
+      - "verification/wave31-t20-frame/run-report.yaml"
+      - "verification/wave31-t20-frame/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+    limitations: "The only complete integer nonhit is the named radius-one/two neighbourhood; supports at distance at least three and all other supports remain unclassified. GF(2) consistency and the rational witness do not supply a Boolean frame. No orientation, zero-sum frame, Q_A, B_A, A4_A, U24 frame, coupled endpoint, graph, n3=708 result, Conway-99 result, or novelty claim follows. Independently, C-WAVE31-SIGN-COMMUTANT-042 rules out any rootless decomposable actual endpoint using T20, without converting these finite searches into a global frame theorem."
+
+  - id: C-WAVE31-LITERATURE-044
+    statement: "At the frozen 2026-07-24 cutoff, the Wave 31 statement/literature audit logged 80 web-search query strings in 20 batches, made four direct metadata or abstract open attempts, retained 14 primary or authoritative metadata records and zero raw source payloads, and found no exact prior result matching either the full surviving matrix/Schur realization signature or the later diagonal-sign commutant/divisibility-33 proof signature in the searched sources."
+    label: CITED
+    scope: BOUNDED_WAVE31_STATEMENT_PRIOR_ART_AND_CURRENT_TARGET_STATUS_AUDIT_ONLY
+    evidence:
+      - "agents/2026-07-24-wave31-statement-literature.md"
+      - "verification/wave31-literature-audit/protocol-freeze.md"
+      - "verification/wave31-literature-audit/protocol-addendum-sign-involution.md"
+      - "verification/wave31-literature-audit/query-ledger.json"
+      - "verification/wave31-literature-audit/source-metadata.json"
+      - "verification/wave31-literature-audit/audit.md"
+      - "verification/wave31-literature-audit/run-report.yaml"
+      - "verification/wave31-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    limitations: "The source audit historically froze before the proof and therefore correctly records the sign-involution constancy lemma as UNKNOWN; the post-freeze addendum records the later search signature without rewriting chronology. No exact prior result found in searched sources is not a novelty, priority, nonexistence, or global-openness certificate. Google Scholar, MathSciNet, zbMATH, citation networks, non-English sources, nonindexed work, and inaccessible material were not comprehensively audited. Novelty and global target status remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

@@ -6,16 +6,17 @@ literature_audit:
   through: 2026-07-24
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave30-literature-audit/audit.md"
-  latest_audit_sha256: "7b852d5be4ee283e2280d7ebc7e5144ec25666c194fe91cbaaf43a745f1de30c"
-  source_query_ledger: "verification/wave30-literature-audit/query-ledger.json"
-  source_query_ledger_sha256: "219418cd0b5a811b951f7bdf21130523613aa22f274861ea19b213df5bda1a57"
+  latest_audit: "verification/wave31-literature-audit/audit.md"
+  latest_audit_sha256: "ee5384512debc4e31e0ed28f2a73a00bcca11016749f6cbf9e6f5181934cc5f6"
+  source_query_ledger: "verification/wave31-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "51e3104691e9d52deab3073ed97f88b8cd2ec490f3980dcc24fa07665fd9dbdd"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave28_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave29_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave30_prior_hit: NONE_IN_BOUNDED_AUDIT
+  exact_wave31_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -1551,4 +1552,177 @@ thirtieth_research_wave:
   clean_clone_strict_fsck: PASS
   clean_clone_verdict: PASS
   caveat: "Wave 30 verifies a conditional fourteen-of-fifteen reduction only for rootless integrally orthogonally decomposable h=729 endpoint forms, and verifies one exact bare T20 orthogonal-sum LAMBDA24 lattice package of the surviving rank/determinant shape. It neither excludes the surviving type nor treats rooted or integrally indecomposable forms. No compatible Q, B, frame, X, M, W, Schur-square certificate, endpoint, graph, n3=708 result, Conway-99 outcome, or novelty claim follows."
+thirty_first_research_wave:
+  frozen_public_base: "5652578111999645a9d5427d0716053de79e0902"
+  sign_proof_discovery_commit: "a8b0c34040f6857b3c5ebcc44f108e03a4159088"
+  literature_audit_commit: "31bc516a581decb6394bf5e780f07fb05d567274"
+  T20_construction_discovery_commit: "67a0e4585c9c378dcd658784a3876564557b70e3"
+  sign_verification_commit: "2a3705dac7de871d23855a12e0d0ddb7aa36d862"
+  T20_verification_commit: "682de9a0b3cba43266911736fb0bf275a15741d8"
+  integration_state: LOCAL_INTEGRATION_PENDING_COMMIT_AND_CLEAN_CLONE
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  determinant_rows_excluded: 0
+  h_729_row_excluded: false
+  rootless_integrally_decomposable_endpoint_status: VERIFIED_IMPOSSIBLE
+  wave30_20_plus_24_survivor_status: VERIFIED_IMPOSSIBLE
+  proof_uses_h_729: false
+  proof_requires_actual_target_incidence: true
+  proof_requires_rootlessness_minimum_four: true
+  proof_requires_integrality: true
+  proof_requires_integral_orthogonal_decomposition: true
+  matrix_only_without_actual_incidence: OUTSIDE_PROOF_SCOPE
+  rooted_endpoint_forms: UNKNOWN
+  rootless_integrally_indecomposable_endpoint_forms: UNKNOWN
+  sign_proof_primary_verdict: PASS_SCOPED
+  sign_proof_skeptical_verdict: PASS_NO_FATAL_GAP
+  sign_proof_submitted_tests_passed: 15
+  sign_proof_independent_tests_passed: 21
+  sign_proof_triangle_block_divisibility_from_incidence: 33
+  sign_proof_triangle_block_divisibility_from_projector_trace: 21
+  sign_proof_combined_divisibility: 231
+  sign_proof_proper_block_status: IMPOSSIBLE
+  T20_finite_verdict: PASS_SCOPED_FINITE_EVIDENCE
+  T20_discovery_tests_passed: 10
+  T20_independent_tests_passed: 11
+  T20_norm_four_vectors: 5076
+  T20_antipodal_lines: 2538
+  T20_unordered_line_pairs: 3219453
+  T20_canonical_lines_sha256: "25af9df21492a5b9022c1888424f4892e0e1cb56d82adee73b49197a536f569e"
+  T20_absolute_two_edges: 242649
+  T20_GF2_coefficient_rank: 210
+  T20_GF2_augmented_rank: 210
+  T20_rational_unit_weights: 33
+  T20_rational_fractional_weights: 210
+  T20_rational_support: 243
+  T20_rational_weight_certificate_sha256: "2e7f5d482685db1c98f99fe239021f87e3f7c27f0506d92611e935a0617af161"
+  T20_near_frame_rows: 105
+  T20_near_frame_residual_score: 121
+  T20_radius_one_repairs: 0
+  T20_radius_two_removal_pairs: 5460
+  T20_radius_two_addition_pairs: 2958528
+  T20_radius_two_repairs: 0
+  T20_global_boolean_frame: UNKNOWN
+  T20_oriented_frame: UNKNOWN
+  T20_matrix_only_coupled_frame_schur_package: UNKNOWN
+  T20_rootless_decomposable_actual_incidence_endpoint: VERIFIED_IMPOSSIBLE
+  T20_solver_timeouts_evidentiary: false
+  literature_query_strings: 80
+  literature_query_batches: 20
+  literature_direct_open_attempts: 4
+  literature_source_records: 14
+  literature_raw_payloads: 0
+  exact_prior_hit_status: NOT_FOUND_IN_SEARCHED_SOURCES
+  sign_proof_report: "agents/2026-07-24-wave31-survivor-proof.md"
+  sign_proof_report_sha256: "075566744e2622a4dfa402a125d394aef16dfcb3fc53b172176dce88bd951aaa"
+  sign_proof_checker: "attempts/wave31-survivor-proof/exact_check.py"
+  sign_proof_checker_sha256: "7613ecc5680bbb1539690e1308775014a2e32957e51036cf9de68ce2ae699956"
+  sign_proof_test: "attempts/wave31-survivor-proof/test_exact_check.py"
+  sign_proof_test_sha256: "24e81f7136bcfa188d5cea93fce36600ba198cbdbf0561ae4c0f4090b92d313b"
+  sign_proof_result: "attempts/wave31-survivor-proof/exact-results.json"
+  sign_proof_result_sha256: "e5155e67a59168767639273ee70fc6d63e81b104e9b415e228ca09a0f9317587"
+  sign_proof_input_freeze: "attempts/wave31-survivor-proof/input-freeze.sha256"
+  sign_proof_input_freeze_sha256: "28f3b2890db2629686dae23484443582fc883914aeb85e2edc87e0149d479174"
+  sign_proof_failed_routes: "attempts/wave31-survivor-proof/failed-routes.md"
+  sign_proof_failed_routes_sha256: "beaec0f3f988c2ed961e628d5d1c6ca73f1439b40f6e9b67536415f63d942c4f"
+  sign_proof_run_report: "attempts/wave31-survivor-proof/run-report.yaml"
+  sign_proof_run_report_sha256: "3cd2e7fe95e810416185cb1d098586a2ec42fc5539557dd7da4f2c5a4ecee0c6"
+  sign_proof_manifest: "attempts/wave31-survivor-proof/artifact-manifest.sha256"
+  sign_proof_manifest_sha256: "c1d3b8d2a2ca25c4dcdb20fbc1d974f1561fa7c110524359443161d79bebd7f6"
+  sign_verifier_checker: "verification/wave31-sign-commutant/independent_check.py"
+  sign_verifier_checker_sha256: "4e7f0979f8da94e34b084a60a95e8ce75a618cc513a19e4eccd75814242d7b22"
+  sign_verifier_test: "verification/wave31-sign-commutant/test_independent_check.py"
+  sign_verifier_test_sha256: "65f06e1a8355c28b77b52ceba6d2dbb095f5e9d37ebc7129fb35ae64ed1e3795"
+  sign_verifier_result: "verification/wave31-sign-commutant/independent-results.json"
+  sign_verifier_result_sha256: "7143c403172403b21ea2cdc2851851a3a13cb08b0dd14e5d68432aafd25fc5c0"
+  sign_verifier_submitted_regeneration: "verification/wave31-sign-commutant/submitted-regenerated.json"
+  sign_verifier_submitted_regeneration_sha256: "e5155e67a59168767639273ee70fc6d63e81b104e9b415e228ca09a0f9317587"
+  sign_verifier_input_freeze: "verification/wave31-sign-commutant/input-freeze.sha256"
+  sign_verifier_input_freeze_sha256: "c224fd23fc5eff1abd79cc3dcb19ecf8d97261914dc6f9fd844c19998a7cf6e4"
+  sign_verifier_audit: "verification/wave31-sign-commutant/audit.md"
+  sign_verifier_audit_sha256: "f6145a3c4f4e787b23440a6ea071d606477821abab0ab8e7e5fe52042d6528a0"
+  sign_verifier_failed_objections: "verification/wave31-sign-commutant/failed-objections.md"
+  sign_verifier_failed_objections_sha256: "5894f9d5ab3f377c88fe92692b7247a9b58fb5681307ef61a5afeefc908008ba"
+  sign_verifier_run_report: "verification/wave31-sign-commutant/run-report.yaml"
+  sign_verifier_run_report_sha256: "4b8f2418fc166d61eb0f428517cdd71e6f65b1455fbee4dde6d1c1367857a556"
+  sign_verifier_manifest: "verification/wave31-sign-commutant/artifact-manifest.sha256"
+  sign_verifier_manifest_sha256: "e91d4ec72d7921688700bdc5e68b1e610db1d031b1ec7ffae9b927ecd4494122"
+  skeptic_checker: "verification/wave31-sign-commutant-skeptic/skeptic_check.py"
+  skeptic_checker_sha256: "3e99a11b6fc63f034b0ec93c142f02c2f3876bc27513dcce8c80eb67222dc81a"
+  skeptic_result: "verification/wave31-sign-commutant-skeptic/results.json"
+  skeptic_result_sha256: "0dd057b903da3092528f4e0bc2b9283e8ee6fa3222553b24b219dda732d35007"
+  skeptic_input_freeze: "verification/wave31-sign-commutant-skeptic/input-freeze.sha256"
+  skeptic_input_freeze_sha256: "dd1a32bbc4803563bc01df70b015a4aa4dad1cd7821a024f8cfae6737b50bf74"
+  skeptic_audit: "verification/wave31-sign-commutant-skeptic/audit.md"
+  skeptic_audit_sha256: "781027870b5e38617ea66757cbea403b2117aac8bb4b7543a61235bbb0faa856"
+  skeptic_run_report: "verification/wave31-sign-commutant-skeptic/run-report.yaml"
+  skeptic_run_report_sha256: "119c0a8c9190971bd366bbf1f0a4cb470c015ab5c204b667c5698884eec29e3d"
+  skeptic_manifest: "verification/wave31-sign-commutant-skeptic/artifact-manifest.sha256"
+  skeptic_manifest_sha256: "c9dd19b9df24e22bcfff7533bb0251582c737153dbbe9ad28e8ea23f2085c1c0"
+  literature_report: "agents/2026-07-24-wave31-statement-literature.md"
+  literature_report_sha256: "88d9b498c24e9d20ae01dd94af520b9d2f5d6cb87f1769f400a4f7d28b224503"
+  literature_protocol: "verification/wave31-literature-audit/protocol-freeze.md"
+  literature_protocol_sha256: "97660bf039223f55d51f498f5743e2ca1779743bbc058f9c5b7e511957e06621"
+  literature_addendum: "verification/wave31-literature-audit/protocol-addendum-sign-involution.md"
+  literature_addendum_sha256: "a9c0ea30cb4431b0218ec547cbc153851cd554fa90e76f8496416f988051425b"
+  literature_query_ledger: "verification/wave31-literature-audit/query-ledger.json"
+  literature_query_ledger_sha256: "51e3104691e9d52deab3073ed97f88b8cd2ec490f3980dcc24fa07665fd9dbdd"
+  literature_source_metadata: "verification/wave31-literature-audit/source-metadata.json"
+  literature_source_metadata_sha256: "dfe2fb7c1dff6c6cc7095fccdfc1c3fdf92674352b633158e4810acfc495930b"
+  literature_audit: "verification/wave31-literature-audit/audit.md"
+  literature_audit_sha256: "ee5384512debc4e31e0ed28f2a73a00bcca11016749f6cbf9e6f5181934cc5f6"
+  literature_run_report: "verification/wave31-literature-audit/run-report.yaml"
+  literature_run_report_sha256: "4c6784e92842254b23b6290061f393c8a3478f2898804e1c6f80ed5b579cdb68"
+  literature_manifest: "verification/wave31-literature-audit/artifact-manifest.sha256"
+  literature_manifest_sha256: "ccbc52b0089484b153251fe4c37759d49618c59a78e449c61dde122e64465d25"
+  T20_report: "agents/2026-07-24-wave31-t20-construction.md"
+  T20_report_sha256: "d6599fdf81f81410eaccde36a35e6ffee567d90b3b5e7020cb64f7a7c4b1ca49"
+  T20_discovery_checker: "attempts/wave31-t20-frame/exact_check.py"
+  T20_discovery_checker_sha256: "81acefd270caa81900cb319ca0cb9db68d952f80ce3511edee1f23386c982f8e"
+  T20_discovery_test: "attempts/wave31-t20-frame/test_exact_check.py"
+  T20_discovery_test_sha256: "0c36af2f7cee4797b95c1d82b175274ed02f9674599181220900509777b4a365"
+  T20_solver_scout: "attempts/wave31-t20-frame/solver_scout.py"
+  T20_solver_scout_sha256: "d362197857cbeddc446bedd7cb04945aff598783fbe2421b86a013212e967144"
+  T20_discovery_result: "attempts/wave31-t20-frame/exact-results.json"
+  T20_discovery_result_sha256: "d2592a71e8600a894aa7d87e6ed1c8230010b919488b10f9854710bb77944152"
+  T20_discovery_input_freeze: "attempts/wave31-t20-frame/input-freeze.sha256"
+  T20_discovery_input_freeze_sha256: "2931d0c8de6e7000112b39aa72232338c5bf14cff54033452bede0842ef92086"
+  T20_discovery_failure_ledger: "attempts/wave31-t20-frame/failure-ledger.md"
+  T20_discovery_failure_ledger_sha256: "9c4ad5eb4cc9cd9234c49514a207304e6861799bfd308e2a34e03a629fcf4232"
+  T20_discovery_run_report: "attempts/wave31-t20-frame/run-report.yaml"
+  T20_discovery_run_report_sha256: "292403654e0caec8ddbb4a9e286c5f2ab30260d7ff808c758cab6eecd99e1c7c"
+  T20_discovery_manifest: "attempts/wave31-t20-frame/artifact-manifest.sha256"
+  T20_discovery_manifest_sha256: "972640b51dd31dc6037ae26b676d1f7c39626f25d038606a71bf18728e9ea3d4"
+  T20_verifier_protocol: "verification/wave31-t20-frame/protocol-freeze.md"
+  T20_verifier_protocol_sha256: "e2d0061c544db483ca5c4994c99fc520e0e67ae597d3e07637d66ef3a128e6eb"
+  T20_verifier_checker: "verification/wave31-t20-frame/independent_check.py"
+  T20_verifier_checker_sha256: "57b93ec114d1dce66812099a69c97baf080c9557eeb8489c487c6e03d8435efb"
+  T20_verifier_test: "verification/wave31-t20-frame/test_independent_check.py"
+  T20_verifier_test_sha256: "0c9ed03e4dadf1f058e162e363a472f8b2e1f4924196d3a5d92af5aba6321061"
+  T20_verifier_result: "verification/wave31-t20-frame/independent-results.json"
+  T20_verifier_result_sha256: "ac6c34e1f8c1ba98d12d5d01e9d8b05e7a60a51a76b5701c528912f94ab3bede"
+  T20_verifier_input_freeze: "verification/wave31-t20-frame/input-freeze.sha256"
+  T20_verifier_input_freeze_sha256: "f0f7659b1d8dc02cc3c5ca4e2fc67700f407e802a1ebf44c123ce96b02fe8d2e"
+  T20_verifier_audit: "verification/wave31-t20-frame/audit.md"
+  T20_verifier_audit_sha256: "f1b5f3f7960b66a21fcd3a6eb101df97f76f33b0206d5f24e6bcf0741ee2cc0f"
+  T20_verifier_failure_ledger: "verification/wave31-t20-frame/failure-ledger.md"
+  T20_verifier_failure_ledger_sha256: "c0c54241361664609db9f8384cca7aba30134993ed380bace65a2a5e97306bdd"
+  T20_verifier_run_report: "verification/wave31-t20-frame/run-report.yaml"
+  T20_verifier_run_report_sha256: "babb068a3a8fb26f11d59ceda938ca2e0dd10e07d567e0ad5ced39b44878cc66"
+  T20_verifier_manifest: "verification/wave31-t20-frame/artifact-manifest.sha256"
+  T20_verifier_manifest_sha256: "73072c577eff876b4799455a6e0ea0080e54f5370ed8790eda6b85fe3687e1bb"
+  corrections_ledger: "verification/2026-07-24-wave31-orchestrator-corrections.md"
+  corrections_ledger_sha256: "5c8e5b0b1b552785b650715539d30f9426f07077a15b87545e16df57d944625a"
+  sources_bib_sha256: "3c93b322ee4b0a61cf1407fdf5b082dbb90801459300289c7097b56833914a8e"
+  current_tree_unit_tests_passed: 57
+  skeptic_checker_passed: true
+  deterministic_outputs_checked: 6
+  manifest_count: 6
+  manifest_entries: 42
+  caveat: "Wave 31 verifies that actual target vertex-triangle incidence is incompatible with every nontrivial rootless integral orthogonal decomposition of the endpoint S-form, and separately verifies exact finite T20 shell, rational-relaxation, cap-one, named radius-two, and conditional trace facts. It does not treat rooted or rootless integrally indecomposable endpoint forms, exclude n3=708, improve n3>=708, construct or exclude the target graph, resolve Conway-99, or establish novelty. The finite T20 lane neither finds nor excludes an unrestricted frame."
 last_updated: 2026-07-24

@@ -35,3 +35,20 @@ Wave 30 reports:
   of `T20` and the bare `T20 orthogonal_sum LAMBDA24` rank-44 `S/G` package.
   Independent verification covers only the lattice layer and supplies no
   endpoint frame, Schur package, or graph.
+
+Wave 31 reports:
+
+- `2026-07-24-wave31-survivor-proof.md`: `DERIVED` discovery proof that the
+  actual target incidence projector is incompatible with every nontrivial
+  rootless integral orthogonal decomposition. Discovery did not certify
+  itself; the primary verifier later returned `PASS_SCOPED` and a separate
+  skeptical checker returned `PASS_NO_FATAL_GAP`.
+- `2026-07-24-wave31-statement-literature.md`: historically frozen
+  `UNKNOWN` statement/status handoff for the surviving matrix/Schur
+  realization and the later sign-involution addendum. The pre-verification
+  `UNKNOWN` label is intentionally retained rather than rewritten.
+- `2026-07-24-wave31-t20-construction.md`: `CANDIDATE` exact finite search
+  over the complete displayed `T20` norm-four shell, including a rational
+  relaxation witness and one named radius-two nonhit. Independent
+  verification promotes only those finite facts, not an unrestricted frame
+  or endpoint conclusion.

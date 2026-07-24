@@ -1865,6 +1865,122 @@ ledger and link checks, exact-blob privacy scans, clean-status checks, and
 `git fsck --full --strict`. The replay certifies publication hygiene for the
 two scoped Wave 30 results; it does not promote any broader endpoint status.
 
+## Wave 31 sign-commutant theorem and T20 finite boundary
+
+Run the four Wave 31 unit-test suites from the repository root:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave31-survivor-proof -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave31-sign-commutant `
+  -p test_independent_check.py -v
+python -B -m unittest discover `
+  -s attempts\wave31-t20-frame -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave31-t20-frame `
+  -p test_independent_check.py -v
+```
+
+They pass `15`, `21`, `10`, and `11` tests, respectively: 57 unique unit
+tests. Do not pass a filesystem path as a `unittest` module name from the
+sign-verifier directory; two discarded wrong-directory invocations
+discovered zero substantive tests and are retained as harness failures.
+
+Run the separate skeptical checker directly:
+
+```powershell
+$wave31Tmp = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave31-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave31Tmp | Out-Null
+
+python -B verification\wave31-sign-commutant-skeptic\skeptic_check.py `
+  --output (Join-Path $wave31Tmp "skeptic.json")
+```
+
+It returns `PASS_NO_FATAL_GAP`. It is a second adversarial audit, not an
+additional unit-test count and not the designated promotion verifier.
+
+Regenerate the proof and primary verifier outputs:
+
+```powershell
+python -B attempts\wave31-survivor-proof\exact_check.py `
+  --output (Join-Path $wave31Tmp "proof.json")
+python -B verification\wave31-sign-commutant\independent_check.py `
+  --output (Join-Path $wave31Tmp "sign-independent.json")
+```
+
+The expected SHA-256 values are:
+
+```text
+proof:
+e5155e67a59168767639273ee70fc6d63e81b104e9b415e228ca09a0f9317587
+
+primary independent:
+7143c403172403b21ea2cdc2851851a3a13cb08b0dd14e5d68432aafd25fc5c0
+
+skeptical independent:
+0dd057b903da3092528f4e0bc2b9283e8ee6fa3222553b24b219dda732d35007
+```
+
+The proof JSON must also be byte-identical to
+`verification/wave31-sign-commutant/submitted-regenerated.json`.
+
+Regenerate both T20 finite-search outputs:
+
+```powershell
+python -B attempts\wave31-t20-frame\exact_check.py `
+  --output (Join-Path $wave31Tmp "t20-submitted.json")
+python -B verification\wave31-t20-frame\independent_check.py `
+  --output (Join-Path $wave31Tmp "t20-independent.json")
+```
+
+The expected hashes are:
+
+```text
+T20 submitted:
+d2592a71e8600a894aa7d87e6ed1c8230010b919488b10f9854710bb77944152
+
+T20 independent:
+ac6c34e1f8c1ba98d12d5d01e9d8b05e7a60a51a76b5701c528912f94ab3bede
+```
+
+The proof, primary-sign, T20-submitted, and T20-independent JSON files
+include runtime metadata. Literal byte identity is asserted for the
+pinned/current environment; on another OS or Python build, compare the exact
+mathematical fields separately from runtime fields. The skeptical result has
+no runtime block.
+
+Six Wave 31 manifests validate 42 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| sign proof discovery | 7 | `c1d3b8d2a2ca25c4dcdb20fbc1d974f1561fa7c110524359443161d79bebd7f6` |
+| literature audit | 6 | `ccbc52b0089484b153251fe4c37759d49618c59a78e449c61dde122e64465d25` |
+| T20 finite discovery | 8 | `972640b51dd31dc6037ae26b676d1f7c39626f25d038606a71bf18728e9ea3d4` |
+| primary sign verifier | 8 | `e91d4ec72d7921688700bdc5e68b1e610db1d031b1ec7ffae9b927ecd4494122` |
+| skeptical sign verifier | 5 | `c9dd19b9df24e22bcfff7533bb0251582c737153dbbe9ad28e8ea23f2085c1c0` |
+| T20 finite verifier | 8 | `73072c577eff876b4799455a6e0ea0080e54f5370ed8790eda6b85fe3687e1bb` |
+
+The exact Wave 31 scope wall is:
+
+```text
+rootless integrally decomposable actual-incidence endpoint: VERIFIED impossible
+displayed T20 shell and named finite restrictions:           VERIFIED
+unrestricted T20 Boolean/oriented frame:                     UNKNOWN
+rooted / rootless integrally indecomposable endpoints:       UNKNOWN
+n3=708 / Conway-99 / novelty:                                UNKNOWN
+strongest conditional bound:                                n3>=708
+```
+
+The [primary audit](verification/wave31-sign-commutant/audit.md),
+[skeptical audit](verification/wave31-sign-commutant-skeptic/audit.md),
+[T20 audit](verification/wave31-t20-frame/audit.md), and
+[correction ledger](verification/2026-07-24-wave31-orchestrator-corrections.md)
+record the proof obligations, failed harness invocations, exact restrictions,
+and nonpromotion wall.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

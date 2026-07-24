@@ -41,9 +41,11 @@ and the normalized search problem.
   projector/Schur origin. Wave 30 conditionally reduces every rootless,
   integrally orthogonally decomposable `h=729` endpoint form to one surviving
   `20+24` type and constructs an exact bare `T20 orthogonal_sum LAMBDA24`
-  control of that rank/determinant shape. It supplies no compatible endpoint
-  frame or Schur package, and rooted and integrally indecomposable forms remain
-  unclassified, so the endpoint is not excluded.
+  control of that rank/determinant shape. Wave 31 uses the actual
+  vertex-triangle incidence projector to exclude every nontrivial rootless
+  integral orthogonal decomposition, including that survivor and independently
+  of `h=729`. Rooted and rootless integrally indecomposable endpoint forms
+  remain unclassified, so `n3=708` is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1125,6 +1127,107 @@ files byte for byte, validates all 47 entries in six manifests, checks
 central metadata and all local Markdown links, scans exact Git blobs and
 commit messages for private material, and finishes with clean status and
 strict object verification.
+
+Wave 31 closes the entire rootless integrally decomposable endpoint branch
+under the actual target graph's vertex-triangle incidence semantics. Let `N`
+be the `99 x 231` vertex-triangle incidence matrix, let `Gamma` be the
+triangle-intersection graph, and let `E` be its rank-44 zero-eigenspace
+projector. The frozen identities include
+
+```text
+N*N^T=7I+A,
+N^T*N=3I+Gamma,
+E=M/21,
+diag(E)=4/21.
+```
+
+If a rootless even integral endpoint form `S` split nontrivially and
+integrally, minimum four would force every norm-four frame row into exactly
+one lattice block. A nonempty proper coordinate block `I` of `b` triangles
+would follow, and its diagonal sign matrix `D` would commute with `E`.
+Transporting it to the vertex space as
+
+```text
+K=N*D*N^T
+```
+
+gives a symmetric operator preserving the graph's `-4` eigenspace. Hence it
+commutes with the exact spectral projector
+
+```text
+P_-4=(27I-9A+J)/63.
+```
+
+Writing `s` for the triangle signs and `d=Ns`, the resulting exact
+commutator is
+
+```text
+3(KA-AK)=d*1^T-1*d^T.
+```
+
+For adjacent vertices, the unique common neighbor completes the same graph
+triangle on both sides, so the signed off-diagonal contribution
+`(ZA-AZ)_xy` vanishes. The remaining diagonal contribution is
+`(KA-AK)_xy=d_x-d_y`; comparison with the displayed identity gives
+`3(d_x-d_y)=d_x-d_y`, hence `d_x=d_y`. Since the target graph is connected,
+`d` is constant. Signed-incidence double counting then gives `33 | b`.
+Independently, the coordinate block `E_I` is itself a projector, so
+
+```text
+rank(E_I)=trace(E_I)=4b/21,
+```
+
+and therefore `21 | b`. Thus `231 | b`, impossible for `0<b<231`.
+
+The [primary adversarial audit](verification/wave31-sign-commutant/audit.md)
+returns `PASS_SCOPED` after 21 independent tests and a 15-test submitted
+replay. The
+[secondary skeptical audit](verification/wave31-sign-commutant-skeptic/audit.md)
+returns `PASS_NO_FATAL_GAP`, checking the contragredient integral basis
+change, every local commutator summand, complements and multiblock splits,
+and hostile deleted-premise controls. This proves only the conditional
+rootless-decomposable exclusion. Rooted and rootless integrally
+indecomposable endpoints, `n3=708`, graph existence or nonexistence,
+Conway-99, and novelty remain `UNKNOWN`.
+
+A separate exact T20 lane remains useful as finite geometry even though the
+commutator theorem rules out its use in a rootless decomposable actual
+endpoint. The
+[independent T20 audit](verification/wave31-t20-frame/audit.md) verifies:
+
+```text
+complete norm-four shell:                 5076 vectors / 2538 lines
+all distinct-line pairs:                  3,219,453
+possible pair inner products:             0,+/-1,+/-2
+GF(2) coefficient and augmented ranks:    210,210
+rational box witness:                     33 unit + 210 fractional weights
+named near-frame residual score:          121
+complete radius-one/two repairs found:    0
+```
+
+The radius-two result covers only one named support neighborhood; it is not
+an unrestricted frame nonexistence theorem. The rational witness is not
+Boolean, and solver timeouts are not evidence. No orientation, compatible
+`Q/B/A4`, coupled endpoint, graph, or `n3=708` result follows.
+
+The proof-separated
+[Wave 31 literature audit](verification/wave31-literature-audit/audit.md)
+logs 80 queries in 20 batches, four direct metadata/abstract open attempts,
+14 retained metadata records, and no raw source payload. It found no exact
+prior result in the searched sources as of 2026-07-24; novelty, priority,
+and global openness remain `UNKNOWN`. The immutable chronology, verifier
+wording correction, discarded zero-test harness invocations, portability
+caveat, and publication wall are in the
+[Wave 31 correction ledger](verification/2026-07-24-wave31-orchestrator-corrections.md).
+
+The resulting status is:
+
+```text
+rootless integrally decomposable actual-incidence endpoints: impossible
+rooted or rootless integrally indecomposable endpoints:       UNKNOWN
+n3=708 / Conway-99 / novelty:                                 UNKNOWN
+strongest conditional bound:                                 n3>=708
+```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

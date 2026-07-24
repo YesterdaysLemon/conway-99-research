@@ -1082,3 +1082,77 @@ obligations:
       - "verification/2026-07-24-wave30-orchestrator-corrections.md"
       - "SOURCES.bib"
     note: "The audit records 96 exact queries in 24 batches and 21 retained metadata records with no raw source payload. It finds neither frozen signature in searched sources and records one Crossref HTTP 429 plus incomplete Google Scholar, MathSciNet, zbMATH, citation-network, language, and indexing coverage. The permissible conclusion is NO_EXACT_PRIOR_RESULT_FOUND_IN_SEARCHED_SOURCES; novelty, priority, global target status, the surviving 20+24 type, h=729, and n3=708 remain UNKNOWN."
+
+  - id: O-WAVE31-SIGN-COMMUTANT
+    requirement: "Freeze the exact actual-incidence conditional claim; independently reconstruct the target spectrum, incidence transport, integral basis change, one-block row support, coordinate projector block, diagonal-sign commutation, symmetric NDN-transpose transport, exact -4 spectral projector, every local commutator summand, adjacent unique-triangle cancellation, connectedness, signed-incidence double count, projector and lattice trace divisibility routes, all nonempty proper block and complement cases, hostile deleted-premise controls, status walls, and deterministic submitted replay; require a verifier distinct from discovery and retain a second skeptical audit."
+    critical: true
+    status: PASS_SCOPED_CONDITIONAL_THEOREM
+    evidence:
+      - "agents/2026-07-24-wave31-survivor-proof.md"
+      - "attempts/wave31-survivor-proof/exact_check.py"
+      - "attempts/wave31-survivor-proof/test_exact_check.py"
+      - "attempts/wave31-survivor-proof/exact-results.json"
+      - "attempts/wave31-survivor-proof/input-freeze.sha256"
+      - "attempts/wave31-survivor-proof/failed-routes.md"
+      - "attempts/wave31-survivor-proof/run-report.yaml"
+      - "attempts/wave31-survivor-proof/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant/independent_check.py"
+      - "verification/wave31-sign-commutant/test_independent_check.py"
+      - "verification/wave31-sign-commutant/independent-results.json"
+      - "verification/wave31-sign-commutant/submitted-regenerated.json"
+      - "verification/wave31-sign-commutant/input-freeze.sha256"
+      - "verification/wave31-sign-commutant/audit.md"
+      - "verification/wave31-sign-commutant/failed-objections.md"
+      - "verification/wave31-sign-commutant/run-report.yaml"
+      - "verification/wave31-sign-commutant/artifact-manifest.sha256"
+      - "verification/wave31-sign-commutant-skeptic/skeptic_check.py"
+      - "verification/wave31-sign-commutant-skeptic/results.json"
+      - "verification/wave31-sign-commutant-skeptic/input-freeze.sha256"
+      - "verification/wave31-sign-commutant-skeptic/audit.md"
+      - "verification/wave31-sign-commutant-skeptic/run-report.yaml"
+      - "verification/wave31-sign-commutant-skeptic/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+    note: "The submitted 15-test suite and independent 21-test suite pass, both accepted JSON outputs regenerate deterministically, the primary verifier returns PASS_SCOPED, and the secondary checker returns PASS_NO_FATAL_GAP. The verifier strengthens the submitted rank census with the projector-trace implication 21|b; together with the independently reconstructed signed double count 33|b this forces 231|b. The result excludes all nontrivial rootless integral orthogonal decompositions under actual target incidence, not merely h=729. Rooted and rootless indecomposable endpoints, n3=708, Conway-99, and novelty remain UNKNOWN."
+
+  - id: O-WAVE31-T20-FRAME
+    requirement: "Freeze the exact displayed T20 and all upstream inputs; independently verify determinant, positivity, scaled dual, complete norm-four shell in two bases without an automorphism quotient, the ordered antipodal-line list, every distinct-line inner product and degree, separate coefficient and augmented GF(2) ranks, every exact rational weight and moment, collision-safe exhaustive radius-one/two coverage around the named support, the submitted modular fingerprint replay, the cap-one-coordinate exclusion, the conditional U-block A4 transfer, deterministic output, hostile status mutation, and all unrestricted/global scope walls."
+    critical: true
+    status: PASS_SCOPED_FINITE_EVIDENCE
+    evidence:
+      - "agents/2026-07-24-wave31-t20-construction.md"
+      - "attempts/wave31-t20-frame/exact_check.py"
+      - "attempts/wave31-t20-frame/test_exact_check.py"
+      - "attempts/wave31-t20-frame/solver_scout.py"
+      - "attempts/wave31-t20-frame/exact-results.json"
+      - "attempts/wave31-t20-frame/input-freeze.sha256"
+      - "attempts/wave31-t20-frame/failure-ledger.md"
+      - "attempts/wave31-t20-frame/run-report.yaml"
+      - "attempts/wave31-t20-frame/artifact-manifest.sha256"
+      - "verification/wave31-t20-frame/protocol-freeze.md"
+      - "verification/wave31-t20-frame/independent_check.py"
+      - "verification/wave31-t20-frame/test_independent_check.py"
+      - "verification/wave31-t20-frame/independent-results.json"
+      - "verification/wave31-t20-frame/input-freeze.sha256"
+      - "verification/wave31-t20-frame/audit.md"
+      - "verification/wave31-t20-frame/failure-ledger.md"
+      - "verification/wave31-t20-frame/run-report.yaml"
+      - "verification/wave31-t20-frame/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+    note: "The discovery suite passes 10 tests and the independent verifier passes 11. The full 5,076-vector shell, 2,538 lines, 3,219,453 pair scan, 210/210 GF(2) ranks, 243-support rational witness, cap-one restriction, named radius-two nonhit, and conditional 84-unit A4 transfer are VERIFIED within their exact finite scopes. No unrestricted Boolean or oriented frame is found or excluded; timeouts are noncertifying. The separate sign-commutant theorem supersedes this construction as a decomposable endpoint route without inflating the finite-search conclusion."
+
+  - id: O-WAVE31-LITERATURE-STATUS
+    requirement: "Freeze the complete surviving matrix/Schur realization before searching and preserve the later sign-commutant signature as a chronological addendum; query exact numerical fingerprints and alternate incidence, projector, lattice-frame, eutactic-star, s-integrability, signed-graph, association-scheme, Leech, cubic-tensor, and target terminology; retain exact queries, source metadata, access failures, and no raw payload; distinguish projector-only from actual-graph implications; and separate bounded non-discovery from novelty, priority, nonexistence, or global openness."
+    critical: false
+    status: PASS
+    evidence:
+      - "agents/2026-07-24-wave31-statement-literature.md"
+      - "verification/wave31-literature-audit/protocol-freeze.md"
+      - "verification/wave31-literature-audit/protocol-addendum-sign-involution.md"
+      - "verification/wave31-literature-audit/query-ledger.json"
+      - "verification/wave31-literature-audit/source-metadata.json"
+      - "verification/wave31-literature-audit/audit.md"
+      - "verification/wave31-literature-audit/run-report.yaml"
+      - "verification/wave31-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave31-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    note: "The audit records 80 exact web-search queries in 20 batches, four direct metadata or abstract open attempts, 14 retained metadata records, and zero retained raw payloads. It finds no exact prior result in the searched sources. The frozen pre-proof UNKNOWN sign-lemma status is preserved rather than silently rewritten. Coverage remains incomplete, so novelty, priority, global target status, n3=708, and Conway-99 remain UNKNOWN."
