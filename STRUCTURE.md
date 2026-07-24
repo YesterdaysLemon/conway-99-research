@@ -1595,6 +1595,129 @@ This excludes one exact `S0` endpoint origin only. Other determinant-729
 lattices, the full `h=729` row, `n3=708`, Conway-99, and novelty remain
 `UNKNOWN`.
 
+## Wave 30 decomposable rootless `h=729` boundary and bare survivor
+
+Wave 30 considers every endpoint form `S` satisfying
+
+```text
+rank(S)=44,
+det(S)=729,
+S even, integral, positive definite, rootless,
+S nontrivially integrally orthogonally decomposable,
+```
+
+together with the full frozen `n3=708` projector/Schur identities. The
+decomposition is required to be integral and unimodular; a merely rational
+orthogonal split is insufficient.
+
+Every frame row has `S`-norm four. Since each nonzero integral component in a
+rootless summand has norm at least four, a row cannot have two nonzero
+components. Consequently the rows are block supported, and `X`, `M`, `W`,
+`Q`, `B`, and `C=(B-I)/2` split over the same integral blocks.
+
+For a block `J`, the tight-frame identity gives
+
+```text
+4*n_J=21*rank(J),
+```
+
+so every original block rank is divisible by four. Since `det(Q)=5`, exactly
+one `Q` block has determinant five; the others are even unimodular and have
+rank divisible by eight. Combining the exceptional ranks
+
+```text
+4,12,20,28,36
+```
+
+with the possible `3`-adic determinant exponents
+
+```text
+2,4,6
+```
+
+gives a complete fifteen-type aggregate census. Grouping several
+even-unimodular complement blocks loses no type.
+
+The complete frame-row alphabet has thirteen solutions. Its cubic sum makes
+every positive block trace a multiple of six. Exact integer AM--GM and the
+blockwise logarithmic bound
+
+```text
+det(B_J)<=3^tr(C_J)
+```
+
+eliminate the strict cases. Equality makes `C_J` an integral self-adjoint
+idempotent. Its integral image and kernel split orthogonally, and the
+corresponding nonzero `Q` restrictions are even unimodular; their ranks must
+therefore be divisible by eight. This excludes the four remaining forbidden
+equality cases.
+
+Fourteen of the fifteen aggregate types are impossible. The sole surviving
+necessary type is
+
+```text
+S=A20 orthogonal_sum U24,
+
+rank(A20)=20, det(A20)=729,
+rank(U24)=24, det(U24)=1,
+rows=(105,126),
+det(Q_A),det(Q_U)=(5,1),
+det(B_A),det(B_U)=(3645,1),
+tr(B_A),tr(B_U)=(36,24),
+B_U=I24.
+```
+
+`A20` is a local block label, not the ADE root lattice `A_20`. Exact tensor
+arithmetic leaves 62 possible aggregate row profiles on the survivor. These
+are necessary counts, not symmetric Gram matrices, frames, or endpoint
+realizations.
+
+An independent construction lane reaches an exact rootless rank-20 lattice
+`T20` through five explicit 2-neighbors from
+`K12 orthogonal_sum E8`:
+
+```text
+root counts: 240 -> 112 -> 48 -> 20 -> 6 -> 0
+rank(T20)=20
+det(T20)=729
+min(T20)=4
+norm-four vectors=5076
+exact level=3
+Gram SHA-256:
+1890fe1973eed47850c307d0975ae393f2a8ab32a9d0b16b35ebcab7012445d6
+```
+
+Both `3*T20^(-1)` and `21*T20^(-1)` are even integral. Therefore
+
+```text
+S44=T20 orthogonal_sum LAMBDA24,
+G44=21*S44^(-1)
+```
+
+is an exact rootless even integral rank-44 determinant-729 bare `S/G`
+package. This realizes the survivor's rank and determinant shape only.
+Nothing proves that the generic `A20` is `T20`, and the construction supplies
+no compatible `Q`, `B`, 105/126 frame, `X`, `M`, `W`, or Schur-square
+certificate.
+
+The first general discovery revision froze a transient Wave 29 audit hash,
+so its submitted suite ran zero tests and its generator failed before output.
+That failure and publication veto remain at commits `091d0a4...` and
+`0bc6dc9...`. The provenance-only repair at `a7be6b8...` changes no theorem
+content. The
+[fresh re-verifier](verification/wave30-general-h729/reverification-audit.md)
+passes the repaired 20-test replay, reproduces the original failure, and
+passes the unchanged 32-test historical independent verifier in its frozen
+snapshot. The [construction verifier](verification/wave30-h729-construction/audit.md)
+passes 24 independent hostile tests. Full chronology is in the
+[Wave 30 correction ledger](verification/2026-07-24-wave30-orchestrator-corrections.md).
+
+The bounded [Wave 30 literature audit](verification/wave30-literature-audit/audit.md)
+found no exact match for either signature in 96 logged queries, without
+establishing novelty. The surviving decomposable type, rooted and integrally
+indecomposable `h=729` forms, the entire determinant row, `n3=708`,
+Conway-99, and novelty remain `UNKNOWN`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

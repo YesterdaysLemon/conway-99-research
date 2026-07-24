@@ -38,8 +38,12 @@ and the normalized search problem.
   adds corrected discriminant/glue restrictions, a rootless bare-lattice
   control, and nonorthogonal two-neighbor controls. Wave 29 proves that the
   specific rootless control cannot supply the required 231-row
-  projector/Schur origin. Other general lattices remain unclassified, so the
-  endpoint is not excluded.
+  projector/Schur origin. Wave 30 conditionally reduces every rootless,
+  integrally orthogonally decomposable `h=729` endpoint form to one surviving
+  `20+24` type and constructs an exact bare `T20 orthogonal_sum LAMBDA24`
+  control of that rank/determinant shape. It supplies no compatible endpoint
+  frame or Schur package, and rooted and integrally indecomposable forms remain
+  unclassified, so the endpoint is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1033,6 +1037,85 @@ entries, central metadata and repository-wide link gates, exact Git-blob
 privacy scans, clean status, and strict object verification at integration
 commit `ae8fd70baaeb35302f957653e20ad710e5e77281`.
 
+Wave 30 first classifies the rootless, integrally orthogonally decomposable
+part of the `h=729` boundary. Assume the full frozen `n3=708`
+projector/Schur package and let `S` be even, positive definite, integral,
+rank 44, determinant 729, rootless, and nontrivially integrally orthogonally
+decomposable. Minimum four forces every one of the 231 frame rows into a
+single integral block. The induced `M,W,Q,B,C` data split, and determinant,
+signature, trace-residue, exact AM--GM, logarithmic-cap, and
+equality/idempotent arguments leave exactly one of fifteen aggregate types:
+
+```text
+S = A20 orthogonal_sum U24,
+
+rank,det = (20,729) and (24,1),
+frame rows = 105 and 126,
+det(Q) = 5 and 1,
+det(B) = 3645 and 1,
+tr(B) = 36 and 24,
+B_U = I24.
+```
+
+Here `A20` is only a local name for the rank-20 block; it is neither the ADE
+root lattice `A_20` nor proved isometric to the construction below. The
+remaining 62 row-count profiles are necessary arithmetic profiles, not
+frames or existence certificates.
+
+The first submitted package is preserved at commit `091d0a4...`: one stale
+frozen Wave 29 hash made its suite run zero tests and its generator fail
+before output. The independent verifier reconstructed the scoped mathematics
+but vetoed that submitted revision at `0bc6dc9...`. A provenance-only repair
+at `a7be6b8...` changed no test or lemma. The fresh
+[re-verification audit](verification/wave30-general-h729/reverification-audit.md)
+then replayed the repair with 20 passing tests and byte-identical JSON,
+replayed the original failure, and replayed the unchanged historical
+independent verifier with 32 passing tests and byte-identical JSON. The
+repaired conditional classification is therefore `VERIFIED`; the original
+failure remains `FAIL`.
+
+Independently, five exact 2-neighbor steps from
+`K12 orthogonal_sum E8` construct a rootless lattice `T20` with
+
+```text
+rank(T20)=20,
+det(T20)=729,
+min(T20)=4,
+number of norm-four vectors=5076,
+exact level=3,
+root counts 240 -> 112 -> 48 -> 20 -> 6 -> 0.
+```
+
+The final Gram SHA-256 is
+`1890fe1973eed47850c307d0975ae393f2a8ab32a9d0b16b35ebcab7012445d6`.
+The exact direct sum
+
+```text
+S44=T20 orthogonal_sum LAMBDA24,
+G44=21*S44^(-1)
+```
+
+is a rootless even integral rank-44 determinant-729 bare lattice package
+with `S44*G44=21*I44`. The
+[construction audit](verification/wave30-h729-construction/audit.md)
+independently checks the neighbor certificates, complete short-vector
+enumerations, scaled duals, and direct sum with 24 hostile tests. It verifies
+no determinant-five `Q`, compatible `B`, 105/126 frame, `X`, `M`, `W`,
+Schur-square identity, endpoint, or graph.
+
+The proof-separated
+[Wave 30 literature audit](verification/wave30-literature-audit/audit.md)
+logs 96 query strings in 24 batches and retains 21 metadata-only source
+records. It found neither exact Wave 30 signature in the searched sources,
+but one Crossref query was rate-limited and the search was not globally
+complete. Novelty, priority, and global openness remain `UNKNOWN`. The full
+failure, repair, verifier, command, and scope record is retained in the
+[Wave 30 correction ledger](verification/2026-07-24-wave30-orchestrator-corrections.md).
+
+Wave 30 neither excludes the surviving decomposable type nor treats rooted
+or integrally indecomposable `h=729` forms. The `h=729` row, `n3=708`,
+Conway-99, and novelty remain `UNKNOWN`; the bound remains `n3>=708`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1309,6 +1392,17 @@ status.
   45 passing tests, two byte-identical generated files, three exact manifests,
   all-repository link and exact-blob privacy gates, clean status, and strict
   Git object verification.
+- [Wave 30 general `h=729` re-verification](verification/wave30-general-h729/reverification-audit.md):
+  repaired 20-test replay, preserved original zero-test failure, historical
+  32-test independent replay, complete fifteen-type reconstruction, and a
+  scoped `20+24` survivor.
+- [Wave 30 bare `T20` construction audit](verification/wave30-h729-construction/audit.md):
+  independent five-neighbor reconstruction, complete norm-two and norm-four
+  enumeration, scaled-dual checks, and exact `T20 orthogonal_sum LAMBDA24`
+  rank-44 `S/G` verification without endpoint promotion.
+- [Wave 30 literature/status audit](verification/wave30-literature-audit/audit.md):
+  96 frozen query strings, 21 metadata-only source records, exact-signature
+  near-hit analysis, explicit coverage limits, and novelty `UNKNOWN`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

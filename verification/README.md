@@ -649,6 +649,89 @@ Glued, non-root, and otherwise nonorthogonal general lattices are not
 classified or excluded. The headline conditional bound therefore remains
 `n3>=708`.
 
+## Wave 30 decomposable `h=729` reduction and bare construction
+
+The original
+[general verifier audit](wave30-general-h729/audit.md) independently
+reconstructs the conditional mathematics but records a submitted replay
+failure. Discovery commit `091d0a4...` froze a transient Wave 29 audit hash,
+so its submitted suite ran zero tests and its generator stopped before
+output. Verifier-veto commit `0bc6dc9...` preserves `V30-GEN-001` and blocks
+publication of that exact revision.
+
+The provenance-only repair at `a7be6b8...` substitutes the applicable
+committed hash and regenerates dependent result and checksum metadata. Its
+test source, failed routes, mathematics, surviving type, and limitations are
+unchanged. The
+[fresh re-verification audit](wave30-general-h729/reverification-audit.md):
+
+- freezes the exact repaired Git object;
+- passes the repaired submitted suite `20/20`;
+- reproduces its JSON byte for byte;
+- reproduces the original zero-test/generator failure;
+- passes the unchanged historical independent verifier `32/32` in the
+  veto-commit snapshot; and
+- reproduces the historical independent JSON byte for byte.
+
+The repaired revision receives
+`PASS_SCOPED_CONDITIONAL_THEOREM`; the original revision remains `FAIL`.
+Within the full frozen `n3=708` endpoint hypotheses, fourteen of fifteen
+aggregate types for a rootless, integrally orthogonally decomposable
+rank-44 determinant-729 form are excluded. The unique surviving necessary
+type has
+
+```text
+block ranks:       20,24
+block det(S):      729,1
+frame rows:        105,126
+block det(Q):      5,1
+block det(B):      3645,1
+block tr(B):       36,24
+B_U:               I24.
+```
+
+The local rank-20 block label is not the ADE root lattice `A_20` and is not
+proved isometric to the construction below. The 62 surviving row-count
+profiles are necessary arithmetic only.
+
+The independent
+[construction audit](wave30-h729-construction/audit.md) verifies five exact
+2-neighbor steps from `K12 orthogonal_sum E8`, the complete root-count chain
+`240 -> 112 -> 48 -> 20 -> 6 -> 0`, and a rootless rank-20 determinant-729
+lattice `T20` with minimum four, exact level three, and exactly 5076
+norm-four vectors. It also verifies the literal bare direct sum
+
+```text
+S44=T20 orthogonal_sum LAMBDA24,
+G44=21*S44^(-1),
+S44*G44=21*I44.
+```
+
+The construction discovery suite passes 16 tests and the independent
+verifier passes 24 hostile tests. Both JSON results regenerate
+byte-identically. No `Q`, compatible `B`, 105/126 frame, `X`, `M`, `W`,
+Schur identity, endpoint, or graph is supplied.
+
+The proof-separated
+[literature audit](wave30-literature-audit/audit.md) freezes both exact
+signatures, logs 96 query strings in 24 batches, and retains 21 structured
+metadata records with no raw source payload. It finds no exact match in the
+searched sources, records one Crossref HTTP 429 and incomplete bibliographic
+coverage, and leaves novelty, priority, and global status `UNKNOWN`.
+
+The
+[orchestrator correction ledger](2026-07-24-wave30-orchestrator-corrections.md)
+retains the original veto, repair, fresh verdict, verifier self-corrections,
+construction packaging correction, discarded wrapper failures, source
+limits, and publication wall:
+
+```text
+rootless integrally decomposable h=729 classification: VERIFIED
+bare T20 and rank-44 S/G construction:                 VERIFIED
+surviving 20+24 type / rooted / indecomposable:        UNKNOWN
+h=729 row / n3=708 / Conway-99 / novelty:              UNKNOWN
+```
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

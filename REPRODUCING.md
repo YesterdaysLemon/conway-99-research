@@ -1691,6 +1691,169 @@ path/hash pairs, 275 tracked Markdown files with 263 resolving local links,
 exact-blob privacy over the 841-file release tree and all 32 new blobs, clean
 status, and strict Git object verification.
 
+## Wave 30 decomposable `h=729` reduction and bare construction
+
+### Repaired general discovery
+
+Run the repaired discovery suite in the current tree:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave30-general-h729 -p test_exact_check.py -v
+```
+
+It passes 20 tests. Regenerate its result outside the checkout and compare it
+byte for byte:
+
+```powershell
+$wave30General = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave30-general-" + [guid]::NewGuid().ToString("N") + ".json")
+
+python -B attempts\wave30-general-h729\exact_check.py `
+  --output $wave30General
+
+$expected = [IO.File]::ReadAllBytes(
+  (Resolve-Path attempts\wave30-general-h729\exact-results.json)
+)
+$actual = [IO.File]::ReadAllBytes($wave30General)
+if (-not [Linq.Enumerable]::SequenceEqual($expected, $actual)) {
+  throw "Wave 30 repaired general result differs"
+}
+```
+
+The expected SHA-256 is:
+
+```text
+cb0a58195506a51ca6a39aaab197a3592344f7aef8b5b0c2af51770c7069ad6c
+```
+
+### Historical veto and independent replay
+
+Do not run the old general verifier against repaired discovery bytes and call
+the resulting freeze error a verifier failure. Its hard freeze is an
+intentional historical invariant. Extract verifier-veto commit
+`0bc6dc9b90dff6589cfaf9db1a84e2d8242b6321` into a temporary directory:
+
+```powershell
+$wave30Historical = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave30-history-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave30Historical | Out-Null
+$archive = Join-Path $wave30Historical "repo.tar"
+$tree = Join-Path $wave30Historical "tree"
+New-Item -ItemType Directory -Path $tree | Out-Null
+
+git archive --format=tar --output=$archive `
+  0bc6dc9b90dff6589cfaf9db1a84e2d8242b6321
+tar -xf $archive -C $tree
+
+Push-Location (Join-Path $tree "verification\wave30-general-h729")
+try {
+  python -B -m unittest -v `
+    test_independent_check.py test_hostile_controls.py
+  python -B independent_check.py `
+    --output (Join-Path $wave30Historical "independent.json")
+}
+finally {
+  Pop-Location
+}
+```
+
+The historical verifier passes 32 tests. Its regenerated JSON must match:
+
+```text
+2b948591611e9c984985f7bacc5a77c714332fbe42ed5305b84039c621358416
+```
+
+For failure-history auditing, perform the same extraction at original
+discovery commit `091d0a458ab1f96e3b3f491b677c84824bbf8f44` and run its submitted
+suite and generator. The expected result is deliberately:
+
+```text
+tests run: 0
+suite: FAIL
+generator: FAIL before output
+objection: V30-GEN-001
+```
+
+That expected failure is not a passing mathematical test. The repaired
+[re-verification audit](verification/wave30-general-h729/reverification-audit.md)
+records the three snapshots separately.
+
+### Bare `T20` and rank-44 construction
+
+Run both current-tree construction suites:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave30-h729-construction -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave30-h729-construction `
+  -p test_independent_check.py -v
+```
+
+They pass 16 and 24 tests. Regenerate both JSON files outside the checkout:
+
+```powershell
+$wave30Construction = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave30-construction-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave30Construction | Out-Null
+
+python -B attempts\wave30-h729-construction\exact_check.py `
+  --output (Join-Path $wave30Construction "submitted.json")
+python -B verification\wave30-h729-construction\independent_check.py `
+  --output (Join-Path $wave30Construction "independent.json")
+```
+
+The expected hashes are:
+
+```text
+submitted:
+0d3723ba4c185dc7865858d16bfc6ada99fd87b4e21da616ef1b1d1ad6b67e11
+
+independent:
+d7e6f18f82045c3e589dfc003c474fa506b59e57b0a02ef277451f2f28ff03b5
+```
+
+### Manifests and literature
+
+Six Wave 30 manifests validate 47 entries in total:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| repaired general discovery | 8 | `e562654891c61a1ae50d34a6a38c6d9a39e985a03d7b0a253f60871539f1f006` |
+| historical general verifier | 8 | `f9f7ec7cc764fc7b1ec03f1d90dc582d64ce05af200cb98188698878458ab3e0` |
+| general re-verification | 12 | `8f6cba4e72ac38c73852ed3c7b549df8c123fa87e59fffbd1a6569eb235bbefe` |
+| construction discovery | 7 | `d70d00c8a278bcd8710cf7c8d53c679e05509db2b08bc7ad2f11af4bbe6e564a` |
+| construction verifier | 7 | `d70590f6a9d582cd6f14a62039a8b80a7fb23716b9808e1d1e023da558d7bcdd` |
+| literature audit | 5 | `ddb945fa06db29bdfd6f14f63cadeade2991fcc5803031c01d1e940d0a2fee60` |
+
+The literature ledger accounts for 96 query strings in 24 batches and 21
+retained metadata-only sources. It retains no raw paper, HTML, XML feed, or
+API response. One Crossref query returned HTTP 429.
+
+The passing mathematical total is 92 tests across the repaired current tree
+and the separately extracted historical independent verifier:
+
+```text
+repaired general discovery:           20
+historical independent general:       32
+construction discovery:               16
+construction independent verifier:    24
+total:                                 92
+```
+
+The exact scope wall is:
+
+```text
+rootless integrally decomposable h=729 reduction: VERIFIED
+bare T20 and T20 orthogonal_sum LAMBDA24 S/G:      VERIFIED
+surviving 20+24 type / rooted / indecomposable:   UNKNOWN
+h=729 row / n3=708 / Conway-99 / novelty:         UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

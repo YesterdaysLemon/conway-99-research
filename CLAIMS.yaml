@@ -903,6 +903,75 @@ claims:
       - "SOURCES.bib"
     limitations: "No exact prior result found in searched sources is not a novelty, priority, or global-openness certificate. One Crossref request was rate-limited, and Google Scholar, MathSciNet, and zbMATH were not comprehensively machine-audited. The audit retained no raw source payload and did not verify the mathematics. Novelty, broader target status, all other h=729 forms, and n3=708 remain UNKNOWN."
 
+  - id: C-WAVE30-GENERAL-H729-039
+    statement: "Under the full frozen n3=708 projector/Schur endpoint hypotheses, every rootless even positive-definite integral rank-44 determinant-729 S-form admitting a nontrivial integral orthogonal decomposition reduces to a rank-20 determinant-729 block orthogonal-summed with a rootless rank-24 even-unimodular block. Fourteen of the fifteen aggregate rank/determinant types are excluded. The survivor has frame-row split 105/126, block determinants det(Q)=(5,1) and det(B)=(3645,1), traces (36,24), and B_U=I_24."
+    label: VERIFIED
+    scope: ROOTLESS_INTEGRALLY_ORTHOGONALLY_DECOMPOSABLE_H729_FULL_ENDPOINT_REDUCTION_ONLY
+    evidence:
+      - "agents/2026-07-24-wave30-general-h729.md"
+      - "attempts/wave30-general-h729/exact_check.py"
+      - "attempts/wave30-general-h729/test_exact_check.py"
+      - "attempts/wave30-general-h729/exact-results.json"
+      - "attempts/wave30-general-h729/input-freeze.sha256"
+      - "attempts/wave30-general-h729/failed-routes.md"
+      - "attempts/wave30-general-h729/run-report.yaml"
+      - "attempts/wave30-general-h729/repair-ledger.md"
+      - "attempts/wave30-general-h729/artifact-manifest.sha256"
+      - "verification/wave30-general-h729/protocol-freeze.md"
+      - "verification/wave30-general-h729/independent_check.py"
+      - "verification/wave30-general-h729/test_independent_check.py"
+      - "verification/wave30-general-h729/test_hostile_controls.py"
+      - "verification/wave30-general-h729/independent-results.json"
+      - "verification/wave30-general-h729/audit.md"
+      - "verification/wave30-general-h729/failure-ledger.md"
+      - "verification/wave30-general-h729/run-report.yaml"
+      - "verification/wave30-general-h729/artifact-manifest.sha256"
+      - "verification/wave30-general-h729/reverification-freeze.md"
+      - "verification/wave30-general-h729/reverification-audit.md"
+      - "verification/wave30-general-h729/reverification-run-report.yaml"
+      - "verification/wave30-general-h729/reverification-artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+    limitations: "The full endpoint identities, min(S)>=4, rootlessness, and a unimodular integral orthogonal decomposition are essential. Rooted, integrally indecomposable, merely rationally split, and minimum-two forms are outside scope. The surviving 20+24 type is not excluded; its 62 row-count profiles are necessary arithmetic only. The local block label A20 is neither the ADE root lattice A_20 nor proved isometric to the separately constructed T20. No Q/B/X/M/W, frame, Schur-square package, endpoint, graph, Conway-99 outcome, or novelty conclusion is supplied."
+
+  - id: C-WAVE30-CONSTRUCTION-040
+    statement: "Five explicit exact 2-neighbor steps from K12 orthogonal-sum E8 produce a rootless even rank-20 determinant-729 lattice T20 with minimum 4, exactly 5076 norm-four vectors, exact level 3, and both 3*T20^(-1) and 21*T20^(-1) even integral. Its Gram SHA-256 is 1890fe1973eed47850c307d0975ae393f2a8ab32a9d0b16b35ebcab7012445d6 and the exact root-count chain is 240,112,48,20,6,0. Its direct sum with the displayed Leech lattice is an exact rootless rank-44 determinant-729 bare S/G control satisfying G=21*S^(-1) and S*G=21*I_44."
+    label: VERIFIED
+    scope: EXACT_BARE_T20_AND_RANK44_S_G_LATTICE_CONTROL_ONLY
+    evidence:
+      - "agents/2026-07-24-wave30-h729-construction.md"
+      - "attempts/wave30-h729-construction/exact_check.py"
+      - "attempts/wave30-h729-construction/test_exact_check.py"
+      - "attempts/wave30-h729-construction/exact-results.json"
+      - "attempts/wave30-h729-construction/input-freeze.sha256"
+      - "attempts/wave30-h729-construction/failed-routes.md"
+      - "attempts/wave30-h729-construction/run-report.yaml"
+      - "attempts/wave30-h729-construction/artifact-manifest.sha256"
+      - "verification/wave30-h729-construction/protocol-freeze.md"
+      - "verification/wave30-h729-construction/independent_check.py"
+      - "verification/wave30-h729-construction/test_independent_check.py"
+      - "verification/wave30-h729-construction/independent-results.json"
+      - "verification/wave30-h729-construction/audit.md"
+      - "verification/wave30-h729-construction/failure-ledger.md"
+      - "verification/wave30-h729-construction/run-report.yaml"
+      - "verification/wave30-h729-construction/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+    limitations: "The five-neighbor route constructs one exact lattice and is not a neighbor-graph, genus, or isometry classification. T20 orthogonal-sum LAMBDA24 realizes only the bare rank/determinant and scaled-dual layer of the surviving shape; no determinant-five Q, compatible B, 105/126 frame, X, M, W, Schur identity, endpoint realization, graph, n3=708 outcome, Conway-99 outcome, or novelty claim is supplied."
+
+  - id: C-WAVE30-LITERATURE-041
+    statement: "At the frozen 2026-07-24 cutoff, the independent Wave 30 literature audit logged 96 query strings in 24 batches: 80 web-search, 8 arXiv, 4 OpenAlex, and 4 Crossref queries. It retained 21 primary or authoritative metadata records and zero raw source payloads, and found neither the exact decomposable-h729 classification signature nor the exact T20/five-neighbor/5076 signature in the searched sources."
+    label: CITED
+    scope: BOUNDED_WAVE30_PRIOR_ART_AND_CURRENT_TARGET_STATUS_AUDIT_ONLY
+    evidence:
+      - "verification/wave30-literature-audit/protocol-freeze.md"
+      - "verification/wave30-literature-audit/query-ledger.json"
+      - "verification/wave30-literature-audit/source-metadata.json"
+      - "verification/wave30-literature-audit/audit.md"
+      - "verification/wave30-literature-audit/run-report.yaml"
+      - "verification/wave30-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    limitations: "No exact prior result found in searched sources is not a novelty, priority, or global-openness certificate. One Crossref query returned HTTP 429; Google Scholar, MathSciNet, zbMATH, citation networks, non-English sources, and nonindexed work were not comprehensively audited. The audit retained no raw source payload and did not verify the mathematics. Novelty, global target status, the surviving 20+24 type, the full h=729 row, and n3=708 remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

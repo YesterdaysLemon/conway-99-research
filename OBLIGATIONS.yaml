@@ -1013,3 +1013,72 @@ obligations:
       - "verification/2026-07-24-wave29-orchestrator-corrections.md"
       - "SOURCES.bib"
     note: "The audit logs 81 query strings in 21 batches and retains 16 primary or authoritative records with zero raw source payloads. It finds standard ingredients but no exact combined proof match. One Crossref query was rate-limited; Google Scholar, MathSciNet, and zbMATH were not comprehensively machine-audited. Exact prior-art match is NONE_IN_BOUNDED_AUDIT, while novelty and broader target status remain UNKNOWN."
+
+  - id: O-WAVE30-GENERAL-H729
+    requirement: "Preserve the original failed Wave 30 submission and publication veto; repair only the stale frozen-input provenance; freeze and independently re-verify the exact repaired revision; hermetically replay the original failure and historical independent verifier; and reconstruct the conditional classification of every rootless integrally orthogonally decomposable h=729 endpoint S-form, including block-supported minimum-four rows, the complete fifteen-type census, determinant and trace allocations, both logarithmic caps, equality/idempotent signature vetoes, the unique 20+24 survivor, tensor-profile boundary, hostile premise deletions, and all graph/nonexistence scope walls."
+    critical: true
+    status: PASS_AFTER_RECORDED_REPAIR_AND_REVERIFICATION
+    evidence:
+      - "agents/2026-07-24-wave30-general-h729.md"
+      - "attempts/wave30-general-h729/exact_check.py"
+      - "attempts/wave30-general-h729/test_exact_check.py"
+      - "attempts/wave30-general-h729/exact-results.json"
+      - "attempts/wave30-general-h729/input-freeze.sha256"
+      - "attempts/wave30-general-h729/failed-routes.md"
+      - "attempts/wave30-general-h729/run-report.yaml"
+      - "attempts/wave30-general-h729/repair-ledger.md"
+      - "attempts/wave30-general-h729/artifact-manifest.sha256"
+      - "verification/wave30-general-h729/protocol-freeze.md"
+      - "verification/wave30-general-h729/independent_check.py"
+      - "verification/wave30-general-h729/test_independent_check.py"
+      - "verification/wave30-general-h729/test_hostile_controls.py"
+      - "verification/wave30-general-h729/independent-results.json"
+      - "verification/wave30-general-h729/audit.md"
+      - "verification/wave30-general-h729/failure-ledger.md"
+      - "verification/wave30-general-h729/run-report.yaml"
+      - "verification/wave30-general-h729/artifact-manifest.sha256"
+      - "verification/wave30-general-h729/reverification-freeze.md"
+      - "verification/wave30-general-h729/reverification-audit.md"
+      - "verification/wave30-general-h729/reverification-run-report.yaml"
+      - "verification/wave30-general-h729/reverification-artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+    note: "The original discovery commit 091d0a458ab1f96e3b3f491b677c84824bbf8f44 remains a zero-test/generator-failure submission under V30-GEN-001, and verifier-veto commit 0bc6dc9b90dff6589cfaf9db1a84e2d8242b6321 preserves that result. The provenance-only repair at a7be6b8ae70d8b44e88db8dfd6804f8d946ca382 passes 20 tests and regenerates its JSON byte-identically. The fresh re-verifier at 9d579856fdb1b903e42a70307b1d9ea45a8785d4 passes the repaired revision as V30-GEN-015 and hermetically replays the unchanged historical independent verifier with 32 tests and byte-identical JSON. The theorem excludes fourteen of fifteen aggregate types but leaves the 20+24 type open. Rooted and integrally indecomposable h=729 forms, n3=708, Conway-99, and novelty remain UNKNOWN."
+
+  - id: O-WAVE30-H729-CONSTRUCTION
+    requirement: "Blindly reconstruct the exact five-step 2-neighbor construction from K12 orthogonal-sum E8, prove every common index-two relation and unimodular reduction, independently enumerate all norm-two shells and the endpoint norm-four shell with exact integer bounds, verify the root-count chain and T20 Gram digest, recompute both scaled duals and exact level, assemble and verify the literal T20 orthogonal-sum LAMBDA24 rank-44 S/G package, attack mutations and deleted premises, and retain the boundary between a bare lattice control and a full endpoint realization."
+    critical: true
+    status: PASS_SCOPED_BARE_LATTICE_CONTROL
+    evidence:
+      - "agents/2026-07-24-wave30-h729-construction.md"
+      - "attempts/wave30-h729-construction/exact_check.py"
+      - "attempts/wave30-h729-construction/test_exact_check.py"
+      - "attempts/wave30-h729-construction/exact-results.json"
+      - "attempts/wave30-h729-construction/input-freeze.sha256"
+      - "attempts/wave30-h729-construction/failed-routes.md"
+      - "attempts/wave30-h729-construction/run-report.yaml"
+      - "attempts/wave30-h729-construction/artifact-manifest.sha256"
+      - "verification/wave30-h729-construction/protocol-freeze.md"
+      - "verification/wave30-h729-construction/independent_check.py"
+      - "verification/wave30-h729-construction/test_independent_check.py"
+      - "verification/wave30-h729-construction/independent-results.json"
+      - "verification/wave30-h729-construction/audit.md"
+      - "verification/wave30-h729-construction/failure-ledger.md"
+      - "verification/wave30-h729-construction/run-report.yaml"
+      - "verification/wave30-h729-construction/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+    note: "The submitted construction suite passes 16 tests and the independently implemented verifier passes 24 hostile tests; both deterministic JSON files regenerate byte-identically. The exact T20 and bare rank-44 S/G package are VERIFIED within scope. The route is not a classification, and no determinant-five Q, compatible B, 105/126 frame, X, M, W, Schur-square package, graph, n3=708 result, Conway-99 outcome, or novelty conclusion is supplied."
+
+  - id: O-WAVE30-LITERATURE-STATUS
+    requirement: "Freeze the exact conditional decomposition signature and exact T20/five-neighbor construction signature before searching; query numeric fingerprints and alternate lattice, modular, theta-series, neighbor, frame, design, projector, Schur-square, and target terminology across bounded web, arXiv, OpenAlex, and Crossref lanes; retain metadata only; record service limits and failures; distinguish near hits from exact matches; and separate bounded non-discovery from novelty, priority, or global-openness claims."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave30-literature-audit/protocol-freeze.md"
+      - "verification/wave30-literature-audit/query-ledger.json"
+      - "verification/wave30-literature-audit/source-metadata.json"
+      - "verification/wave30-literature-audit/audit.md"
+      - "verification/wave30-literature-audit/run-report.yaml"
+      - "verification/wave30-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave30-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    note: "The audit records 96 exact queries in 24 batches and 21 retained metadata records with no raw source payload. It finds neither frozen signature in searched sources and records one Crossref HTTP 429 plus incomplete Google Scholar, MathSciNet, zbMATH, citation-network, language, and indexing coverage. The permissible conclusion is NO_EXACT_PRIOR_RESULT_FOUND_IN_SEARCHED_SOURCES; novelty, priority, global target status, the surviving 20+24 type, h=729, and n3=708 remain UNKNOWN."
