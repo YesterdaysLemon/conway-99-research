@@ -1,0 +1,73 @@
+role: verifier
+date_utc: 2026-07-24T21:12:12Z
+git_commit: 0fa5b8161baf8b2a5404a67051b7d61cbc906da3
+claim_label: VERIFIED
+scope: >-
+  Clean-room Stage 2 comparison of the frozen Wave 34 rootless
+  actual-incidence candidate: Lemmas 1-4, relation-degree and endpoint
+  arithmetic, mixed-trace normalization, projector uniqueness and cap, and
+  the exact declared domain of the 45-vertex partial control. No global graph,
+  endpoint, motif-forcing, or nonexistence claim is verified.
+inputs:
+  verification/wave34-rootless-global/candidate-input-freeze.sha256: f436d455ecf2484d978d1dd4b0033d02d2220c270b958bc9731a104a507190e0
+  verification/wave34-rootless-global/candidate-release.md: c40c82c96818c1bebdb5de0b073a3b4496d4b238270603bfbd12421c8d6d1041
+  verification/wave34-rootless-global/precomparison/artifact-manifest.sha256: eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6
+  attempts/wave34-rootless-global/artifact-manifest.sha256: bda35ed81dcca9918cff3c544956039b8949a61bfa8a232e4e2d40edcd8d5af2
+method: >-
+  Validated the frozen Stage 1 and candidate bytes, read candidate artifacts
+  statically, and rebuilt the one-factorization, 39-vertex core, 45-vertex
+  partial control, all 11^3 factor triples, all six completion-neighbourhood
+  domains, and deterministic backtracking with verifier-owned
+  standard-library code. Hostile tests attacked orientation normalization,
+  Gram dependence and marked-row injectivity, repeated factors, completion
+  incidences, completion-pair edge caps, literal full-graph interpretation,
+  provenance, and global status inflation. Candidate code was replayed only
+  after the independent result was frozen locally.
+command: |-
+  python -B verification/wave34-rootless-global/comparison_check.py --output verification/wave34-rootless-global/comparison-results.json
+  python -B -m unittest verification/wave34-rootless-global/test_comparison_check.py -v
+  python -B -m unittest verification/wave34-rootless-global/precomparison/test_independent_check.py -v
+  python -B attempts/wave34-rootless-global/check_local_model.py --max-witnesses 1
+  python -B -m unittest discover -s attempts/wave34-rootless-global -p "test_*.py" -v
+outputs:
+  verification/wave34-rootless-global/comparison_check.py: 8e7ef4c7b88c6b4ec3eaf9dd6201b3fc022bf8c73c1ed2c2b7b53f65487e77b7
+  verification/wave34-rootless-global/test_comparison_check.py: 4b0222aeb30ab5a08f9b245d28cdf284bd6f6366b8752b456ca7a8300a0d7c23
+  verification/wave34-rootless-global/comparison-results.json: 5c560765a439b90838cc661e4203675d689f6471b21a364d580af4ba58de533a
+  verification/wave34-rootless-global/audit.md: c7765cf98b7754a6853f84917579bc441add49c7daaba5d7951a4930c89def70
+  verification/wave34-rootless-global/failed-objections.md: f68cbd12bd35614f1c69659429b3e071db022b072d9242f9975a7a683044be24
+tests:
+  independent_stage2:
+    total: 29
+    passed: 29
+    failed: 0
+  frozen_stage1_replay:
+    total: 22
+    passed: 22
+    failed: 0
+  candidate_owned_replay:
+    total: 12
+    passed: 12
+    failed: 0
+runtime:
+  python: "CPython 3.13.14"
+  platform: "Windows-11-10.0.26200-SP0, AMD64"
+  dependencies: "Python standard library only"
+  seeds: "none; all enumeration and backtracking deterministic"
+  candidate_code_imported_by_verifier: false
+coverage:
+  lemmas: "complete comparison of the candidate's scoped fixed-point, degree, motif-count, and projector-cap derivations"
+  factor_scan: "complete over 11^3 ordered triples from one canonical K12 one-factorization only"
+  completion_search: "complete over the candidate's stated six-neighbour partial-control domain"
+  automorphism_assumptions: "none"
+  global_conclusion: "none"
+limitations:
+  - Git was not used; git_commit records the candidate's frozen discovery base.
+  - Literal candidate input provenance fails for one Wave 33 comparison-results SHA-256.
+  - The provenance defect is nonblocking only because the mathematics was independently reconstructed from the correctly frozen Stage 1 bytes.
+  - Nine completion pairs are already forced nonadjacent; only six remain edge-undecided.
+  - Twenty-four completion-to-core edges still lack current lambda witnesses.
+  - The 45-vertex control is partial and supplies no extendibility evidence.
+  - The one-factorization scan is not a classification of arbitrary perfect-matching triples.
+  - The projector bound is one-sided and supplies no positive motif lower bound.
+  - Motif positivity, rootless endpoint existence, n3=708, Conway-99, and novelty remain UNKNOWN.
+verdict: PASS_SCOPED_WITH_NONBLOCKING_PROVENANCE_AND_SCOPE_QUALIFIERS
