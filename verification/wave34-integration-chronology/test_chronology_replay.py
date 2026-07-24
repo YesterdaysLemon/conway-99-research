@@ -23,6 +23,21 @@ class ChronologyProtocolTests(unittest.TestCase):
             replay.FROZEN_STATUS_SHA256,
         )
 
+    def test_integrated_status_hash_comes_from_requested_commit(self) -> None:
+        integrated_commit = "0e11485de2ccdf0c1f2aa1c3e2d53a3413d9b6ea"
+        integrated_hash = replay.git_blob_sha256(
+            integrated_commit,
+            "STATUS.yaml",
+        )
+        self.assertEqual(
+            integrated_hash,
+            "319dfbe6e38ed78726adc9a5ae7fe50a6a82a333506d299816559e1cd42510ba",
+        )
+        self.assertNotEqual(
+            integrated_hash,
+            replay.sha256_path(replay.ROOT / "STATUS.yaml"),
+        )
+
     def test_pass_summary_requires_exact_test_count(self) -> None:
         summary = replay.parse_unittest_summary("Ran 11 tests in 1.000s\n\nOK\n")
         self.assertEqual(summary["tests_run"], 11)

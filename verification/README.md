@@ -619,8 +619,8 @@ formula identities replay but the theorem proof bodies are missing or
 unpulled; Selub supplies historical SAT-framework prior art without a solver
 certificate.
 
-Run the 148 current-tree outer tests, the authenticated 11-test structural
-chronology replay, the separate source validator, and the seven chronology
+Run the 149 current-tree outer tests, the authenticated 11-test structural
+chronology replay, the separate source validator, and the eight chronology
 protocol tests with the commands in [`REPRODUCING.md`](../REPRODUCING.md).
 The 16 publication manifests contain 130 entries. Exact corrections and
 nonpromotion walls are in the

@@ -184,6 +184,16 @@ matched its updated accepted result at
 Only provenance hashes changed; every mathematical field and every global
 `UNKNOWN` wall remained unchanged.
 
+The first post-repair clean-clone chronology invocation then exposed that its
+`current_status_sha256` JSON field came from the caller's worktree rather than
+the exact requested integration commit. All 11 historical tests passed, but
+the drifting draft result, SHA-256
+`d6012b69516ab927f831ddc7088982fa20983bc13dd54062b5a14f5002621d1b`,
+was rejected. The wrapper now hashes the requested Git blob, cross-checks the
+archive, and passes an eighth protocol regression test. The accepted
+historical result remains
+`b18a3e402a23f39924dd282482a64404443b8aaa2f1fbfcfb32cec09a2d59cb4`.
+
 ## Current-source lane
 
 Brouwer's maintained `?` marker, McKay's contextual approximate

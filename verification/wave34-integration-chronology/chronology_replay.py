@@ -70,6 +70,21 @@ def git_text(args: list[str], *, cwd: Path = ROOT) -> str:
     return run_checked(["git", *args], cwd=cwd).stdout.strip()
 
 
+def git_blob_sha256(commit: str, path: str) -> str:
+    result = subprocess.run(
+        ["git", "show", f"{commit}:{path}"],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        detail = (result.stderr or b"").decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"could not read {path} from {commit}: {detail[-2000:]}"
+        )
+    return sha256_bytes(result.stdout)
+
+
 def export_commit(commit: str, destination: Path, archive_path: Path) -> None:
     run_checked(
         [
@@ -121,7 +136,7 @@ def parse_unittest_summary(output: str) -> dict[str, object]:
 def build_result(commit: str) -> dict[str, object]:
     resolved_commit = git_text(["rev-parse", f"{commit}^{{commit}}"])
     before_status = git_text(["status", "--porcelain=v1", "--untracked-files=all"])
-    current_status_sha256 = sha256_path(ROOT / "STATUS.yaml")
+    current_status_sha256 = git_blob_sha256(resolved_commit, "STATUS.yaml")
 
     with tempfile.TemporaryDirectory(prefix="conway-wave34-chronology-") as tmp:
         temp_root = Path(tmp)
@@ -130,6 +145,8 @@ def build_result(commit: str) -> dict[str, object]:
         shadow.mkdir()
         frozen.mkdir()
         export_commit(resolved_commit, shadow, temp_root / "integrated.zip")
+        if sha256_path(shadow / "STATUS.yaml") != current_status_sha256:
+            raise AssertionError("integrated STATUS.yaml archive/hash drift")
         payload = frozen_status_bytes(temp_root / "status.zip", frozen)
         (shadow / "STATUS.yaml").write_bytes(payload)
 

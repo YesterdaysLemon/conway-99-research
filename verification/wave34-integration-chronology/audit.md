@@ -55,9 +55,10 @@ machine result is `chronology-results.json`, SHA-256:
 b18a3e402a23f39924dd282482a64404443b8aaa2f1fbfcfb32cec09a2d59cb4
 ```
 
-The seven chronology protocol tests independently check the frozen Git blob,
-the current/frozen distinction, exact test-count parser, failure parser, the
-one-path substitution rule, and portable command serialization.
+The eight chronology protocol tests independently check the frozen Git blob,
+the current/frozen distinction, exact requested-commit status hashing, exact
+test-count parser, failure parser, the one-path substitution rule, and
+portable command serialization.
 
 ## Retained operator and packaging failures
 
@@ -85,6 +86,16 @@ ef7eed35236fe5b75696564d85a08d7f6f95826f2dabdbb535c71564158c8aa1
 The serializer was repaired to publish the portable command only, a
 regression test was added, and the complete 11-test replay was rerun. No
 mathematical field changed.
+
+A later clean-clone invocation from a post-integration checkout exposed a
+second serialization defect: `current_status_sha256` was read from the
+caller's worktree instead of the exact requested commit. The 11-test
+historical replay still passed, but the rejected draft JSON had SHA-256
+`d6012b69516ab927f831ddc7088982fa20983bc13dd54062b5a14f5002621d1b`.
+The wrapper now hashes `STATUS.yaml` from the resolved requested commit,
+cross-checks it against the exported archive, and has a dedicated regression
+test. The accepted result again reproduces byte-identically at
+`b18a3e402a23f39924dd282482a64404443b8aaa2f1fbfcfb32cec09a2d59cb4`.
 
 ## Scope wall
 
