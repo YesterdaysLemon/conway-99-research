@@ -1,49 +1,64 @@
-# Wave 33 rooted-construction chronology objections
+# Wave 33 rooted-construction chronology v2 objections and failures
+
+## V1 is clean-clone independent because its local files were hash-pinned
+
+`REFUTED`. Hash pinning does not make ignored files available. At integration
+`74c3725`, after 110 other live tests passed, the detached clone at
+`%LOCALAPPDATA%\Temp\conway-wave33-clean-72f81f4afa4f451485eb94936811b407`
+failed on missing `.venv/Lib/site-packages/pysat/card.py`. V2 copies and opens
+zero solver-environment files.
+
+## Bundle the six solver files
+
+`REJECTED`. Two are platform-specific compiled binaries and all six are
+third-party environment files. They are not mathematical certificates and
+must not be bundled merely to reproduce a non-evidentiary timeout record.
+
+## Silently skip verifier test 08 and still report 37
+
+`REJECTED`. The exact 37-test identity digest is authenticated, the one
+composite test ID is named, and the exact selected 36-test digest is separately
+authenticated. V2 reports 14 discovery plus 36 verifier tests, for 50 original
+tests total.
+
+## The whole omitted test is nonportable
+
+`REFUTED`. Its source-audit half is portable. V2 independently parses the
+hash-pinned `exact_check.py` imports, confirms they are standard-library-only,
+and authenticates the full portable source-audit result. Only the half that
+opens local `.venv` files is `NOT_REPLAYED_NONBLOCKING`.
+
+## Documentary solver hashes are current observations
+
+`REJECTED`. V2 authenticates six hash strings and three version lines inside
+the frozen `solver-inspection.md`. It explicitly records zero observed
+environment hashes and zero local environment files opened.
+
+## Run the unchanged comparison CLI anyway
+
+`REJECTED`. `compare()` unconditionally calls
+`verify_solver_environment_hashes()`. Claiming its old `7025cc...` stdout hash
+as newly reproduced would be false in a clean clone. V2 labels the CLI
+`NOT_RUN_BY_DESIGN` and uses chronology-owned calls to the hash-pinned portable
+comparison functions.
+
+## Direct function calls weaken comparison coverage
+
+`REJECTED`. The chronology driver calls the manifest, parser, normalized
+payload, independent payload verifier, BF metric, assignment encoding, bounded
+manifest, recorded-result, source, scope, and hostile-search functions. It
+core-binds the accepted summary and reproduces the hostile certificate
+byte-for-byte. A hostile test forbids calls to the two local-environment
+entrypoints.
 
 ## Replace the frozen STRUCTURE hash with the integrated hash
 
-`REJECTED`. The earlier `45640f...` bytes are part of the historical input
-record. Replacing them with `bfbdb3...` would silently rewrite chronology.
-The replay instead materializes the exact earlier bytes from an independently
-hashed structured snapshot.
+`REJECTED`. The earlier `45640f...` bytes are the historical input. Replacing
+them with later central bytes would rewrite chronology. The eight-input archive
+remains authenticated at `d62fc4...`.
 
-## Ignore the stale input-manifest entry
+## A passing clean-clone replay promotes the mathematical status
 
-`REJECTED`. The repair authenticates the original ledger byte-for-byte and
-requires its complete eight-path/hash map. Missing, extra, reordered,
-duplicate, malformed, escaping, or content-mutated entries fail closed.
-
-## The direct integrated-root failure refutes the candidate replay
-
-`REJECTED`. The unchanged programs intentionally compare their historical
-ledger with live paths, so later central-document edits make a direct replay
-fail. In an authenticated historical root, the unchanged 14 discovery and 37
-verifier tests pass and the exact output remains byte-identical.
-
-## The synthetic root might import current central documents
-
-`REJECTED`. Every historical central input is decoded from the
-`d62fc4...` snapshot. The materialized `STRUCTURE.md` is asserted to have
-`45640f...`, not the integrated `bfbdb3...` hash. No central document is
-copied from the live root during materialization.
-
-## A candidate or verifier mutation could be hidden by the snapshot
-
-`REJECTED`. The snapshot contains only the eight historical inputs. Candidate
-and verifier bytes must independently pass the original candidate freeze,
-nested candidate manifest, precomparison freeze, and verifier manifest before
-copying. A one-byte candidate mutation is an explicit rejecting test.
-
-## The accepted comparison summary is the raw comparison CLI output
-
-`REFUTED`. The raw deterministic CLI JSON has SHA-256 `7025cc...`; the compact
-accepted summary has SHA-256 `c0476f...`. The unchanged verifier tests and the
-chronology replay bind the summary's status wall, claim label, assignment-row
-digest, and hostile `BF` fields to the full recomputation. No false byte-
-identity claim is made between those two different serializations.
-
-## A passing historical replay promotes the mathematical status
-
-`REJECTED`. Replay proves reproducibility, not construction or exclusion.
-Graph extension, full rooted endpoint, `n3=708`, Conway-99, and novelty remain
-`UNKNOWN`; the complete-domain UNSAT certificate remains `NONE`.
+`REJECTED`. Replay proves bounded reproducibility only. Graph extension, full
+rooted endpoint, `n3=708`, Conway-99, and novelty remain `UNKNOWN`; the
+complete-domain UNSAT certificate remains `NONE`.

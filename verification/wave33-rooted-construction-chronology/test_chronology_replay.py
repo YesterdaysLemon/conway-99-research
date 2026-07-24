@@ -3,8 +3,11 @@
 
 from __future__ import annotations
 
+import ast
 import copy
 import json
+import os
+import shutil
 import sys
 import tempfile
 import unittest
@@ -18,24 +21,64 @@ sys.path.insert(0, str(HERE))
 import chronology_replay as chronology
 
 
+def build_clean_source_fixture(source: Path, destination: Path) -> None:
+    frozen = chronology.validate_frozen_packages(source)
+    relative_paths = {
+        "STRUCTURE.md",
+        "verification/wave33-rooted-construction-candidate-freeze.sha256",
+        "verification/wave33-rooted-construction/artifact-manifest.sha256",
+    }
+    relative_paths.update(frozen["candidate_entries"])
+    relative_paths.update(
+        "verification/wave33-rooted-construction/" + relative
+        for relative in frozen["verifier_entries"]
+    )
+    destination.mkdir(parents=True)
+    for relative in sorted(relative_paths):
+        source_path = source.joinpath(*relative.split("/"))
+        target_path = destination.joinpath(*relative.split("/"))
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source_path, target_path)
+
+
 class ChronologyReplayTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.archive_bytes = chronology.ARCHIVE.read_bytes()
         cls.archive_value = json.loads(cls.archive_bytes)
         cls.archive_entries = chronology.decode_archive_bytes(cls.archive_bytes)
+        cls.clean_source_directory = tempfile.TemporaryDirectory(
+            prefix="wave33-clean-source-test-"
+        )
+        cls.clean_source_root = (
+            Path(cls.clean_source_directory.name) / "clean-source"
+        )
+        build_clean_source_fixture(chronology.REPO, cls.clean_source_root)
         cls.materialized_directory = tempfile.TemporaryDirectory(
             prefix="wave33-chronology-test-"
         )
         cls.synthetic_root = (
             Path(cls.materialized_directory.name) / "historical-root"
         )
-        chronology.materialize_historical_root(cls.synthetic_root)
-        cls.replay_result = chronology.run_full_replay()
+        chronology.materialize_historical_root(
+            cls.synthetic_root,
+            source_root=cls.clean_source_root,
+        )
+        with mock.patch.dict(
+            os.environ,
+            {
+                "PYTHONPATH": str(cls.clean_source_root / "poison-pythonpath"),
+                "VIRTUAL_ENV": str(cls.clean_source_root / ".venv"),
+            },
+        ):
+            cls.replay_result = chronology.run_full_replay(
+                source_root=cls.clean_source_root
+            )
 
     @classmethod
     def tearDownClass(cls) -> None:
         cls.materialized_directory.cleanup()
+        cls.clean_source_directory.cleanup()
 
     def test_01_archive_build_is_byte_identical(self) -> None:
         rebuilt = chronology.canonical_json_bytes(
@@ -201,11 +244,11 @@ class ChronologyReplayTests(unittest.TestCase):
         )
         self.assertEqual(
             self.replay_result["replay"]["unchanged_verifier_tests_passed"],
-            37,
+            36,
         )
         self.assertEqual(
             self.replay_result["replay"]["historical_package_tests_passed"],
-            51,
+            50,
         )
 
     def test_14_status_promotion_rejected(self) -> None:
@@ -230,10 +273,85 @@ class ChronologyReplayTests(unittest.TestCase):
             chronology.EXPECTED_COMPARISON_RESULTS_SHA256,
         )
         self.assertEqual(
-            replay["comparison_cli_stdout_sha256"],
-            chronology.EXPECTED_COMPARISON_CLI_STDOUT_SHA256,
+            replay["comparison_execution"]["unchanged_cli_status"],
+            "NOT_RUN_BY_DESIGN",
         )
         self.assertTrue(replay["comparison_accepted_summary_core_bound"])
+
+    def test_16_clean_source_and_synthetic_root_have_no_venv(self) -> None:
+        self.assertFalse((self.clean_source_root / ".venv").exists())
+        self.assertFalse((self.synthetic_root / ".venv").exists())
+        self.assertEqual(
+            self.replay_result["materialized"][
+                "solver_provenance_files_copied"
+            ],
+            0,
+        )
+        self.assertFalse(
+            self.replay_result["materialized"]["local_environment_dependency"]
+        )
+
+    def test_17_exact_test_identity_and_single_omission(self) -> None:
+        replay = self.replay_result["replay"]
+        self.assertEqual(
+            replay["discovery_test_ids_sha256"],
+            chronology.DISCOVERY_TEST_IDS_SHA256,
+        )
+        self.assertEqual(
+            replay["full_verifier_test_ids_sha256"],
+            chronology.FULL_VERIFIER_TEST_IDS_SHA256,
+        )
+        self.assertEqual(
+            replay["included_verifier_test_ids_sha256"],
+            chronology.INCLUDED_VERIFIER_TEST_IDS_SHA256,
+        )
+        self.assertEqual(
+            replay["verifier_test_08"]["test_id"],
+            chronology.OMITTED_VERIFIER_TEST,
+        )
+
+    def test_18_solver_records_are_documentary_not_observed(self) -> None:
+        audit = self.replay_result["replay"]["verifier_test_08"][
+            "solver_environment_file_half"
+        ]["documentary_record_audit"]
+        self.assertEqual(audit["documentary_hash_record_count"], 6)
+        self.assertEqual(audit["observed_environment_hash_count"], 0)
+        self.assertEqual(audit["local_environment_files_opened"], 0)
+        self.assertEqual(
+            audit["documentary_hash_records"],
+            chronology.RECORDED_SOLVER_HASHES,
+        )
+        for relative in chronology.RECORDED_SOLVER_HASHES:
+            self.assertFalse(
+                self.synthetic_root.joinpath(*relative.split("/")).exists()
+            )
+
+    def test_19_solver_boundary_promotion_rejected(self) -> None:
+        hostile = copy.deepcopy(self.replay_result)
+        hostile["replay"]["verifier_test_08"][
+            "solver_environment_file_half"
+        ]["status"] = "PASS"
+        with self.assertRaisesRegex(
+            chronology.ChronologyError, "solver-environment boundary"
+        ):
+            chronology.assert_clean_clone_boundary(hostile)
+
+    def test_20_clean_comparison_never_calls_forbidden_entrypoints(self) -> None:
+        tree = ast.parse(Path(chronology.__file__).read_text(encoding="utf-8"))
+        target = next(
+            node
+            for node in tree.body
+            if isinstance(node, ast.FunctionDef)
+            and node.name == "run_chronology_owned_comparison"
+        )
+        called_attributes = {
+            node.func.attr
+            for node in ast.walk(target)
+            if isinstance(node, ast.Call)
+            and isinstance(node.func, ast.Attribute)
+        }
+        self.assertNotIn("compare", called_attributes)
+        self.assertNotIn("verify_solver_environment_hashes", called_attributes)
 
 
 if __name__ == "__main__":

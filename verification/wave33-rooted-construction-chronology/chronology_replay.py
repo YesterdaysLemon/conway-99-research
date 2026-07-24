@@ -8,16 +8,22 @@ central-document bytes in the later publication tree.
 
 This module authenticates an immutable content-addressed snapshot of all eight
 historical inputs, materializes a temporary synthetic repository, copies only
-hash-accepted candidate/verifier/solver-provenance bytes into it, and runs the
-unchanged 14 discovery and 37 verifier tests there.  Nothing is imported from
-the discovery package into this module.
+hash-accepted candidate/verifier bytes into it, and runs the unchanged 14
+discovery tests plus the 36 verifier tests that do not require ignored local
+solver binaries.  The solver-environment half of verifier test 08 is recorded
+as NOT_REPLAYED_NONBLOCKING because the timeout is non-evidentiary.  Its
+portable source-audit half and the frozen solver hash/version records are
+checked independently.  Nothing is imported from the discovery package into
+this module.
 """
 
 from __future__ import annotations
 
 import argparse
+import ast
 import base64
 import hashlib
+import importlib
 import json
 import os
 import re
@@ -74,6 +80,21 @@ EXPECTED_COMPARISON_CLI_STDOUT_SHA256 = (
 EXPECTED_CERTIFICATE_SHA256 = (
     "340e5df716ad63bceba25c745ab04c22ea1a3dca01e939072f09775a5fc5f634"
 )
+EXPECTED_EXACT_CHECKER_SHA256 = (
+    "49fc20348a38e378f7e140cbbd7829dff54afe3caf0de3a2c54a82ca10981eec"
+)
+EXPECTED_SOLVER_INSPECTION_SHA256 = (
+    "345e5976222b950b7bb9d3805f7cef0836cbbdff9e9abf2ec85454b28eada342"
+)
+EXPECTED_CANDIDATE_COMPARISON_SHA256 = (
+    "c09e957131547f005f70c3b00d82644a0708653fcb51dbd8da78f5edf3660720"
+)
+EXPECTED_INDEPENDENT_CHECK_SHA256 = (
+    "b494d6c93fe503ccdceb49015f71cd446b664165834c0289cb11986be0de1289"
+)
+EXPECTED_STATIC_SOURCE_AUDIT_SHA256 = (
+    "d7f45c6931fe10062321f2349e2c64aec0806e3258f0fdc4368a837bf0c023f5"
+)
 
 HISTORICAL_INPUTS = {
     "AGENTS.md":
@@ -93,7 +114,7 @@ HISTORICAL_INPUTS = {
         "b98b6bb8228b54b67cd949ee1bf6eb05ebd6ebe74f1cbc9e49b041a55e2d2fe6",
 }
 
-SOLVER_PROVENANCE = {
+RECORDED_SOLVER_HASHES = {
     ".venv/Lib/site-packages/pysat/card.py":
         "adabf7fedfe60b36cbc3c48075770e87e3cd6c5b5a013552009ce96f282a890e",
     ".venv/Lib/site-packages/pysat/solvers.py":
@@ -108,6 +129,66 @@ SOLVER_PROVENANCE = {
     "_highs_options.cp313-win_amd64.pyd":
         "df51a5cdf24f3ff1f06f36ef25c88b0ea41c496f8f7e12bfd40ca840f56d30a5",
 }
+
+SOLVER_VERSION_LINES = {
+    "python_sat": "python-sat 1.9.dev7",
+    "cadical": "CaDiCaL 1.9.5 wrapper exposed as cadical195",
+    "scipy_highs": "SciPy 1.18.0 MILP wrapper over bundled HiGHS",
+}
+
+EXACT_CHECKER_IMPORT_ROOTS = {
+    "__future__",
+    "argparse",
+    "collections",
+    "hashlib",
+    "itertools",
+    "json",
+    "pathlib",
+    "typing",
+}
+
+COMPARISON_IMPORT_ROOTS = {
+    "__future__",
+    "argparse",
+    "ast",
+    "collections",
+    "hashlib",
+    "independent_check",
+    "itertools",
+    "json",
+    "math",
+    "pathlib",
+    "random",
+    "re",
+    "typing",
+}
+
+INDEPENDENT_CHECK_IMPORT_ROOTS = {
+    "__future__",
+    "argparse",
+    "collections",
+    "copy",
+    "hashlib",
+    "json",
+    "math",
+    "pathlib",
+    "typing",
+}
+
+OMITTED_VERIFIER_TEST = (
+    "test_candidate_comparison.CandidateComparisonTests."
+    "test_08_source_and_solver_provenance"
+)
+
+FULL_VERIFIER_TEST_IDS_SHA256 = (
+    "ab8dea45aa3a32d4df0758dd9fe142c2fa6fecb815693085027e17313202d9e1"
+)
+INCLUDED_VERIFIER_TEST_IDS_SHA256 = (
+    "185da0159a5f9689b2a60a830d9c78be9ea0d7c14c3535dd9ce992dc69542389"
+)
+DISCOVERY_TEST_IDS_SHA256 = (
+    "1c8b91a4ee799f4c0cb336bc48ffd4a2f2b010a0860a53157dd6adae33adc784"
+)
 
 MANIFEST_LINE = re.compile(r"^([0-9a-f]{64})  (.+)$")
 WAVE33_STRUCTURE_START = (
@@ -441,6 +522,260 @@ def validate_frozen_packages(source_root: Path = REPO) -> dict[str, Any]:
     }
 
 
+def audit_import_roots(
+    path: Path,
+    *,
+    expected_sha256: str,
+    expected_roots: set[str],
+    label: str,
+) -> dict[str, Any]:
+    require_regular_source(path, label=label)
+    require(sha256_path(path) == expected_sha256, f"{label}: hash mismatch")
+    try:
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+    except (UnicodeDecodeError, SyntaxError) as exc:
+        raise ChronologyError(f"{label}: source parse failed") from exc
+    imported_roots: set[str] = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            imported_roots.update(
+                alias.name.split(".", 1)[0] for alias in node.names
+            )
+        elif isinstance(node, ast.ImportFrom) and node.module:
+            imported_roots.add(node.module.split(".", 1)[0])
+    require(
+        imported_roots == expected_roots,
+        f"{label}: import-root set drift",
+    )
+    return {
+        "source_sha256": expected_sha256,
+        "import_roots": sorted(imported_roots),
+        "status": "PASS",
+    }
+
+
+def audit_exact_checker_standard_library(exact_path: Path) -> dict[str, Any]:
+    result = audit_import_roots(
+        exact_path,
+        expected_sha256=EXPECTED_EXACT_CHECKER_SHA256,
+        expected_roots=EXACT_CHECKER_IMPORT_ROOTS,
+        label="exact checker",
+    )
+    result["standard_library_only"] = True
+    return result
+
+
+def validate_solver_inspection_records(path: Path) -> dict[str, Any]:
+    require_regular_source(path, label="solver inspection record")
+    require(
+        sha256_path(path) == EXPECTED_SOLVER_INSPECTION_SHA256,
+        "solver inspection record hash mismatch",
+    )
+    try:
+        text = path.read_text(encoding="utf-8")
+    except UnicodeDecodeError as exc:
+        raise ChronologyError("solver inspection record is not UTF-8") from exc
+    for label, line in SOLVER_VERSION_LINES.items():
+        require(
+            text.count(line) == 1,
+            f"solver inspection version record drift: {label}",
+        )
+    observed: dict[str, str] = {}
+    for match in re.finditer(
+        r"(?m)^([0-9a-f]{64})  (\.venv/[^\r\n]+)$",
+        text,
+    ):
+        digest, relative = match.groups()
+        require(
+            relative not in observed,
+            f"duplicate solver inspection hash record: {relative}",
+        )
+        observed[relative] = digest
+    require(
+        observed == RECORDED_SOLVER_HASHES,
+        "solver inspection path/hash records drift",
+    )
+    for phrase in (
+        "Its exit status is not a certificate.",
+        "uses only the Python",
+        "standard library. No solver nonhit or UNSAT response will be promoted.",
+    ):
+        require(phrase in text, f"solver inspection status wall missing: {phrase}")
+    return {
+        "document_sha256": EXPECTED_SOLVER_INSPECTION_SHA256,
+        "documentary_hash_record_count": len(observed),
+        "documentary_hash_records": observed,
+        "version_record_count": len(SOLVER_VERSION_LINES),
+        "version_records": SOLVER_VERSION_LINES,
+        "observed_environment_hash_count": 0,
+        "local_environment_files_opened": 0,
+        "status": "AUTHENTICATED_RECORDS_ONLY",
+    }
+
+
+def run_chronology_owned_comparison(root: Path) -> dict[str, Any]:
+    verifier_dir = root / "verification" / "wave33-rooted-construction"
+    attempt_dir = root / "attempts" / "wave33-rooted-construction"
+    comparison_path = verifier_dir / "candidate_comparison.py"
+    independent_path = verifier_dir / "independent_check.py"
+    comparison_imports = audit_import_roots(
+        comparison_path,
+        expected_sha256=EXPECTED_CANDIDATE_COMPARISON_SHA256,
+        expected_roots=COMPARISON_IMPORT_ROOTS,
+        label="candidate comparison",
+    )
+    independent_imports = audit_import_roots(
+        independent_path,
+        expected_sha256=EXPECTED_INDEPENDENT_CHECK_SHA256,
+        expected_roots=INDEPENDENT_CHECK_IMPORT_ROOTS,
+        label="independent checker",
+    )
+    exact_imports = audit_exact_checker_standard_library(
+        attempt_dir / "exact_check.py"
+    )
+    solver_records = validate_solver_inspection_records(
+        attempt_dir / "solver-inspection.md"
+    )
+
+    module_names = ("candidate_comparison", "independent_check")
+    saved_modules = {
+        name: sys.modules[name] for name in module_names if name in sys.modules
+    }
+    old_path = list(sys.path)
+    old_dont_write_bytecode = sys.dont_write_bytecode
+    try:
+        sys.dont_write_bytecode = True
+        sys.path.insert(0, str(verifier_dir))
+        for name in module_names:
+            sys.modules.pop(name, None)
+        pre = importlib.import_module("independent_check")
+        comparison = importlib.import_module("candidate_comparison")
+        require(
+            Path(pre.__file__).resolve() == independent_path.resolve(),
+            "independent checker import escaped the synthetic root",
+        )
+        require(
+            Path(comparison.__file__).resolve() == comparison_path.resolve(),
+            "candidate comparison import escaped the synthetic root",
+        )
+
+        manifests = comparison.verify_manifests()
+        certificate_path = attempt_dir / "partial-design-certificate.json"
+        certificate = pre.load_json(certificate_path)
+        parsed = comparison.parse_certificate(certificate)
+        bounded = pre.load_json(attempt_dir / "bounded-search-manifest.json")
+        normalized = comparison.normalized_payload(parsed, bounded)
+        frozen_check = pre.verify_payload(
+            normalized,
+            input_sha256=pre.sha256_path(certificate_path),
+        )
+        bf = comparison.direct_bf_metrics(parsed)
+        encoding = comparison.independent_assignment_encoding(parsed)
+        milp = comparison.verify_bounded_manifest(bounded, encoding)
+        exact_results = pre.load_json(attempt_dir / "exact-results.json")
+        base_results = pre.load_json(attempt_dir / "base-results.json")
+        recorded = comparison.verify_recorded_results(
+            exact_results,
+            base_results,
+            bf,
+        )
+        source_audit = comparison.static_source_audit()
+        require(
+            sha256_bytes(canonical_json_bytes(source_audit))
+            == EXPECTED_STATIC_SOURCE_AUDIT_SHA256,
+            "portable source-audit result drift",
+        )
+        require(
+            source_audit["exact_checker_standard_library_only"] is True,
+            "portable source audit did not accept exact checker imports",
+        )
+        scope_documents = comparison.static_scope_documents()
+        hostile_search = comparison.reproduce_hostile_search(parsed)
+        accepted_path = verifier_dir / "candidate-comparison-results.json"
+        require(
+            sha256_path(accepted_path) == EXPECTED_COMPARISON_RESULTS_SHA256,
+            "accepted comparison result hash drift",
+        )
+        accepted = pre.load_json(accepted_path)
+        assert_status_wall(accepted)
+        require(accepted["claim_label"] == "VERIFIED", "accepted claim drift")
+        require(
+            accepted["assignment_encoding"]["row_system_sha256"]
+            == encoding["row_system_sha256"],
+            "accepted assignment-row digest is not core-bound",
+        )
+        for observed_key, accepted_key in (
+            ("violation_count", "BF_violation_count"),
+            ("squared_defect", "BF_squared_defect"),
+            ("exact_support_group_count", "BF_exact_support_group_count"),
+        ):
+            require(
+                bf[observed_key] == accepted["hostile_partial"][accepted_key],
+                f"accepted hostile BF summary drift: {observed_key}",
+            )
+        require(
+            hostile_search["certificate_sha256"] == EXPECTED_CERTIFICATE_SHA256,
+            "hostile-search certificate hash drift",
+        )
+        require(
+            hostile_search["byte_identical"] is True,
+            "hostile-search certificate is not byte-identical",
+        )
+
+        projection = {
+            "schema_version": 1,
+            "execution_mode": (
+                "CHRONOLOGY_OWNED_CALLS_TO_HASH_PINNED_COMPARISON_FUNCTIONS"
+            ),
+            "unchanged_candidate_comparison_cli": "NOT_RUN_BY_DESIGN",
+            "functions_called": [
+                "verify_manifests",
+                "parse_certificate",
+                "normalized_payload",
+                "independent_check.verify_payload",
+                "direct_bf_metrics",
+                "independent_assignment_encoding",
+                "verify_bounded_manifest",
+                "verify_recorded_results",
+                "static_source_audit",
+                "static_scope_documents",
+                "reproduce_hostile_search",
+            ],
+            "candidate_comparison_import_audit": comparison_imports,
+            "independent_check_import_audit": independent_imports,
+            "exact_checker_import_audit": exact_imports,
+            "solver_inspection_records": solver_records,
+            "manifests": manifests,
+            "frozen_check": {
+                "BF_violation_count": frozen_check["hostile_partial"]["BF"][
+                    "violation_count"
+                ],
+                "BF_squared_defect": frozen_check["hostile_partial"]["BF"][
+                    "squared_defect"
+                ],
+                "O_O_layer_certificate_status": frozen_check["hostile_partial"][
+                    "O_O_layer_certificate_status"
+                ],
+            },
+            "BF": bf,
+            "assignment_encoding": encoding,
+            "milp_run": milp,
+            "recorded_results": recorded,
+            "static_source_audit": source_audit,
+            "scope_documents": scope_documents,
+            "hostile_search": hostile_search,
+            "accepted_summary_sha256": EXPECTED_COMPARISON_RESULTS_SHA256,
+            "accepted_summary_core_bound": True,
+        }
+        return projection
+    finally:
+        sys.path[:] = old_path
+        sys.dont_write_bytecode = old_dont_write_bytecode
+        for name in module_names:
+            sys.modules.pop(name, None)
+        sys.modules.update(saved_modules)
+
+
 def materialize_historical_root(
     destination: Path,
     *,
@@ -488,18 +823,26 @@ def materialize_historical_root(
         label="candidate freeze",
     )
 
-    for relative, expected in SOLVER_PROVENANCE.items():
-        copy_hash_accepted(
-            source_root.joinpath(*PurePosixPath(relative).parts),
-            destination.joinpath(*PurePosixPath(relative).parts),
-            expected_sha256=expected,
-            label=f"solver provenance {relative}",
-        )
-
     require(
         sha256_path(destination / "STRUCTURE.md")
         == HISTORICAL_STRUCTURE_SHA256,
         "synthetic root did not receive historical STRUCTURE.md",
+    )
+    exact_imports = audit_exact_checker_standard_library(
+        destination
+        / "attempts"
+        / "wave33-rooted-construction"
+        / "exact_check.py"
+    )
+    solver_records = validate_solver_inspection_records(
+        destination
+        / "attempts"
+        / "wave33-rooted-construction"
+        / "solver-inspection.md"
+    )
+    require(
+        not (destination / ".venv").exists(),
+        "synthetic root unexpectedly contains a local solver environment",
     )
     return {
         "historical_input_count": len(historical),
@@ -507,7 +850,14 @@ def materialize_historical_root(
         "candidate_artifact_entries": len(frozen["candidate_artifact_entries"]),
         "verifier_artifact_entries": len(frozen["verifier_entries"]),
         "precomparison_entries": len(frozen["precomparison_entries"]),
-        "solver_provenance_files": len(SOLVER_PROVENANCE),
+        "solver_provenance_files_copied": 0,
+        "solver_hash_records_authenticated":
+            solver_records["documentary_hash_record_count"],
+        "solver_version_records_authenticated":
+            solver_records["version_record_count"],
+        "exact_checker_standard_library_only":
+            exact_imports["standard_library_only"],
+        "local_environment_dependency": False,
     }
 
 
@@ -551,6 +901,136 @@ def unittest_count(completed: subprocess.CompletedProcess[bytes]) -> int:
     return int(matches[0])
 
 
+def isolated_subprocess_environment() -> dict[str, str]:
+    environment = os.environ.copy()
+    for key in tuple(environment):
+        upper = key.upper()
+        if (
+            upper.startswith("PYTHON")
+            or upper.startswith("CONDA")
+            or upper in {"VIRTUAL_ENV", "VIRTUAL_ENV_PROMPT"}
+        ):
+            environment.pop(key, None)
+    environment["PYTHONDONTWRITEBYTECODE"] = "1"
+    return environment
+
+
+def complete_suite_runner_source(
+    *,
+    expected_count: int,
+    expected_ids_sha256: str,
+) -> str:
+    return f"""
+import hashlib
+import json
+import sys
+import unittest
+
+start_dir = sys.argv[1]
+sys.path.insert(0, start_dir)
+
+def flatten(suite):
+    for item in suite:
+        if isinstance(item, unittest.TestSuite):
+            yield from flatten(item)
+        else:
+            yield item
+
+loader = unittest.TestLoader()
+discovered = loader.discover(
+    start_dir=start_dir,
+    pattern="test_*.py",
+    top_level_dir=start_dir,
+)
+tests = list(flatten(discovered))
+tests.sort(key=lambda test: test.id())
+ids = [test.id() for test in tests]
+ids_sha256 = hashlib.sha256(
+    "".join(value + "\\n" for value in ids).encode("utf-8")
+).hexdigest()
+if len(ids) != {expected_count!r}:
+    raise SystemExit("test count drift: " + str(len(ids)))
+if ids_sha256 != {expected_ids_sha256!r}:
+    raise SystemExit("test-ID digest drift")
+result = unittest.TextTestRunner(verbosity=1).run(
+    unittest.TestSuite(tests)
+)
+print(json.dumps({{
+    "test_count": len(ids),
+    "test_ids_sha256": ids_sha256,
+}}, sort_keys=True))
+raise SystemExit(0 if result.wasSuccessful() else 1)
+""".lstrip()
+
+
+def filtered_verifier_runner_source() -> str:
+    return f"""
+import hashlib
+import json
+import sys
+import unittest
+
+start_dir = sys.argv[1]
+sys.path.insert(0, start_dir)
+
+def flatten(suite):
+    for item in suite:
+        if isinstance(item, unittest.TestSuite):
+            yield from flatten(item)
+        else:
+            yield item
+
+loader = unittest.TestLoader()
+discovered = loader.discover(
+    start_dir=start_dir,
+    pattern="test_*.py",
+    top_level_dir=start_dir,
+)
+tests = list(flatten(discovered))
+tests.sort(key=lambda test: test.id())
+ids = [test.id() for test in tests]
+digest = lambda values: hashlib.sha256(
+    "".join(value + "\\n" for value in values).encode("utf-8")
+).hexdigest()
+if len(ids) != 37:
+    raise SystemExit("full verifier test count drift: " + str(len(ids)))
+if digest(ids) != {FULL_VERIFIER_TEST_IDS_SHA256!r}:
+    raise SystemExit("full verifier test-ID digest drift")
+if ids.count({OMITTED_VERIFIER_TEST!r}) != 1:
+    raise SystemExit("designated verifier test missing or duplicated")
+selected = [
+    test for test in tests if test.id() != {OMITTED_VERIFIER_TEST!r}
+]
+selected_ids = [test.id() for test in selected]
+if len(selected_ids) != 36:
+    raise SystemExit("selected verifier test count drift")
+if digest(selected_ids) != {INCLUDED_VERIFIER_TEST_IDS_SHA256!r}:
+    raise SystemExit("selected verifier test-ID digest drift")
+result = unittest.TextTestRunner(verbosity=1).run(
+    unittest.TestSuite(selected)
+)
+print(json.dumps({{
+    "full_test_count": len(ids),
+    "full_test_ids_sha256": digest(ids),
+    "omitted_test_id": {OMITTED_VERIFIER_TEST!r},
+    "selected_test_count": len(selected_ids),
+    "selected_test_ids_sha256": digest(selected_ids),
+}}, sort_keys=True))
+raise SystemExit(0 if result.wasSuccessful() else 1)
+""".lstrip()
+
+
+def runner_metadata(
+    completed: subprocess.CompletedProcess[bytes],
+) -> dict[str, Any]:
+    try:
+        value = json.loads(completed.stdout)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise ChronologyError("test runner did not emit strict JSON metadata") from exc
+    require(isinstance(value, dict), "test runner metadata must be an object")
+    return value
+
+
 def assert_status_wall(payload: Any) -> None:
     require(isinstance(payload, dict), "comparison result must be an object")
     wall = payload.get("status_wall")
@@ -565,6 +1045,55 @@ def assert_status_wall(payload: Any) -> None:
         "timeout_negative_evidence": False,
     }
     require(wall == expected, "comparison status wall drift or promotion")
+
+
+def assert_clean_clone_boundary(payload: Any) -> None:
+    require(isinstance(payload, dict), "chronology result must be an object")
+    replay = payload.get("replay")
+    materialized = payload.get("materialized")
+    require(isinstance(replay, dict), "chronology replay record missing")
+    require(isinstance(materialized, dict), "materialization record missing")
+    require(
+        (
+            replay.get("unchanged_discovery_tests_passed"),
+            replay.get("unchanged_verifier_tests_passed"),
+            replay.get("historical_package_tests_passed"),
+        )
+        == (14, 36, 50),
+        "clean-clone replay test accounting drift",
+    )
+    omitted = replay.get("verifier_test_08")
+    require(isinstance(omitted, dict), "verifier test 08 boundary missing")
+    require(
+        omitted.get("test_id") == OMITTED_VERIFIER_TEST,
+        "verifier test 08 identity drift",
+    )
+    solver_half = omitted.get("solver_environment_file_half")
+    require(
+        isinstance(solver_half, dict)
+        and solver_half.get("status") == "NOT_REPLAYED_NONBLOCKING",
+        "solver-environment boundary was promoted",
+    )
+    documentary = solver_half.get("documentary_record_audit")
+    require(
+        isinstance(documentary, dict)
+        and documentary.get("documentary_hash_record_count") == 6
+        and documentary.get("observed_environment_hash_count") == 0
+        and documentary.get("local_environment_files_opened") == 0,
+        "documentary solver records were misreported as observed files",
+    )
+    comparison = replay.get("comparison_execution")
+    require(
+        isinstance(comparison, dict)
+        and comparison.get("unchanged_cli_status") == "NOT_RUN_BY_DESIGN"
+        and comparison.get("local_environment_files_opened") == 0,
+        "unchanged comparison CLI or local environment was promoted",
+    )
+    require(
+        materialized.get("solver_provenance_files_copied") == 0
+        and materialized.get("local_environment_dependency") is False,
+        "materialized tree depends on local solver files",
+    )
 
 
 def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
@@ -613,21 +1142,25 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
             synthetic, source_root=source_root
         )
         before = tree_snapshot(synthetic)
-        environment = os.environ.copy()
-        environment["PYTHONDONTWRITEBYTECODE"] = "1"
+        environment = isolated_subprocess_environment()
+        discovery_dir = (
+            synthetic / "attempts" / "wave33-rooted-construction"
+        ).resolve()
+        verifier_dir = (
+            synthetic / "verification" / "wave33-rooted-construction"
+        ).resolve()
 
         discovery_test = run_process(
             [
                 sys.executable,
+                "-I",
                 "-B",
-                "-m",
-                "unittest",
-                "discover",
-                "-s",
-                "attempts/wave33-rooted-construction",
-                "-p",
-                "test_*.py",
-                "-q",
+                "-c",
+                complete_suite_runner_source(
+                    expected_count=14,
+                    expected_ids_sha256=DISCOVERY_TEST_IDS_SHA256,
+                ),
+                str(discovery_dir),
             ],
             cwd=synthetic,
             environment=environment,
@@ -635,33 +1168,51 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
         verifier_test = run_process(
             [
                 sys.executable,
+                "-I",
                 "-B",
-                "-m",
-                "unittest",
-                "discover",
-                "-s",
-                "verification/wave33-rooted-construction",
-                "-p",
-                "test_*.py",
-                "-q",
+                "-c",
+                filtered_verifier_runner_source(),
+                str(verifier_dir),
             ],
             cwd=synthetic,
             environment=environment,
         )
         discovery_count = unittest_count(discovery_test)
         verifier_count = unittest_count(verifier_test)
+        discovery_metadata = runner_metadata(discovery_test)
+        verifier_metadata = runner_metadata(verifier_test)
         require(discovery_count == 14, "historical discovery test count drift")
-        require(verifier_count == 37, "historical verifier test count drift")
+        require(verifier_count == 36, "historical verifier test count drift")
+        require(
+            discovery_metadata
+            == {
+                "test_count": 14,
+                "test_ids_sha256": DISCOVERY_TEST_IDS_SHA256,
+            },
+            "discovery runner metadata drift",
+        )
+        require(
+            verifier_metadata
+            == {
+                "full_test_count": 37,
+                "full_test_ids_sha256": FULL_VERIFIER_TEST_IDS_SHA256,
+                "omitted_test_id": OMITTED_VERIFIER_TEST,
+                "selected_test_count": 36,
+                "selected_test_ids_sha256":
+                    INCLUDED_VERIFIER_TEST_IDS_SHA256,
+            },
+            "verifier runner metadata drift",
+        )
 
         exact_output = outputs / "exact-results.json"
         run_process(
             [
                 sys.executable,
+                "-I",
                 "-B",
-                "attempts/wave33-rooted-construction/exact_check.py",
+                str(discovery_dir / "exact_check.py"),
                 "--partial-certificate",
-                "attempts/wave33-rooted-construction/"
-                "partial-design-certificate.json",
+                str(discovery_dir / "partial-design-certificate.json"),
                 "--output",
                 str(exact_output),
             ],
@@ -683,77 +1234,16 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
             "historical exact replay is not byte-identical",
         )
 
-        comparison_process = run_process(
-            [
-                sys.executable,
-                "-B",
-                "verification/wave33-rooted-construction/"
-                "candidate_comparison.py",
-                "--reproduce-search",
-            ],
-            cwd=synthetic,
-            environment=environment,
+        comparison_projection = run_chronology_owned_comparison(synthetic)
+        comparison_projection_sha256 = sha256_bytes(
+            canonical_json_bytes(comparison_projection)
         )
-        try:
-            comparison_value = json.loads(comparison_process.stdout)
-        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-            raise ChronologyError("comparison CLI did not emit JSON") from exc
-        accepted_comparison_path = (
-            synthetic
-            / "verification"
-            / "wave33-rooted-construction"
-            / "candidate-comparison-results.json"
-        )
-        accepted_comparison = json.loads(
-            accepted_comparison_path.read_text(encoding="utf-8")
-        )
-        require(
-            sha256_bytes(comparison_process.stdout)
-            == EXPECTED_COMPARISON_CLI_STDOUT_SHA256,
-            "comparison CLI stdout hash drift",
-        )
-        require(
-            sha256_path(accepted_comparison_path)
-            == EXPECTED_COMPARISON_RESULTS_SHA256,
-            "accepted comparison result hash drift",
-        )
-        assert_status_wall(comparison_value)
-        assert_status_wall(accepted_comparison)
-        require(
-            comparison_value["claim_label"]
-            == accepted_comparison["claim_label"]
-            == "VERIFIED",
-            "comparison claim label drift",
-        )
-        require(
-            comparison_value["assignment_encoding"]["row_system_sha256"]
-            == accepted_comparison["assignment_encoding"]["row_system_sha256"],
-            "comparison assignment-row digest drift",
-        )
-        for actual_key, accepted_key in (
-            ("violation_count", "BF_violation_count"),
-            ("squared_defect", "BF_squared_defect"),
-            ("exact_support_group_count", "BF_exact_support_group_count"),
-        ):
-            require(
-                comparison_value["hostile_partial"]["BF"][actual_key]
-                == accepted_comparison["hostile_partial"][accepted_key],
-                f"comparison hostile BF summary drift: {actual_key}",
-            )
-        require(
-            comparison_value["deterministic_hostile_search_reproduction"][
-                "certificate_sha256"
-            ]
-            == EXPECTED_CERTIFICATE_SHA256,
-            "comparison search replay certificate hash drift",
-        )
-        require(
-            comparison_value["deterministic_hostile_search_reproduction"][
-                "byte_identical"
-            ]
-            is True,
-            "comparison search replay is not byte-identical",
-        )
+        exact_import_audit = comparison_projection[
+            "exact_checker_import_audit"
+        ]
+        solver_record_audit = comparison_projection[
+            "solver_inspection_records"
+        ]
 
         after = tree_snapshot(synthetic)
         require(before == after, "historical synthetic tree was modified")
@@ -789,13 +1279,14 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
     }
     require(source_before == source_after, "source freeze anchors changed in replay")
 
-    return {
-        "schema_version": 1,
+    result = {
+        "schema_version": 2,
         "role": "verifier",
         "claim_label": "VERIFIED",
         "scope": (
-            "Historical-byte replay of the unchanged Wave 33 rooted "
-            "construction discovery and verifier packages only."
+            "Clean-clone-independent historical-byte replay of all 14 "
+            "unchanged Wave 33 discovery tests and the 36 unchanged verifier "
+            "tests that do not inspect ignored local solver-environment files."
         ),
         "chronology": {
             "live_structure_is_not_historical_input": (
@@ -819,14 +1310,47 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
             "unchanged_discovery_tests_passed": discovery_count,
             "unchanged_verifier_tests_passed": verifier_count,
             "historical_package_tests_passed": discovery_count + verifier_count,
+            "discovery_test_ids_sha256": DISCOVERY_TEST_IDS_SHA256,
+            "full_verifier_test_ids_sha256":
+                FULL_VERIFIER_TEST_IDS_SHA256,
+            "included_verifier_test_ids_sha256":
+                INCLUDED_VERIFIER_TEST_IDS_SHA256,
+            "verifier_test_08": {
+                "test_id": OMITTED_VERIFIER_TEST,
+                "composite_test_execution": "NOT_RUN_AS_COMPOSITE",
+                "portable_source_audit_half": {
+                    "status": "PASS",
+                    "canonical_result_sha256":
+                        EXPECTED_STATIC_SOURCE_AUDIT_SHA256,
+                    "exact_checker_import_audit": exact_import_audit,
+                },
+                "solver_environment_file_half": {
+                    "status": "NOT_REPLAYED_NONBLOCKING",
+                    "reason": (
+                        "The six ignored local environment files are absent "
+                        "from a clean clone, and the recorded solver timeout "
+                        "has no evidentiary status."
+                    ),
+                    "documentary_record_audit": solver_record_audit,
+                },
+            },
             "exact_results_sha256": EXPECTED_EXACT_RESULTS_SHA256,
             "exact_results_byte_identical": True,
             "comparison_results_sha256": EXPECTED_COMPARISON_RESULTS_SHA256,
-            "comparison_cli_stdout_sha256":
-                EXPECTED_COMPARISON_CLI_STDOUT_SHA256,
+            "comparison_execution": {
+                "unchanged_cli_status": "NOT_RUN_BY_DESIGN",
+                "historical_only_cli_stdout_sha256":
+                    EXPECTED_COMPARISON_CLI_STDOUT_SHA256,
+                "chronology_owned_projection_sha256":
+                    comparison_projection_sha256,
+                "hash_pinned_function_calls": True,
+                "local_environment_files_opened": 0,
+            },
             "comparison_accepted_summary_core_bound": True,
             "hostile_search_certificate_sha256": EXPECTED_CERTIFICATE_SHA256,
             "hostile_search_certificate_byte_identical": True,
+            "isolated_python_flags": ["-I", "-B"],
+            "python_environment_variables_sanitized": True,
             "synthetic_tree_unchanged": True,
             "checkout_outputs_written": 0,
             "pycache_created": False,
@@ -842,6 +1366,9 @@ def run_full_replay(*, source_root: Path = REPO) -> dict[str, Any]:
             "timeout_negative_evidence": False,
         },
     }
+    assert_status_wall(result)
+    assert_clean_clone_boundary(result)
+    return result
 
 
 def main(argv: Iterable[str] | None = None) -> int:
