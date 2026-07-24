@@ -1348,14 +1348,18 @@ obligations:
       - "verification/wave33-rooted-construction-candidate-freeze.sha256"
       - "verification/2026-07-24-wave33-orchestrator-corrections.md"
     note: >-
-      Thirty-seven independent tests pass and the deterministic hostile
-      certificate replay is byte-identical. This verifies the frozen finite
-      facts only. The object violates ten fixed-label coupling equations,
-      supplies no O-O layer, and the one-fixed-design timeout is neither a
-      construction nor an exclusion. Fifteen separate chronology tests
-      authenticate the historical input state and embed the unchanged
-      14+37 replay; they are a reproducibility layer, not 66 independent
-      theorem tests.
+      The original local frozen-context verifier recorded 37/37 and the
+      deterministic hostile certificate replay was byte-identical. Chronology
+      v2 replays 36 unchanged verifier cases and separately passes the
+      portable source half of the sole omitted composite test. This verifies
+      the frozen finite facts only. The object violates ten fixed-label
+      coupling equations, supplies no O-O layer, and the one-fixed-design
+      timeout is neither a construction nor an exclusion. Twenty separate
+      chronology tests authenticate the historical input state and embed
+      14+36 unchanged portable cases. The solver-environment half depends on
+      ignored local files and is NOT_REPLAYED_NONBLOCKING. V2 opens zero such
+      files and observes zero environment hashes. The outer and embedded
+      counts are separate evidence layers.
 
   - id: O-WAVE33-ROOTLESS-MOTIF
     requirement: >-

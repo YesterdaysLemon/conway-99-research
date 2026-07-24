@@ -1867,6 +1867,7 @@ thirty_third_research_wave:
   frozen_public_base: "b2595baa40d50e9c259051751fe27090bee6a449"
   discovery_commit: "69916bc75b0ffd35948bc1e874e6a8aa554e40f1"
   verification_commit: "c79d8442266ca66e167112d38050b3c3521825b5"
+  chronology_repair_commit: "d3780b1c15c1ffbfb3cae8a7f1190325be8620a7"
   integration_commit: "PENDING_CLEAN_CLONE_REPLAY"
   clean_clone_commit: "PENDING_CLEAN_CLONE_REPLAY"
   integration_state: CURRENT_TREE_PASS
@@ -1901,7 +1902,7 @@ thirty_third_research_wave:
   construction_search_assignments_covered: "70!"
   construction_timeout_negative_evidence: false
   construction_complete_domain_UNSAT_certificate: NONE
-  construction_chronology_status: VERIFIED_REPRODUCIBILITY_ONLY
+  construction_chronology_status: VERIFIED_CLEAN_CLONE_INDEPENDENT_HISTORICAL_REPRODUCIBILITY_ONLY
   rootless_fused_algebra_status: VERIFIED_SCOPED
   rootless_formal_q2_null_trade_status: VERIFIED_SCOPED
   rootless_contraction_scope: "bilinear Q[Gamma] and N^T p(A) N only"
@@ -1951,22 +1952,37 @@ thirty_third_research_wave:
   construction_candidate_freeze: "verification/wave33-rooted-construction-candidate-freeze.sha256"
   construction_candidate_freeze_sha256: "441465c157f28e658afde31e6ca0cff49ccb5841a001150bd3e3af616c5bf63a"
   construction_chronology_result: "verification/wave33-rooted-construction-chronology/chronology-results.json"
-  construction_chronology_result_sha256: "06bc23423425feb49f37491fc7165aefaf62f50f54ef49992a0da373782bf19a"
+  construction_chronology_result_sha256: "b2f0b872221a3fd9f41d6a88637be21034b70e8c8129fe57617115548b425957"
   construction_historical_inputs: "verification/wave33-rooted-construction-chronology/historical-inputs.json"
   construction_historical_inputs_sha256: "d62fc4311577d56cbf34f8bd4e63aefb3b796457b3d020f4322324073d82f7dd"
   construction_chronology_audit: "verification/wave33-rooted-construction-chronology/audit.md"
-  construction_chronology_audit_sha256: "b3f629b1e0582017f0c60db201ed6acdc5c58abfd402cba15a6b698e3c4743da"
+  construction_chronology_audit_sha256: "1346992e11db72c4c94018293d3827214e2ee79e074490b8f905028e20fa30f1"
   construction_chronology_manifest: "verification/wave33-rooted-construction-chronology/artifact-manifest.sha256"
-  construction_chronology_manifest_sha256: "22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23"
+  construction_chronology_manifest_sha256: "22cbb94ad5a452e9e9c3f38ac35bb31f0b5d2cf81446d0aab5827c3d30b84f69"
+  construction_chronology_schema_version: 2
+  construction_chronology_projection_sha256: "446beb4ddd2a51194315954d7005cb01d90ff8643a64c78801d93524d65e7818"
+  construction_chronology_comparison_cli_status: NOT_RUN_BY_DESIGN
+  chronology_v1_failed_integration_commit: "74c3725a4c18e11a37e3f4bd56b82d47b09dc167"
+  chronology_v1_clean_clone_status: FAILED_MISSING_IGNORED_SOLVER_ENVIRONMENT
+  chronology_v1_prior_live_tests_passed: 110
+  chronology_v1_failure_console_transcript: NOT_BUNDLED
+  chronology_v1_failure_evidence_status: DOCUMENTARY_ONLY
   corrections_ledger: "verification/2026-07-24-wave33-orchestrator-corrections.md"
-  corrections_ledger_sha256: "388a56f163916f5408601586bdf56ce05d5c87d6061d17c6997fb6cb368d3a4b"
+  corrections_ledger_sha256: "08f4a8cb1262382e60a6565df0312e02f117b1946278b881dd12598c54758c10"
   historical_discovery_tests_passed: 43
   historical_verifier_tests_passed: 118
   historical_package_tests_passed: 161
+  cross_run_portable_historical_package_tests_reproduced: 160
+  cross_run_portable_historical_package_test_accounting: "110 live-input + v2 minimal-clean-source embedded 14+36=50"
   current_tree_live_input_tests_passed: 110
-  current_tree_chronology_tests_passed: 15
-  current_tree_outer_tests_passed: 125
-  chronology_embedded_construction_tests_passed: 51
+  current_tree_chronology_tests_passed: 20
+  current_tree_outer_tests_passed: 130
+  chronology_embedded_construction_tests_passed: 50
+  chronology_separate_source_provenance_gate: PASS
+  chronology_solver_environment_file_half: NOT_REPLAYED_NONBLOCKING
+  chronology_solver_environment_observed_hashes: 0
+  chronology_solver_environment_files_opened: 0
+  chronology_solver_provenance_files_copied: 0
   live_root_external_generators: 8
   manifest_count: 8
   manifest_entries: 80

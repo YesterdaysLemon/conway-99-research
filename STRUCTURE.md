@@ -2082,16 +2082,23 @@ A separate zero-objective MILP encodes all `70!` assignments of this one
 fixed simple design to the 70 labeled O vertices.  It does not cover other
 nonisomorphic designs.  The 25-second run returned a time limit with no
 primal and never entered the O-O phase.  This has no mathematical status.
-The verifier passes 37 tests, independently regenerates the hostile
-certificate, and supplies strict duplicate-key and scope gates absent from
-the discovery checker.  These are historical frozen-context tests.  Once
-this Wave 33 section changed the mutable `STRUCTURE.md`, direct live-root
-replay correctly failed the original input hash.  The separate
+The original local frozen-context verifier recorded 37/37 and independently
+regenerated the hostile certificate.  Chronology v2 replays 36 unchanged
+verifier cases and separately passes the portable source half of the sole
+omitted composite test.  The verifier also supplied strict duplicate-key and
+scope gates absent from the discovery checker.  Once this Wave 33 section
+changed the mutable `STRUCTURE.md`, direct live-root replay correctly failed
+the original input hash.  The separate
 [chronology audit](verification/wave33-rooted-construction-chronology/audit.md)
 authenticates the exact eight historical inputs in an isolated temporary
-root, replays the unchanged `14+37` construction suites, and passes 15
-outer tamper, path, status, and no-write tests.  The outer and embedded
-counts are distinct evidence layers.
+root, replays the unchanged `14+36=50` portable construction cases, and
+passes 20 outer tamper, path, environment-isolation, status, and no-write
+tests.  The portable source half of the sole omitted composite verifier test
+passes separately.  The solver-environment half, which depends on ignored
+local files, is `NOT_REPLAYED_NONBLOCKING`; v2 opens zero such files and
+observes zero environment hashes.  The unchanged comparison CLI is therefore
+`NOT_RUN_BY_DESIGN`.  The outer and embedded counts are distinct evidence
+layers.
 
 ### Rootless fused-algebra boundary
 

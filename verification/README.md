@@ -934,15 +934,21 @@ The separate
 one hostile O-Q design, its ten exact `FB=2J` defects, and the precise scope
 of a bounded search over all `70!` assignments of that one fixed design.
 The package supplies no O-O layer. Its 25-second SciPy/HiGHS timeout has no
-primal and carries no positive or negative evidence. Independent
-precomparison and comparison suites pass `27+10=37` tests, and a separate
-replay regenerates the hostile certificate byte-identically in the frozen
-historical input state. The
+primal and carries no positive or negative evidence. The original local
+frozen-context verifier recorded 37/37 and regenerated the hostile
+certificate byte-identically. Chronology v2 replays 36 unchanged verifier
+cases and separately passes the portable source half of the sole omitted
+composite test. The
 [chronology audit](wave33-rooted-construction-chronology/audit.md) preserves
 every original byte, authenticates all eight historical inputs, and replays
-the unchanged `14+37` construction tests in an isolated temporary root.
-Its 15 outer hostile chronology tests pass. Direct live-root replay is
-expected to reject the later integrated `STRUCTURE.md` byte.
+the unchanged `14+36=50` portable construction cases in an isolated
+temporary root. Its 20 outer hostile chronology tests pass. The portable
+source half of the sole omitted composite verifier test passes separately.
+The solver-environment half, which depends on ignored local files, is
+`NOT_REPLAYED_NONBLOCKING`; v2 opens zero such files and observes zero
+environment hashes. The unchanged comparison CLI is `NOT_RUN_BY_DESIGN`.
+Direct live-root replay is expected to reject the later integrated
+`STRUCTURE.md` byte.
 
 The [rootless motif audit](wave33-rootless-motif/audit.md) returns
 `PASS_SCOPED_WITH_NONBLOCKING_WORDING_QUALIFIER` after `21+27=48`
@@ -967,11 +973,13 @@ python -B -m unittest discover -s verification\wave33-rootless-motif -p test_*.p
 python -B -m unittest discover -s verification\wave33-rooted-construction-chronology -p "test_*.py" -v
 ```
 
-The five commands report `15+14+33+48+15=125` outer tests. One chronology
-test embeds the unchanged construction `14+37=51` replay. The original
-historical package accounting remains `15+14+14+33+48+37=161`; the 15
-chronology tests are a separate layer and are not added to the embedded 51
-as independent theorem tests.
+The five commands report `15+14+33+48+20=130` outer tests. The chronology
+suite performs one embedded `14+36=50` replay and separately passes the
+portable source-provenance half of the sole omitted composite test. The
+original historical package accounting remains
+`15+14+14+33+48+37=161`; the v2 clean-clone-independent procedure reproduces
+160 of those cases. The 20 chronology tests and embedded 50 original cases
+are separate evidence layers.
 
 The seven original artifact manifests contain 73 entries. The chronology
 repair adds a seven-entry eighth manifest, for 80 entries in all:
@@ -985,7 +993,7 @@ repair adds a seven-entry eighth manifest, for 80 entries in all:
 | rooted comparison verifier | 6 | `50571e1870b7fafb245e2eaf79f8331a3b5d6c7cbd282a8bd2d8937b44898f76` |
 | rootless verifier | 13 | `e51811d3dd5a35d21a1e6c7f88625b9dfdabdd1097de1898f988b40747e82822` |
 | rooted construction verifier | 14 | `20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf` |
-| rooted construction chronology | 7 | `22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23` |
+| rooted construction chronology | 7 | `22cbb94ad5a452e9e9c3f38ac35bb31f0b5d2cf81446d0aab5827c3d30b84f69` |
 
 The
 [Wave 33 orchestrator correction ledger](2026-07-24-wave33-orchestrator-corrections.md)

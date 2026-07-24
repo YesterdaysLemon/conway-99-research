@@ -63,6 +63,10 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   non-evidentiary. Because its input freeze predates the mutable central
   Wave 33 exposition, replay the unchanged 14-test package through
   `verification/wave33-rooted-construction-chronology/`, not directly
-  against the integrated root.
+  against the integrated root. That clone-independent chronology replays 36
+  of 37 verifier cases, separately passes the portable half of the sole
+  omitted composite test, and labels the solver-environment half, which
+  depends on ignored local files, `NOT_REPLAYED_NONBLOCKING`; it opens zero
+  such files and observes zero environment hashes.
 - The full correction and nonpromotion chronology is in
   `verification/2026-07-24-wave33-orchestrator-corrections.md`.

@@ -2116,13 +2116,17 @@ python -B -m unittest discover `
   -s verification\wave33-rooted-construction-chronology -p "test_*.py" -v
 ```
 
-The five current-tree commands report `15+14+33+48+15=125` outer tests.
-One chronology test materializes the exact eight historical inputs in an
-isolated temporary root and replays the unchanged construction discovery
-and verifier suites, which pass `14+37=51` tests.  The original historical
-package layer therefore remains `15+14+14+33+48+37=161`; the 15 outer
-chronology tests are a separate reproducibility layer and must not be added
-to the embedded 51 as though they were 66 independent theorem tests.
+The five current-tree commands report `15+14+33+48+20=130` outer tests.
+The chronology suite performs one embedded `14+36=50` replay after
+materializing the exact eight historical inputs in an isolated temporary
+root.  The portable source-provenance half of the sole omitted composite
+verifier test passes separately.  The solver-environment half, which depends
+on ignored local files, is `NOT_REPLAYED_NONBLOCKING`; v2 opens zero such
+files and observes zero environment hashes.  The original historical package
+layer recorded `15+14+14+33+48+37=161`; the v2 clean-clone-independent
+procedure reproduces 160 of those cases plus the separate portable source
+gate.  The 20 outer chronology tests and embedded 50 original cases are
+separate accounting layers.
 
 Directly running the unchanged construction suites against the integrated
 root is intentionally not a reproduction command.  Their frozen input
@@ -2181,7 +2185,10 @@ construction exact:
 ba6640eacd041bc8349024a1d3f13e3d74bd67cdad64d2d78c9a94927319c496
 
 construction chronology:
-06bc23423425feb49f37491fc7165aefaf62f50f54ef49992a0da373782bf19a
+b2f0b872221a3fd9f41d6a88637be21034b70e8c8129fe57617115548b425957
+
+construction historical-input archive (authenticated input):
+d62fc4311577d56cbf34f8bd4e63aefb3b796457b3d020f4322324073d82f7dd
 
 rooted independent:
 66cef570dbbb4a86e2a35f780edcfc1873d0ac2c5266f1c2065c902a8f91e778
@@ -2196,18 +2203,25 @@ rootless comparison:
 8b7b27fd67f12bb82cb6eebf645d0c46324d7227e51bdeb0093fbcdf9d753872
 ```
 
-The construction chronology command above runs the unchanged 37-test
-stdout-only verifier in the authenticated historical root, independently
-reproduces the hostile search, and binds the compact accepted comparison
-summary.  Do not run the unchanged construction CLIs directly against the
-later integrated `STRUCTURE.md`.  Internally, the isolated replay invokes
-the original independent checker with its precomparison fixture and invokes
-the original candidate-comparison checker with `--reproduce-search`.
+The construction chronology command above runs all 14 unchanged discovery
+tests and 36 of the 37 unchanged verifier tests in the authenticated
+historical root.  The omitted composite test is named in the chronology
+result: its portable standard-library source audit is reperformed and passes,
+while the solver-environment half, which depends on ignored local files, is
+`NOT_REPLAYED_NONBLOCKING`; v2 opens zero such files and observes zero
+environment hashes.  Chronology-owned code calls the hash-pinned portable
+comparison functions directly, reproduces the hostile certificate, and binds
+the compact accepted comparison summary.  It never calls the unchanged
+comparison CLI or its local solver-environment verifier.  Do not run the
+unchanged construction CLIs directly against the later integrated
+`STRUCTURE.md`.
 
-The second command takes about 17 seconds on the audited machine and
-reconstructs the hostile certificate without importing or executing the
-discovery search.  Its stdout contains the comparison object; the committed
-canonical and raw replay hashes are:
+The construction chronology command takes about 17 seconds on the audited
+machine and reconstructs the hostile certificate without importing or
+executing the discovery search.  With `--output`, stdout contains only the
+PASS/output/SHA-256 summary; the output JSON contains the comparison
+projection.  The authenticated precomparison, accepted-summary, and
+chronology projection hashes are:
 
 ```text
 construction verifier precomparison:
@@ -2216,9 +2230,14 @@ c3e626a2dada92a4dd1178b327f8c74291beba3d408a150fb4ed2efe42106acb
 construction verifier comparison:
 c0476fb877e0e7d6a6fc63b1a4c72bda0d7804a18a4e4b2b6d5a1bcbc4b6b459
 
-construction verifier raw replay stdout:
-7025cc30551e219c224fe068d641a202db9f1c7a39e480908933e9a93fe597c5
+construction chronology comparison projection:
+446beb4ddd2a51194315954d7005cb01d90ff8643a64c78801d93524d65e7818
 ```
+
+The older raw comparison-CLI stdout hash
+`7025cc30551e219c224fe068d641a202db9f1c7a39e480908933e9a93fe597c5`
+is retained only as historical metadata with status `NOT_RUN_BY_DESIGN`; it
+is not a new clean-clone replay result.
 
 Seven original publication manifests contain 73 entries.  The chronology
 repair adds a seven-entry eighth manifest, for 80 entries in all:
@@ -2232,7 +2251,7 @@ repair adds a seven-entry eighth manifest, for 80 entries in all:
 | rooted comparison verifier | 6 | `50571e1870b7fafb245e2eaf79f8331a3b5d6c7cbd282a8bd2d8937b44898f76` |
 | rootless final verifier | 13 | `e51811d3dd5a35d21a1e6c7f88625b9dfdabdd1097de1898f988b40747e82822` |
 | construction final verifier | 14 | `20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf` |
-| construction chronology | 7 | `22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23` |
+| construction chronology | 7 | `22cbb94ad5a452e9e9c3f38ac35bb31f0b5d2cf81446d0aab5827c3d30b84f69` |
 
 The exact Wave 33 scope wall is:
 

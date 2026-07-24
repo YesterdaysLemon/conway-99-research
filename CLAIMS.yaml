@@ -1233,9 +1233,13 @@ claims:
       heuristic nonhits carry no existence or nonexistence evidence. The
       discovery checker has recorded nonblocking metadata and duplicate-key
       coverage gaps that the independent verifier gates. The chronology
-      package replays the unchanged historical packages without treating
-      later central-document drift as a candidate mutation. Every endpoint
-      and global status remains UNKNOWN.
+      package replays all 14 discovery and 36 portable verifier cases without
+      treating later central-document drift as a candidate mutation. It
+      separately passes the portable source half of the omitted composite
+      test. The solver-environment half depends on ignored local files and is
+      NOT_REPLAYED_NONBLOCKING; v2 opens zero such files and observes zero
+      environment hashes. The unchanged comparison CLI is NOT_RUN_BY_DESIGN.
+      Every endpoint and global status remains UNKNOWN.
 
   - id: C-WAVE33-ROOTLESS-MOTIF-050
     statement: >-

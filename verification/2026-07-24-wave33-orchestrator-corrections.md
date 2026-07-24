@@ -138,7 +138,8 @@ It did not alter repository bytes.  The correct frozen command regenerated
 The orchestrator later tried the construction-verifier CLIs with an
 unsupported `--output` option and, for the precomparison checker, without
 its required `--input`.  Both commands exited at argument parsing and
-produced no evidence.  The documented invocations then passed:
+produced no evidence.  In the original live environment only, the documented
+invocations then passed:
 
 ```text
 python -B verification/wave33-rooted-construction/independent_check.py
@@ -148,11 +149,15 @@ python -B verification/wave33-rooted-construction/candidate_comparison.py
   --reproduce-search
 ```
 
+These are historical commands, not v2 replay commands.  The candidate
+comparison CLI is `NOT_RUN_BY_DESIGN` in v2 because it opens ignored local
+solver-environment files.
+
 The first replay mistake is also retained in the independent verifier's
 `replay-ledger.md`; the second is recorded here because it occurred after
 that verifier package was frozen.
 
-## Integrated-root chronology repair
+## Integrated-root chronology and clean-clone repair
 
 The construction discovery and comparison programs deliberately checked
 their frozen input ledgers against live paths.  Their historical
@@ -181,22 +186,53 @@ No candidate, discovery, precomparison, comparison, or original verifier
 byte was changed.  The separate
 [construction chronology package](wave33-rooted-construction-chronology/audit.md)
 stores and authenticates all eight historical inputs, materializes them with
-the hash-pinned original packages in a temporary root, and replays the
-unchanged discovery 14/14 plus verifier 37/37 suites.  Its 15 outer hostile
-tests check archive mutation, duplicate keys and paths, absolute and parent
-escapes, symlinks, source mutations, status promotion, output placement, and
-no-write discipline.  The two layers must not be described as 66
-independent theorem tests.
+the hash-pinned original packages in a temporary root.
+
+Chronology v1 passed locally but incorrectly treated six ignored `.venv`
+solver-environment files as portable inputs.  The first detached clone of
+integration `74c3725`, after 110 live-input tests had passed, failed on the
+missing `.venv/Lib/site-packages/pysat/card.py`.  That was a genuine
+reproducibility blocker.  The original console transcript is not bundled, so
+the exact failure path and count remain documentary audit records.
+
+Chronology v2 bundles no third-party solver files and opens no local
+environment paths.  It authenticates the exact original test-ID sets, replays
+all 14 discovery tests and 36 of 37 verifier tests, and names the sole omitted
+composite case.  Its portable standard-library source-audit half passes
+separately.  The solver-environment half depends on ignored local files and
+is `NOT_REPLAYED_NONBLOCKING`; v2 opens zero such files and observes zero
+environment hashes.  The unchanged comparison CLI is `NOT_RUN_BY_DESIGN`;
+chronology-owned code calls only hash-pinned portable functions, core-binds
+the accepted summary, and reproduces the hostile certificate byte-for-byte.
+
+Twenty outer hostile tests check archive mutation, duplicate keys and paths,
+absolute and parent escapes, symlinks, source mutations, exact test identity,
+environment isolation, forbidden entrypoints, status promotion, output
+placement, and no-write discipline.  The 20 outer cases and 50 embedded
+original cases are separate evidence layers.
 
 ```text
 historical-input archive:
 d62fc4311577d56cbf34f8bd4e63aefb3b796457b3d020f4322324073d82f7dd
 
 chronology result:
-06bc23423425feb49f37491fc7165aefaf62f50f54ef49992a0da373782bf19a
+b2f0b872221a3fd9f41d6a88637be21034b70e8c8129fe57617115548b425957
+
+chronology comparison projection:
+446beb4ddd2a51194315954d7005cb01d90ff8643a64c78801d93524d65e7818
 
 chronology manifest:
-22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23
+22cbb94ad5a452e9e9c3f38ac35bb31f0b5d2cf81446d0aab5827c3d30b84f69
+```
+
+Canonical v2 commands:
+
+```powershell
+python -B -m unittest discover `
+  -s verification/wave33-rooted-construction-chronology `
+  -p "test_*.py" -v
+python -B verification/wave33-rooted-construction-chronology/chronology_replay.py `
+  --output <scratch>/chronology-results.json
 ```
 
 This is a chronology and reproducibility repair only.  It does not improve
@@ -206,10 +242,14 @@ the hostile object or search and changes no mathematical status.
 
 The three discovery suites pass `15+14+14=43` tests.  The independent
 rooted, rootless, and construction verifier stages pass `33+48+37=118`
-tests.  Wave 33 therefore has 161 passing package tests before the
-repository-wide integration replay.  The integrated current-tree commands
-report 125 outer tests: 110 live-input tests plus 15 chronology tests, one
-of which embeds the unchanged 51-test construction replay.
+tests in their historical environments.  Wave 33 therefore recorded 161
+passing package tests before repository-wide integration.  The current
+cross-run aggregate reproduces 160 portable original cases: 110 live-input
+cases plus the v2 minimal-clean-source embedded `14+36=50` replay.  V2 also
+passes the portable source half of the omitted composite test.  The
+integrated current-tree commands report 130 outer tests: 110 live-input tests
+plus 20 chronology tests.  The chronology suite performs the embedded
+50-case replay.
 
 Original publication manifests plus the chronology repair:
 
@@ -222,7 +262,7 @@ Original publication manifests plus the chronology repair:
 | rooted comparison verifier | 6 | `50571e1870b7fafb245e2eaf79f8331a3b5d6c7cbd282a8bd2d8937b44898f76` |
 | rootless final verifier | 13 | `e51811d3dd5a35d21a1e6c7f88625b9dfdabdd1097de1898f988b40747e82822` |
 | construction final verifier | 14 | `20c27560bdf9720cd1cf043b11c218130cd2891a2d3c874f9dbc9bce2f27fbbf` |
-| construction chronology | 7 | `22a44638df9b85bb77f6beeb45a1226a99ee21c6cf0bf9d1d4a6930cc2908b23` |
+| construction chronology | 7 | `22cbb94ad5a452e9e9c3f38ac35bb31f0b5d2cf81446d0aab5827c3d30b84f69` |
 
 All statements above remain conditional on the independently verified
 Wave 32 premises and retain the global `UNKNOWN` wall.

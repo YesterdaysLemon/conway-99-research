@@ -1422,9 +1422,14 @@ one deliberately frozen input hash, so direct integrated-root replay of the
 unchanged construction packages now fails closed.  The
 [chronology audit](verification/wave33-rooted-construction-chronology/audit.md)
 authenticates all eight historical inputs in an isolated temporary root and
-replays the unchanged 14 discovery plus 37 verifier tests.  Its 15 outer
-tamper, path, status, and no-write tests pass.  The 15 and embedded 51 are
-separate accounting layers, not 66 independent theorem tests.
+replays the unchanged 14 discovery plus 36 portable verifier tests.  Its 20
+outer tamper, path, environment-isolation, status, and no-write tests pass.
+The portable source-provenance half of the sole omitted composite verifier
+test passes separately.  The solver-environment half, which depends on
+ignored local files, is `NOT_REPLAYED_NONBLOCKING`; v2 opens zero such files
+and observes zero environment hashes.  The unchanged comparison CLI is
+`NOT_RUN_BY_DESIGN` because it opens those local files.  The 20 outer tests
+and embedded 50 original cases are distinct accounting layers.
 
 In the rootless branch, the
 [independent motif audit](verification/wave33-rootless-motif/audit.md)
