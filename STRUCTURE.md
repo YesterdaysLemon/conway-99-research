@@ -1523,6 +1523,12 @@ or Conway-99 outcome is excluded. The bound remains `n3>=708`, with at least
 209,994 induced six-cycles. Corrections and failed routes are collected in
 the
 [Wave 28 correction ledger](verification/2026-07-24-wave28-orchestrator-corrections.md).
+The detached
+[clean-clone replay](verification/2026-07-24-wave28-clean-clone.md) verifies
+all 88 tests, five byte-identical regenerations, 46 manifest entries, central
+metadata, links, exact Git-blob privacy, clean status, and strict object
+integrity at integration commit
+`4c4d2cb8dec14c7834984d47a7e5b29991891e60`.
 
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of

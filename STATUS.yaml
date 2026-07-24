@@ -1252,6 +1252,20 @@ twenty_eighth_research_wave:
   exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
   corrections_ledger: "verification/2026-07-24-wave28-orchestrator-corrections.md"
   corrections_ledger_sha256: "c6392fbd50ce11bcb9a8bcd2257f1642fa5c37bdb3ded4899153fd91c9c2708c"
+  integration_commit: "4c4d2cb8dec14c7834984d47a7e5b29991891e60"
+  clean_clone_commit: "4c4d2cb8dec14c7834984d47a7e5b29991891e60"
+  clean_clone_replay: "verification/2026-07-24-wave28-clean-clone.md"
+  clean_clone_replay_sha256: "0dc425b4134eacce1cfd1f07b7bbf66fe888c5284e0cca2057383b8f88aed6a3"
+  clean_clone_verdict: PASS
+  clean_clone_tests_passed: 88
+  clean_clone_regenerations_byte_identical: 5
+  clean_clone_manifest_count: 6
+  clean_clone_manifest_entries: 46
+  clean_clone_status_hash_pairs: 245
+  clean_clone_tracked_markdown_files: 266
+  clean_clone_local_links: 246
+  clean_clone_privacy_tree_files: 817
+  clean_clone_privacy_new_blobs: 66
   total_tests_passed: 88
   manifest_count: 6
   manifest_entries: 46

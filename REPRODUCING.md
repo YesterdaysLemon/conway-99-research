@@ -1588,6 +1588,14 @@ two abstract simultaneous-neighbor controls. It does not classify general
 rank-44 forms, construct `X,M,W,Q,B`, exclude `n3=708`, improve the
 `n3>=708` bound, resolve Conway-99, or establish novelty.
 
+The detached
+[Wave 28 clean-clone report](verification/2026-07-24-wave28-clean-clone.md)
+records the complete offline replay at integration commit
+`4c4d2cb8dec14c7834984d47a7e5b29991891e60`: 88 tests, five
+byte-identical regenerations, six manifests with 46 entries, central
+metadata and all-repository link checks, exact-blob privacy scans, clean
+status, and strict Git object verification.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

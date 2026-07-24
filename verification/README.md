@@ -673,6 +673,13 @@ chronology, non-evidentiary direct-enumeration timeout, metadata repair,
 theta preprocessing failures, source-retention boundary, and telemetry
 packaging repair.
 
+The detached
+[clean-clone replay](2026-07-24-wave28-clean-clone.md) passes all 88 tests,
+five byte-identical regenerations, six manifests with 46 entries, central
+metadata, all-repository local links, exact-blob privacy scans, clean status,
+and strict Git object verification at integration commit
+`4c4d2cb8dec14c7834984d47a7e5b29991891e60`.
+
 The accepted scope is:
 
 ```text

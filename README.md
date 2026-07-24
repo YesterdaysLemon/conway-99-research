@@ -969,6 +969,13 @@ Across the five mathematical suites, Wave 28 passes 88 tests and validates 46
 entries in six manifests. These results do not improve `n3>=708`, exclude
 `n3=708`, construct a graph, or resolve Conway-99.
 
+The detached
+[Wave 28 clean-clone replay](verification/2026-07-24-wave28-clean-clone.md)
+passes all 88 tests, five byte-identical regenerations, all 46 manifest
+entries, central metadata and link gates, exact-blob privacy scans, clean
+status, and strict Git object verification at integration commit
+`4c4d2cb8dec14c7834984d47a7e5b29991891e60`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1229,6 +1236,10 @@ status.
   35 frozen queries, 17 metadata-only source records, standard-ingredient
   attribution, access limits, and bounded non-discovery with novelty
   `UNKNOWN`.
+- [Wave 28 detached clean-clone replay](verification/2026-07-24-wave28-clean-clone.md):
+  88 passing tests, five byte-identical generated files, six exact manifests,
+  all-repository link and exact-blob privacy gates, clean status, and strict
+  Git object verification.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,
