@@ -2462,12 +2462,12 @@ Sixteen nonoverlapping publication manifests contain 130 entries:
 | rooted encoding Stage 1 | 11 | `3f1bdcb0ca2d08ee0380cd1435673fddb499db8c3a8273f6676c18f17ad3550c` |
 | rooted encoding Stage 2 | 8 | `f76ae0aeac6c06ca5a0de1171b619664f558710dfe060cc1c41590b697098acd` |
 | rootless candidate | 5 | `bda35ed81dcca9918cff3c544956039b8949a61bfa8a232e4e2d40edcd8d5af2` |
-| rootless Stage 1 | 7 | `eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6` |
-| rootless Stage 2 | 7 | `667535faef9a1dceed0ee40c22ed06232665a624f0937f6863434fb6c9dacc5e` |
-| status/design sources | 5 | `127035fb50940241e2934e59e241f90527694246245d75de95e2f944feb05af8` |
-| Harrison source audit | 11 | `af2faaf07ea83173342da3703b5729c02d28ae6003636b1e29bdb27d6426728a` |
+| rootless Stage 1 | 7 | `27c13fb233af677c1619d571bf73820cddd4451172fdd749ace1c9f65f8f3c8d` |
+| rootless Stage 2 | 7 | `74d1aa2a95b3ce13a47a19fddafd6e78fec193a20fd92c035e2c872345c795bc` |
+| status/design sources | 5 | `1af4bad56405fb24128285fa586e2d1e2b80c82f1bdffdafa7cbdb6053cd6812` |
+| Harrison source audit | 11 | `6052d3114a89af378cf412cc3126b60bab9dc9fe249a673188d3369a681db386` |
 | Kuber/Selub source audit | 14 | `5053217d6432365b903b787cb53e923996e96feef404904caad89dd7ebd686bc` |
-| consolidated external audit | 7 | `b737c2afc002ae9a3ae0b0c36be2568f3ef67d7379796f129eacaf328e8acc39` |
+| consolidated external audit | 7 | `f21ec00738093ac6579654c88bff3a0c9b35665c2dee83cd5cd9422b9eab483c` |
 | integration chronology | 7 | `8225664a580fe4f81b8496368dd1d32e9d8d4b9bf79f959bfd818b855350f7e6` |
 
 The encoding candidate's overlapping 18-entry local manifest and its run

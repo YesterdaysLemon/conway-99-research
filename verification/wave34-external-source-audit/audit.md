@@ -30,8 +30,8 @@ The three component packages are bound by these manifest hashes:
 
 | component | manifest SHA-256 |
 |---|---|
-| status and design sources | `127035fb50940241e2934e59e241f90527694246245d75de95e2f944feb05af8` |
-| Harrison rooted repository | `af2faaf07ea83173342da3703b5729c02d28ae6003636b1e29bdb27d6426728a` |
+| status and design sources | `1af4bad56405fb24128285fa586e2d1e2b80c82f1bdffdafa7cbdb6053cd6812` |
+| Harrison rooted repository | `6052d3114a89af378cf412cc3126b60bab9dc9fe249a673188d3369a681db386` |
 | Kuber and Selub | `5053217d6432365b903b787cb53e923996e96feef404904caad89dd7ebd686bc` |
 
 The component reports retain input freezes, commands, environment records,

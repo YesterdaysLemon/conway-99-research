@@ -2119,20 +2119,20 @@ thirty_fourth_research_wave:
   rootless_candidate_result: "attempts/wave34-rootless-global/exact-results.json"
   rootless_candidate_result_sha256: "fd4ff04bd13128a26d9a5ecb4bd1c2a8832d29d0056a592d4d90074747a0c331"
   rootless_comparison_result: "verification/wave34-rootless-global/comparison-results.json"
-  rootless_comparison_result_sha256: "5c560765a439b90838cc661e4203675d689f6471b21a364d580af4ba58de533a"
+  rootless_comparison_result_sha256: "0ba02392424f1fb8507c18c253d423834cb27e6ff945b258d15e757037e1561a"
   rootless_audit: "verification/wave34-rootless-global/audit.md"
-  rootless_audit_sha256: "c7765cf98b7754a6853f84917579bc441add49c7daaba5d7951a4930c89def70"
+  rootless_audit_sha256: "60e30b38c8076c8d0209652f1fdb286d85556d6a23dc6cd205085fc96786285a"
   rootless_manifest: "verification/wave34-rootless-global/artifact-manifest.sha256"
-  rootless_manifest_sha256: "667535faef9a1dceed0ee40c22ed06232665a624f0937f6863434fb6c9dacc5e"
+  rootless_manifest_sha256: "74d1aa2a95b3ce13a47a19fddafd6e78fec193a20fd92c035e2c872345c795bc"
   external_source_status: PASS_WITH_SCOPED_IMPORTS_AND_EXPLICIT_NON_IMPORTS
   external_source_audit: "verification/wave34-external-source-audit/audit.md"
-  external_source_audit_sha256: "f4432e58224a484cc56230b82dd84b07b53edcf19d34e775e45e41c20d9dc4c1"
+  external_source_audit_sha256: "6e57da410dad58447f9e85229f12d3cea215a90d3bb9140794938e872067a2ce"
   external_source_result: "verification/wave34-external-source-audit/results.json"
-  external_source_result_sha256: "86d1c1ba7cead388a54a7e031086e95b71e3169999110c02e2d9645d1132271c"
+  external_source_result_sha256: "ad35c16c0257bcba4c6359952f7ac836463e1af6bfebc2041d7fdd69493b1c27"
   external_source_run_report: "verification/wave34-external-source-audit/run-report.yaml"
-  external_source_run_report_sha256: "5253b20719ac6e7c73b62a16066c3ed85ae0bad009aba35cc2fb0786f4a5bf0c"
+  external_source_run_report_sha256: "940dd3392ebcac6bcdd049d59a6abcfebacf46f171e40ebc81e4d197d5146166"
   external_source_manifest: "verification/wave34-external-source-audit/artifact-manifest.sha256"
-  external_source_manifest_sha256: "b737c2afc002ae9a3ae0b0c36be2568f3ef67d7379796f129eacaf328e8acc39"
+  external_source_manifest_sha256: "f21ec00738093ac6579654c88bff3a0c9b35665c2dee83cd5cd9422b9eab483c"
   original_wave34_unit_tests: 152
   current_tree_outer_tests: 148
   rooted_structural_tests: 55
@@ -2166,7 +2166,7 @@ thirty_fourth_research_wave:
   publication_manifest_count: 16
   publication_manifest_entries: 130
   corrections_ledger: "verification/2026-07-24-wave34-orchestrator-corrections.md"
-  corrections_ledger_sha256: "ebbafee416ac4296d5a04fce33bc9b8cd203245828e9b8ba23d1ebc5fed8cfa3"
+  corrections_ledger_sha256: "35143462836d2b0ac62335557daa0c40aee6020533ad655044d548d64e94dab3"
   clean_clone_status: PENDING_INTEGRATION_REPLAY
   caveat: "Wave 34 verifies an unrestricted labeled rooted encoding, a strict rooted reparameterization and necessary duplicate-free single-column domain, scoped actual-incidence rootless lemmas and moment bounds, and bounded external-source characterizations. It supplies no graph, no complete-domain UNSAT proof, no compatible rooted 15-column/projector realization, no rootless mixed-motif forcing theorem, no endpoint resolution, no n3=708 exclusion, no Conway-99 resolution, and no novelty or priority result."
 last_updated: 2026-07-24

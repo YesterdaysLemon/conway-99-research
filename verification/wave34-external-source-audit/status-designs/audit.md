@@ -1,8 +1,11 @@
 # Wave 34 external-source audit: status and designs
 
-Date: 2026-07-24  
-Role: verifier  
-Claim label: `CITED`  
+Date: 2026-07-24
+
+Role: verifier
+
+Claim label: `CITED`
+
 Overall assessment: `PASS_WITH_BOUNDED_CAVEATS`
 
 ## Outcome
@@ -45,7 +48,8 @@ agent interpretation was treated as evidence.
 
 ## C01: Brouwer maintained status
 
-Assessment: `CONFIRMED_MAINTAINED_STATUS`  
+Assessment: `CONFIRMED_MAINTAINED_STATUS`
+
 Claim label: `CITED`
 
 The [maintained table index](https://aeb.win.tue.nl/graphs/srg/srgtab.html)
@@ -76,7 +80,8 @@ does not construct or exclude the Conway 99-graph.
 
 ## C02: McKay's approximate design count
 
-Assessment: `CONFIRMED_CONTEXTUAL_APPROXIMATE_QUOTE`  
+Assessment: `CONFIRMED_CONTEXTUAL_APPROXIMATE_QUOTE`
+
 Claim label: `CITED`
 
 McKay's author-hosted slide deck,
@@ -108,7 +113,8 @@ It is an approximate scale statement only.
 
 ## C03: Rijeka corpus scope
 
-Assessment: `CONFIRMED_RESTRICTED_DERIVED_CORPUS`  
+Assessment: `CONFIRMED_RESTRICTED_DERIVED_CORPUS`
+
 Claim label: `CITED`
 
 The University of Rijeka

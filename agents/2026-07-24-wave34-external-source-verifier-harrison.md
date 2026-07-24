@@ -1,7 +1,9 @@
 # Wave 34 external-source verifier: Harrison Lane E2
 
-Date: 2026-07-24  
-Role: verifier  
+Date: 2026-07-24
+
+Role: verifier
+
 External pin: `harrisonpedrero/conway-99-graph@26b36c540611fa02c95a5a4bd78cd4a582257195`
 
 ## Handoff verdict

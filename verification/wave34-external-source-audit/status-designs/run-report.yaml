@@ -31,7 +31,7 @@ command: >-
   verification/wave34-external-source-audit/status-designs/validate_results.py
 outputs:
   verification/wave34-external-source-audit/status-designs/results.json: 802c6b2c0cf77f4e64cfb4232f21afc10cf3ffe15d5042d0b9ba6eabb51621d3
-  verification/wave34-external-source-audit/status-designs/audit.md: e2de0acba234312a5980fcb160ac2db1c1c97dac838f5db073b17dab0f55b1b0
+  verification/wave34-external-source-audit/status-designs/audit.md: 998554196853a8608b4c4f07059dc30e9e0c3cbc28d43bd569bba6d3f233aac6
   verification/wave34-external-source-audit/status-designs/validate_results.py: 866454c7dd34bf4463fa6f9cba71ba289ed97ed65d7e00d2837baf608e880f71
   verification/wave34-external-source-audit/status-designs/recheck_live_sources.ps1: 7168f609d7e6555af2beea0306383507eb2ae6480cff27a319a5ed64015dc6e6
 limitations:

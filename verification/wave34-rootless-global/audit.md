@@ -18,7 +18,7 @@ byte-exact:
 
 ```text
 verification/wave34-rootless-global/precomparison/artifact-manifest.sha256
-eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6
+27c13fb233af677c1619d571bf73820cddd4451172fdd749ace1c9f65f8f3c8d
 ```
 
 All seven files named by that manifest still match. All eight Stage 2 release

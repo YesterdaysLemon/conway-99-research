@@ -104,4 +104,3 @@ n3=708:                            UNKNOWN
 Conway-99:                         UNKNOWN
 novelty:                           UNKNOWN
 ```
-

@@ -157,6 +157,33 @@ test enforces that boundary, and the complete replay was rerun. The accepted
 result hash is
 `b18a3e402a23f39924dd282482a64404443b8aaa2f1fbfcfb32cec09a2d59cb4`.
 
+## Full-range publication-format repair
+
+The first detached finalization replay exposed deliberate Markdown hard-break
+spaces in three source-audit reports and one extra terminal blank line in the
+rootless Stage 1 failed-routes ledger. The first proposed repair added narrow
+`.gitattributes` whitespace rules. The rooted encoding verifier rejected that
+proposal because `.gitattributes` is itself a frozen formula-packaging input.
+The failed proposal was reverted; no verifier input hash was relaxed.
+
+The four prose files were normalized instead. Every affected run report and
+manifest was rebuilt through the complete provenance chain. The resulting
+rootless Stage 1 and Stage 2 manifest hashes are
+`27c13fb233af677c1619d571bf73820cddd4451172fdd749ace1c9f65f8f3c8d`
+and
+`74d1aa2a95b3ce13a47a19fddafd6e78fec193a20fd92c035e2c872345c795bc`.
+The Harrison, status/design, and consolidated external manifest hashes are
+`6052d3114a89af378cf412cc3126b60bab9dc9fe249a673188d3369a681db386`,
+`1af4bad56405fb24128285fa586e2d1e2b80c82f1bdffdafa7cbdb6053cd6812`,
+and
+`f21ec00738093ac6579654c88bff3a0c9b35665c2dee83cd5cd9422b9eab483c`.
+
+The rootless comparison was regenerated from the repaired frozen inputs and
+matched its updated accepted result at
+`0ba02392424f1fb8507c18c253d423834cb27e6ff945b258d15e757037e1561a`.
+Only provenance hashes changed; every mathematical field and every global
+`UNKNOWN` wall remained unchanged.
+
 ## Current-source lane
 
 Brouwer's maintained `?` marker, McKay's contextual approximate

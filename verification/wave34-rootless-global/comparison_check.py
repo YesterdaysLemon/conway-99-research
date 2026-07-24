@@ -32,7 +32,7 @@ CANDIDATE_INPUTS = {
     "attempts/wave34-rootless-global/local-control.json": "a25d19e3eda3ec77b55065b7f39a68345fa911b80eafbff0e4c37b1857e10301",
     "attempts/wave34-rootless-global/test_local_model.py": "21d4dc17c19098ee826202af4688611dbbf5982d0ab9216bb87da6839452a378",
     "attempts/wave34-rootless-global/artifact-manifest.sha256": "bda35ed81dcca9918cff3c544956039b8949a61bfa8a232e4e2d40edcd8d5af2",
-    "verification/wave34-rootless-global/precomparison/artifact-manifest.sha256": "eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6",
+    "verification/wave34-rootless-global/precomparison/artifact-manifest.sha256": "27c13fb233af677c1619d571bf73820cddd4451172fdd749ace1c9f65f8f3c8d",
 }
 
 CANDIDATE_ARTIFACTS = {

@@ -7,8 +7,8 @@ git_commit: 37e8635298e1ce0f23726dd7f80526698c82be91
 claim_label: VERIFIED
 scope: Consolidation of three independently audited external-source lanes
 inputs:
-  status_designs_manifest: 127035fb50940241e2934e59e241f90527694246245d75de95e2f944feb05af8
-  harrison_manifest: af2faaf07ea83173342da3703b5729c02d28ae6003636b1e29bdb27d6426728a
+  status_designs_manifest: 1af4bad56405fb24128285fa586e2d1e2b80c82f1bdffdafa7cbdb6053cd6812
+  harrison_manifest: 6052d3114a89af378cf412cc3126b60bab9dc9fe249a673188d3369a681db386
   kuber_selub_manifest: 5053217d6432365b903b787cb53e923996e96feef404904caad89dd7ebd686bc
 method: Verify component manifests and integrate only their scoped conclusions
 command: See verification/wave34-external-source-audit/run-report.yaml

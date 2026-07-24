@@ -1,8 +1,11 @@
 # Wave 34 Lane E2 audit: Harrison rooted-fiber repository
 
-Date: 2026-07-24  
-Role: verifier  
-Pinned repository: `https://github.com/harrisonpedrero/conway-99-graph`  
+Date: 2026-07-24
+
+Role: verifier
+
+Pinned repository: `https://github.com/harrisonpedrero/conway-99-graph`
+
 Pinned commit: `26b36c540611fa02c95a5a4bd78cd4a582257195`
 
 ## Verdict

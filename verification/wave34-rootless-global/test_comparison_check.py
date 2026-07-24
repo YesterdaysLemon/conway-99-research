@@ -37,7 +37,7 @@ class FrozenInputTests(unittest.TestCase):
         self.assertEqual(result["precomparison_entries"], 7)
         self.assertEqual(
             result["precomparison_manifest_sha256"],
-            "eb855e68b00ce516f1567629b6a627837bdb6b1ad8aa22ceb2c6def86aa968f6",
+            "27c13fb233af677c1619d571bf73820cddd4451172fdd749ace1c9f65f8f3c8d",
         )
 
     def test_wave33_input_hash_discrepancy_is_literal_and_reproduced(self) -> None:

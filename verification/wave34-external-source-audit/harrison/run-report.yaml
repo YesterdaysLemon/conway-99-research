@@ -42,7 +42,7 @@ command: >-
   --clone <external-temporary-clone> --workspace <repository-root>
 outputs:
   - path: verification/wave34-external-source-audit/harrison/audit.md
-    sha256: 5a242c406604a470623cee66468226e57dd50529830e45dd7a534ef0173ddf2f
+    sha256: 0cbc73426610f4f257b3266ff3d9fcbd5426c961d0cca844e44ee8c1c1487a43
   - path: verification/wave34-external-source-audit/harrison/results.json
     sha256: 0d9ea150bb86e33c00f46e72620dec61e0a2b84c130597596299d80ab8e8baf2
   - path: verification/wave34-external-source-audit/harrison/certificate-ledger.json
