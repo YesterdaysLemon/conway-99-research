@@ -1431,6 +1431,14 @@ and observes zero environment hashes.  The unchanged comparison CLI is
 `NOT_RUN_BY_DESIGN` because it opens those local files.  The 20 outer tests
 and embedded 50 original cases are distinct accounting layers.
 
+The
+[detached Wave 33 clean-clone replay](verification/2026-07-24-wave33-clean-clone.md)
+checks exact integration commit `66790bc`, passes all 130 outer tests,
+byte-matches eight external regenerations, validates all 80 manifest entries,
+resolves all 1,522 claim/obligation evidence references, scans the exact
+release tree and all 118 new blobs with zero actionable privacy findings, and
+finishes with clean status and strict Git object verification.
+
 In the rootless branch, the
 [independent motif audit](verification/wave33-rootless-motif/audit.md)
 verifies the following exact local boundary.  At a formally allowed

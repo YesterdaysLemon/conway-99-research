@@ -1011,6 +1011,13 @@ n3=708 / Conway-99 / novelty:            UNKNOWN
 ```
 
 The
+[Wave 33 detached clean-clone replay](2026-07-24-wave33-clean-clone.md)
+checks exact integration commit `66790bc` with 130 passing outer tests, eight
+byte-identical external regenerations, eight manifests with 80 entries,
+central-ledger/link/privacy gates, clean status, and strict Git object
+verification.
+
+The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol
 interpretation, and the later A20-addendum chronology.

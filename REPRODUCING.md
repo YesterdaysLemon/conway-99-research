@@ -2275,6 +2275,15 @@ Read the
 for the separation chronology, wording qualifier, checker coverage gaps,
 replay mistakes, and unchanged global status.
 
+The
+[Wave 33 detached clean-clone replay](verification/2026-07-24-wave33-clean-clone.md)
+checks exact integration commit
+`66790bc326a6a8161567a2c2b5c32ed3cbffd279` in a no-local, no-hardlink
+detached clone. It passes all 130 outer tests, byte-matches all eight
+regenerations, validates 80 manifest entries and 401 status path/hash pairs,
+checks 358 local links, scans the exact tree and all 118 new blobs, and
+finishes with clean status and `git fsck --full --strict`.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

@@ -1868,9 +1868,9 @@ thirty_third_research_wave:
   discovery_commit: "69916bc75b0ffd35948bc1e874e6a8aa554e40f1"
   verification_commit: "c79d8442266ca66e167112d38050b3c3521825b5"
   chronology_repair_commit: "d3780b1c15c1ffbfb3cae8a7f1190325be8620a7"
-  integration_commit: "PENDING_CLEAN_CLONE_REPLAY"
-  clean_clone_commit: "PENDING_CLEAN_CLONE_REPLAY"
-  integration_state: CURRENT_TREE_PASS
+  integration_commit: "66790bc326a6a8161567a2c2b5c32ed3cbffd279"
+  clean_clone_commit: "66790bc326a6a8161567a2c2b5c32ed3cbffd279"
+  integration_state: CLEAN_CLONE_PASS
   target_result: UNKNOWN
   novelty_status: UNKNOWN
   strongest_bound_changed: false
@@ -1988,5 +1988,43 @@ thirty_third_research_wave:
   manifest_entries: 80
   candidate_inventory_count: 3
   candidate_inventory_entries: 35
+  clean_clone_replay: "verification/2026-07-24-wave33-clean-clone.md"
+  clean_clone_replay_sha256: "d83e18052114affaed873ddaa7bdc6a26c63afc6432345e1027aeef5bd66d052"
+  clean_clone_outer_tests_passed: 130
+  clean_clone_live_input_tests_passed: 110
+  clean_clone_chronology_tests_passed: 20
+  clean_clone_embedded_construction_tests_passed: 50
+  clean_clone_source_provenance_gate: PASS
+  clean_clone_portable_historical_package_tests_reproduced: 160
+  clean_clone_generator_commands: 8
+  clean_clone_manifests: 8
+  clean_clone_manifest_entries: 80
+  clean_clone_claims_unique: 84
+  clean_clone_obligations_unique: 79
+  clean_clone_evidence_references_resolved: 1522
+  clean_clone_status_path_sha256_pairs: 401
+  clean_clone_wave33_status_path_sha256_pairs: 24
+  clean_clone_markdown_files: 351
+  clean_clone_local_markdown_links: 358
+  clean_clone_strict_wave33_json_files: 15
+  clean_clone_release_diff_files: 102
+  clean_clone_release_diff_bytes: 1566649
+  clean_clone_release_tree_files: 1083
+  clean_clone_release_tree_bytes: 16556943
+  clean_clone_unpublished_commits: 5
+  clean_clone_range_objects: 146
+  clean_clone_new_blobs: 118
+  clean_clone_new_blob_bytes: 2341793
+  clean_clone_privacy_actionable_findings: 0
+  clean_clone_privacy_synthetic_fixtures: 4
+  clean_clone_largest_new_blob_bytes: 144762
+  clean_clone_largest_tracked_blob_bytes: 654824
+  clean_clone_readme_sha256: "53e657397ec7f0339191a5563f7640a8151b783605b63d4ba3ca4327b954e849"
+  clean_clone_no_object_alternates: true
+  clean_clone_no_venv: true
+  clean_clone_source_clone_hardlinks_distinct: true
+  clean_clone_integration_tree: "487a777bddadf29ecd60b89e631df5c713087e83"
+  clean_clone_strict_fsck: PASS
+  clean_clone_verdict: PASS
   caveat: "Wave 33 verifies a conditional finite rooted graph-extension criterion, its forced spectrum, one hostile fixed-design construction record, a formal rootless null trade in exactly named contraction families, and an actual R2 incidence board. It supplies neither a binary rooted solution nor exclusion, neither global rootless motif forcing nor avoidance, no endpoint realization, no n3=708 exclusion, no stronger bound, no Conway-99 resolution, and no novelty result."
 last_updated: 2026-07-24
