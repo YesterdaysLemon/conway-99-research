@@ -1,8 +1,8 @@
 # Wave 28 proof-separated literature and status audit
 
-Audit date: `2026-07-24` UTC  
-Frozen public base: `d76d030f6d74e2e1b7ca2b2f0f97536241b3a10b`  
-Role: `literature`  
+Audit date: `2026-07-24` UTC
+Frozen public base: `d76d030f6d74e2e1b7ca2b2f0f97536241b3a10b`
+Role: `literature`
 Overall claim label: `UNKNOWN`
 
 ## Verdict

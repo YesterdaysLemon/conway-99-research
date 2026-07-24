@@ -7,7 +7,7 @@ literature_audit:
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
   latest_audit: "verification/wave28-literature-audit/audit.md"
-  latest_audit_sha256: "31d21d2acc92c20f5f1342eb8466484a573a5c5a71d26fc1d191b78d4881ee10"
+  latest_audit_sha256: "ef18079970e410d114ab24752d4b738bc26ff4e6266a8cc775a4e14813fe1128"
   source_query_ledger: "verification/wave28-literature-audit/query-ledger.json"
   source_query_ledger_sha256: "0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -1235,7 +1235,7 @@ twenty_eighth_research_wave:
   simultaneous_neighbor_manifest_sha256: "068d9270a83b0d99a39bbc8cda8a18773c62d5899fcba202c42755f79145e985"
   simultaneous_neighbor_independent_tests_passed: 25
   source_status_audit: "verification/wave28-literature-audit/audit.md"
-  source_status_audit_sha256: "31d21d2acc92c20f5f1342eb8466484a573a5c5a71d26fc1d191b78d4881ee10"
+  source_status_audit_sha256: "ef18079970e410d114ab24752d4b738bc26ff4e6266a8cc775a4e14813fe1128"
   source_query_ledger: "verification/wave28-literature-audit/query-ledger.json"
   source_query_ledger_sha256: "0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde"
   source_query_results: "verification/wave28-literature-audit/query-results.json"
@@ -1243,9 +1243,9 @@ twenty_eighth_research_wave:
   source_bibliography: "verification/wave28-literature-audit/sources/bibliography.json"
   source_bibliography_sha256: "b59946f585b817f751300411fc8e45ebf2c04e7941abfd13ae2e8db75545a427"
   source_run_report: "verification/wave28-literature-audit/run-report.yaml"
-  source_run_report_sha256: "0fabd2ab7ce96a01ed3cefd4811e1cb0f972d05d4b84ae161eb15d7d47d19a99"
+  source_run_report_sha256: "1e27b2089d847de66c3b2d305da0c2b13b176a5a42175289d4a8a6697b2d53d9"
   source_publication_manifest: "verification/wave28-literature-audit/artifact-manifest.sha256"
-  source_publication_manifest_sha256: "102bb4e5200a1a62dee8b8094b2b32b594d18067deef61508eae377d4db2898f"
+  source_publication_manifest_sha256: "b032fa9f287bed73ae3e7526d60e48b51af43d30717187813ae8473637048df4"
   literature_query_count: 35
   literature_source_record_count: 17
   literature_access_limitations: 2
@@ -1255,7 +1255,7 @@ twenty_eighth_research_wave:
   integration_commit: "4c4d2cb8dec14c7834984d47a7e5b29991891e60"
   clean_clone_commit: "4c4d2cb8dec14c7834984d47a7e5b29991891e60"
   clean_clone_replay: "verification/2026-07-24-wave28-clean-clone.md"
-  clean_clone_replay_sha256: "0dc425b4134eacce1cfd1f07b7bbf66fe888c5284e0cca2057383b8f88aed6a3"
+  clean_clone_replay_sha256: "41f0253ce794a4ebf9eb7a9511a4b5b882743d9003db51648d680160bd5c3696"
   clean_clone_verdict: PASS
   clean_clone_tests_passed: 88
   clean_clone_regenerations_byte_identical: 5

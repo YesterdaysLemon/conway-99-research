@@ -1558,7 +1558,7 @@ The six Wave 28 manifests validate 46 entries:
 | `verification/wave28-glue-discriminant` | 4 | `d25e446673fcb80cb21afc87cd1f271c4c5e4d6d36f6ec6a564e7d6fbb2296a7` |
 | `verification/wave28-theta-modular` | 10 | `50a5e3d4b5bb066b4b281c80d6d2caa0906afc21b9de99e12731177f661c6fed` |
 | `verification/wave28-simultaneous-neighbor` | 7 | `068d9270a83b0d99a39bbc8cda8a18773c62d5899fcba202c42755f79145e985` |
-| `verification/wave28-literature-audit` | 10 | `102bb4e5200a1a62dee8b8094b2b32b594d18067deef61508eae377d4db2898f` |
+| `verification/wave28-literature-audit` | 10 | `b032fa9f287bed73ae3e7526d60e48b51af43d30717187813ae8473637048df4` |
 
 The exact theta replay is offline by default and uses the attributed,
 hash-bound numeric matrices in `catalogue-data.json`. The optional live

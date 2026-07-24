@@ -147,7 +147,11 @@ Three failed-closed packaging defects were corrected before this replay:
 3. the first manifest validator treated every slash-containing member as
    repository-relative, while the literature manifest contains
    manifest-relative `sources/...` members. The corrected gate tests the
-   repository root and then the manifest directory.
+   repository root and then the manifest directory; and
+4. the final unpublished-range `git diff --check` found three Markdown
+   hard-break spaces in the literature audit. They were normalized, and the
+   dependent audit, run-report, manifest, reproduction, and status hashes were
+   repaired without changing any source or mathematical conclusion.
 
 One preliminary asynchronous generator wrapper completed the exact theta
 enumeration but exited without its orchestration sentinel before the neighbor

@@ -33,7 +33,7 @@ command: |-
   Compare-Object ($plan.queries.id | Sort-Object) ($results.results.id | Sort-Object)
   Get-ChildItem -Recurse -File verification\wave28-literature-audit | Get-FileHash -Algorithm SHA256
 outputs:
-  verification/wave28-literature-audit/audit.md: 31d21d2acc92c20f5f1342eb8466484a573a5c5a71d26fc1d191b78d4881ee10
+  verification/wave28-literature-audit/audit.md: ef18079970e410d114ab24752d4b738bc26ff4e6266a8cc775a4e14813fe1128
   verification/wave28-literature-audit/protocol-freeze.md: c1982e91aeb31b235a73cc2fac36b9972e7ac4135df9783def6ac0e9bab313a1
   verification/wave28-literature-audit/query-ledger.json: 0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde
   verification/wave28-literature-audit/query-results.json: 02e1a0b293d7bd8534597119079f9aec2be9736cc40c387b58a96bccc35af380
