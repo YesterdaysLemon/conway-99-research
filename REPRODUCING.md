@@ -1682,6 +1682,15 @@ all other determinant-729 lattices: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
 
+The detached
+[Wave 29 clean-clone report](verification/2026-07-24-wave29-clean-clone.md)
+records the complete offline replay at integration commit
+`ae8fd70baaeb35302f957653e20ad710e5e77281`: 45 tests, two
+byte-identical regenerations, three manifests with 19 entries, 263 status
+path/hash pairs, 275 tracked Markdown files with 263 resolving local links,
+exact-blob privacy over the 841-file release tree and all 32 new blobs, clean
+status, and strict Git object verification.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

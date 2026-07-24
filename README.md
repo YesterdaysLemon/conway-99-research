@@ -1026,6 +1026,13 @@ Wave 29 excludes exactly this one `S0` endpoint origin. It does not exclude
 another determinant-729 lattice, the `h=729` row, `n3=708`, or Conway-99, and
 does not improve `n3>=708`.
 
+The detached
+[Wave 29 clean-clone replay](verification/2026-07-24-wave29-clean-clone.md)
+passes all 45 tests, two byte-identical regenerations, all 19 manifest
+entries, central metadata and repository-wide link gates, exact Git-blob
+privacy scans, clean status, and strict object verification at integration
+commit `ae8fd70baaeb35302f957653e20ad710e5e77281`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1298,6 +1305,10 @@ status.
   81 frozen query strings, 16 metadata-only source records, standard
   ingredient attribution, explicit access limits, and no exact combined hit,
   with novelty and broader target status `UNKNOWN`.
+- [Wave 29 detached clean-clone replay](verification/2026-07-24-wave29-clean-clone.md):
+  45 passing tests, two byte-identical generated files, three exact manifests,
+  all-repository link and exact-blob privacy gates, clean status, and strict
+  Git object verification.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

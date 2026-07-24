@@ -638,6 +638,13 @@ every other h=729 lattice: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
 
+The detached
+[clean-clone replay](2026-07-24-wave29-clean-clone.md) passes all 45 tests,
+two byte-identical regenerations, three manifests with 19 entries, central
+metadata, all-repository local links, exact-blob privacy scans, clean status,
+and strict Git object verification at integration commit
+`ae8fd70baaeb35302f957653e20ad710e5e77281`.
+
 Glued, non-root, and otherwise nonorthogonal general lattices are not
 classified or excluded. The headline conditional bound therefore remains
 `n3>=708`.

@@ -1584,6 +1584,13 @@ queries and finds no exact combined precedent, without asserting novelty.
 Corrections and packaging chronology are retained in the
 [Wave 29 correction ledger](verification/2026-07-24-wave29-orchestrator-corrections.md).
 
+The detached
+[clean-clone replay](verification/2026-07-24-wave29-clean-clone.md) verifies
+all 45 tests, two byte-identical regenerations, 19 manifest entries, central
+metadata, repository-wide links, exact Git-blob privacy, clean status, and
+strict object integrity at integration commit
+`ae8fd70baaeb35302f957653e20ad710e5e77281`.
+
 This excludes one exact `S0` endpoint origin only. Other determinant-729
 lattices, the full `h=729` row, `n3=708`, Conway-99, and novelty remain
 `UNKNOWN`.
