@@ -732,6 +732,17 @@ surviving 20+24 type / rooted / indecomposable:        UNKNOWN
 h=729 row / n3=708 / Conway-99 / novelty:              UNKNOWN
 ```
 
+The detached
+[Wave 30 clean-clone replay](2026-07-24-wave30-clean-clone.md) freezes
+integration commit `0a31b62...` in a no-local, no-hardlink clone. It passes
+60 tests in the repaired integration tree and 32 tests in the separately
+extracted historical verifier snapshot, reproduces the original expected
+zero-test/generator failure, regenerates four accepted JSON files byte for
+byte, validates six manifests with 47 entries, and passes central-ledger,
+link, exact-blob privacy, clean-status, and strict Git-object gates. Its scope
+is reproducibility and publication hygiene for the conditional decomposable
+reduction and bare `T20` construction only.
+
 The
 [Wave 27 correction ledger](2026-07-24-wave27-orchestrator-corrections.md)
 preserves the E6 exposition bridge, the corrected literature-protocol

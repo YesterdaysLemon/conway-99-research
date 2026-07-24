@@ -1854,6 +1854,17 @@ surviving 20+24 type / rooted / indecomposable:   UNKNOWN
 h=729 row / n3=708 / Conway-99 / novelty:         UNKNOWN
 ```
 
+The detached
+[Wave 30 clean-clone replay](verification/2026-07-24-wave30-clean-clone.md)
+freezes integration commit
+`0a31b62b337153b6d45dbdf1288810cd726c17a3`. In a new clone with local-clone
+optimization and hardlinks disabled, it repeats the 60 current-tree tests,
+the 32-test historical verifier replay, the original expected failure, four
+byte-identical regenerations, all six manifests and 47 entries, central
+ledger and link checks, exact-blob privacy scans, clean-status checks, and
+`git fsck --full --strict`. The replay certifies publication hygiene for the
+two scoped Wave 30 results; it does not promote any broader endpoint status.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

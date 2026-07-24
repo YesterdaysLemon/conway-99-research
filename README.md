@@ -1116,6 +1116,16 @@ Wave 30 neither excludes the surviving decomposable type nor treats rooted
 or integrally indecomposable `h=729` forms. The `h=729` row, `n3=708`,
 Conway-99, and novelty remain `UNKNOWN`; the bound remains `n3>=708`.
 
+The detached
+[Wave 30 clean-clone replay](verification/2026-07-24-wave30-clean-clone.md)
+checks integration commit `0a31b62...` in a new no-local, no-hardlink clone.
+It passes 60 current-tree tests and 32 historically separated verifier tests,
+reproduces the original zero-test failure, regenerates four accepted JSON
+files byte for byte, validates all 47 entries in six manifests, checks
+central metadata and all local Markdown links, scans exact Git blobs and
+commit messages for private material, and finishes with clean status and
+strict object verification.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1403,6 +1413,11 @@ status.
 - [Wave 30 literature/status audit](verification/wave30-literature-audit/audit.md):
   96 frozen query strings, 21 metadata-only source records, exact-signature
   near-hit analysis, explicit coverage limits, and novelty `UNKNOWN`.
+- [Wave 30 detached clean-clone replay](verification/2026-07-24-wave30-clean-clone.md):
+  92 passing tests across separated snapshots, four byte-identical
+  regenerations, six exact manifests with 47 entries, central metadata,
+  repository-wide link and exact-blob privacy gates, clean status, and strict
+  Git object verification.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

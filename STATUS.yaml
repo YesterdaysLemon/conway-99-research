@@ -1370,6 +1370,8 @@ thirtieth_research_wave:
   general_repair_commit: "a7be6b8ae70d8b44e88db8dfd6804f8d946ca382"
   literature_audit_commit: "180b5358fa81f3d04a283704b25ea8294d21ab09"
   general_reverification_commit: "9d579856fdb1b903e42a70307b1d9ea45a8785d4"
+  integration_commit: "0a31b62b337153b6d45dbdf1288810cd726c17a3"
+  clean_clone_commit: "0a31b62b337153b6d45dbdf1288810cd726c17a3"
   target_result: UNKNOWN
   novelty_status: UNKNOWN
   strongest_bound_changed: false
@@ -1522,12 +1524,31 @@ thirtieth_research_wave:
   exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
   corrections_ledger: "verification/2026-07-24-wave30-orchestrator-corrections.md"
   corrections_ledger_sha256: "5b90c18e4523b10a186546d185046551017fbcc6cea9c56de9bd2fd251499203"
+  clean_clone_replay: "verification/2026-07-24-wave30-clean-clone.md"
+  clean_clone_replay_sha256: "33642ca9c988bc5954f1f761d1aadae44998bec7108ed68ecbdac865b499cbcf"
   current_tree_tests_passed: 60
   historical_verifier_tests_passed: 32
   total_tests_passed: 92
   deterministic_regenerations_byte_identical: 4
   manifest_count: 6
   manifest_entries: 47
-  clean_clone_verdict: PENDING
+  clean_clone_claims_unique: 74
+  clean_clone_obligations_unique: 68
+  clean_clone_missing_evidence_paths: 0
+  clean_clone_status_path_sha256_pairs: 309
+  clean_clone_bibtex_keys_unique: 82
+  clean_clone_wave30_source_records_covered: 21
+  clean_clone_tracked_markdown_files: 292
+  clean_clone_local_markdown_links: 285
+  clean_clone_release_diff_files: 54
+  clean_clone_release_tree_files: 887
+  clean_clone_release_tree_bytes: 14044263
+  clean_clone_unpublished_commits: 8
+  clean_clone_new_blobs: 60
+  clean_clone_new_blob_bytes: 1263900
+  clean_clone_privacy_findings: 0
+  clean_clone_integration_tree: "89866561237c2fad24351ee932f52e4a6de4ad4e"
+  clean_clone_strict_fsck: PASS
+  clean_clone_verdict: PASS
   caveat: "Wave 30 verifies a conditional fourteen-of-fifteen reduction only for rootless integrally orthogonally decomposable h=729 endpoint forms, and verifies one exact bare T20 orthogonal-sum LAMBDA24 lattice package of the surviving rank/determinant shape. It neither excludes the surviving type nor treats rooted or integrally indecomposable forms. No compatible Q, B, frame, X, M, W, Schur-square certificate, endpoint, graph, n3=708 result, Conway-99 outcome, or novelty claim follows."
 last_updated: 2026-07-24
