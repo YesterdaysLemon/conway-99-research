@@ -1,0 +1,7 @@
+1bc63f569600bca88e12c977a0bd94ecdd03aa5f3fd8c4f203d4778fbec78efa  agents/2026-07-24-wave30-general-h729.md
+ed8edcbb0febde6d6fbd57776b7696402f832421fa11fb1984fcd57c8369eaff  attempts/wave30-general-h729/exact_check.py
+9075d5fd77253850ba09c4655d9cbab135eb32fdd36638dc4aa9051fa49898a2  attempts/wave30-general-h729/test_exact_check.py
+93cc1633d0b25d5f3daecd4c49cbc3b2dc3f754576a3cd5c9364c729a79a7698  attempts/wave30-general-h729/exact-results.json
+a07c703b20237441b221e13c68be885d01db180871b8496af5d7204e2587793b  attempts/wave30-general-h729/input-freeze.sha256
+397f74c75a8ae24bedd26fea41c0fb82d03c6611a87627e86aeb29244a586006  attempts/wave30-general-h729/failed-routes.md
+77232c06827c4c62e7dc6f5380cc4ebe2a3c6d5496fe8c3592589986089e416f  attempts/wave30-general-h729/run-report.yaml
