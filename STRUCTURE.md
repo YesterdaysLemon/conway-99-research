@@ -1530,6 +1530,64 @@ metadata, links, exact Git-blob privacy, clean status, and strict object
 integrity at integration commit
 `4c4d2cb8dec14c7834984d47a7e5b29991891e60`.
 
+## Wave 29 exclusion of the rootless `S0` endpoint origin
+
+Wave 29 tests whether the Wave 28 bare control
+
+```text
+S0=K12 orthogonal_sum LAMBDA(F)
+```
+
+can carry the full frozen `n3=708` projector/Schur package. Because both
+integral summands have minimum four, every norm-four frame row lies wholly in
+one summand. The tight-frame trace gives the exact split
+
+```text
+K12 rows:       63
+LAMBDA(F) rows: 168.
+```
+
+After permuting rows, `X`, `M`, `W`, `Q`, and `B` split into matching blocks.
+The endpoint determinant bound gives `det(Q)=5`. Evenness rules out a
+rank-12 unimodular `Q_K`, so
+
+```text
+det(Q_K)=5, det(Q_L)=1,
+det(B_K)=3645, det(B_L)=1.
+```
+
+The projector row alphabet and cubic trace identity make both block traces
+positive multiples of six. Exact AM--GM leaves only
+
+```text
+tr(B_K)=24, tr(B_L)=36.
+```
+
+Thus the integral, `G_K`-self-adjoint matrix
+`C_K=(B_K-I_12)/2` has trace six. It is not assumed positive semidefinite;
+only `B_K=I+2C_K` is positive, so each `C_K` eigenvalue is greater than
+`-1/2`. Integral characteristic coefficients make the nonzero
+characteristic pseudodeterminant an integer of absolute value at least one.
+The full-domain logarithmic inequality then gives
+
+```text
+det(B_K)<=3^6=729,
+```
+
+contradicting `det(B_K)=3645`.
+
+The
+[independent audit](verification/wave29-s0-frame-exclusion/audit.md)
+reconstructs the proof with 27 hostile tests and a byte-identical result. The
+[source audit](verification/wave29-s0-literature-audit/audit.md) logs 81
+queries and finds no exact combined precedent, without asserting novelty.
+Corrections and packaging chronology are retained in the
+[Wave 29 correction ledger](verification/2026-07-24-wave29-orchestrator-corrections.md).
+
+This excludes one exact `S0` endpoint origin only. Other determinant-729
+lattices, the full `h=729` row, `n3=708`, Conway-99, and novelty remain
+`UNKNOWN`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

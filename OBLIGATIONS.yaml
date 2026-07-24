@@ -975,3 +975,41 @@ obligations:
       - "verification/2026-07-24-wave28-orchestrator-corrections.md"
       - "SOURCES.bib"
     note: "All 35 frozen query IDs have matched outcomes; the package retains 17 metadata-only records, two explicit access/service limitations, and no raw HTML or papers. A 2025 refereed source calls Conway-99 open and a 2026 SAT preprint reports no resolution. No exact combined Wave 28 hit was found, but bounded non-discovery does not prove openness after the cutoff, novelty, or priority. The audit verifies source scope rather than arithmetic."
+
+  - id: O-WAVE29-S0-EXCLUSION
+    requirement: "Blindly reconstruct the exclusion of only S0=K12 orthogonal-sum LAMBDA(F) from the full frozen endpoint package, including integral minimum-four row support, the 63/168 tight-frame split, induced M/W/Q/B blocks, determinant-five allocation and rank-12 even-unimodular veto, complete row-alphabet residue, exact AM-GM trace pair, the non-PSD C_K spectral boundary, characteristic-pseudodeterminant integrality, the logarithmic inequality on both positive and negative domains, active premise deletions, and the final 3645>729 contradiction."
+    critical: true
+    status: PASS
+    evidence:
+      - "agents/2026-07-24-wave29-s0-frame-exclusion.md"
+      - "attempts/wave29-s0-frame-exclusion/exact_check.py"
+      - "attempts/wave29-s0-frame-exclusion/test_exact_check.py"
+      - "attempts/wave29-s0-frame-exclusion/exact-results.json"
+      - "attempts/wave29-s0-frame-exclusion/failed-routes.md"
+      - "attempts/wave29-s0-frame-exclusion/run-report.yaml"
+      - "attempts/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+      - "verification/wave29-s0-frame-exclusion/protocol-freeze.md"
+      - "verification/wave29-s0-frame-exclusion/independent_check.py"
+      - "verification/wave29-s0-frame-exclusion/test_independent_check.py"
+      - "verification/wave29-s0-frame-exclusion/independent-results.json"
+      - "verification/wave29-s0-frame-exclusion/audit.md"
+      - "verification/wave29-s0-frame-exclusion/failure-ledger.md"
+      - "verification/wave29-s0-frame-exclusion/run-report.yaml"
+      - "verification/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave29-orchestrator-corrections.md"
+    note: "The discovery suite passes 18 tests and the clean-room verifier passes 27 hostile tests. Both JSON results replay byte-identically, and all 14 mathematical manifest entries match. The verifier corrects stale preinspection commit metadata and rejects a C_K positive-semidefinite shortcut while reproducing every exact implication. The conclusion excludes one S0 endpoint origin only; every other h=729 lattice, n3=708, Conway-99, and novelty remain UNKNOWN."
+
+  - id: O-WAVE29-LITERATURE-STATUS
+    requirement: "Freeze the exact single-lattice exclusion and its identifying proof signature before searching; query exact and alternate lattice names, numerical fingerprints, endpoint/frame language, determinant-log and pseudodeterminant terms, standard ingredients, and current target status; retain metadata only; account for service limits; and separate bounded non-discovery from novelty or global-openness claims."
+    critical: false
+    status: PASS
+    evidence:
+      - "verification/wave29-s0-literature-audit/protocol-freeze.md"
+      - "verification/wave29-s0-literature-audit/query-ledger.json"
+      - "verification/wave29-s0-literature-audit/source-metadata.json"
+      - "verification/wave29-s0-literature-audit/audit.md"
+      - "verification/wave29-s0-literature-audit/run-report.yaml"
+      - "verification/wave29-s0-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave29-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    note: "The audit logs 81 query strings in 21 batches and retains 16 primary or authoritative records with zero raw source payloads. It finds standard ingredients but no exact combined proof match. One Crossref query was rate-limited; Google Scholar, MathSciNet, and zbMATH were not comprehensively machine-audited. Exact prior-art match is NONE_IN_BOUNDED_AUDIT, while novelty and broader target status remain UNKNOWN."

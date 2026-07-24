@@ -1596,6 +1596,92 @@ byte-identical regenerations, six manifests with 46 entries, central
 metadata and all-repository link checks, exact-blob privacy scans, clean
 status, and strict Git object verification.
 
+## Wave 29 single-lattice endpoint exclusion
+
+Replay the discovery and independent-verification suites:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave29-s0-frame-exclusion -p test_exact_check.py -v
+python -B -m unittest discover `
+  -s verification\wave29-s0-frame-exclusion `
+  -p test_independent_check.py -v
+```
+
+The suites pass 18 and 27 tests, respectively: 45 tests total.
+
+Regenerate both exact result files outside the checkout:
+
+```powershell
+$wave29Generated = Join-Path `
+  ([IO.Path]::GetTempPath()) `
+  ("conway-wave29-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $wave29Generated | Out-Null
+
+try {
+  $submitted = Join-Path $wave29Generated "submitted.json"
+  $independent = Join-Path $wave29Generated "independent.json"
+
+  python -B attempts\wave29-s0-frame-exclusion\exact_check.py `
+    --output $submitted
+  python -B verification\wave29-s0-frame-exclusion\independent_check.py `
+    --output $independent
+
+  $submittedExpected = (
+    Get-FileHash -Algorithm SHA256 `
+      attempts\wave29-s0-frame-exclusion\exact-results.json
+  ).Hash
+  $submittedActual = (
+    Get-FileHash -Algorithm SHA256 $submitted
+  ).Hash
+  if ($submittedExpected -ne $submittedActual) {
+    throw "Wave 29 submitted result differs"
+  }
+
+  $independentExpected = (
+    Get-FileHash -Algorithm SHA256 `
+      verification\wave29-s0-frame-exclusion\independent-results.json
+  ).Hash
+  $independentActual = (
+    Get-FileHash -Algorithm SHA256 $independent
+  ).Hash
+  if ($independentExpected -ne $independentActual) {
+    throw "Wave 29 independent result differs"
+  }
+}
+finally {
+  Remove-Item -LiteralPath $wave29Generated -Recurse -Force `
+    -ErrorAction SilentlyContinue
+}
+```
+
+The expected output hashes are:
+
+```text
+7a85c5321b5e91365c246dff7bae9264cc82494da5c866b1b351511099f6638c
+c0418cec88915089d6cc2e29735ca3e7bc425cfcd2b3ce09a78a707e36e0aa04
+```
+
+The three Wave 29 manifests validate 19 entries:
+
+| package | entries | manifest SHA-256 |
+|---|---:|---|
+| `attempts/wave29-s0-frame-exclusion` | 7 | `8cb5b0198ac9e787a8234820e648626dc27f900f53b7511068d5442d06d7a39b` |
+| `verification/wave29-s0-frame-exclusion` | 7 | `6a62209abbca6403dee7b9ebf83edbdccd5466a278957ab9d63f37bcd3f08cf8` |
+| `verification/wave29-s0-literature-audit` | 5 | `76898c9ecdcaba86bf14469700110f4ad45ea70ba576c7ebea73d725d0de9177` |
+
+The literature ledger accounts for 81 query strings in 21 batches and 16
+retained metadata-only sources. No raw paper, HTML, or API response is part
+of the package.
+
+The verified mathematical scope is exactly:
+
+```text
+S0=K12 orthogonal_sum LAMBDA(F) as a full endpoint S-form: excluded
+all other determinant-729 lattices: UNKNOWN
+n3=708 / Conway-99 / novelty: UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

@@ -15,3 +15,10 @@ Wave 28 reports:
   rootless bare-lattice hostile control.
 - `2026-07-24-wave28-simultaneous-neighbor-freeze.md`: immutable intake for
   the independently checked paired-form two-neighbor controls.
+
+Wave 29 report:
+
+- `2026-07-24-wave29-s0-frame-exclusion.md`: discovery proof excluding only
+  the Wave 28 rootless `K12 orthogonal_sum LAMBDA(F)` control from carrying
+  the full endpoint projector/Schur package; independently verified before
+  central promotion.

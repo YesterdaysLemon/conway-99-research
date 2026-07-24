@@ -590,6 +590,54 @@ general even rank-44 scaled-dual form: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
 
+## Wave 29 single-lattice endpoint exclusion
+
+The
+[Wave 29 independent audit](wave29-s0-frame-exclusion/audit.md) reconstructs
+the exact exclusion of only
+
+```text
+S0=K12 orthogonal_sum LAMBDA(F)
+```
+
+from the frozen full endpoint package. Minimum-four support gives 63 and 168
+frame rows in the two blocks. Determinant allocation, the rank-12
+even-unimodular veto, row-alphabet trace residues, and exact AM--GM force
+
+```text
+det(B_K)=3645,
+tr(B_K)=24,
+tr(C_K)=6.
+```
+
+`C_K` is integral and self-adjoint but is not assumed positive semidefinite.
+The verifier checks the logarithmic inequality separately on
+`(-1/2,0)` and `(0,infinity)`. Characteristic-pseudodeterminant integrality
+then gives `det(B_K)<=729`, contradicting 3645.
+
+The discovery and independent suites pass 18 and 27 tests, respectively.
+Both results regenerate byte-identically, and all 14 mathematical manifest
+entries validate. The verifier retains stale preinspection commit metadata,
+the rejected PSD shortcut, exact determinant rounding, and active
+premise-deletion controls.
+
+The proof-separated
+[literature audit](wave29-s0-literature-audit/audit.md) logs 81 query strings
+in 21 batches, retains 16 primary or authoritative metadata records, and
+finds standard ingredients but no exact combined prior result. One Crossref
+query was rate-limited, and three major bibliographic services were not
+comprehensively machine-audited. Novelty remains `UNKNOWN`.
+
+The [correction ledger](2026-07-24-wave29-orchestrator-corrections.md)
+records mathematical acceptance, wording and metadata corrections,
+publication-byte normalization, source limits, and the exact scope wall:
+
+```text
+S0 full endpoint origin: REFUTED (VERIFIED)
+every other h=729 lattice: UNKNOWN
+n3=708 / Conway-99 / novelty: UNKNOWN
+```
+
 Glued, non-root, and otherwise nonorthogonal general lattices are not
 classified or excluded. The headline conditional bound therefore remains
 `n3>=708`.

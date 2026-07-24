@@ -36,9 +36,10 @@ and the normalized search problem.
   necessary arithmetic includes `tr(C^2)>=10` and `det(B)<=6525`. Wave 27
   conditionally excludes every full orthogonal ADE root-lattice form. Wave 28
   adds corrected discriminant/glue restrictions, a rootless bare-lattice
-  control, and nonorthogonal two-neighbor controls, but none supplies the
-  required 231-row projector/Schur origin. General lattices remain
-  unclassified, so the endpoint is not excluded.
+  control, and nonorthogonal two-neighbor controls. Wave 29 proves that the
+  specific rootless control cannot supply the required 231-row
+  projector/Schur origin. Other general lattices remain unclassified, so the
+  endpoint is not excluded.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -976,6 +977,55 @@ entries, central metadata and link gates, exact-blob privacy scans, clean
 status, and strict Git object verification at integration commit
 `4c4d2cb8dec14c7834984d47a7e5b29991891e60`.
 
+Wave 29 returns to the rootless bare control
+
+```text
+S0=K12 orthogonal_sum LAMBDA(F)
+```
+
+and assumes, for contradiction, that it carries the full frozen endpoint
+package. Minimum-four support splits the 231 frame rows into exactly 63 rows
+on `K12` and 168 on `LAMBDA(F)`, forcing matching blocks of `M,W,Q,B`.
+Endpoint determinants and the rank-12 even-unimodular signature veto give
+
+```text
+(det(B_K),det(B_L))=(3645,1).
+```
+
+The row alphabet makes both block traces positive multiples of six. Exact
+AM--GM then forces
+
+```text
+(tr(B_K),tr(B_L))=(24,36).
+```
+
+For `C_K=(B_K-I)/2`, integrality supplies a nonzero integer characteristic
+pseudodeterminant. A pointwise logarithmic inequality, proved separately on
+the positive and negative eigenvalue intervals, gives
+
+```text
+det(B_K)<=3^6=729<3645.
+```
+
+The discovery suite passes 18 tests; a clean-room verifier passes 27 hostile
+tests and regenerates its result byte-identically. The verifier does not
+assume `C_K` is positive semidefinite: negative eigenvalues in `(-1/2,0)` are
+explicitly covered. See the
+[discovery report](agents/2026-07-24-wave29-s0-frame-exclusion.md),
+[independent audit](verification/wave29-s0-frame-exclusion/audit.md), and
+[correction ledger](verification/2026-07-24-wave29-orchestrator-corrections.md).
+
+The independent
+[Wave 29 literature audit](verification/wave29-s0-literature-audit/audit.md)
+logs 81 query strings in 21 batches and retains 16 primary or authoritative
+metadata records. It finds standard ingredients but no exact prior source for
+the combined `63/168 -> 3645/1 -> 24/36 -> 729` argument. This is bounded
+non-discovery only; novelty and broader target status remain `UNKNOWN`.
+
+Wave 29 excludes exactly this one `S0` endpoint origin. It does not exclude
+another determinant-729 lattice, the `h=729` row, `n3=708`, or Conway-99, and
+does not improve `n3>=708`.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
@@ -1240,6 +1290,14 @@ status.
   88 passing tests, five byte-identical generated files, six exact manifests,
   all-repository link and exact-blob privacy gates, clean status, and strict
   Git object verification.
+- [Wave 29 single-lattice endpoint audit](verification/wave29-s0-frame-exclusion/audit.md):
+  blind reconstruction of the `63/168` support split, determinant and trace
+  allocations, characteristic-pseudodeterminant bound, negative-eigenvalue
+  control, and exact `3645>729` contradiction.
+- [Wave 29 literature/status audit](verification/wave29-s0-literature-audit/audit.md):
+  81 frozen query strings, 16 metadata-only source records, standard
+  ingredient attribution, explicit access limits, and no exact combined hit,
+  with novelty and broader target status `UNKNOWN`.
 - [Wave 25 clean-source replay](verification/2026-07-23-wave25-clean-clone.md):
   detached 39-test replay, two byte-identical generated files, two exact
   manifests, metadata and unpublished-history privacy gates, clean status,

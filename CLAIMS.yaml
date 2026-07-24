@@ -864,6 +864,45 @@ claims:
       - "SOURCES.bib"
     limitations: "The official Brouwer table could not be opened through the search service, and no authenticated zbMATH connector was available; both are access limitations, not nonhit evidence. A bounded source search cannot prove openness after its cutoff, novelty, or priority. The audit verifies attribution and theorem boundaries, not the repository arithmetic. Target existence, n3=708, and Wave 28 novelty remain UNKNOWN."
 
+  - id: C-WAVE29-S0-037
+    statement: "The single even rank-44 lattice S0=K12 orthogonal-sum LAMBDA(F) cannot be the S-form of a full frozen n3=708 projector/Schur endpoint package. Minimum-four support forces a 63/168 row split and matching M,W,Q,B blocks; determinant allocation and the rank-12 even-unimodular veto give det(B_K)=3645 and det(B_L)=1; row-alphabet residues and exact AM-GM give traces 24 and 36; the integral characteristic pseudodeterminant and full-domain logarithmic inequality give det(B_K)<=729, a contradiction."
+    label: VERIFIED
+    scope: SINGLE_ROOTLESS_S0_FULL_ENDPOINT_ORIGIN_EXCLUDED
+    evidence:
+      - "agents/2026-07-24-wave29-s0-frame-exclusion.md"
+      - "attempts/wave29-s0-frame-exclusion/exact_check.py"
+      - "attempts/wave29-s0-frame-exclusion/test_exact_check.py"
+      - "attempts/wave29-s0-frame-exclusion/exact-results.json"
+      - "attempts/wave29-s0-frame-exclusion/input-freeze.sha256"
+      - "attempts/wave29-s0-frame-exclusion/failed-routes.md"
+      - "attempts/wave29-s0-frame-exclusion/run-report.yaml"
+      - "attempts/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+      - "verification/wave29-s0-frame-exclusion/protocol-freeze.md"
+      - "verification/wave29-s0-frame-exclusion/independent_check.py"
+      - "verification/wave29-s0-frame-exclusion/test_independent_check.py"
+      - "verification/wave29-s0-frame-exclusion/independent-results.json"
+      - "verification/wave29-s0-frame-exclusion/audit.md"
+      - "verification/wave29-s0-frame-exclusion/failure-ledger.md"
+      - "verification/wave29-s0-frame-exclusion/run-report.yaml"
+      - "verification/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave29-orchestrator-corrections.md"
+    limitations: "The proof uses the explicit integral orthogonal decomposition K12 orthogonal-sum LAMBDA(F) and excludes only this one S-form. C_K is not assumed positive semidefinite; only B_K=I+2C_K is positive, and negative C_K eigenvalues in (-1/2,0) are handled separately. No other determinant-729 lattice, determinant row, n3=708 endpoint, graph, Conway-99 outcome, or novelty claim is established."
+
+  - id: C-WAVE29-LITERATURE-038
+    statement: "At the frozen 2026-07-24 cutoff, the independent Wave 29 source audit logged 81 query strings in 21 batches, retained 16 primary or authoritative metadata records, and found no source for the exact combined 63/168 row split, 3645/1 determinant allocation, 24/36 trace allocation, and 729 logarithmic cap. It separately identifies standard lattice, tight-frame, even-unimodular, and pseudodeterminant ingredients."
+    label: CITED
+    scope: BOUNDED_WAVE29_PRIOR_ART_AND_CURRENT_TARGET_STATUS_AUDIT_ONLY
+    evidence:
+      - "verification/wave29-s0-literature-audit/protocol-freeze.md"
+      - "verification/wave29-s0-literature-audit/query-ledger.json"
+      - "verification/wave29-s0-literature-audit/source-metadata.json"
+      - "verification/wave29-s0-literature-audit/audit.md"
+      - "verification/wave29-s0-literature-audit/run-report.yaml"
+      - "verification/wave29-s0-literature-audit/artifact-manifest.sha256"
+      - "verification/2026-07-24-wave29-orchestrator-corrections.md"
+      - "SOURCES.bib"
+    limitations: "No exact prior result found in searched sources is not a novelty, priority, or global-openness certificate. One Crossref request was rate-limited, and Google Scholar, MathSciNet, and zbMATH were not comprehensively machine-audited. The audit retained no raw source payload and did not verify the mathematics. Novelty, broader target status, all other h=729 forms, and n3=708 remain UNKNOWN."
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

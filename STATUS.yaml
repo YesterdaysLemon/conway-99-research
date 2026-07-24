@@ -6,14 +6,15 @@ literature_audit:
   through: 2026-07-24
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
   caveat: "Current target-specific sources still describe existence as open, but a nonexhaustive literature search cannot prove openness or novelty."
-  latest_audit: "verification/wave28-literature-audit/audit.md"
-  latest_audit_sha256: "ef18079970e410d114ab24752d4b738bc26ff4e6266a8cc775a4e14813fe1128"
-  source_query_ledger: "verification/wave28-literature-audit/query-ledger.json"
-  source_query_ledger_sha256: "0afa288ecbb47f27f7b5ca5a9d7d44ecba2fff046461ff0f38501c287bc23fde"
+  latest_audit: "verification/wave29-s0-literature-audit/audit.md"
+  latest_audit_sha256: "b6946969ac2337ff5e0f02afe78ec19ae96f62d1af0a7a9c5c57298a75fb863f"
+  source_query_ledger: "verification/wave29-s0-literature-audit/query-ledger.json"
+  source_query_ledger_sha256: "923837b13066fdfe6db9362f5209ba722993e231ce7f0efbbc299be7cb0af970"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave28_prior_hit: NONE_IN_BOUNDED_AUDIT
+  exact_wave29_prior_hit: NONE_IN_BOUNDED_AUDIT
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -1270,4 +1271,79 @@ twenty_eighth_research_wave:
   manifest_count: 6
   manifest_entries: 46
   caveat: "Wave 28 verifies corrected necessary discriminant/root-glue and theta restrictions, a rootless bare h=729 S/G control, and two simultaneous-neighbor abstract arithmetic/lattice controls. It does not classify general even rank-44 scaled-dual lattices, construct a primitive Z^231 embedding or marked 231-row frame, verify Q=X^T(M o M)X for any control, exclude a determinant row or n3=708, improve the headline bound, construct a graph, resolve Conway-99, or establish novelty."
+twenty_ninth_research_wave:
+  frozen_local_base: "74b6f3adcee19ca2b0480258bb7bf51198bd085a"
+  discovery_commit: "2b1337e06453a41120534dcecafdf6fc726fe10d"
+  verification_commit: "5dbff08f8cb53102118acd281a6d4b353a962cf8"
+  literature_audit_commit: "ff6902812c46d33bd081e7580d09baa1d60a5494"
+  target_result: UNKNOWN
+  novelty_status: UNKNOWN
+  strongest_bound_changed: false
+  conditional_n3_lower_bound: 708
+  conditional_induced_C6_lower_bound: 209994
+  endpoint_n3: 708
+  n3_708_excluded: false
+  determinant_rows_excluded: 0
+  h_729_row_excluded: false
+  s0_full_endpoint_origin: REFUTED_VERIFIED
+  s0_only: true
+  every_other_h_729_lattice: UNKNOWN
+  K12_rows: 63
+  LAMBDA_F_rows: 168
+  det_Q: 5
+  det_Q_K12: 5
+  det_Q_LAMBDA_F: 1
+  det_B_K12: 3645
+  det_B_LAMBDA_F: 1
+  trace_B_K12: 24
+  trace_B_LAMBDA_F: 36
+  trace_C_K12: 6
+  logarithmic_det_B_K12_cap: 729
+  contradiction: "3645 > 729"
+  C_K12_positive_semidefinite_assumed: false
+  C_K12_eigenvalue_lower_boundary: "-1/2"
+  discovery_report: "agents/2026-07-24-wave29-s0-frame-exclusion.md"
+  discovery_report_sha256: "e6ae61331a54d53f2a98712296ebac855f45b46de32ff2ec4d85018f2d8a5045"
+  discovery_checker: "attempts/wave29-s0-frame-exclusion/exact_check.py"
+  discovery_checker_sha256: "6a31c4ae0b2c994f4c715ba5118e3b25a052e8b3fc99dea88ea794cb7d9d8dce"
+  discovery_result: "attempts/wave29-s0-frame-exclusion/exact-results.json"
+  discovery_result_sha256: "7a85c5321b5e91365c246dff7bae9264cc82494da5c866b1b351511099f6638c"
+  discovery_run_report: "attempts/wave29-s0-frame-exclusion/run-report.yaml"
+  discovery_run_report_sha256: "91fba9dad3bb9d906eb69c06ca97be82ff804296dcb010be3f6749e67beba286"
+  discovery_manifest: "attempts/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+  discovery_manifest_sha256: "8cb5b0198ac9e787a8234820e648626dc27f900f53b7511068d5442d06d7a39b"
+  discovery_tests_passed: 18
+  verifier_audit: "verification/wave29-s0-frame-exclusion/audit.md"
+  verifier_audit_sha256: "dbdcb88bf309cbfa47a42b9fb63dd7cf483e07cac8b92c475094c96be3723b7d"
+  independent_checker: "verification/wave29-s0-frame-exclusion/independent_check.py"
+  independent_checker_sha256: "f072583e33ef483cc72c29989d58ba2ec2accb91da80f128a7a8b73329205ab0"
+  independent_result: "verification/wave29-s0-frame-exclusion/independent-results.json"
+  independent_result_sha256: "c0418cec88915089d6cc2e29735ca3e7bc425cfcd2b3ce09a78a707e36e0aa04"
+  verifier_run_report: "verification/wave29-s0-frame-exclusion/run-report.yaml"
+  verifier_run_report_sha256: "d6ddcbdb2c6141ff1731e4913c6436d9b6fd6cc3c5f2bdf6454cb38d85cc9764"
+  verifier_manifest: "verification/wave29-s0-frame-exclusion/artifact-manifest.sha256"
+  verifier_manifest_sha256: "6a62209abbca6403dee7b9ebf83edbdccd5466a278957ab9d63f37bcd3f08cf8"
+  independent_tests_passed: 27
+  literature_protocol: "verification/wave29-s0-literature-audit/protocol-freeze.md"
+  literature_protocol_sha256: "0ac1e394645dcc5433d72aba8dd82492bac032f7dd6e9047c847fa53211c29d5"
+  literature_query_ledger: "verification/wave29-s0-literature-audit/query-ledger.json"
+  literature_query_ledger_sha256: "923837b13066fdfe6db9362f5209ba722993e231ce7f0efbbc299be7cb0af970"
+  literature_source_metadata: "verification/wave29-s0-literature-audit/source-metadata.json"
+  literature_source_metadata_sha256: "c8f98b437cb14d8d87b66d3b3ebeb4f1fbd9c176c94314fcc5119f929df50e13"
+  literature_audit: "verification/wave29-s0-literature-audit/audit.md"
+  literature_audit_sha256: "b6946969ac2337ff5e0f02afe78ec19ae96f62d1af0a7a9c5c57298a75fb863f"
+  literature_run_report: "verification/wave29-s0-literature-audit/run-report.yaml"
+  literature_run_report_sha256: "a1a55f8223810fab8602bf8ac59c6f18d3751064dbe58c73d04f8f0139944b4d"
+  literature_manifest: "verification/wave29-s0-literature-audit/artifact-manifest.sha256"
+  literature_manifest_sha256: "76898c9ecdcaba86bf14469700110f4ad45ea70ba576c7ebea73d725d0de9177"
+  literature_query_strings: 81
+  literature_query_batches: 21
+  literature_source_records: 16
+  exact_prior_hit_status: NONE_IN_BOUNDED_AUDIT
+  corrections_ledger: "verification/2026-07-24-wave29-orchestrator-corrections.md"
+  corrections_ledger_sha256: "8a9e0c8e9fbbba8984086d63b69efa608322717c2415583fe03e905ca936cc5c"
+  total_tests_passed: 45
+  manifest_count: 3
+  manifest_entries: 19
+  caveat: "Wave 29 verifies that the single bare lattice S0=K12 orthogonal-sum LAMBDA(F) cannot be the S-form of the full frozen endpoint package. It does not exclude another determinant-729 lattice or the h=729 row, classify general even rank-44 forms, exclude n3=708, improve n3>=708, construct a graph, resolve Conway-99, or establish novelty."
 last_updated: 2026-07-24
