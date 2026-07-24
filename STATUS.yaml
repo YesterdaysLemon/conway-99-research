@@ -1525,7 +1525,7 @@ thirtieth_research_wave:
   corrections_ledger: "verification/2026-07-24-wave30-orchestrator-corrections.md"
   corrections_ledger_sha256: "5b90c18e4523b10a186546d185046551017fbcc6cea9c56de9bd2fd251499203"
   clean_clone_replay: "verification/2026-07-24-wave30-clean-clone.md"
-  clean_clone_replay_sha256: "33642ca9c988bc5954f1f761d1aadae44998bec7108ed68ecbdac865b499cbcf"
+  clean_clone_replay_sha256: "a0f07f648926d3afd19b713a3db96de820a32d77cb68bf3166e12301116bedcf"
   current_tree_tests_passed: 60
   historical_verifier_tests_passed: 32
   total_tests_passed: 92

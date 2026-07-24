@@ -171,6 +171,30 @@ already returned zero. The wrapper's overall nonzero exit was discarded. A
 quoted rerun repeated all integrity checks successfully and returned the tree
 object above.
 
+The later source-repository publication preflight at commit
+`be733b4e055baebbc94fb689401262368a65b41e` retained two further wrapper
+corrections. First, `git fsck --full --strict` returned exit code zero but
+listed benign unreachable objects accumulated outside the release history;
+the first wrapper incorrectly required empty informational output. A rerun
+with `--no-dangling` suppressed only that listing and passed with no output.
+Second, the first exact-blob scanner filled the input side of a bidirectional
+`git cat-file --batch` pipe before reading its output, deadlocked, and timed
+out before producing a verdict. The corrected scanner used atomic subprocess
+communication and passed over the same requested object set:
+
+```text
+release tree:          888 files, 14,053,941 bytes
+unpublished range:       9 commits, 29 trees, 65 blobs
+new blob bytes:          1,581,914
+unique blobs scanned:  856
+privacy findings:        0
+prohibited payloads:     0
+blobs over 5 MiB:        0
+```
+
+Neither failed wrapper produced mathematical or publication evidence. No
+tracked file or reachable release object was altered by either failure.
+
 ## Scope
 
 This replay verifies reproducibility and publication hygiene for two scoped
