@@ -25,12 +25,28 @@ Conway asked whether a 99-vertex graph exists in which every edge belongs to a
 unique triangle and every nonedge belongs to a unique quadrilateral.
 
 For a simple graph, the first condition says that adjacent vertices have one
-common neighbor. For nonadjacent vertices `u,v`, every unordered pair of common
-neighbors determines one 4-cycle through `u,v`; hence a unique quadrilateral
-means exactly two common neighbors. Together with the feasible-parameter
-relation, these are the `srg(99,14,1,2)` conditions. The project uses the
-strongly regular formulation as the frozen target because it makes regularity
-and cycle conventions explicit.
+common neighbor. If nonadjacent `u,v` have `t` common neighbors, no two of those
+neighbors can be adjacent: such an edge would lie in triangles with both `u`
+and `v`. The quadrilaterals with diagonal `uv` are therefore counted by
+`binom(t,2)`. Uniqueness gives `binom(t,2)=1`, hence `t=2`.
+
+Regularity also follows rather than being an extra assumption. Let `D` be the
+diagonal degree matrix. The common-neighbor conditions give
+
+```text
+A^2 = D - 2 I - A + 2 J.
+```
+
+Because `A` commutes with `A^2`, comparing the `(i,j)` entries after commuting
+the right-hand side yields
+
+```text
+(2 - A_ij)(d_i - d_j) = 0.
+```
+
+Since `A_ij` is 0 or 1, all degrees are equal, say to `k`. Taking row sums in
+the preceding matrix identity gives `k^2=2(99-1)=196`, so `k=14`. Thus Conway's
+wording is equivalent to the frozen `srg(99,14,1,2)` target.
 
 ## Matrix certificate
 
@@ -63,6 +79,14 @@ whose roots are 3 and -4. Trace and dimension give the forced spectrum
 
 This is a necessary consistency check, but a matrix with this spectrum alone
 is not a certificate for the target.
+
+With the Seidel matrix `S=J-I-2A`, an equivalent certificate identity is
+
+```text
+S 1 = 70 1,        S^2 = 49(I+J),
+```
+
+where `S` is symmetric, hollow, and has off-diagonal entries in `{+1,-1}`.
 
 ## Root-normalized 84-vertex formulation
 
@@ -99,6 +123,17 @@ X^2 + B^T B = 12 I - X + 2 J.
 
 These equations are over the integers. They are an exact reformulation, not a
 relaxation.
+
+If residual labels `p,q` intersect in `t` root-neighbor coordinates, where
+`t` is 0 or 1, then the number of common neighbors they must have inside the
+residual graph is
+
+```text
+2 - X[p,q] - t.
+```
+
+This scalar rule is useful for propagation but does not replace the full block
+equations.
 
 ## Resolution standard
 

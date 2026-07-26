@@ -15,8 +15,12 @@ env/
 *.lrat
 *.proof
 *.checkpoint
+logs/local/
 dist/
 build/
+
+# Third-party GENREG archive: download from the official host for Wave 12 replay.
+verification/n3-42-equality/14_3_4.scd
 
 # Keep small, intentionally committed fixtures despite broad artifact ignores.
 !verification/fixtures/**/*.cnf

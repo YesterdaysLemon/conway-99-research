@@ -1,0 +1,24 @@
+* text=auto eol=lf
+
+formal/opb-calibration/*.opb text eol=lf
+formal/opb-calibration/*.pbp text eol=lf
+verification/cyclic-design/*.json text eol=lf
+verification/cyclic-design/*.py text eol=lf
+verification/literature-audit/*.py text eol=lf
+verification/n3-joint-cover/*.json text eol=lf
+verification/n3-joint-cover/*.py text eol=lf
+verification/n3-refined-cover/*.json text eol=lf
+verification/n3-refined-cover/*.py text eol=lf
+verification/n3-count-bound/*.py text eol=lf
+verification/n3-42-equality/*.json text eol=lf
+verification/n3-42-equality/*.py text eol=lf
+
+# Wave 19 verifier logs are checksum-pinned raw Windows process streams.
+# Preserve their exact bytes so clean clones reproduce the audit hashes.
+verification/n3-60-closure/*.log -text -diff
+
+# Wave 34 encoding audits were emitted as checksum-pinned raw Windows streams.
+# Preserve their exact bytes so the published manifests survive clean clones.
+attempts/wave34-rooted-encoding/compression-audit.json -text -diff
+attempts/wave34-rooted-encoding/dimacs-audit.json -text -diff
+attempts/wave34-rooted-encoding/test-results.txt -text -diff
