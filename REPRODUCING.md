@@ -2538,6 +2538,63 @@ rigorous interval:                      708 <= n3 <= 4158
 n3=4158 / Conway-99:                    UNKNOWN
 ```
 
+## Wave 36 modular, polar, and block checks
+
+Replay the endpoint modular and ternary-polar discovery packages:
+
+```powershell
+.venv\Scripts\python -B -m unittest -v `
+  attempts/wave36-modular-reflection/test_exact_check.py
+.venv\Scripts\python -B attempts/wave36-modular-reflection/exact_check.py `
+  --verify attempts/wave36-modular-reflection/exact-results.json
+.venv\Scripts\python -B -m unittest -v `
+  attempts/wave36-ternary-polar-bound/test_exact_check.py
+.venv\Scripts\python -B attempts/wave36-ternary-polar-bound/exact_check.py `
+  --verify attempts/wave36-ternary-polar-bound/exact-results.json
+```
+
+Replay their independent reconstructions:
+
+```powershell
+.venv\Scripts\python -B -m unittest -v `
+  verification/wave36-modular-reflection/test_independent_check.py
+.venv\Scripts\python -B verification/wave36-modular-reflection/independent_check.py `
+  --verify verification/wave36-modular-reflection/independent-results.json
+.venv\Scripts\python -B -m unittest -v `
+  verification/wave36-ternary-polar-bound/test_independent_check.py
+.venv\Scripts\python -B `
+  verification/wave36-ternary-polar-bound/independent_check.py `
+  --verify verification/wave36-ternary-polar-bound/independent-results.json
+```
+
+Replay the one-triangle discovery and independent block checks:
+
+```powershell
+.venv\Scripts\python -B -m unittest -v `
+  attempts/wave36-block-compatibility/test_exact_check.py
+.venv\Scripts\python -B attempts/wave36-block-compatibility/exact_check.py `
+  --verify attempts/wave36-block-compatibility/exact-results.json
+.venv\Scripts\python -B -m unittest -v `
+  verification/wave36-block-compatibility/test_independent_check.py
+.venv\Scripts\python -B `
+  verification/wave36-block-compatibility/independent_check.py `
+  --verify verification/wave36-block-compatibility/independent-results.json
+```
+
+Expected totals are 11 submitted and 11 independent modular tests, 10
+submitted and 12 independent ternary-polar tests, and 10 submitted and 12
+independent block tests.  The exact promoted scope is:
+
+```text
+rank_F3(M)>=12 and rank_F7(M)>=11:       VERIFIED scoped
+rank-12 nonsquare ternary factor:        excluded
+reciprocal Smith pairing:                VERIFIED scoped
+mixed one-triangle equations and census: VERIFIED scoped
+simultaneous B/H completion:             UNKNOWN
+n3 upper bound below 4158:               not obtained
+Conway-99:                               UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

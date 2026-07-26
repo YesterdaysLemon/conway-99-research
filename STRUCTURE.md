@@ -2418,6 +2418,129 @@ This is a finite exact one-triangle feasibility problem. A restricted
 pairwise control exists, but no simultaneous 60-block system or
 cross-triangle compatibility certificate is known.
 
+### Wave 36 modular endpoint restrictions (`VERIFIED SCOPED`)
+
+The integral reflection has stronger finite-field consequences than the
+initial endpoint report recorded.  Put
+
+```text
+r3=rank_F3(M)=rank_F3(C),
+r7=rank_F7(M)=rank_F7(C).
+```
+
+Independent reconstruction proves
+
+```text
+r3>=12,
+r7>=11,
+r3+r7=0 (mod 2).
+```
+
+If `d1|...|d231` are the Smith factors of `C`, then
+
+```text
+d_i d_(232-i)=441.
+```
+
+Consequently the complete Smith form is fixed once `(r3,r7)` is fixed.  The
+rank-seven bound comes from the entrywise-cubic identity
+
+```text
+C^(o3)=4(I+C) (mod 7).
+```
+
+The right side is invertible because `C^2=0 (mod 7)`.  Thus 231 pure
+symmetric cubes are independent and
+
+```text
+binom(r7+2,3)>=231.
+```
+
+The sharper ternary bound uses finite orthogonal geometry.  A symmetric
+rank factorization modulo three writes
+
+```text
+C=V H V^T.
+```
+
+Its 231 factor rows give distinct norm-two projective points, each
+orthogonal to exactly 162 of the others.  In either determinant class, the
+ambient norm-two projective orthogonality graph is strongly regular.  If it
+has parameters `(v,k,lambda,mu)` and positive nonprincipal eigenvalue
+`theta`, an induced 231-point, 162-regular subgraph would require
+
+```text
+162 <= (231k+(v-231)theta)/v.
+```
+
+Exact point counts make the right side smaller than 162 in both determinant
+classes through dimension eleven.  At dimension twelve the nonsquare class
+still has upper bound 158, while the square class survives with upper bound
+`4149/13`.  Hence `r3>=12`, and equality requires the square determinant
+class.  These are conditional arithmetic restrictions, not an endpoint
+matrix or an upper-bound improvement.
+
+### Wave 36 one-triangle strengthening (`VERIFIED SCOPED`)
+
+Write `H=A_Y` for the 60-vertex graph in the one-triangle partition.  The
+three exact block equations are
+
+```text
+B B^T       = 12I - A_X + 2J - R R^T - A_X^2,
+B H         = 2J - (I+A_X)B,
+B^T B + H^2 = 12I - H + 2J.
+```
+
+For a column `b` of `B`, the mixed equation forces
+
+```text
+d(b)=2*1-(I+A_X)b>=0.
+```
+
+Besides requiring the selected vertices to induce a matching, this says
+that no unselected `X` vertex has three selected neighbors.  On the frozen
+Wave 35 restricted core, this exact cut reduces the individual-block census
+from
+
+```text
+183980 to 151712.
+```
+
+It is still only an individual-column census.
+
+If a connected component of `A_X` contains `m` vertices in each of the
+three fibres, every six-point block meets that component in exactly `m/2`
+points.  Thus every `m` is even.  The `m=2` component is `K3,3`, which
+violates the target common-neighbor rule, leaving exactly
+
+```text
+[12], [4,8], [6,6], [4,4,4]
+```
+
+as the possible component-size partitions in units of one vertex per
+fibre.
+
+Finally, if `c` is the number of components and
+
+```text
+chi_X(t)=(t-3)^c t^2 f(t),
+```
+
+then any compatible `H` must satisfy
+
+```text
+chi_H(t)=(-1)^(34-c)
+         (t-8)(t-3)^18(t+4)^(7+c) f(-1-t).
+```
+
+In particular `H` is connected, has exactly 32 triangles, and has
+
+```text
+C4(H)=171+C4(A_X).
+```
+
+No simultaneous 60-column `B`, compatible `H`, or contradiction is known.
+
 ### Rooted and one-edge construction reductions (`DERIVED` / `CANDIDATE`)
 
 Fix a root `o`, whose 14 neighbors are seven mate pairs `(a_i,b_i)`. For

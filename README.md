@@ -1690,6 +1690,99 @@ n3 general interval:                    708 <= n3 <= 4158
 n3=4158 / Conway-99:                    UNKNOWN
 ```
 
+## Wave 36 finite-field and block-compatibility checkpoint
+
+Wave 36 sharpened two parts of the prism-free endpoint without resolving it.
+All promoted statements below were reconstructed by verifier code that did
+not import the corresponding discovery modules.
+
+For the endpoint reflection `C=2M-21I`, write
+
+```text
+r3=rank_F3(M),  r7=rank_F7(M).
+```
+
+The verified arithmetic restrictions are
+
+```text
+r3 >= 12,
+r7 >= 11,
+r3+r7 even.
+```
+
+The Smith factors of `C` pair reciprocally as
+`d_i d_(232-i)=441`, so `(r3,r7)` fixes the full Smith form.  The
+characteristic-seven floor comes from 231 independent symmetric cubes.  The
+stronger characteristic-three floor views the 231 endpoint rows as distinct
+norm-two projective points, each orthogonal to 162 selected companions, and
+applies an exact spectral-mixing bound in the two finite orthogonal graphs.
+Ranks through eleven fail in both determinant classes; at rank twelve the
+nonsquare class also fails, while the square class survives.
+
+The one-triangle lane now uses all three block equations, not only the
+`X-X` Gram equation:
+
+```text
+B B^T       = 12I - A_X + 2J - R R^T - A_X^2,
+B H         = 2J - (I+A_X)B,
+B^T B + H^2 = 12I - H + 2J.
+```
+
+The middle equation gives the new pointwise cut
+
+```text
+2*1-(I+A_X)b >= 0
+```
+
+for every six-point block `b`.  On the frozen restricted core it removes
+32,268 previously admissible individual columns:
+
+```text
+183980 -> 151712.
+```
+
+The same exact system proves that every block meets an `X`-component with
+`m` points per fibre in exactly `m/2` points.  The only surviving component
+partitions are `[12]`, `[4,8]`, `[6,6]`, and `[4,4,4]`.  It also transfers
+the `X` spectrum to any compatible 60-vertex graph `H`, forcing `H` to be
+connected with 32 triangles and
+
+```text
+C4(H)=171+C4(A_X).
+```
+
+These are meaningful additional necessary conditions, but the scope wall is
+unchanged:
+
+```text
+modular and ternary-polar restrictions: VERIFIED scoped
+one-triangle mixed equations and census: VERIFIED scoped
+simultaneous 60-block system / graph H:   UNKNOWN
+proof-producing endpoint search:         no result promoted
+rigorous interval:                       708 <= n3 <= 4158
+n3=4158 / Conway-99:                     UNKNOWN
+```
+
+The prior-art audit found that the ambient ternary orthogonality graphs and
+their spectra are standard, and that Evans's 2023 regular-induced-subgraph
+polynomial reproduces the same rank cutoff after substituting the
+target-specific Wave 36 configuration. The audit did not locate the exact
+Conway endpoint-to-polar-graph application, characteristic-seven cubic
+identity, or reciprocal Smith pairing, but a bounded no-hit does not establish
+novelty or priority. Both remain `UNKNOWN`.
+
+See the [modular report](agents/2026-07-26-wave36-modular-reflection.md),
+[modular audit](verification/wave36-modular-reflection/audit.md),
+[ternary polar report](agents/2026-07-26-wave36-ternary-polar-bound.md),
+[ternary polar audit](verification/wave36-ternary-polar-bound/audit.md),
+[block report](agents/2026-07-26-wave36-block-compatibility.md), and
+[block audit](verification/wave36-block-compatibility/audit.md). Attribution
+and the bounded source/query ledger are in the
+[Wave 36 literature audit](agents/2026-07-26-wave36-literature-audit.md).
+The final separation and publication checks are in the
+[orchestrator decision](verification/2026-07-26-wave36-orchestrator.md) and
+[integration audit](verification/2026-07-26-wave36-integration-audit.md).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

@@ -104,3 +104,19 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   units, exact reduction from twelve normalized `N3` branches to five,
   deterministic OPB files for four local seed partitions, and every bounded
   solver stop. All timeouts and conflict-budget stops are `UNKNOWN`.
+
+## Wave 36: modular, ternary-polar, and mixed-block restrictions
+
+- `wave36-modular-reflection/` derives reciprocal Smith factors, modular-rank
+  constraints, and the characteristic-seven pure-cube ceiling. Its submitted
+  11-test suite does not construct a surviving endpoint matrix.
+- `wave36-ternary-polar-bound/` converts the endpoint rows into a regular
+  induced set of ternary norm-two projective points and checks the exact
+  finite orthogonal parameter table. Its submitted 10-test suite leaves the
+  square rank-twelve class and all larger allowed ranks alive.
+- `wave36-block-compatibility/` derives the mixed block equations, restricted
+  individual-column and fixed-pair censuses, component balance, and spectral
+  transfer to `H`. Its 10-test suite supplies no simultaneous 60-column
+  design.
+- `wave36-literature-audit/` freezes the bounded source/query metadata and
+  exact Evans substitutions. No search nonhit is treated as novelty evidence.

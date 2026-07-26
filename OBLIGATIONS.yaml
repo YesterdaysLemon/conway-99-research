@@ -1584,3 +1584,77 @@ obligations:
     note: >-
       No complete positive or negative endpoint certificate exists. The
       general interval remains 708<=n3<=4158 and Conway-99 remains UNKNOWN.
+
+  - id: O-WAVE36-MODULAR-AND-POLAR-VERIFICATION
+    requirement: >-
+      Independently reconstruct the conditional endpoint reflection over
+      F_3 and F_7, its reciprocal Smith pairing and rank parity, the
+      symmetric-cube rank floor, the ternary projective distinctness
+      argument, both finite orthogonal determinant classes, the delicate
+      degenerate nonadjacent-pair count, and every exact spectral-mixing
+      inequality.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave36-modular-reflection/audit.md"
+      - "verification/wave36-modular-reflection/independent-results.json"
+      - "verification/wave36-modular-reflection/run-report.yaml"
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-ternary-polar-bound/independent-results.json"
+      - "verification/wave36-ternary-polar-bound/run-report.yaml"
+    note: >-
+      The verified endpoint necessities are rank_F3(M)>=12 and
+      rank_F7(M)>=11, with reciprocal Smith factors and the nonsquare
+      rank-twelve ternary class excluded. Surviving modular shapes are not
+      matrices or graphs, and the endpoint remains UNKNOWN.
+
+  - id: O-WAVE36-BLOCK-COMPATIBILITY-VERIFICATION
+    requirement: >-
+      Independently reconstruct all three one-triangle block equations, the
+      pointwise mixed-equation cut and restricted census, component balance
+      and pattern classification, characteristic-polynomial transfer, and
+      the resulting connectivity, triangle, and four-cycle requirements on
+      H without importing discovery code or promoting bounded solver
+      telemetry.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave36-block-compatibility/audit.md"
+      - "verification/wave36-block-compatibility/independent-results.json"
+      - "verification/wave36-block-compatibility/run-report.yaml"
+    note: >-
+      The necessary equations and counts pass. The 151712 census is
+      individual-column only, and no simultaneous B/H completion,
+      contradiction, graph, or checked UNSAT certificate exists.
+
+  - id: O-WAVE36-LITERATURE-ATTRIBUTION
+    requirement: >-
+      Audit target-specific and general prior art for the Wave 36 reflection,
+      modular ranks, ternary orthogonality argument, and reciprocal Smith
+      pairing, and prevent a bounded source nonhit from being promoted to a
+      novelty or priority claim.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "agents/2026-07-26-wave36-literature-audit.md"
+      - "attempts/wave36-literature-audit/source-query-metadata.json"
+    note: >-
+      Evans's 2023 general polynomial reproduces the ternary cutoff after the
+      Wave 36 substitution. Exact target-specific matches were not located,
+      but novelty and priority remain UNKNOWN.
+
+  - id: O-WAVE36-CONTINUATION
+    requirement: >-
+      Produce a complete independently verified certificate that excludes
+      n3=4158, constructs the endpoint, or proves a stronger general upper
+      bound. Arithmetic survivors, individual block censuses, and bounded
+      solver stops do not satisfy this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave36-modular-reflection/audit.md"
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-block-compatibility/audit.md"
+    note: >-
+      The endpoint and Conway-99 remain UNKNOWN, and the rigorous interval
+      remains 708<=n3<=4158.

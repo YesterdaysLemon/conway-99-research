@@ -1531,6 +1531,102 @@ claims:
       No endpoint construction or exclusion exists. The general rigorous
       interval remains 708<=n3<=4158, and Conway-99 remains UNKNOWN.
 
+  - id: C-WAVE36-MODULAR-062
+    statement: >-
+      Conditional on n3=4158, the reflection C=2M-21I has reciprocal Smith
+      factors d_i*d_(232-i)=441; its complete Smith form is fixed by
+      (rank_F3(M),rank_F7(M)); rank_F7(M)>=11; and the two modular ranks have
+      even sum.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_MODULAR_REFLECTION
+    evidence:
+      - "agents/2026-07-26-wave36-modular-reflection.md"
+      - "attempts/wave36-modular-reflection/exact-results.json"
+      - "verification/wave36-modular-reflection/independent-results.json"
+      - "verification/wave36-modular-reflection/audit.md"
+      - "verification/wave36-modular-reflection/run-report.yaml"
+    limitations: >-
+      The rank floors remain below the rational rank ceiling 44. The finite
+      Smith shapes are arithmetic survivors, not constructed matrices or
+      realizable graphs. No endpoint exclusion or upper-bound improvement
+      follows.
+
+  - id: C-WAVE36-TERNARY-POLAR-063
+    statement: >-
+      Conditional on n3=4158, rank_F3(M)>=12. If equality holds, the
+      nondegenerate ternary factor form has square determinant class; the
+      nonsquare rank-twelve class is impossible.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_TERNARY_ORTHOGONAL_GRAPH
+    evidence:
+      - "agents/2026-07-26-wave36-ternary-polar-bound.md"
+      - "attempts/wave36-ternary-polar-bound/exact-results.json"
+      - "verification/wave36-ternary-polar-bound/independent-results.json"
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-ternary-polar-bound/run-report.yaml"
+    limitations: >-
+      The square rank-twelve class and all ranks 13 through 44 survive the
+      exact mixing test. No endpoint point set, reflection, graph,
+      contradiction, or upper-bound improvement is supplied.
+
+  - id: C-WAVE36-BLOCK-COMPATIBILITY-064
+    statement: >-
+      Conditional on n3=4158, the one-triangle blocks satisfy all three
+      displayed XX, XY, and YY equations. The XY equation gives
+      d(b)=2*1-(I+A_X)b>=0, reducing the frozen restricted individual-column
+      census from 183980 to 151712. Every block meets an X-component with m
+      vertices per fibre in m/2 points; only component partitions
+      [12],[4,8],[6,6],[4,4,4] survive; and any compatible H is connected
+      with 32 triangles and C4(H)=171+C4(A_X).
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ONE_TRIANGLE_COMPLETION_NECESSITIES
+    evidence:
+      - "agents/2026-07-26-wave36-block-compatibility.md"
+      - "attempts/wave36-block-compatibility/exact-results.json"
+      - "verification/wave36-block-compatibility/independent-results.json"
+      - "verification/wave36-block-compatibility/audit.md"
+      - "verification/wave36-block-compatibility/run-report.yaml"
+    limitations: >-
+      The 151712 objects are individual columns in one frozen restricted
+      core, not simultaneous 60-column designs. No compatible B and H,
+      endpoint matrix, contradiction, or improved upper bound is known.
+      Historical bounded solver telemetry remains non-evidentiary UNKNOWN.
+
+  - id: C-WAVE36-LITERATURE-065
+    statement: >-
+      A bounded primary-source-first audit found that the ambient ternary
+      orthogonality graphs, their spectra, and regular-induced-subgraph
+      bounds are prior theory; Evans's 2023 polynomial reproduces the exact
+      Wave 36 ternary cutoff after the target-specific substitution. The
+      audit did not locate the exact Conway endpoint application, the
+      characteristic-seven diagonal-isolating cube argument, or the
+      reciprocal Smith pairing for C=2M-21I.
+    label: CITED
+    scope: BOUNDED_WAVE36_PRIOR_ART_ATTRIBUTION
+    evidence:
+      - "agents/2026-07-26-wave36-literature-audit.md"
+      - "attempts/wave36-literature-audit/source-query-metadata.json"
+    limitations: >-
+      Source and search-engine coverage is finite. A no-hit does not
+      establish novelty, priority, or absence; novelty remains UNKNOWN.
+
+  - id: C-WAVE36-CONTINUATION-066
+    statement: >-
+      Excluding n3=4158 still requires a checked contradiction in every
+      surviving endpoint realization, for example through a simultaneous
+      one-triangle B/H incompatibility, a complete proof-producing rooted
+      branch search, or a stronger global argument; alternatively, a fully
+      decoded and checked model may construct a Conway graph.
+    label: UNKNOWN
+    scope: WAVE36_GENERAL_UPPER_BOUND_AND_PRISM_FREE_ENDPOINT_CONTINUATION
+    evidence:
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-block-compatibility/audit.md"
+      - "verification/wave36-modular-reflection/audit.md"
+    limitations: >-
+      No endpoint construction or exclusion exists. The general rigorous
+      interval remains 708<=n3<=4158, and Conway-99 remains UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

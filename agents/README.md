@@ -103,3 +103,22 @@ Wave 35 reports:
 - `2026-07-26-wave35-n3-upper-triple-overlap.md`: construction-side 84-unit,
   five-branch rooted reduction and four deterministic one-edge local OPB
   relaxations. Every bounded solver stop is non-evidentiary.
+
+Wave 36 reports:
+
+- `2026-07-26-wave36-modular-reflection.md`: discovery-side reciprocal Smith
+  pairing, modular rank restrictions, and characteristic-seven symmetric-cube
+  bound for the conditional prism-free endpoint. Read it with the independent
+  audit; arithmetic survivors are not endpoint matrices.
+- `2026-07-26-wave36-ternary-polar-bound.md`: discovery-side ternary
+  projective-point reduction and exact orthogonality-graph mixing bound. The
+  independent verifier promotes `rank_F3(M)>=12` and excludes only the
+  nonsquare determinant class at equality.
+- `2026-07-26-wave36-block-compatibility.md`: all three one-triangle block
+  equations, the mixed-equation individual-column cut, component balance,
+  characteristic transfer, and necessary invariants of a compatible `H`.
+  No simultaneous block system or endpoint exclusion is supplied.
+- `2026-07-26-wave36-literature-audit.md`: bounded prior-art audit. Evans's
+  2023 general theorem reproduces the ternary cutoff after the Wave 36
+  substitution; exact target-specific matches were not located, and novelty
+  and priority remain `UNKNOWN`.
