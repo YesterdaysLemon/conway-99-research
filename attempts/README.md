@@ -89,3 +89,18 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   searched windows, which is not a novelty or openness claim.
 - Corrections, failed routes, and the unchanged target wall are collected in
   `verification/2026-07-24-wave34-orchestrator-corrections.md`.
+
+## Wave 35: prism-free upper endpoint
+
+- `wave35-n3-upper-spectral/` records exact endpoint signed-projector, Smith,
+  Schur, compression, incidence-scalar, and local-PSD routes. The submitted
+  14-test suite and an independent 10-test suite pass, but every tested
+  obstruction survives and `n3<=4158` is unchanged.
+- `wave35-n3-4158-combinatorial/` records the exact one-triangle
+  `3+36+60` incidence reduction, finite restricted block census, one
+  pairwise positive control, and failed parity/heuristic/proofless-solver
+  routes. It does not construct or exclude a simultaneous block system.
+- `wave35-n3-upper-triple-overlap/` records the 84 rooted prism-forbidding
+  units, exact reduction from twelve normalized `N3` branches to five,
+  deterministic OPB files for four local seed partitions, and every bounded
+  solver stop. All timeouts and conflict-budget stops are `UNKNOWN`.

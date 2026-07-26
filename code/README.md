@@ -108,6 +108,27 @@ six positive and 60 negative units; `+24` is already supplied by `--n3`, so
 the branch itself adds 65 clauses. The certificate and independent checker are
 under `verification/n3-joint-cover/`.
 
+## Wave 35 prism-free endpoint models
+
+`wave35_n3_endpoint_root_scout.py` adds the 84 exact negative residual-edge
+units forced by `n3=4158`, intersects them with the verified 12-way normalized
+`N3` cover, and reproduces the five surviving branches
+`4,5,8,10,12`. Solver use is optional and discovery-only.
+
+`wave35_n3_endpoint_local_extension.py` exports deterministic OPB
+relaxations for the four one-edge cycle partitions `2+2+2`, `2+4`, `3+3`,
+and `6`. Each reduced model has 5,184 binary variables and 380 equality rows.
+The model omits adjacencies among 72 outside vertices and is not a graph
+encoding.
+
+```powershell
+.venv\Scripts\python -B -m unittest discover -s code `
+  -p "test_wave35_n3_endpoint_local_extension.py" -v
+```
+
+The exact instances and bounded, non-evidentiary scout records are under
+`attempts/wave35-n3-upper-triple-overlap/`.
+
 ## Refined `N3` common-neighbor cover
 
 The exact coordinate-4 profile of `label(0,2)` forces one additional neighbor

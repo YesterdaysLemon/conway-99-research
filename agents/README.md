@@ -90,3 +90,16 @@ Wave 34 reports:
   source audit. Kuber is conditional without a graph bridge; Harrison lacks
   theorem-ladder proof bodies; Selub reports no solver result; no external
   graph theorem is imported.
+
+Wave 35 reports:
+
+- `2026-07-26-wave35-n3-upper-spectral.md`: discovery-side exact signed
+  projector, Smith-form, Schur, compression, and principal-minor attack on
+  the conditional `n3=4158` endpoint. Read it with the independent verifier;
+  no upper-bound improvement is claimed.
+- `2026-07-26-wave35-n3-4158-combinatorial.md`: proof-A derivation of the
+  `3+36+60` one-triangle incidence reduction and a restricted pairwise
+  positive control. Simultaneous block compatibility remains `UNKNOWN`.
+- `2026-07-26-wave35-n3-upper-triple-overlap.md`: construction-side 84-unit,
+  five-branch rooted reduction and four deterministic one-edge local OPB
+  relaxations. Every bounded solver stop is non-evidentiary.

@@ -2340,6 +2340,129 @@ details are in the
 [rootless audit](verification/wave34-rootless-global/audit.md), and
 [orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
 
+## Wave 35 prism-free upper endpoint
+
+Let `P` be the number of induced triangular prisms. Exact opposite-edge
+double counting gives
+
+```text
+n3 + 3P = 4158.
+```
+
+Hence `n3=4158` if and only if `P=0`. The endpoint forces every graph triangle
+to have cross-edge profile
+
+```text
+(a0,a1,a2,a3)=(32,144,36,0).
+```
+
+### Signed projector (`VERIFIED SCOPED`)
+
+For the rank-44 integral projector scaling `M`, put `S=M-4I`. Conditional on
+the endpoint,
+
+```text
+S^2=13S+68I,
+S1=-4*1,
+spec(S)=17^44,(-4)^187,
+SNF(S)=diag(1^44,4^143,68^44).
+```
+
+Equivalently,
+
+```text
+C=2S-13I=2M-21I,
+C^2=441I.
+```
+
+The independent verifier reconstructed these identities, all 40 mixed-Schur
+values, the compression slack, and the scalar incidence bounds without
+importing discovery code. It found no contradiction. Since `rank(M)=44`,
+every 45-by-45 principal block is singular. A 45-set `X` satisfying
+
+```text
+max_i sum_{j in X} |S_ij| <= 3
+```
+
+would make `4I+S[X]` strictly diagonally dominant and contradict singularity.
+The absolute values are essential; an absolute algebraic row-sum condition is
+false.
+
+### One-triangle incidence reduction (`DERIVED`)
+
+Fix a triangle `T` and partition the vertices into
+
+```text
+T | X | Y = 3 | 36 | 60.
+```
+
+The neighbor counts into the three cells are
+
+```text
+X vertex: 1,3,10
+Y vertex: 0,6,8.
+```
+
+Thus `G[X]` is cubic and triangle-free, `G[Y]` is 8-regular, and the `X-Y`
+bipartite graph has degrees `(10,6)`. The three 12-point fibres inside `X`
+each induce a perfect matching. Every `y in Y` determines a six-point block
+meeting every fibre twice. If `B` is their 36-by-60 incidence matrix, `R` is
+the three-fibre indicator matrix, and `A_X` is the adjacency matrix of
+`G[X]`, then
+
+```text
+B B^T = 12I - A_X + 2J - R R^T - A_X^2.
+```
+
+This is a finite exact one-triangle feasibility problem. A restricted
+pairwise control exists, but no simultaneous 60-block system or
+cross-triangle compatibility certificate is known.
+
+### Rooted and one-edge construction reductions (`DERIVED` / `CANDIDATE`)
+
+Fix a root `o`, whose 14 neighbors are seven mate pairs `(a_i,b_i)`. For
+every other root-neighbor coordinate `r`, the residual edge
+
+```text
+{a_i,r} -- {b_i,r}
+```
+
+would close a prism with `{o,a_i,b_i}`. Therefore `P=0` imposes exactly
+`7*12=84` negative residual-edge units. Intersecting them with the verified
+12-way normalized `N3` cover immediately removes branches
+
+```text
+1,2,3,6,7,9,11
+```
+
+and leaves exactly
+
+```text
+4,5,8,10,12.
+```
+
+Around one graph edge, the union of the two endpoint fibre matchings has one
+of four cycle partitions:
+
+```text
+2+2+2, 2+4, 3+3, 6.
+```
+
+For each partition, exhaustive neighborhood enumeration gives 5,500 masks,
+of which 5,184 remain as binary variables after exact moment reduction. The
+exported local OPB models have 380 equality rows. They omit all edges among
+the 72 outside vertices and therefore are necessary relaxations only.
+
+All five rooted branch scouts stopped at conflict budgets. All four local
+integer scouts stopped at time limits without incumbents. No result is a
+proof or counterexample. The rigorous interval remains
+
+```text
+708 <= n3 <= 4158,
+```
+
+and both `n3=4158` and Conway-99 remain `UNKNOWN`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

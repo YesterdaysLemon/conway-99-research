@@ -636,6 +636,31 @@ rootless motif forcing/avoidance:  UNKNOWN
 n3=708 / Conway-99 / novelty:      UNKNOWN
 ```
 
+## Wave 35 prism-free upper-endpoint verification
+
+The
+[independent spectral audit](wave35-n3-upper-spectral/audit.md)
+reconstructs the conditional `n3=4158` signed-projector polynomial, Smith
+form, reflection identity, all forty mixed-Schur values, compression and
+incidence-scalar calculations, and the 45-principal-minor criterion without
+importing discovery-side code or JSON.
+
+Its verdict is `VERIFIED_SCOPED_WITH_WORDING_QUALIFIER`. The support-degree
+criterion is `sum_j |S_ij|<=3`, not an absolute algebraic row-sum condition,
+and the nonadjacent 7-by-7 object is only a relaxed witness. Ten independent
+tests pass and all fourteen submitted tests replay.
+
+```text
+conditional spectral and Smith identities: VERIFIED scoped
+endpoint matrix or 45-set:                  NOT CONSTRUCTED
+upper bound below 4158:                     NOT PROVED
+n3=4158 / Conway-99:                        UNKNOWN
+```
+
+The combinatorial and construction packages are indexed in `agents/` and
+`attempts/`; their focused discovery tests pass, but a separate independent
+promotion package has not yet been completed.
+
 ## Wave 29 single-lattice endpoint exclusion
 
 The

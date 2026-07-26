@@ -2173,4 +2173,54 @@ thirty_fourth_research_wave:
   clean_clone_report: "verification/2026-07-24-wave34-clean-clone.md"
   clean_clone_report_sha256: "ebc9e13ea0262f69e8edbe9d88b044d01e45147989af6ff14229f34aaa7ef0d3"
   caveat: "Wave 34 verifies an unrestricted labeled rooted encoding, a strict rooted reparameterization and necessary duplicate-free single-column domain, scoped actual-incidence rootless lemmas and moment bounds, and bounded external-source characterizations. It supplies no graph, no complete-domain UNSAT proof, no compatible rooted 15-column/projector realization, no rootless mixed-motif forcing theorem, no endpoint resolution, no n3=708 exclusion, no Conway-99 resolution, and no novelty or priority result."
-last_updated: 2026-07-24
+thirty_fifth_research_wave:
+  public_base_commit: "c3672c43ceb1317dc7fb1d1637800a08e129664a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_identity: "n3+3P=4158"
+  endpoint_triangular_prisms: 0
+  endpoint_triangle_profile: "a0,a1,a2,a3=32,144,36,0"
+  spectral_verdict: VERIFIED_SCOPED_WITH_WORDING_QUALIFIER
+  signed_matrix_identity: "S^2=13S+68I"
+  signed_matrix_spectrum: "17^44,(-4)^187"
+  signed_matrix_smith_form: "diag(1^44,4^143,68^44)"
+  reflection_identity: "C=2S-13I; C^2=441I"
+  principal_minor_target: "find 45 indices with max_i sum_j |S_ij|<=3"
+  principal_minor_target_constructed: false
+  spectral_discovery_tests: 14
+  spectral_independent_tests: 10
+  spectral_result: "attempts/wave35-n3-upper-spectral/exact-results.json"
+  spectral_result_sha256: "ca1df07bede11642fb1639a2ae554c1a31ce9a58424d5b3e5031c90ad550a194"
+  spectral_audit: "verification/wave35-n3-upper-spectral/audit.md"
+  spectral_independent_result: "verification/wave35-n3-upper-spectral/independent-results.json"
+  spectral_independent_result_sha256: "c704d8fce8f1d5975204b9a06ada0098c66fbdb9e0de8016a1ff89d86e691305"
+  combinatorial_status: DERIVED_NOT_INDEPENDENTLY_PROMOTED
+  combinatorial_partition: "3+36+60"
+  combinatorial_valid_restricted_block_types: 183980
+  combinatorial_pairwise_control: CANDIDATE_EXACTLY_CHECKED
+  combinatorial_tests: 9
+  combinatorial_result: "attempts/wave35-n3-4158-combinatorial/exact-results.json"
+  combinatorial_result_sha256: "07e1469e7690bd630385e734d387fa13a1eb537f0c578bf31270c3b7b8824b67"
+  rooted_endpoint_unit_count: 84
+  rooted_normalized_immediate_conflict_branches: "1,2,3,6,7,9,11"
+  rooted_normalized_surviving_branches: "4,5,8,10,12"
+  rooted_scout_status: BUDGET_UNKNOWN_ALL_FIVE
+  rooted_reduction: "attempts/wave35-n3-upper-triple-overlap/root-endpoint-reduction.json"
+  rooted_reduction_sha256: "7551c7b9d956705e41f9feb42d76d3bb5ab60dab0b46416fa9c0e58e5346a46a"
+  local_extension_partitions: "2+2+2;2+4;3+3;6"
+  local_extension_masks_per_partition: 5500
+  local_extension_binary_variables_per_partition: 5184
+  local_extension_equality_rows_per_partition: 380
+  local_extension_tests: 5
+  local_extension_lp_status: FEASIBLE_FRACTIONAL_ALL_FOUR
+  local_extension_integer_status: TIMEOUT_UNKNOWN_NO_INCUMBENT_ALL_FOUR
+  local_extension_bounded_scout: "attempts/wave35-n3-upper-triple-overlap/local-extension-bounded-scout.json"
+  local_extension_bounded_scout_sha256: "8922fc4d0e5e056c69685d42377f71ed70d0bf17574e4a6a7219ce1ad0794685"
+  solver_evidence_promoted: NONE
+  caveat: "Wave 35 verifies scoped conditional spectral and Smith identities, derives but does not independently promote a one-triangle incidence reduction and an 84-unit five-branch rooted reduction, and publishes four necessary local OPB relaxations. Every solver run stopped at a budget or time limit. It supplies no graph, no checked UNSAT proof, no endpoint construction or exclusion, no upper bound below 4158, and no Conway-99 resolution."
+last_updated: 2026-07-26

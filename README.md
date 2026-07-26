@@ -58,7 +58,13 @@ and the normalized search problem.
   a projector reparameterization and necessary single-column reduction, and
   new rootless relation/moment bounds. The CNF is unsolved, the reduced
   columns are not compatible designs, and the rootless control is partial,
-  so `n3=708` remains unexcluded.
+  so `n3=708` remains unexcluded. Wave 35 begins the complementary general
+  upper-bound program at `n3=4158`. It independently verifies exact
+  signed-projector and Smith-form consequences of that prism-free endpoint,
+  derives an 84-unit rooted reduction with five surviving normalized
+  branches, and records two exact local-incidence models. All bounded solver
+  scouts stopped `UNKNOWN`; no endpoint was excluded and the rigorous
+  interval remains `708<=n3<=4158`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1604,6 +1610,85 @@ passes 149 direct tests plus the 11-test authenticated historical replay,
 validates 16 publication manifests with 130 entries, reconstructs and checks
 all 4,323,943 CNF clauses, and finishes with a clean detached checkout and
 strict repository-integrity gates. Conway-99 remains `UNKNOWN`.
+
+## Wave 35: first general upper-bound checkpoint
+
+Wave 35 attacks the opposite end of the allowed `n3` interval. If `P` denotes
+the number of induced triangular prisms, exact double counting gives
+
+```text
+n3 + 3P = 4158.
+```
+
+Thus the extremal value `n3=4158` is exactly the prism-free endpoint `P=0`.
+The checkpoint is intentionally negative in status: it produces new exact
+restrictions and useful failed-route records, but no better upper bound.
+
+```mermaid
+flowchart LR
+    A["n3 = 4158"] --> B["P = 0"]
+    B --> C["signed projector"]
+    B --> D["84 rooted forbidden edges"]
+    B --> E["four local seed partitions"]
+    C --> F["verified exact restrictions; no contradiction"]
+    D --> G["five normalized branches survive"]
+    E --> H["LP feasible; integer scouts timeout"]
+    F --> I["endpoint UNKNOWN"]
+    G --> I
+    H --> I
+```
+
+The independently checked spectral lane sets `S=M-4I` at the endpoint and
+obtains
+
+```text
+S^2=13S+68I,
+spec(S)=17^44,(-4)^187,
+SNF(S)=diag(1^44,4^143,68^44),
+C=2S-13I, C^2=441I.
+```
+
+All tested raw and mixed Schur inequalities survive. Every 45-by-45 principal
+submatrix of `M` must be singular; consequently a future proof could exclude
+the endpoint by finding 45 triangle indices whose internal signed support
+degree is at most three. No such set is presently known. The independent
+verifier passed 10 hostile tests and replayed all 14 discovery tests, with the
+material wording qualifier that the criterion uses
+`sum_j |S_ij|`, not `|sum_j S_ij|`. See the
+[spectral report](agents/2026-07-26-wave35-n3-upper-spectral.md) and
+[independent audit](verification/wave35-n3-upper-spectral/audit.md).
+
+Two combinatorial reductions were also frozen:
+
+- Around one triangle, the endpoint gives a `3+36+60` vertex partition, a
+  cubic triangle-free 36-vertex core, sixty six-point blocks, and the exact
+  Gram identity
+  `B B^T=12I-A_X+2J-R R^T-A_X^2`. A restricted pairwise control survives;
+  simultaneous three-fibre and 231-triangle compatibility remain `UNKNOWN`.
+- Around one root vertex, prism-freeness forces exactly 84 residual nonedges.
+  Seven of the verified twelve normalized `N3` branches then contradict a
+  unit immediately, leaving exactly branches `4,5,8,10,12`.
+
+The construction lane exports four deterministic local OPB relaxations for
+cycle partitions `2+2+2`, `2+4`, `3+3`, and `6`. Each has 5,184 binary
+variables and 380 equality rows after exact reduction. Their LP relaxations
+are feasible, while every bounded integer run ended by time or conflict
+budget without an incumbent. These are retained failed attempts, not
+nonexistence evidence. See the
+[combinatorial report](agents/2026-07-26-wave35-n3-4158-combinatorial.md),
+[construction report](agents/2026-07-26-wave35-n3-upper-triple-overlap.md),
+and [Wave 35 attempt ledger](attempts/README.md).
+
+The publication-safe checkpoint is:
+
+```text
+conditional spectral/Smith identities: VERIFIED scoped
+one-triangle incidence reduction:       DERIVED, not independently promoted
+84-unit / five-branch rooted reduction: DERIVED, not endpoint exclusion
+bounded solver scouts:                  UNKNOWN, non-evidentiary
+n3 general interval:                    708 <= n3 <= 4158
+n3=4158 / Conway-99:                    UNKNOWN
+```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

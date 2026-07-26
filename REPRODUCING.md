@@ -2497,6 +2497,47 @@ See the
 and
 [orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
 
+## Wave 35 prism-free upper endpoint
+
+Replay the discovery and independent spectral suites:
+
+```powershell
+.venv\Scripts\python -B -m unittest discover `
+  -s attempts\wave35-n3-upper-spectral -p "test_*.py" -v
+.venv\Scripts\python -B attempts\wave35-n3-upper-spectral\exact_check.py `
+  --verify attempts\wave35-n3-upper-spectral\exact-results.json
+.venv\Scripts\python -B -m unittest discover `
+  -s verification\wave35-n3-upper-spectral -p "test_*.py" -v
+.venv\Scripts\python -B verification\wave35-n3-upper-spectral\independent_check.py `
+  --verify verification\wave35-n3-upper-spectral\independent-results.json
+```
+
+Replay the combinatorial and construction checks:
+
+```powershell
+.venv\Scripts\python -B -m unittest discover `
+  -s attempts\wave35-n3-4158-combinatorial -p "test_*.py" -v
+.venv\Scripts\python -B attempts\wave35-n3-4158-combinatorial\exact_check.py `
+  --verify attempts\wave35-n3-4158-combinatorial\exact-results.json
+.venv\Scripts\python -B -m unittest discover -s code `
+  -p "test_wave35_n3_endpoint_local_extension.py" -v
+```
+
+Expected totals are 14 submitted spectral tests, 10 independent spectral
+tests, 9 combinatorial tests, and 5 construction tests. The commands verify
+exact conditional identities, finite reductions, and deterministic local
+models only. Do not reinterpret `BUDGET_UNKNOWN`,
+`TIMEOUT_UNKNOWN_NO_INCUMBENT`, fractional LP feasibility, or the absence of
+an incumbent as a mathematical result.
+
+```text
+conditional spectral/Smith identities: VERIFIED scoped
+combinatorial and rooted reductions:    DERIVED, pending independent promotion
+solver evidence promoted:               NONE
+rigorous interval:                      708 <= n3 <= 4158
+n3=4158 / Conway-99:                    UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
