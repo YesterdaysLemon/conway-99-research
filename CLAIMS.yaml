@@ -2125,6 +2125,94 @@ claims:
       708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
       remain UNKNOWN.
 
+  - id: C-WAVE42-UNIVERSAL-RANK-092
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=27. Equality
+      analysis excludes rank 26 for all eleven edge-local partition types:
+      seven even-part types have zero rank-at-most-one residuals among
+      1,714,426,560 explicitly checked labelled pairs, and a complete
+      pivot/mate CSP covers 19,916,886,528,000 all-odd labelled pairs with
+      zero compatible leaves.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "attempts/wave42-rank26-equality/exact-results.json"
+      - "attempts/wave42-rank26-equality/package-manifest.sha256"
+      - "verification/wave42-rank27/independent-results.json"
+      - "verification/wave42-rank27/comparison.json"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-rank27/package-manifest.sha256"
+    limitations: >-
+      This is a universal necessary rank theorem, not a graph construction,
+      prism-free endpoint contradiction, general n3 upper-bound improvement,
+      Conway-99 resolution, or novelty and priority result.
+
+  - id: C-WAVE42-JOINT-INCIDENCE-093
+    statement: >-
+      Conditional on n3=4158, rank_F3(M)=12, every edge having local type
+      2+2+2, and occurrence of canonical rank-33 lift mask 51739, the
+      60-column outside incidence problem is exactly a three-way matching of
+      three labelled 60-pair sets. Necessary unrestricted six-set filters
+      have census 216000,118718,49736,45032; any completion has overlap
+      census 458,1004,308, while a compatible outside graph requires
+      96,144,0 edges by overlap, 32 triangles, and 181 four-cycles.
+    label: VERIFIED
+    scope: CONDITIONAL_CANONICAL_MASK51739_JOINT_INCIDENCE_REDUCTION
+    evidence:
+      - "attempts/wave42-joint-incidence/exact-results.json"
+      - "attempts/wave42-joint-incidence/package-manifest.sha256"
+      - "verification/wave42-joint-incidence/independent-results.json"
+      - "verification/wave42-joint-incidence/comparison.json"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-joint-incidence/package-manifest.sha256"
+    limitations: >-
+      The result covers one canonical local lift under unproved joint
+      hypotheses. Two distinct certificates cover only two fibres. No full B,
+      compatible H, branch exclusion, endpoint exclusion, graph, upper-bound
+      improvement, solution, or novelty result is supplied.
+
+  - id: C-WAVE42-BRANCH15-DELTA-094
+    statement: >-
+      In frozen refined endpoint branch 15, x2=1 completes rooted full
+      zero-based triangle [1,15,17]. Prism-freeness soundly adds 64,932 exact
+      negative clauses; an independent generalized-unit closure leaves
+      33,778 active clauses, and the complete normalized discovery and
+      verifier clause streams agree exactly.
+    label: VERIFIED
+    scope: CONDITIONAL_REFINED_BRANCH15_SEVENTH_TRIANGLE_REDUCTION
+    evidence:
+      - "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-result.json"
+      - "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-delta.opb.gz"
+      - "attempts/wave42-endpoint-certificate/package-manifest.sha256"
+      - "verification/wave42-branch15-triangle-delta/independent-results.json"
+      - "verification/wave42-branch15-triangle-delta/comparison.json"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+      - "verification/wave42-branch15-triangle-delta/package-manifest.sha256"
+    limitations: >-
+      No active unit or empty clause is produced. Branch 15 remains UNKNOWN,
+      endpoint coverage remains 0/33, and no SAT, UNSAT, graph, endpoint,
+      upper-bound, Conway-99, or novelty conclusion follows.
+
+  - id: C-WAVE42-CONTINUATION-095
+    statement: >-
+      Excluding n3=4158 still requires a checked prism-free graph, checked
+      UNSAT certificates covering all 33 refined cases, or a global
+      contradiction coupling complete outside incidence, outside adjacency,
+      K^2=0, or higher-order triangle compatibility. Universal rank 27 and
+      the two scoped Wave 42 reductions do not discharge this requirement.
+    label: UNKNOWN
+    scope: WAVE42_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave42-integration-audit.md"
+      - "verification/2026-07-27-wave42-orchestrator.md"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

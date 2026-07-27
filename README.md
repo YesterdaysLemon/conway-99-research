@@ -94,6 +94,18 @@ and the normalized search problem.
   from 330 to 314 pairs. A second scoped theorem shows that if `r3=12` and
   every edge has type `222`, then parity forces `r7>=34`. Neither theorem
   excludes the endpoint, improves `n3<=4158`, or constructs a graph.
+  Wave 42 independently classifies equality in the rank-26 boundary and
+  proves the new universal necessity `rank_F7(M)>=27`. Seven even-part
+  types are covered by 1,714,426,560 explicit labelled cases; a separate
+  pivot/mate CSP covers 19,916,886,528,000 all-odd cases. The clean-room
+  verifier found zero rank-26 survivors and agrees on every theorem count
+  and all seven labelled permutation streams. At `n3=4158`, the arithmetic
+  census falls from 314 to 297 pairs and `r3=12` forces even `r7>=28`.
+  Separate scoped verifiers reduce one canonical all-`222` outside-incidence
+  problem to 45,032 necessary six-sets and reproduce a new branch-15 prism
+  clause family. Neither scoped reduction closes a branch. Endpoint coverage
+  remains `0/33`, the interval remains `708<=n3<=4158`, and Conway-99 remains
+  `UNKNOWN`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2297,6 +2309,87 @@ branch 15 / endpoint proof coverage: UNKNOWN / 0 of 33
 upper bound below 4158:              NOT PROVED
 rigorous interval:                   708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:       UNKNOWN
+```
+
+## Wave 42 universal rank-27 theorem and higher-order endpoint reductions
+
+Wave 42 classifies equality in the verified Wave 41 bound. For every
+edge-local 39-point block, exact symmetric elimination gives
+
+```text
+rank(K39) = rank(S) + 2 rank(F) + rank(residual).
+```
+
+If the local partition has `e` even parts, then `rank(S)=25-2e` and
+`rank(F)>=e`. Therefore rank 26 is possible exactly when `rank(F)=e` and
+the symmetric residual has rank one.
+
+The discovery and clean-room implementations cover all eleven positive
+partitions of six without assuming any automorphism of the completed graph:
+
+| family | exact labelled coverage | rank-at-most-one residuals |
+| --- | ---: | ---: |
+| seven even-part types | 1,714,426,560 explicit pairs | 0 |
+| four all-odd types | 19,916,886,528,000 CSP-covered pairs | 0 |
+| **total** | **19,918,600,954,560** | **0** |
+
+The even lane regenerates all 164,928 minimum-border permutations, 52 right
+kernels, and all 10,395 labelled third-fibre matchings. The all-odd verifier
+uses a structurally different pivot/mate CSP. All seven complete labelled
+permutation-stream hashes agree with discovery. After one transparently
+recorded repair removing nondeterministic elapsed-time metadata, the
+independent result replays byte-for-byte. Thus
+
+```text
+rank_F7(K39) >= 27,
+rank_F7(M)   >= 27.                                VERIFIED
+```
+
+At the prism-free endpoint, the previously verified range
+`12<=r3<=44`, the ceiling `r7<=44`, and parity `r3+r7` even leave 297
+arithmetic rank pairs. When `r3=12`, parity sharpens the new floor to even
+`r7>=28`. The ceiling 44 remains compatible, so this is not an endpoint
+contradiction.
+
+Two higher-order endpoint lanes also pass clean-room verification:
+
+- Conditional on `n3=4158`, `r3=12`, all edges type `222`, and occurrence
+  of canonical rank-33 lift mask `51739`, the unknown 60-column outside
+  incidence matrix is an exact three-way matching of three labelled
+  60-pair sets. Exhaustive necessary filters give
+  `216000 -> 118718 -> 49736 -> 45032`. Any completion has column-overlap
+  census `458/1004/308`; a compatible outside graph must use `96/144/0`
+  edges by overlap, with 32 triangles and 181 four-cycles. Two distinct
+  exact two-fibre certificates show that pairwise concurrence alone is
+  feasible. No full three-fibre matrix or outside graph is constructed or
+  excluded.
+- In refined endpoint branch 15, the frozen OPB directly forces `x2=1`,
+  completing the rooted triangle on zero-based vertices `[1,15,17]`.
+  Prism-freeness adds 64,932 exact negative clauses; independent closure
+  simplification leaves 33,778 active clauses. There is no active unit or
+  empty clause, so branch 15 remains open.
+
+See the [rank-equality discovery](attempts/wave42-rank26-equality/README.md),
+[rank-27 verifier](verification/wave42-rank27/README.md),
+[joint-incidence discovery](attempts/wave42-joint-incidence/README.md),
+[joint-incidence verifier](verification/wave42-joint-incidence/README.md),
+[branch-15 discovery](attempts/wave42-endpoint-certificate/README.md), and
+[branch-15 verifier](verification/wave42-branch15-triangle-delta/README.md).
+The promotion boundary is recorded in the
+[Wave 42 integration audit](verification/2026-07-27-wave42-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave42-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave42-public-checkpoint.json).
+
+```text
+rank_F7(M)>=27:                         VERIFIED
+endpoint arithmetic rank pairs:         297
+r3=12 endpoint consequence:             even r7>=28
+canonical mask-51739 B/H reduction:      VERIFIED SCOPED
+branch-15 seventh-triangle reduction:    VERIFIED SCOPED
+branch 15 / endpoint proof coverage:     UNKNOWN / 0 of 33
+upper bound below 4158:                  NOT PROVED
+rigorous interval:                       708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:           UNKNOWN
 ```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise

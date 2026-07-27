@@ -3022,6 +3022,133 @@ isomorphism class. Each has 37,378 triangle-free lifts with 39-block ranks
 `33^264,34^7348,35^29766`. Thus this branch has even `r7>=34`. The sixty
 outside vertices and global overlap equations remain the unresolved wall.
 
+### Wave 42 rank-26 equality and universal rank 27 (`VERIFIED`)
+
+Keep the Wave 41 notation and write the exact symmetric decomposition as
+
+```text
+rank(K39)=rank(S)+2 rank(F)+rank(D),
+```
+
+where `D=Z^T W_R Z-T` is the residual on the right kernel of `F`. For a
+partition with `e` even parts,
+
+```text
+rank(S)=25-2e,  rank(F)>=e.
+```
+
+Wave 41 excluded rank 25. Hence
+
+```text
+rank(K39)=26  iff  rank(F)=e and rank(D)=1.
+```
+
+For all seven even-part types, an independent clean-room implementation
+regenerates every minimum-`F` permutation and all labelled third-fibre
+matchings:
+
+```text
+minimum-F permutations:              164928
+distinct right kernels:                  52
+labelled permutation/matching pairs: 1714426560
+rank-at-most-one residuals:                   0.
+```
+
+For the four all-odd types, `e=0`. A complete pivot/mate CSP covers
+
+```text
+4 * 12! * 10395 = 19916886528000
+```
+
+labelled pairs and has zero compatible leaves. A nonzero symmetric rank-one
+matrix over `F_7` has a nonzero diagonal pivot, so the pivot identities cover
+every rank-one possibility. The verifier includes rank-zero, rank-one,
+rank-two, zero-diagonal, hostile-mutation, and reduced-universe controls.
+
+All eleven local types therefore satisfy
+
+```text
+rank_F7(K39)>=27.
+```
+
+Principal-block monotonicity and the verified rank transport imply the
+universal theorem
+
+```text
+rank_F7(M)>=27.
+```
+
+No endpoint or automorphism hypothesis enters this theorem. At `n3=4158`,
+the constraints `12<=r3<=44`, `27<=r7<=44`, and `r3+r7` even leave 297
+arithmetic pairs. If `r3=12`, then `r7` is even and at least 28.
+
+### Wave 42 canonical joint-incidence reduction (`VERIFIED_SCOPED`)
+
+Assume jointly `n3=4158`, `r3=12`, every edge has type `222`, and the
+canonical rank-33 lift mask is `51739`. Its 36-vertex core has components of
+orders 12 and 24, meeting each of the three twelve-point fibres in `4+8`
+vertices.
+
+For the 36-by-60 outside incidence matrix `B`, the forced Gram identity is
+
+```text
+BB^T=12I-A_X+2J-RR^T-A_X^2.
+```
+
+The small-component intersection sizes have sum 120 and squared sum 240.
+Cauchy has the same lower bound `120^2/60=240`, so every outside column uses
+exactly two small-component and four large-component vertices. Every column
+also selects one nonmatching pair from each fibre, and every one of the
+sixty such pairs per fibre is used exactly once. The component patterns occur
+with multiplicities
+
+```text
+4 each:  (2,0,0), (0,2,0), (0,0,2)
+16 each: (1,1,0), (1,0,1), (0,1,1).
+```
+
+Exhaustive, unrestricted filtering gives
+
+```text
+all pair triples:                    216000
+forced Gram support:                 118718
+component equality:                   49736
+pointwise mixed-equation feasibility: 45032.
+```
+
+Two distinct 60-entry certificates realize the complete two-fibre
+concurrence target. Thus no contradiction exists at that projection level.
+If a full `B` exists, its unordered column-pair overlaps are
+`458/1004/308` at sizes `0/1/2`. A compatible simple eight-regular outside
+graph `H` must use `96/144/0` such pairs as edges and have 32 triangles and
+181 four-cycles. A full `B` and compatible `H` remain unknown.
+
+### Wave 42 branch-15 seventh-triangle delta (`VERIFIED_SCOPED`)
+
+The frozen refined branch-15 OPB directly contains the unit `x2=1`.
+Under the rooted labelling, `x2` joins residual labels `(0,2)` and `(0,4)`;
+together with coordinate label 0, represented by full vertex 1, these give
+the full zero-based graph triangle `[1,15,17]`.
+
+At the prism-free endpoint, forbidding every prism based at this triangle
+adds
+
+```text
+64932 = 132 width-3 + 64800 width-5
+```
+
+exact negative clauses. A clean-room replay of the source OPB closure forces
+830 variables, including 174 primary edges, and simplifies the new family to
+
+```text
+33778 = 91 width-3 + 580 width-4 + 33107 width-5.
+```
+
+The full normalized raw and active clause streams exactly match discovery.
+There is no active unit or empty clause. This is a stronger formula for one
+refined endpoint branch, not a SAT or UNSAT result; endpoint proof coverage
+remains `0/33`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

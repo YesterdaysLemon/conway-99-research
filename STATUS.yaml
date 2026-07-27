@@ -23,6 +23,7 @@ literature_audit:
   exact_wave36_target_specific_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   wave36_general_prior_art_overlap: EVANS_2023_REPRODUCES_TERNARY_CUTOFF
   exact_wave40_rank25_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave42_rank27_prior_hit: NOT_SEARCHED_THIS_WAVE
   wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
@@ -2653,4 +2654,94 @@ forty_first_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 41 verifies the universal rank_F7(M)>=26 necessity and a conditional all-222,r3=12 floor even r7>=34. It removes r7=25 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_second_research_wave:
+  public_base_commit: "ef49b60aafd67f9007f6c218c39fd50392453a1b"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=27"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=26"
+  local_partition_count: 11
+  all_odd_partition_count: 4
+  even_partition_count: 7
+  minimum_F_permutations: 164928
+  distinct_right_kernels: 52
+  explicit_even_labelled_pairs: 1714426560
+  implicit_all_odd_labelled_pairs: 19916886528000
+  combined_labelled_pair_coverage: 19918600954560
+  rank_at_most_one_survivors: 0
+  rank27_discovery_result: "attempts/wave42-rank26-equality/exact-results.json"
+  rank27_discovery_result_sha256: "94473b4c9f35184376765f76ab16646956222112836f49bcb22e950142a863a1"
+  rank27_discovery_manifest: "attempts/wave42-rank26-equality/package-manifest.sha256"
+  rank27_discovery_manifest_sha256: "b6bc79259a6d32270c5cb56afcd093fd5ed78987925e9e6ab173def2c3af2f21"
+  rank27_independent_result: "verification/wave42-rank27/independent-results.json"
+  rank27_independent_result_sha256: "a207b1bcc267aaefdea704c1173e3ed01a81029507d3bc76aa295caccad03be4"
+  rank27_comparison_result: "verification/wave42-rank27/comparison.json"
+  rank27_comparison_result_sha256: "ca7ca8b2f4e3e103da63a74ca1920790a349ae98baf8e00381a0f9c84fc3b183"
+  rank27_verifier_manifest: "verification/wave42-rank27/package-manifest.sha256"
+  rank27_verifier_manifest_sha256: "ae50823d082c1bdcb1910048d25bc4ca09300c34d1455e71affa4aa6ad3e58b8"
+  rank27_first_freeze_status: FAILED_NONDETERMINISTIC_TIMING_METADATA_ONLY
+  rank27_first_result_sha256: "bb4c1fa6d8c46343df26caa475895906d22c8f80000e8225e6a1f4bb9eb760eb"
+  rank27_deterministic_full_replay: PASS
+  endpoint_modular_rank_pairs: 297
+  previous_endpoint_modular_rank_pairs: 314
+  endpoint_removed_rank_layer: "r7=26 with even r3"
+  ternary_boundary_consequence: "r3=12 implies even r7>=28"
+  joint_incidence_status: VERIFIED_SCOPED
+  joint_incidence_assumptions: "n3=4158,r3=12,all edges type 2+2+2,canonical rank-33 mask 51739 occurs"
+  joint_incidence_six_set_filter_counts: "216000,118718,49736,45032"
+  joint_incidence_column_overlap_counts: "458,1004,308"
+  joint_incidence_H_edges_by_overlap: "96,144,0"
+  joint_incidence_H_triangles: 32
+  joint_incidence_H_four_cycles: 181
+  joint_incidence_full_B_status: UNKNOWN
+  joint_incidence_compatible_H_status: UNKNOWN
+  joint_incidence_discovery_result: "attempts/wave42-joint-incidence/exact-results.json"
+  joint_incidence_discovery_result_sha256: "40bfee8fd082972d5e7ea0a5ef959be2b1b5c75232076ec8510d42b6c98be9cc"
+  joint_incidence_discovery_manifest: "attempts/wave42-joint-incidence/package-manifest.sha256"
+  joint_incidence_discovery_manifest_sha256: "13aa8b1f5d4d09a1d16637513c9d0a3d68a68d705616ce6d2087c333a4bb4db8"
+  joint_incidence_independent_result: "verification/wave42-joint-incidence/independent-results.json"
+  joint_incidence_independent_result_sha256: "4032826b875d8ebadcd4d9b864a9789068546e33705c62970001c9011ba76b13"
+  joint_incidence_comparison_result: "verification/wave42-joint-incidence/comparison.json"
+  joint_incidence_comparison_result_sha256: "4275129fc6393a9e3c64a96d3cc763ba8a9635df9f5a3e851451d07303c75edc"
+  joint_incidence_verifier_manifest: "verification/wave42-joint-incidence/package-manifest.sha256"
+  joint_incidence_verifier_manifest_sha256: "332f01d28529426b5c38b6299bbc16ce7c3c190d559917af9e3d8703123fec8b"
+  branch15_triangle_delta_status: VERIFIED_SCOPED
+  branch15_forced_triangle_zero_based: "1,15,17"
+  branch15_raw_new_clauses: 64932
+  branch15_active_new_clauses: 33778
+  branch15_active_units: 0
+  branch15_active_empty_clauses: 0
+  branch15_status: UNKNOWN
+  branch15_discovery_result: "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-result.json"
+  branch15_discovery_result_sha256: "2faa09eee4217d19fc1e1ac8f9705129e1cd57d47c0016a1d2bc229d87d8b184"
+  branch15_discovery_manifest: "attempts/wave42-endpoint-certificate/package-manifest.sha256"
+  branch15_discovery_manifest_sha256: "ecdb2f5716ccf407ec755e2f0fa51acab78ba0ad9f48937fa54a2e913d2cf890"
+  branch15_independent_result: "verification/wave42-branch15-triangle-delta/independent-results.json"
+  branch15_independent_result_sha256: "5402d5ea9d3a2d8dfaee3077c699e7bc1a0399512c49007d57fe8c6276ab4fbb"
+  branch15_comparison_result: "verification/wave42-branch15-triangle-delta/comparison.json"
+  branch15_comparison_result_sha256: "f13ec40969d54d08ed14ab3b288468be871aad2c0eacbd6844082a2efd4956d6"
+  branch15_verifier_manifest: "verification/wave42-branch15-triangle-delta/package-manifest.sha256"
+  branch15_verifier_manifest_sha256: "e7bdcb12a22225344e009d315118181915503047e084c835ece9c39873f0b23b"
+  mathematical_and_artifact_tests_total: 88
+  discovery_tests_total: 37
+  independent_tests_total: 51
+  package_manifests: 6
+  package_manifest_entries: 88
+  public_checkpoint: "logs/2026-07-27-wave42-public-checkpoint.json"
+  public_checkpoint_sha256: "2c1f8130939c02baeffd8e288d88349ee08008caff9e28fbc76c32333f2fe1cb"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave42-integration-audit.md"
+  integration_audit_sha256: "e61ad4971b899d7c35a3324f42bc32cdfd191e270bd58289698574080225f2ae"
+  orchestrator_decision: "verification/2026-07-27-wave42-orchestrator.md"
+  orchestrator_decision_sha256: "a0104d780e143f23bb14b5a1548295757365f0ca84e1d98d4011474d98987297"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 42 verifies the universal rank_F7(M)>=27 necessity and two scoped conditional endpoint reductions. It removes r7=26 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty and priority result."
 last_updated: 2026-07-27

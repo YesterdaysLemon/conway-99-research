@@ -2002,3 +2002,84 @@ obligations:
       No graph or complete endpoint proof exists. The endpoint and Conway-99
       remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
       coverage is 0/33.
+
+  - id: O-WAVE42-UNIVERSAL-RANK27-VERIFICATION
+    requirement: >-
+      Independently derive rank-26 equality in the complete 39-point block;
+      cover all four all-odd and seven even-part edge types; regenerate every
+      minimum-F labelled permutation, all labelled third-fibre matchings, and
+      a complete all-odd pivot CSP; include rank-one and hostile controls;
+      replay deterministically; and compare only after a clean-room freeze.
+    critical: true
+    status: PASS
+    evidence:
+      - "verification/wave42-rank27/protocol-freeze.md"
+      - "verification/wave42-rank27/freeze-repair.md"
+      - "verification/wave42-rank27/independent-results.json"
+      - "verification/wave42-rank27/comparison.json"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-rank27/package-manifest.sha256"
+    note: >-
+      The repaired deterministic full replay and 19 hostile/comparison tests
+      pass. Discovery contributes 10 passing tests and a 21-entry manifest.
+      All eleven types exclude rank 26, proving rank_F7(M)>=27. The first
+      freeze's nondeterministic elapsed-time defect is retained explicitly;
+      only timing metadata changed.
+
+  - id: O-WAVE42-JOINT-INCIDENCE-VERIFICATION
+    requirement: >-
+      Independently reconstruct canonical mask 51739, the forced Gram matrix,
+      component equality, exact once-only fibre-pair inventory, unrestricted
+      six-set filters, positive two-fibre certificate, and conditional
+      overlap and outside-graph counts before comparing discovery.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave42-joint-incidence/independent-results.json"
+      - "verification/wave42-joint-incidence/two-fibre-certificate.json"
+      - "verification/wave42-joint-incidence/comparison.json"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-joint-incidence/package-manifest.sha256"
+    note: >-
+      Fifteen verifier tests and nine discovery tests pass. The result is
+      conditional on one canonical rank-33 lift and does not construct or
+      exclude a full three-fibre B or compatible outside graph H.
+
+  - id: O-WAVE42-BRANCH15-DELTA-VERIFICATION
+    requirement: >-
+      Independently hash and parse the frozen branch-15 OPB, replay its
+      generalized-unit closure, derive the seventh fixed triangle, enumerate
+      every prism clause based at it, simplify with the independent closure,
+      and compare the complete normalized clause streams without promoting a
+      stronger formula to SAT or UNSAT.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave42-branch15-triangle-delta/independent-results.json"
+      - "verification/wave42-branch15-triangle-delta/comparison.json"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+      - "verification/wave42-branch15-triangle-delta/package-manifest.sha256"
+    note: >-
+      The exact 64,932-clause raw and 33,778-clause active sets match. No unit
+      or contradiction follows, branch 15 remains UNKNOWN, and endpoint
+      coverage remains 0/33.
+
+  - id: O-WAVE42-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate:
+      either a valid 99-vertex prism-free SRG or checked UNSAT proofs covering
+      all 33 refined endpoint cases. Universal rank 27, one canonical
+      joint-incidence reduction, and one stronger branch-15 clause family do
+      not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/2026-07-27-wave42-integration-audit.md"
+      - "verification/2026-07-27-wave42-orchestrator.md"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+    note: >-
+      No graph or complete endpoint proof exists. The endpoint and Conway-99
+      remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
+      coverage is 0/33.
