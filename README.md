@@ -158,7 +158,14 @@ and the normalized search problem.
   restriction
   `r=rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`. This is a genuine
   universal rank narrowing, not a graph construction, endpoint exclusion,
-  or Conway-99 resolution.
+  or Conway-99 resolution. Waves 69 and 72 independently close a different,
+  symmetry-restricted space. Every order-11 automorphism would have to act
+  fixed-point-freely, but an exact 9-orbit quotient census checks 1,108,533
+  label-complete nodes and finds no quotient. Consequently a realization,
+  if one exists, has no automorphism of order 11 and is not
+  vertex-transitive. A separate Fourier argument excludes every Cayley
+  realization on a group of order 99. These are verified restricted
+  exclusions; asymmetric graphs remain entirely possible.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

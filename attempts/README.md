@@ -412,3 +412,22 @@ below 4158.
 
 No lattice realization, graph, norm-14 exclusion, endpoint contradiction, or
 literature-priority result is supplied. Conway-99 remains `UNKNOWN`.
+
+## Waves 69 and 72: order-11 symmetry and cyclic-cover shift
+
+- `wave72-order11-automorphism/` proves that every exact order-11
+  automorphism of a hypothetical target is fixed-point-free. The fixed set
+  has size divisible by 11, induced degrees in `{3,14}`, and exact
+  common-neighbor closure; the only positive cases `11,22,99` reduce to
+  contradictions or the identity.
+- `wave69-cyclic-cover-shift/` derives the 9-by-9 quotient equation
+  `Q^2+Q=12I+22J`, all seven row shapes, and all three diagonal cases. Its
+  label-complete search visits 1,108,533 nodes and finds zero quotients; an
+  independent canonical search visits 8,980 nodes and also finds zero.
+- The combination excludes order-11 automorphisms and vertex-transitive
+  realizations. An independent abelian-character argument excludes Cayley
+  realizations on both groups of order 99.
+
+Both discoveries have clean-room verification. The result is restricted:
+it does not exclude asymmetric targets and does not improve
+`708<=n3<=4158`. Conway-99 remains `UNKNOWN`.

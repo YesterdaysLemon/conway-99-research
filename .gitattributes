@@ -87,3 +87,9 @@ attempts/wave64-rooted-transition-design/*.md whitespace=-blank-at-eof
 # Wave 66 discovery checksums are sealed exact outputs; one input-freeze
 # deliberately carries its generated terminal blank record.
 attempts/wave66-spherical-code-shift/*.sha256 whitespace=-blank-at-eof
+
+# Wave 72 verifier records are checksum-pinned and retain generated terminal
+# blank records where present.
+verification/wave72-order11-automorphism/discovery-inventory-preinspection.tsv whitespace=-blank-at-eof
+verification/wave72-order11-automorphism/protocol.md whitespace=-blank-at-eof
+verification/wave72-order11-automorphism/test_independent_verify.py whitespace=-blank-at-eof

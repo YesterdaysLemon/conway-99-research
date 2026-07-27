@@ -1535,3 +1535,22 @@ The [Wave 66 integration audit](2026-07-27-wave66-integration-audit.md) and
 corrections and the unresolved status wall. No graph or lattice realization,
 endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or
 novelty result follows.
+
+## Waves 69 and 72 order-11 symmetry verification
+
+- `wave72-order11-automorphism/` independently proves that every exact
+  order-11 automorphism is fixed-point-free. Fourteen verifier tests and nine
+  discovery tests pass, with six compared fields and zero mismatches.
+- `wave69-cyclic-cover-shift/` independently reconstructs all seven quotient
+  row shapes and three diagonal cases, then exhausts 1,108,533
+  label-complete nodes and 8,980 canonical nodes with zero quotient. All six
+  transcript hashes and eleven comparison fields match; thirteen verifier
+  tests pass.
+- Combining the two verified theorems excludes every order-11 automorphism
+  and hence every vertex-transitive realization. The independent Fourier
+  lane also excludes Cayley realizations on every group of order 99.
+
+The [integration audit](2026-07-27-wave72-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave72-orchestrator.md) retain the
+restricted scope. Asymmetric targets, the endpoint, a strict upper-bound
+improvement, Conway-99, and literature novelty remain `UNKNOWN`.
