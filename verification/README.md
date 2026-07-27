@@ -617,6 +617,68 @@ privacy patterns, and status walls. The
 promoted scope, Evans prior-art attribution, and deliberate exclusion of the
 still-active rooted SAT scout.
 
+## Wave 37 artifact and structural verification
+
+- `wave37-rooted-branches/` reconstructs the fixed-triangle prism lemma,
+  endpoint units, exact parent/refined scope, and all five deterministic
+  clause catalogs without importing the discovery implementation. The
+  branch-4 `BUDGET_UNKNOWN` record is explicitly assigned no mathematical
+  evidentiary value.
+- `wave37-polar-strengthen/` independently derives the ternary
+  self-orthogonal code consequences, Schur-square rank ceilings, corrected
+  signed-degenerate-triple count, oriented ternary controls, and both
+  characteristic-seven rank-eleven association schemes. It includes an
+  explicit hostile counterexample to the refuted collinearity inference.
+- `wave37-proof-producing-endpoint/` independently reconstructs every
+  branch-15 OPB constraint byte-for-byte, verifies the metadata and
+  deterministic gzip round trip, and records parser acceptance by the pinned
+  Exact binary. Its promotion is formula-artifact-only.
+
+The verified scope is deliberately narrow:
+
+```text
+fixed-triangle P=0 clause catalogs: VERIFIED scoped
+ternary/code/degenerate-space restrictions: VERIFIED scoped
+branch-15 OPB bytes and semantics: VERIFIED artifact-only
+branch-15 satisfiability: UNKNOWN
+other 32 endpoint cases: not represented by that OPB
+upper bound below 4158: NOT PROVED
+Conway-99: UNKNOWN
+```
+
+## Wave 38 queue, complete-prism, and modular verification
+
+The [integration audit](2026-07-27-wave38-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave38-orchestrator.md) record the final
+promotion boundary.
+
+- `wave38-solver-harvest/` independently reconstructs all 33 endpoint cases,
+  orbit weights, and 231 collision-free planned paths. It verifies only the
+  queue and null harvest: no output, proof, assignment, or case result exists.
+- `wave38-complete-endpoint/` independently reconstructs the 96,215 potential
+  triangles, exact residual-only count `60*C(84,6)=24,388,892,640`, all 64
+  prism supergraphs under `lambda=1`, the 33-case cover, and the decoded
+  oracle on all 32,768 six-vertex graphs. Candidate completeness, pool
+  provenance, strict integer schemas, and output containment were hardened
+  after the first audit; the final re-audit verifies all five repairs and
+  both package manifests.
+- `wave38-coclique-rank/` independently proves the 13-coclique, derives
+  `N M N^T=27I-9A+J`, and verifies `rank_F7(M)>=13`. With endpoint parity,
+  `r3=12` forces even `r7>=14`, leaving 528 arithmetic rank pairs.
+- `wave38-higher-order/` independently verifies the signed fourth-order
+  imbalance, ternary centering and local-rank bridge, the frozen rank-ten
+  control, and the individual-column census. The rank-six statement is for
+  the centered Gram; the uncentered seven-row Gram has rank seven.
+
+```text
+endpoint proof coverage:        0 / 33
+complete all-prism mathematics: VERIFIED construction scope
+rank_F7(M)>=13:                 VERIFIED
+higher-order bridge:            VERIFIED scoped, wording qualified
+upper bound below 4158:         NOT PROVED
+n3=4158 / Conway-99:            UNKNOWN
+```
+
 ## Wave 34 exact encoding and actual-incidence continuation
 
 Wave 34 has separated Stage 1, candidate, Stage 2, and crosscheck packages.

@@ -2595,6 +2595,145 @@ n3 upper bound below 4158:               not obtained
 Conway-99:                               UNKNOWN
 ```
 
+## Wave 37 rooted, finite-polar, and proof-formula checks
+
+Replay the rooted and finite-polar discovery packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave36-rooted-branches -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave37-polar-strengthen -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave37-polar-strengthen\exact_check.py `
+  --verify attempts\wave37-polar-strengthen\exact-results.json
+```
+
+Rebuild and audit the branch-15 OPB artifact:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave37-proof-producing-endpoint\export_endpoint_opb.py `
+  --refined-branch 15 `
+  --opb attempts\wave37-proof-producing-endpoint\branch-15.opb `
+  --metadata attempts\wave37-proof-producing-endpoint\branch-15-formula.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave37-proof-producing-endpoint -p "test_*.py" -v
+```
+
+Replay the three independent packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave37-rooted-branches -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave37-rooted-branches\independent_check.py `
+  --verify verification\wave37-rooted-branches\independent-results.json
+
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave37-polar-strengthen -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave37-polar-strengthen\independent_check.py `
+  --verify verification\wave37-polar-strengthen\independent-results.json
+
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave37-proof-producing-endpoint -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave37-proof-producing-endpoint\independent_check.py `
+  --verify `
+  verification\wave37-proof-producing-endpoint\independent-results.json
+```
+
+Expected totals are 8 rooted, 13 polar, and 5 OPB discovery tests, plus
+5 rooted, 6 polar, and 5 OPB independent tests: 42 tests in total. The
+formula verifier independently reconstructs all 574,615 constraints, but
+does not decide satisfiability.
+
+```text
+fixed-triangle clause catalogs: VERIFIED scoped
+ternary/code restrictions:      VERIFIED scoped
+branch-15 OPB artifact:          VERIFIED artifact-only
+solver conclusion promoted:     NONE
+rigorous interval:              708 <= n3 <= 4158
+n3=4158 / Conway-99:            UNKNOWN
+```
+
+## Wave 38 queue, complete-prism, coclique, and higher-order checks
+
+Replay the read-only solver-harvest packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave38-solver-harvest -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave38-solver-harvest -p "test_*.py" -v
+```
+
+These commands check the exact 33-case queue and zero proof coverage; they do
+not start, stop, or attach to a solver.
+
+Replay the complete all-prism construction and independently bind the fixture
+catalog and pool:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave38-complete-endpoint -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave38-complete-endpoint\prism_oracle.py `
+  --candidate attempts\wave38-complete-endpoint\fixture-residual-prism.json `
+  --catalog attempts\wave38-complete-endpoint\fixture-residual-prism-cuts.json `
+  --verify-only
+.\.venv\Scripts\python.exe -B `
+  attempts\wave38-complete-endpoint\cut_pool.py `
+  --catalog attempts\wave38-complete-endpoint\fixture-residual-prism-cuts.json `
+  --pool attempts\wave38-complete-endpoint\fixture-cut-pool.json `
+  --verify-only
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave38-complete-endpoint -p "test_*.py" -v
+```
+
+The static inventory is only a size/schema calculation. Do not invoke the
+guarded 24-billion-clause stream on the current host.
+
+Replay the coclique-rank discovery and independent packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave38-coclique-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave38-coclique-rank\exact_check.py `
+  --verify attempts\wave38-coclique-rank\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave38-coclique-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave38-coclique-rank\independent_check.py `
+  --verify verification\wave38-coclique-rank\independent-results.json
+```
+
+Replay the higher-order discovery and independent packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave38-higher-order -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave38-higher-order\exact_check.py `
+  --verify attempts\wave38-higher-order\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave38-higher-order -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave38-higher-order\independent_check.py `
+  --verify verification\wave38-higher-order\independent-results.json `
+  --compare-submission attempts\wave38-higher-order\exact-results.json
+```
+
+```text
+solver terminal evidence:    NONE
+endpoint proof coverage:     0 / 33
+rank_F7(M)>=13:              VERIFIED
+rigorous interval:           708 <= n3 <= 4158
+n3=4158 / Conway-99:         UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

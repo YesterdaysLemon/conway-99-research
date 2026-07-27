@@ -64,7 +64,12 @@ and the normalized search problem.
   derives an 84-unit rooted reduction with five surviving normalized
   branches, and records two exact local-incidence models. All bounded solver
   scouts stopped `UNKNOWN`; no endpoint was excluded and the rigorous
-  interval remains `708<=n3<=4158`.
+  interval remains `708<=n3<=4158`. Waves 36--38 add verified modular and
+  block restrictions, exact 33-case proof bookkeeping, a complete
+  all-prism encoding/oracle construction, and a universal 13-coclique
+  consequence raising `rank_F7(M)` from at least 11 to at least 13. The
+  two long-running heuristic scouts still expose no terminal result, proof
+  coverage is `0/33`, and no upper bound below 4158 is claimed.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1782,6 +1787,190 @@ and the bounded source/query ledger are in the
 The final separation and publication checks are in the
 [orchestrator decision](verification/2026-07-26-wave36-orchestrator.md) and
 [integration audit](verification/2026-07-26-wave36-integration-audit.md).
+
+## Wave 37 public endpoint handoff
+
+Wave 37 turns the strongest current endpoint restrictions into concrete,
+reproducible search artifacts while preserving the unresolved status wall.
+
+First, the five surviving normalized parent branches now have exact
+fixed-triangle prism catalogs. Each parent has six fixed coordinate-2
+triangles and
+
+```text
+282,774 deduplicated active P=0 clauses
+    606 clauses of length 3
+282,168 clauses of length 5.
+```
+
+The independent verifier reconstructed all five catalogs, their hashes, the
+84 endpoint units, the reduction from twelve parent branches to
+`4,5,8,10,12`, and the exact 33-case refinement. These clauses are sound but
+partial: they forbid prisms meeting one of the six fixed triangles and do not
+encode every possible prism. The completed branch-4 MiniCard scout stopped at
+100,000 conflicts with `BUDGET_UNKNOWN`; the nonterminal 33-case sweep is
+excluded from every claim.
+
+Second, the endpoint would define a projective self-orthogonal ternary code
+
+```text
+U <= F_3^231,  parameters [231,r3]_3,
+1 in U-perp,  dual distance at least 3,
+A_69 >= 462.
+```
+
+At the surviving boundary `r3=12`, the independently verified Schur-square
+ceilings are
+
+```text
+rank_F3(I+B) <= 78,
+rank_F3(J-I-B) <= 79.
+```
+
+Signed-triangle counting also forces at least 31,416 linearly independent
+balanced triples and therefore at least 437 distinct three-dimensional
+spaces whose restricted Gram matrix has rank one. A tempting shortcut was
+wrong: a singular Gram matrix in a nondegenerate ambient space does not make
+the three vectors collinear. The verifier supplies an explicit counterexample.
+
+The characteristic-seven rank-eleven test also survives. The relevant
+orthogonality graph has five relation classes rather than being strongly
+regular, and its largest nonprincipal eigenvalues are
+
+```text
+square determinant:     2401(1+sqrt(2))
+nonsquare determinant:  4802.
+```
+
+Both determinant classes remain possible at this level.
+
+Finally, refined branch 15 is published as a deterministic compressed OPB
+artifact. Its raw form has 289,338 variables, 574,615 constraints, and SHA-256
+
+```text
+4c1607f4aef7e20569592ccb4ac20dfe30c1e1d220a8fbc0a202554bed6d84e5.
+```
+
+The independent verifier rebuilt every constraint byte-for-byte, checked the
+gzip round trip and metadata, and replayed parser acceptance with the pinned
+Exact binary. This verifies the formula artifact only. No solver conclusion,
+assignment, graph, or proof exists, and the file represents only one of 33
+endpoint-compatible refined cases.
+
+See the [rooted construction report](agents/2026-07-27-wave36-rooted-branches.md),
+[rooted audit](verification/wave37-rooted-branches/audit.md),
+[polar report](agents/2026-07-26-wave37-polar-strengthen.md),
+[polar audit](verification/wave37-polar-strengthen/audit.md),
+[branch-15 package](attempts/wave37-proof-producing-endpoint/README.md), and
+[formula audit](verification/wave37-proof-producing-endpoint/audit.md).
+
+```text
+conditional clause and finite-field restrictions: VERIFIED scoped
+branch-15 formula artifact:                        VERIFIED artifact-only
+SAT assignment / UNSAT proof:                      NONE
+upper bound below 4158:                            NOT PROVED
+rigorous interval:                                 708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:                     UNKNOWN
+```
+
+## Wave 38 complete-prism, coclique-rank, and higher-order checkpoint
+
+Wave 38 records the continuing work as reproducible attempts rather than
+solver folklore.
+
+The exact endpoint work queue has 33 refined cases across parent branches
+`4,5,8,10,12`. It owns seven collision-free artifact paths per case, or 231
+paths total. An independent verifier reconstructed every case and orbit
+weight. The two inherited Gluecard4 and MiniCard workers were still active
+when sampled, but neither output file existed and the programs expose no
+completed prefix. Therefore:
+
+```text
+terminal solver records:            0
+independently checked UNSAT cases:   0 / 33
+decoded endpoint graphs:             0
+proof coverage:                      0 / 33
+```
+
+The complete endpoint construction now covers every triangular prism, not
+only those meeting one of six fixed triangles. The rooted scaffold has
+
+```text
+7       fixed root triangles
+924     coordinate-plus-two-residual potential triangles
+95,284  residual-only potential triangles
+96,215  total potential triangles.
+```
+
+The residual-only subfamily alone contains exactly
+
+```text
+60 * binomial(84,6) = 24,388,892,640
+```
+
+labelled prism clauses. Static materialization is therefore impractical on
+the present host. The package supplies an exhaustive decoded-candidate oracle,
+candidate-bound cut catalogs, source-bound cumulative pools, and a guarded
+OPB exporter for finite solve--cut--check iterations. The independent verifier
+matched the oracle on all `2^15=32,768` six-vertex graphs and verified the
+`lambda=1` compression on all 64 prism supergraphs. No target formula was
+generated or solved.
+
+Wave 38 also obtains a new verified necessary rank restriction. Every putative
+graph has a 13-coclique: around an edge `xy`, the remaining twelve neighbors
+of each endpoint form two local matchings joined by a cross matching; the
+resulting 24-vertex graph is a union of cycles of length divisible by four,
+and the unique triangle mate can be added to a twelve-point color class. For
+the vertex-triangle incidence matrix `N` and integral triangle projector
+`M=21E_0`,
+
+```text
+N M N^T = 27I - 9A + J.
+```
+
+Restricting to the coclique gives `27I_13+J_13`, whose determinant is
+`27^12*40 = 5 (mod 7)`. Hence
+
+```text
+rank_F7(M) >= 13.
+```
+
+At `n3=4158`, `C=2M-21I` has the same rank modulo seven. If the ternary rank
+is the surviving boundary value 12, parity forces the characteristic-seven
+rank to be even and at least 14. The modular census drops from 629 to 528
+arithmetic rank pairs; these are not constructed matrices or graphs. The
+13-coclique construction is credited to Misha Lavrov's public 2025
+Mathematics Stack Exchange comment, and novelty of the combined rank
+consequence remains `UNKNOWN`.
+
+Finally, a higher-order discovery lane derives a signed support-four-cycle
+imbalance of 200,277 and a characteristic-three fixed-triangle rank bridge.
+It also supplies a rank-ten local positive control, proving that the
+one-triangle axioms alone cannot eliminate the surviving ternary rank-12
+case. An independent verifier reconstructed these results with eleven hostile
+tests. Its wording qualifier is that rank six belongs to the centered
+seven-row Gram; the uncentered Gram has rank seven. The missing ingredient is
+simultaneous 60-block `B/H` compatibility or compatibility across base
+triangles.
+
+See the [solver harvest](attempts/wave38-solver-harvest/README.md),
+[harvest audit](verification/wave38-solver-harvest/audit.md),
+[complete endpoint construction](attempts/wave38-complete-endpoint/README.md),
+[complete endpoint audit](verification/wave38-complete-endpoint/audit.md),
+[coclique-rank report](agents/2026-07-27-wave38-coclique-rank.md),
+[coclique-rank audit](verification/wave38-coclique-rank/audit.md), and
+[higher-order report](agents/2026-07-27-wave38-higher-order.md) with its
+[independent audit](verification/wave38-higher-order/audit.md).
+
+```text
+complete all-prism construction and oracle: VERIFIED scoped
+rank_F7(M)>=13:                           VERIFIED
+signed higher-order restrictions:         VERIFIED scoped, wording qualified
+solver proof coverage:                     0 / 33
+upper bound below 4158:                    NOT PROVED
+rigorous interval:                         708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:             UNKNOWN
+```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
