@@ -1272,3 +1272,30 @@ two abstract simultaneous neighbors: VERIFIED
 full X/M/W/Q/B endpoint package: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
+
+## Wave 39 edge-local rank and proof-shard verification
+
+The [integration audit](2026-07-27-wave39-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave39-orchestrator.md) record the accepted
+scope.
+
+- `wave39-edge-local-rank/` independently enumerates all 10,395 pulled-back
+  matchings, reconstructs the eleven positive partitions of six, proves the
+  local rank formula, verifies rank transport, and promotes
+  `rank_F7(M)>=19`. Fourteen hostile and exact tests pass.
+- `wave39-proof-solver/` independently binds the branch-15 source lines, OPB
+  bytes, raw/kernel proof hashes, and generalized-unit derivation. Fresh
+  VeriPB 3.0.2 runs accept both proofs. Six tests pass. CakePB supplied no
+  conclusion.
+
+The cross-base and simultaneous `B/H` packages remain discovery-only
+`DERIVED_INCONCLUSIVE` evidence. They are published for reproducibility, not
+promoted as verified contradictions.
+
+```text
+rank_F7(M)>=19:                 VERIFIED
+branch15 AND x187=1:            VERIFIED UNSAT
+branch 15 / proof coverage:     UNKNOWN / 0 of 33
+upper bound below 4158:         NOT PROVED
+n3=4158 / Conway-99 / novelty:  UNKNOWN
+```

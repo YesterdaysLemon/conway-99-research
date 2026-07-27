@@ -1774,3 +1774,76 @@ obligations:
     note: >-
       No graph or proof exists. The endpoint and Conway-99 remain UNKNOWN,
       the rigorous interval is 708<=n3<=4158, and proof coverage is 0/33.
+
+  - id: O-WAVE39-EDGE-LOCAL-RANK-VERIFICATION
+    requirement: >-
+      Independently reconstruct the edge-local 27-vertex geometry, prove
+      completeness of the eleven normal forms, exhaust the 10,395 pulled-back
+      matchings, derive the characteristic-seven rank transport, recompute the
+      rank formula and endpoint arithmetic, and reject status inflation
+      without importing discovery code.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave39-edge-local-rank/independent-results.json"
+      - "verification/wave39-edge-local-rank/README.md"
+      - "verification/wave39-edge-local-rank/run-report.yaml"
+      - "verification/wave39-edge-local-rank/package-manifest.sha256"
+    note: >-
+      Fourteen independent tests pass. The universal necessity
+      rank_F7(M)>=19 and the 429 endpoint rank-pair census are verified. No
+      edge-type compatibility theorem, endpoint exclusion, graph, upper-bound
+      improvement, or novelty result follows.
+
+  - id: O-WAVE39-PROOF-SHARD-VERIFICATION
+    requirement: >-
+      Independently bind the branch-15 source constraints and OPB bytes,
+      reconstruct the generalized-unit derivation, verify raw and kernel
+      pseudo-Boolean proof hashes, and run fresh strict proof checking while
+      retaining the one-shard-only scope.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave39-proof-solver/package-manifest.sha256"
+      - "verification/wave39-proof-solver/exact-results.json"
+      - "verification/wave39-proof-solver/README.md"
+      - "verification/wave39-proof-solver/run-report.yaml"
+      - "verification/wave39-proof-solver/package-manifest.sha256"
+    note: >-
+      Fresh VeriPB 3.0.2 runs accept the raw and kernel proofs. CakePB supplied
+      no conclusion. Only branch15 AND x187=1 is closed; branch 15 is UNKNOWN
+      and endpoint proof coverage remains 0/33.
+
+  - id: O-WAVE39-COMPATIBILITY-SCOPE
+    requirement: >-
+      Retain cross-base projection and simultaneous B/H calculations with
+      exact inputs, tests, manifests, positive controls, and explicit
+      discovery-only labels; do not promote them to verified global
+      contradictions without an independent reconstruction.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave39-cross-base-rank/package-manifest.sha256"
+      - "attempts/wave39-simultaneous-bh/package-manifest.sha256"
+      - "verification/2026-07-27-wave39-integration-audit.md"
+    note: >-
+      Both ten-test packages replay exactly and remain
+      DERIVED_INCONCLUSIVE. Their controls show why the present restrictions
+      do not exclude the endpoint.
+
+  - id: O-WAVE39-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate: either
+      a valid 99-vertex prism-free SRG or checked UNSAT proofs covering all 33
+      refined cases. Local rank floors, arithmetic survivor pairs, one
+      polarity shard, projection collisions, and conditional B/H equations do
+      not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/2026-07-27-wave39-integration-audit.md"
+      - "verification/2026-07-27-wave39-orchestrator.md"
+    note: >-
+      No graph or complete endpoint proof exists. The endpoint and Conway-99
+      remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
+      coverage is 0/33.

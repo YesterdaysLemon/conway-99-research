@@ -1818,6 +1818,101 @@ claims:
       still 708<=n3<=4158, proof coverage is 0/33, and novelty and priority
       remain UNKNOWN.
 
+  - id: C-WAVE39-EDGE-LOCAL-RANK-076
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=19 for the
+      integral triangle projector M=21E_0. For every edge, the associated
+      27-vertex principal block has one of eleven normal forms indexed by the
+      positive partitions of six and has rank
+      25-2*(number of even parts) over F_7.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "agents/2026-07-27-wave39-edge-local-rank.md"
+      - "attempts/wave39-edge-local-rank/exact-results.json"
+      - "verification/wave39-edge-local-rank/independent-results.json"
+      - "verification/wave39-edge-local-rank/README.md"
+      - "verification/wave39-edge-local-rank/run-report.yaml"
+    limitations: >-
+      The theorem is a necessary rank condition, not a graph construction or
+      endpoint contradiction. No global compatibility theorem for the local
+      edge types is proved, the upper bound remains n3<=4158, and novelty and
+      priority remain UNKNOWN.
+
+  - id: C-WAVE39-ENDPOINT-RANK-CENSUS-077
+    statement: >-
+      At the prism-free endpoint, the edge-local partitions are exactly
+      2+2+2, 2+4, 3+3, and 6 with local F_7 ranks 19,21,25,23. The verified
+      modular arithmetic census has 429 surviving (r3,r7) pairs; if r3=12,
+      then r7 is even and at least 20.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ARITHMETIC
+    evidence:
+      - "attempts/wave39-edge-local-rank/exact-results.json"
+      - "verification/wave39-edge-local-rank/independent-results.json"
+      - "verification/2026-07-27-wave39-integration-audit.md"
+    limitations: >-
+      The 429 pairs are arithmetic survivors, not matrices or graphs. The
+      endpoint remains UNKNOWN.
+
+  - id: C-WAVE39-PROOF-SHARD-078
+    statement: >-
+      In refined endpoint branch 15, the frozen formula entails x187=0;
+      equivalently branch15 AND x187=1 is UNSAT. Exact raw and kernel
+      pseudo-Boolean proofs receive fresh independent strict VeriPB 3.0.2
+      acceptance.
+    label: VERIFIED
+    scope: ONE_EXPLICIT_POLARITY_SHARD_INSIDE_REFINED_BRANCH_15
+    evidence:
+      - "agents/2026-07-27-wave39-proof-solver.md"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.raw.pbp"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.kernel.pbp"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.raw-check.txt"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.kernel-check.txt"
+      - "verification/wave39-proof-solver/exact-results.json"
+      - "verification/wave39-proof-solver/README.md"
+    limitations: >-
+      The x187=0 shard is open. Branch 15 and all complete endpoint cases
+      remain unresolved, proof coverage is 0/33, and CakePB supplied no
+      conclusion.
+
+  - id: C-WAVE39-COMPATIBILITY-LANES-079
+    statement: >-
+      Conditional on the prism-free r3=12 boundary, the cross-base lane forces
+      at least twelve equal-projection pairs per 84-triangle vertex star, and
+      the simultaneous B/H lane derives a projective self-orthogonal
+      [231,11]_3 code boundary together with exact conditional H-edge
+      decompositions.
+    label: DERIVED
+    scope: CONDITIONAL_DISCOVERY_ONLY_COMPATIBILITY_RESTRICTIONS
+    evidence:
+      - "agents/2026-07-27-wave39-cross-base-rank.md"
+      - "attempts/wave39-cross-base-rank/exact-results.json"
+      - "agents/2026-07-27-wave39-simultaneous-bh.md"
+      - "attempts/wave39-simultaneous-bh/exact-results.json"
+    limitations: >-
+      These discovery-only lanes were not promoted by an independent verifier.
+      Positive quotient controls and nonnegative Delsarte transforms prevent
+      an endpoint contradiction. No simultaneous completion or graph is
+      supplied.
+
+  - id: C-WAVE39-CONTINUATION-080
+    statement: >-
+      Excluding n3=4158 still requires a checked endpoint graph, checked UNSAT
+      certificates covering every refined case, or a global contradiction
+      coupling the local edge types, cross-base dependencies, or simultaneous
+      B/H equations. The Wave 39 rank theorem and one closed polarity shard do
+      not satisfy this condition.
+    label: UNKNOWN
+    scope: WAVE39_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave39-integration-audit.md"
+      - "verification/2026-07-27-wave39-orchestrator.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval remains
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

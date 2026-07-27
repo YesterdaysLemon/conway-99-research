@@ -70,6 +70,11 @@ and the normalized search problem.
   consequence raising `rank_F7(M)` from at least 11 to at least 13. The
   two long-running heuristic scouts still expose no terminal result, proof
   coverage is `0/33`, and no upper bound below 4158 is claimed.
+  Wave 39 independently raises the universal floor again to
+  `rank_F7(M)>=19`, reducing the endpoint arithmetic rank-pair census from
+  528 to 429. It also supplies an independently replayed VeriPB proof that
+  closes `branch15 AND x187=1`, but the opposite shard remains open, so
+  branch 15 and all 33 complete endpoint cases remain unresolved.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -1970,6 +1975,84 @@ solver proof coverage:                     0 / 33
 upper bound below 4158:                    NOT PROVED
 rigorous interval:                         708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:             UNKNOWN
+```
+
+## Wave 39 edge-local rank and proof-shard checkpoint
+
+Choose any edge `xy`, let `z` be its unique triangle mate, and put
+
+```text
+X=N(x)-{y,z},  Y=N(y)-{x,z}.
+```
+
+Each of `X` and `Y` carries a perfect matching, and the edges between them
+form a third perfect matching. On the 24 vertices `X union Y`, these three
+matchings form cycles of lengths `4m`, where the positive integers `m`
+partition six. There are eleven normal forms. A clean-room verifier exhausted
+all `11*9*7*5*3*1=10,395` pulled-back matchings and independently computed,
+for the 27-vertex block `L={x,y,z} union X union Y`,
+
+```text
+rank_F7((N M N^T)[L,L]) = 25 - 2*(number of even parts).
+```
+
+Here `N` is the vertex-triangle incidence matrix and `M=21E_0`. Since
+
+```text
+N M N^T = 27I-9A+J
+N^T N M = 3M
+```
+
+and three is invertible modulo seven, `N` is injective on the image of `M`;
+symmetry then gives
+
+```text
+rank_F7(M)=rank_F7(N M N^T)>=19.
+```
+
+This improves the previous verified floor of thirteen. At the prism-free
+endpoint, only the partitions `2+2+2`, `2+4`, `3+3`, and `6` survive, with
+local ranks `19,21,25,23`. The arithmetic endpoint rank-pair census drops from
+528 to 429. In particular:
+
+```text
+r7<=20: every edge has type 2+2+2
+r7<=22: every edge has type 2+2+2 or 2+4
+r7<=24: no edge has type 3+3.
+```
+
+The proof-producing lane closes one explicit endpoint shard. In refined branch
+15, frozen units force `x3591=0`; adding `x187=1` violates a frozen wedge
+constraint. Exact produced raw and kernel pseudo-Boolean proofs, and a separate
+verifier reran VeriPB 3.0.2 and obtained `VERIFIED UNSATISFIABLE` for both.
+Therefore branch 15 entails `x187=0`. The `x187=0` shard is still open, so
+branch 15 is not closed and endpoint proof coverage remains `0/33`. CakePB
+provided no conclusion and is not counted as a replay.
+
+Two additional discovery packages record exact but inconclusive restrictions.
+The cross-base lane forces at least twelve equal-projection pairs per
+84-triangle vertex star on the conditional `r3=12` endpoint boundary. The
+simultaneous `B/H` lane derives a projective self-orthogonal `[231,11]_3` code
+boundary and exact conditional overlap decompositions. Positive controls and
+nonnegative Delsarte transforms prevent either lane from being promoted to an
+endpoint contradiction.
+
+See the [edge-local discovery](attempts/wave39-edge-local-rank/README.md),
+[independent edge-local verification](verification/wave39-edge-local-rank/README.md),
+[proof-shard package](attempts/wave39-proof-solver/README.md),
+[independent proof replay](verification/wave39-proof-solver/README.md),
+[cross-base package](attempts/wave39-cross-base-rank/README.md),
+[simultaneous `B/H` package](attempts/wave39-simultaneous-bh/README.md),
+[integration audit](verification/2026-07-27-wave39-integration-audit.md), and
+[orchestrator decision](verification/2026-07-27-wave39-orchestrator.md).
+
+```text
+rank_F7(M)>=19:                     VERIFIED
+branch15 AND x187=1:                VERIFIED UNSAT
+branch 15 / endpoint proof coverage: UNKNOWN / 0 of 33
+upper bound below 4158:              NOT PROVED
+rigorous interval:                   708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:       UNKNOWN
 ```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise

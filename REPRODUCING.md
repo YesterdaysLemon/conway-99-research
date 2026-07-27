@@ -2734,6 +2734,72 @@ rigorous interval:           708 <= n3 <= 4158
 n3=4158 / Conway-99:         UNKNOWN
 ```
 
+## Wave 39 edge-local rank and proof-shard checks
+
+Replay the edge-local discovery and clean-room verification:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-edge-local-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-edge-local-rank\exact_check.py `
+  --output $env:TEMP\wave39-edge-local-rank.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave39-edge-local-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave39-edge-local-rank\independent_check.py `
+  --output $env:TEMP\wave39-edge-local-rank-independent.json
+```
+
+The independent command exhausts all 10,395 pulled-back matchings and
+reconstructs the eleven partitions and rank formula without importing the
+discovery implementation.
+
+Replay the branch-15 proof shard:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-proof-solver -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-proof-solver\verify_certificate.py `
+  attempts\wave39-proof-solver\branch-15-x187-positive-certificate.json `
+  --output $env:TEMP\wave39-proof-shard.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave39-proof-solver -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave39-proof-solver\independent_check.py `
+  --output $env:TEMP\wave39-proof-shard-independent.json
+```
+
+The compressed OPB and raw/kernel VeriPB proofs are retained in the attempt
+package. The uncompressed `.opb` is reproducible and ignored. Fresh strict
+VeriPB replay is part of the independent verifier; CakePB supplied no
+conclusion.
+
+Replay the two exact discovery-only compatibility lanes:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-cross-base-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-cross-base-rank\exact_check.py `
+  --output $env:TEMP\wave39-cross-base-rank.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-simultaneous-bh -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-simultaneous-bh\exact_check.py `
+  --output $env:TEMP\wave39-simultaneous-bh.json
+```
+
+```text
+Wave 39 tests:                         62 / 62 PASS
+rank_F7(M)>=19:                       VERIFIED
+branch15 AND x187=1:                  VERIFIED UNSAT
+complete endpoint proof coverage:     0 / 33
+rigorous interval:                     708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:         UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

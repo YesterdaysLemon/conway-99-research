@@ -165,3 +165,23 @@ nonhit improves the general interval `708<=n3<=4158`.
 All solver activity, partial pools, local controls, and arithmetic survivors
 remain nonterminal. The endpoint, upper-bound improvement, Conway-99, and
 novelty are `UNKNOWN`.
+
+## Wave 39: edge-local rank, proof shard, and compatibility restrictions
+
+- `wave39-edge-local-rank/` derives the eleven edge-local cycle normal forms
+  and the characteristic-seven rank formula
+  `25-2*(number of even parts)`. Independent verification promotes the
+  universal necessity `rank_F7(M)>=19`.
+- `wave39-proof-solver/` exports the `branch15 AND x187=1` OPB shard and
+  retains raw, elaborated, and kernel pseudo-Boolean proofs. Independent
+  VeriPB replay accepts the raw and kernel proofs. The other polarity shard
+  is open, so branch 15 and endpoint proof coverage remain unresolved.
+- `wave39-cross-base-rank/` records conditional projection collisions and
+  explicit support-four/six dependencies, together with controls refuting a
+  universal local rank-twelve shortcut.
+- `wave39-simultaneous-bh/` records conditional centered-code and compatible
+  `H` overlap restrictions. Its Delsarte transforms are nonnegative and it
+  supplies no completion or exclusion.
+
+The Wave 39 packages do not construct a graph, force a prism, close a complete
+endpoint case, improve `n3<=4158`, or establish novelty.

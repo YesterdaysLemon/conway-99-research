@@ -140,3 +140,17 @@ Wave 38 reports:
 - `2026-07-27-wave38-higher-order.md`: signed four-cycle and ternary
   fixed-triangle rank derivations plus a rank-ten local positive control.
   Simultaneous completion remains the missing step.
+
+Wave 39 reports:
+
+- `2026-07-27-wave39-edge-local-rank.md`: discovery proof of the eleven
+  edge-local normal forms and candidate `rank_F7(M)>=19` theorem. Read it with
+  the independent verifier, which promotes the theorem.
+- `2026-07-27-wave39-proof-solver.md`: construction report for the
+  `branch15 AND x187=1` pseudo-Boolean proof shard. Independent VeriPB replay
+  verifies only that named shard; branch 15 remains open.
+- `2026-07-27-wave39-cross-base-rank.md`: conditional `r3=12` projection
+  collisions and quotient controls. The result is `DERIVED_INCONCLUSIVE`.
+- `2026-07-27-wave39-simultaneous-bh.md`: conditional centered-code and
+  simultaneous `B/H` overlap restrictions. Nonnegative transforms leave the
+  boundary unexcluded.

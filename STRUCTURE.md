@@ -2720,6 +2720,105 @@ does not prove `P>=1`. An independent reconstruction passed eleven hostile
 tests. Its only wording qualifier is that the seven-row rank-six statement
 refers to the centered Gram `D=C+J`; the uncentered Gram has rank seven.
 
+### Wave 39 edge-local characteristic-seven rank (`VERIFIED`)
+
+Fix an arbitrary edge `xy` with unique triangle mate `z`, and let
+
+```text
+X=N(x)-{y,z},  Y=N(y)-{x,z}.
+```
+
+The `lambda=1` and `mu=2` equations force perfect matchings on `X`, on `Y`,
+and between `X` and `Y`. Pulling the cross matching back to `X` leaves the
+union of two perfect matchings on twelve vertices. Its alternating cycles
+have lengths `2m`; before pullback the corresponding `X union Y` cycles have
+lengths `4m`, where the positive parts `m` sum to six. Thus all edge-local
+normal forms are indexed by the eleven positive partitions of six.
+
+Let `L={x,y,z} union X union Y`. Modulo seven,
+
+```text
+(N M N^T)[L,L] = (J-I-2A)[L,L].
+```
+
+Exact elimination on all eleven forms gives
+
+```text
+rank_F7((N M N^T)[L,L]) = 25 - 2e,
+```
+
+where `e` is the number of even parts. At most three positive even parts can
+sum to six, so every such principal block has rank at least nineteen.
+
+The rank transport is equality, not merely an upper comparison. If `v=Mw`
+and `Nv=0`, then
+
+```text
+0=N^T N v=N^T N M w=3M w=3v.
+```
+
+Since three is invertible in `F_7`, `N` is injective on `im(M)`. Applying this
+on both sides and using symmetry of `M` proves
+
+```text
+rank_F7(M)=rank_F7(N M N^T)>=19.
+```
+
+An independent verifier enumerated all 10,395 pulled-back labelled matchings,
+reconstructed every normal form, recomputed the ranks, and attacked the
+status and rank claims with hostile mutations.
+
+At the prism-free endpoint, parts equal to one are forbidden. The surviving
+partitions and local ranks are:
+
+| partition | local rank over `F_7` |
+| --- | ---: |
+| `2+2+2` | 19 |
+| `2+4` | 21 |
+| `3+3` | 25 |
+| `6` | 23 |
+
+The endpoint arithmetic census therefore has 429 surviving `(r3,r7)` pairs
+instead of 528. If `r3=12`, parity forces even `r7>=20`. Moreover, `r7<=20`
+forces every edge to have type `2+2+2`; `r7<=22` permits only `2+2+2` and
+`2+4`; and `r7<=24` forbids type `3+3`. These are necessary restrictions, not
+a global edge-type compatibility theorem.
+
+### Wave 39 proof shard and conditional compatibility lanes
+
+For refined endpoint branch 15, the published units `x24=1` and `x2=1`
+generalized-unit propagate through a capacity constraint to `x3591=0`.
+Assuming `x187=1` then falsifies a wedge clause. Exact emitted raw and
+elaborated kernel proofs, and fresh independent VeriPB 3.0.2 runs accepted
+both:
+
+```text
+branch15 AND x187=1: UNSAT
+branch15 entails x187=0.
+```
+
+The `x187=0` polarity shard remains open. Consequently branch 15 is unresolved
+and complete endpoint proof coverage remains `0/33`. CakePB supplied no
+conclusion.
+
+Conditional on the endpoint and `r3=12`, the cross-base projection lane maps
+each 84-triangle vertex star to 72 oriented norm-one vectors in a nonsquare
+five-space. It forces at least twelve equal-projection pairs, hence explicit
+support-four or support-six factor-row dependencies. Exact quotient controls
+of ranks ten and eleven show that a universal local rank-twelve shortcut is
+false.
+
+The simultaneous `B/H` lane makes the centered 231 rows distinct projective
+isotropic points in a nonsquare eleven-space and derives a self-orthogonal
+`[231,11]_3` code with recorded low-weight enumerator constraints. A compatible
+`H` would have 96 overlap-zero edges forming 32 edge-disjoint triangles and
+144 overlap-one edges partitioned into 36 point-labelled four-edge matchings.
+All tested oriented Delsarte transforms are nonnegative, so these restrictions
+do not exclude the boundary.
+
+No Wave 39 result forces a prism, closes a full endpoint case, or improves
+`n3<=4158`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

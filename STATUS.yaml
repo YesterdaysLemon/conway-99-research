@@ -2431,4 +2431,74 @@ thirty_eighth_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 38 verifies the exact 33-case queue, a complete all-prism construction and oracle, the universal rank_F7(M)>=13 necessity, and scoped higher-order identities. It supplies no target formula result, graph, SAT assignment, UNSAT proof, completed lazy-cut sequence, endpoint exclusion, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+thirty_ninth_research_wave:
+  public_base_commit: "37f635ab67d2348c73986fae5e81b9b7a40a345a"
+  frozen_discovery_input_commit: "019b78ac9a5170107d105ad4d8fcd27f55dde642"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  edge_local_rank_status: VERIFIED
+  edge_local_normal_forms: 11
+  edge_local_labelled_matching_configurations: 10395
+  edge_local_rank_formula: "25-2*(number of even parts)"
+  characteristic_seven_rank_floor: "rank_F7(M)>=19"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=13"
+  endpoint_edge_partitions: "2+2+2,2+4,3+3,6"
+  endpoint_edge_partition_ranks: "19,21,25,23"
+  modular_rank_pairs: 429
+  previous_modular_rank_pairs: 528
+  ternary_boundary_consequence: "r3=12 implies even r7>=20"
+  edge_local_result: "attempts/wave39-edge-local-rank/exact-results.json"
+  edge_local_result_sha256: "90afac4d1203048b27715d8b083ef850b59d0d7714d53bf240bbafeaa3ee7172"
+  edge_local_discovery_manifest: "attempts/wave39-edge-local-rank/package-manifest.sha256"
+  edge_local_discovery_manifest_sha256: "7875723d4999cdbcde98781763638e5513c78dc88c53161c341f0390658d23de"
+  edge_local_independent_result: "verification/wave39-edge-local-rank/independent-results.json"
+  edge_local_independent_result_sha256: "85b8d36d6ce5ebd638e957e1731864eff75f38405935f5e51ad5b629edea5966"
+  edge_local_verifier_manifest: "verification/wave39-edge-local-rank/package-manifest.sha256"
+  edge_local_verifier_manifest_sha256: "c11b09f9da2300261bf8b0bc665fc5cc4b5654c6a460a9b7b43d5a53ee3ad970"
+  proof_shard_status: VERIFIED_ONE_POLARITY_SHARD_ONLY
+  proof_shard: "branch15 AND x187=1"
+  proof_shard_conclusion: UNSAT
+  branch_15_entailed_literal: "x187=0"
+  branch_15_status: UNKNOWN
+  proof_coverage: "0/33"
+  proof_shard_result: "attempts/wave39-proof-solver/exact-results.json"
+  proof_shard_result_sha256: "07f1af5ac1dae41c8fd1385bc69f7922671e70921e205de9bfee2ecfa0a45c3c"
+  proof_shard_opb_gzip_sha256: "6a5e88245acb4dece760ce67e39fa9b098e43c958bc0f164bcba9f67e8ea4e2d"
+  proof_shard_raw_proof_sha256: "b2fcb06206d8a09ab636535f0358f6013e5daddaf14b7132180698a2f59340d5"
+  proof_shard_kernel_proof_sha256: "5645dded139847ff144e84ddc6dd59e90267a9c585a986f13e20748b773c07a0"
+  proof_shard_discovery_manifest: "attempts/wave39-proof-solver/package-manifest.sha256"
+  proof_shard_discovery_manifest_sha256: "72baea5f8143e93fcd1bb900bdb5bdb9b40d723fcee4f40185c5f9de5dab0315"
+  proof_shard_independent_result: "verification/wave39-proof-solver/exact-results.json"
+  proof_shard_independent_result_sha256: "3afc665de9d8d0e5a5a4dab6b600db1e5b726ef1dfba685eeba92c80da1df5e4"
+  proof_shard_verifier_manifest: "verification/wave39-proof-solver/package-manifest.sha256"
+  proof_shard_verifier_manifest_sha256: "62af7bb7e0ff6dedb64fe8173394e04ca16c082d9eedc43ea30bfb05dcc0e98e"
+  proof_shard_raw_veripb: VERIFIED_UNSATISFIABLE
+  proof_shard_kernel_veripb: VERIFIED_UNSATISFIABLE
+  proof_shard_cakepb: NO_CONCLUSION_NOT_REPLAYED
+  cross_base_status: DERIVED_INCONCLUSIVE
+  cross_base_result: "attempts/wave39-cross-base-rank/exact-results.json"
+  cross_base_result_sha256: "3955106a57f3910813f1ac680bc9bab6cb28024b883af4b08d157541e973a11b"
+  cross_base_manifest: "attempts/wave39-cross-base-rank/package-manifest.sha256"
+  cross_base_manifest_sha256: "35c6369560e72cc09df9e2d53d359a7a574c44c6be971c3cb3b6e7fe30924368"
+  simultaneous_bh_status: DERIVED_INCONCLUSIVE
+  simultaneous_bh_result: "attempts/wave39-simultaneous-bh/exact-results.json"
+  simultaneous_bh_result_sha256: "1aab10ae2bf080d682a22d6c1e66a29f001ab2a889dc6b190b67fe0a0e0ad77d"
+  simultaneous_bh_manifest: "attempts/wave39-simultaneous-bh/package-manifest.sha256"
+  simultaneous_bh_manifest_sha256: "0ff05f1409d54e0aa38c6be6e086f02352911d5eb50f6bff9bd4b5bc6240b20b"
+  mathematical_and_artifact_tests_total: 62
+  discovery_tests_total: 42
+  independent_tests_total: 20
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave39-integration-audit.md"
+  integration_audit_sha256: "9d22f5ae2ed1f1ec756975508030f2b6b440580d1215604d4f353256bae1483b"
+  orchestrator_decision: "verification/2026-07-27-wave39-orchestrator.md"
+  orchestrator_decision_sha256: "094db8281faf23f402f5093a617c43ebe428dae6f8ce1eceae8621472fc37111"
+  solver_evidence_promoted: "ONE_NAMED_BRANCH_15_POLARITY_SHARD_ONLY"
+  novelty_status: UNKNOWN
+  caveat: "Wave 39 verifies the universal rank_F7(M)>=19 necessity and the UNSAT branch15 AND x187=1 shard, and retains exact cross-base and simultaneous B/H discovery restrictions. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
 last_updated: 2026-07-27
