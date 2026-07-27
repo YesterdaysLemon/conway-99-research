@@ -1920,3 +1920,85 @@ obligations:
       No graph or complete endpoint proof exists. The endpoint and Conway-99
       remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
       coverage is 0/33.
+
+  - id: O-WAVE41-UNIVERSAL-RANK26-VERIFICATION
+    requirement: >-
+      Independently derive rank-25 equality in the complete 39-point block,
+      cover all four all-odd and seven even-part edge types, exhaust every
+      minimum-projection permutation and labelled third-fibre matching,
+      verify local-to-global rank transport, and retain exact positive and
+      hostile controls without importing discovery code before freeze.
+    critical: true
+    status: PASS
+    evidence:
+      - "verification/wave41-multiedge-rank-packing/independent-results.json"
+      - "verification/wave41-multiedge-rank-packing/package-manifest.sha256"
+      - "verification/wave41-evenpart-equality/independent-results.json"
+      - "verification/wave41-evenpart-equality/discovery-comparison.json"
+      - "verification/wave41-evenpart-equality/audit.md"
+      - "verification/wave41-evenpart-equality/package-manifest.sha256"
+      - "verification/wave41-rank26-secondary/secondary-results.json"
+      - "verification/wave41-rank26-secondary/comparison.json"
+      - "verification/wave41-rank26-secondary/package-manifest.sha256"
+    note: >-
+      The all-odd verifier passes 16 hostile tests. The even-part verifier
+      passes 25 verifier/composition tests, a clean byte-exact full replay,
+      all twelve discovery tests, and the all-odd composition replay. All
+      eleven types exclude rank 25, proving the universal necessary theorem
+      rank_F7(M)>=26. The theorem does not resolve Conway-99 or improve the
+      n3 upper bound.
+
+  - id: O-WAVE41-ALLQUOTIENT-VERIFICATION
+    requirement: >-
+      Independently reconstruct the complete rank-eleven all-222 quotient
+      class, all 2^18 endpoint-pairing masks, triangle-free filter, exact F7
+      rank distribution, conditional ternary bridge, parity sharpening, and
+      the compact-kernel veto against false rank-45 promotion.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave41-allquotient-lifts/independent-results.json"
+      - "verification/wave41-allquotient-lifts/discovery-comparison.json"
+      - "verification/wave41-allquotient-lifts/audit.md"
+      - "verification/wave41-allquotient-lifts/package-manifest.sha256"
+    note: >-
+      Fourteen hostile tests and exact regeneration pass. Conditional on
+      n3=4158, r3=12, and all edges type 222, the branch has even r7>=34.
+      The assumptions and endpoint remain unproved.
+
+  - id: O-WAVE41-DIAGNOSTIC-SCOPE
+    requirement: >-
+      Retain failed overlap, raw border-rank, shallow propagation, and static
+      all-prism routes with enough exact detail to prevent positive controls,
+      timeouts, fixed points, or individual-column relaxations from being
+      presented as endpoint evidence.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave41-multiedge-rank-packing/failed-routes.md"
+      - "attempts/wave41-allquotient-lifts/failed-routes.md"
+      - "attempts/wave41-overlap-compatibility/failed-routes.md"
+      - "attempts/wave41-proof-producing-search/failed-routes.md"
+    note: >-
+      The universal three-dimensional compact kernel blocks naive border
+      packing. The overlap control reaches only rank 35. Branch 15 retains
+      3,312 unfixed primary variables, and all 64 shallow polarity probes
+      remain noncontradictory. None of these is graph or UNSAT evidence.
+
+  - id: O-WAVE41-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate:
+      either a valid 99-vertex prism-free SRG or checked UNSAT proofs covering
+      all 33 refined cases. Universal rank 26, conditional rank 34, local
+      overlap controls, and propagation profiles do not discharge this
+      obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave41-evenpart-equality/audit.md"
+      - "attempts/wave41-overlap-compatibility/README.md"
+      - "attempts/wave41-proof-producing-search/README.md"
+    note: >-
+      No graph or complete endpoint proof exists. The endpoint and Conway-99
+      remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
+      coverage is 0/33.

@@ -2580,4 +2580,77 @@ fortieth_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 40 verifies the universal rank_F7(M)>=25 necessity, reduces conditional endpoint arithmetic to 330 pairs, and verifies scoped global edge-complex and one-quotient lift censuses. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_first_research_wave:
+  public_base_commit: "4f1754a28723a8e0e4ea3025312cd264b1b117d2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=26"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=25"
+  local_partition_count: 11
+  all_odd_partition_count: 4
+  even_partition_count: 7
+  even_minimum_projection_permutations: 164928
+  even_distinct_right_kernels: 52
+  even_distinct_equality_targets: 164278
+  even_grouped_matching_evaluations: 540540
+  rank25_survivors: 0
+  rank26_discovery_result: "attempts/wave41-evenpart-equality/exact-results.json"
+  rank26_discovery_result_sha256: "8a9e58aaa1073ae4a87e183f904ce7f43eaa620bbac5a6f5d1f8445dd795dc85"
+  rank26_primary_result: "verification/wave41-evenpart-equality/independent-results.json"
+  rank26_primary_result_sha256: "ec371dad71c794d57d4e27b21d17b08fac1d17e22167749ef797d950c18299e4"
+  rank26_composition_result: "verification/wave41-evenpart-equality/discovery-comparison.json"
+  rank26_composition_result_sha256: "6ece1335fa595e4feed57b45cf63e6229697d0f410b2ebae1c32cde9e1cdcc1c"
+  rank26_primary_manifest: "verification/wave41-evenpart-equality/package-manifest.sha256"
+  rank26_primary_manifest_sha256: "e438bcfc92762608a22ca312807845087d6d5e41ec1dbb0a1e3a827aef57a815"
+  rank26_secondary_result: "verification/wave41-rank26-secondary/secondary-results.json"
+  rank26_secondary_result_sha256: "6dec058084c3336449cbf4ce29dd837b87f8f1b1af982810d2ca594784e38766"
+  rank26_secondary_manifest: "verification/wave41-rank26-secondary/package-manifest.sha256"
+  rank26_secondary_manifest_sha256: "88a0e47d6e7531067d0090735cba5b6b99078d5db99184f0389fa2630b0e885e"
+  endpoint_modular_rank_pairs: 314
+  previous_endpoint_modular_rank_pairs: 330
+  conditional_all222_rank_status: VERIFIED_SCOPED
+  conditional_all222_assumptions: "n3=4158,r3=12,all edges type 2+2+2"
+  conditional_all222_rank_floor: "even r7>=34"
+  all222_rank11_quotients: 8
+  all222_fibre_coloured_isomorphism_classes: 1
+  all222_triangle_free_lifts_per_quotient: 37378
+  all222_K39_rank_distribution: "33:264,34:7348,35:29766"
+  all222_independent_result: "verification/wave41-allquotient-lifts/independent-results.json"
+  all222_independent_result_sha256: "062785a47ddb8f85ddec10a76a663c262ec9c60c133b681be5228639b022260b"
+  compact_kernel_status: VERIFIED
+  compact_kernel_dimension_per_triangle: 3
+  overlap_status: CANDIDATE_BOUNDED_POSITIVE_CONTROL
+  overlap_result: "attempts/wave41-overlap-compatibility/exact-results.json"
+  overlap_result_sha256: "d8d2dba8e75116e19ae28ea7d445fd57bbf1431f5657a233c7c605f0bfdd5460"
+  overlap_relaxation_rank_floor: 35
+  proof_producing_status: CANDIDATE_PROPAGATION_AND_NULL_SCOUT_ONLY
+  branch15_forced_variables: 830
+  branch15_forced_primary_variables: 174
+  branch15_unfixed_primary_variables: 3312
+  branch15_propagation_certificate: "attempts/wave41-proof-producing-search/branch-15-propagation-certificate.json"
+  branch15_propagation_certificate_sha256: "3da90e49e4e9469bdc397af107d877ee7075ad551a6f8df1afbd8d5d1150707f"
+  failed_literal_probes: 64
+  failed_polarities: 0
+  proof_coverage: "0/33"
+  mathematical_and_artifact_tests_total: 128
+  discovery_tests_total: 53
+  independent_tests_total: 75
+  package_manifests: 9
+  package_manifest_entries: 110
+  public_checkpoint: "logs/2026-07-27-wave41-public-checkpoint.json"
+  public_checkpoint_sha256: "5130e52e4cfab02b5d3ca9275cc5b996c789d3b815a4498c2465560fba22e0c5"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave41-integration-audit.md"
+  integration_audit_sha256: "145951c957055f519cbac8cf3853d42795758bc88b559528495b9f42ff2b16a9"
+  orchestrator_decision: "verification/2026-07-27-wave41-orchestrator.md"
+  orchestrator_decision_sha256: "48056d37fb87bf940ff80589c3a3ab2794401a0b7087fad0818e23137c28107e"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 41 verifies the universal rank_F7(M)>=26 necessity and a conditional all-222,r3=12 floor even r7>=34. It removes r7=25 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
 last_updated: 2026-07-27

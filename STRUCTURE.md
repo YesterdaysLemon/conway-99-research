@@ -2947,6 +2947,81 @@ not a universal rank-33 floor. Global compatibility among different base
 triangles, or a bound on the seven-primary Laplacian nullity for every
 admissible core, remains missing.
 
+### Wave 41 full-matching equality and universal rank 26 (`VERIFIED`)
+
+Restore the perfect matching in the third fibre of the Wave 40 39-point
+edge block. After normalizing the first matching and two cross matchings,
+the cubic-core Laplacian has blocks
+
+```text
+[ 3I-P  -I    -I  ]
+[ -I    3I-Q -F  ]
+[ -I    -F^T 3I-R].
+```
+
+Eliminating `3I-P`, whose inverse over `F_7` is `3I+P`, gives the symmetric
+24-point block
+
+```text
+H = [ P+Q        F+3I+P  ]
+    [ F^T+3I+P   P+R     ].
+```
+
+For the four all-odd alternating partitions, `P+Q` is invertible and rank
+25 would force a Schur identity whose diagonal support admits no perfect
+matching, except for one `3+3` permutation whose forced target is not a
+zero-one matching.
+
+For a partition with `e` even parts, put `A=P+Q`, let `N` span `ker(A)`,
+put `B=F+3I+P`, and let `W` span `ker(N^T B)`. The Wave 40 boundary is
+`rank(N^T B)=e`. Exact singular Schur elimination proves that equality in
+the rank-25 bound is equivalent to
+
+```text
+W^T R W = W^T(B^T A^- B-P)W.
+```
+
+A discovery implementation and a clean-room verifier independently cover
+all seven even-part types:
+
+```text
+minimum-projection permutations: 164928
+distinct right kernels:               52
+distinct equality targets:        164278
+grouped matching evaluations:      540540
+rank-25 survivors:                       0.
+```
+
+Together with the four all-odd exclusions, this covers all eleven positive
+partitions of six. Every hypothetical target therefore satisfies
+
+```text
+rank_F7(M)>=26.
+```
+
+This is a universal necessary condition and does not assume `n3=4158` or a
+graph automorphism. At the prism-free endpoint it removes `r7=25`, leaving
+314 arithmetic `(r3,r7)` pairs. It does not exclude the endpoint or improve
+the general upper bound on `n3`.
+
+The same analysis identifies a universal obstruction to simply adding local
+block ranks. For every graph vertex `v`,
+
+```text
+(J-I-2A)(A+4I)e_v=0 mod 7.
+```
+
+For each base triangle, its three vertex-star vectors are independent,
+supported inside the corresponding 39-point block, and annihilated by all
+outside columns. An exact two-triangle individual-column relaxation has
+minimum kernel-signature span one and hence supplies only rank 35.
+
+Under the narrower joint hypotheses `n3=4158`, `r3=12`, and every edge of
+type `222`, all eight boundary quotients form one strict fibre-coloured
+isomorphism class. Each has 37,378 triangle-free lifts with 39-block ranks
+`33^264,34^7348,35^29766`. Thus this branch has even `r7>=34`. The sixty
+outside vertices and global overlap equations remain the unresolved wall.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

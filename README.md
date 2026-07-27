@@ -84,6 +84,16 @@ and the normalized search problem.
   one-triangle quotients, and reduces the full 39-vertex characteristic-seven
   rank to a cubic-core Laplacian rank. Its exact positive controls survive,
   so the endpoint and the upper bound remain unresolved.
+  Wave 41 completes the full-matching equality analysis for every one of the
+  eleven edge-local types and independently verifies the stronger universal
+  necessity `rank_F7(M)>=26`. For the seven types containing an even part,
+  164,928 boundary permutations reduce to 52 right kernels and 164,278 exact
+  equality targets; all 540,540 grouped matching evaluations reject rank 25.
+  A separate clean-room package verifies the four all-odd types. At the
+  prism-free endpoint this removes `r7=25` and reduces the arithmetic census
+  from 330 to 314 pairs. A second scoped theorem shows that if `r3=12` and
+  every edge has type `222`, then parity forces `r7>=34`. Neither theorem
+  excludes the endpoint, improves `n3<=4158`, or constructs a graph.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2168,6 +2178,121 @@ See the [rank-25 discovery package](attempts/wave40-exact-coupling-model/README.
 ```text
 rank_F7(M)>=25:                     VERIFIED
 endpoint arithmetic rank pairs:     330
+branch 15 / endpoint proof coverage: UNKNOWN / 0 of 33
+upper bound below 4158:              NOT PROVED
+rigorous interval:                   708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:       UNKNOWN
+```
+
+## Wave 41 universal rank-26 theorem and exact scope wall
+
+Wave 40 proved that every edge supplies a 39-vertex principal block of
+characteristic-seven rank at least 25. Wave 41 analyzes equality in that
+bound after restoring the perfect matching inside the third twelve-vertex
+fibre.
+
+With the three fibre matchings denoted by `P,Q,R` and the remaining
+cross-fibre permutation by `F`, eliminating the first fibre from the cubic
+core Laplacian gives
+
+```text
+H = [ P+Q        F+3I+P  ]
+    [ F^T+3I+P   P+R     ]  over F_7.
+```
+
+For the four all-odd partitions
+
+```text
+1+1+1+1+1+1, 1+1+1+3, 1+5, 3+3,
+```
+
+`P+Q` is invertible. A clean-room verifier proves that rank 25 would force a
+Schur identity incompatible with a zero-one perfect matching `R`.
+
+For each of the other seven partitions, let `N` span `ker(P+Q)`, put
+`B=F+3I+P`, and let `W` span `ker(N^T B)`. Exact singular Schur elimination
+shows that rank 25 is equivalent to
+
+```text
+W^T R W = W^T(B^T (P+Q)^- B-P)W.                 (1)
+```
+
+The discovery checker and a separately written verifier independently cover
+all boundary permutations and every labelled perfect matching on twelve
+points. Their common exact census is:
+
+| quantity | exact value |
+| --- | ---: |
+| even partition types | 7 |
+| minimum-projection permutations | 164,928 |
+| distinct right kernels | 52 |
+| distinct equality targets | 164,278 |
+| grouped `R` matching evaluations | 540,540 |
+| rank-25 survivors | 0 |
+
+The all-odd and even-part packages cover all eleven positive partitions of
+six. Principal-block monotonicity and the verified rank transport therefore
+give the new universal necessary condition
+
+```text
+rank_F7(M) >= 26.                                  VERIFIED
+```
+
+At `n3=4158`, this removes exactly the sixteen arithmetic pairs with odd
+`r3` and `r7=25`, leaving 314 pairs. It is still compatible with the global
+rank ceiling 44 and therefore does not exclude the endpoint.
+
+A separate endpoint lane finishes the eight ternary-rank-eleven all-`222`
+quotients. They form one strict fibre-preserving isomorphism class, and each
+has 37,378 triangle-free lifts with exact 39-block rank distribution
+
+```text
+33:264, 34:7348, 35:29766.
+```
+
+Consequently, under the joint assumptions
+
+```text
+n3=4158, r3=12, and every edge has type 222,
+```
+
+every base-triangle block has rank at least 33, and parity sharpens the
+branch to even `r7>=34`. This is a verified conditional branch theorem, not
+an endpoint exclusion.
+
+Wave 41 also records why the obvious next rank argument fails. For every
+graph vertex `v`,
+
+```text
+h_v=(A+4I)e_v
+```
+
+lies in the mod-seven kernel of `J-I-2A`. The three vectors belonging to a
+base triangle are supported inside its 39-vertex block and are annihilated
+by all sixty legal outside columns. Thus local kernel dimensions cannot be
+packed additively across triangle blocks. An exact two-triangle relaxation
+reaches only rank 35, and the proof-producing branch-15 propagation closure
+leaves 3,312 primary edge variables unfixed with endpoint coverage still
+`0/33`.
+
+See the [even-part discovery package](attempts/wave41-evenpart-equality/README.md),
+[clean-room rank-26 verification](verification/wave41-evenpart-equality/README.md),
+[secondary rank-26 verification](verification/wave41-rank26-secondary/README.md),
+[all-odd discovery package](attempts/wave41-multiedge-rank-packing/README.md),
+[all-odd verification](verification/wave41-multiedge-rank-packing/audit.md),
+[all-quotient discovery package](attempts/wave41-allquotient-lifts/README.md),
+[all-quotient verification](verification/wave41-allquotient-lifts/README.md),
+[overlap control](attempts/wave41-overlap-compatibility/README.md), and
+[proof-producing search report](attempts/wave41-proof-producing-search/README.md).
+The publication boundary is recorded in the
+[Wave 41 integration audit](verification/2026-07-27-wave41-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave41-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave41-public-checkpoint.json).
+
+```text
+rank_F7(M)>=26:                     VERIFIED
+endpoint arithmetic rank pairs:     314
+all-222 and r3=12 branch:            even r7>=34
 branch 15 / endpoint proof coverage: UNKNOWN / 0 of 33
 upper bound below 4158:              NOT PROVED
 rigorous interval:                   708 <= n3 <= 4158

@@ -2024,6 +2024,107 @@ claims:
       novelty, priority, openness, completeness, or mathematical truth;
       novelty and priority remain UNKNOWN.
 
+  - id: C-WAVE41-UNIVERSAL-RANK-087
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=26. Exact
+      equality analysis excludes rank 25 for the four all-odd edge types and
+      for all seven types containing an even part, thereby covering all
+      eleven positive partitions of six.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "attempts/wave41-multiedge-rank-packing/exact-results.json"
+      - "verification/wave41-multiedge-rank-packing/independent-results.json"
+      - "attempts/wave41-evenpart-equality/exact-results.json"
+      - "verification/wave41-evenpart-equality/independent-results.json"
+      - "verification/wave41-evenpart-equality/discovery-comparison.json"
+      - "verification/wave41-evenpart-equality/audit.md"
+      - "verification/wave41-rank26-secondary/secondary-results.json"
+      - "verification/wave41-rank26-secondary/comparison.json"
+    limitations: >-
+      This is a necessary rank condition, not a graph construction,
+      endpoint contradiction, general n3 upper-bound improvement, or
+      Conway-99 resolution. Novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE41-EVEN-EQUALITY-088
+    statement: >-
+      For the seven edge-local partition types containing an even part, the
+      complete rank-25 equality census has 164,928 minimum-projection
+      permutations, 52 distinct right kernels, 164,278 equality targets,
+      and 540,540 grouped evaluations over all 10,395 labelled third-fibre
+      perfect matchings per kernel, with zero compatible rank-25 cases.
+    label: VERIFIED
+    scope: COMPLETE_EVEN_PART_39_BLOCK_RANK25_EQUALITY_CLASSIFICATION
+    evidence:
+      - "agents/2026-07-27-wave41-evenpart-equality.md"
+      - "attempts/wave41-evenpart-equality/exact-results.json"
+      - "attempts/wave41-evenpart-equality/package-manifest.sha256"
+      - "agents/2026-07-27-wave41-rank26-verifier.md"
+      - "verification/wave41-evenpart-equality/independent-results.json"
+      - "verification/wave41-evenpart-equality/package-manifest.sha256"
+    limitations: >-
+      The finite classification concerns the 39-point local block. Its
+      universal consequence additionally uses the separately verified
+      all-odd classification and rank transport.
+
+  - id: C-WAVE41-ALL222-RANK-089
+    statement: >-
+      Conditional on n3=4158, rank_F3(M)=12, and every edge having local type
+      2+2+2, all eight ternary-rank-eleven normalized quotients form one
+      strict fibre-preserving isomorphism class. Each has 37,378
+      triangle-free lifts with K39 rank distribution
+      33:264,34:7348,35:29766, forcing even rank_F7(M)>=34.
+    label: VERIFIED
+    scope: CONDITIONAL_ALL222_R3_12_ENDPOINT_BRANCH
+    evidence:
+      - "agents/2026-07-27-wave41-allquotient-lifts.md"
+      - "attempts/wave41-allquotient-lifts/exact-results.json"
+      - "verification/wave41-allquotient-lifts/independent-results.json"
+      - "verification/wave41-allquotient-lifts/audit.md"
+      - "verification/wave41-allquotient-lifts/package-manifest.sha256"
+    limitations: >-
+      The endpoint, all-222 condition, and r3=12 are assumptions. The result
+      does not supply the sixty outside vertices, global compatibility,
+      endpoint exclusion, a graph, or an improved n3 upper bound. The
+      discovery-only lift-count census for quotient ranks 12 through 16 is
+      not promoted.
+
+  - id: C-WAVE41-COMPACT-KERNEL-090
+    statement: >-
+      For every graph vertex v, h_v=(A+4I)e_v lies in the F7 kernel of
+      J-I-2A. The three such vectors for a base triangle are independent,
+      supported inside its 39-point block, and annihilated by every legal
+      outside column. Hence raw local kernel projections and nominal block
+      ranks cannot be packed additively.
+    label: VERIFIED
+    scope: UNIVERSAL_CHARACTERISTIC_SEVEN_COMPACT_KERNEL_OBSTRUCTION
+    evidence:
+      - "attempts/wave41-multiedge-rank-packing/exact-results.json"
+      - "verification/wave41-multiedge-rank-packing/independent-results.json"
+      - "verification/wave41-multiedge-rank-packing/audit.md"
+      - "verification/wave41-allquotient-lifts/audit.md"
+    limitations: >-
+      This identifies and closes one failed proof route. It is not evidence
+      for graph existence and does not itself force a contradiction.
+
+  - id: C-WAVE41-CONTINUATION-091
+    statement: >-
+      Excluding n3=4158 still requires a checked prism-free graph, checked
+      UNSAT certificates covering all 33 refined endpoint cases, or a global
+      contradiction using simultaneous outside incidence, outside
+      adjacency, K^2=0, or complete multi-triangle compatibility. Wave 41
+      local rank and propagation results do not discharge this requirement.
+    label: UNKNOWN
+    scope: WAVE41_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "attempts/wave41-overlap-compatibility/README.md"
+      - "attempts/wave41-proof-producing-search/README.md"
+      - "verification/wave41-evenpart-equality/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED
