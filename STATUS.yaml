@@ -30,6 +30,10 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
+latest_public_checkpoint: "logs/2026-07-27-wave55-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-27-wave55-integration-audit.md"
+rigorous_n3_interval: "708<=n3<=4158"
+endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
   full_search_assumes_nontrivial_automorphism: false
   note: "Symmetry-conditioned branches must be labeled as restricted subproblems."

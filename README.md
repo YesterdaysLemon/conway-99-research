@@ -129,7 +129,17 @@ and the normalized search problem.
   moment families; clean-room comparison verifies all 2,520 root relabellings,
   42 controls, and 357 exact witness refutations. These are stronger finite
   relaxations, not an endpoint exclusion: `708<=n3<=4158` and Conway-99 remain
-  `UNKNOWN`.
+  `UNKNOWN`. Waves 51--55 then test aggregate tensor algebra, exact rational
+  cut loops, multi-root coherent refinement, ordinary ternary enumerators,
+  and a longer proof-producing endpoint shard. The strongest new local fact
+  is one forced Boolean value in the `B` two-root template, but all four root
+  relations retain exact local controls. Independent checking also refutes
+  the discovery claim that all 128 tested moment matrices were indefinite:
+  120 are indefinite and eight Wave 45 matrices are positive semidefinite.
+  The corrected 177-cut rational relaxation remains exactly feasible, the
+  formal ordinary enumerator remains feasible, and the 120-second Exact run
+  returns `UNKNOWN`. Complete endpoint proof coverage therefore remains
+  `0/33`; the rigorous interval is still `708<=n3<=4158`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2731,6 +2741,77 @@ See the [Wave 52 verifier](verification/wave52-coherent-closure/README.md),
 The next coherent route must use genuinely forced multi-root or three-tuple
 compatibility; deeper refinement of one arbitrary local completion is
 conditional.
+
+## Waves 53--55 corrected proof, moment, and code checkpoint
+
+Wave 53 first turns the endpoint bookkeeping into an exact 33-case conditional
+cover. The full normalized state set has 10,395 elements and 78 refined
+orbits: 33 endpoint-compatible cases of total orbit weight 6,644 and 45
+incompatible orbits of weight 3,751. This is verified branch coverage, not
+proof coverage. No complete case has a checked terminal contradiction.
+
+The smallest exported open proof shard is
+`branch15 AND x187=0`. Both the three-second Wave 53 run and the
+120-second Wave 55 run return `UNKNOWN`; their nonterminal proof prefixes
+prove no formula consequence. The complementary
+`branch15 AND x187=1` shard remains the only checked terminal result, so
+complete-case coverage is still `0/33`.
+
+The two-root coherent lift is independently verified for all four triangle
+relations. It merges the two rooted `3K6` cap systems without selecting an
+arbitrary completion and proves one shared candidate forced true in the
+`B` template. Exact stable `(2-WL, folklore 3-WL)` color counts are
+
+```text
+K: (285,107)    B: (584,321)    C: (321,240)    D: (63,61).
+```
+
+All four relations still admit exact local controls. The discovery envelope
+omits its 3-WL triple-color vectors, so those stored tuple hashes are not
+reconstructible from that JSON alone; independent full vectors reproduce the
+reported counts and class-size multisets.
+
+The Wave 53 exact cut-loop discovery is published with a material verifier
+correction. The fixed 174-to-177-cut rational relaxation and its four exact
+witnesses are feasible, and the three retained Wave 49 cuts are valid. But
+only 120 of the 128 tested matrices are indefinite. Eight Wave 45 matrices
+are positive semidefinite, all twelve reported Wave 45 direction evaluations
+are wrong because discovery doubled already-symmetric off-diagonal
+coefficients, and the floating fourth-cut residual is not an exact Farkas
+certificate. The affected discovery headline is `REFUTED`; the corrected
+fixed-bundle feasibility survives.
+
+Wave 54 independently verifies one integral formal ordinary MacWilliams
+enumerator for the conditional ternary `[231,11]` code:
+
+```text
+{0:1, 18:2, 144:53316, 153:19798, 159:98496, 162:5072, 198:462}.
+```
+
+All 232 dual coefficients are nonnegative integers and the frozen ordinary
+constraints pass. This is a formal enumerator, not a realized code or graph.
+
+```text
+conditional endpoint case cover:           33/33 (VERIFIED)
+complete-case terminal proof coverage:       0/33
+two-root finite CSP/WL claims:               VERIFIED SCOPED
+root relations excluded:                     NONE
+corrected fixed 177-cut rational bundle:     FEASIBLE (VERIFIED SCOPED)
+128/128 moment matrices indefinite:          REFUTED (120/128)
+formal ordinary ternary enumerator:          FEASIBLE (VERIFIED SCOPED)
+Wave 55 bounded branch status:               UNKNOWN
+upper bound below 4158:                      NOT PROVED
+rigorous interval:                           708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:               UNKNOWN
+```
+
+See the [proof-cover verifier audit](verification/wave53-proof-cover/audit.md),
+[multi-root verifier](verification/wave53-multi-root-wl/README.md),
+[corrected exact-cut audit](verification/wave53-exact-cut-loop/README.md),
+[centered-enumerator verifier](verification/wave54-centered-enumerator/README.md),
+[integration audit](verification/2026-07-27-wave55-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave55-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave55-public-checkpoint.json).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

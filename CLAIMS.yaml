@@ -2541,6 +2541,66 @@ claims:
       - "SOURCES.bib"
     limitations: "The exact correction refutes equation (88)'s uniform H2-to-H1 degree premise: the degrees are 1^20,2^51 and the count is 122=2(71)-20, not 142. This does not refute the theorem statement or prove existence; both target outcomes remain UNKNOWN."
 
+  - id: C-WAVE53-PROOF-COVER-001
+    statement: "Conditional on the normalized prism-free endpoint, the exact refined search space consists of 33 compatible cases of total orbit weight 6644 and 45 incompatible orbits of weight 3751, covering all 10395 normalized states."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CASE_COVER
+    evidence:
+      - "verification/wave53-proof-cover/independent-results.json"
+      - "verification/wave53-proof-cover/audit.md"
+      - "verification/wave53-proof-cover/package-manifest.sha256"
+    limitations: "This is case coverage, not UNSAT coverage. No complete case has a checked terminal proof; coverage is 0/33."
+
+  - id: C-WAVE53-MULTI-ROOT-001
+    statement: "The four finite two-root cap-incidence templates K, B, C, and D have exact stable 2-WL color counts 285,584,321,63 and triangle-core folklore-3-WL counts 107,321,240,61; the B template has one shared candidate forced true."
+    label: VERIFIED
+    scope: CONDITIONAL_FINITE_TWO_ROOT_RELAXATION
+    evidence:
+      - "verification/wave53-multi-root-wl/independent-result.json"
+      - "verification/wave53-multi-root-wl/audit.md"
+      - "verification/wave53-multi-root-wl/package-manifest.sha256"
+    limitations: "Every relation has an exact local positive control. No root relation, endpoint, or target graph is excluded."
+
+  - id: C-WAVE53-CUT-LOOP-001
+    statement: "The fixed Wave 53 174-to-177-cut rational relaxation has four exact feasible witnesses and valid retained Wave 49 cuts at roots 220,62,221."
+    label: VERIFIED
+    scope: FIXED_AGGREGATE_RATIONAL_RELAXATION
+    evidence:
+      - "verification/wave53-exact-cut-loop/independent-result.json"
+      - "verification/wave53-exact-cut-loop/comparison-result.json"
+      - "verification/wave53-exact-cut-loop/audit.md"
+    limitations: "Rational aggregate feasibility is not integer feasibility, full PSD feasibility, or graph existence."
+
+  - id: C-WAVE53-CUT-LOOP-002
+    statement: "All 128 Wave 45, Wave 47, and Wave 49 moment matrices tested at the four Wave 53 rational witnesses are indefinite."
+    label: REFUTED
+    scope: WAVE53_DISCOVERY_MATRIX_HEADLINE
+    evidence:
+      - "verification/wave53-exact-cut-loop/independent-result.json"
+      - "verification/wave53-exact-cut-loop/comparison-result.json"
+      - "verification/wave53-exact-cut-loop/audit.md"
+    limitations: "Independent reconstruction finds 120 indefinite and eight positive-semidefinite matrices. The defect doubles already-symmetric Wave 45 off-diagonal coefficients; the corrected fixed-bundle feasibility result survives."
+
+  - id: C-WAVE54-ENUMERATOR-001
+    statement: "The stated seven-weight formal distribution is an exact integral solution of the frozen ordinary MacWilliams constraints for the conditional centered ternary [231,11] code."
+    label: VERIFIED
+    scope: FORMAL_ORDINARY_WEIGHT_ENUMERATOR
+    evidence:
+      - "verification/wave54-centered-enumerator/independent-results.json"
+      - "verification/wave54-centered-enumerator/audit.md"
+      - "verification/wave54-centered-enumerator/package-manifest.sha256"
+    limitations: "The formal enumerator is not a realized linear code, point set, graph, or endpoint object."
+
+  - id: C-WAVE55-BOUNDED-SEARCH-001
+    statement: "The 120-second pinned Exact run closes branch15 AND x187=0."
+    label: REFUTED
+    scope: BOUNDED_ENDPOINT_SHARD_SEARCH
+    evidence:
+      - "attempts/wave55-branch15-remainder-search/result.json"
+      - "attempts/wave55-branch15-remainder-search/solver.txt"
+      - "attempts/wave55-branch15-remainder-search/package-manifest.sha256"
+    limitations: "Exact returned UNKNOWN. Zero solutions and a nonterminal proof prefix prove no formula consequence."
+
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
     label: UNKNOWN

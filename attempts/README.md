@@ -313,3 +313,27 @@ the endpoint, or improves `n3<=4158`.
 
 This is a discovery null result. Independent verification accepts the finite
 arithmetic and color refinement only; no graph or improved bound follows.
+
+## Waves 53--55: proof cover, two-root lift, cut correction, and bounded search
+
+- `wave53-proof-cover/` freezes the exact normalized 33-case endpoint cover
+  and exports `branch15 AND x187=0`. Its bounded proof-tool transcripts end
+  with `UNKNOWN` or `VERIFIED NO CONCLUSION`; none is a terminal proof.
+- `wave53-multi-root-wl/` merges two rooted cap systems for relations
+  `K,B,C,D`. It derives one forced-true shared candidate in relation `B` and
+  exact 2-WL/folklore-3-WL closures. Positive local controls survive in every
+  relation.
+- `wave53-exact-cut-loop/` records four exact rational witnesses and three
+  retained Wave 49 cuts. Its headline that all 128 tested matrices are
+  indefinite is refuted by independent replay: eight Wave 45 matrices are
+  positive semidefinite, due to a doubled-off-diagonal source defect.
+- `wave54-centered-enumerator/` constructs an exact seven-weight formal
+  ordinary enumerator satisfying the frozen integral MacWilliams system.
+  It is not a realized ternary code.
+- `wave55-branch15-remainder-search/` retains the exact solver transcript and
+  metadata from a 120-second run on the open branch-15 shard. Exact returns
+  `UNKNOWN`; the ignored 488 MB nonterminal proof prefix is not evidence.
+
+The corrected fixed 177-cut rational relaxation and formal enumerator remain
+feasible, while endpoint proof coverage remains `0/33`. No graph, endpoint
+exclusion, strict upper bound below 4158, or novelty claim follows.

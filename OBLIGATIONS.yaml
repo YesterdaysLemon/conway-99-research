@@ -2233,3 +2233,40 @@ obligations:
       No graph or complete endpoint proof exists. The endpoint and Conway-99
       remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
       coverage is 0/33.
+
+  - id: O-WAVE55-CORRECTED-CHECKPOINT
+    requirement: >-
+      Independently verify the exact 33-case endpoint cover, the four
+      two-root CSP/WL templates, the fixed 174-to-177-cut rational sequence,
+      and the formal ordinary ternary enumerator; publish every material
+      correction and preserve all nonterminal solver statuses.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-27-wave55-integration-audit.md"
+      - "verification/2026-07-27-wave55-orchestrator.md"
+      - "verification/wave53-proof-cover/package-manifest.sha256"
+      - "verification/wave53-multi-root-wl/package-manifest.sha256"
+      - "verification/wave53-exact-cut-loop/package-manifest.sha256"
+      - "verification/wave54-centered-enumerator/package-manifest.sha256"
+    note: >-
+      The finite claims pass with one material correction: only 120/128
+      tested matrices are indefinite. Complete endpoint proof coverage
+      remains 0/33 and the target remains UNKNOWN.
+
+  - id: O-WAVE55-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce either a valid 99-vertex prism-free SRG or checked terminal
+      proofs covering all 33 endpoint cases. In particular, close
+      branch15 AND x187=0 and independently replay its terminal certificate
+      before promoting branch 15.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave53-proof-cover/audit.md"
+      - "attempts/wave55-branch15-remainder-search/result.json"
+      - "verification/2026-07-27-wave55-orchestrator.md"
+    note: >-
+      The selected shard and all 33 complete cases remain open. Solver
+      UNKNOWN, local controls, rational aggregate witnesses, and a formal
+      weight enumerator do not discharge this obligation.

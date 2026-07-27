@@ -1423,3 +1423,28 @@ and any strict upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
 The accepted claim is a verified local null result. Multi-root compatibility,
 three-tuple refinement, graph realizability, endpoint exclusion, and a strict
 upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
+
+## Waves 53--55 corrected checkpoint verification
+
+- `wave53-proof-cover/` independently reconstructs all 10,395 normalized
+  states, 78 refined orbits, the exact 33-case compatible cover, and the
+  exported `branch15 AND x187=0` bytes. Fresh Exact, VeriPB, and CakePB runs
+  certify only `UNKNOWN` / `VERIFIED NO CONCLUSION`; complete-case coverage
+  remains `0/33`.
+- `wave53-multi-root-wl/` independently rebuilds the four finite two-root
+  templates, all 72 caps, the unique shared forced-true `B` candidate, exact
+  2-WL partitions and intersection tensors, folklore 3-WL counts, and
+  structurally different positive controls. No root relation is excluded.
+- `wave53-exact-cut-loop/` verifies the four rational witnesses, 170 base
+  equations, three retained Wave 49 cuts, and exact 177-cut feasibility. It
+  refutes the discovery's `128/128` indefinite claim: the corrected count is
+  `120/128`, and all twelve reported Wave 45 direction values are affected by
+  doubled off-diagonal coefficients.
+- `wave54-centered-enumerator/` independently reconstructs all 232 ordinary
+  MacWilliams coefficients and verifies the stated formal enumerator,
+  including omitted dual parity and `B_231>=2` checks.
+
+The [Wave 55 integration audit](2026-07-27-wave55-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave55-orchestrator.md) retain the material
+correction and the status wall. The bounded Wave 55 search needs no verifier
+promotion because it asserts no terminal mathematical result.

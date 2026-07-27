@@ -57,3 +57,15 @@ verification/wave51-rankone-cut-relaxation-independent/*.json -text -diff
 # Wave 52 coherent-closure outputs are checksum-pinned byte streams.
 attempts/wave52-coherent-closure/*.json -text -diff
 verification/wave52-coherent-closure/*.json -text -diff
+
+# Waves 53--55 exact outputs are checksum-pinned byte streams.
+attempts/wave53-proof-cover/*.json -text -diff
+verification/wave53-proof-cover/*.json -text -diff
+attempts/wave53-multi-root-wl/*.json -text -diff
+verification/wave53-multi-root-wl/*.json -text -diff
+verification/wave53-multi-root-wl/records/*.json -text -diff
+attempts/wave53-exact-cut-loop/*.json -text -diff
+verification/wave53-exact-cut-loop/*.json -text -diff
+attempts/wave54-centered-enumerator/*.json -text -diff
+verification/wave54-centered-enumerator/*.json -text -diff
+attempts/wave55-branch15-remainder-search/*.json -text -diff
