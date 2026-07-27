@@ -2800,6 +2800,63 @@ rigorous interval:                     708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:         UNKNOWN
 ```
 
+## Wave 40 universal rank and edge-coupling checks
+
+Replay the rank-22 stepping stone, the rank-25 discovery package, and its
+clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-rank19-equality -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-rank19-equality -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-rank19-equality\independent_check.py `
+  --verify verification\wave40-rank19-equality\independent-results.json
+
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-exact-coupling-model -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-exact-coupling-model\exact_check.py `
+  --verify attempts\wave40-exact-coupling-model\exact-results.json `
+  --certificate attempts\wave40-exact-coupling-model\subspace-certificate.json
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-exact-coupling-model\full_block_scout.py `
+  --verify attempts\wave40-exact-coupling-model\full-block-scout-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-exact-coupling-model -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-exact-coupling-model\independent_check.py `
+  --verify verification\wave40-exact-coupling-model\independent-results.json
+```
+
+The discovery and verification implementations are independent. Each covers
+all eleven edge partitions and all third-fibre permutations through complete
+projective-subspace and bipartite-matching certificates.
+
+Replay the global edge-type and one-triangle lift packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-edge-type-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-edge-type-coupling\exact_check.py `
+  --verify attempts\wave40-edge-type-coupling\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-edge-type-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-edge-type-coupling\independent_check.py `
+  --verify verification\wave40-edge-type-coupling\independent-results.json
+```
+
+```text
+rank_F7(M)>=25:                     VERIFIED
+endpoint arithmetic rank pairs:     330
+complete endpoint proof coverage:    0 / 33
+rigorous interval:                   708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:       UNKNOWN
+```
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

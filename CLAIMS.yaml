@@ -1913,6 +1913,117 @@ claims:
       708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
       remain UNKNOWN.
 
+  - id: C-WAVE40-UNIVERSAL-RANK-081
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=25 for the
+      integral triangle projector M=21E_0. For an edge type indexed by a
+      partition pi of six with e even parts, the 27-point block has rank
+      25-2e and the exact minimum third-fibre kernel-projection rank over all
+      twelve-point permutations is e; the bordered principal block therefore
+      has rank at least 25.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "agents/2026-07-27-wave40-exact-coupling-model.md"
+      - "attempts/wave40-exact-coupling-model/exact-results.json"
+      - "attempts/wave40-exact-coupling-model/subspace-certificate.json"
+      - "verification/wave40-exact-coupling-model/independent-results.json"
+      - "verification/wave40-exact-coupling-model/README.md"
+      - "verification/wave40-exact-coupling-model/run-report.yaml"
+    limitations: >-
+      This is a universal necessary rank condition, not a construction,
+      endpoint contradiction, or upper-bound improvement. Literature novelty
+      and priority remain UNKNOWN.
+
+  - id: C-WAVE40-ENDPOINT-RANK-CENSUS-082
+    statement: >-
+      At the conditional prism-free endpoint, the universal rank-25 theorem
+      leaves exactly 330 arithmetic (r3,r7) pairs. If r3=12, parity forces r7
+      to be even and at least 26.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ARITHMETIC
+    evidence:
+      - "attempts/wave40-exact-coupling-model/exact-results.json"
+      - "verification/wave40-exact-coupling-model/independent-results.json"
+      - "verification/2026-07-27-wave40-integration-audit.md"
+    limitations: >-
+      The 330 pairs are arithmetic survivors, not matrices or graphs. The
+      endpoint remains UNKNOWN and the upper bound remains n3<=4158.
+
+  - id: C-WAVE40-EDGE-COMPLEX-083
+    statement: >-
+      At n3=4158, the four edge-local types glue into a closed
+      two-dimensional incidence complex with face identities
+      F4=3a+b,F6=2c,F8=b,F12=d. Around one all-222 triangle, the complete
+      normalized quotient census has 4,050 forms and rank_F3(P_T-I)
+      distribution 11:8,12:1,13:400,14:46,15:2616,16:979.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_GLOBAL_EDGE_TYPE_AND_ONE_TRIANGLE_QUOTIENT_IDENTITIES
+    evidence:
+      - "agents/2026-07-27-wave40-edge-type-coupling.md"
+      - "attempts/wave40-edge-type-coupling/exact-results.json"
+      - "verification/wave40-edge-type-coupling/independent-results.json"
+      - "verification/wave40-edge-type-coupling/README.md"
+    limitations: >-
+      The Euler characteristic can be negative and the rank-11 quotient
+      boundary survives. These identities do not exclude any global endpoint
+      case.
+
+  - id: C-WAVE40-CORE-LAPLACIAN-084
+    statement: >-
+      For a base triangle T with cubic 36-vertex neighbor core A_X,
+      rank_F7(K[T union N(T)])=1+rank_F7(3I-A_X). For one explicit rank-11
+      all-222 quotient, all 2^18 endpoint-pairing lifts have exactly 37,378
+      triangle-free cases with 39-block rank distribution
+      33:264,34:7348,35:29766.
+    label: VERIFIED
+    scope: UNIVERSAL_LOCAL_RANK_IDENTITY_AND_ONE_QUOTIENT_COMPLETE_LIFT_CENSUS
+    evidence:
+      - "attempts/wave40-edge-type-coupling/exact-results.json"
+      - "verification/wave40-edge-type-coupling/independent-results.json"
+      - "verification/wave40-edge-type-coupling/README.md"
+    limitations: >-
+      The 2^18 census covers one quotient only. It is not a universal rank-33
+      theorem, a simultaneous global completion, an endpoint matrix, or a
+      Conway graph.
+
+  - id: C-WAVE40-CONTINUATION-085
+    statement: >-
+      Excluding n3=4158 still requires a checked endpoint graph, checked
+      UNSAT certificates covering every refined case, or a global
+      contradiction coupling all triangle-neighbor cores. The universal
+      rank-25 theorem, the edge-type surface identities, and one-quotient
+      lift census do not satisfy this condition.
+    label: UNKNOWN
+    scope: WAVE40_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave40-integration-audit.md"
+      - "verification/2026-07-27-wave40-orchestrator.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval remains
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
+  - id: C-WAVE40-LITERATURE-086
+    statement: >-
+      The bounded primary-source audit found Gray Taylor's pinned 2020
+      notebook and repository to be exact prior art for the 27-vertex
+      edge-neighborhood scaffold and its eleven local types. No exact or
+      equivalent rank_F7(M)>=25 statement was located in the corpus searched
+      through 2026-07-27.
+    label: CITED
+    scope: WAVE40_LITERATURE_AND_PRIORITY_BOUNDARY_ONLY
+    evidence:
+      - "agents/2026-07-27-wave40-rank25-literature.md"
+      - "attempts/wave40-rank25-literature/query-log.json"
+      - "attempts/wave40-rank25-literature/source-ledger.json"
+      - "attempts/wave40-rank25-literature/package-manifest.sha256"
+    limitations: >-
+      Taylor's prior art forbids claiming invention of the local scaffold or
+      eleven-type classification. Bounded non-discovery cannot establish
+      novelty, priority, openness, completeness, or mathematical truth;
+      novelty and priority remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

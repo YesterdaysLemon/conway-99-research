@@ -2819,6 +2819,134 @@ do not exclude the boundary.
 No Wave 39 result forces a prism, closes a full endpoint case, or improves
 `n3<=4158`.
 
+### Wave 40 third-fibre completion and universal rank 25 (`VERIFIED`)
+
+Keep the Wave 39 notation for an arbitrary edge `xy`, its triangle mate `z`,
+the twelve-point fibres `X,Y`, and the 27-point set
+
+```text
+L={x,y,z} union X union Y.
+```
+
+The third fibre `Z=N(z)-{x,y}` also has twelve vertices and is disjoint from
+`L`. For every `u in X`, the nonadjacent pair `u,z` has common neighbor `x`
+and exactly one further common neighbor in `Z`. Conversely, every vertex of
+`Z` has exactly one neighbor in `X`. Thus `X-Z` is a perfect matching. The
+same argument makes `Y-Z` a perfect matching. Relabeling `Z` by the `X-Z`
+matching leaves an arbitrary permutation `f:X->Y`.
+
+Let
+
+```text
+K=N M N^T=J-I-2A  over F_7,
+S=K[L,L],
+U_f=K[L,Z].
+```
+
+If the columns of `H` form a basis of `ker(S)`, then every symmetric
+completion with an arbitrary lower-right block `W` satisfies
+
+```text
+rank([[S,U_f],[U_f^T,W]]) >= rank(S)+2 rank(H^T U_f).       (1)
+```
+
+To see this, choose a basis in which the symmetric matrix `S` is congruent
+to `diag(D,0)` with `D` invertible, eliminate the `D` rows and columns, and
+obtain a remaining block of the form
+
+```text
+[[0,C],[C^T,R]],  C=H^T U_f.
+```
+
+Its rank is at least `2 rank(C)`, independently of `R`.
+
+For a partition `pi` of six, let `e(pi)` be its number of even parts. The
+Wave 39 calculation gives `rank(S)=25-2e(pi)`. A discovery implementation
+and a clean-room verifier independently enumerated the projective syndrome
+subspaces of the 144 possible third-fibre columns and used exact bipartite
+matching to cover every one of the `12!` permutations. Both obtain
+
+```text
+min_f rank(H^T U_f)=e(pi)
+```
+
+for all eleven partitions. Substitution in (1) gives a 39-point principal
+rank of at least 25 for every edge type. Since
+
+```text
+rank_F7(K)=rank_F7(M),
+```
+
+every hypothetical Conway graph satisfies
+
+```text
+rank_F7(M)>=25.
+```
+
+In the hardest `2+2+2` case, `rank(S)=19`, `dim ker(S)=8`, and syndrome
+subspaces of dimensions zero, one, and two support matchings of size at most
+zero, four, and eight. Exactly 32 of the 25,744 enumerated three-spaces
+support a perfect matching, so the argument is tight at its stated local
+boundary. The earlier conditional `r7>=22` argument is independently
+verified but numerically superseded by the universal theorem.
+
+At `n3=4158`, the verified modular arithmetic census now has 330 surviving
+`(r3,r7)` pairs instead of 429. If `r3=12`, parity forces even `r7>=26`.
+The endpoint remains unexcluded.
+
+### Wave 40 global edge-type complex and 39-block Laplacian (`VERIFIED_SCOPED`)
+
+At the prism-free endpoint, the 4,158 edges of the opposite-edge graph `J`
+map bijectively to the 4,158 edges of the induced-`N3` triangle relation
+graph `L`. For each graph edge, each component of its Wave 39 local cycle
+system is treated as a face. Every edge of `L` lies on exactly two faces.
+
+If `(a,b,c,d)` counts the types `(222,24,33,6)`, the exact face identities
+are
+
+```text
+F4=3a+b,  F6=2c,  F8=b,  F12=d,
+4F4+6F6+8F8+12F12=8316=2|E(L)|.
+```
+
+After splitting triangle-vertices with disconnected links, the result is a
+disjoint union of closed combinatorial surfaces. If `Hc` is the total number
+of link components, then
+
+```text
+chi=Hc-4158+(3a+2b+2c+d).
+```
+
+For all edges of type `222`, this is a 2,079-face quadrangulation with
+`-1848<=chi<=-693`; negative Euler characteristic is not contradictory.
+
+Around one all-`222` base triangle, contracting the six matching edges in
+each fibre gives a four-regular tripartite quotient `P_T` on `6+6+6`
+vertices. A complete normalized census of 4,050 forms gives
+
+```text
+rank_F3(P_T-I): 11  12  13   14    15    16
+forms:           8   1 400   46  2616   979.
+```
+
+Under the joint assumptions `r3=12` and all edges type `222`, every triangle
+must use one of the eight rank-11 boundary forms. Those forms survive.
+
+Let `A_X` be the cubic graph induced by the 36 neighbors outside a fixed
+base triangle. Exact Schur elimination gives
+
+```text
+rank_F7(K[T union N(T)])=1+rank_F7(3I-A_X).
+```
+
+The contracted quotient omits eighteen endpoint-pairing bits and therefore
+does not determine this rank. For one rank-11 quotient, a complete `2^18`
+lift census has 37,378 triangle-free lifts, with 39-block ranks
+`33^264,34^7348,35^29766`. This is a verified census for that one quotient,
+not a universal rank-33 floor. Global compatibility among different base
+triangles, or a bound on the seven-primary Laplacian nullity for every
+admissible core, remains missing.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

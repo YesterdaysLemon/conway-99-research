@@ -185,3 +185,28 @@ novelty are `UNKNOWN`.
 
 The Wave 39 packages do not construct a graph, force a prism, close a complete
 endpoint case, improve `n3<=4158`, or establish novelty.
+
+## Wave 40: third-fibre rank completion and global edge coupling
+
+- `wave40-rank19-equality/` records the discovery route from the Wave 39
+  rank-19 equality type through third-fibre quotient syndromes. It proves the
+  conditional stepping stone `n3=4158 => rank_F7(M)>=22`, retains the exact
+  `0,4,8,12` matching boundary, and is independently verified.
+- `wave40-exact-coupling-model/` extends the third-fibre argument to all
+  eleven edge partitions. Its complete subspace certificate and matching
+  census give the candidate universal theorem `rank_F7(M)>=25`; a separate
+  clean-room implementation promotes that theorem to `VERIFIED`. The
+  full-39-block scout is explicitly bounded and non-evidentiary.
+- `wave40-edge-type-coupling/` glues the four prism-free edge types into a
+  closed incidence complex, exhausts the 4,050 normalized all-`222`
+  one-triangle quotients, proves the exact cubic-core Laplacian rank identity,
+  and exhausts all `2^18` lifts of one boundary quotient. The resulting
+  rank-33 controls survive and do not exclude the endpoint.
+- `wave40-rank25-literature/` freezes a bounded primary-source search for the
+  exact rank-25 theorem and equivalent formulations. Search nonhits do not
+  establish novelty or priority.
+
+Wave 40 raises the verified universal characteristic-seven rank floor from
+19 to 25 and reduces conditional endpoint arithmetic from 429 to 330 pairs.
+It does not construct a graph, force a prism, close an endpoint case, or
+improve the general upper bound `n3<=4158`.

@@ -154,3 +154,19 @@ Wave 39 reports:
 - `2026-07-27-wave39-simultaneous-bh.md`: conditional centered-code and
   simultaneous `B/H` overlap restrictions. Nonnegative transforms leave the
   boundary unexcluded.
+
+Wave 40 reports:
+
+- `2026-07-27-wave40-rank19-equality.md`: proof-A discovery of the
+  conditional rank-22 stepping stone from exact third-fibre syndrome
+  matching. A separate verifier promotes the scoped theorem.
+- `2026-07-27-wave40-exact-coupling-model.md`: construction discovery that
+  unifies all eleven edge partitions and raises the candidate universal
+  characteristic-seven rank floor to 25. A clean-room verifier independently
+  promotes the theorem.
+- `2026-07-27-wave40-edge-type-coupling.md`: proof-B global edge-complex,
+  quotient, Laplacian, and one-quotient full-lift census. Read it with the
+  independent verifier; its surviving controls are not endpoint matrices.
+- `2026-07-27-wave40-rank25-literature.md`: bounded primary-source audit for
+  the exact rank-25 statement and equivalent terminology. Non-discovery does
+  not establish novelty or priority.

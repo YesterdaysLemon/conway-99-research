@@ -1847,3 +1847,76 @@ obligations:
       No graph or complete endpoint proof exists. The endpoint and Conway-99
       remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
       coverage is 0/33.
+
+  - id: O-WAVE40-UNIVERSAL-RANK-VERIFICATION
+    requirement: >-
+      Independently reconstruct all eleven edge-local forms, the third-fibre
+      perfect-matching bijections, the arbitrary-W symmetric border-rank
+      lemma, every projective syndrome subspace needed through the first
+      successful dimension, and the endpoint arithmetic without importing
+      discovery code or inflating the result to an endpoint contradiction.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave40-exact-coupling-model/independent-results.json"
+      - "verification/wave40-exact-coupling-model/README.md"
+      - "verification/wave40-exact-coupling-model/run-report.yaml"
+      - "verification/wave40-exact-coupling-model/package-manifest.sha256"
+    note: >-
+      Sixteen hostile tests and exact replay pass. The promoted universal
+      theorem is rank_F7(M)>=25; endpoint arithmetic has 330 survivors and
+      r3=12 forces even r7>=26. No endpoint exclusion follows.
+
+  - id: O-WAVE40-EDGE-COUPLING-VERIFICATION
+    requirement: >-
+      Independently reconstruct the endpoint edge-to-triangle bijection,
+      face and Euler identities, the 4,050-form all-222 quotient census, the
+      39-block cubic-core Laplacian identity, and the complete 2^18 lift
+      census for one explicit quotient, while preserving every local and
+      one-quotient scope boundary.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave40-edge-type-coupling/independent-results.json"
+      - "verification/wave40-edge-type-coupling/README.md"
+      - "verification/wave40-edge-type-coupling/run-report.yaml"
+      - "verification/wave40-edge-type-coupling/package-manifest.sha256"
+    note: >-
+      The scoped identities and census are verified. Negative Euler
+      characteristic and rank-33 one-quotient controls survive, so no
+      endpoint contradiction or universal rank-33 theorem is promoted.
+
+  - id: O-WAVE40-RANK25-LITERATURE-SCOPE
+    requirement: >-
+      Search current primary sources under exact and equivalent terminology
+      for the universal characteristic-seven rank-25 theorem, preserve source
+      and query metadata, and do not infer novelty or priority from bounded
+      non-discovery.
+    critical: false
+    status: PASS_SCOPED
+    evidence:
+      - "agents/2026-07-27-wave40-rank25-literature.md"
+      - "attempts/wave40-rank25-literature/query-log.json"
+      - "attempts/wave40-rank25-literature/source-ledger.json"
+      - "attempts/wave40-rank25-literature/README.md"
+    note: >-
+      The audit is bounded and cannot prove novelty, priority, openness, or
+      completeness. Novelty remains UNKNOWN unless an exact prior match is
+      located.
+
+  - id: O-WAVE40-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate: either
+      a valid 99-vertex prism-free SRG or checked UNSAT proofs covering all
+      33 refined cases. Rank floors, arithmetic survivors, surface
+      identities, quotient censuses, one-quotient lifts, and local controls
+      do not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/2026-07-27-wave40-integration-audit.md"
+      - "verification/2026-07-27-wave40-orchestrator.md"
+    note: >-
+      No graph or complete endpoint proof exists. The endpoint and Conway-99
+      remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
+      coverage is 0/33.

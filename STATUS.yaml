@@ -3,13 +3,13 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-26
+  through: 2026-07-27
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "The Wave 36 audit found established ambient orthogonality-graph theory and an Evans theorem reproducing the ternary cutoff after the target-specific substitution. No exact target-specific resolution was located, but a bounded search cannot prove openness, novelty, or priority."
-  latest_audit: "agents/2026-07-26-wave36-literature-audit.md"
-  latest_audit_sha256: "c21544dafc1eedecd6232f9c14a4e05cdb2af418cd0eebb5bc571e4b8d04ee28"
-  source_query_ledger: "attempts/wave36-literature-audit/source-query-metadata.json"
-  source_query_ledger_sha256: "a659294c30f925a7f6f65202524b4e89f0b8dc6350357c6c50a9f03b337e0fe6"
+  caveat: "The Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types. No exact characteristic-seven rank-25 theorem was located, but a bounded search cannot prove openness, novelty, or priority."
+  latest_audit: "agents/2026-07-27-wave40-rank25-literature.md"
+  latest_audit_sha256: "7a53b6bf3fc5dbb9a063812a9749b7d084ad05511cdcbed17ee48d75c4811ebc"
+  source_query_ledger: "attempts/wave40-rank25-literature/query-log.json"
+  source_query_ledger_sha256: "9c1349333ed93e12562d0e92e605c98bc887b14c66642bb1c96cdfd1d64d196a"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -22,6 +22,8 @@ literature_audit:
   exact_wave34_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave36_target_specific_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   wave36_general_prior_art_overlap: EVANS_2023_REPRODUCES_TERNARY_CUTOFF
+  exact_wave40_rank25_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -2501,4 +2503,81 @@ thirty_ninth_research_wave:
   solver_evidence_promoted: "ONE_NAMED_BRANCH_15_POLARITY_SHARD_ONLY"
   novelty_status: UNKNOWN
   caveat: "Wave 39 verifies the universal rank_F7(M)>=19 necessity and the UNSAT branch15 AND x187=1 shard, and retains exact cross-base and simultaneous B/H discovery restrictions. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+fortieth_research_wave:
+  public_base_commit: "6b28af70c67f062d687251494a047debe70a246f"
+  frozen_discovery_input_commit: "6b28af70c67f062d687251494a047debe70a246f"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=25"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=19"
+  local_partition_count: 11
+  local_rank_formula: "25-2e where e is the number of even parts"
+  minimum_third_fibre_projection_rank: "e for every local partition"
+  endpoint_modular_rank_pairs: 330
+  previous_endpoint_modular_rank_pairs: 429
+  ternary_boundary_consequence: "r3=12 implies even r7>=26"
+  rank22_stepping_stone_status: VERIFIED_SUPERSEDED
+  rank22_result: "attempts/wave40-rank19-equality/exact-results.json"
+  rank22_result_sha256: "631b36c1a3a8693ea193c21ebc0f9fa57aee68bdf5f7c52b28aa469a475e4553"
+  rank22_discovery_manifest: "attempts/wave40-rank19-equality/package-manifest.sha256"
+  rank22_discovery_manifest_sha256: "ee7a18dc514379eb37f653b6c4c07ce62655e420d98bf9525a1f98f643ef401e"
+  rank22_independent_result: "verification/wave40-rank19-equality/independent-results.json"
+  rank22_independent_result_sha256: "b6d555b2937b3d0d93b65ee53a413e692c3f721bd483997bc12bd2757a7850be"
+  rank22_verifier_manifest: "verification/wave40-rank19-equality/package-manifest.sha256"
+  rank22_verifier_manifest_sha256: "56b9994cef82de23a123921df6c21d8745c324c691e75e86dd35a4e39889e872"
+  rank25_result: "attempts/wave40-exact-coupling-model/exact-results.json"
+  rank25_result_sha256: "8613c05c94a9a5f88c45eddbeccbf4c8906c3783aab25747e439f50423bde9ce"
+  rank25_subspace_certificate: "attempts/wave40-exact-coupling-model/subspace-certificate.json"
+  rank25_subspace_certificate_sha256: "90b8eb3f88424ffe6ae7618a3063620a2dedff604ad2fac10894fb6278f17c9a"
+  rank25_discovery_manifest: "attempts/wave40-exact-coupling-model/package-manifest.sha256"
+  rank25_discovery_manifest_sha256: "3b9f073cfe5bdaa0295d6cf9507c443c7f6178ae00bf6c16f5dd35c825aa1a87"
+  rank25_independent_result: "verification/wave40-exact-coupling-model/independent-results.json"
+  rank25_independent_result_sha256: "ff7916d0f5c74c47c8d7787c5cbcc84785cbccd3644d8d03d73e47b73908c0f5"
+  rank25_verifier_manifest: "verification/wave40-exact-coupling-model/package-manifest.sha256"
+  rank25_verifier_manifest_sha256: "e2c7fc77586e894eff55b0652719d281fbb0eda4cd42f177864f9729e02cc32d"
+  edge_coupling_status: VERIFIED_SCOPED
+  edge_coupling_normalized_quotients: 4050
+  edge_coupling_rank11_quotients: 8
+  edge_coupling_lift_masks: 262144
+  edge_coupling_triangle_free_lifts: 37378
+  edge_coupling_K39_rank_distribution: "33:264,34:7348,35:29766"
+  edge_coupling_result: "attempts/wave40-edge-type-coupling/exact-results.json"
+  edge_coupling_result_sha256: "1be5ccadeb5b3273a7f37050e91fc6e37f89b3c7d548e8e02bd6cbbff9e4f062"
+  edge_coupling_discovery_manifest: "attempts/wave40-edge-type-coupling/package-manifest.sha256"
+  edge_coupling_discovery_manifest_sha256: "8f694a29a8b2154b22827043b78fcb7d126ee03e6e7916c2a3b61dbd229c846d"
+  edge_coupling_independent_result: "verification/wave40-edge-type-coupling/independent-results.json"
+  edge_coupling_independent_result_sha256: "822f758e04bcf95576cf8c5adc5cff2131ffa13cd286a6924137149de0dc3a9e"
+  edge_coupling_verifier_manifest: "verification/wave40-edge-type-coupling/package-manifest.sha256"
+  edge_coupling_verifier_manifest_sha256: "4b0c321c55af4282bf9ff48e4bfcd14f927d64640a875351787157700b3aa739"
+  rank25_literature_status: NO_EXACT_EQUIVALENT_FOUND_IN_BOUNDED_CORPUS
+  rank25_novelty_status: UNKNOWN
+  edge_scaffold_prior_art: GRAY_TAYLOR_2020
+  literature_source_ledger: "attempts/wave40-rank25-literature/source-ledger.json"
+  literature_source_ledger_sha256: "0d91c5684cda5aae56b7f29a967cf9e3d546677b965ed725bb1721dc296669d7"
+  literature_query_log: "attempts/wave40-rank25-literature/query-log.json"
+  literature_query_log_sha256: "9c1349333ed93e12562d0e92e605c98bc887b14c66642bb1c96cdfd1d64d196a"
+  literature_manifest: "attempts/wave40-rank25-literature/package-manifest.sha256"
+  literature_manifest_sha256: "5a0993a6ee24c7a188214ee09cf3d60edac20c5ddced69ef85a480595e45a6cc"
+  mathematical_and_artifact_tests_total: 90
+  discovery_tests_total: 46
+  independent_tests_total: 44
+  package_manifests: 7
+  package_manifest_entries: 53
+  public_checkpoint: "logs/2026-07-27-wave40-public-checkpoint.json"
+  public_checkpoint_sha256: "d4671661496bce37629274ec964e4551cfd8099dcc7f24a772c27d57002e2670"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave40-integration-audit.md"
+  integration_audit_sha256: "afc812a8740210c2c181b1bd0775da0a3526aa95e8706437cb918815f4543e10"
+  orchestrator_decision: "verification/2026-07-27-wave40-orchestrator.md"
+  orchestrator_decision_sha256: "a136b971ba4e675a5edfe62780e7754b7c716ff1753507be0201eadf3042dfbf"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 40 verifies the universal rank_F7(M)>=25 necessity, reduces conditional endpoint arithmetic to 330 pairs, and verifies scoped global edge-complex and one-quotient lift censuses. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
 last_updated: 2026-07-27

@@ -1299,3 +1299,33 @@ branch 15 / proof coverage:     UNKNOWN / 0 of 33
 upper bound below 4158:         NOT PROVED
 n3=4158 / Conway-99 / novelty:  UNKNOWN
 ```
+
+## Wave 40 rank completion and edge-coupling verification
+
+The clean-room packages are:
+
+- `wave40-rank19-equality/`: independently reconstructs the conditional
+  rank-22 stepping stone, including all 144 third-fibre syndromes, 66
+  projective lines, 1,923 two-spaces, 25,744 three-spaces, and the positive
+  dimension-three boundary.
+- `wave40-exact-coupling-model/`: independently rebuilds all eleven
+  edge-local forms and the arbitrary-completion rank lemma. It verifies
+  `min_f rank(H^T U_f)=e` when the partition has `e` even parts, and therefore
+  promotes the universal theorem `rank_F7(M)>=25`.
+- `wave40-edge-type-coupling/`: independently reconstructs the global
+  face/surface identities, all 4,050 normalized all-`222` quotients, the
+  exact 39-block Laplacian identity, and the complete `2^18` lift census for
+  one boundary quotient.
+
+The [Wave 40 integration audit](2026-07-27-wave40-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave40-orchestrator.md) retain the exact
+scope:
+
+```text
+rank_F7(M)>=25:                    VERIFIED
+endpoint arithmetic rank pairs:    330
+one-quotient rank-33 lift census:   VERIFIED SCOPED
+endpoint proof coverage:            0 of 33
+upper bound below 4158:             NOT PROVED
+n3=4158 / Conway-99 / novelty:      UNKNOWN
+```
