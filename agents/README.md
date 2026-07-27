@@ -205,3 +205,41 @@ Wave 45 report:
   the finite rooted Gram matrices, exact refutation of two stored aggregate
   witnesses, and replay of immutable checkpoint v1. The terminal timeout is
   retained as `UNKNOWN`.
+
+Wave 46 reports:
+
+- `2026-07-27-wave46-f7-code.md`: ordinary characteristic-seven row-code,
+  enumerator-moment, Schur-cube, and generic-control discovery package.
+- `2026-07-27-wave46-f7-code-verifier.md`: clean-room verification of the
+  conditional code consequences and all rank-28-through-44 generic controls.
+  The null endpoint conclusion is retained.
+
+Wave 47 reports:
+
+- `2026-07-27-wave47-three-root-moment.md`: discovery construction of all
+  eight three-labelled-root moment families and exact directions against 17
+  stored aggregate witnesses.
+- `2026-07-27-wave47-three-root-moment-verifier.md`: clean-room reconstruction
+  of all coefficients, controls, 2,664 directions, and 2,657 primitive cuts.
+- `2026-07-27-wave47-polynomial-calculus.md`: seven local squarefree
+  degree-two Macaulay calculations for branch 15.
+- `2026-07-27-wave47-polynomial-calculus-verifier.md`: independent replay of
+  the 13 XOR relations, the null contradiction/assignment result, and the
+  degree-four barrier for all 34,340 active Wave 43 cuts.
+
+Wave 48 report:
+
+- `2026-07-27-wave48-conic-moment.md`: combined real moment scout and exact
+  affine facial reduction. Floating statuses are non-evidentiary and
+  feasibility remains `UNKNOWN`.
+- `2026-07-27-wave48-conic-moment-verifier.md`: clean-room exact
+  reconstruction of affine rank 93, nullity 116, and all eleven complete
+  universal moment kernels; no numerical artifact is used.
+
+Wave 49 reports:
+
+- `2026-07-27-wave49-five-root-moment.md`: exact construction of the 21
+  five-root/one-free families and retained near-boundary numerical scout.
+- `2026-07-27-wave49-five-root-moment-verifier.md`: clean-room reconstruction
+  of all 2,520 relabellings, 42 controls, and 357 stored-witness
+  refutations; endpoint status remains `UNKNOWN`.

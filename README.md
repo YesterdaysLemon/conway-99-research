@@ -116,7 +116,20 @@ and the normalized search problem.
   equations to exact positive-semidefinite rooted-flag moments. A clean-room
   verifier refutes both stored count witnesses and checks 17 successive
   separating cuts, but the immutable continuation ends `UNKNOWN` at timeout;
-  no endpoint exclusion follows.
+  no endpoint exclusion follows. Wave 46 independently verifies that the
+  ordinary characteristic-seven row-code consequences and complete-enumerator
+  moments admit generic controls in every rank 28 through 44, so that coding
+  layer gives no endpoint obstruction. Wave 47 adds two independently checked
+  alternative spaces: eight three-root moment families reject all 17 stored
+  aggregate witnesses with 2,664 exact negative directions and 2,657 distinct
+  cuts, while a degree-two polynomial-calculus replay finds 13 exact local XOR
+  relations but no contradiction or forced variable. Wave 48 exposes the
+  exact universal faces of the combined moment system but leaves numerical
+  feasibility `UNKNOWN`. Wave 49 then constructs all 21 five-root/one-free
+  moment families; clean-room comparison verifies all 2,520 root relabellings,
+  42 controls, and 357 exact witness refutations. These are stronger finite
+  relaxations, not an endpoint exclusion: `708<=n3<=4158` and Conway-99 remain
+  `UNKNOWN`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2548,6 +2561,74 @@ The scope boundary is recorded in the
 [machine-readable checkpoint](logs/2026-07-27-wave45-public-checkpoint.json).
 Mutable searches beyond checkpoint v1 are deliberately outside the published
 claim.
+
+## Waves 46--49 alternative-space checkpoint
+
+Wave 46 tests the endpoint projector through its ordinary row code over
+`F7`. Conditional on `n3=4158`, the code is self-orthogonal, lies in the
+all-one hyperplane, has dual distance at least three, contains at least 1,386
+weight-69 words, and has full third Schur power. The last fact gives only
+`rank_F7(M)>=11`, weaker than the verified floor 28. A clean-room verifier
+rebuilds generic positive-control codes in every dimension 28 through 44, so
+these ordinary code constraints do not exclude the endpoint.
+
+Wave 47 strengthens the moment and Boolean lanes separately. All eight
+pointwise-labelled three-root/two-free Gram families close in the existing
+order-seven variables. Independent reconstruction verifies all 57,006
+coefficient entries, all 136 matrices on the 17 immutable witnesses, 2,664
+exact negative directions, and 2,657 distinct primitive cuts. Each stored
+witness is refuted in every root family, but the complete PSD-constrained
+region was not solved.
+
+The branch-15 polynomial lane works in the squarefree quotient over `F2`.
+Seven complete degree-two window calculations independently reproduce rank
+increments `[2,1,2,2,2,2,2]` and 13 new XOR relations, but give no
+contradiction and no newly forced unary assignment. All 34,340 active Wave 43
+prism cuts remain degree four and are invisible to an unconditioned
+degree-at-most-three Macaulay matrix.
+
+Wave 48 combines the 170 exact count equations with all Wave 45 and Wave 47
+moment families. A clean-room exact facial reduction verifies affine rank 93,
+nullity 116, and complete universal kernels in all eleven moment families.
+Clarabel and SCS both land near a highly degenerate boundary with small
+negative probabilities or eigenvalues and inconsistent scales. No exact
+feasible vector and no exact infeasibility certificate was retained; every
+floating status is non-evidentiary.
+
+Wave 49 reaches the strongest Gram layer expressible solely with order-six
+and order-seven variables: five labelled roots plus one free vertex. The 683
+labelled roots reduce, by explicitly checked coordinate relabelling rather
+than a graph automorphism, to 21 canonical matrices of sizes 10 through 32.
+A clean-room verifier reconstructs all 2,520 `S5` congruences, all 42
+Petersen/Clebsch controls, and all 357 matrices on the 17 stored witnesses.
+Every stored matrix is exactly indefinite. The combined numerical SDP remains
+near-boundary and `UNKNOWN`; no rational dual certificate was extracted.
+
+```text
+ordinary F7 code obstruction:              NONE (VERIFIED SCOPED)
+three-root witness refutations:            136/136 (VERIFIED SCOPED)
+three-root exact directions / cuts:        2664 / 2657
+degree-two branch-15 XOR relations:         13 (VERIFIED SCOPED)
+degree-two contradiction / assignments:    0 / 0
+combined real moment feasibility:           UNKNOWN
+exact affine faces for 11 families:          VERIFIED SCOPED
+five-root relabelling/control checks:        2520 / 42 (VERIFIED SCOPED)
+five-root witness refutations:               357/357 (VERIFIED SCOPED)
+endpoint proof coverage:                     0/33
+upper bound below 4158:                      NOT PROVED
+rigorous interval:                           708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:               UNKNOWN
+```
+
+See the [Wave 46 verifier](verification/wave46-f7-code/README.md),
+[three-root verifier](verification/wave47-three-root-moment/README.md),
+[polynomial-calculus verifier](verification/wave47-branch15-polynomial/README.md),
+[Wave 48 exact-face verifier](verification/wave48-conic-moment/README.md), and
+[five-root verifier](verification/wave49-five-root-moment/README.md).
+The publication boundary is frozen in the
+[Waves 46--49 integration audit](verification/2026-07-27-wave49-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave49-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave49-public-checkpoint.json).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

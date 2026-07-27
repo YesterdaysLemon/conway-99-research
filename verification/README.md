@@ -1364,3 +1364,28 @@ controls, refutes the two stored aggregate witnesses, and replays all 17 cuts
 and 15 witnesses from immutable checkpoint v1. Fifteen tests and the package
 manifest pass. The accepted result is a verified finite obstruction sequence;
 the terminal timeout and the full endpoint remain `UNKNOWN`.
+
+## Waves 46--49 alternative-space verification
+
+- `wave46-f7-code/` independently verifies the conditional ordinary
+  characteristic-seven code consequences and rebuilds all 17 generic controls
+  in ranks 28 through 44. It verifies a scoped null result, not an endpoint
+  code or graph.
+- `wave47-three-root-moment/` independently reconstructs all eight labelled
+  root families, 57,006 coefficient entries, 136 stored-witness matrices,
+  2,664 exact negative directions, and 2,657 primitive cuts.
+- `wave47-branch15-polynomial/` independently reconstructs the seven
+  degree-two Macaulay windows, all 13 XOR relations, and the complete
+  34,340-row degree-four partition. It finds no contradiction or new unary
+  assignment.
+- `wave48-conic-moment/` independently reconstructs the Wave 44 affine rank
+  93 and nullity 116, then verifies the complete universal kernels of all
+  eleven Wave 45/47 moment families without opening numerical solver output.
+- `wave49-five-root-moment/` independently reconstructs the 683 labelled
+  five-roots, 21 canonical families, 2,520 `S5` relabellings, 42 controls, and
+  all 357 exact stored-witness refutations. The numerical SDP artifact is not
+  used as evidence.
+
+Every accepted claim is finite and scoped. Combined real/integer feasibility,
+endpoint exclusion, a strict upper bound below 4158, graph construction,
+novelty, priority, and Conway-99 remain `UNKNOWN` or `NOT PROVED`.

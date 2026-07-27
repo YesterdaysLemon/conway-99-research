@@ -259,3 +259,31 @@ order-eight variables, or the full simultaneous `B/H` equations.
 The checkpoint refutes the stored Wave 43 and Wave 44 count vectors, not the
 endpoint. Its next solver call timed out, so the full PSD-constrained region
 remains `UNKNOWN`.
+
+## Waves 46--49: code, polynomial, and higher rooted moments
+
+- `wave46-f7-code/` records the ordinary characteristic-seven row-code
+  consequences and generic positive controls in every rank 28 through 44.
+  Independent verification confirms a null obstruction: the distinguished
+  projector-row geometry is not captured by the ordinary code constraints.
+- `wave47-three-root-moment/` constructs eight exact three-root/two-free Gram
+  families. A clean-room verifier reproduces 2,664 exact negative directions
+  and 2,657 distinct cuts against the 17 stored witnesses.
+- `wave47-branch15-polynomial/` computes the complete stated degree-two
+  squarefree Macaulay closure in seven branch-15 windows. Independent replay
+  verifies 13 local XOR relations, zero contradictions, zero new unary
+  assignments, and the degree-four representation barrier for all 34,340
+  active Wave 43 cuts.
+- `wave48-conic-moment/` combines the 170 count equations with eleven moment
+  families. A clean-room verifier confirms exact affine rank 93, nullity 116,
+  and all universal kernels; floating Clarabel/SCS points remain
+  non-evidentiary and no exact feasible point or infeasibility witness is
+  retained.
+- `wave49-five-root-moment/` constructs all 21 canonical five-root/one-free
+  Gram families without a target-graph automorphism. Independent comparison
+  verifies all 2,520 root relabellings, 42 known-graph controls, and 357 exact
+  stored-witness refutations.
+
+These lanes strengthen the finite relaxations and preserve useful failure
+information. None solves the complete PSD-constrained count region, closes an
+endpoint SAT branch, constructs a graph, or proves `n3<4158`.
