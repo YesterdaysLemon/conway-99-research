@@ -141,3 +141,27 @@ obstruction. Do not overwrite failed attempts when a method evolves.
 
 No Wave 37 solver telemetry, formula export, finite-field survivor, or bounded
 nonhit improves the general interval `708<=n3<=4158`.
+
+## Wave 38: public live-run boundary and exact continuation
+
+- `wave38-solver-harvest/` records a sanitized, read-only snapshot of the two
+  inherited live scouts and freezes the exact 33-case, 231-artifact
+  proof-producing queue. Both terminal JSON files were absent; current proof
+  coverage is `0/33`.
+- `wave38-complete-endpoint/` supplies the exact all-prism static schema,
+  decoded-candidate oracle, candidate-bound cut catalogs, source-bound cut
+  pools, and guarded OPB exporters. The exact residual-only subfamily has
+  24,388,892,640 clauses, so the practical route is finite
+  solve--cut--check. No target formula was generated or solved.
+- `wave38-coclique-rank/` combines a public 13-coclique construction with the
+  incidence-projector identity to prove `rank_F7(M)>=13`. A separate verifier
+  promotes this scoped implication and leaves 528 arithmetic endpoint rank
+  pairs.
+- `wave38-higher-order/` derives the signed support-four-cycle imbalance
+  200,277, a ternary fixed-triangle rank bridge, and a rank-ten local positive
+  control. It exposes simultaneous `B/H` or cross-base compatibility as the
+  missing lemma; it does not prove `P>=1`.
+
+All solver activity, partial pools, local controls, and arithmetic survivors
+remain nonterminal. The endpoint, upper-bound improvement, Conway-99, and
+novelty are `UNKNOWN`.

@@ -122,3 +122,21 @@ Wave 36 reports:
   2023 general theorem reproduces the ternary cutoff after the Wave 36
   substitution; exact target-specific matches were not located, and novelty
   and priority remain `UNKNOWN`.
+
+Wave 37 reports:
+
+- `2026-07-27-wave36-rooted-branches.md`: delayed publication of the exact
+  fixed-triangle endpoint clause catalogs and 33-case refinement. The live
+  sweep is not a result.
+- `2026-07-26-wave37-polar-strengthen.md`: ternary code, Schur-square, signed
+  degenerate-space, and characteristic-seven rank-eleven restrictions. Read
+  it with the independent audit and retained collinearity counterexample.
+
+Wave 38 reports:
+
+- `2026-07-27-wave38-coclique-rank.md`: discovery proof combining the public
+  13-coclique construction with the triangle-projector identity. A separate
+  verifier promotes `rank_F7(M)>=13`; no endpoint contradiction follows.
+- `2026-07-27-wave38-higher-order.md`: signed four-cycle and ternary
+  fixed-triangle rank derivations plus a rank-ten local positive control.
+  Simultaneous completion remains the missing step.

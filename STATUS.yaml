@@ -2360,4 +2360,75 @@ thirty_seventh_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 37 independently verifies exact partial prism-clause catalogs, conditional ternary/code and degenerate-space restrictions, and one branch-15 OPB artifact. It does not encode every prism or every endpoint case, decide any formula, construct a graph, exclude n3=4158, improve the upper bound, resolve Conway-99, or establish novelty."
+thirty_eighth_research_wave:
+  public_base_commit: "3014f3b1c010cdde1687b8878d4ec58d2bb90f03"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  solver_harvest_status: VERIFIED_QUEUE_AND_NULL_HARVEST_ONLY
+  endpoint_refined_cases: 33
+  endpoint_orbit_weight: 6644
+  planned_artifact_paths: 231
+  proof_coverage: "0/33"
+  solver_harvest_result: "attempts/wave38-solver-harvest/coverage-plan.json"
+  solver_harvest_result_sha256: "2de85c3f73d4b12a579b281c10171a47c12e26a323ecdf9617c1a842a81d8bf2"
+  solver_harvest_independent_result: "verification/wave38-solver-harvest/independent-results.json"
+  solver_harvest_independent_result_sha256: "2aa691682aa434d1166a98bf4af820652187ffe664911b8aa112104831fe8f6c"
+  solver_harvest_audit: "verification/wave38-solver-harvest/audit.md"
+  solver_harvest_audit_sha256: "54b1d2ffde905c971668e1bdc38ad89aadacfcf82368c238d4af56043e336c85"
+  complete_prism_status: VERIFIED_CONSTRUCTION_SCOPE_ONLY
+  potential_triangles: 96215
+  residual_only_static_clauses: 24388892640
+  complete_endpoint_discovery_tests: 12
+  complete_endpoint_independent_tests: 15
+  catalog_binding: CANDIDATE_BOUND
+  pool_binding: SOURCE_BOUND
+  complete_endpoint_discovery_manifest: "attempts/wave38-complete-endpoint/package-manifest.sha256"
+  complete_endpoint_discovery_manifest_sha256: "f60c438a3cea24e65b4883b58c95411214fb71b56ad036fb784252631a25282e"
+  complete_endpoint_verifier_manifest: "verification/wave38-complete-endpoint/package-manifest.sha256"
+  complete_endpoint_verifier_manifest_sha256: "fff2980eaa5d17ffc6ab7d60b5ffcb55504f83f06a289a79b74817d4dd66af13"
+  complete_endpoint_independent_result: "verification/wave38-complete-endpoint/independent-results.json"
+  complete_endpoint_independent_result_sha256: "580fc517f7cf6b9abd662e6a554de29e56a0c42e63471716bc1aafe163428585"
+  complete_endpoint_audit: "verification/wave38-complete-endpoint/audit.md"
+  complete_endpoint_audit_sha256: "1591de134a352218b6a4b9d47d505e87f15a3f67337edceea3abd3ee310c337f"
+  complete_endpoint_findings_fixed: "W38-CE-V1,W38-CE-V2,W38-CE-V3,W38-CE-V4,W38-CE-V5"
+  coclique_rank_status: VERIFIED
+  coclique_size: 13
+  characteristic_seven_rank_floor: "rank_F7(M)>=13"
+  ternary_boundary_consequence: "r3=12 implies even r7>=14"
+  modular_rank_pairs: 528
+  coclique_result: "attempts/wave38-coclique-rank/exact-results.json"
+  coclique_result_sha256: "f5a3eecbe4febd12fdcf02cc1976598b8bb8ab4615142e5bb760f1a3bd02d87d"
+  coclique_independent_result: "verification/wave38-coclique-rank/independent-results.json"
+  coclique_independent_result_sha256: "5794aaf5860495c475b07c250f709cb07b1ca14d074605fa945c39ae33161e17"
+  coclique_audit: "verification/wave38-coclique-rank/audit.md"
+  coclique_audit_sha256: "9361afa1ad439da8af5ed38cd16b08dcb9751c3f66e8a5aa11d8b6dac1329d9b"
+  coclique_public_prior: "Misha Lavrov, Mathematics Stack Exchange, 2025"
+  higher_order_status: VERIFIED_SCOPED_WITH_WORDING_QUALIFIER
+  signed_four_cycle_imbalance: 200277
+  local_rank_control: 10
+  individual_columns_before_mixed_cut: 183596
+  individual_columns_after_mixed_cut: 152399
+  higher_order_result: "attempts/wave38-higher-order/exact-results.json"
+  higher_order_result_sha256: "7d3229234e5eda3f432ff88eb07670a18611b37a64ef3a7949f4a505f274c782"
+  higher_order_independent_result: "verification/wave38-higher-order/independent-results.json"
+  higher_order_independent_result_sha256: "c0d56150980fe874ce1fa60eab9423da037400b7dcc17b5593380b2f03b5a0cb"
+  higher_order_audit: "verification/wave38-higher-order/audit.md"
+  higher_order_audit_sha256: "d52b331a966339a4102f69c04572ca65eaaffb3dd46570980fedeceb161ddce2"
+  higher_order_verifier_manifest: "verification/wave38-higher-order/package-manifest.sha256"
+  higher_order_verifier_manifest_sha256: "85c96a8719d9d580c49040f58aabbaf174e8be2f2ef382911185aee8ad6f0b32"
+  higher_order_wording_qualifier: "The centered seven-row Gram has rank 6; the uncentered Gram has rank 7."
+  mathematical_and_artifact_tests_total: 81
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave38-integration-audit.md"
+  integration_audit_sha256: "6c5e89c9173ad99741be884491d803bfc822ecbfeeaa069e194a2ecc710b87d7"
+  orchestrator_decision: "verification/2026-07-27-wave38-orchestrator.md"
+  orchestrator_decision_sha256: "75a6a6a429c31115b8abda16e163a9b12802d61740c982ad53f9ed0dd5da8506"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 38 verifies the exact 33-case queue, a complete all-prism construction and oracle, the universal rank_F7(M)>=13 necessity, and scoped higher-order identities. It supplies no target formula result, graph, SAT assignment, UNSAT proof, completed lazy-cut sequence, endpoint exclusion, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
 last_updated: 2026-07-27

@@ -2586,6 +2586,140 @@ proof or counterexample. The rigorous interval remains
 
 and both `n3=4158` and Conway-99 remain `UNKNOWN`.
 
+### Wave 38 universal coclique-rank strengthening (`VERIFIED`)
+
+Every putative target graph contains a 13-coclique. Choose an edge `xy` and
+let `z` be its unique triangle mate. The sets
+
+```text
+X=N(x)-{y,z},  Y=N(y)-{x,z}
+```
+
+have twelve vertices. Each carries a perfect matching, and the `mu=2`
+common-neighbor rule gives a perfect matching between them. Their union is
+2-regular; local and cross edges alternate, and every component cycle has
+length divisible by four. One alternating color class has twelve vertices.
+The `lambda=1` rule makes `z` nonadjacent to all of `X union Y`, so adjoining
+`z` gives an independent set of size thirteen.
+
+Let `N` be the vertex-triangle incidence matrix and `M=21E_0` the integral
+rank-44 projector on the zero eigenspace of the triangle-intersection graph.
+From
+
+```text
+N N^T=7I+A,
+N^T N=3I+Gamma,
+```
+
+spectral transport gives
+
+```text
+N M N^T=27I-9A+J.
+```
+
+Restricting to the 13-coclique gives
+
+```text
+N_I M N_I^T=27I_13+J_13.
+```
+
+Its determinant is `27^12*40`, congruent to five modulo seven. Therefore
+
+```text
+rank_F7(M)>=13.
+```
+
+This is universal conditional on target existence, not merely an endpoint
+fact. At `n3=4158`, `C=2M-21I` is congruent to `2M` modulo seven, so the same
+rank floor holds for `C`. Combined with even `r3+r7`, the surviving
+`r3=12` boundary requires even `r7>=14`. The endpoint arithmetic now leaves
+528 rank pairs rather than 629. These are arithmetic survivors, not matrices
+or graphs.
+
+The combinatorial coclique construction is credited to Misha Lavrov's public
+2025 Mathematics Stack Exchange comment. The combined rank consequence passed
+a separate ten-test adversarial reconstruction; novelty remains `UNKNOWN`.
+
+### Wave 38 complete all-prism schema (`VERIFIED CONSTRUCTION SCOPE`)
+
+The rooted scaffold has 96,215 potential triangles:
+
+```text
+7 fixed root,
+924 coordinate-plus-two-residual,
+95,284 residual-only.
+```
+
+For every two disjoint potential triangles and each of their six perfect
+matchings, the complete schema forbids the simultaneous presence of the nine
+prism edges. The `lambda=1` constraints make this positive-edge clause exact:
+any unmatched cross edge would give a triangle edge two common neighbors.
+An independent exhaustive check of all 64 supergraphs verifies this step.
+
+The residual-only subfamily contains exactly
+
+```text
+60*binomial(84,6)=24,388,892,640
+```
+
+clauses, so a monolithic static formula is not practical on the current host.
+The finite exact alternative is solve--cut--check: decode a candidate,
+enumerate every induced prism, add candidate-bound exact cuts to a
+source-bound cumulative pool, and repeat. A checked UNSAT result from any
+sound partial pool excludes that refined case; a SAT assignment is terminal
+only when the full SRG checker and zero-prism oracle both pass.
+
+The 33-case cover and all-prism construction contain no completed-graph
+automorphism assumption. Current independently checked proof coverage is
+`0/33`; no formula result, graph, endpoint exclusion, or upper-bound
+improvement follows.
+
+### Wave 38 fourth-order and local-rank bridge (`VERIFIED`, scoped)
+
+At the endpoint, the signed support matrix `S=M-4I` has
+
+```text
+tr(S^4)=3722796.
+```
+
+Inclusion-exclusion counts
+
+```text
+231*68*(2*68-1)=2120580
+```
+
+non-simple closed signed four-walks. Every simple support four-cycle has
+eight oriented rooted representations, so
+
+```text
+balanced support C4 - unbalanced support C4 = 200277.
+```
+
+This exact imbalance is not a contradiction because the two unsigned counts
+remain unknown.
+
+Over `F_3`, the seven triangle-factor rows through every original vertex have
+one common sum `w`. Centering by `z_T=v_T-w` gives Gram matrix
+
+```text
+D=C+J,  rank_F3(D)=r3-1.
+```
+
+For the nineteen triangles meeting one base triangle, exact elimination gives
+
+```text
+rank_F3(D_local)=rank_F3(P_T-I),
+```
+
+where `P_T` is a simple tripartite four-regular graph on `6+6+6` vertices.
+A frozen one-triangle control satisfies all audited local caps and has
+`rank_F3(P_T-I)=10`, showing that the local axioms alone cannot exclude
+`r3=12`. A successful continuation must use simultaneous 60-block `B/H`
+compatibility or compatibility among different base triangles. This lane
+does not prove `P>=1`. An independent reconstruction passed eleven hostile
+tests. Its only wording qualifier is that the seven-row rank-six statement
+refers to the centered Gram `D=C+J`; the uncentered Gram has rank seven.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

@@ -646,6 +646,39 @@ upper bound below 4158: NOT PROVED
 Conway-99: UNKNOWN
 ```
 
+## Wave 38 queue, complete-prism, and modular verification
+
+The [integration audit](2026-07-27-wave38-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave38-orchestrator.md) record the final
+promotion boundary.
+
+- `wave38-solver-harvest/` independently reconstructs all 33 endpoint cases,
+  orbit weights, and 231 collision-free planned paths. It verifies only the
+  queue and null harvest: no output, proof, assignment, or case result exists.
+- `wave38-complete-endpoint/` independently reconstructs the 96,215 potential
+  triangles, exact residual-only count `60*C(84,6)=24,388,892,640`, all 64
+  prism supergraphs under `lambda=1`, the 33-case cover, and the decoded
+  oracle on all 32,768 six-vertex graphs. Candidate completeness, pool
+  provenance, strict integer schemas, and output containment were hardened
+  after the first audit; the final re-audit verifies all five repairs and
+  both package manifests.
+- `wave38-coclique-rank/` independently proves the 13-coclique, derives
+  `N M N^T=27I-9A+J`, and verifies `rank_F7(M)>=13`. With endpoint parity,
+  `r3=12` forces even `r7>=14`, leaving 528 arithmetic rank pairs.
+- `wave38-higher-order/` independently verifies the signed fourth-order
+  imbalance, ternary centering and local-rank bridge, the frozen rank-ten
+  control, and the individual-column census. The rank-six statement is for
+  the centered Gram; the uncentered seven-row Gram has rank seven.
+
+```text
+endpoint proof coverage:        0 / 33
+complete all-prism mathematics: VERIFIED construction scope
+rank_F7(M)>=13:                 VERIFIED
+higher-order bridge:            VERIFIED scoped, wording qualified
+upper bound below 4158:         NOT PROVED
+n3=4158 / Conway-99:            UNKNOWN
+```
+
 ## Wave 34 exact encoding and actual-incidence continuation
 
 Wave 34 has separated Stage 1, candidate, Stage 2, and crosscheck packages.

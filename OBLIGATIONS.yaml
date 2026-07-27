@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-26
+as_of: 2026-07-27
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -1699,3 +1699,78 @@ obligations:
       Branch 15 satisfiability and the other 32 refined cases remain
       UNKNOWN. The endpoint and Conway-99 remain UNKNOWN, with rigorous
       interval 708<=n3<=4158.
+
+  - id: O-WAVE38-QUEUE-AND-ALL-PRISM-VERIFICATION
+    requirement: >-
+      Independently reconstruct the exact 33-case endpoint queue and orbit
+      weights; preserve the zero-result live-process boundary; reconstruct
+      the complete all-prism triangle inventory, clause factor, lambda-one
+      compression, decoded-candidate oracle, catalog and pool binding, and
+      guarded exporter without promoting a formula or validator to a target
+      result.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave38-solver-harvest/independent-results.json"
+      - "verification/wave38-solver-harvest/audit.md"
+      - "verification/wave38-complete-endpoint/independent-results.json"
+      - "verification/wave38-complete-endpoint/audit.md"
+    note: >-
+      The queue, construction mathematics, and oracle are verified in scope.
+      No target formula was generated or solved, and proof coverage remains
+      0/33.
+
+  - id: O-WAVE38-COCLIQUE-RANK-VERIFICATION
+    requirement: >-
+      Independently prove the 13-coclique construction, incidence-projector
+      transport, determinant and rank calculation modulo seven, endpoint
+      congruence, and parity consequence without importing discovery code or
+      inflating the rank lower bound to equality.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave38-coclique-rank/independent-results.json"
+      - "verification/wave38-coclique-rank/audit.md"
+      - "verification/wave38-coclique-rank/run-report.yaml"
+    note: >-
+      Ten hostile tests pass. The promoted result is rank_F7(M)>=13 and the
+      conditional r3=12 implies even r7>=14. No endpoint contradiction or
+      novelty result follows.
+
+  - id: O-WAVE38-HIGHER-ORDER-VERIFICATION
+    requirement: >-
+      Independently reconstruct the signed simple-four-cycle subtraction,
+      ternary vertex-clique centering, fixed-triangle rank bridge, and frozen
+      rank-ten local control, while separating one-triangle feasibility from
+      simultaneous global completion.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "agents/2026-07-27-wave38-higher-order.md"
+      - "attempts/wave38-higher-order/exact-results.json"
+      - "verification/wave38-higher-order/independent-results.json"
+      - "verification/wave38-higher-order/audit.md"
+      - "verification/wave38-higher-order/run-report.yaml"
+    note: >-
+      Nine discovery tests and eleven independent hostile tests pass. The
+      centered seven-row Gram has rank six while the uncentered Gram has rank
+      seven. No P>=1 theorem, simultaneous B/H completion, or upper-bound
+      improvement is promoted.
+
+  - id: O-WAVE38-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate: either
+      a valid 99-vertex prism-free SRG or checked UNSAT proofs covering all
+      33 refined cases. Live processes, timeouts, partial cut pools, local
+      controls, and unchecked solver conclusions cannot discharge this
+      obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave38-solver-harvest/audit.md"
+      - "verification/wave38-complete-endpoint/audit.md"
+      - "verification/wave38-coclique-rank/audit.md"
+      - "verification/wave38-higher-order/audit.md"
+    note: >-
+      No graph or proof exists. The endpoint and Conway-99 remain UNKNOWN,
+      the rigorous interval is 708<=n3<=4158, and proof coverage is 0/33.

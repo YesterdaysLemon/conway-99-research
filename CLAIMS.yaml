@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-26
+as_of: 2026-07-27
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -1710,6 +1710,113 @@ claims:
     limitations: >-
       The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
       still 708<=n3<=4158, and novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE38-HARVEST-071
+    statement: >-
+      Conditional on the normalized n3=4158 endpoint setup, the exact
+      proof-producing queue has 33 refined cases over parent branches
+      4,5,8,10,12, with total normalized orbit weight 6644 and 231
+      collision-free planned artifact paths. The two observed live scouts
+      produced no terminal output and contribute zero proof coverage.
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_QUEUE_AND_NULL_HARVEST_ONLY
+    evidence:
+      - "attempts/wave38-solver-harvest/coverage-plan.json"
+      - "attempts/wave38-solver-harvest/process-snapshot.json"
+      - "verification/wave38-solver-harvest/independent-results.json"
+      - "verification/wave38-solver-harvest/audit.md"
+      - "verification/wave38-solver-harvest/run-report.yaml"
+    limitations: >-
+      Process activity and absent output reveal no completed prefix. No
+      assignment, proof, case result, endpoint exclusion, or upper-bound
+      improvement is supplied; proof coverage is 0/33.
+
+  - id: C-WAVE38-COMPLETE-PRISM-072
+    statement: >-
+      The complete rooted all-prism schema has 96215 potential triangles and
+      exactly 24388892640 residual-only labelled prism clauses before branch
+      simplification. Its lambda-one positive-edge compression and
+      decoded-candidate prism oracle are exact, and the finite
+      solve-cut-check route uses candidate-bound catalogs and source-bound
+      cumulative pools without a completed-graph automorphism assumption.
+    label: VERIFIED
+    scope: CONDITIONAL_COMPLETE_ALL_PRISM_CONSTRUCTION_AND_ORACLE_ONLY
+    evidence:
+      - "attempts/wave38-complete-endpoint/README.md"
+      - "attempts/wave38-complete-endpoint/static-schema-estimate.json"
+      - "attempts/wave38-complete-endpoint/construction-audit.json"
+      - "verification/wave38-complete-endpoint/independent-results.json"
+      - "verification/wave38-complete-endpoint/audit.md"
+      - "verification/wave38-complete-endpoint/run-report.yaml"
+    limitations: >-
+      No target formula was generated or solved, no lazy iteration was
+      completed, and no SAT witness or UNSAT proof exists. Formula and
+      validator correctness are not endpoint evidence.
+
+  - id: C-WAVE38-COCLIQUE-RANK-073
+    statement: >-
+      Every putative srg(99,14,1,2) contains a 13-coclique. For its
+      vertex-triangle incidence matrix N and integral triangle projector
+      M=21E0, N M N^T=27I-9A+J, so restriction to that coclique is
+      27I_13+J_13 with determinant 27^12*40 congruent to 5 modulo 7.
+      Therefore rank_F7(M)>=13. At n3=4158, rank_F7(C)>=13, and r3=12
+      forces even r7>=14.
+    label: VERIFIED
+    scope: UNIVERSAL_TARGET_NECESSITY_AND_CONDITIONAL_ENDPOINT_CONSEQUENCE
+    evidence:
+      - "agents/2026-07-27-wave38-coclique-rank.md"
+      - "attempts/wave38-coclique-rank/exact-results.json"
+      - "verification/wave38-coclique-rank/independent-results.json"
+      - "verification/wave38-coclique-rank/audit.md"
+      - "verification/wave38-coclique-rank/run-report.yaml"
+    limitations: >-
+      This is a rank lower bound, not equality or a modular classification.
+      The resulting 528 rank pairs are arithmetic survivors, not matrices or
+      graphs. The 13-coclique construction is prior public mathematics;
+      novelty of the combined rank consequence remains UNKNOWN.
+
+  - id: C-WAVE38-HIGHER-ORDER-074
+    statement: >-
+      Conditional on n3=4158, the signed support has
+      balanced-minus-unbalanced simple four-cycle count 200277. Over F3,
+      vertex-clique centering gives D=C+J with rank(D)=r3-1, and the
+      19-triangle block at a base triangle has rank equal to rank(P_T-I).
+      A frozen locally admissible one-triangle control has rank(P_T-I)=10.
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_HIGHER_ORDER_AND_LOCAL_RANK_REDUCTION
+    evidence:
+      - "agents/2026-07-27-wave38-higher-order.md"
+      - "attempts/wave38-higher-order/exact-results.json"
+      - "attempts/wave38-higher-order/failed-routes.md"
+      - "attempts/wave38-higher-order/run-report.yaml"
+      - "verification/wave38-higher-order/independent-results.json"
+      - "verification/wave38-higher-order/audit.md"
+      - "verification/wave38-higher-order/run-report.yaml"
+    limitations: >-
+      The seven-row rank-six statement is for the centered Gram C+J; the
+      uncentered Gram has rank seven. The local control is not a simultaneous
+      60-column B/H completion or graph. The count and rank bridge do not
+      force P>=1 or exclude the endpoint.
+
+  - id: C-WAVE38-CONTINUATION-075
+    statement: >-
+      Excluding n3=4158 still requires independently checked UNSAT
+      certificates covering all 33 refined cases, a checked prism-free SRG
+      witness, or a global contradiction such as simultaneous B/H
+      incompatibility. Current live processes, zero-coverage queues, formula
+      schemas, arithmetic survivors, and local controls do not satisfy that
+      condition.
+    label: UNKNOWN
+    scope: WAVE38_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/wave38-solver-harvest/audit.md"
+      - "verification/wave38-complete-endpoint/audit.md"
+      - "verification/wave38-coclique-rank/audit.md"
+      - "verification/wave38-higher-order/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      still 708<=n3<=4158, proof coverage is 0/33, and novelty and priority
+      remain UNKNOWN.
 
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
