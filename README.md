@@ -165,7 +165,15 @@ and the normalized search problem.
   if one exists, has no automorphism of order 11 and is not
   vertex-transitive. A separate Fourier argument excludes every Cayley
   realization on a group of order 99. These are verified restricted
-  exclusions; asymmetric graphs remain entirely possible.
+  exclusions; asymmetric graphs remain entirely possible. Waves 71, 74,
+  and 78 then push the lattice shift through a level-seven modular-form
+  congruence. In the hardest surviving rank row `r=28`, an exact integer
+  `-4` eigenvector of squared norm 14, 16, or 18 is forced, with
+  `N14+N16+N18=2 mod 14`. The norm-18 two-edge branch is excluded, and
+  elementary packing collapses the remaining outside-degree histograms to
+  one norm-16 row and eleven norm-18 rows. The norm-14, norm-16, and
+  norm-18 branches all still have live structures, so this is a finite
+  reduction rather than a resolution.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

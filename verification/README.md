@@ -1554,3 +1554,24 @@ The [integration audit](2026-07-27-wave72-integration-audit.md) and
 [orchestrator decision](2026-07-27-wave72-orchestrator.md) retain the
 restricted scope. Asymmetric targets, the endpoint, a strict upper-bound
 improvement, Conway-99, and literature novelty remain `UNKNOWN`.
+
+## Waves 71, 74, and 78 modular-theta verification
+
+- `wave71-modular-theta-extension/` independently verifies the order-nine
+  marked class, the index-three even overlattice, the exact level-seven
+  scaled dual, Skoruppa weights `154-3q`, every finite-field theta gap, and
+  `N14+N16+N18=2 mod 14` in the `q=16` row. Its verdict is
+  `VERIFIED_WITH_CORRECTION`: norm-18 `h=2` is impossible, leaving `h=0,1`.
+- `wave74-short-vector-closure/` independently checks both `h=2`
+  contradictions and all `4/20/6` aggregate histograms. Its audit retains a
+  harmless dead-lane bookkeeping clarification.
+- `wave78-short-vector-packing/` independently checks the four-subset
+  packing bounds and the exact reduced histogram counts `1/7/4`. Its
+  multiplicity-aware proof strengthens the discovery wording without
+  changing the theorem.
+
+The [integration audit](2026-07-27-wave78-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave78-orchestrator.md) retain live
+norm-14, norm-16, and norm-18 structures. No lattice realization, graph,
+endpoint exclusion, strict upper bound, Conway-99 resolution, or novelty
+claim follows.

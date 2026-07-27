@@ -431,3 +431,23 @@ literature-priority result is supplied. Conway-99 remains `UNKNOWN`.
 Both discoveries have clean-room verification. The result is restricted:
 it does not exclude asymmetric targets and does not improve
 `708<=n3<=4158`. Conway-99 remains `UNKNOWN`.
+
+## Waves 71, 74, and 78: level-seven theta and short-vector packing
+
+- `wave71-modular-theta-extension/` removes the order-nine discriminant
+  factor by an index-three even overlattice, forms the exact level-seven
+  scaled dual `K`, and applies Skoruppa's mod-seven theta reduction.
+  For `q=16`, equivalently `rank_F7(2A-J+I)=28`, it forces
+  `N14+N16+N18=2 mod 14` for integer `-4` eigenvectors.
+- The short vectors reduce to signed unit supports: complementary-Fano
+  `7+7` at norm 14, 4-regular bipartite `8+8` at norm 16, and `9+9`
+  structures at norm 18. Independent verification corrects Wave 71 by
+  excluding the norm-18 `h=2` branch.
+- `wave74-short-vector-closure/` records the exact outside-incidence
+  contradiction and the remaining aggregate histograms.
+- `wave78-short-vector-packing/` proves `d<=2` at norm 16 and `d<=3` at
+  norm 18, reducing histogram counts from `4/20/6` to `1/7/4`.
+
+All three packages have clean-room verification. Surviving histograms are
+necessary conditions, not labelled designs or graphs. Conway-99 and novelty
+remain `UNKNOWN`.
