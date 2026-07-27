@@ -243,3 +243,19 @@ relaxation only, not graph evidence.
 This closes the aggregate rooted-count lane as a null result. A useful next
 step must impose overlapping-subset compatibility, a PSD flag moment matrix,
 order-eight variables, or the full simultaneous `B/H` equations.
+
+## Wave 45: positive-semidefinite rooted-flag checkpoint
+
+- `wave45-flag-moment/checkpoint-v1-*` is the immutable discovery checkpoint
+  accepted by the clean-room verifier. It contains the exact rooted-moment
+  coefficient stream, the two stored-witness attacks, and 17 cuts against 15
+  successive exact count witnesses.
+- `wave45-flag-moment/README-v1.md`, `replay-v1.py`, and
+  `package-manifest-v1.sha256` provide the versioned discovery replay and
+  nine-entry package boundary.
+- Mutable cutting-plane files and later solver runs in the same directory are
+  work in progress and are not part of checkpoint-v1 evidence.
+
+The checkpoint refutes the stored Wave 43 and Wave 44 count vectors, not the
+endpoint. Its next solver call timed out, so the full PSD-constrained region
+remains `UNKNOWN`.

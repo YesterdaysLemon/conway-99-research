@@ -112,7 +112,11 @@ and the normalized search problem.
   vertex-, edge-, and nonedge-rooted order-seven equation and finds a second
   exact feasible integer witness. These results sharpen the boundary and rule
   out two coarse count strategies, but still do not exclude `n3=4158`;
-  the general upper bound remains 4158.
+  the general upper bound remains 4158. Wave 45 moves from linear count
+  equations to exact positive-semidefinite rooted-flag moments. A clean-room
+  verifier refutes both stored count witnesses and checks 17 successive
+  separating cuts, but the immutable continuation ends `UNKNOWN` at timeout;
+  no endpoint exclusion follows.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2490,6 +2494,60 @@ upper bound below 4158 in general:        NOT PROVED
 rigorous interval:                        708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:            UNKNOWN
 ```
+
+## Wave 45 positive-semidefinite rooted-flag checkpoint
+
+Wave 45 replaces scalar rooted counts by Gram matrices. For each labelled
+root embedding, form the vector of induced four-vertex rooted-flag counts
+`z`. Every actual graph must satisfy
+
+```text
+M_flag = sum z z^T >= 0.
+```
+
+Keeping every overlap between two flags gives exact matrices whose entries
+are linear combinations of the existing unrooted counts:
+
+```text
+vertex root:          17 x 17, union orders 4..7
+ordered edge root:    16 x 16, union orders 4..6
+ordered nonedge root: 19 x 19, union orders 4..6.
+```
+
+A clean-room implementation independently enumerates the rooted classes and
+matches all 484 class-matrix records and 16,660 nonzero ordered coefficients.
+Direct outer-product calculations on the Petersen and Clebsch graphs provide
+six exact positive controls.
+
+The vertex-root matrix gives six exact negative integer directions for each
+of the stored Wave 43 and Wave 44 aggregate witnesses. Those two vectors are
+therefore refuted as moment sequences. The edge- and nonedge-root matrices
+have rank one on both witnesses because they use only order-at-most-six
+counts, which are already fixed; the order-seven vertex-root overlap is the
+new information.
+
+An immutable cutting-plane checkpoint records 15 successive exact witnesses
+and 17 exact moment cuts. Independent replay verifies that every witness
+satisfies the original 170 equations and all earlier cuts, while each new cut
+strictly rejects its source witness. The next exact integer solve timed out:
+
+```text
+stored Wave 43 and Wave 44 witnesses: REFUTED
+finite 17-cut checkpoint:             VERIFIED INCOMPLETE
+full PSD-constrained region:           UNKNOWN
+upper bound below 4158:                NOT PROVED
+rigorous interval:                     708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:         UNKNOWN
+```
+
+See the [Wave 45 clean-room verifier](verification/wave45-flag-moment/README.md)
+and its [immutable comparison](verification/wave45-flag-moment/comparison-results.json).
+The scope boundary is recorded in the
+[integration audit](verification/2026-07-27-wave45-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave45-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave45-public-checkpoint.json).
+Mutable searches beyond checkpoint v1 are deliberately outside the published
+claim.
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

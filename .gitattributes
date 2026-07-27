@@ -27,3 +27,8 @@ attempts/wave34-rooted-encoding/test-results.txt -text -diff
 # Preserve their exact bytes so the package manifest survives clean clones.
 verification/wave43-seven-deck-endpoint/comparison.json -text -diff
 verification/wave43-seven-deck-endpoint/independent-result.json -text -diff
+
+# Wave 45 discovery checkpoint payloads are checksum-pinned raw streams.
+attempts/wave45-flag-moment/checkpoint-v1-moment-coefficients.json -text -diff
+attempts/wave45-flag-moment/checkpoint-v1-stored-witness-results.json -text -diff
+attempts/wave45-flag-moment/replay-v1-results.json -text -diff

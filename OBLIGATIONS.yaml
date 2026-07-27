@@ -2177,6 +2177,44 @@ obligations:
       false-infeasibility result is retained but refuted. Only feasibility of
       the aggregate rooted relaxation is promoted.
 
+  - id: O-WAVE45-FLAG-MOMENT-VERIFICATION
+    requirement: >-
+      Before discovery inspection, independently enumerate every admissible
+      rooted four-vertex flag and its overlapping unions, reconstruct all
+      exact Gram coefficients, calibrate on explicit Petersen and Clebsch
+      graphs, attack both stored aggregate witnesses, and replay every cut and
+      intermediate witness from one immutable checkpoint without inspecting
+      mutable live search state.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave45-flag-moment/protocol-freeze.md"
+      - "verification/wave45-flag-moment/independent-results.json"
+      - "verification/wave45-flag-moment/comparison-results.json"
+      - "verification/wave45-flag-moment/verification-report.md"
+      - "verification/wave45-flag-moment/package-manifest.sha256"
+    note: >-
+      Fifteen verifier tests pass. All 484 class matrices, 16660 nonzero
+      ordered coefficients, six control matrices, twelve stored-witness
+      negative directions, 17 cuts, and 15 intermediate witnesses replay
+      exactly. The terminal timeout remains UNKNOWN and is not a certificate.
+
+  - id: O-WAVE45-COMPLETE-PSD-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable certificate for the full
+      positive-semidefinite constrained endpoint count region: either an exact
+      feasible moment/count witness, or a finite exact separating family and
+      proof-producing infeasibility derivation. A finite sequence of rejected
+      witnesses and a timeout do not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave45-flag-moment/checkpoint-v1-seed0-17cuts-15witnesses.json"
+      - "verification/wave45-flag-moment/README.md"
+    note: >-
+      Checkpoint v1 is VERIFIED INCOMPLETE. Endpoint n3=4158, a strict upper
+      bound, and Conway-99 remain UNKNOWN.
+
   - id: O-WAVE43-COMPLETE-ENDPOINT-CERTIFICATE
     requirement: >-
       Produce a complete independently checkable endpoint certificate:

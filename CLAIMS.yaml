@@ -2340,6 +2340,48 @@ claims:
       existence. A floating-point HiGHS infeasible status was refuted by the
       exact witness and has no certificate authority.
 
+  - id: C-WAVE45-FLAG-MOMENT-103
+    statement: >-
+      The complete four-vertex rooted-flag Gram construction gives exact
+      17-by-17 vertex-root, 16-by-16 ordered-edge-root, and 19-by-19
+      ordered-nonedge-root positive-semidefinite moment matrices. A clean-room
+      verifier matches all 484 class-matrix records and 16660 nonzero ordered
+      coefficients, refutes the stored Wave 43 and Wave 44 count witnesses by
+      twelve exact negative integer directions, and replays an immutable
+      checkpoint of 17 valid cuts against 15 successive exact witnesses.
+    label: VERIFIED
+    scope: FINITE_ROOTED_FLAG_MOMENTS_AND_IMMUTABLE_CHECKPOINT_V1_ONLY
+    evidence:
+      - "attempts/wave45-flag-moment/checkpoint-v1-manifest.sha256"
+      - "attempts/wave45-flag-moment/checkpoint-v1-seed0-17cuts-15witnesses.json"
+      - "attempts/wave45-flag-moment/replay-v1-results.json"
+      - "attempts/wave45-flag-moment/run-report-v1.yaml"
+      - "attempts/wave45-flag-moment/package-manifest-v1.sha256"
+      - "agents/2026-07-27-wave45-flag-moment.md"
+      - "verification/wave45-flag-moment/independent-results.json"
+      - "verification/wave45-flag-moment/comparison-results.json"
+      - "verification/wave45-flag-moment/verification-report.md"
+      - "verification/wave45-flag-moment/package-manifest.sha256"
+    limitations: >-
+      Refuting particular aggregate witnesses does not refute the endpoint.
+      The next exact solver call timed out with QF_LIA_UNKNOWN; the full
+      positive-semidefinite feasible region was not exhausted. Live searches
+      after checkpoint v1 are outside this claim.
+
+  - id: C-WAVE45-CONTINUATION-104
+    statement: >-
+      Wave 45 supplies no graph, endpoint exclusion, strict upper bound below
+      n3=4158, or complete proof-producing infeasibility certificate.
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "attempts/wave45-flag-moment/run-report-v1.yaml"
+      - "verification/wave45-flag-moment/README.md"
+      - "verification/wave45-flag-moment/run-report.yaml"
+    limitations: >-
+      The rigorous interval remains 708<=n3<=4158. Endpoint status,
+      Conway-99, novelty, and priority remain UNKNOWN.
+
   - id: C-WAVE43-CONTINUATION-102
     statement: >-
       Wave 43 supplies no graph, complete endpoint proof, endpoint exclusion,

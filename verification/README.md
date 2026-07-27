@@ -1355,3 +1355,12 @@ checks the 91-support integer witness. It also reproduces and explicitly
 refutes the free HiGHS false-infeasibility diagnostic by exact substitution
 and a fixed-witness solver control. The accepted scope is feasibility of the
 aggregate rooted relaxation only.
+
+## Wave 45 rooted flag moments
+
+`wave45-flag-moment/` independently enumerates the four-vertex rooted flags,
+constructs every exact overlap coefficient, checks Petersen and Clebsch
+controls, refutes the two stored aggregate witnesses, and replays all 17 cuts
+and 15 witnesses from immutable checkpoint v1. Fifteen tests and the package
+manifest pass. The accepted result is a verified finite obstruction sequence;
+the terminal timeout and the full endpoint remain `UNKNOWN`.

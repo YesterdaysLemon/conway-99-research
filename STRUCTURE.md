@@ -3270,6 +3270,33 @@ refuted. Aggregate rooted counts still forget which overlapping subsets must
 be realized simultaneously; positive-semidefinite flag moments or explicit
 cross-block compatibility are the next missing layer.
 
+### Wave 45 rooted flag moments (`VERIFIED_SCOPED`)
+
+For each labelled root embedding, let `z` be the vector of induced
+four-vertex rooted-flag counts. Every graph supplies the Gram matrix
+
+```text
+M_flag = sum z z^T,
+```
+
+so every integer vector `c` obeys `c^T M_flag c>=0`. Retaining the complete
+overlap of two flags yields exact matrices of sizes `17`, `16`, and `19` for
+a vertex, ordered edge, and ordered nonedge root. Their entries use unrooted
+induced counts through orders seven, six, and six respectively.
+
+A clean-room enumeration matches all 484 class-matrix records and 16,660
+nonzero ordered coefficients. The Petersen and Clebsch controls agree by
+direct outer products. The vertex-root matrix has six exact negative
+directions on each of the Wave 43 and Wave 44 aggregate witnesses, refuting
+those two count vectors. The pair-root matrices are PSD of rank one on both
+because lower-order counts are already fixed.
+
+The immutable v1 continuation contains 17 reconstructed cuts and 15 exact
+intermediate witnesses. Each witness satisfies the original 170 rows and all
+prior cuts; each new cut rejects its source. The following solver call timed
+out, so this is a verified finite obstruction sequence, not an endpoint
+exclusion or a strict upper bound.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

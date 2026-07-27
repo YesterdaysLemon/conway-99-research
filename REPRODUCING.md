@@ -2924,6 +2924,29 @@ Replay the exact rooted witness and its clean-room verifier:
 The exact witness, not the discovery solver, is the certificate. The
 historical HiGHS `infeasible` status is a retained false negative.
 
+## Wave 45 rooted flag moments
+
+Replay the independent finite-moment construction and immutable checkpoint:
+
+```powershell
+.\.venv\Scripts\python.exe `
+  attempts\wave45-flag-moment\replay-v1.py
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\independent_verify.py --verify `
+  verification\wave45-flag-moment\independent-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\compare_discovery.py --verify `
+  verification\wave45-flag-moment\comparison-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave45-flag-moment -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\manifest_check.py
+```
+
+Only the no-clobber `checkpoint-v1-*` discovery files are in verification
+scope. Mutable cutting-plane files and later live runs are not checkpoint-v1
+evidence. A terminal `unknown` or timeout is not an infeasibility certificate.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

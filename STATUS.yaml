@@ -2869,4 +2869,49 @@ forty_fourth_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 44 proves exact feasibility only of an aggregate rooted order-seven count relaxation. The witness is not a graph or endpoint evidence, overlap compatibility is absent, the general upper bound remains 4158, and Conway-99 remains UNKNOWN."
+forty_fifth_research_wave:
+  public_base_commit: "4636864ffc6310acaa71a41fff239a24e28404fc"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  flag_moment_status: VERIFIED_SCOPED_INCOMPLETE
+  vertex_root_matrix_size: 17
+  ordered_edge_root_matrix_size: 16
+  ordered_nonedge_root_matrix_size: 19
+  unrooted_class_counts_by_order: "4:9,5:21,6:62,7:208"
+  class_matrix_records_compared: 484
+  nonzero_ordered_coefficients_compared: 16660
+  explicit_control_graphs: "Petersen,Clebsch"
+  stored_witnesses_refuted: "wave43,wave44"
+  exact_negative_directions_replayed: 12
+  immutable_checkpoint: "attempts/wave45-flag-moment/checkpoint-v1-seed0-17cuts-15witnesses.json"
+  immutable_checkpoint_sha256: "96a50f9add4b12b2c86587da29ade8b9da34f88a7b7617c048ffb7139c12b64b"
+  immutable_checkpoint_cuts: 17
+  immutable_checkpoint_witnesses: 15
+  immutable_checkpoint_terminal_status: QF_LIA_UNKNOWN_TIMEOUT
+  discovery_replay: "attempts/wave45-flag-moment/replay-v1-results.json"
+  discovery_replay_sha256: "39b4ca9bb457693e0744a9a78a9051e8f2c5efb0d251e97097a34590e1508094"
+  discovery_manifest: "attempts/wave45-flag-moment/package-manifest-v1.sha256"
+  discovery_manifest_sha256: "57f184e5df79ada19f0f08ea6eb9c6c1040517172a0f5e1e6878d09c8d0dd658"
+  discovery_manifest_entries: 9
+  independent_result: "verification/wave45-flag-moment/independent-results.json"
+  independent_result_sha256: "8d9a004392e3f642c0aacf272a33f7cce2bc21254e79fe4123bec5a065ae0bac"
+  comparison: "verification/wave45-flag-moment/comparison-results.json"
+  comparison_sha256: "936fca299c5c0cfb6fd226e0542b07bf744877eab6366a6e840895888cf3daf1"
+  verifier_manifest: "verification/wave45-flag-moment/package-manifest.sha256"
+  verifier_manifest_sha256: "d6e4d8b0b549318cd5d109718cff0bc94eb615956e7e3c5ade7d1e0362a10bf0"
+  verifier_tests: 15
+  public_checkpoint: "logs/2026-07-27-wave45-public-checkpoint.json"
+  public_checkpoint_sha256: "f371b0a1e8f4fdc1d0241cf73c3068bda7a0967ab723f1bc0fee3bd33e6c6518"
+  integration_audit: "verification/2026-07-27-wave45-integration-audit.md"
+  integration_audit_sha256: "af107d2b44c9e23e5beb3e53825dda6d8f2ae4a12848b6c12930b9f4c6b14c47"
+  orchestrator_decision: "verification/2026-07-27-wave45-orchestrator.md"
+  orchestrator_decision_sha256: "455cfa78f4017577cb2d1d2af950cdf0e640a2ee4a94520626d039cc2fddd3aa"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 45 verifies exact rooted-flag moment coefficients and a finite sequence of witness-separating cuts. It refutes only two stored aggregate vectors and 15 successive replacements; the full PSD-constrained region, endpoint, strict upper bound, Conway-99, novelty, and priority remain UNKNOWN."
 last_updated: 2026-07-27

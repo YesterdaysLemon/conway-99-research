@@ -196,3 +196,12 @@ Wave 44 report:
 - `2026-07-27-wave44-rooted-flags.md`: exact aggregate rooted-count witness
   and retained false-HiGHS chronology. Read with the independent Wave 44
   verifier; neither artifact is a graph or endpoint result.
+
+Wave 45 report:
+
+- `2026-07-27-wave45-flag-moment.md`: discovery-side finite Gram
+  construction, immutable v1 handoff, and exact 17-witness rejection ledger.
+- `2026-07-27-wave45-flag-moment-verifier.md`: clean-room reconstruction of
+  the finite rooted Gram matrices, exact refutation of two stored aggregate
+  witnesses, and replay of immutable checkpoint v1. The terminal timeout is
+  retained as `UNKNOWN`.
