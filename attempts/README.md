@@ -380,3 +380,19 @@ Independent verification accepts each finite scope, with the Wave 61 wording
 correction and Wave 62 tautology-count clarification. Integer and higher-order
 compatibility, a compatible `A_Y`, endpoint exclusion, and Conway-99 remain
 `UNKNOWN`.
+
+## Waves 64--65: rooted transition design and hypergraph algebra
+
+- `wave64-rooted-transition-design/` identifies the 84 residual labels with
+  the edges of `K14-7K2`, enumerates 35,560 matching blocks and 840 allowed
+  transitions, stores a 140-block relaxation witness, and gives an exact
+  rational point of the stronger linear master. Its complete binary
+  codegree closure is specified but unsolved.
+- `wave65-rooted-hypergraph-algebra/` studies `B=T+D` through the incidence
+  factorization `D+5I=ZZ^T`, the 140-vertex block graph, trace and four-cycle
+  identities, scalar spectral coupling, averaged PSD lanes, and an exact
+  local positive control that fails the target moments.
+
+Independent verification accepts both finite scopes. Neither package supplies
+an integral strong witness, endpoint exclusion, graph, or strict upper bound
+below 4158.

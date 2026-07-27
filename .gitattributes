@@ -79,3 +79,7 @@ attempts/wave58-cross-incidence-rank/*.json -text -diff
 verification/wave58-cross-incidence-rank/*.json -text -diff
 attempts/wave59-incidence-spectral-excess/*.json -text -diff
 verification/wave59-incidence-spectral-excess/*.json -text -diff
+
+# Wave 64 exact outputs are checksum-pinned raw Windows byte streams.
+attempts/wave64-rooted-transition-design/*.json -text -diff
+attempts/wave64-rooted-transition-design/*.md whitespace=-blank-at-eof

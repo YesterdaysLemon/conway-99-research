@@ -30,8 +30,8 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-27-wave63-integration-audit.md"
+latest_public_checkpoint: "logs/2026-07-27-wave65-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-27-wave65-integration-audit.md"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3036,4 +3036,43 @@ waves_60_63_checkpoint:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Waves 60--63 verify exact component, finite-field, one-root invariant-SDP, and rational-cone boundaries with narrow Wave 61 and Wave 62 documentation corrections. They supply no integer incidence design, compatible A_Y, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_64_65_checkpoint:
+  public_base_commit: "6dba25f93ba8b0375a6d7057eac4c83e58934fb4"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
+  wave64_status: VERIFIED_SCOPED
+  wave64_residual_labels: 84
+  wave64_candidate_blocks: 35560
+  wave64_allowed_transitions: 840
+  wave64_local_transition_matchings_per_base: 6040
+  wave64_transition_triangle_cuts: 280
+  wave64_block_witness_blocks: 140
+  wave64_full_linear_rational_control: VERIFIED
+  wave64_integral_strong_witness: UNKNOWN
+  wave64_discovery_manifest_sha256: "b3ab03ee16ea80fbda0e4279090a48174797722843e17b890c2aba509b01ff74"
+  wave64_verifier_manifest_sha256: "dd138310fcaa4e3e2d2989281f9c7487b498ad1d15901403b32919d7018bb905"
+  wave65_status: VERIFIED_SCOPED
+  wave65_block_graph_minus3_multiplicity_floor: 56
+  wave65_block_graph_c4_range: "1260..2331"
+  wave65_scalar_w_range: "64/5..16"
+  wave65_averaged_psd_lanes: 258
+  wave65_averaged_psd_minimum: "12/5"
+  wave65_control_moment_deltas: "0,0,0,+5496,-12020,+239772"
+  wave65_discovery_manifest_sha256: "085b2ecae05f7268080b49e2bff8e719d1d693072f4dd4d32a288e9de6b0a02f"
+  wave65_verifier_manifest_sha256: "ed910ace571fee408d5560cf943f125e4c04fe7a9f5fe726e7c7a288f6edf4b5"
+  public_checkpoint: "logs/2026-07-27-wave65-public-checkpoint.json"
+  public_checkpoint_sha256: "227ba00e6e1c669126a6bab132f982d85f106335bb000174c7a99995bd2f8d89"
+  integration_audit: "verification/2026-07-27-wave65-integration-audit.md"
+  integration_audit_sha256: "d67ffdc43c01455fa99bd7c48e3d90dbb10e2442951c1e0be3fc79dc66498d68"
+  orchestrator_decision: "verification/2026-07-27-wave65-orchestrator.md"
+  orchestrator_decision_sha256: "a4e2d1da5a0d506b9825542fdee6148e1316e5448ed5fd0b7f9910d25a042529"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 64--65 verify the exact rooted transition/design formulation, finite block and transition censuses, rational linear control, and hypergraph-algebra restrictions. They supply no integral strong witness, full residual codegree solution, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
 last_updated: 2026-07-27

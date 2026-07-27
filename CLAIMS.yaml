@@ -2681,6 +2681,26 @@ claims:
       - "verification/wave63-c3-integer-cone/package-manifest.sha256"
     limitations: "Only 74 of 1,140 triples are covered. Rational coefficients are not zero-one incidence designs; the bounded binary MILP record is UNKNOWN."
 
+  - id: C-WAVE64-ROOTED-TRANSITION-DESIGN-001
+    statement: "At the conditional prism-free endpoint, the 84 rooted residual labels form the edges of K14-7K2; residual edges decompose into fourteen local transition matchings and 140 three-edge-matching blocks, with the verified finite censuses and exact residual-codegree closure formula recorded in Wave 64."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ROOTED_TRANSITION_DESIGN
+    evidence:
+      - "verification/wave64-rooted-transition-design/independent-result.json"
+      - "verification/wave64-rooted-transition-design/verification-report.md"
+      - "verification/wave64-rooted-transition-design/package-manifest.sha256"
+    limitations: "The explicit integer witness satisfies only the block master, and the stronger master has only a rational control. No integral transition/design, full residual graph, endpoint exclusion, or global prism-free certificate is supplied."
+
+  - id: C-WAVE65-HYPERGRAPH-ALGEBRA-001
+    statement: "For the conditional rooted endpoint hypergraph, D+5I=ZZ^T and R=Z^TZ-3I force lambda_min(R)>=-3, mult_R(-3)>=56, c4(R)=1260+c4(D), and 1260<=c4(R)<=2331; the stated scalar coupling and all 258 averaged PSD lanes are exactly feasible."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ROOTED_HYPERGRAPH_ALGEBRA
+    evidence:
+      - "verification/wave65-rooted-hypergraph-algebra/independent-results.json"
+      - "verification/wave65-rooted-hypergraph-algebra/audit.md"
+      - "verification/wave65-rooted-hypergraph-algebra/package-manifest.sha256"
+    limitations: "The exact local control fails target moments in degrees four through six and is not a rooted or target object. Entrywise noncommutative placement of Z and T relative to Q, endpoint existence, and novelty remain UNKNOWN."
+
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
     label: UNKNOWN

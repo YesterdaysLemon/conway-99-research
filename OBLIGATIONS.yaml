@@ -2376,3 +2376,41 @@ obligations:
       All 74 tested rational pair polytopes are feasible with coefficients in
       [0,1], while no integer design, compatible A_Y, endpoint graph, or
       impossibility certificate is known.
+
+  - id: O-WAVE65-ALTERNATIVE-SPACE-CHECKPOINT
+    requirement: >-
+      Independently reconstruct the rooted K14-7K2 transition/design space,
+      all finite censuses, both exact relaxation controls, the complete
+      residual-codegree closure formula, the hypergraph Gram and trace
+      identities, every scalar coupling, all 258 averaged PSD lanes, and the
+      explicit local positive control before publication.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-27-wave65-integration-audit.md"
+      - "verification/2026-07-27-wave65-orchestrator.md"
+      - "verification/wave64-rooted-transition-design/package-manifest.sha256"
+      - "verification/wave65-rooted-hypergraph-algebra/package-manifest.sha256"
+    note: >-
+      Both finite packages pass independent verification. The hidden-file
+      preinspection limitation in Wave 65 is public and the later manifest
+      audit covers it. No endpoint result follows.
+
+  - id: O-WAVE65-NONCOMMUTATIVE-CODEGREE-COMPATIBILITY
+    requirement: >-
+      Construct binary transition and block variables satisfying every
+      residual codegree equation, or produce an independently checked
+      impossibility certificate for the complete unrestricted rooted domain.
+      The proof must retain the entrywise placement of Z and T relative to Q
+      and, for the prism-free endpoint, separately enforce prisms away from
+      the chosen root.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave64-rooted-transition-design/verification-report.md"
+      - "verification/wave65-rooted-hypergraph-algebra/audit.md"
+      - "verification/2026-07-27-wave65-orchestrator.md"
+    note: >-
+      Block-only integrality, rational linear feasibility, scalar spectra,
+      averaged PSD feasibility, local controls, and bounded solver nonhits do
+      not discharge this obligation.

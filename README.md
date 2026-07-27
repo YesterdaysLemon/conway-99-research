@@ -138,8 +138,18 @@ and the normalized search problem.
   120 are indefinite and eight Wave 45 matrices are positive semidefinite.
   The corrected 177-cut rational relaxation remains exactly feasible, the
   formal ordinary enumerator remains feasible, and the 120-second Exact run
-  returns `UNKNOWN`. Complete endpoint proof coverage therefore remains
-  `0/33`; the rigorous interval is still `708<=n3<=4158`.
+   returns `UNKNOWN`. Complete endpoint proof coverage therefore remains
+   `0/33`; the rigorous interval is still `708<=n3<=4158`.
+  Waves 56--63 then recast the endpoint through percolation, star
+  complements, incidence geometry, finite fields, one-root invariant SDP, and
+  exact rational pair cones. These independently verified spaces sharpen the
+  finite boundary but leave integer compatibility open. Waves 64--65 now give
+  an exact rooted transition-plus-hypergraph formulation on the 84 edges of
+  `K14-7K2`. The full linear master has an exact rational feasible point, and
+  every scalar or scaffold-averaged hypergraph test survives. The first
+  missing layer is the entrywise, noncommutative compatibility of the
+  transition graph, block incidence matrix, and fixed rooted line graph.
+  No integral strong witness or endpoint contradiction is known.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2951,6 +2961,96 @@ See the [Wave 60 verifier](verification/wave60-c3-incidence-design/audit.md),
 [integration audit](verification/2026-07-27-wave63-integration-audit.md),
 [orchestrator decision](verification/2026-07-27-wave63-orchestrator.md), and
 [machine-readable checkpoint](logs/2026-07-27-wave63-public-checkpoint.json).
+
+Waves 64--65 shift the rooted endpoint into two coupled spaces that retain
+more structure than the previous pair-coordinate and averaged-SDP lanes.
+
+Fix a root and label the 84 residual vertices by the edges of
+
+```text
+H = K14 - 7K2 = K_{2,2,2,2,2,2,2}.
+```
+
+Wave 64 proves that the residual edges split into fourteen local transition
+matchings and 140 three-edge matching blocks of `H`. Independent enumeration
+gives
+
+```text
+candidate blocks:                 35,560
+allowed transition variables:       840
+local transition matchings/base:   6,040
+transition-triangle cuts:            280.
+```
+
+An explicit 140-block point satisfies the block-only integer master, including
+support occupancy `(32,96,12)`. It does not extend to a known transition
+system. More importantly, the stronger linear master has an exact rational
+feasible point:
+
+```text
+z = 1/120 on block type (0,0,3),
+z = 1/240 on block type (0,1,2),
+t = 1/10  on every allowed transition.
+```
+
+All 1,176 endpoint profiles and every other declared linear row hold exactly.
+Thus an ordinary linear Farkas separation cannot close this formulation. For
+binary variables the missing exact closure is
+
+```text
+sum_{r != p,q} x_pr*x_qr = 2 - Q_pq - x_pq,
+Q_pq = |label(p) intersect label(q)|.
+```
+
+Those equations complete the strongly regular graph conditions relative to
+the rooted scaffold. They do not independently enforce prism-freeness away
+from the selected root.
+
+Wave 65 writes the residual graph as `B=T+D`, with `T` the transition
+2-factor and `D` the point graph of the selected 3-uniform linear
+five-regular hypergraph. If `Z` is its 84-by-140 incidence matrix and
+`R=Z^T Z-3I`, clean-room verification proves
+
+```text
+D+5I = Z Z^T,
+R is 12-regular with local graph 3K4,
+lambda_min(R) >= -3,
+mult_R(-3) >= 56,
+c4(R) = 1260 + c4(D),
+1260 <= c4(R) <= 2331.
+```
+
+The scalar coupling also forces
+
+```text
+64/5 <= tr(T E_3) <= 16,
+5376 <= tr(B^3 T) <= 5712,
+tr(B^4 T) + 3 tr(B^3 T) = 52416.
+```
+
+All 258 scaffold-averaged PSD lanes remain nonnegative. An exact local
+positive control satisfies the hypergraph and local-graph layer but misses
+the target fourth-, fifth-, and sixth-degree moments by
+`+5496,-12020,+239772`. This locates the first failure beyond scalar and
+averaged data: the noncommutative placement of `Z` and `T` relative to the
+fixed rooted line graph `Q`.
+
+```text
+Wave 64 rooted transition/design formulation:     VERIFIED SCOPED
+Wave 64 linear relaxation feasibility:             VERIFIED SCOPED
+Wave 65 hypergraph/spectral restrictions:          VERIFIED SCOPED
+integral strong transition/design witness:         UNKNOWN
+entrywise residual codegree compatibility:         UNKNOWN
+upper bound below 4158:                            NOT PROVED
+rigorous interval:                                 708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:                     UNKNOWN
+```
+
+See the [Wave 64 verifier](verification/wave64-rooted-transition-design/verification-report.md),
+[Wave 65 verifier](verification/wave65-rooted-hypergraph-algebra/audit.md),
+[integration audit](verification/2026-07-27-wave65-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave65-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave65-public-checkpoint.json).
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and

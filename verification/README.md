@@ -1497,3 +1497,22 @@ The [integration audit](2026-07-27-wave63-integration-audit.md) and
 unresolved integer/higher-order boundary. No binary incidence design,
 compatible `A_Y`, endpoint exclusion, strict upper bound below 4158, or
 Conway-99 resolution follows.
+
+## Waves 64--65 rooted transition and hypergraph verification
+
+- `wave64-rooted-transition-design/` independently reconstructs all 84
+  labels, 35,560 candidate blocks, 840 transitions, 6,040 local matchings,
+  280 triangle cuts, the explicit 140-block witness, the rational full-linear
+  control, and the exact residual-codegree closure. Eight hostile and
+  deterministic tests pass.
+- `wave65-rooted-hypergraph-algebra/` independently reconstructs
+  `D+5I=ZZ^T`, the block graph and its local `3K4` structure, spectral and
+  four-cycle restrictions, target and transition moments, scalar coupling,
+  all 258 averaged PSD lanes, and the exact local control with moment deltas
+  `0,0,0,+5496,-12020,+239772`. Seven clean-room tests pass.
+
+The [integration audit](2026-07-27-wave65-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave65-orchestrator.md) promote only the
+scoped finite results. Integral transition/design compatibility, full
+codegrees, the global prism-free endpoint, a strict upper bound below 4158,
+and Conway-99 remain unresolved.

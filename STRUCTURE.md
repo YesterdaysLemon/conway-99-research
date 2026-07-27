@@ -3683,3 +3683,97 @@ known. The rigorous interval remains
 ```text
 708 <= n3 <= 4158.
 ```
+
+## Waves 64--65: rooted transition design and hypergraph algebra
+
+All statements here are conditional on the prism-free endpoint `n3=4158`.
+Fix a root. Its 14 neighbors form seven mate pairs, and the 84 residual
+vertices are canonically the edges of
+
+```text
+H=K14-7K2=K_{2,2,2,2,2,2,2}.
+```
+
+Residual edges between intersecting `H`-labels form a perfect matching on the
+twelve labels through each base point. After excluding the six
+prism-forbidden pairs, each base point has exactly 6,040 possible transition
+matchings, drawn from 60 allowed transitions. Globally there are 840
+transition variables.
+
+Every other selected residual edge joins disjoint labels and lies in a unique
+residual triangle. Thus those 420 edges form 140 blocks, each a three-edge
+matching of `H`, and every `H`-edge lies in five blocks. The 35,560 candidate
+blocks have exact five-type census
+
+```text
+(0,0,3): 6720,  (0,1,2): 20160,  (0,2,1): 6720,
+(0,3,0): 280,   (1,0,2): 1680.
+```
+
+For each root mate pair, the selected-block occupancy is forced to
+
+```text
+(n0,n1,n2)=(32,96,12).
+```
+
+An explicit 140-block witness satisfies the block-only master. The stronger
+linear transition/block master remains rationally feasible under the exact
+scaffold-invariant assignment
+
+```text
+z_(0,0,3)=1/120, z_(0,1,2)=1/240, t=1/10.
+```
+
+This checks every one of the 1,176 endpoint-profile rows and proves that this
+linear relaxation has no Farkas contradiction.
+
+For binary variables, put `Q_pq=|label(p) intersect label(q)|`. The exact
+remaining residual condition is
+
+```text
+sum_{r != p,q} x_pr*x_qr = 2-Q_pq-x_pq.
+```
+
+Together with the rooted scaffold and pair simplicity, these quadratic rows
+complete the strongly regular graph equations. They do not separately enforce
+global prism-freeness away from the root.
+
+For the algebraic orientation, write `B=T+D`, where `T` is the transition
+2-factor and `D` is the point graph of the selected block hypergraph. With
+84-by-140 incidence matrix `Z` and block graph `R=Z^T Z-3I`,
+
+```text
+D+5I=ZZ^T,
+lambda_min(R)>=-3,
+mult_R(-3)>=56,
+c4(R)=1260+c4(D),
+1260<=c4(R)<=2331.
+```
+
+The target spectral projectors give
+
+```text
+64/5<=tr(T E3)<=16,
+5376<=tr(B^3 T)<=5712,
+tr(B^4 T)+3tr(B^3 T)=52416.
+```
+
+All 258 scaffold-averaged PSD lanes survive. A separately checked local
+control satisfies the unlabelled hypergraph and local-graph conditions but
+has target-moment errors
+
+```text
+degree 4: +5496, degree 5: -12020, degree 6: +239772.
+```
+
+The first missing invariant is therefore the entrywise, noncommutative
+placement of `Z` and `T` relative to the fixed line graph `Q`, not another
+scalar or one-root averaged moment.
+
+```text
+transition/design and hypergraph finite claims: VERIFIED SCOPED
+integral strong witness:                       UNKNOWN
+full residual codegree compatibility:          UNKNOWN
+strict upper bound below 4158:                 NOT PROVED
+Conway-99 / novelty:                           UNKNOWN
+```
