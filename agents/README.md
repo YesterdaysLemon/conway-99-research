@@ -243,3 +243,19 @@ Wave 49 reports:
 - `2026-07-27-wave49-five-root-moment-verifier.md`: clean-room reconstruction
   of all 2,520 relabellings, 42 controls, and 357 stored-witness
   refutations; endpoint status remains `UNKNOWN`.
+
+Wave 51 reports:
+
+- `2026-07-27-wave51-global-triple-tensor.md`: discovery of an exact positive
+  aggregate triple-count control.
+- `2026-07-27-wave51-global-triple-tensor-verifier.md`: independent tensor,
+  balance, hostile-mutation, and association-failure replay.
+- `2026-07-27-wave51-seidel-smith.md`: candidate conditional Smith-form and
+  modular-representation derivation.
+- `2026-07-27-wave51-seidel-smith-verifier.md`: independent proof of the
+  corrected Smith/Jordan theorem and explicit refutation of the discovery
+  spectrum.
+- `2026-07-27-wave51-rankone-cut-relaxation.md`: source-side balanced 174-cut
+  probe; its self-verification is not accepted.
+- `2026-07-27-wave51-rankone-cut-relaxation-verifier.md`: clean-room exact
+  replay that promotes only the fixed-bundle rational-feasibility result.

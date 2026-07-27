@@ -1389,3 +1389,22 @@ the terminal timeout and the full endpoint remain `UNKNOWN`.
 Every accepted claim is finite and scoped. Combined real/integer feasibility,
 endpoint exclusion, a strict upper bound below 4158, graph construction,
 novelty, priority, and Conway-99 remain `UNKNOWN` or `NOT PROVED`.
+
+## Wave 51 alternative-space verification
+
+- `wave51-global-triple-tensor/` independently reconstructs the symmetric
+  aggregate tensor, all five integral slices, 125 balance equations, and
+  exactly 100 of 625 association-algebra failures.
+- `wave51-seidel-smith/` verifies the corrected conditional Smith form,
+  mod-seven Jordan type, and `r>=14` symmetric-square bound. It explicitly
+  refutes the discovery spectrum's reversed nonprincipal multiplicities.
+- `wave51-rankone-cut-relaxation/` is the source-side exact 174-cut probe. Its
+  self-assigned verified status is procedurally rejected and treated as
+  candidate chronology.
+- `wave51-rankone-cut-relaxation-independent/` cleanly reconstructs all 170
+  equations, 174 cuts, 5,691 Wave 49 tensor evaluations, and the exact
+  rational witness. It verifies feasibility of this fixed bundle only.
+
+The three lanes are null results for endpoint exclusion. Pair-specific
+quadruple compatibility, the full PSD region, integer feasibility, a graph,
+and any strict upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.

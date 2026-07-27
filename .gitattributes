@@ -45,3 +45,11 @@ verification/wave48-conic-moment/*.json -text -diff
 verification/wave48-conic-moment/reconstruct.stdout.log -text -diff
 attempts/wave49-five-root-moment/*.json -text -diff
 verification/wave49-five-root-moment/*.json -text -diff
+
+# Wave 51 exact outputs are checksum-pinned byte streams.
+attempts/wave51-global-triple-tensor/*.json -text -diff
+verification/wave51-global-triple-tensor/*.json -text -diff
+attempts/wave51-seidel-smith/*.json -text -diff
+verification/wave51-seidel-smith/*.json -text -diff
+verification/wave51-rankone-cut-relaxation/*.json -text -diff
+verification/wave51-rankone-cut-relaxation-independent/*.json -text -diff

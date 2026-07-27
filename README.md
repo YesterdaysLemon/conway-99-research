@@ -2630,6 +2630,66 @@ The publication boundary is frozen in the
 [orchestrator decision](verification/2026-07-27-wave49-orchestrator.md), and
 [machine-readable checkpoint](logs/2026-07-27-wave49-public-checkpoint.json).
 
+## Wave 51 alternative-space triage
+
+Wave 51 moves the endpoint into three structurally different exact spaces.
+All three produce useful necessary conditions or positive controls, but none
+excludes `n3=4158`.
+
+First, the triangle-intersection graph has five pair relations
+`I,K,D,C,B` with valencies `(1,18,32,144,36)`. A fully symmetric aggregate
+triple tensor satisfies every frozen margin and matrix-product identity.
+Independent replay verifies all 125 balance equations. The five displayed
+average tables fail exactly 100 of 625 association-algebra associativity
+checks, so they are not an association scheme or a graph construction. This
+is a positive aggregate control that identifies pair-to-pair variation and
+quadruple consistency as missing information.
+
+Second, the integral Seidel matrix has the verified conditional Smith form
+
+```text
+SNF(S) = diag(1^r, 7^(99-2r), 49^(r-1), 490),
+r = rank_F7(S).
+```
+
+The verifier caught and retained a discovery error: the correct rational
+spectrum is `-70^1,+7^54,-7^44`, not the discovery file's reversed
+nonprincipal multiplicities. The correction leaves the determinant, Smith
+form, mod-seven Jordan type, and symmetric-square bound unchanged. That bound
+is only `r>=14`, weaker than the verified endpoint floor 28, and every
+`r=28,...,44` survives.
+
+Third, an exact rational witness satisfies a frozen balanced system of all
+170 Wave 44 equations and 174 selected rank-one cuts from Waves 45, 47, and
+49. A clean-room verifier reconstructs all 174 cuts, 5,691 Wave 49 tensor
+evaluations, active rank 209, support 136, and `h11/4=4158`. This refutes a
+Farkas contradiction from that fixed cut bundle only. The source package's
+self-assigned verified status is rejected procedurally; it is treated as a
+candidate until the separate verifier's replay.
+
+```text
+symmetric aggregate triple tensor:       FEASIBLE (VERIFIED SCOPED)
+average tables form association scheme:  REFUTED
+conditional Seidel Smith form:            VERIFIED SCOPED
+Seidel symmetric-square rank bound:       r >= 14 (WEAKER THAN KNOWN)
+balanced 174-cut rational relaxation:     FEASIBLE (VERIFIED SCOPED)
+fixed-bundle Farkas contradiction:        REFUTED
+pair-specific/quadruple compatibility:    UNKNOWN
+full PSD or integer feasibility:          UNKNOWN
+endpoint proof coverage:                  0/33
+upper bound below 4158:                   NOT PROVED
+rigorous interval:                        708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:            UNKNOWN
+```
+
+See the [triple-tensor verifier](verification/wave51-global-triple-tensor/README.md),
+[Seidel-Smith verifier](verification/wave51-seidel-smith/README.md), and
+[independent 174-cut verifier](verification/wave51-rankone-cut-relaxation-independent/README.md).
+The corrections and status boundary are frozen in the
+[Wave 51 integration audit](verification/2026-07-27-wave51-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave51-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave51-public-checkpoint.json).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

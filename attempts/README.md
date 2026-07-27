@@ -287,3 +287,17 @@ remains `UNKNOWN`.
 These lanes strengthen the finite relaxations and preserve useful failure
 information. None solves the complete PSD-constrained count region, closes an
 endpoint SAT branch, constructs a graph, or proves `n3<4158`.
+
+## Wave 51: alternative algebra and aggregate controls
+
+- `wave51-global-triple-tensor/` gives an explicit nonnegative symmetric
+  triple-count tensor for the five triangle-pair relations. Independent replay
+  verifies the aggregate control and refutes its interpretation as an
+  association scheme.
+- `wave51-seidel-smith/` derives a candidate conditional Smith normal form
+  and a symmetric-square rank bound. Its independent verifier corrects the
+  discovery spectrum and verifies the unaffected scoped theorem.
+
+Both discovery packages are necessary-condition or relaxation work. Neither
+constructs a graph, supplies pair-specific quadruple compatibility, excludes
+the endpoint, or improves `n3<=4158`.
