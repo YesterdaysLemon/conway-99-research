@@ -2270,3 +2270,68 @@ obligations:
       The selected shard and all 33 complete cases remain open. Solver
       UNKNOWN, local controls, rational aggregate witnesses, and a formal
       weight enumerator do not discharge this obligation.
+
+  - id: O-WAVE58-ALTERNATIVE-SPACE-CHECKPOINT
+    requirement: >-
+      Independently verify the nonedge closure specialization, star-complement
+      projector core and prior-work chronology, both cross-incidence Gram
+      identities, the normalized m=4 and m=6 component censuses, and every
+      exact-set-versus-bound qualifier before publication.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-27-wave58-integration-audit.md"
+      - "verification/2026-07-27-wave58-orchestrator.md"
+      - "verification/wave56-percolation-closure/package-manifest.sha256"
+      - "verification/wave57-star-complement/package-manifest.sha256"
+      - "verification/wave58-cross-incidence-rank/package-manifest.sha256"
+    note: >-
+      The finite conditional claims pass with a material Wave 57 correction.
+      All three component/multiplicity rows retain separate controls.
+
+  - id: O-WAVE58-SIMULTANEOUS-INCIDENCE
+    requirement: >-
+      Construct a complete 36-by-60 binary cross-incidence matrix B and a
+      compatible 60-vertex 8-regular A_Y, or produce an independently checked
+      impossibility certificate covering every surviving component lane.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave58-cross-incidence-rank/audit.md"
+      - "verification/2026-07-27-wave58-orchestrator.md"
+    note: >-
+      Local component graphs, scalar spectra, a bounded solver run, or a
+      restricted one-quotient replay do not discharge this obligation.
+
+  - id: O-WAVE59-INCIDENCE-SPECTRAL-CHECKPOINT
+    requirement: >-
+      Independently reconstruct the point-triangle incidence and triangle
+      graph spectra, rooted layers, spectral-excess hypotheses, predistance
+      defect, pair-neighborhood Gram matrix, Ihara short-cycle counts, and
+      cage comparison without opening or executing discovery code.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave59-incidence-spectral-excess/preinspection-freeze.sha256"
+      - "verification/wave59-incidence-spectral-excess/independent-result.json"
+      - "verification/wave59-incidence-spectral-excess/audit.md"
+      - "verification/wave59-incidence-spectral-excess/package-manifest.sha256"
+    note: >-
+      Fourteen verifier tests pass with zero mathematical mismatches.
+      Metadata-only author and page-location corrections do not affect the
+      result. Non-distance-regularity supplies no endpoint contradiction.
+
+  - id: O-WAVE59-SPECTRAL-TO-EXCLUSION
+    requirement: >-
+      Convert the verified incidence-spectrum, predistance defect, Gram, or
+      cycle constraints into an exact incompatibility with every surviving
+      endpoint lane, or construct a compatible object.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave59-incidence-spectral-excess/audit.md"
+      - "verification/2026-07-27-wave59-orchestrator.md"
+    note: >-
+      All current spectral and cycle constraints are exact but consistent.
+      The endpoint, strict upper bound below 4158, and Conway-99 remain
+      UNKNOWN.

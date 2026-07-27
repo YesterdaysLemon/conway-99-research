@@ -2813,6 +2813,86 @@ See the [proof-cover verifier audit](verification/wave53-proof-cover/audit.md),
 [orchestrator decision](verification/2026-07-27-wave55-orchestrator.md), and
 [machine-readable checkpoint](logs/2026-07-27-wave55-public-checkpoint.json).
 
+## Waves 56--59 closure, star complements, and incidence geometry
+
+Wave 56 moves the endpoint into bootstrap-percolation space. A nonedge in a
+hypothetical target either percolates to all 99 vertices or has the unique
+proper closure `K3 square K3`. With `P` triangular prisms, `H` such closures,
+and `R,S` the nonpercolating and percolating nonedges, independent replay
+verifies
+
+```text
+n3+3P=4158,  R=18H,  6H<=P,  R<=3P,  S>=n3.
+```
+
+Thus every one of the 4,158 nonedges percolates at the conditional
+prism-free endpoint. The first three synchronous waves reduce to 23 allowed
+next-wave masks and 35 exact local multicover profiles. Those profiles are
+necessary local states, not graph completions.
+
+Wave 57 compresses the fixed-triangle problem through spectral projectors and
+star complements. Its core calculation is valid, but the verifier finds a
+material project-chronology correction: the discovery's 18 moment-feasible
+rows are not 18 live endpoint rows, and its `C4(X)<=89` ceiling is not active.
+Prior verified Wave 36 transfer and a cubic wedge count leave only
+
+```text
+(mult_Y(3),mult_Y(-4),kappa) =
+(18,8,1), (18,9,2), (18,10,3),
+
+C4(X) <= 27.
+```
+
+Wave 58 independently verifies that synthesis using the exact `36 x 60`
+cross-incidence Gram equations. Its normalized component censuses give
+
+```text
+m=4: 216 -> 50, C4 support {2,4,6};
+m=6: 162000 -> 34640, C4 support {0,1,2,3,4,5,6,7,9}.
+```
+
+The three-component `[4,4,4]` lane therefore has exact local total
+`C4(X)` set `{6,8,10,12,14,16,18}`. Separate local and scalar controls
+survive every remaining row. No simultaneous cross-incidence matrix `B` and
+compatible 8-regular `A_Y` has yet been constructed or excluded.
+
+Wave 59 moves the same conditional endpoint into point--triangle incidence
+geometry. The resulting bipartite graph has 99 point vertices, 231 triangle
+vertices, degrees `(7,3)`, girth eight, diameter six, and exact spectrum
+
+```text
+±sqrt(21)^1, ±sqrt(10)^54, ±sqrt(3)^44, 0^132.
+```
+
+Its 18-regular triangle graph has spectrum
+`18^1,7^54,0^44,(-3)^132`. Independent clean-room reconstruction verifies
+spectral excess 50 versus actual excess 32, the exact defect
+`p3(K)-A_D=(A_C-2A_B)/4`, a full-rank 231-by-231 pair-neighborhood Gram
+matrix, and exact short-cycle counts. These facts prove that the incidence
+graph is not distance-biregular and the triangle graph is not
+distance-regular; neither conclusion proves nonexistence.
+
+```text
+bootstrap closure and local profile census:       VERIFIED SCOPED
+star-complement/projector core:                    VERIFIED SCOPED
+Wave 57 18-row live-endpoint headline:             REFUTED
+Wave 58 component/rank synthesis:                  VERIFIED SCOPED
+Wave 59 incidence/spectral-excess package:         VERIFIED SCOPED
+surviving component/multiplicity rows:             3
+simultaneous B and compatible A_Y:                 UNKNOWN
+upper bound below 4158:                            NOT PROVED
+rigorous interval:                                 708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:                     UNKNOWN
+```
+
+See the [percolation verifier](verification/wave56-percolation-closure/README.md),
+[star-complement correction](verification/wave57-star-complement/audit.md),
+[cross-incidence verifier](verification/wave58-cross-incidence-rank/README.md),
+[incidence-spectrum verifier](verification/wave59-incidence-spectral-excess/README.md),
+[integration audit](verification/2026-07-27-wave59-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave59-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave59-public-checkpoint.json).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

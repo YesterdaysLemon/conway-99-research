@@ -2976,6 +2976,62 @@ python verification/check_srg.py candidates/conway-99.srg.json
 No such target certificate is currently claimed. `STATUS.yaml` remains the
 authoritative machine-readable status.
 
+## Waves 56--59 alternative-space replay
+
+Replay the closure discovery and independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave56-percolation-closure\percolation_closure.py --verify `
+  attempts\wave56-percolation-closure\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave56-percolation-closure -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave56-percolation-closure\independent_check.py `
+  --discovery attempts\wave56-percolation-closure\exact-results.json `
+  --verify-output verification\wave56-percolation-closure\independent-result.json
+```
+
+Replay the corrected star-complement and cross-incidence packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave57-star-complement\independent_check.py `
+  --verify verification\wave57-star-complement\independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave57-star-complement -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave58-cross-incidence-rank\exact_check.py `
+  --verify attempts\wave58-cross-incidence-rank\exact-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave58-cross-incidence-rank\independent_check.py `
+  --verify verification\wave58-cross-incidence-rank\independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave58-cross-incidence-rank -p "test_*.py" -v
+```
+
+Wave 57 must be read with its verifier correction. The replay proves no
+simultaneous `B,A_Y` system and no endpoint conclusion.
+
+Replay the incidence-spectrum discovery and independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave59-incidence-spectral-excess\incidence_spectral.py `
+  --verify attempts\wave59-incidence-spectral-excess\exact-result.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave59-incidence-spectral-excess -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave59-incidence-spectral-excess\independent_verifier.py `
+  --compare-discovery attempts\wave59-incidence-spectral-excess\exact-result.json `
+  --output verification\wave59-incidence-spectral-excess\independent-result.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave59-incidence-spectral-excess -p "test_*.py" -v
+```
+
+Wave 59 verifies conditional finite identities and non-distance-regularity.
+It proves neither endpoint nonexistence nor a strict upper bound.
+
 `requirements-search.txt` pins the prototyping API version, but it is not an
 archival proof lockfile. Before a proof-producing run, also pin the Python ABI,
 wheel hashes, proof-producing solver binary, and independent checker binaries,

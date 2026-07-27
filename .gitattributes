@@ -69,3 +69,13 @@ verification/wave53-exact-cut-loop/*.json -text -diff
 attempts/wave54-centered-enumerator/*.json -text -diff
 verification/wave54-centered-enumerator/*.json -text -diff
 attempts/wave55-branch15-remainder-search/*.json -text -diff
+
+# Waves 56--59 exact outputs are checksum-pinned byte streams.
+attempts/wave56-percolation-closure/*.json -text -diff
+verification/wave56-percolation-closure/*.json -text -diff
+attempts/wave57-star-complement/*.json -text -diff
+verification/wave57-star-complement/*.json -text -diff
+attempts/wave58-cross-incidence-rank/*.json -text -diff
+verification/wave58-cross-incidence-rank/*.json -text -diff
+attempts/wave59-incidence-spectral-excess/*.json -text -diff
+verification/wave59-incidence-spectral-excess/*.json -text -diff

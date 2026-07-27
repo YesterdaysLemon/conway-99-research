@@ -2601,6 +2601,46 @@ claims:
       - "attempts/wave55-branch15-remainder-search/package-manifest.sha256"
     limitations: "Exact returned UNKNOWN. Zero solutions and a nonterminal proof prefix prove no formula consequence."
 
+  - id: C-WAVE56-PERCOLATION-001
+    statement: "Conditional on a hypothetical srg(99,14,1,2), a nonedge either 2-percolates to all 99 vertices or has induced closure K3 square K3; at n3=4158 all 4158 nonedges percolate."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CLOSURE
+    evidence:
+      - "verification/wave56-percolation-closure/independent-result.json"
+      - "verification/wave56-percolation-closure/audit.md"
+      - "verification/wave56-percolation-closure/package-manifest.sha256"
+    limitations: "Percolation is not an endpoint contradiction or a linear-span theorem. The 35 early-wave profiles are local multicovers, not graph completions."
+
+  - id: C-WAVE57-STAR-CORRECTION-001
+    statement: "All 18 Wave 57 moment-feasible multiplicity pairs are live endpoint possibilities and C4(X)<=89 is the active project bound."
+    label: REFUTED
+    scope: CONDITIONAL_ENDPOINT_PARAMETER_LEDGER
+    evidence:
+      - "verification/wave57-star-complement/independent-results.json"
+      - "verification/wave57-star-complement/audit.md"
+      - "verification/wave57-star-complement/package-manifest.sha256"
+    limitations: "Prior verified Wave 36 leaves only (18,8),(18,9),(18,10), and cubic wedge counting gives C4(X)<=27. The Wave 57 projector and exact star-set minimum-hit arguments remain valid in their narrower scope."
+
+  - id: C-WAVE58-CROSS-INCIDENCE-001
+    statement: "At the conditional prism-free endpoint, fixed-triangle component balance and cross-incidence rank leave exactly (mult_Y(3),mult_Y(-4),kappa,rank(B)) equal to (18,8,1,34), (18,9,2,33), or (18,10,3,32), with C4(X)<=27."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CROSS_INCIDENCE
+    evidence:
+      - "verification/wave58-cross-incidence-rank/independent-results.json"
+      - "verification/wave58-cross-incidence-rank/audit.md"
+      - "verification/wave58-cross-incidence-rank/package-manifest.sha256"
+    limitations: "The rank identities are prior Wave 36 work combined with new exact component restrictions. No simultaneous binary B, compatible A_Y, or endpoint graph is supplied."
+
+  - id: C-WAVE59-INCIDENCE-SPECTRAL-001
+    statement: "At the conditional prism-free endpoint, the point-triangle incidence graph has order 330, bidegrees (7,3), girth 8, diameter 6, and spectrum +/-sqrt(21)^1, +/-sqrt(10)^54, +/-sqrt(3)^44, 0^132; its triangle graph has spectral excess 50 and actual excess 32."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_INCIDENCE_GEOMETRY
+    evidence:
+      - "verification/wave59-incidence-spectral-excess/independent-result.json"
+      - "verification/wave59-incidence-spectral-excess/audit.md"
+      - "verification/wave59-incidence-spectral-excess/package-manifest.sha256"
+    limitations: "The strict spectral-excess gap proves non-distance-regularity, not nonexistence. The exact Gram and cycle constraints are consistent; no endpoint case or strict upper bound is obtained."
+
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
     label: UNKNOWN

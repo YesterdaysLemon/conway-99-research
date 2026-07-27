@@ -337,3 +337,25 @@ arithmetic and color refinement only; no graph or improved bound follows.
 The corrected fixed 177-cut rational relaxation and formal enumerator remain
 feasible, while endpoint proof coverage remains `0/33`. No graph, endpoint
 exclusion, strict upper bound below 4158, or novelty claim follows.
+
+## Waves 56--59: alternative closure, incidence, and spectral spaces
+
+- `wave56-percolation-closure/` derives the nonedge closure dichotomy,
+  `n3+3P=4158`, `R=18H`, `6H<=P`, and the exact 23-mask/35-profile endpoint
+  multicover. Independent verification accepts the finite conditional scope.
+- `wave57-star-complement/` derives correct projector and star-set formulas
+  but overstates the live parameter space. Its verifier retains a
+  `REFUTED_IN_PART` verdict: prior Wave 36 leaves three live rows and cubic
+  wedge counting sharpens the four-cycle ceiling from 89 to 27.
+- `wave58-cross-incidence-rank/` combines the corrected rank transfer with
+  exact normalized `m=4` and `m=6` component censuses. Independent replay
+  verifies the three-row synthesis and all exact-set-versus-bound wording.
+- `wave59-incidence-spectral-excess/` recasts the endpoint as a
+  `(7,3)`-biregular point--triangle incidence graph and an 18-regular
+  triangle graph. It derives exact spectra, distance layers, predistance
+  defects, pair-neighborhood Gram rank, and short Ihara cycle counts.
+  Independent verification accepts every scoped finite claim.
+
+None of these packages constructs or excludes the simultaneous `B,A_Y`
+system. Non-distance-regularity is not nonexistence. The endpoint, strict
+upper-bound improvement, Conway-99, and novelty remain `UNKNOWN`.

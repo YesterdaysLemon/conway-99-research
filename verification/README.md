@@ -1424,6 +1424,33 @@ The accepted claim is a verified local null result. Multi-root compatibility,
 three-tuple refinement, graph realizability, endpoint exclusion, and a strict
 upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
 
+## Waves 56--59 alternative-space verification
+
+- `wave56-percolation-closure/` independently checks the cited closure
+  theorem's scope, the target parameter census, all `n3/P/H/R/S` incidence
+  identities, 64 tip graphs, 23 endpoint masks, 35 multicovers, and 11
+  formal label-orbits. Discovery and verifier suites each pass 21 tests.
+- `wave57-star-complement/` independently reproduces the projector,
+  supported-eigenspace, star-set, and moment calculations, then materially
+  corrects the discovery using prior verified Wave 36 results and
+  `C4(X)<=27`. Its scoped verdict is `REFUTED_IN_PART`.
+- `wave58-cross-incidence-rank/` independently reconstructs both Gram
+  identities, rank transfer, normalized component censuses, exact local
+  four-cycle sets, separate controls, and the restricted Wave 40 replay.
+  Fourteen verifier and eleven discovery tests pass.
+- `wave59-incidence-spectral-excess/` independently reconstructs the
+  incidence and triangle-graph spectra, all rooted layers, the failure of
+  distance-biregularity, exact predistance polynomials and defects, the
+  pair-neighborhood Gram matrix, Ihara cycle counts, and the cage comparison.
+  Fourteen verifier tests, including hostile mutations, pass with zero
+  mathematical mismatches.
+
+The [integration audit](2026-07-27-wave59-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave59-orchestrator.md) retain the Wave 57
+correction and the unresolved simultaneous-incidence boundary. Spectral
+excess separates the conditional graphs from distance-regular equality
+cases; it does not exclude them.
+
 ## Waves 53--55 corrected checkpoint verification
 
 - `wave53-proof-cover/` independently reconstructs all 10,395 normalized

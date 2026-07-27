@@ -30,8 +30,8 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-27-wave55-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-27-wave55-integration-audit.md"
+latest_public_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-27-wave59-integration-audit.md"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -2918,4 +2918,77 @@ forty_fifth_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 45 verifies exact rooted-flag moment coefficients and a finite sequence of witness-separating cuts. It refutes only two stored aggregate vectors and 15 successive replacements; the full PSD-constrained region, endpoint, strict upper bound, Conway-99, novelty, and priority remain UNKNOWN."
+waves_56_58_checkpoint:
+  public_base_commit: "4bb1989e9e286b2ec753a855db58ad584e31f63a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave56_status: VERIFIED_SCOPED
+  wave56_nonedge_closure: "all 99 vertices or K3 square K3"
+  wave56_endpoint_percolating_nonedges: 4158
+  wave56_endpoint_masks: 23
+  wave56_endpoint_profiles: 35
+  wave56_discovery_manifest_sha256: "911e882f2450690d409558e59777bf828a616bb9487e1be4914e0cda8baec37b"
+  wave56_verifier_manifest_sha256: "2e5080a94a9d0683cccd986046c83ec1134978bba3dbb064042571be81e69efb"
+  wave57_status: REFUTED_IN_PART
+  wave57_projector_star_set_core: VERIFIED_SCOPED
+  wave57_discovery_live_rows: 18
+  wave57_corrected_project_live_rows: 3
+  wave57_discovery_C4_ceiling: 89
+  wave57_corrected_C4_ceiling: 27
+  wave57_discovery_manifest_sha256: "c32b4e23cd8ba465a969abf538a85da1471f6c7452a0718740f2035ca6ad62f0"
+  wave57_verifier_manifest_sha256: "61ebd615bdfdfe13977c20868db85544f56bd10f530f121670456e8448b2d9b5"
+  wave58_status: VERIFIED_SCOPED
+  wave58_surviving_rows: "(18,8,1,34);(18,9,2,33);(18,10,3,32)"
+  wave58_m4_normalized_census: "216 raw;50 accepted"
+  wave58_m6_normalized_census: "162000 raw;34640 accepted"
+  wave58_kappa3_exact_local_C4: "6,8,10,12,14,16,18"
+  wave58_simultaneous_B_A_Y_status: UNKNOWN
+  wave58_discovery_manifest_sha256: "972a7700b0d9f1596ba42f32811a5b6b5eb66410e4099ae6c8d2d3fd64527a27"
+  wave58_verifier_manifest_sha256: "ef7dcdc04dab83fec1a8bb61e74c741eca5c2d7b59f5142cc57d145005602f36"
+  public_checkpoint: "logs/2026-07-27-wave58-public-checkpoint.json"
+  public_checkpoint_sha256: "43c5ed4c2981cdc7d99cbae112093e5bb336e8c5be83f900c7962806b819b84e"
+  integration_audit: "verification/2026-07-27-wave58-integration-audit.md"
+  integration_audit_sha256: "9c6c1ccaac0f5a66b0b800c6b24f00cdd2cd2533a8dd950b043ea87d9fa631ad"
+  orchestrator_decision: "verification/2026-07-27-wave58-orchestrator.md"
+  orchestrator_decision_sha256: "ec80a3cd78eb2d71165baba60d42d6115c58528e774443fa2a47b6749cf97319"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 56--58 verify conditional closure, projector, rank, and component restrictions with a material Wave 57 correction. They supply no simultaneous B/A_Y, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_56_59_checkpoint:
+  public_base_commit: "4bb1989e9e286b2ec753a855db58ad584e31f63a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave58-public-checkpoint.json"
+  wave59_status: VERIFIED_SCOPED
+  wave59_incidence_order: 330
+  wave59_incidence_degrees: "7,3"
+  wave59_incidence_girth: 8
+  wave59_incidence_diameter: 6
+  wave59_incidence_distance_biregular: false
+  wave59_triangle_graph_degree: 18
+  wave59_triangle_graph_diameter: 3
+  wave59_triangle_graph_spectral_excess: 50
+  wave59_triangle_graph_actual_excess: 32
+  wave59_pair_neighborhood_gram_rank: 231
+  wave59_discovery_manifest_sha256: "c3d29fb9c55dd28012238d042aa6d863b487e550448aad374e1bdcf55bcf413f"
+  wave59_verifier_manifest_sha256: "a660ede44009ed40c20bb1661d54b0b977f1817269b85983777f04aa4a78c574"
+  public_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
+  public_checkpoint_sha256: "12175e98e1aba3c7b2d79f319d37cc7ad07f6ffe9313c68fbe9cd1bed98fa424"
+  integration_audit: "verification/2026-07-27-wave59-integration-audit.md"
+  integration_audit_sha256: "9664fb39d7a9315b5038d9b8951b8771e02dc6495a4615e719fb96261fc32a26"
+  orchestrator_decision: "verification/2026-07-27-wave59-orchestrator.md"
+  orchestrator_decision_sha256: "baac955974b4a89f4f116e9948d0ff5d713ae9db496c53a0c0414a44f44e9704"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 59 verifies exact conditional incidence and spectral geometry, including strict failure of distance-regular equality. The constraints are consistent and supply no graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
 last_updated: 2026-07-27
