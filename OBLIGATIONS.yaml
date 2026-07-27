@@ -2335,3 +2335,44 @@ obligations:
       All current spectral and cycle constraints are exact but consistent.
       The endpoint, strict upper bound below 4158, and Conway-99 remain
       UNKNOWN.
+
+  - id: O-WAVE63-ALTERNATIVE-SPACE-CHECKPOINT
+    requirement: >-
+      Independently verify the kappa=3 component census and safe orbit
+      reduction, all finite-field and pair-span null results, the one-root
+      signed-edge invariant SDP, and every exact rational certificate in the
+      fixed 74-lane pair-cone subset, retaining all documentation corrections
+      and nonterminal solver statuses.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-27-wave63-integration-audit.md"
+      - "verification/2026-07-27-wave63-orchestrator.md"
+      - "verification/wave60-c3-incidence-design/package-manifest.sha256"
+      - "verification/wave61-c3-finite-field/package-manifest.sha256"
+      - "verification/wave62-terwilliger-sdp/package-manifest.sha256"
+      - "verification/wave63-c3-integer-cone/package-manifest.sha256"
+    note: >-
+      The finite conditional claims pass. Wave 61 did not test integral
+      cubic-tensor feasibility, and Wave 62 omitted one tautological matrix
+      from its nontrivial census. Neither correction yields an endpoint
+      result.
+
+  - id: O-WAVE63-INTEGER-HIGHER-ORDER-COMPATIBILITY
+    requirement: >-
+      Construct a zero-one 36-by-60 incidence design in every surviving
+      component lane and a compatible 60-vertex A_Y, or produce exact
+      certificates excluding every lane. Pair-coordinate rational
+      feasibility, parity spans, and bounded MILP nonhits do not discharge
+      this obligation; triple and higher overlap compatibility must be
+      retained.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave61-c3-finite-field/audit.md"
+      - "verification/wave63-c3-integer-cone/verification-report.md"
+      - "verification/2026-07-27-wave63-orchestrator.md"
+    note: >-
+      All 74 tested rational pair polytopes are feasible with coefficients in
+      [0,1], while no integer design, compatible A_Y, endpoint graph, or
+      impossibility certificate is known.

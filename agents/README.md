@@ -266,3 +266,12 @@ Wave 52 reports:
   coherent-closure discovery and explicit local completion controls.
 - `2026-07-27-wave52-coherent-closure-verifier.md`: independent derivation,
   clean-room 2-WL replay, complete 64-profile comparison, and hostile tests.
+
+Waves 60--63 reports:
+
+- `2026-07-27-wave60-c3-incidence-design.md`: discovery-side component,
+  safe-orbit, candidate-column, and bounded-search report for the conditional
+  three-component lane. Read it with the independent Wave 60 verifier.
+- Wave 61 finite-field, Wave 62 one-root SDP, and Wave 63 rational-cone
+  reports are packaged with their exact checkers under `attempts/`; their
+  independent audits are under `verification/`.

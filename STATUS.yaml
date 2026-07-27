@@ -30,8 +30,8 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-27-wave59-integration-audit.md"
+latest_public_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-27-wave63-integration-audit.md"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -2991,4 +2991,49 @@ waves_56_59_checkpoint:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 59 verifies exact conditional incidence and spectral geometry, including strict failure of distance-regular equality. The constraints are consistent and supply no graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_60_63_checkpoint:
+  public_base_commit: "81c8d45426938ea8490af55d81f05b7c2ad99035"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
+  wave60_status: VERIFIED_SCOPED
+  wave60_component_census: "216 normalized;50 accepted;18 fibre-preserving types"
+  wave60_triples_and_safe_orbits: "1140;275"
+  wave60_candidate_range: "15936..27200"
+  wave60_eliminated_triples: 0
+  wave60_discovery_manifest_sha256: "ccf35d05a4125178a7cb065b73972ef310584b14c6a447ea889f3b06a170629b"
+  wave60_verifier_manifest_sha256: "9bb26011e087e8f127d2a830635ebeecdae3da72d31e69b6e31f73d7513e3f2f"
+  wave61_status: VERIFIED_WITH_CORRECTION
+  wave61_full_pair_eliminations: 0
+  wave61_tensor_feasibility_tested: false
+  wave61_discovery_manifest_sha256: "63343515a1abd1e053e4fed84de0ba88d9c53833994a8ac08d4325520b83c252"
+  wave61_verifier_manifest_sha256: "f2ffa83a03772af8f8aa3ecf5e17459eaaa24f8c566474c61b81dd004f587cc9"
+  wave62_status: VERIFIED_SCOPED
+  wave62_endpoint_parameter_range: "0..42"
+  wave62_averaged_matrices: 1949
+  wave62_exact_blocks: 23388
+  wave62_negative_blocks: 0
+  wave62_discovery_manifest_sha256: "d62af7171cd825001c8bce4b9b1502970718640f5c441164eb49d4e59ba26401"
+  wave62_verifier_manifest_sha256: "439bd26e463ae19ce7cbac9989b23a681236d7a1df623005e5a829e5f8957968"
+  wave63_status: VERIFIED_SCOPED
+  wave63_tested_lanes: 74
+  wave63_exact_pair_equations_replayed: 46620
+  wave63_rational_witnesses: 74
+  wave63_integer_designs: 0
+  wave63_discovery_manifest_sha256: "c85f9dcf3d0bdba2a41299c4a3c4fdd8c9802903cff04ab237f40d9840df6018"
+  wave63_verifier_manifest_sha256: "3c19b9c226e141850a7763467c1eb7e19a15752dac03cdca9f6a4b7cb3dae017"
+  public_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
+  public_checkpoint_sha256: "0e53832e00e8a1b44a2b6a983160e425cb97c9d64d399d1887440f7f54ba1c0e"
+  integration_audit: "verification/2026-07-27-wave63-integration-audit.md"
+  integration_audit_sha256: "6e3b45b222433e92640d87daa1355576e7d89e8a664d474055615d642c71eb40"
+  orchestrator_decision: "verification/2026-07-27-wave63-orchestrator.md"
+  orchestrator_decision_sha256: "9d05227fae17fde0f2e1a92a47c4e82298cc8d750a01e90782db4d302b39061a"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 60--63 verify exact component, finite-field, one-root invariant-SDP, and rational-cone boundaries with narrow Wave 61 and Wave 62 documentation corrections. They supply no integer incidence design, compatible A_Y, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
 last_updated: 2026-07-27

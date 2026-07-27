@@ -2641,6 +2641,46 @@ claims:
       - "verification/wave59-incidence-spectral-excess/package-manifest.sha256"
     limitations: "The strict spectral-excess gap proves non-distance-regularity, not nonexistence. The exact Gram and cycle constraints are consistent; no endpoint case or strict upper bound is obtained."
 
+  - id: C-WAVE60-C3-DESIGN-001
+    statement: "In the conditional prism-free kappa=3 fixed-triangle lane, exact normalization gives 18 fibre-preserving component types, 1,140 unordered triples, 275 safe simultaneous-coordinate orbits, and 15,936--27,200 allowed six-set columns per triple; the stated F2 rank filter excludes none."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_COMPONENT_AND_CANDIDATE_CENSUS
+    evidence:
+      - "verification/wave60-c3-incidence-design/independent-results.json"
+      - "verification/wave60-c3-incidence-design/audit.md"
+      - "verification/wave60-c3-incidence-design/package-manifest.sha256"
+    limitations: "The SAT and local-search records are UNKNOWN. No simultaneous binary incidence matrix, compatible A_Y, endpoint graph, or endpoint exclusion is supplied."
+
+  - id: C-WAVE61-C3-FINITE-FIELD-001
+    statement: "All 1,140 conditional kappa=3 targets survive the verified within-component, full 630-pair, pattern-parity, quadratic/Witt, and stated odd-prime finite-field screens."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_FINITE_FIELD_RELAXATIONS
+    evidence:
+      - "verification/wave61-c3-finite-field/independent-results.json"
+      - "verification/wave61-c3-finite-field/audit.md"
+      - "verification/wave61-c3-finite-field/package-manifest.sha256"
+    limitations: "The verifier corrects the cubic wording: only the displayed margin identity and scalar totals were tested. No nonnegative integral T tensor, binary B, compatible A_Y, or endpoint result follows."
+
+  - id: C-WAVE62-ROOTED-SDP-001
+    statement: "At the prism-free endpoint, the exact one-root signed-edge invariant projector SDP and the declared nontrivial degree-24 Schur family are feasible for every y=0,...,42; 23,388 scalar blocks contain no negative value."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ONE_ROOT_INVARIANT_SDP
+    evidence:
+      - "verification/wave62-terwilliger-sdp/exact-verifier-result.json"
+      - "verification/wave62-terwilliger-sdp/verification-report.md"
+      - "verification/wave62-terwilliger-sdp/package-manifest.sha256"
+    limitations: "The implementation checks 1,949 nontrivial matrices after omitting one tautology; including it leaves the null result unchanged. Averaged feasibility is not a residual graph or endpoint certificate."
+
+  - id: C-WAVE63-C3-RATIONAL-CONE-001
+    statement: "Each lane in the fixed 74-triple stress subset has an exact nonnegative rational witness satisfying all 630 pair equations, total weight 60, and coefficient bounds x_s<=1."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_74_LANE_RATIONAL_PAIR_CONE
+    evidence:
+      - "verification/wave63-c3-integer-cone/independent-results.json"
+      - "verification/wave63-c3-integer-cone/verification-report.md"
+      - "verification/wave63-c3-integer-cone/package-manifest.sha256"
+    limitations: "Only 74 of 1,140 triples are covered. Rational coefficients are not zero-one incidence designs; the bounded binary MILP record is UNKNOWN."
+
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
     label: UNKNOWN

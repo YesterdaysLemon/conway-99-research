@@ -2893,6 +2893,65 @@ See the [percolation verifier](verification/wave56-percolation-closure/README.md
 [orchestrator decision](verification/2026-07-27-wave59-orchestrator.md), and
 [machine-readable checkpoint](logs/2026-07-27-wave59-public-checkpoint.json).
 
+Waves 60--63 push the surviving three-component fixed-triangle lane through
+three different exact relaxations and, separately, test a one-root
+Terwilliger/SDP space.
+
+Wave 60 classifies the fibre-labelled twelve-vertex components:
+
+```text
+216 normalized presentations -> 50 accepted -> 18 component types,
+1,140 unordered triples       -> 275 safe coordinate orbits,
+candidate six-sets per triple:   15,936 .. 27,200.
+```
+
+The exact binary Gram-rank filter rejects no triple. Independent verification
+also confirms that the aligned type-4 triple has 20,928 candidate columns and
+all 21 component/fibre patterns. The bounded SAT and local-search telemetry
+remain `UNKNOWN`.
+
+Wave 61 tests all 1,140 triples over finite fields and in the full 630
+pair-coordinate parity space. It eliminates none. Its strongest generator
+ranks are 438--462, while the target Gram ranks are 14--24. The verifier
+narrows one discovery sentence: the displayed cubic pair-margin identity and
+scalar totals are verified, but feasibility of a nonnegative integral cubic
+tensor was not tested.
+
+Wave 62 moves the 84 rooted residual labels into the signed-edge association
+scheme of `K7`. The scheme has valencies
+`[1,2,1,20,20,40]` and multiplicities `[1,6,7,14,21,35]`. Every endpoint
+parameter `y=0,...,42` survives the exact invariant projector SDP. The
+nontrivial degree-24 Schur scan contains 1,949 averaged matrices and 23,388
+exact scalar blocks, with zero negative blocks. The omitted 1,950th matrix is
+the tautological `(E0,0,0)` case; independently adding it leaves the null
+conclusion unchanged.
+
+Wave 63 tests a fixed 74-lane stress subset of the Wave 60 triples in the
+nonnegative rational pair cone. Every lane has an exact certificate satisfying
+all 630 pair equations, total weight 60, and coefficient bounds
+`0<x_s<=1`. The 46,620 equations were independently replayed. These
+fractional witnesses are not binary incidence designs; one bounded binary
+MILP probe returned only `UNKNOWN`.
+
+```text
+Wave 60 component/candidate reduction:            VERIFIED SCOPED
+Wave 61 finite-field and parity null result:       VERIFIED WITH CORRECTION
+Wave 62 one-root invariant SDP null result:        VERIFIED SCOPED
+Wave 63 74-lane rational pair-cone feasibility:    VERIFIED SCOPED
+integer six-set design or compatible A_Y:          UNKNOWN
+upper bound below 4158:                            NOT PROVED
+rigorous interval:                                 708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:                     UNKNOWN
+```
+
+See the [Wave 60 verifier](verification/wave60-c3-incidence-design/audit.md),
+[Wave 61 correction](verification/wave61-c3-finite-field/audit.md),
+[Wave 62 verifier](verification/wave62-terwilliger-sdp/verification-report.md),
+[Wave 63 verifier](verification/wave63-c3-integer-cone/verification-report.md),
+[integration audit](verification/2026-07-27-wave63-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave63-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave63-public-checkpoint.json).
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

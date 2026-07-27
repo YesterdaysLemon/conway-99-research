@@ -359,3 +359,24 @@ exclusion, strict upper bound below 4158, or novelty claim follows.
 None of these packages constructs or excludes the simultaneous `B,A_Y`
 system. Non-distance-regularity is not nonexistence. The endpoint, strict
 upper-bound improvement, Conway-99, and novelty remain `UNKNOWN`.
+
+## Waves 60--63: integer information beyond scalar incidence geometry
+
+- `wave60-c3-incidence-design/` classifies the 18 fibre-preserving
+  twelve-vertex component types, all 1,140 triples, 275 safe coordinate
+  orbits, and their allowed six-set columns. Its bounded searches are
+  `UNKNOWN`.
+- `wave61-c3-finite-field/` tests the complete triple set in several finite
+  fields and pair-coordinate parity spaces. No triple is eliminated. The
+  cubic section is limited to its displayed identities and scalar totals.
+- `wave62-terwilliger-sdp/` diagonalizes the one-root signed-edge invariant
+  projector SDP and a degree-24 Schur family exactly. All endpoint parameters
+  survive.
+- `wave63-c3-integer-cone/` stores exact rational pair-cone witnesses for a
+  fixed 74-lane stress subset. Every coefficient is at most one, but none of
+  the witnesses is a zero-one design.
+
+Independent verification accepts each finite scope, with the Wave 61 wording
+correction and Wave 62 tautology-count clarification. Integer and higher-order
+compatibility, a compatible `A_Y`, endpoint exclusion, and Conway-99 remain
+`UNKNOWN`.

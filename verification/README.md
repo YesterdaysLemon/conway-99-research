@@ -1475,3 +1475,25 @@ The [Wave 55 integration audit](2026-07-27-wave55-integration-audit.md) and
 [orchestrator decision](2026-07-27-wave55-orchestrator.md) retain the material
 correction and the status wall. The bounded Wave 55 search needs no verifier
 promotion because it asserts no terminal mathematical result.
+
+## Waves 60--63 component, field, SDP, and cone verification
+
+- `wave60-c3-incidence-design/` independently reconstructs the
+  `216 -> 50 -> 18` component census, all 1,140 triples, 275 safe coordinate
+  orbits, candidate counts, pattern counts, and binary target ranks.
+- `wave61-c3-finite-field/` independently replays every finite-field,
+  full-pair, and pattern-parity calculation. It records
+  `VERIFIED_WITH_CORRECTION` because no nonnegative integral cubic tensor was
+  tested.
+- `wave62-terwilliger-sdp/` independently reconstructs the signed-edge
+  association scheme, all 43 endpoint parameters, and the 23,388 exact Schur
+  blocks. It clarifies the deliberate omission of one tautology.
+- `wave63-c3-integer-cone/` independently rebuilds all candidate lanes and
+  checks 46,620 exact pair equations in 74 rational certificates, including
+  coefficient-bound and hostile-mutation tests.
+
+The [integration audit](2026-07-27-wave63-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave63-orchestrator.md) retain the
+unresolved integer/higher-order boundary. No binary incidence design,
+compatible `A_Y`, endpoint exclusion, strict upper bound below 4158, or
+Conway-99 resolution follows.

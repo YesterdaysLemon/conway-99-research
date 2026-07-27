@@ -3582,3 +3582,104 @@ in zero or two points. Over `F3`, `im(A)` is an LCD `[99,45]` code.
 Full derivations and the independently checked boundaries are in
 `agents/2026-07-22-wave2-algebra-codes.md` and
 `verification/2026-07-22-wave2-audit.md`.
+
+## Waves 60--63: component, finite-field, invariant-SDP, and cone boundary
+
+All statements in this section are conditional on the prism-free endpoint
+`n3=4158`.
+
+### Three-component incidence design (`VERIFIED SCOPED`)
+
+For the `[4,4,4]` component partition of the fixed-triangle graph `X`, exact
+coordinate normalization gives
+
+```text
+216 presentations -> 50 accepted -> 18 fibre-preserving types.
+```
+
+The 1,140 unordered triples with repetition reduce to 275 orbits under safe
+simultaneous coordinate relabelling. This is not an assumed automorphism of a
+completed graph. Each triple has 15,936--27,200 individually allowed
+six-set columns. The exact `F2` target-rank histogram is
+
+```text
+rank:     14   16   18   20   22   24
+triples:  67  415  412  185   51   10.
+```
+
+No triple is excluded. For the aligned type-4 triple, two independent
+enumerations give 20,928 candidate columns and all 21 component/fibre
+patterns.
+
+### Finite-field boundary (`VERIFIED WITH CORRECTION`)
+
+Every candidate column meets each of three fibres and each of three
+components twice. Over `F2`, the six partition indicators span a
+five-dimensional subspace of `ker(B^T)`, so `rank(B)<=31`. Since every row
+has weight ten, `BB^T` is alternating and has even rank at most 30.
+
+All 1,140 targets survive:
+
+- the 198 within-component pair-coordinate span;
+- the complete 630 pair-coordinate span;
+- the 21-pattern parity-moment system;
+- the quadratic/Witt screens over `F2`; and
+- the stated odd-prime screens for `p=3,5,7,11`.
+
+The full 630-coordinate generator-rank histogram is
+
+```text
+rank:     438  442  446  450  454  458  462
+triples:   56  189  333  327  171   54   10.
+```
+
+The identity
+
+```text
+sum_{k not in {i,j}} T_ijk = 4 G_ij
+```
+
+and its displayed scalar totals are verified. The discovery phrase “all
+consequences determined by `G`” was too broad: no nonnegative integral tensor
+`T` was constructed or excluded.
+
+### One-root invariant SDP (`VERIFIED SCOPED`)
+
+The 84 signed edges of `K7` form a six-class commutative scaffold scheme with
+valencies
+
+```text
+1,2,1,20,20,40
+```
+
+and primitive multiplicities
+
+```text
+1,6,7,14,21,35.
+```
+
+Scaffold symmetry is used only to average universally positive-semidefinite
+matrices. No target automorphism is assumed. The endpoint relation counts
+depend on an integer `0<=y<=42`. Every such value survives the exact
+projector SDP. A degree-24 Schur family checks 1,949 nontrivial averaged
+matrices and 23,388 exact scalar blocks, with zero negative blocks. Including
+the deliberately omitted tautological matrix changes the counts but supplies
+no negative block.
+
+### Rational pair cone (`VERIFIED SCOPED`)
+
+A fixed stress set of 74 component triples contains all 56 minimum-support
+lanes, the unique maximum-support lane, all 18 diagonal lanes, and the first
+representative of every full-pair rank stratum, with eight overlaps removed.
+For every lane there is an exact nonnegative rational vector on allowed
+six-sets satisfying all 630 pair equations. Every coefficient also satisfies
+`x_s<=1`, and the support sizes 438--462 match the full-pair binary generator
+ranks.
+
+These are fractional points, not zero-one designs. No integer `36 x 60`
+incidence matrix, compatible `A_Y`, endpoint graph, or endpoint exclusion is
+known. The rigorous interval remains
+
+```text
+708 <= n3 <= 4158.
+```
