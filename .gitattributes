@@ -53,3 +53,7 @@ attempts/wave51-seidel-smith/*.json -text -diff
 verification/wave51-seidel-smith/*.json -text -diff
 verification/wave51-rankone-cut-relaxation/*.json -text -diff
 verification/wave51-rankone-cut-relaxation-independent/*.json -text -diff
+
+# Wave 52 coherent-closure outputs are checksum-pinned byte streams.
+attempts/wave52-coherent-closure/*.json -text -diff
+verification/wave52-coherent-closure/*.json -text -diff

@@ -259,3 +259,10 @@ Wave 51 reports:
   probe; its self-verification is not accepted.
 - `2026-07-27-wave51-rankone-cut-relaxation-verifier.md`: clean-room exact
   replay that promotes only the fixed-bundle rational-feasibility result.
+
+Wave 52 reports:
+
+- `2026-07-27-wave52-coherent-closure.md`: automorphism-free one-root
+  coherent-closure discovery and explicit local completion controls.
+- `2026-07-27-wave52-coherent-closure-verifier.md`: independent derivation,
+  clean-room 2-WL replay, complete 64-profile comparison, and hostile tests.

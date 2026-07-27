@@ -301,3 +301,15 @@ endpoint SAT branch, constructs a graph, or proves `n3<4158`.
 Both discovery packages are necessary-condition or relaxation work. Neither
 constructs a graph, supplies pair-specific quadruple compatibility, excludes
 the endpoint, or improves `n3<=4158`.
+
+## Wave 52: one-root coherent closure
+
+- `wave52-coherent-closure/` derives the forced 19-triangle `3K6` root and
+  `B2/C4/D0` cross-sector caps, then applies exact 2-WL to both the partial
+  relation structure and a completion-free 163-node incidence lift.
+- Explicit integral cap completions survive. Sixty-four canonical
+  two-factor-profile diagnostics produce 39 different closure fingerprints,
+  proving that completed colors depend on arbitrary local choices.
+
+This is a discovery null result. Independent verification accepts the finite
+arithmetic and color refinement only; no graph or improved bound follows.

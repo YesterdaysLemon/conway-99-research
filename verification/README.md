@@ -1408,3 +1408,18 @@ novelty, priority, and Conway-99 remain `UNKNOWN` or `NOT PROVED`.
 The three lanes are null results for endpoint exclusion. Pair-specific
 quadruple compatibility, the full PSD region, integer feasibility, a graph,
 and any strict upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
+
+## Wave 52 coherent-closure verification
+
+- `wave52-coherent-closure/` independently reconstructs the forced one-root
+  `3K6` structure, global relation valencies, and `B2/C4/D0` cross-sector
+  caps.
+- Its clean-room 2-WL implementation reproduces the exact trajectories
+  `[6]` and `[26,38,47]`, all 64 canonical cycle profiles, 39 fingerprint
+  classes, and all 4,096 fingerprint-equivalence comparisons.
+- Five hostile mutations are rejected. Explicit integral local completions
+  remain, and completed closures depend on arbitrary `B/C` selections.
+
+The accepted claim is a verified local null result. Multi-root compatibility,
+three-tuple refinement, graph realizability, endpoint exclusion, and a strict
+upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.

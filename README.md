@@ -2690,6 +2690,48 @@ The corrections and status boundary are frozen in the
 [orchestrator decision](verification/2026-07-27-wave51-orchestrator.md), and
 [machine-readable checkpoint](logs/2026-07-27-wave51-public-checkpoint.json).
 
+## Wave 52 automorphism-free coherent closure
+
+Wave 52 tests the smallest forced coherent-configuration lift around one
+graph triangle without assuming transitivity or selecting a target-graph
+automorphism. The root has 18 other incident triangles in three six-petal
+sectors. Their intersection graph is exactly `3K6`. Across two sectors, every
+petal has two `B`, four `C`, and zero `D` neighbors, so each selected `B`
+layer is a simple 2-regular bipartite graph on `6+6` petals.
+
+Exact two-dimensional Weisfeiler-Leman refinement finds no obstruction. The
+19-triangle partial coloring remains at six colors. A completion-free
+163-node cap-incidence lift follows the exact color trajectory
+`26 -> 38 -> 47` with diagonal class sizes `1,18,36,108`, but it still
+admits explicit integral local-cap completions and forces no Boolean choice.
+
+The verifier also reconstructs all 64 canonical triples of bipartite
+two-factor cycle profiles. They yield 39 distinct stable fingerprints and
+stable color counts from 8 through 361. This variation proves that a closure
+computed after selecting local `B/C` edges depends on arbitrary completion
+data and is not a forced endpoint quotient.
+
+```text
+forced one-root 3K6 / B2-C4-D0 structure: VERIFIED SCOPED
+19-node 2-WL trajectory:                  [6] (VERIFIED SCOPED)
+163-node cap-incidence trajectory:        [26,38,47] (VERIFIED SCOPED)
+canonical profile diagnostics:            64 / 39 fingerprints
+forced local truth assignment:            NONE
+coherent-closure obstruction:             NONE AT THIS SCOPE
+pair-specific multi-root compatibility:   UNKNOWN
+upper bound below 4158:                   NOT PROVED
+rigorous interval:                        708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:            UNKNOWN
+```
+
+See the [Wave 52 verifier](verification/wave52-coherent-closure/README.md),
+[integration audit](verification/2026-07-27-wave52-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave52-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave52-public-checkpoint.json).
+The next coherent route must use genuinely forced multi-root or three-tuple
+compatibility; deeper refinement of one arbitrary local completion is
+conditional.
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)
