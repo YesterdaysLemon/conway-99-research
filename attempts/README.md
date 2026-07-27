@@ -396,3 +396,19 @@ compatibility, a compatible `A_Y`, endpoint exclusion, and Conway-99 remain
 Independent verification accepts both finite scopes. Neither package supplies
 an integral strong witness, endpoint exclusion, graph, or strict upper bound
 below 4158.
+
+## Wave 66: spherical-code and difference-lattice shift
+
+- `wave66-spherical-code-shift/` lifts the negative-eigenspace embedding to
+  99 equiangular lines of common angle `1/7` in `R^45`, centers it to an even
+  rank-44 lattice `M`, and derives exact dual-denominator, determinant,
+  discriminant-group, dual-minimum, and Milgram restrictions.
+- The independent verifier records three discovery corrections: the imported
+  universal lower rank was 27 rather than the endpoint-only 28; one listed
+  weight-eight fact is unused; and only eight, not all 17, imported rank rows
+  survive.
+- With those corrections, the universal conclusion is
+  `rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`.
+
+No lattice realization, graph, norm-14 exclusion, endpoint contradiction, or
+literature-priority result is supplied. Conway-99 remains `UNKNOWN`.

@@ -149,7 +149,16 @@ and the normalized search problem.
   every scalar or scaffold-averaged hypergraph test survives. The first
   missing layer is the entrywise, noncommutative compatibility of the
   transition graph, block incidence matrix, and fixed rooted line graph.
-  No integral strong witness or endpoint contradiction is known.
+  No integral strong witness or endpoint contradiction is known. Wave 66
+  shifts the unrestricted problem into spherical-code and lattice language.
+  A hypothetical graph gives 99 equiangular lines of angle `1/7` in `R^45`
+  and an even rank-44 difference lattice `M`. Independent verification, with
+  three recorded discovery corrections, proves `63 M* subset M`,
+  `M*/M = Z/9 direct_sum (Z/7)^(44-r)`, `min(M*)>=2`, and the universal
+  restriction
+  `r=rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`. This is a genuine
+  universal rank narrowing, not a graph construction, endpoint exclusion,
+  or Conway-99 resolution.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

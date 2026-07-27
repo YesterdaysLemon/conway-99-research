@@ -1516,3 +1516,22 @@ The [integration audit](2026-07-27-wave65-integration-audit.md) and
 scoped finite results. Integral transition/design compatibility, full
 codegrees, the global prism-free endpoint, a strict upper bound below 4158,
 and Conway-99 remain unresolved.
+
+## Wave 66 spherical-code and lattice verification
+
+- `wave66-spherical-code-shift/` independently reconstructs the two spherical
+  embeddings, the 99-line equiangular lift, centering, lattice saturation,
+  determinant and local Smith calculations, exact dual denominator, low-norm
+  exclusions, finite Gauss sums, Milgram phase, and Blichfeldt cross-check.
+- The verdict is `VERIFIED_WITH_CORRECTION`. Fourteen verifier tests and ten
+  discovery tests pass. The corrected universal conclusion is
+  `rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`.
+- The exact conditional lattice data are `63 M* subset M`,
+  `det(M)=9*7^(44-r)`,
+  `M*/M = Z/9 direct_sum (Z/7)^(44-r)`, and `min(M*)>=2`.
+
+The [Wave 66 integration audit](2026-07-27-wave66-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave66-orchestrator.md) preserve all three
+corrections and the unresolved status wall. No graph or lattice realization,
+endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or
+novelty result follows.
