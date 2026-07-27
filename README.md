@@ -105,7 +105,14 @@ and the normalized search problem.
   problem to 45,032 necessary six-sets and reproduce a new branch-15 prism
   clause family. Neither scoped reduction closes a branch. Endpoint coverage
   remains `0/33`, the interval remains `708<=n3<=4158`, and Conway-99 remains
-  `UNKNOWN`.
+  `UNKNOWN`. Wave 43 proves the conditional endpoint theorem
+  `n3=4158 => rank_F7(M)>=28`, extends the exact three-way-matching reduction
+  to all 264 canonical rank-33 lifts, and independently verifies that ordinary
+  unrooted order-seven counts remain feasible. Wave 44 adds every aggregate
+  vertex-, edge-, and nonedge-rooted order-seven equation and finds a second
+  exact feasible integer witness. These results sharpen the boundary and rule
+  out two coarse count strategies, but still do not exclude `n3=4158`;
+  the general upper bound remains 4158.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 
@@ -2390,6 +2397,98 @@ branch 15 / endpoint proof coverage:     UNKNOWN / 0 of 33
 upper bound below 4158:                  NOT PROVED
 rigorous interval:                       708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:           UNKNOWN
+```
+
+## Wave 43 endpoint rank 28, complete rank-33 lift census, and count-space boundary
+
+At the prism-free endpoint, the only possible edge-local partitions are
+`222`, `24`, `33`, and `6`. Starting from the Wave 42 decomposition
+
+```text
+rank(K39) = (25-2e) + 2 rank(F) + rank(D),
+```
+
+two independent implementations exhaust both mechanisms that could leave
+local rank 27. They cover 17,505,180 explicit permutation/matching pairs for
+types `222` and `24`, 2,993,760 minimum-border type-`6` pairs, complete
+type-`6` and type-`33` pivot/mate CSPs, and nonvacuous planted controls. Every
+survivor count is zero. Therefore
+
+```text
+n3=4158  ==>  rank_F7(M)>=28.                 VERIFIED
+```
+
+Equivalently, `rank_F7(M)=27` forces an induced triangular prism. Since the
+exact identity is `n3+3P=4158`, where `P` counts induced triangular prisms,
+the rank-27 branch satisfies `n3<=4155`. This is a genuine conditional
+improvement, not a general upper bound: ranks 28 through 44 remain compatible
+with `n3=4158`. Endpoint arithmetic now has 281 surviving `(r3,r7)` pairs.
+
+The Wave 42 three-way-matching reduction was also reconstructed for every one
+of the 264 canonical triangle-free rank-33 lifts. All have component sizes
+`12+24`, fibre balances `(4,4,4)+(8,8,8)`, and exactly the three expected
+rational kernel directions. They fall into five numerical candidate-census
+rows with multiplicities `48/48/24/48/96`; every lift survives. A compact
+45,032-variable pairing CNF and a sparse exact MILP were both run, but the
+retained CaDiCaL and HiGHS attempts ended `UNKNOWN` with no candidate or proof.
+
+In refined branch 15, exhaustive pairs of coordinate-anchored unfixed
+triangles add 40,800 distinct width-four prism clauses. Independent closure
+leaves 34,340 active clauses, all with slack three; all 64 bounded polarity
+probes remain nonterminal. Branch 15 and all 33 endpoint cases remain open.
+
+Finally, a change of mathematical space was tested exactly. All 62
+six-to-seven deletion equations and 19 Hamiltonian formulas on the 208
+locally admissible seven-vertex types admit a nonnegative integer witness
+with support 99 and total `C(99,7)=14,887,031,544`. A clean-room verifier
+reconstructed the complete six- and seven-vertex catalogues and every row.
+This proves only that ordinary unrooted counts through order seven are too
+coarse to exclude the endpoint.
+
+## Wave 44 aggregate rooted-count boundary
+
+Wave 44 adds all order-seven equations obtained by distinguishing:
+
+- one root vertex and its induced degree;
+- an ordered adjacent root pair with category sizes `(1,12,12,72)`; and
+- an ordered nonadjacent root pair with category sizes `(2,12,12,71)`.
+
+Together with the unrooted system this gives 170 exact equations in 208 class
+counts and `y=h11/4`. The coefficient rank rises from 81 to 93, and the
+Wave 43 unrooted witness violates every new rooted family. Nevertheless an
+exact integer solver produced a different 91-support witness at
+`y=4158`; a standard-library checker substitutes it into all 170 rows with
+zero residual.
+
+An earlier floating-point MILP `infeasible` status is retained as a refuted
+numerical false negative. It is not evidence. The independently checked
+positive witness shows that even aggregate vertex-, edge-, and nonedge-rooted
+counts through order seven remain too coarse. The next alternative-space lane
+must impose genuine overlap compatibility, such as a positive-semidefinite
+flag moment matrix, order-eight deletion variables, or the full simultaneous
+`B/H` equations.
+
+See the [rank-28 verifier](verification/wave43-rank28/README.md),
+[all-rank33 verifier](verification/wave43-all-rank33-lifts/README.md),
+[branch-15 verifier](verification/wave43-branch15-two-triangle/README.md),
+[order-seven verifier](verification/wave43-seven-deck-endpoint/README.md),
+and [aggregate rooted verifier](verification/wave44-rooted-flags/README.md).
+The promotion boundary is recorded in the
+[Waves 43--44 integration audit](verification/2026-07-27-wave44-integration-audit.md),
+[orchestrator decision](verification/2026-07-27-wave44-orchestrator.md), and
+[machine-readable checkpoint](logs/2026-07-27-wave44-public-checkpoint.json).
+
+```text
+n3=4158 => rank_F7(M)>=28:             VERIFIED
+endpoint arithmetic rank pairs:         281
+all 264 rank-33 lift reductions:         VERIFIED SCOPED
+branch-15 two-triangle cuts:             VERIFIED SCOPED
+unrooted order-seven count relaxation:   EXACT FEASIBLE
+aggregate rooted order-seven relaxation: EXACT FEASIBLE
+branch 15 / endpoint proof coverage:     UNKNOWN / 0 of 33
+upper bound below 4158 in general:        NOT PROVED
+rigorous interval:                        708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:            UNKNOWN
 ```
 
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise

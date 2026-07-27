@@ -2213,6 +2213,151 @@ claims:
       708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
       remain UNKNOWN.
 
+  - id: C-WAVE43-ENDPOINT-RANK28-096
+    statement: >-
+      Conditional on n3=4158, every one of the four possible edge-local
+      types 222, 24, 33, and 6 has rank_F7(K39)>=28. Hence
+      rank_F7(M)>=28. Equivalently, rank_F7(M)=27 forces an induced
+      triangular prism and therefore n3<=4155.
+    label: VERIFIED
+    scope: CONDITIONAL_ON_PRISM_FREE_ENDPOINT
+    evidence:
+      - "attempts/wave43-rank28-motif/exact-results.json"
+      - "attempts/wave43-rank28-motif/package-manifest.sha256"
+      - "attempts/wave43-type33-rank2/exact-results.json"
+      - "attempts/wave43-type33-rank2/package-manifest.sha256"
+      - "verification/wave43-rank28/independent-results.json"
+      - "verification/wave43-rank28/comparison.json"
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-rank28/package-manifest.sha256"
+    limitations: >-
+      This is conditional on n3=4158 and is compatible with the global
+      rank ceiling 44. It does not exclude the endpoint or prove a strict
+      general upper bound below 4158. Novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE43-ALL-RANK33-LIFTS-097
+    statement: >-
+      Conditional on n3=4158, r3=12, every edge having type 222, and the
+      canonical rank-33 lift lane, all 264 labelled triangle-free lifts have
+      12+24 components, fibre balances 4+8 in every fibre, exactly the three
+      expected rational Gram-kernel directions, and one of five exact
+      necessary six-set candidate censuses.
+    label: VERIFIED
+    scope: CONDITIONAL_ALL222_R3_12_RANK33_LIFTS
+    evidence:
+      - "attempts/wave43-all-rank33-lifts/exact-results.json"
+      - "attempts/wave43-all-rank33-lifts/package-manifest.sha256"
+      - "verification/wave43-all-rank33-lifts/independent-results.json"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-all-rank33-lifts/package-manifest.sha256"
+    limitations: >-
+      Every lift survives. The five rows are numerical census classes, not
+      proved isomorphism classes. No complete B, compatible H, endpoint
+      exclusion, or target graph is supplied.
+
+  - id: C-WAVE43-BRANCH15-TWO-TRIANGLE-098
+    statement: >-
+      In the frozen refined endpoint branch 15, exhaustive pairs of
+      coordinate-anchored unfixed triangles generate exactly 40800 distinct
+      width-four prism clauses; independent closure leaves 34340 active
+      slack-three clauses, and all 64 selected polarity probes remain
+      nonterminal.
+    label: VERIFIED
+    scope: CONDITIONAL_BRANCH15_COORDINATE_TRIANGLE_FAMILY
+    evidence:
+      - "attempts/wave43-branch15-two-triangle/branch-15-two-coordinate-triangle-result.json"
+      - "attempts/wave43-branch15-two-triangle/package-manifest.sha256"
+      - "verification/wave43-branch15-two-triangle/independent-results.json"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-branch15-two-triangle/package-manifest.sha256"
+    limitations: >-
+      Prisms based at non-coordinate-anchored triangles remain omitted. No
+      unit, contradiction, SAT witness, or UNSAT proof follows; branch 15
+      and endpoint proof coverage remain UNKNOWN and 0/33.
+
+  - id: C-WAVE43-JOINT-COMPLETION-099
+    statement: >-
+      For canonical mask 51739, the 45032 admissible outside six-sets admit
+      an exact reduction to three pairwise perfect-matching partitions. The
+      compact sequential-counter CNF has 82532 variables and 338528 clauses;
+      the equivalent sparse binary MILP has 45032 variables, 612 equality
+      rows, and 675480 nonzeros.
+    label: DERIVED
+    scope: CONDITIONAL_CANONICAL_MASK_51739_FORMULATION
+    evidence:
+      - "attempts/wave43-joint-completion/pairing-reduction.json"
+      - "attempts/wave43-joint-completion/solve-result-pairing-cadical-seed3-c5000000.json"
+      - "attempts/wave43-joint-completion/solve-result-milp-t600.json"
+      - "attempts/wave43-joint-completion/package-manifest.sha256"
+      - "agents/2026-07-27-wave43-joint-completion.md"
+    limitations: >-
+      Both retained solver runs ended UNKNOWN and supplied neither a
+      candidate nor a proof. The reduction has not received a clean-room
+      mathematical verifier and does not construct or exclude B or H.
+
+  - id: C-WAVE43-SEVEN-DECK-FEASIBLE-100
+    statement: >-
+      At n3=4158 and h11=16632, the complete finite relaxation on 208
+      locally admissible seven-vertex types, all 62 six-to-seven deletion
+      equations, and all 19 Hamiltonian formulas has an exact nonnegative
+      integer solution of support 99 and total binom(99,7)=14887031544.
+      Every seven-type containing a triangular prism has count zero.
+    label: VERIFIED
+    scope: UNROOTED_ORDER_SEVEN_COUNT_RELAXATION_ONLY
+    evidence:
+      - "attempts/wave43-seven-deck-endpoint/exact-results.json"
+      - "attempts/wave43-seven-deck-endpoint/package-manifest.sha256"
+      - "verification/wave43-seven-deck-endpoint/independent-result.json"
+      - "verification/wave43-seven-deck-endpoint/comparison.json"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+      - "verification/wave43-seven-deck-endpoint/package-manifest.sha256"
+    limitations: >-
+      This is an aggregate count vector, not a coherent assignment to
+      overlapping seven-subsets and not a 99-vertex graph. Feasibility is
+      not evidence that the endpoint or Conway-99 graph exists.
+
+  - id: C-WAVE44-ROOTED-COUNT-FEASIBLE-101
+    statement: >-
+      At n3=4158 and h11=16632, augmenting the complete order-seven count
+      system by all seven vertex-root rows, 36 ordered-edge-root rows, and
+      46 ordered-nonedge-root rows gives 170 exact equations in 209 integer
+      variables with a nonnegative solution of support 91. The coefficient
+      rank rises from 81 to 93 over each of F101, F103, and F107.
+    label: VERIFIED
+    scope: AGGREGATE_ROOTED_ORDER_SEVEN_COUNT_RELAXATION_ONLY
+    evidence:
+      - "attempts/wave44-rooted-flags/row-system.json"
+      - "attempts/wave44-rooted-flags/rooted-witness.json"
+      - "attempts/wave44-rooted-flags/exact-results.json"
+      - "attempts/wave44-rooted-flags/package-manifest.sha256"
+      - "verification/wave44-rooted-flags/independent-results.json"
+      - "verification/wave44-rooted-flags/comparison.json"
+      - "verification/wave44-rooted-flags/audit.md"
+      - "verification/wave44-rooted-flags/package-manifest.sha256"
+    limitations: >-
+      Aggregate rooted equations do not enforce compatibility between
+      overlapping subsets. The witness is not a graph or evidence of endpoint
+      existence. A floating-point HiGHS infeasible status was refuted by the
+      exact witness and has no certificate authority.
+
+  - id: C-WAVE43-CONTINUATION-102
+    statement: >-
+      Wave 43 supplies no graph, complete endpoint proof, endpoint exclusion,
+      or strict general upper bound below n3=4158. Exact endpoint proof
+      coverage remains 0/33.
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-27-wave44-integration-audit.md"
+      - "verification/2026-07-27-wave44-orchestrator.md"
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+    limitations: >-
+      The rigorous interval remains 708<=n3<=4158. Endpoint status,
+      Conway-99, novelty, and priority remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

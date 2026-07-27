@@ -210,3 +210,36 @@ Wave 40 raises the verified universal characteristic-seven rank floor from
 19 to 25 and reduces conditional endpoint arithmetic from 429 to 330 pairs.
 It does not construct a graph, force a prism, close an endpoint case, or
 improve the general upper bound `n3<=4158`.
+
+## Wave 43: conditional endpoint rank 28 and alternative-space controls
+
+- `wave43-rank28-motif/` and `wave43-type33-rank2/` exhaust the two local
+  rank-27 mechanisms for all four endpoint edge types. A clean-room verifier
+  promotes `n3=4158 => rank_F7(M)>=28`.
+- `wave43-all-rank33-lifts/` extends the exact component and six-set reduction
+  to all 264 canonical rank-33 lifts. Every lift survives.
+- `wave43-branch15-two-triangle/` adds 40,800 exact width-four prism cuts to
+  branch 15; 34,340 remain active and no probe closes the branch.
+- `wave43-joint-completion/` records exact compact CNF and sparse MILP
+  formulations for the canonical 45,032-candidate three-way matching.
+  Both retained solver runs are `UNKNOWN`.
+- `wave43-seven-deck-endpoint/` gives an independently verified exact
+  99-support solution of every unrooted count equation through order seven.
+
+The conditional rank theorem removes 16 endpoint arithmetic pairs but does
+not exclude `n3=4158`. Count feasibility is a positive control for the
+relaxation only, not graph evidence.
+
+## Wave 44: aggregate rooted order-seven control
+
+- `wave44-rooted-flags/` adds every vertex-root, ordered-edge-root, and
+  ordered-nonedge-root category equation to the order-seven deck.
+- The 170-row system is strictly stronger than the unrooted 81-row system
+  but has an exact nonnegative 91-support integer witness at `h11=16632`.
+- A floating-point HiGHS `infeasible` report is retained as a refuted
+  numerical false negative. Only the exact witness and direct substitution
+  are evidentiary.
+
+This closes the aggregate rooted-count lane as a null result. A useful next
+step must impose overlapping-subset compatibility, a PSD flag moment matrix,
+order-eight variables, or the full simultaneous `B/H` equations.

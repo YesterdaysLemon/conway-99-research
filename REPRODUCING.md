@@ -2857,6 +2857,73 @@ rigorous interval:                   708 <= n3 <= 4158
 n3=4158 / Conway-99 / novelty:       UNKNOWN
 ```
 
+## Wave 43 endpoint rank, lift census, branch cuts, and count deck
+
+Replay the conditional rank-28 theorem and its independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-rank28-motif -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-type33-rank2 -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave43-rank28 -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-rank28\independent_check.py --verify `
+  verification\wave43-rank28\independent-results.json --deterministic
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-rank28\comparison_check.py --verify `
+  verification\wave43-rank28\comparison.json
+```
+
+Replay the two scoped structural verifiers:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-all-rank33-lifts\independent_check.py --verify `
+  verification\wave43-all-rank33-lifts\independent-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-branch15-two-triangle\independent_check.py --verify `
+  verification\wave43-branch15-two-triangle\independent-results.json
+```
+
+The branch-15 replay scans the full frozen OPB and can take roughly two
+minutes. It proves only the named clause catalogue and probe record.
+
+Replay the compact three-way-matching formulation tests and the independently
+checked unrooted order-seven count witness:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-joint-completion -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave43-seven-deck-endpoint\endpoint_deck.py --verify `
+  attempts\wave43-seven-deck-endpoint\exact-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-seven-deck-endpoint\independent_check.py `
+  --verify verification\wave43-seven-deck-endpoint\independent-result.json
+```
+
+The retained CaDiCaL and MILP records are `UNKNOWN`; do not treat their solver
+statuses as certificates.
+
+## Wave 44 aggregate rooted-count control
+
+Replay the exact rooted witness and its clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave44-rooted-flags\exact_check.py --verify `
+  attempts\wave44-rooted-flags\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave44-rooted-flags -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave44-rooted-flags\independent_check.py --verify
+```
+
+The exact witness, not the discovery solver, is the certificate. The
+historical HiGHS `infeasible` status is a retained false negative.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven

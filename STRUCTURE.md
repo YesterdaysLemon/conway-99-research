@@ -3149,6 +3149,127 @@ There is no active unit or empty clause. This is a stronger formula for one
 refined endpoint branch, not a SAT or UNSAT result; endpoint proof coverage
 remains `0/33`.
 
+### Wave 43 conditional endpoint rank 28 (`VERIFIED`)
+
+At `n3=4158`, the absence of induced triangular prisms leaves exactly the
+four edge-local partitions `222`, `24`, `33`, and `6`. Retain the Wave 42
+formula
+
+```text
+rank_F7(K39) = (25-2e) + 2 rank(F) + rank(D),  rank(F)>=e.
+```
+
+Local rank 27 can occur only through
+
+```text
+rank(F)=e,   rank(D)=2,
+```
+
+or
+
+```text
+rank(F)=e+1, rank(D)=0.
+```
+
+Complete exact enumeration excludes both mechanisms for `222`, `24`, and
+`6`. For `33`, where `F=0`, every symmetric rank-two residual has an
+invertible principal `2 x 2` minor; the complete principal-pivot/mate CSP has
+zero leaves. Independent reconstruction agrees on all 36 compared counts and
+streams and accepts planted type-`6` rank-zero and type-`33` rank-two
+controls. Hence every endpoint local block has rank at least 28, and
+principal-block monotonicity gives
+
+```text
+n3=4158  ==>  rank_F7(M)>=28.
+```
+
+Using `n3+3P=4158`, where `P` is the induced triangular-prism count, the
+contrapositive refinement is
+
+```text
+rank_F7(M)=27  ==>  P>=1  ==>  n3<=4155.
+```
+
+This does not give a strict general upper bound because the endpoint remains
+compatible with `28<=rank_F7(M)<=44`. The endpoint arithmetic census is 281
+pairs with `12<=r3<=44`, `28<=r7<=44`, and `r3+r7` even.
+
+### Wave 43 all-rank-33 lift reduction (`VERIFIED_SCOPED`)
+
+Under `n3=4158`, `r3=12`, and all edges type `222`, every one of the 264
+canonical triangle-free rank-33 lifts has:
+
+```text
+component sizes:       12 + 24
+fibre balances:        (4,4,4) + (8,8,8)
+forced Gram rank:      33
+rational kernel:       two fibre differences + one component contrast.
+```
+
+Cauchy equality forces every outside six-set to use two vertices from the
+small component and one nonmatching pair from each fibre. The five numerical
+support/component/mixed candidate censuses occur with multiplicities
+
+```text
+(118718,49736,45032): 48
+(131908,54560,49328): 48
+(132196,54736,49520): 24
+(132250,54560,49328): 48
+(132402,54648,49424): 96.
+```
+
+These are numerical classes, not asserted isomorphism classes. Every lift
+survives, and no simultaneous 60-column `B` or compatible outside graph `H`
+is known.
+
+### Wave 43 branch-15 two-triangle cuts (`VERIFIED_SCOPED`)
+
+At the frozen Wave 42 closure, the 924 coordinate-anchored triangle candidates
+split as `7` true, `157` false, and `760` unfixed. Exhausting all 288,420
+unordered pairs and 1,556,994 compatible matching visits gives 40,800
+distinct width-four prism clauses. None duplicates a Wave 37 or Wave 42 raw
+row. Closure satisfies 6,460 and leaves 34,340 active clauses, all with slack
+three. Sixty-four selected polarity probes yield no contradiction or new
+implication. This is a complete result for the named clause family only.
+
+### Waves 43--44 order-seven count-space controls (`VERIFIED_SCOPED`)
+
+The unrooted order-seven system has 208 locally admissible graph types, 62
+six-to-seven deletion rows, 19 Hamiltonian rows, and the integer variable
+`y=h11/4`. At `n3=4158`, `y=4158`, an exact nonnegative 99-support solution
+satisfies every row and totals
+
+```text
+binom(99,7)=14887031544.
+```
+
+All three seven-vertex types containing an induced triangular prism have
+count zero. This is a count vector, not a graph.
+
+Wave 44 adds seven vertex-root rows, 36 ordered-edge-root signature rows, and
+46 ordered-nonedge-root rows. For an ordered edge, the remaining 97 vertices
+have adjacency categories `(1,12,12,72)`; for an ordered nonedge they have
+categories `(2,12,12,71)`. Thus the right-hand side for signature
+`(a,b,c,d)` is respectively
+
+```text
+99*14*C(1,a)C(12,b)C(12,c)C(72,d)
+```
+
+or
+
+```text
+99*84*C(2,a)C(12,b)C(12,c)C(71,d).
+```
+
+The full 170-row system has coefficient rank 93 over each of
+`F_101,F_103,F_107`. Although the unrooted witness fails all three new rooted
+families, a different exact 91-support integer witness at `y=4158` satisfies
+all 170 rows. A floating-point MILP report of infeasibility is therefore
+refuted. Aggregate rooted counts still forget which overlapping subsets must
+be realized simultaneously; positive-semidefinite flag moments or explicit
+cross-block compatibility are the next missing layer.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

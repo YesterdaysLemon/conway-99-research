@@ -2083,3 +2083,115 @@ obligations:
       No graph or complete endpoint proof exists. The endpoint and Conway-99
       remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
       coverage is 0/33.
+
+  - id: O-WAVE43-ENDPOINT-RANK28-VERIFICATION
+    requirement: >-
+      Independently derive both local-rank-27 mechanisms, exhaust the endpoint
+      types 222, 24, 33, and 6 without importing discovery code, include
+      nonvacuous planted rank-zero and rank-two controls, compare complete
+      streams and branch counts, and retain the conditional status wall.
+    critical: true
+    status: PASS
+    evidence:
+      - "verification/wave43-rank28/protocol-freeze.md"
+      - "verification/wave43-rank28/independent-results.json"
+      - "verification/wave43-rank28/comparison.json"
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-rank28/package-manifest.sha256"
+    note: >-
+      Sixteen verifier tests, fifteen discovery tests, a complete
+      deterministic replay, and 36/36 comparison fields pass. The result
+      proves only n3=4158 implies rank_F7(M)>=28; rank 28 remains compatible
+      with the endpoint ceiling 44.
+
+  - id: O-WAVE43-ALL-RANK33-VERIFICATION
+    requirement: >-
+      Independently reconstruct all 4050 quotient normal forms, all 262144
+      lift masks, the 37378 triangle-free masks, the exact 264 rank-33 mask
+      stream, every forced Gram matrix, kernel, component balance, and all
+      216000 six-set triples per retained mask before discovery comparison.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave43-all-rank33-lifts/independent-results.json"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-all-rank33-lifts/package-manifest.sha256"
+    note: >-
+      All 264 complete per-mask records match and eight hostile/exact tests
+      pass. Every lift survives; no complete B or compatible H is supplied.
+
+  - id: O-WAVE43-BRANCH15-TWO-TRIANGLE-VERIFICATION
+    requirement: >-
+      Independently replay the frozen closure, enumerate all eligible
+      coordinate-triangle pairs and compatible matchings, compare both raw
+      and active clause streams, and replay every retained polarity probe
+      without promoting a propagation fixed point.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave43-branch15-two-triangle/independent-results.json"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-branch15-two-triangle/package-manifest.sha256"
+    note: >-
+      The verifier reproduces 40800 raw and 34340 active cuts plus all 64
+      probe records. There is no contradiction, branch closure, or endpoint
+      case closure.
+
+  - id: O-WAVE43-SEVEN-DECK-VERIFICATION
+    requirement: >-
+      Independently enumerate the complete unlabeled graph catalogues on six
+      and seven vertices, derive local admissibility and all deletion rows,
+      recompute all nineteen formulas, and validate the exact nonnegative
+      support with prism-zero and hostile-mutation controls.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave43-seven-deck-endpoint/protocol-freeze.md"
+      - "verification/wave43-seven-deck-endpoint/independent-result.json"
+      - "verification/wave43-seven-deck-endpoint/comparison.json"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+      - "verification/wave43-seven-deck-endpoint/package-manifest.sha256"
+    note: >-
+      The complete 62-class and 208-class catalogues, 81 equations, and
+      99-support witness pass exact replay. This proves feasibility only of
+      the named unrooted count relaxation, not graph realizability.
+
+  - id: O-WAVE44-ROOTED-COUNT-VERIFICATION
+    requirement: >-
+      Before discovery inspection, independently derive all vertex-root and
+      ordered edge/nonedge-root equations, reconstruct the complete 170-row
+      system, validate an exact integer witness, compare every published
+      coefficient and right side, add hostile mutations, and explicitly
+      reject numerical solver status as certificate authority.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave44-rooted-flags/protocol-freeze.md"
+      - "verification/wave44-rooted-flags/independent-results.json"
+      - "verification/wave44-rooted-flags/comparison.json"
+      - "verification/wave44-rooted-flags/audit.md"
+      - "verification/wave44-rooted-flags/package-manifest.sha256"
+    note: >-
+      The verifier reproduces all 170 equations, the 81-to-93 rank
+      progression, and the exact 91-support witness. The free HiGHS MILP
+      false-infeasibility result is retained but refuted. Only feasibility of
+      the aggregate rooted relaxation is promoted.
+
+  - id: O-WAVE43-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable endpoint certificate:
+      either a valid 99-vertex prism-free SRG or checked UNSAT proofs covering
+      all 33 refined endpoint cases. Conditional rank 28, all-rank33
+      necessary reductions, branch-15 cuts, solver UNKNOWN records, and
+      feasible count relaxations do not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+    note: >-
+      No graph or complete endpoint proof exists. The endpoint and Conway-99
+      remain UNKNOWN, the rigorous interval is 708<=n3<=4158, and proof
+      coverage is 0/33.

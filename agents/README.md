@@ -170,3 +170,29 @@ Wave 40 reports:
 - `2026-07-27-wave40-rank25-literature.md`: bounded primary-source audit for
   the exact rank-25 statement and equivalent terminology. Non-discovery does
   not establish novelty or priority.
+
+Wave 43 reports:
+
+- `2026-07-27-wave43-rank28-motif.md` and
+  `2026-07-27-wave43-type33-rank2.md`: discovery derivations excluding local
+  endpoint rank 27. Read them with the independent rank-28 verifier report.
+- `2026-07-27-wave43-all-rank33-lifts.md`: discovery extension of the
+  component and candidate-census reduction to all 264 rank-33 lifts; a
+  separate report records clean-room verification.
+- `2026-07-27-wave43-branch15-two-triangle.md`: complete named two-triangle
+  prism-cut family and null probes; a separate verifier preserves the scope.
+- `2026-07-27-wave43-joint-completion.md`: exact CNF/MILP formulations and
+  two nonterminal solver records.
+- `2026-07-27-wave43-alternative-spaces.md`: comparison of transportation,
+  rooted-flag, polynomial-calculus, multi-block rank, orthogonal-geometry,
+  and star-complement lanes.
+- `2026-07-27-wave43-seven-deck-verifier.md`: independent verification that
+  the unrooted order-seven count system is exactly feasible.
+- `2026-07-27-wave43-success-forecast.md`: bounded strategy and timing
+  forecast. Its probabilities are planning judgments, not evidence.
+
+Wave 44 report:
+
+- `2026-07-27-wave44-rooted-flags.md`: exact aggregate rooted-count witness
+  and retained false-HiGHS chronology. Read with the independent Wave 44
+  verifier; neither artifact is a graph or endpoint result.

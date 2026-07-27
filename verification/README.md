@@ -1329,3 +1329,29 @@ endpoint proof coverage:            0 of 33
 upper bound below 4158:             NOT PROVED
 n3=4158 / Conway-99 / novelty:      UNKNOWN
 ```
+
+## Wave 43 endpoint-rank and scoped reductions
+
+The Wave 43 clean-room packages are:
+
+- `wave43-rank28/`: independently exhausts every endpoint local rank-27
+  mechanism and verifies `n3=4158 => rank_F7(M)>=28`.
+- `wave43-all-rank33-lifts/`: independently reconstructs all 264 retained
+  masks and every forced-Gram and six-set census record.
+- `wave43-branch15-two-triangle/`: independently reconstructs 40,800 raw
+  cuts, 34,340 active cuts, and all 64 null probe records.
+- `wave43-seven-deck-endpoint/`: independently enumerates the complete
+  six- and seven-vertex catalogues and checks the exact unrooted count
+  witness.
+
+Each verifier has a protocol freeze, hostile controls, a run report, and a
+hash manifest. Only the rank-28 implication is a graph-theoretic theorem;
+the other three are scoped reductions or relaxation-feasibility controls.
+
+## Wave 44 aggregate rooted-count control
+
+`wave44-rooted-flags/` independently rebuilds the 170 exact equations and
+checks the 91-support integer witness. It also reproduces and explicitly
+refutes the free HiGHS false-infeasibility diagnostic by exact substitution
+and a fixed-witness solver control. The accepted scope is feasibility of the
+aggregate rooted relaxation only.

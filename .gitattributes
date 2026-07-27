@@ -22,3 +22,8 @@ verification/n3-60-closure/*.log -text -diff
 attempts/wave34-rooted-encoding/compression-audit.json -text -diff
 attempts/wave34-rooted-encoding/dimacs-audit.json -text -diff
 attempts/wave34-rooted-encoding/test-results.txt -text -diff
+
+# Wave 43 seven-deck verifier outputs are checksum-pinned raw Windows streams.
+# Preserve their exact bytes so the package manifest survives clean clones.
+verification/wave43-seven-deck-endpoint/comparison.json -text -diff
+verification/wave43-seven-deck-endpoint/independent-result.json -text -diff

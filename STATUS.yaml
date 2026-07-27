@@ -2744,4 +2744,129 @@ forty_second_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 42 verifies the universal rank_F7(M)>=27 necessity and two scoped conditional endpoint reductions. It removes r7=26 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_third_research_wave:
+  public_base_commit: "e28f90464d00b98d37672b0b2b23dba15399a6f2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: "rank_F7(M)>=27 VERIFIED"
+  conditional_endpoint_rank_status: VERIFIED
+  conditional_endpoint_rank_theorem: "n3=4158 implies rank_F7(M)>=28"
+  equivalent_rank27_consequence: "rank_F7(M)=27 implies an induced triangular prism and n3<=4155"
+  endpoint_modular_rank_pairs: 281
+  previous_endpoint_modular_rank_pairs: 297
+  endpoint_rank_types: "222,24,33,6"
+  endpoint_rank_discovery_even_result: "attempts/wave43-rank28-motif/exact-results.json"
+  endpoint_rank_discovery_even_result_sha256: "8878b40898ba9577ef01fb51ab5631632fb0e6bca3394c594b9c399d51385230"
+  endpoint_rank_discovery_type33_result: "attempts/wave43-type33-rank2/exact-results.json"
+  endpoint_rank_discovery_type33_result_sha256: "f9f023a7f5da0b51df1f825c83a2405de16a6e4d5245965332df4ace46e8bd8d"
+  endpoint_rank_independent_result: "verification/wave43-rank28/independent-results.json"
+  endpoint_rank_independent_result_sha256: "4e6bc6a04fb65b6dd2a873c9b446d305d65aaca46fecf8703da2886aa1859025"
+  endpoint_rank_comparison: "verification/wave43-rank28/comparison.json"
+  endpoint_rank_comparison_sha256: "3cc27ac01281d47c238748bda30602fc6fcbe38c19ae48ae073c0f47df5a1f43"
+  endpoint_rank_comparison_fields: "36/36"
+  all_rank33_lifts_status: VERIFIED_SCOPED
+  all_rank33_lifts: 264
+  all_rank33_component_sizes: "12+24"
+  all_rank33_fibre_balances: "4+8 in each fibre"
+  all_rank33_candidate_class_multiplicities: "48,48,24,48,96"
+  all_rank33_excluded_lifts: 0
+  all_rank33_discovery_result: "attempts/wave43-all-rank33-lifts/exact-results.json"
+  all_rank33_discovery_result_sha256: "31e2e5d767c02f9e520f33a980584e2ae24df8a4fc1bbd7b381797209b97e198"
+  all_rank33_independent_result: "verification/wave43-all-rank33-lifts/independent-results.json"
+  all_rank33_independent_result_sha256: "8d8482f30e456b06104eee6c0844452461f42c72897cb89dcdd13d2ae9387667"
+  branch15_two_triangle_status: VERIFIED_SCOPED
+  branch15_two_triangle_raw_clauses: 40800
+  branch15_two_triangle_active_clauses: 34340
+  branch15_two_triangle_failed_polarities: 0
+  branch15_two_triangle_discovery_result: "attempts/wave43-branch15-two-triangle/branch-15-two-coordinate-triangle-result.json"
+  branch15_two_triangle_discovery_result_sha256: "1ab1cc6ad5a3727fec508b8b3f2eb9b52d4034f6aa6768b25feef8f219c45ec8"
+  branch15_two_triangle_independent_result: "verification/wave43-branch15-two-triangle/independent-results.json"
+  branch15_two_triangle_independent_result_sha256: "564a8b390b083b0f69361506933c67a566245b3961eec8e2e0649724235be7bc"
+  joint_completion_status: UNKNOWN
+  joint_completion_candidate_variables: 45032
+  joint_completion_cnf_variables: 82532
+  joint_completion_cnf_clauses: 338528
+  joint_completion_milp_rows: 612
+  joint_completion_milp_nonzeros: 675480
+  joint_completion_pairing_result: "attempts/wave43-joint-completion/pairing-reduction.json"
+  joint_completion_pairing_result_sha256: "3adaf3653e2f4e6b43ba59a0b28ff6a877a636bcac543348a3d7901023553b52"
+  joint_completion_cadical_status: UNKNOWN
+  joint_completion_cadical_result_sha256: "ef21fa60fdbabe1f6139afaff3736485bc9b675119ee4f98da193ba4e0346e30"
+  joint_completion_milp_status: UNKNOWN
+  joint_completion_milp_result_sha256: "7c55dd27f9ad4840687e22645a8b12a88181a51071e213e48f879be36a95634a"
+  seven_deck_status: VERIFIED_SCOPED_EXACT_FEASIBLE
+  seven_deck_six_classes: 62
+  seven_deck_seven_classes: 208
+  seven_deck_equations: 81
+  seven_deck_support_size: 99
+  seven_deck_total: 14887031544
+  seven_deck_discovery_result: "attempts/wave43-seven-deck-endpoint/exact-results.json"
+  seven_deck_discovery_result_sha256: "06b498a736a511a7d6f5912bd4686e5d4eb30f4041477e3ee9cbc1704f1757c8"
+  seven_deck_independent_result: "verification/wave43-seven-deck-endpoint/independent-result.json"
+  seven_deck_independent_result_sha256: "e38f369d338fada4a561d48019f306511961dd1fd7816e54a12a9ecb09e69f3b"
+  seven_deck_comparison_sha256: "fde3a83d28a53b1fdbe56a010605d7aa1a7bee34811d8186e286ac7432ca2c64"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 43 verifies only a conditional endpoint rank-28 theorem and scoped reductions/positive controls. It supplies no graph, complete endpoint case closure, endpoint exclusion, strict general upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_fourth_research_wave:
+  public_base_commit: "e28f90464d00b98d37672b0b2b23dba15399a6f2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  rooted_count_status: VERIFIED_SCOPED_EXACT_FEASIBLE
+  variables: 209
+  total_rows: 170
+  unrooted_rows: 81
+  vertex_root_rows: 7
+  ordered_edge_root_rows: 36
+  ordered_nonedge_root_rows: 46
+  finite_field_rank_progression: "81,82,87,93"
+  witness_y_h11_over_4: 4158
+  witness_h11: 16632
+  witness_support_size: 91
+  witness_zero_classes: 117
+  witness_total: 14887031544
+  exact_nonzero_residuals: 0
+  discovery_result: "attempts/wave44-rooted-flags/exact-results.json"
+  discovery_result_sha256: "c41b194d2d4ae8121883d84ba4f5011f48336a58a0dd4f5cebf9ab560ee3ae19"
+  row_system: "attempts/wave44-rooted-flags/row-system.json"
+  row_system_sha256: "fb81601a9c97fc6860702403e56da65c2ba8fd69ee6a61007a0da53cade1d722"
+  rooted_witness: "attempts/wave44-rooted-flags/rooted-witness.json"
+  rooted_witness_sha256: "9be153b2487c3e07e20bffeb7ee6c890e69caa6e8d6b6e2936fbc5d8927bd5b9"
+  discovery_manifest: "attempts/wave44-rooted-flags/package-manifest.sha256"
+  discovery_manifest_sha256: "290d23316f09ca9ba6509363de04eb03ad613598333b24ce2183a6038a585ed2"
+  independent_result: "verification/wave44-rooted-flags/independent-results.json"
+  independent_result_sha256: "545ca76fed3f45aabc21ec2eeec291cc2eb93ab78346b8aaa213f751c6fa29c7"
+  comparison: "verification/wave44-rooted-flags/comparison.json"
+  comparison_sha256: "6d4b8370d51a8a8dac979087b4c7ee173d9852a8e255e46715baaf683afe910b"
+  verifier_manifest: "verification/wave44-rooted-flags/package-manifest.sha256"
+  verifier_manifest_sha256: "fe9d4d4c1fa4e3376f39cfcf7197ffd584e6671632869571dfdd4031c594f76b"
+  semantic_coefficients_compared: 35530
+  semantic_rhs_values_compared: 170
+  scipy_free_milp_status: FALSE_INFEASIBLE_REFUTED
+  scipy_status_used_as_evidence: false
+  wave43_44_discovery_tests_total: 53
+  wave43_44_independent_tests_total: 43
+  wave43_44_tests_total: 96
+  wave43_44_package_manifests: 12
+  wave43_44_manifest_entries: 132
+  public_checkpoint: "logs/2026-07-27-wave44-public-checkpoint.json"
+  public_checkpoint_sha256: "0661add10f1be5a15b133a75b95cfd44eca1d14c68f6d104a9095bd4e678bee1"
+  integration_audit: "verification/2026-07-27-wave44-integration-audit.md"
+  integration_audit_sha256: "470fa94cb632770daa3ddb24150b718e1cfd05834262ca5f4b14edca51afdd48"
+  orchestrator_decision: "verification/2026-07-27-wave44-orchestrator.md"
+  orchestrator_decision_sha256: "efb1ef15f20fd0f393ff657db2a06c870489b9a4d017aaef665c9e1608ec4c95"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 44 proves exact feasibility only of an aggregate rooted order-seven count relaxation. The witness is not a graph or endpoint evidence, overlap compatibility is absent, the general upper bound remains 4158, and Conway-99 remains UNKNOWN."
 last_updated: 2026-07-27
