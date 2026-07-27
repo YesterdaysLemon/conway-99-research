@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-24
+as_of: 2026-07-26
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -1526,3 +1526,135 @@ obligations:
       No complete positive or negative endpoint certificate exists.
       Conway-99, n3=708, and novelty remain UNKNOWN; the strongest
       conditional bound remains n3>=708.
+
+  - id: O-WAVE35-SPECTRAL-VERIFICATION
+    requirement: >-
+      Independently reconstruct the conditional n3=4158 endpoint profile,
+      signed-projector polynomial and Smith form, reflection identity, all
+      mixed-Schur values, compression and scalar calculations, local
+      controls, and the exact 45-principal-minor wording boundary without
+      importing discovery-side calculations.
+    critical: true
+    status: PASS_SCOPED_WITH_WORDING_QUALIFIER
+    evidence:
+      - "verification/wave35-n3-upper-spectral/independent_check.py"
+      - "verification/wave35-n3-upper-spectral/independent-results.json"
+      - "verification/wave35-n3-upper-spectral/test_independent_check.py"
+      - "verification/wave35-n3-upper-spectral/audit.md"
+      - "verification/wave35-n3-upper-spectral/run-report.yaml"
+    note: >-
+      Ten independent tests and fourteen submitted replay tests pass. The
+      principal condition is support degree sum_j |S_ij|<=3, and the
+      nonadjacent 7-by-7 object is only a relaxed witness. No endpoint
+      matrix, exclusion, or improved upper bound is obtained.
+
+  - id: O-WAVE35-COMBINATORIAL-AND-CONSTRUCTION-VERIFICATION
+    requirement: >-
+      Independently reconstruct the one-triangle block Gram reduction, the
+      84 rooted prism-forbidding units, their complete interaction with the
+      normalized 12-way N3 cover, and the four local OPB relaxations; then
+      distinguish exact necessary reductions from restricted controls and
+      non-evidentiary solver stops.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "agents/2026-07-26-wave35-n3-4158-combinatorial.md"
+      - "agents/2026-07-26-wave35-n3-upper-triple-overlap.md"
+      - "attempts/wave35-n3-4158-combinatorial/run-report.yaml"
+      - "attempts/wave35-n3-upper-triple-overlap/run-report.yaml"
+    note: >-
+      Discovery-side tests pass, but no separate verifier package currently
+      promotes these lanes to VERIFIED. The pairwise control, local OPB
+      models, timeouts, and conflict-budget stops do not resolve the
+      endpoint.
+
+  - id: O-WAVE35-CONTINUATION
+    requirement: >-
+      Produce a complete independently verified certificate that excludes
+      n3=4158, constructs the endpoint, or proves a stronger general upper
+      bound. Sufficient routes include a checked resolution of all five
+      surviving rooted branches, a global incompatibility proof for the
+      one-triangle block system, or a 45-index support-degree obstruction.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave35-n3-upper-spectral/audit.md"
+      - "attempts/wave35-n3-upper-triple-overlap/failed-routes.md"
+      - "attempts/wave35-n3-4158-combinatorial/failed-routes.md"
+    note: >-
+      No complete positive or negative endpoint certificate exists. The
+      general interval remains 708<=n3<=4158 and Conway-99 remains UNKNOWN.
+
+  - id: O-WAVE36-MODULAR-AND-POLAR-VERIFICATION
+    requirement: >-
+      Independently reconstruct the conditional endpoint reflection over
+      F_3 and F_7, its reciprocal Smith pairing and rank parity, the
+      symmetric-cube rank floor, the ternary projective distinctness
+      argument, both finite orthogonal determinant classes, the delicate
+      degenerate nonadjacent-pair count, and every exact spectral-mixing
+      inequality.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave36-modular-reflection/audit.md"
+      - "verification/wave36-modular-reflection/independent-results.json"
+      - "verification/wave36-modular-reflection/run-report.yaml"
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-ternary-polar-bound/independent-results.json"
+      - "verification/wave36-ternary-polar-bound/run-report.yaml"
+    note: >-
+      The verified endpoint necessities are rank_F3(M)>=12 and
+      rank_F7(M)>=11, with reciprocal Smith factors and the nonsquare
+      rank-twelve ternary class excluded. Surviving modular shapes are not
+      matrices or graphs, and the endpoint remains UNKNOWN.
+
+  - id: O-WAVE36-BLOCK-COMPATIBILITY-VERIFICATION
+    requirement: >-
+      Independently reconstruct all three one-triangle block equations, the
+      pointwise mixed-equation cut and restricted census, component balance
+      and pattern classification, characteristic-polynomial transfer, and
+      the resulting connectivity, triangle, and four-cycle requirements on
+      H without importing discovery code or promoting bounded solver
+      telemetry.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave36-block-compatibility/audit.md"
+      - "verification/wave36-block-compatibility/independent-results.json"
+      - "verification/wave36-block-compatibility/run-report.yaml"
+    note: >-
+      The necessary equations and counts pass. The 151712 census is
+      individual-column only, and no simultaneous B/H completion,
+      contradiction, graph, or checked UNSAT certificate exists.
+
+  - id: O-WAVE36-LITERATURE-ATTRIBUTION
+    requirement: >-
+      Audit target-specific and general prior art for the Wave 36 reflection,
+      modular ranks, ternary orthogonality argument, and reciprocal Smith
+      pairing, and prevent a bounded source nonhit from being promoted to a
+      novelty or priority claim.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "agents/2026-07-26-wave36-literature-audit.md"
+      - "attempts/wave36-literature-audit/source-query-metadata.json"
+    note: >-
+      Evans's 2023 general polynomial reproduces the ternary cutoff after the
+      Wave 36 substitution. Exact target-specific matches were not located,
+      but novelty and priority remain UNKNOWN.
+
+  - id: O-WAVE36-CONTINUATION
+    requirement: >-
+      Produce a complete independently verified certificate that excludes
+      n3=4158, constructs the endpoint, or proves a stronger general upper
+      bound. Arithmetic survivors, individual block censuses, and bounded
+      solver stops do not satisfy this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave36-modular-reflection/audit.md"
+      - "verification/wave36-ternary-polar-bound/audit.md"
+      - "verification/wave36-block-compatibility/audit.md"
+    note: >-
+      The endpoint and Conway-99 remain UNKNOWN, and the rigorous interval
+      remains 708<=n3<=4158.

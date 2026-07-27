@@ -3,13 +3,13 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-24
+  through: 2026-07-26
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "Current searched sources and the independently audited external packages do not resolve either unrestricted Wave 34 endpoint, but a bounded search cannot prove openness, novelty, or priority."
-  latest_audit: "verification/wave34-external-source-audit/audit.md"
-  latest_audit_sha256: "6e57da410dad58447f9e85229f12d3cea215a90d3bb9140794938e872067a2ce"
-  source_query_ledger: "attempts/wave34-current-literature/query-ledger.json"
-  source_query_ledger_sha256: "ece460c54282b45ce013083756bc421ea2427d91800b65e16f9049734225843d"
+  caveat: "The Wave 36 audit found established ambient orthogonality-graph theory and an Evans theorem reproducing the ternary cutoff after the target-specific substitution. No exact target-specific resolution was located, but a bounded search cannot prove openness, novelty, or priority."
+  latest_audit: "agents/2026-07-26-wave36-literature-audit.md"
+  latest_audit_sha256: "c21544dafc1eedecd6232f9c14a4e05cdb2af418cd0eebb5bc571e4b8d04ee28"
+  source_query_ledger: "attempts/wave36-literature-audit/source-query-metadata.json"
+  source_query_ledger_sha256: "a659294c30f925a7f6f65202524b4e89f0b8dc6350357c6c50a9f03b337e0fe6"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -20,6 +20,8 @@ literature_audit:
   exact_wave32_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave33_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave34_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave36_target_specific_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  wave36_general_prior_art_overlap: EVANS_2023_REPRODUCES_TERNARY_CUTOFF
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
@@ -2173,4 +2175,115 @@ thirty_fourth_research_wave:
   clean_clone_report: "verification/2026-07-24-wave34-clean-clone.md"
   clean_clone_report_sha256: "ebc9e13ea0262f69e8edbe9d88b044d01e45147989af6ff14229f34aaa7ef0d3"
   caveat: "Wave 34 verifies an unrestricted labeled rooted encoding, a strict rooted reparameterization and necessary duplicate-free single-column domain, scoped actual-incidence rootless lemmas and moment bounds, and bounded external-source characterizations. It supplies no graph, no complete-domain UNSAT proof, no compatible rooted 15-column/projector realization, no rootless mixed-motif forcing theorem, no endpoint resolution, no n3=708 exclusion, no Conway-99 resolution, and no novelty or priority result."
-last_updated: 2026-07-24
+thirty_fifth_research_wave:
+  public_base_commit: "c3672c43ceb1317dc7fb1d1637800a08e129664a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_identity: "n3+3P=4158"
+  endpoint_triangular_prisms: 0
+  endpoint_triangle_profile: "a0,a1,a2,a3=32,144,36,0"
+  spectral_verdict: VERIFIED_SCOPED_WITH_WORDING_QUALIFIER
+  signed_matrix_identity: "S^2=13S+68I"
+  signed_matrix_spectrum: "17^44,(-4)^187"
+  signed_matrix_smith_form: "diag(1^44,4^143,68^44)"
+  reflection_identity: "C=2S-13I; C^2=441I"
+  principal_minor_target: "find 45 indices with max_i sum_j |S_ij|<=3"
+  principal_minor_target_constructed: false
+  spectral_discovery_tests: 14
+  spectral_independent_tests: 10
+  spectral_result: "attempts/wave35-n3-upper-spectral/exact-results.json"
+  spectral_result_sha256: "ca1df07bede11642fb1639a2ae554c1a31ce9a58424d5b3e5031c90ad550a194"
+  spectral_audit: "verification/wave35-n3-upper-spectral/audit.md"
+  spectral_independent_result: "verification/wave35-n3-upper-spectral/independent-results.json"
+  spectral_independent_result_sha256: "c704d8fce8f1d5975204b9a06ada0098c66fbdb9e0de8016a1ff89d86e691305"
+  combinatorial_status: DERIVED_NOT_INDEPENDENTLY_PROMOTED
+  combinatorial_partition: "3+36+60"
+  combinatorial_valid_restricted_block_types: 183980
+  combinatorial_pairwise_control: CANDIDATE_EXACTLY_CHECKED
+  combinatorial_tests: 9
+  combinatorial_result: "attempts/wave35-n3-4158-combinatorial/exact-results.json"
+  combinatorial_result_sha256: "07e1469e7690bd630385e734d387fa13a1eb537f0c578bf31270c3b7b8824b67"
+  rooted_endpoint_unit_count: 84
+  rooted_normalized_immediate_conflict_branches: "1,2,3,6,7,9,11"
+  rooted_normalized_surviving_branches: "4,5,8,10,12"
+  rooted_scout_status: BUDGET_UNKNOWN_ALL_FIVE
+  rooted_reduction: "attempts/wave35-n3-upper-triple-overlap/root-endpoint-reduction.json"
+  rooted_reduction_sha256: "7551c7b9d956705e41f9feb42d76d3bb5ab60dab0b46416fa9c0e58e5346a46a"
+  local_extension_partitions: "2+2+2;2+4;3+3;6"
+  local_extension_masks_per_partition: 5500
+  local_extension_binary_variables_per_partition: 5184
+  local_extension_equality_rows_per_partition: 380
+  local_extension_tests: 5
+  local_extension_lp_status: FEASIBLE_FRACTIONAL_ALL_FOUR
+  local_extension_integer_status: TIMEOUT_UNKNOWN_NO_INCUMBENT_ALL_FOUR
+  local_extension_bounded_scout: "attempts/wave35-n3-upper-triple-overlap/local-extension-bounded-scout.json"
+  local_extension_bounded_scout_sha256: "8922fc4d0e5e056c69685d42377f71ed70d0bf17574e4a6a7219ce1ad0794685"
+  solver_evidence_promoted: NONE
+  caveat: "Wave 35 verifies scoped conditional spectral and Smith identities, derives but does not independently promote a one-triangle incidence reduction and an 84-unit five-branch rooted reduction, and publishes four necessary local OPB relaxations. Every solver run stopped at a budget or time limit. It supplies no graph, no checked UNSAT proof, no endpoint construction or exclusion, no upper bound below 4158, and no Conway-99 resolution."
+thirty_sixth_research_wave:
+  public_base_commit: "697cc02bcbe16b69aaf08822298e03c66329c64c"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  modular_reflection_status: VERIFIED_SCOPED
+  reciprocal_smith_pairing: "d_i*d_(232-i)=441"
+  ternary_rank_floor: "rank_F3(M)>=12"
+  ternary_rank_twelve_survivor: SQUARE_DETERMINANT_CLASS_ONLY
+  characteristic_seven_rank_floor: "rank_F7(M)>=11"
+  modular_rank_parity: "rank_F3(M)+rank_F7(M) is even"
+  modular_discovery_tests: 11
+  modular_independent_tests: 11
+  modular_result: "attempts/wave36-modular-reflection/exact-results.json"
+  modular_result_sha256: "5efcd507565a55fcdc3323448bf123ebec31ddc6eb9506a83258eff3c1468607"
+  modular_independent_result: "verification/wave36-modular-reflection/independent-results.json"
+  modular_independent_result_sha256: "290d908ba2dbf70a411a432c0384ba98317dbe868c0177c721617bdad52eff23"
+  modular_audit: "verification/wave36-modular-reflection/audit.md"
+  modular_audit_sha256: "002a44ab3f5a7841e153d9e6317cbd149333b1e034c1fb361bd8ac02d28ad48a"
+  ternary_polar_discovery_tests: 10
+  ternary_polar_independent_tests: 12
+  ternary_polar_result: "attempts/wave36-ternary-polar-bound/exact-results.json"
+  ternary_polar_result_sha256: "7d7c15ad99952ee3ca70582a887e771331156b8ef8e50524d296f1dc15f425a1"
+  ternary_polar_independent_result: "verification/wave36-ternary-polar-bound/independent-results.json"
+  ternary_polar_independent_result_sha256: "38ec002886c2a9b38f8d11824dc79e07147b16386dcc3449064633efb630beeb"
+  ternary_polar_audit: "verification/wave36-ternary-polar-bound/audit.md"
+  ternary_polar_audit_sha256: "7446391adceff09a06293f4248a751ceef2bf47d546ea58004f096960e47c88c"
+  block_compatibility_status: VERIFIED_SCOPED_NECESSITIES
+  restricted_columns_before_mixed_cut: 183980
+  restricted_columns_after_mixed_cut: 151712
+  restricted_columns_removed: 32268
+  surviving_component_partitions: "[12];[4,8];[6,6];[4,4,4]"
+  compatible_h_connectivity: CONNECTED
+  compatible_h_triangles: 32
+  compatible_h_four_cycles: "171+C4(A_X)"
+  block_discovery_tests: 10
+  block_independent_tests: 12
+  block_result: "attempts/wave36-block-compatibility/exact-results.json"
+  block_result_sha256: "adab814da773e5a4ce2b98b4b8aa20027dbec9d93d446d3e1e85adaa899339a9"
+  block_independent_result: "verification/wave36-block-compatibility/independent-results.json"
+  block_independent_result_sha256: "b92ee5cde6a63ba3cce09bc2eae1518979aea09c4f5db39789b65f117b0768c4"
+  block_audit: "verification/wave36-block-compatibility/audit.md"
+  block_audit_sha256: "1f3856bc91d4ba7da53fc55e2f90528848683626191b9f8f4091c9c46cea2c96"
+  mathematical_tests_total: 66
+  integration_status: PASS
+  integration_audit: "verification/2026-07-26-wave36-integration-audit.md"
+  integration_audit_sha256: "70b0ac10851542f2b1617b80c477a34d8f4b2a8619d693aba5560b306ae183a5"
+  orchestrator_decision: "verification/2026-07-26-wave36-orchestrator.md"
+  orchestrator_decision_sha256: "73d2cc67cf62de10fa4dfcefaf177b7673cca6986921ef56ad451a963a8926ba"
+  literature_status: CITED_WITH_GENERAL_PRIOR_ART_OVERLAP
+  literature_audit: "agents/2026-07-26-wave36-literature-audit.md"
+  literature_audit_sha256: "c21544dafc1eedecd6232f9c14a4e05cdb2af418cd0eebb5bc571e4b8d04ee28"
+  literature_query_metadata: "attempts/wave36-literature-audit/source-query-metadata.json"
+  literature_query_metadata_sha256: "a659294c30f925a7f6f65202524b4e89f0b8dc6350357c6c50a9f03b337e0fe6"
+  novelty_status: UNKNOWN
+  solver_evidence_promoted: NONE
+  caveat: "Wave 36 verifies conditional modular, ternary-polar, and one-triangle block necessities. Evans's prior theorem reproduces the ambient ternary cutoff after the target-specific substitution. No endpoint reflection or block system is constructed, no endpoint exclusion or upper-bound improvement follows, and Conway-99 and novelty remain UNKNOWN."
+last_updated: 2026-07-26

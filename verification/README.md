@@ -590,6 +590,33 @@ general even rank-44 scaled-dual form: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
 
+## Wave 36 conditional endpoint necessities
+
+- `wave36-modular-reflection/` independently reconstructs the reciprocal
+  Smith form, parity and modular-rank restrictions, and the
+  characteristic-seven symmetric-cube argument. Its 11 independent tests
+  and the submitted 11 tests pass.
+- `wave36-ternary-polar-bound/` independently reconstructs both determinant
+  classes of the ternary orthogonality graph, including the degenerate
+  nonadjacent-span count, and verifies the exact mixing inequalities. Its 12
+  independent tests and the submitted 10 tests pass.
+- `wave36-block-compatibility/` independently derives all three block
+  equations, censuses, component patterns, characteristic transfer,
+  connectivity, triangle count, and four-cycle identity. Its 12 independent
+  tests and the submitted 10 tests pass.
+
+Together these are 66 passing mathematical tests. They verify only their
+conditional scopes: no endpoint graph, contradiction, checked UNSAT proof,
+or upper bound below 4158 is promoted.
+
+The fresh
+[Wave 36 integration audit](2026-07-26-wave36-integration-audit.md) checks
+all six suites and exact regenerations, hashes, evidence paths, local links,
+privacy patterns, and status walls. The
+[orchestrator decision](2026-07-26-wave36-orchestrator.md) records the
+promoted scope, Evans prior-art attribution, and deliberate exclusion of the
+still-active rooted SAT scout.
+
 ## Wave 34 exact encoding and actual-incidence continuation
 
 Wave 34 has separated Stage 1, candidate, Stage 2, and crosscheck packages.
@@ -635,6 +662,31 @@ rootless local/global bounds:      VERIFIED or DERIVED scoped
 rootless motif forcing/avoidance:  UNKNOWN
 n3=708 / Conway-99 / novelty:      UNKNOWN
 ```
+
+## Wave 35 prism-free upper-endpoint verification
+
+The
+[independent spectral audit](wave35-n3-upper-spectral/audit.md)
+reconstructs the conditional `n3=4158` signed-projector polynomial, Smith
+form, reflection identity, all forty mixed-Schur values, compression and
+incidence-scalar calculations, and the 45-principal-minor criterion without
+importing discovery-side code or JSON.
+
+Its verdict is `VERIFIED_SCOPED_WITH_WORDING_QUALIFIER`. The support-degree
+criterion is `sum_j |S_ij|<=3`, not an absolute algebraic row-sum condition,
+and the nonadjacent 7-by-7 object is only a relaxed witness. Ten independent
+tests pass and all fourteen submitted tests replay.
+
+```text
+conditional spectral and Smith identities: VERIFIED scoped
+endpoint matrix or 45-set:                  NOT CONSTRUCTED
+upper bound below 4158:                     NOT PROVED
+n3=4158 / Conway-99:                        UNKNOWN
+```
+
+The combinatorial and construction packages are indexed in `agents/` and
+`attempts/`; their focused discovery tests pass, but a separate independent
+promotion package has not yet been completed.
 
 ## Wave 29 single-lattice endpoint exclusion
 

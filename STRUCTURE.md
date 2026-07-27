@@ -2340,6 +2340,252 @@ details are in the
 [rootless audit](verification/wave34-rootless-global/audit.md), and
 [orchestrator ledger](verification/2026-07-24-wave34-orchestrator-corrections.md).
 
+## Wave 35 prism-free upper endpoint
+
+Let `P` be the number of induced triangular prisms. Exact opposite-edge
+double counting gives
+
+```text
+n3 + 3P = 4158.
+```
+
+Hence `n3=4158` if and only if `P=0`. The endpoint forces every graph triangle
+to have cross-edge profile
+
+```text
+(a0,a1,a2,a3)=(32,144,36,0).
+```
+
+### Signed projector (`VERIFIED SCOPED`)
+
+For the rank-44 integral projector scaling `M`, put `S=M-4I`. Conditional on
+the endpoint,
+
+```text
+S^2=13S+68I,
+S1=-4*1,
+spec(S)=17^44,(-4)^187,
+SNF(S)=diag(1^44,4^143,68^44).
+```
+
+Equivalently,
+
+```text
+C=2S-13I=2M-21I,
+C^2=441I.
+```
+
+The independent verifier reconstructed these identities, all 40 mixed-Schur
+values, the compression slack, and the scalar incidence bounds without
+importing discovery code. It found no contradiction. Since `rank(M)=44`,
+every 45-by-45 principal block is singular. A 45-set `X` satisfying
+
+```text
+max_i sum_{j in X} |S_ij| <= 3
+```
+
+would make `4I+S[X]` strictly diagonally dominant and contradict singularity.
+The absolute values are essential; an absolute algebraic row-sum condition is
+false.
+
+### One-triangle incidence reduction (`DERIVED`)
+
+Fix a triangle `T` and partition the vertices into
+
+```text
+T | X | Y = 3 | 36 | 60.
+```
+
+The neighbor counts into the three cells are
+
+```text
+X vertex: 1,3,10
+Y vertex: 0,6,8.
+```
+
+Thus `G[X]` is cubic and triangle-free, `G[Y]` is 8-regular, and the `X-Y`
+bipartite graph has degrees `(10,6)`. The three 12-point fibres inside `X`
+each induce a perfect matching. Every `y in Y` determines a six-point block
+meeting every fibre twice. If `B` is their 36-by-60 incidence matrix, `R` is
+the three-fibre indicator matrix, and `A_X` is the adjacency matrix of
+`G[X]`, then
+
+```text
+B B^T = 12I - A_X + 2J - R R^T - A_X^2.
+```
+
+This is a finite exact one-triangle feasibility problem. A restricted
+pairwise control exists, but no simultaneous 60-block system or
+cross-triangle compatibility certificate is known.
+
+### Wave 36 modular endpoint restrictions (`VERIFIED SCOPED`)
+
+The integral reflection has stronger finite-field consequences than the
+initial endpoint report recorded.  Put
+
+```text
+r3=rank_F3(M)=rank_F3(C),
+r7=rank_F7(M)=rank_F7(C).
+```
+
+Independent reconstruction proves
+
+```text
+r3>=12,
+r7>=11,
+r3+r7=0 (mod 2).
+```
+
+If `d1|...|d231` are the Smith factors of `C`, then
+
+```text
+d_i d_(232-i)=441.
+```
+
+Consequently the complete Smith form is fixed once `(r3,r7)` is fixed.  The
+rank-seven bound comes from the entrywise-cubic identity
+
+```text
+C^(o3)=4(I+C) (mod 7).
+```
+
+The right side is invertible because `C^2=0 (mod 7)`.  Thus 231 pure
+symmetric cubes are independent and
+
+```text
+binom(r7+2,3)>=231.
+```
+
+The sharper ternary bound uses finite orthogonal geometry.  A symmetric
+rank factorization modulo three writes
+
+```text
+C=V H V^T.
+```
+
+Its 231 factor rows give distinct norm-two projective points, each
+orthogonal to exactly 162 of the others.  In either determinant class, the
+ambient norm-two projective orthogonality graph is strongly regular.  If it
+has parameters `(v,k,lambda,mu)` and positive nonprincipal eigenvalue
+`theta`, an induced 231-point, 162-regular subgraph would require
+
+```text
+162 <= (231k+(v-231)theta)/v.
+```
+
+Exact point counts make the right side smaller than 162 in both determinant
+classes through dimension eleven.  At dimension twelve the nonsquare class
+still has upper bound 158, while the square class survives with upper bound
+`4149/13`.  Hence `r3>=12`, and equality requires the square determinant
+class.  These are conditional arithmetic restrictions, not an endpoint
+matrix or an upper-bound improvement.
+
+### Wave 36 one-triangle strengthening (`VERIFIED SCOPED`)
+
+Write `H=A_Y` for the 60-vertex graph in the one-triangle partition.  The
+three exact block equations are
+
+```text
+B B^T       = 12I - A_X + 2J - R R^T - A_X^2,
+B H         = 2J - (I+A_X)B,
+B^T B + H^2 = 12I - H + 2J.
+```
+
+For a column `b` of `B`, the mixed equation forces
+
+```text
+d(b)=2*1-(I+A_X)b>=0.
+```
+
+Besides requiring the selected vertices to induce a matching, this says
+that no unselected `X` vertex has three selected neighbors.  On the frozen
+Wave 35 restricted core, this exact cut reduces the individual-block census
+from
+
+```text
+183980 to 151712.
+```
+
+It is still only an individual-column census.
+
+If a connected component of `A_X` contains `m` vertices in each of the
+three fibres, every six-point block meets that component in exactly `m/2`
+points.  Thus every `m` is even.  The `m=2` component is `K3,3`, which
+violates the target common-neighbor rule, leaving exactly
+
+```text
+[12], [4,8], [6,6], [4,4,4]
+```
+
+as the possible component-size partitions in units of one vertex per
+fibre.
+
+Finally, if `c` is the number of components and
+
+```text
+chi_X(t)=(t-3)^c t^2 f(t),
+```
+
+then any compatible `H` must satisfy
+
+```text
+chi_H(t)=(-1)^(34-c)
+         (t-8)(t-3)^18(t+4)^(7+c) f(-1-t).
+```
+
+In particular `H` is connected, has exactly 32 triangles, and has
+
+```text
+C4(H)=171+C4(A_X).
+```
+
+No simultaneous 60-column `B`, compatible `H`, or contradiction is known.
+
+### Rooted and one-edge construction reductions (`DERIVED` / `CANDIDATE`)
+
+Fix a root `o`, whose 14 neighbors are seven mate pairs `(a_i,b_i)`. For
+every other root-neighbor coordinate `r`, the residual edge
+
+```text
+{a_i,r} -- {b_i,r}
+```
+
+would close a prism with `{o,a_i,b_i}`. Therefore `P=0` imposes exactly
+`7*12=84` negative residual-edge units. Intersecting them with the verified
+12-way normalized `N3` cover immediately removes branches
+
+```text
+1,2,3,6,7,9,11
+```
+
+and leaves exactly
+
+```text
+4,5,8,10,12.
+```
+
+Around one graph edge, the union of the two endpoint fibre matchings has one
+of four cycle partitions:
+
+```text
+2+2+2, 2+4, 3+3, 6.
+```
+
+For each partition, exhaustive neighborhood enumeration gives 5,500 masks,
+of which 5,184 remain as binary variables after exact moment reduction. The
+exported local OPB models have 380 equality rows. They omit all edges among
+the 72 outside vertices and therefore are necessary relaxations only.
+
+All five rooted branch scouts stopped at conflict budgets. All four local
+integer scouts stopped at time limits without incumbents. No result is a
+proof or counterexample. The rigorous interval remains
+
+```text
+708 <= n3 <= 4158,
+```
+
+and both `n3=4158` and Conway-99 remain `UNKNOWN`.
+
 Each of the two central diagonal nonedges of the four-cycle in any `N3`
 2-percolates the whole graph. The seed first infects the other two vertices of
 the four-cycle and then the two remaining triangle vertices. The closure classification of

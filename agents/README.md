@@ -90,3 +90,35 @@ Wave 34 reports:
   source audit. Kuber is conditional without a graph bridge; Harrison lacks
   theorem-ladder proof bodies; Selub reports no solver result; no external
   graph theorem is imported.
+
+Wave 35 reports:
+
+- `2026-07-26-wave35-n3-upper-spectral.md`: discovery-side exact signed
+  projector, Smith-form, Schur, compression, and principal-minor attack on
+  the conditional `n3=4158` endpoint. Read it with the independent verifier;
+  no upper-bound improvement is claimed.
+- `2026-07-26-wave35-n3-4158-combinatorial.md`: proof-A derivation of the
+  `3+36+60` one-triangle incidence reduction and a restricted pairwise
+  positive control. Simultaneous block compatibility remains `UNKNOWN`.
+- `2026-07-26-wave35-n3-upper-triple-overlap.md`: construction-side 84-unit,
+  five-branch rooted reduction and four deterministic one-edge local OPB
+  relaxations. Every bounded solver stop is non-evidentiary.
+
+Wave 36 reports:
+
+- `2026-07-26-wave36-modular-reflection.md`: discovery-side reciprocal Smith
+  pairing, modular rank restrictions, and characteristic-seven symmetric-cube
+  bound for the conditional prism-free endpoint. Read it with the independent
+  audit; arithmetic survivors are not endpoint matrices.
+- `2026-07-26-wave36-ternary-polar-bound.md`: discovery-side ternary
+  projective-point reduction and exact orthogonality-graph mixing bound. The
+  independent verifier promotes `rank_F3(M)>=12` and excludes only the
+  nonsquare determinant class at equality.
+- `2026-07-26-wave36-block-compatibility.md`: all three one-triangle block
+  equations, the mixed-equation individual-column cut, component balance,
+  characteristic transfer, and necessary invariants of a compatible `H`.
+  No simultaneous block system or endpoint exclusion is supplied.
+- `2026-07-26-wave36-literature-audit.md`: bounded prior-art audit. Evans's
+  2023 general theorem reproduces the ternary cutoff after the Wave 36
+  substitution; exact target-specific matches were not located, and novelty
+  and priority remain `UNKNOWN`.
