@@ -617,6 +617,35 @@ privacy patterns, and status walls. The
 promoted scope, Evans prior-art attribution, and deliberate exclusion of the
 still-active rooted SAT scout.
 
+## Wave 37 artifact and structural verification
+
+- `wave37-rooted-branches/` reconstructs the fixed-triangle prism lemma,
+  endpoint units, exact parent/refined scope, and all five deterministic
+  clause catalogs without importing the discovery implementation. The
+  branch-4 `BUDGET_UNKNOWN` record is explicitly assigned no mathematical
+  evidentiary value.
+- `wave37-polar-strengthen/` independently derives the ternary
+  self-orthogonal code consequences, Schur-square rank ceilings, corrected
+  signed-degenerate-triple count, oriented ternary controls, and both
+  characteristic-seven rank-eleven association schemes. It includes an
+  explicit hostile counterexample to the refuted collinearity inference.
+- `wave37-proof-producing-endpoint/` independently reconstructs every
+  branch-15 OPB constraint byte-for-byte, verifies the metadata and
+  deterministic gzip round trip, and records parser acceptance by the pinned
+  Exact binary. Its promotion is formula-artifact-only.
+
+The verified scope is deliberately narrow:
+
+```text
+fixed-triangle P=0 clause catalogs: VERIFIED scoped
+ternary/code/degenerate-space restrictions: VERIFIED scoped
+branch-15 OPB bytes and semantics: VERIFIED artifact-only
+branch-15 satisfiability: UNKNOWN
+other 32 endpoint cases: not represented by that OPB
+upper bound below 4158: NOT PROVED
+Conway-99: UNKNOWN
+```
+
 ## Wave 34 exact encoding and actual-incidence continuation
 
 Wave 34 has separated Stage 1, candidate, Stage 2, and crosscheck packages.

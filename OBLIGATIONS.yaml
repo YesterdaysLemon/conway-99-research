@@ -1658,3 +1658,44 @@ obligations:
     note: >-
       The endpoint and Conway-99 remain UNKNOWN, and the rigorous interval
       remains 708<=n3<=4158.
+
+  - id: O-WAVE37-INDEPENDENT-VERIFICATION
+    requirement: >-
+      Independently reconstruct the five fixed-triangle prism catalogs and
+      exact normalized branch scope; the ternary code, signed-degenerate
+      triple, and characteristic-seven survivor calculations; and every
+      branch-15 OPB constraint, byte, metadata binding, gzip round trip, and
+      parser boundary without importing discovery implementations.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave37-rooted-branches/independent-results.json"
+      - "verification/wave37-rooted-branches/audit.md"
+      - "verification/wave37-polar-strengthen/independent-results.json"
+      - "verification/wave37-polar-strengthen/audit.md"
+      - "verification/wave37-proof-producing-endpoint/independent-results.json"
+      - "verification/wave37-proof-producing-endpoint/audit.md"
+    note: >-
+      Sixteen independent tests pass. All five clause hashes and all 574615
+      OPB constraints reproduce. The verifier retains the false collinearity
+      shortcut as refuted and promotes no solver result, endpoint exclusion,
+      upper-bound improvement, graph, or novelty claim.
+
+  - id: O-WAVE37-COMPLETE-ENDPOINT-CERTIFICATE
+    requirement: >-
+      Produce a complete independently checkable certificate for the
+      prism-free endpoint: either a valid 99-vertex graph or checked
+      exclusions covering all 33 refined endpoint cases and any remaining
+      exact endpoint formulations. Parser acceptance, one branch formula,
+      partial prism clauses, finite-field restrictions, BUDGET_UNKNOWN, and
+      nonterminal computation do not discharge this obligation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave37-rooted-branches/audit.md"
+      - "verification/wave37-polar-strengthen/audit.md"
+      - "verification/wave37-proof-producing-endpoint/audit.md"
+    note: >-
+      Branch 15 satisfiability and the other 32 refined cases remain
+      UNKNOWN. The endpoint and Conway-99 remain UNKNOWN, with rigorous
+      interval 708<=n3<=4158.

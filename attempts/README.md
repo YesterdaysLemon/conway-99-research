@@ -120,3 +120,24 @@ obstruction. Do not overwrite failed attempts when a method evolves.
   design.
 - `wave36-literature-audit/` freezes the bounded source/query metadata and
   exact Evans substitutions. No search nonhit is treated as novelty evidence.
+
+## Wave 37: endpoint clause catalogs, polar strengthening, and OPB handoff
+
+- `wave36-rooted-branches/` is the delayed publication of the exact
+  fixed-triangle `P=0` clause construction. Each surviving parent branch has
+  282,774 deduplicated active clauses. The retained branch-4 MiniCard result
+  is `BUDGET_UNKNOWN`; the nonterminal 33-case sweep is ignored locally and
+  excluded from every claim.
+- `wave37-polar-strengthen/` records the projective self-orthogonal ternary
+  code consequences, the corrected balanced-degenerate-triple count, and an
+  exact characteristic-seven rank-eleven association-scheme test. The
+  tempting collinearity shortcut is retained as refuted, and every tested
+  rank boundary survives.
+- `wave37-proof-producing-endpoint/` publishes a deterministic compressed OPB
+  formula for refined branch 15, its metadata, stream audit, parser record,
+  test suite, and correction ledger. Parser acceptance is syntax-only. Even
+  a future checked `UNSAT` proof for this artifact would close only one of 33
+  refined endpoint cases.
+
+No Wave 37 solver telemetry, formula export, finite-field survivor, or bounded
+nonhit improves the general interval `708<=n3<=4158`.

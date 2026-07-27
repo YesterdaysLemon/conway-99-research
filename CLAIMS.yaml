@@ -1627,6 +1627,90 @@ claims:
       No endpoint construction or exclusion exists. The general rigorous
       interval remains 708<=n3<=4158, and Conway-99 remains UNKNOWN.
 
+  - id: C-WAVE37-ROOTED-CLAUSES-067
+    statement: >-
+      Conditional on n3=4158 and the audited normalized N3 cover, each
+      surviving parent branch 4,5,8,10,12 has six fixed coordinate-2
+      triangles and exactly 282774 deduplicated active prism-forbidding
+      clauses: 606 of length three and 282168 of length five. The
+      endpoint-compatible refinement contains exactly 33 cases.
+    label: VERIFIED
+    scope: CONDITIONAL_FIXED_TRIANGLE_PRISM_CLAUSE_CATALOGS
+    evidence:
+      - "agents/2026-07-27-wave36-rooted-branches.md"
+      - "attempts/wave36-rooted-branches/derived-clause-catalog.json"
+      - "verification/wave37-rooted-branches/independent-results.json"
+      - "verification/wave37-rooted-branches/audit.md"
+      - "verification/wave37-rooted-branches/run-report.yaml"
+    limitations: >-
+      The catalogs cover only prisms meeting one of the six fixed triangles
+      per parent, not every prism. The branch-4 solver record is
+      BUDGET_UNKNOWN, and the nonterminal refined sweep supplies no result.
+      No endpoint exclusion or upper-bound improvement follows.
+
+  - id: C-WAVE37-POLAR-068
+    statement: >-
+      Conditional on n3=4158, the endpoint factor gives a projective
+      self-orthogonal ternary [231,r3] code with the all-one vector in its
+      dual, dual distance at least three, both nonzero symbol counts
+      divisible by three, and A_69>=462. At r3=12,
+      rank_F3(I+B)<=78 and rank_F3(J-I-B)<=79. Signed-triangle counting
+      forces at least 31416 linearly independent balanced triples spanning
+      at least 437 distinct rank-one degenerate three-spaces.
+    label: VERIFIED
+    scope: CONDITIONAL_TERNARY_CODE_AND_SIGNED_DEGENERATE_SPACE_RESTRICTIONS
+    evidence:
+      - "agents/2026-07-26-wave37-polar-strengthen.md"
+      - "attempts/wave37-polar-strengthen/exact-results.json"
+      - "attempts/wave37-polar-strengthen/failed-routes.md"
+      - "verification/wave37-polar-strengthen/independent-results.json"
+      - "verification/wave37-polar-strengthen/audit.md"
+      - "verification/wave37-polar-strengthen/run-report.yaml"
+    limitations: >-
+      The false inference from singular Gram matrix to collinearity is
+      explicitly refuted. The square ternary rank-twelve case and both
+      characteristic-seven rank-eleven determinant classes survive. No
+      endpoint object, contradiction, new rank floor, or upper bound follows.
+
+  - id: C-WAVE37-BRANCH15-OPB-069
+    statement: >-
+      The published compressed branch-15 OPB artifact expands to exactly
+      29827704 bytes with SHA-256
+      4c1607f4aef7e20569592ccb4ac20dfe30c1e1d220a8fbc0a202554bed6d84e5,
+      contains 289338 variables and 574615 constraints, and is byte-for-byte
+      equal to an independent semantic reconstruction. The pinned Exact
+      binary accepts its syntax.
+    label: VERIFIED
+    scope: ONE_OF_33_ENDPOINT_BRANCH_FORMULA_ARTIFACT_ONLY
+    evidence:
+      - "attempts/wave37-proof-producing-endpoint/README.md"
+      - "attempts/wave37-proof-producing-endpoint/branch-15-formula.json"
+      - "attempts/wave37-proof-producing-endpoint/branch-15.opb.gz"
+      - "verification/wave37-proof-producing-endpoint/independent-results.json"
+      - "verification/wave37-proof-producing-endpoint/audit.md"
+      - "verification/wave37-proof-producing-endpoint/run-report.yaml"
+    limitations: >-
+      Parser acceptance and formula reconstruction do not decide
+      satisfiability. No assignment, graph, UNSAT proof, or checker verdict
+      exists. The artifact represents one of 33 endpoint-compatible cases.
+
+  - id: C-WAVE37-CONTINUATION-070
+    statement: >-
+      Resolving n3=4158 still requires either a decoded and independently
+      checked graph or a complete checked exclusion covering all 33 refined
+      endpoint cases and every other exact endpoint route. The current
+      partial clause catalogs, finite-field survivors, formula artifact,
+      solver budget stop, and nonterminal run do not satisfy that condition.
+    label: UNKNOWN
+    scope: WAVE37_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/wave37-rooted-branches/audit.md"
+      - "verification/wave37-polar-strengthen/audit.md"
+      - "verification/wave37-proof-producing-endpoint/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      still 708<=n3<=4158, and novelty and priority remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED

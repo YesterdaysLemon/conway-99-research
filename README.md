@@ -1783,6 +1783,91 @@ The final separation and publication checks are in the
 [orchestrator decision](verification/2026-07-26-wave36-orchestrator.md) and
 [integration audit](verification/2026-07-26-wave36-integration-audit.md).
 
+## Wave 37 public endpoint handoff
+
+Wave 37 turns the strongest current endpoint restrictions into concrete,
+reproducible search artifacts while preserving the unresolved status wall.
+
+First, the five surviving normalized parent branches now have exact
+fixed-triangle prism catalogs. Each parent has six fixed coordinate-2
+triangles and
+
+```text
+282,774 deduplicated active P=0 clauses
+    606 clauses of length 3
+282,168 clauses of length 5.
+```
+
+The independent verifier reconstructed all five catalogs, their hashes, the
+84 endpoint units, the reduction from twelve parent branches to
+`4,5,8,10,12`, and the exact 33-case refinement. These clauses are sound but
+partial: they forbid prisms meeting one of the six fixed triangles and do not
+encode every possible prism. The completed branch-4 MiniCard scout stopped at
+100,000 conflicts with `BUDGET_UNKNOWN`; the nonterminal 33-case sweep is
+excluded from every claim.
+
+Second, the endpoint would define a projective self-orthogonal ternary code
+
+```text
+U <= F_3^231,  parameters [231,r3]_3,
+1 in U-perp,  dual distance at least 3,
+A_69 >= 462.
+```
+
+At the surviving boundary `r3=12`, the independently verified Schur-square
+ceilings are
+
+```text
+rank_F3(I+B) <= 78,
+rank_F3(J-I-B) <= 79.
+```
+
+Signed-triangle counting also forces at least 31,416 linearly independent
+balanced triples and therefore at least 437 distinct three-dimensional
+spaces whose restricted Gram matrix has rank one. A tempting shortcut was
+wrong: a singular Gram matrix in a nondegenerate ambient space does not make
+the three vectors collinear. The verifier supplies an explicit counterexample.
+
+The characteristic-seven rank-eleven test also survives. The relevant
+orthogonality graph has five relation classes rather than being strongly
+regular, and its largest nonprincipal eigenvalues are
+
+```text
+square determinant:     2401(1+sqrt(2))
+nonsquare determinant:  4802.
+```
+
+Both determinant classes remain possible at this level.
+
+Finally, refined branch 15 is published as a deterministic compressed OPB
+artifact. Its raw form has 289,338 variables, 574,615 constraints, and SHA-256
+
+```text
+4c1607f4aef7e20569592ccb4ac20dfe30c1e1d220a8fbc0a202554bed6d84e5.
+```
+
+The independent verifier rebuilt every constraint byte-for-byte, checked the
+gzip round trip and metadata, and replayed parser acceptance with the pinned
+Exact binary. This verifies the formula artifact only. No solver conclusion,
+assignment, graph, or proof exists, and the file represents only one of 33
+endpoint-compatible refined cases.
+
+See the [rooted construction report](agents/2026-07-27-wave36-rooted-branches.md),
+[rooted audit](verification/wave37-rooted-branches/audit.md),
+[polar report](agents/2026-07-26-wave37-polar-strengthen.md),
+[polar audit](verification/wave37-polar-strengthen/audit.md),
+[branch-15 package](attempts/wave37-proof-producing-endpoint/README.md), and
+[formula audit](verification/wave37-proof-producing-endpoint/audit.md).
+
+```text
+conditional clause and finite-field restrictions: VERIFIED scoped
+branch-15 formula artifact:                        VERIFIED artifact-only
+SAT assignment / UNSAT proof:                      NONE
+upper bound below 4158:                            NOT PROVED
+rigorous interval:                                 708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:                     UNKNOWN
+```
+
 Wave 2's 10,000-conflict pass over all 11 complete matching branches likewise
 returned `UNKNOWN` everywhere. Bounded runs are used only for engineering and
 branch ranking. See the [Wave 2 audit](verification/2026-07-22-wave2-audit.md)

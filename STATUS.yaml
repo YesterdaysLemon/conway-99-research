@@ -2286,4 +2286,78 @@ thirty_sixth_research_wave:
   novelty_status: UNKNOWN
   solver_evidence_promoted: NONE
   caveat: "Wave 36 verifies conditional modular, ternary-polar, and one-triangle block necessities. Evans's prior theorem reproduces the ambient ternary cutoff after the target-specific substitution. No endpoint reflection or block system is constructed, no endpoint exclusion or upper-bound improvement follows, and Conway-99 and novelty remain UNKNOWN."
-last_updated: 2026-07-26
+thirty_seventh_research_wave:
+  public_base_commit: "a45592a91a34d2f2bb7ee4c266f3b979e86e399d"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  rooted_clause_status: VERIFIED_SCOPED_CONDITIONAL_CLAUSES
+  rooted_endpoint_units: 84
+  rooted_surviving_parents: "4,5,8,10,12"
+  rooted_endpoint_refined_cases: 33
+  rooted_fixed_triangles_per_parent: 6
+  rooted_clauses_per_parent: 282774
+  rooted_ternary_clauses_per_parent: 606
+  rooted_length_five_clauses_per_parent: 282168
+  rooted_discovery_tests: 8
+  rooted_independent_tests: 5
+  rooted_catalog: "attempts/wave36-rooted-branches/derived-clause-catalog.json"
+  rooted_catalog_sha256: "e6cd8b32fee88fff300ce153c728b7fe82f6aca9c29526d852ff4a4b564f9092"
+  rooted_independent_result: "verification/wave37-rooted-branches/independent-results.json"
+  rooted_independent_result_sha256: "d8df303cd0b71201550e7758bdbaaaded4c393201d5c4627e352c1c99d1c6bb9"
+  rooted_audit: "verification/wave37-rooted-branches/audit.md"
+  rooted_audit_sha256: "3669852c62d079979bb377ab63a98e493bf7aed1bfe90eeb4aa17394cfbeaca7"
+  branch_four_solver_status: BUDGET_UNKNOWN
+  nonterminal_refined_sweep_status: EXCLUDED_NO_RESULT
+  polar_status: VERIFIED_SCOPED_CONDITIONAL_RESTRICTIONS
+  ternary_code: "projective self-orthogonal [231,r3]_3 with 1 in dual"
+  ternary_dual_distance_lower_bound: 3
+  ternary_weight_69_words_lower_bound: 462
+  ternary_rank_twelve_schur_square_ceiling: 78
+  ternary_rank_twelve_orthogonality_matrix_ceiling: 79
+  signed_independent_balanced_triples_lower_bound: 31416
+  signed_rank_one_three_spaces_lower_bound: 437
+  collinearity_shortcut_status: REFUTED_BY_EXPLICIT_COUNTEREXAMPLE
+  characteristic_seven_rank_eleven_square_status: SURVIVES
+  characteristic_seven_rank_eleven_nonsquare_status: SURVIVES
+  polar_discovery_tests: 13
+  polar_independent_tests: 6
+  polar_result: "attempts/wave37-polar-strengthen/exact-results.json"
+  polar_result_sha256: "0d5daafca72b43d159db5e799689e8818fa61f25de2f2d06225a4619817cdff9"
+  polar_independent_result: "verification/wave37-polar-strengthen/independent-results.json"
+  polar_independent_result_sha256: "37e17811baebce967ac7a0adf3e9f840340afc6bc9bfd07ce7912793d0e65734"
+  polar_audit: "verification/wave37-polar-strengthen/audit.md"
+  polar_audit_sha256: "5cebac3f10475e4ac3322c0b6b8796a16be033ace050d9c9809213bd70a9c5c1"
+  proof_formula_status: VERIFIED_FORMULA_ARTIFACT_ONLY
+  proof_formula_refined_branch: 15
+  proof_formula_parent_branch: 4
+  proof_formula_endpoint_case_scope: "1 of 33"
+  proof_formula_variables: 289338
+  proof_formula_constraints: 574615
+  proof_formula_raw_bytes: 29827704
+  proof_formula_raw_sha256: "4c1607f4aef7e20569592ccb4ac20dfe30c1e1d220a8fbc0a202554bed6d84e5"
+  proof_formula_gzip: "attempts/wave37-proof-producing-endpoint/branch-15.opb.gz"
+  proof_formula_gzip_sha256: "7683599142bfb51dc2d461d56fc1820bc58c658ed5167b17b5004473b589933e"
+  proof_formula_independent_result: "verification/wave37-proof-producing-endpoint/independent-results.json"
+  proof_formula_independent_result_sha256: "6ee9efc52b7123ab805efa47ff05ad131a2647af78122cf93a50b699d24d0f21"
+  proof_formula_audit: "verification/wave37-proof-producing-endpoint/audit.md"
+  proof_formula_audit_sha256: "b84a4197c70468c5be8ee29ad903ad855e155ffd00fb1efa90ef707373cb10dc"
+  proof_formula_discovery_tests: 5
+  proof_formula_independent_tests: 5
+  proof_formula_exact_parser: PARSE_ACCEPTED_SYNTAX_ONLY
+  proof_formula_satisfiability: UNKNOWN
+  mathematical_and_artifact_tests_total: 42
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave37-integration-audit.md"
+  integration_audit_sha256: "7870198655329f4e9ab0f02fd7d05913a9e5733fd64647dd4bea4241cd340146"
+  orchestrator_decision: "verification/2026-07-27-wave37-orchestrator.md"
+  orchestrator_decision_sha256: "08f169ed80884df55c9e773633da94ed386a997649802a79d138a49ab03c53d6"
+  simultaneous_block_completion_status: NO_PUBLICATION_READY_RESULT_AT_CUTOFF
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 37 independently verifies exact partial prism-clause catalogs, conditional ternary/code and degenerate-space restrictions, and one branch-15 OPB artifact. It does not encode every prism or every endpoint case, decide any formula, construct a graph, exclude n3=4158, improve the upper bound, resolve Conway-99, or establish novelty."
+last_updated: 2026-07-27
