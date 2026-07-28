@@ -1602,3 +1602,41 @@ receives no verifier promotion. The
 [integration audit](2026-07-28-wave86-integration-audit.md) and
 [orchestrator decision](2026-07-28-wave86-orchestrator.md) preserve the
 status wall: no rank row, endpoint, or target graph is excluded.
+
+## Waves 90, 94, 99, and 100 norm-14 verification
+
+- `wave90-short-vector-count-upper/` independently verifies the endpoint
+  seed injection and `N14<=5544`. Six verifier and seven discovery tests
+  pass.
+- `wave94-general-n3-norm14-bound/` independently verifies the rooted-prism
+  multiplicity, every compatible identity row, and
+  `N14<=floor((55440-4*n3)/7)`. Twelve verifier and seven discovery tests
+  pass.
+- `wave99-transition-pair-moment/` independently verifies the
+  transition-pair cap 18, `N14<=4950` at `P=0`, and the rank-28 corollary
+  `407*N16+43*N18>=2165002`. Seventeen verifier and eight discovery tests
+  pass.
+- `wave100-general-pair-moment/` independently verifies the general
+  second-moment inequality
+  `N14<=2*floor((55440-5*n3)/14)` for all 1,387 compatible rows. Eighteen
+  verifier and six discovery tests pass.
+
+These are scoped shell-count theorems. They neither upper-bound `n3` nor
+control `N16` or `N18`. The
+[integration audit](2026-07-28-wave100-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave100-orchestrator.md) retain that
+boundary.
+
+## Waves 97 and 98 alternative-space verification
+
+- `wave97-f7-exterior-matroid/` independently verifies the Schur-cube,
+  second-compound code, complete Smith, generalized-weight, and finite
+  orthogonal-orbit formulas. Its verdict is
+  `VERIFIED_WITH_PROVENANCE_CORRECTION`: Wave 51 already implied
+  `R*R=1_perp` and the quadratic circuit. Fifteen verifier and fourteen
+  discovery tests pass.
+- Wave 98 has no verifier promotion. Its three tests reproduce only a finite
+  degree-1,000 positivity probe of a formal scalar theta pair, retained as
+  `UNKNOWN`.
+
+Neither lane excludes rank 28, constructs a graph, or resolves Conway-99.

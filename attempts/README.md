@@ -493,3 +493,44 @@ The independent verifier confirms the inequality and records a source
 normalization correction: the printed cited equation omits a ratio, while
 the factors actually used follow from the source's preceding definitions
 and transformation equation. Rank 28 and Conway-99 remain `UNKNOWN`.
+
+## Waves 90, 94, 99, and 100: rooted norm-14 shell bounds
+
+- `wave90-short-vector-count-upper/` maps every oriented norm-14 vector to
+  one of 560 rooted complementary-Fano seeds. At the prism-free endpoint,
+  transition incidence gives `N14<=5544`.
+- `wave94-general-n3-norm14-bound/` counts rooted prisms and extends the
+  first-moment argument to every compatible row:
+  `N14<=floor((55440-4*n3)/7)`.
+- `wave99-transition-pair-moment/` adds an exact second moment and sharpens
+  the endpoint to `N14<=4950`. In the additional rank-28 row this combines
+  with Wave 86 to force `407*N16+43*N18>=2165002`.
+- `wave100-general-pair-moment/` proves the rank-free general strengthening
+  `N14<=2*floor((55440-5*n3)/14)`.
+
+All four shell bounds have separate clean-room verification. They bound
+`N14`, not `n3`; no `N16` or `N18` upper bound, endpoint exclusion, or graph
+resolution follows.
+
+## Wave 97: characteristic-seven exterior and matroid shift
+
+- `wave97-f7-exterior-matroid/` derives `R*R*R=F7^99`, `C*C=F7^99`, and a
+  projective self-orthogonal second-compound `[4851,378]_7` code.
+- At rank 28 its exact Smith form is
+  `1^378,7^1204,49^1687,343^1204,2401^280,24010^98`.
+- The finite orthogonal orbit reduction shows that norm-16 and norm-18
+  short classes occupy the same square-anisotropic projective orbit, so
+  abstract orthogonal geometry alone cannot distinguish them.
+
+Independent verification accepts the mathematics with a provenance
+correction: `R*R=1_perp` and the quadratic circuit were already immediate
+consequences of Wave 51. No obstruction or graph follows.
+
+## Wave 98: scalar-theta long-prefix probe
+
+- `wave98-scalar-positivity-probe/` independently reconstructs the Wave 86
+  formal scalar pair and finds no negative, odd, or nonintegral coefficient
+  through degree 1,000.
+
+This is an `UNKNOWN` finite null result. It is not an all-orders theorem and
+does not realize a lattice, frame, or graph.

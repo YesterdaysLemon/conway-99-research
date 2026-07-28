@@ -36,6 +36,11 @@ and the normalized search problem.
   `rank_F7(2A-J+I)=28` row, exact full-space level-seven modularity forces
   `N14+N16+N18>=5868`. This is conditional on a hypothetical graph and does
   not exclude the rank row.
+- **Strongest general norm-14 shell bound:** every hypothetical target obeys
+  `N14<=2*floor((55440-5*n3)/14)`, with neither a rank nor a symmetry
+  assumption. At the hard endpoint `n3=4158`, this gives `N14<=4950`.
+  This bounds a lattice shell as a function of `n3`; it is not an upper bound
+  on `n3`.
 - **Endpoint arithmetic:** at `n3=708`, the independently verified
   necessary arithmetic includes `tr(C^2)>=10` and `det(B)<=6525`. Wave 27
   conditionally excludes every full orthogonal ADE root-lattice form. Wave 28
@@ -194,6 +199,19 @@ and the normalized search problem.
   shifts create a concrete lower-bound-versus-packing squeeze, but no
   matching strict upper bound is yet verified, so the interval remains
   `708<=n3<=4158` and Conway-99 remains `UNKNOWN`.
+  Waves 90, 94, 99, and 100 then add a new combinatorial upper-bound lane.
+  Rooted complementary-Fano seeds and first- and second-moment transition
+  counts prove, without a rank assumption,
+  `N14<=2*floor((55440-5*n3)/14)`. In particular `N14<=4950` at the
+  prism-free endpoint. Intersecting that endpoint with rank 28 forces the
+  heavier shells to satisfy `407*N16+43*N18>=2165002`; no compatible upper
+  bound on `N16` or `N18` is yet known. Wave 97 independently verifies the
+  characteristic-seven Schur cube, second-compound code, complete conditional
+  Smith form, and orthogonal-orbit reduction, with a provenance correction
+  that the quadratic circuit was already implicit in Wave 51. Wave 98
+  records only an `UNKNOWN` finite null result: the formal scalar theta pair
+  stays integral, even, and nonnegative through degree 1,000. None of these
+  statements excludes a graph or changes the rigorous `n3` interval.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

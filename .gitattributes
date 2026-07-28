@@ -109,3 +109,19 @@ attempts/wave84-rooted-sat-portfolio/README.md whitespace=-blank-at-eof
 attempts/wave84-rooted-sat-portfolio/exact-results.json whitespace=-blank-at-eof
 attempts/wave84-rooted-sat-portfolio/failed-routes.md whitespace=-blank-at-eof
 attempts/wave84-rooted-sat-portfolio/protocol.md whitespace=-blank-at-eof
+
+# Sealed Wave 90 and 94 discovery files retain their generated terminal
+# blank records; suppress only that whitespace diagnostic without rewriting.
+attempts/wave90-short-vector-count-upper/README.md whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/derivation.md whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/exact_check.py whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/failed-routes.md whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/protocol.md whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/run-report.yaml whitespace=-blank-at-eof
+attempts/wave90-short-vector-count-upper/test_exact_check.py whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/README.md whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/derivation.md whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/exact_check.py whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/protocol.md whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/run-report.yaml whitespace=-blank-at-eof
+attempts/wave94-general-n3-norm14-bound/test_exact_check.py whitespace=-blank-at-eof
