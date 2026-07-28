@@ -1912,6 +1912,19 @@ The rigorous interval remains `708<=n3<=4158`.
   arithmetic.  It explicitly leaves
   `P=0 => at most four failed marks per nonedge` `UNPROVED`; no Wagner lower
   bound is promoted.
+- `wave167-nonedge-core-fringe/` independently reconstructs the 22-edge
+  nonedge cross graph, exact 18-core/four-fringe split, four mandatory
+  failures, completion uniqueness, and the global defect identity
+  `E=8*(18711-N_Wagner)`.  It verifies that the endpoint requires `E>=16`
+  and that `E<=8` would exclude it, while an explicit local shell shows the
+  current one-root equations do not prove that bound.
+- `wave168-incidence-minor-energy/` independently derives the 231-block
+  triangle incidence geometry, all point-block and block-intersection
+  spectra, and the equivalence between `P=0` and block codegree at most two.
+  It verifies cube/Wagner determinant energies 4,423,680 and 4,439,040, the
+  global Cauchy-Binet coefficient identity, and
+  `T*T^T=816I+10K` for the rectangular neighborhood-triple matrix.  No bound
+  on the remaining eight-point types is promoted.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

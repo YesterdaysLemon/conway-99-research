@@ -400,15 +400,30 @@ and the normalized search problem.
   but an explicit `Z/9` shift shell satisfies them with no Wagner extension.
   Five-cycle/nonedge rooting is sharper: every nonedge lies in exactly 40
   marked induced five-cycles, and every Wagner contributes eight completed
-  incidences.  The single sufficient lemma is now
-  `P=0 => at most 4 failed marks per nonedge`; it would force
-  `N_Wagner>=18711` and exclude the endpoint.  A clean-room verifier confirms
-  the reduction but not the lemma.  Current pair equations allow four impure
-  marks in each of two lanes and do not force the remaining singleton
-  completion.  The existing pair-root order-eight pseudowitness also
-  survives both scalar inequalities, so the next exact conic experiment must
-  use the whole root-3/root-12 blocks or lift completion moments to order
-  eleven.
+  incidences.
+  Wave 167 audits that last reduction more sharply.  At every nonedge under
+  `P=0`, the 40 marks split into exactly 36 core marks and four fringe marks,
+  and all four fringe marks necessarily fail.  Thus the local facts prove
+  `f(uv)>=4`, not the sufficient inequality in the opposite direction.
+  Completion is unique when it exists, giving the exact global identity
+  `F=166320-8*N_Wagner`.  After subtracting the 16,632 mandatory fringe
+  failures, the extra defect is
+  `E=8*(18711-N_Wagner)`.  The endpoint would require `E>=16`, so the sharper
+  sufficient target is the global stability bound `E<=8`; pointwise equality
+  `f(uv)=4` is stronger than necessary.  An explicit 22-edge abstract shell
+  retains all current one-root equations while producing extra core failures,
+  proving that overlapping-root or higher-order compatibility is essential.
+  The existing pair-root order-eight pseudowitness also survives both scalar
+  inequalities, so an exact conic continuation must use the whole
+  root-3/root-12 blocks and genuine left/right completion correlations.
+  Wave 168 changes spaces to the partial linear incidence geometry of the 231
+  unique edge-triangles.  Its block-intersection graph is 18-regular with
+  spectrum `18^1,7^54,0^44,(-3)^132`, and `P=0` is exactly the statement that
+  disjoint triangle blocks have at most two common block neighbors.  An
+  eight-point Cauchy-Binet energy distinguishes cube and Wagner motifs despite
+  their identical first incidence profiles: the exact determinant values are
+  4,423,680 and 4,439,040.  Classifying the remaining incidence minors under
+  the prism-free codegree condition is a new proof strategy, not yet a bound.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary

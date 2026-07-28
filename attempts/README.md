@@ -837,6 +837,18 @@ finite coefficient model for that computation.
   per nonedge.  That four-failure lemma is explicitly `UNPROVED`.  The package
   also records the exact pair-root pseudowitness obstruction and the
   root-3/root-12 or order-eleven continuation.
+- `wave167-nonedge-core-fringe/` corrects and sharpens that target.  At `P=0`
+  each nonedge has exactly 36 core and four fringe marks, all four fringe
+  marks fail, and completion is unique when it exists.  Hence
+  `F=166320-8*N_Wagner` and the extra defect is
+  `E=8*(18711-N_Wagner)`.  Endpoint exclusion needs only the global bound
+  `E<=8`; a checked abstract shell proves the current one-root equations
+  cannot establish the stronger pointwise equality.
+- `wave168-incidence-minor-energy/` moves to the partial linear geometry of
+  the 231 unique edge-triangles.  It translates `P=0` to block codegree at
+  most two and derives a Cauchy-Binet minor energy whose values on cube and
+  Wagner point sets differ by 15,360.  Bounding the other eight-point
+  configuration contributions remains an unexecuted strategy.
 
 Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
