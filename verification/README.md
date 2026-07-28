@@ -1906,6 +1906,12 @@ The rigorous interval remains `708<=n3<=4158`.
   `12*N_cube<=37422+3*P=41580-n3`, with endpoint consequence
   `N_cube<=3118`.  It does not prove a Wagner lower bound or exclude the
   endpoint.
+- `wave166-rooted-wagner-spaces/` independently verifies the fixed-square
+  degree identity and null shell, the exact 40 marked five-cycles per
+  nonedge, eight five-cycles per Wagner, and the conditional endpoint
+  arithmetic.  It explicitly leaves
+  `P=0 => at most four failed marks per nonedge` `UNPROVED`; no Wagner lower
+  bound is promoted.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

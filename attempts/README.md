@@ -831,6 +831,12 @@ finite coefficient model for that computation.
   give `12*N_cube<=37422+3*P=41580-n3`, hence `N_cube<=3465` generally and
   `N_cube<=3118` at the prism-free endpoint.  The proof assumes no graph
   automorphism; it does not by itself improve `n3<=4158`.
+- `wave166-rooted-wagner-spaces/` derives exact fixed-square shell equations,
+  supplies a shell null model, counts 40 marked induced five-cycles at every
+  nonedge, and reduces endpoint exclusion to at most four failed Wagner marks
+  per nonedge.  That four-failure lemma is explicitly `UNPROVED`.  The package
+  also records the exact pair-root pseudowitness obstruction and the
+  root-3/root-12 or order-eleven continuation.
 
 Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The

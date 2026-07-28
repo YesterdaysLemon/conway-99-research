@@ -395,6 +395,20 @@ and the normalized search problem.
   cube/Wagner covariance inequality, endpoint exclusion would now follow
   from the absolute lower bound `N_Wagner>=18710`.  No such Wagner lower
   bound is proved.
+  Wave 166 isolates that lower-bound problem in three alternative rooted
+  spaces.  The fixed-square shell has exact opposite-class degree equations,
+  but an explicit `Z/9` shift shell satisfies them with no Wagner extension.
+  Five-cycle/nonedge rooting is sharper: every nonedge lies in exactly 40
+  marked induced five-cycles, and every Wagner contributes eight completed
+  incidences.  The single sufficient lemma is now
+  `P=0 => at most 4 failed marks per nonedge`; it would force
+  `N_Wagner>=18711` and exclude the endpoint.  A clean-room verifier confirms
+  the reduction but not the lemma.  Current pair equations allow four impure
+  marks in each of two lanes and do not force the remaining singleton
+  completion.  The existing pair-root order-eight pseudowitness also
+  survives both scalar inequalities, so the next exact conic experiment must
+  use the whole root-3/root-12 blocks or lift completion moments to order
+  eleven.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary
