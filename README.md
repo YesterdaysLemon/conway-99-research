@@ -258,6 +258,26 @@ and the normalized search problem.
   larger `Gamma0(7)` space.  A separate 900-second Wave 125 motif-SAT run
   ended `UNKNOWN_TIMEOUT` with the 15% memory reserve preserved.  None of
   these results excludes rank 28 or rank 30.
+  Waves 123 and 127--131 then test four sharper changes of mathematical
+  space.  Exact span projectors refute the displayed 40-record coordinate
+  family and one alternate 26-record family, but a different 26-record
+  subset passes diagonal leverage and 2,340 rooted three-point PSD blocks
+  before failing 352 graph-valued two-by-two completion rows.  Thus the
+  missing condition is common graph-projector compatibility, not ordinary
+  code geometry.  Independently reconstructed level-seven Jacobi
+  relaxations have exact rational feasible points at cutoffs
+  `10,12,14,16,18,20`; cutoff 28 has neither a rational point nor a Farkas
+  certificate and remains `UNKNOWN`.  A finite-primary discriminant split
+  fixes both conditional motif eigenlattices down to their local Smith
+  factors, Gauss phases, rootlessness, and `O^-(k,7)` seven-primary type,
+  but every `k=16,18,...,30` survives.  Finally, the binary idempotent/LCD
+  shift forces complete one-, two-, and three-subset word distributions;
+  an exact rational MacWilliams witness still permits image/dual distances
+  `14/15`, while integral formal feasibility remains `UNKNOWN`.  These
+  independently checked boundaries identify graph-valued projector
+  completion, exact cutoff-28 Jacobi feasibility, and labelled joint code
+  enumerators as the live alternatives.  No rank, motif, or target graph is
+  excluded or constructed.
   The
   current alternative-space frontier is therefore exact and reproducible
   but still supplies no rank exclusion, strict `n3` upper bound, or

@@ -1732,3 +1732,27 @@ mathematical verifier promotion.
 The [integration audit](2026-07-28-wave116-integration-audit.md) and
 [orchestrator decision](2026-07-28-wave116-orchestrator.md) preserve all
 conditional and `UNKNOWN` boundaries.
+
+## Waves 123 and 127--131 alternative-space verification
+
+- `wave123-fixedc4-threepoint/` independently reconstructs every exact span
+  projector, all 4,851 graph-valued pair rows, and 2,340 rooted
+  feature-Gram blocks.  Six verifier tests pass.  The nonexhaustive search
+  proves no local cap.
+- `wave127-wave129-jacobi-audit/` independently rebuilds the modular
+  dimensions, Fricke factor, cache consistency, and all 5,874 original
+  candidate rows.  Cutoffs `10--20` are exact finite feasible; cutoff 28
+  remains `UNKNOWN`.  Six verifier tests pass.
+- `wave128-alternative-spaces/` independently reconstructs the finite Smith
+  split, exact quadratic Gauss phases, seven-adic gluing, both rootlessness
+  arguments, and survival of every imported row.  Eight verifier tests
+  pass.
+- `wave131-binary-lcd-enumerator/` independently checks the LCD/symplectic
+  derivation, every subset type through size three, all 200 MacWilliams
+  rows, and the nonintegral rational witness.  Six verifier tests pass; the
+  integral scout remains non-evidentiary `UNKNOWN`.
+
+The [integration audit](2026-07-28-wave131-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave131-orchestrator.md) preserve the
+status wall.  No code, lattice, graph, rank exclusion, strict `n3` upper
+bound, Conway-99 resolution, or novelty claim follows.

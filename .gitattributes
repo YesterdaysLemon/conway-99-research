@@ -147,3 +147,45 @@ attempts/wave124-c4-index70-jacobi/exact-results.json -text -diff
 verification/wave124-c4-index70-jacobi/comparison.json -text -diff
 verification/wave124-c4-index70-jacobi/independent-jacobi-results.json -text -diff
 attempts/wave125-long-motif-sat/branch0-900s-launch2.stdout.txt -text -diff
+
+# Waves 123 and 127--131 are sealed, checksum-pinned research packages.
+# Preserve their exact bytes across Windows checkouts; the Jacobi column
+# caches are binary proof inputs and should not receive textual diffs.
+attempts/wave123-fixedc4-threepoint/** -text
+attempts/wave123-fixedc4-threepoint/*.json -diff
+attempts/wave123-fixedc4-threepoint/*.sha256 -diff
+attempts/wave123-fixedc4-threepoint/*.txt -diff
+verification/wave123-fixedc4-threepoint/** -text
+verification/wave123-fixedc4-threepoint/*.json -diff
+verification/wave123-fixedc4-threepoint/*.sha256 -diff
+verification/wave123-fixedc4-threepoint/*.txt -diff
+attempts/wave127-independent-jacobi-certificate/** -text
+attempts/wave127-independent-jacobi-certificate/*.json -diff
+attempts/wave127-independent-jacobi-certificate/*.pkl -diff
+attempts/wave127-independent-jacobi-certificate/*.sha256 -diff
+attempts/wave127-independent-jacobi-certificate/*.txt -diff
+attempts/wave128-alternative-spaces/** -text
+attempts/wave128-alternative-spaces/*.json -diff
+attempts/wave128-alternative-spaces/*.sha256 -diff
+attempts/wave128-alternative-spaces/*.txt -diff
+verification/wave128-alternative-spaces/** -text
+verification/wave128-alternative-spaces/*.json -diff
+verification/wave128-alternative-spaces/*.sha256 -diff
+verification/wave128-alternative-spaces/*.txt -diff
+attempts/wave129-jacobi-stress/** -text
+attempts/wave129-jacobi-stress/*.json -diff
+attempts/wave129-jacobi-stress/*.pkl -diff
+attempts/wave129-jacobi-stress/*.sha256 -diff
+attempts/wave129-jacobi-stress/*.txt -diff
+verification/wave127-wave129-jacobi-audit/** -text
+verification/wave127-wave129-jacobi-audit/*.json -diff
+verification/wave127-wave129-jacobi-audit/*.sha256 -diff
+verification/wave127-wave129-jacobi-audit/*.txt -diff
+attempts/wave131-binary-lcd-enumerator/** -text
+attempts/wave131-binary-lcd-enumerator/*.json -diff
+attempts/wave131-binary-lcd-enumerator/*.sha256 -diff
+attempts/wave131-binary-lcd-enumerator/*.txt -diff
+verification/wave131-binary-lcd-enumerator/** -text
+verification/wave131-binary-lcd-enumerator/*.json -diff
+verification/wave131-binary-lcd-enumerator/*.sha256 -diff
+verification/wave131-binary-lcd-enumerator/*.txt -diff

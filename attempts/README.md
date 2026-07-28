@@ -647,3 +647,29 @@ obtained. The route is a corrected reduction, not a rank exclusion.
 
 These numbers are subjective research judgments, not mathematical evidence,
 calibrated forecasts, or deadlines.
+
+## Waves 123 and 127--131: projector, Jacobi, discriminant, and binary shifts
+
+- `wave123-fixedc4-threepoint/` applies the actual `-4` eigenspace
+  projector to the Wave 120 coordinate supports.  The displayed 40-record
+  family has 46 leverage violations.  An alternate 26-record subset passes
+  diagonal leverage and 2,340 exact rooted feature-Gram tests but fails 352
+  graph-valued two-by-two completion rows.  Its bounded subset search is
+  explicitly nonexhaustive.
+- `wave127-independent-jacobi-certificate/` and
+  `wave129-jacobi-stress/` independently reconstruct the 239-dimensional
+  index-10/index-70 level-seven Jacobi relaxation.  Exact rational feasible
+  points replay at cutoffs `10,12,14,16,18,20`; cutoff 28 remains
+  `UNKNOWN`.
+- `wave128-alternative-spaces/` splits the conditional Wave 109
+  incidence-kernel lattice into finite-primary rational eigenlattices.  It
+  fixes their non-seven discriminant groups, Gauss phases, rootlessness,
+  and nonsplit `O^-(k,7)` seven-primary type.  Every imported row survives.
+- `wave131-binary-lcd-enumerator/` derives the complete codeword counts
+  forced by vertex subsets of size at most three.  An exact rational
+  MacWilliams witness permits image/dual distances `14/15`; it is
+  nonintegral, and the bounded integral scout remains `UNKNOWN`.
+
+All four lanes have separate clean-room verification.  They are finite or
+conditional necessary-condition results, not a code, lattice, graph,
+rank exclusion, or Conway-99 resolution.
