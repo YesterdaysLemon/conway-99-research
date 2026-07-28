@@ -366,13 +366,14 @@ and the normalized search problem.
   the verified exact inequality is
   `N_Wagner <= 3*N_cube + 9355`, where the counts are induced eight-vertex
   Wagner graphs and 3-cubes.  It exactly separates the eight-cut rational
-  control.  Its candidate all-`n3` lift is
+  control.  Its all-`n3` lift is
   `4*N_Wagner <= 41580-n3+12*N_cube`.  Wave157 seals an exact symbolic
-  derivation of that lift; its clean-room Wave158 replay is still in progress,
-  so the general theorem remains `DERIVED` rather than `VERIFIED` in this
-  checkpoint.  Thirteen cuts still admit a new exact rational control of rank
-  887, pending independent replay.  This is genuine higher-order separation
-  but not a strict bound.
+  derivation, and the clean-room Wave158 reconstruction independently verifies
+  the root count, complete union census, coefficients, named graph
+  isomorphisms, six-set formula, and primitive scaling.  Thus this is a
+  verified general structural theorem.  Thirteen cuts still admit a new exact
+  rational control of rank 887, pending independent replay.  This is genuine
+  higher-order separation but not a strict bound.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary

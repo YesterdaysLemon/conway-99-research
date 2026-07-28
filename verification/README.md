@@ -1887,9 +1887,13 @@ The rigorous interval remains `708<=n3<=4158`.
   Its verdict is `VERIFIED_WITH_SCOPE`: every complete bounded rational
   pair-correlation projection survives, but no binary design or residual
   graph is supplied.
+- `wave158-general-cube-wagner/` independently reconstructs the full symbolic
+  mask-12 covariance expansion, root count `1,014,552`, union classes and
+  coefficients, cube/Wagner isomorphisms, `N9=41580-n3`, and both primitive
+  gcd reductions.  It verifies
+  `41580-n3+12*N_cube-4*N_Wagner>=0` for every hypothetical target graph.
+  The theorem alone allows the endpoint.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.
-The symbolic Wave157 lift remains `DERIVED` while its separate Wave158
-clean-room reconstruction is in progress.
 The rigorous interval remains `708<=n3<=4158`.

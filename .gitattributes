@@ -281,6 +281,7 @@ verification/wave154-triangle-factor-portfolio/** -text
 verification/wave155-four-root-feedback/** -text
 verification/wave156-four-root-late-feedback/** -text
 attempts/wave157-general-cube-wagner/** -text
+verification/wave158-general-cube-wagner/** -text
 
 attempts/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
@@ -299,3 +300,4 @@ verification/wave154-triangle-factor-portfolio/** whitespace=cr-at-eol,-blank-at
 verification/wave155-four-root-feedback/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave156-four-root-late-feedback/** whitespace=cr-at-eol,-blank-at-eof
 attempts/wave157-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave158-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof

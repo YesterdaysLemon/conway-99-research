@@ -811,9 +811,9 @@ finite coefficient model for that computation.
 - `wave157-general-cube-wagner/` independently expands the sparse mask-12
   covariance direction before endpoint substitution and derives
   `41580-n3+12*N_cube-4*N_Wagner>=0`.  Its endpoint specialization exactly
-  matches the Wave156-verified primitive cut.  The symbolic theorem remains
-  `DERIVED` pending clean-room Wave158 verification and does not by itself
-  imply `n3<4158`.
+  matches the Wave156-verified primitive cut.  Wave158 independently verifies
+  the complete symbolic derivation.  The theorem does not by itself imply
+  `n3<4158`.
 
 Every promoted statement above has a separate verifier.  The full four-root
 PSD feasibility problem, complete triangle-root binary factor, strict
