@@ -212,6 +212,20 @@ and the normalized search problem.
   records only an `UNKNOWN` finite null result: the formal scalar theta pair
   stays integral, even, and nonnegative through degree 1,000. None of these
   statements excludes a graph or changes the rigorous `n3` interval.
+  Wave 101 extends the complete scalar level-seven LP to every surviving
+  rank row. It forces increasingly large total mass through norm 28, but
+  every row still has an exact scalar control with
+  `N14=N16=N18=0`, beyond which the graph-specific signed-unit dictionary
+  is not yet proved. Waves 102 and 105 take a different combinatorial route.
+  Retaining the odd-coordinate defect `O` of the rooted-prism vector proves
+  `7*N14<=55440-5*n3-O/2` and improves the one-prism row, while a binary
+  triangle-incidence code controls small prism counts. The first general
+  parity-null motif, `C4 box K3`, survives every induced, aggregate, and
+  linear extension test: its 87-vertex outside problem has a checked
+  549-edge linear witness. That witness fails 2,525 nonlinear pair
+  equations, and four complete-encoding searches time out. Thus the precise
+  remaining boundary is nonlinear compatibility, not scalar or linear
+  feasibility; full extension and Conway-99 remain `UNKNOWN`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

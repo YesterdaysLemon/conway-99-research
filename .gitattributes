@@ -125,3 +125,7 @@ attempts/wave94-general-n3-norm14-bound/exact_check.py whitespace=-blank-at-eof
 attempts/wave94-general-n3-norm14-bound/protocol.md whitespace=-blank-at-eof
 attempts/wave94-general-n3-norm14-bound/run-report.yaml whitespace=-blank-at-eof
 attempts/wave94-general-n3-norm14-bound/test_exact_check.py whitespace=-blank-at-eof
+
+# The sealed Wave 101 verifier retains generated terminal blank records.
+verification/wave101-all-rank-level7-lp/README.md whitespace=-blank-at-eof
+verification/wave101-all-rank-level7-lp/audit.md whitespace=-blank-at-eof

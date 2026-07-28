@@ -534,3 +534,48 @@ consequences of Wave 51. No obstruction or graph follows.
 
 This is an `UNKNOWN` finite null result. It is not an all-orders theorem and
 does not realize a lattice, frame, or graph.
+
+## Wave 101: all-rank level-seven scalar theta LP
+
+- `wave101-all-rank-level7-lp/` repeats the complete
+  `M_22(Gamma0(7))` calculation for all seven surviving rank rows. Exact
+  rational primal/dual certificates give parity-rounded lower bounds
+  `182,1584,11400,80110,561084,189901474,1831606638` on the total shell
+  through norm 28.
+- Every row nevertheless has an exact scalar control with
+  `N14=N16=N18=0`. The graph-specific signed-unit dictionary therefore
+  cannot yet be applied to the forced mass.
+
+Independent verification accepts the scoped bounds and sharpens one generic
+mod-two upper estimate by a factor of eight. The sharpened estimate still
+excludes no rank row.
+
+## Wave 102: rooted prism-incidence code
+
+- `wave102-prism-incidence-code/` factors the rooted-prism parity vector
+  through the binary triangle-incidence code and retains its exact odd-root
+  defect:
+  `7*N14<=55440-5*n3-O/2`.
+- It proves the two-prism overlap cap and small-prism parity controls.
+  Independent verification strengthens the latter to `P=3 => O>=4`.
+- The 12-vertex `C4 box K3` motif contains four prisms with zero rooted
+  parity and passes the local cap and interlacing tests.
+
+The motif is not a 99-vertex construction. The code constraints do not force
+`O>0` in general, so no strict upper bound on `n3` follows.
+
+## Wave 105: `C4 box K3` conditional extension
+
+- `wave105-c4boxk3-extension/` expands the SRG equation into exact
+  motif/outside blocks. Conditional on the motif, the 87 outside vertices
+  have types `3,48,36`, span 549 outside edges, and leave 34 separately
+  graphical aggregate degree rows.
+- A checked 549-edge graph satisfies all degrees and all 1,044 linear
+  motif-incidence entries. It is a linear witness only.
+- A complete 321,726-variable nonlinear encoding covers all four
+  three-vertex `X0` graph branches. Four 45-second runs remain
+  `UNKNOWN_TIMEOUT`.
+
+Independent verification supplies the triangle-free support argument,
+checks encoding completeness, and confirms that the linear witness fails
+2,525 nonlinear pair equations. Full extension remains `UNKNOWN`.

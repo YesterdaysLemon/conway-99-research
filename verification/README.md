@@ -1640,3 +1640,39 @@ boundary.
   `UNKNOWN`.
 
 Neither lane excludes rank 28, constructs a graph, or resolves Conway-99.
+
+## Waves 101--102 all-rank theta and prism-code verification
+
+- `wave101-all-rank-level7-lp/` independently reconstructs all seven
+  modular spaces, Fricke transfers, rational LP certificates, parity
+  rounding, and scalar null controls. Its scoped verdict is
+  `VERIFIED_WITH_SHARPENING`: the triangular mod-two upper estimate improves
+  from `704(2^44-1)` to `88(2^44-1)`, but no rank row is excluded. Fourteen
+  verifier and eight discovery tests pass.
+- `wave102-prism-incidence-code/` independently verifies the parity-defect
+  bound, incidence-code factorization, binary ranks, prism-overlap cap, and
+  local null motifs. Its verdict is `VERIFIED_WITH_CORRECTIONS`: in
+  particular `P=3 => O>=4`, and the possible nonzero `ker(B^T)` weights
+  narrow to `{36,40,44,48,52,56,60}`. Ten verifier and fourteen discovery
+  tests pass.
+
+The scalar modular cone still permits `N14=N16=N18=0` in every new row, and
+the parity-null motif is not certified to extend to 99 vertices. Neither
+package supplies a graph, exclusion, strict `n3` upper bound, or novelty
+claim.
+
+## Wave 105 motif-extension verification
+
+- `wave105-c4boxk3-extension/` independently reconstructs the forced
+  `3,48,36` outside-incidence multiset, all block equations, the exact
+  `18,11,5,1` moment census, and the `18,11,4,1` graphical census.
+- The verifier supplies the missing triangle-free support proof, checks the
+  archived 549-edge linear witness and its hash, and confirms that it fails
+  2,525 of 3,741 nonlinear pair rows.
+- The complete SAT encoding and four `X0` symmetry branches are audited.
+  Preserved raw logs are byte-identical and all remain `UNKNOWN_TIMEOUT`.
+
+The verdict is `VERIFIED_WITH_CLARIFICATIONS`. Eight verifier and eight
+discovery tests pass. The [integration audit](2026-07-28-wave105-integration-audit.md)
+and [orchestrator decision](2026-07-28-wave105-orchestrator.md) retain the
+conditional scope and unresolved full extension.
