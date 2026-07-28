@@ -1840,3 +1840,56 @@ graph, a numerical timeout to infeasibility, a strict upper bound below
   or exact endpoint SDP result is present.
 
 The rigorous interval remains `708<=n3<=4158`.
+
+## Waves 148--152 order-eight and triangle-root verification
+
+- `wave148-marked-order8/` independently reconstructs every marked row by
+  semantic key, all 28,654 coefficients, zero-capacity rows, column
+  identities, and rook/micro controls.  Verdict: `PASS_WITH_SCOPE`.
+- `wave150-exact-rank1-witness/` independently rebuilds all Wave147
+  coefficient matrices and Wave148 rows, replays all 10,310 equations,
+  verifies both zero centered covariance blocks, and reproduces modular rank
+  874 over `F_1000003`.  The vector is a finite-relaxation witness, not a
+  graph.
+- `wave149-terwilliger-triple/` independently derives the triangle partition,
+  prism trace, Gram matrix, exact character spectrum, and rank 32.  This
+  verifies a null first projection only.
+- `wave151-triangle-root-factor/` independently reconstructs the binary
+  24-by-60 factor and all four relevant Gram blocks.  It explicitly demotes
+  the proofless fixed-branch `UNSAT` status and leaves the full factor and
+  residual graph unknown.
+- `wave154-triangle-factor-portfolio/` independently reconstructs both
+  24-by-60 factors, the full 384-element centralizer, disjoint size-384
+  factor orbits, all 69,270 allowed triples, the 292-orbit histogram, 612
+  rows, and 1,039,050 nonzeros.  Every solver-negative status remains
+  diagnostic; the full factor and residual graph are unknown.
+- `wave152-four-root-order8/` independently rebuilds all nine flag universes
+  and order-6/7/8 products.  Exact integer quadratic values for masks 3 and
+  12 are strictly negative, so the stored Wave150 pseudowitness is
+  `VERIFIED` refuted in the stronger space.  This does not refute every
+  endpoint count vector.
+- `wave155-four-root-feedback/` independently reconstructs the first four
+  primitive covariance cuts and the exact replacement witnesses.  The
+  two-cut vector passes 10,311 equations with modular rank 885; the four-cut
+  vector passes 10,312 with rank 886.  Both finite systems remain exactly
+  rational feasible.  Later mask-13 and simplified-cut artifacts are outside
+  this verifier's pre-inspection freeze.
+- `wave156-four-root-late-feedback/` independently reconstructs the mask-13
+  principal cut, the later mask-3/12/13 directions, and both simplified
+  mask-12 inequalities.  The five- and eight-cut witnesses each pass 10,312
+  exact rows with rank 886.  The first simplified cut is positive, proving
+  retained nine-cut finite feasibility; the sparse
+  `18711+6*N_cube-2*N_Wagner>=0` cut rejects that witness, so ten-cut
+  feasibility remains unknown.
+- `wave153-alternative-compatibility/` independently rebuilds all 18
+  component graphs, six coordinate actions, and 275 orbits covering 1,140
+  triples.  It replays 173,250 pair equations and 9,900 row margins exactly.
+  Its verdict is `VERIFIED_WITH_SCOPE`: every complete bounded rational
+  pair-correlation projection survives, but no binary design or residual
+  graph is supplied.
+
+No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
+partial binary factor to a graph, or a numerical solver status to a proof.
+The symbolic Wave157 lift remains `DERIVED` while its separate Wave158
+clean-room reconstruction is in progress.
+The rigorous interval remains `708<=n3<=4158`.

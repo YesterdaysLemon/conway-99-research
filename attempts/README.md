@@ -762,3 +762,59 @@ Wave 146 is the first exact overlap lift in this sequence.  Its surviving
 certificate shows that one outside root is still too coarse; two-root or
 order-eight compatibility is the next boundary, and Wave 147 supplies the
 finite coefficient model for that computation.
+
+## Waves 148--152: order-eight execution and alternative roots
+
+- `wave148-marked-order8/` adds 944 marked-vertex and 4,440 ordered-pair
+  identities between order-seven and order-eight class counts.  All 5,384
+  rows and 28,654 stored coefficients have an independent semantic replay.
+- `wave150-order8-sdp-scout/` combines Wave44, ordinary deletion, Wave148, and
+  both Wave147 centered pair-root blocks.  Its exact rational `n3=4158`
+  witness has order-7/8 supports `204/874`, denominators at most four, and
+  passes 10,310 nontrivial exact equations.  Both pair-root covariance blocks
+  are exactly zero.  This retires that finite relaxation as a standalone
+  endpoint-exclusion route.
+- `wave149-terwilliger-triple/` roots at a triangle and produces an explicit
+  zero-prism permutation system whose forced 36-by-36 Gram matrix has exact
+  spectrum `0^4,6^9,10^9,12^13,60^1` and rank 32.
+- `wave151-triangle-root-factor/` realizes the first two 12-row fibres as an
+  exact binary 24-by-60 factor.  The third fibre is not constructed; the
+  fixed-first-factor `UNSAT` status has no proof artifact and remains a
+  branch-scoped diagnostic.
+- `wave154-triangle-factor-portfolio/` constructs a second exact 24-by-60
+  factor outside all 384 conjugates of the first.  The complete joint model
+  has 69,270 allowed triples in 292 centralizer orbits, 612 rows, and
+  1,039,050 incidence nonzeros.  No full 36-by-60 factor or checkable
+  impossibility proof was found.
+- `wave152-four-root-order8/` uses four pointwise-labeled roots and an
+  unordered free pair.  Clean-room verification confirms exact negative
+  covariance directions for root masks 3 and 12, so the Wave150 vector is
+  not a graph-compatible moment sequence.  Four primitive cutting planes
+  still admit exact rational replacement vectors on the old zero-covariance
+  face.  The four-cut replacement adds an exact mask-13 violation in a
+  two-by-two principal minor; its sparse fifth cut also leaves an exact
+  rational control.  Wave156 verifies that eight directions and a ninth
+  simplified mask-12 inequality retain an exact rational control.  The next
+  equal-diagonal minor yields the sparse endpoint theorem
+  `N_Wagner <= 3*N_cube+9355`; it separates that control.  Its candidate
+  symbolic lift is
+  `4*N_Wagner <= 41580-n3+12*N_cube`.  Thirteen cuts still admit a newly
+  reconstructed exact rational control with support `204/887` and rank 887,
+  pending a later verifier.  This is a live exact cut loop, not endpoint
+  infeasibility.
+- `wave153-alternative-compatibility/` tests the complete bounded rational
+  pair-correlation projection for all 275 safe coordinate orbits covering
+  all 1,140 triangle-component triples.  A clean-room verifier replays all
+  173,250 pair equations and 9,900 row margins exactly.  Every rational
+  projection survives, locating the remaining obstruction in binary
+  integrality, common higher-order coupling, or residual-graph compatibility.
+- `wave157-general-cube-wagner/` independently expands the sparse mask-12
+  covariance direction before endpoint substitution and derives
+  `41580-n3+12*N_cube-4*N_Wagner>=0`.  Its endpoint specialization exactly
+  matches the Wave156-verified primitive cut.  The symbolic theorem remains
+  `DERIVED` pending clean-room Wave158 verification and does not by itself
+  imply `n3<4158`.
+
+Every promoted statement above has a separate verifier.  The full four-root
+PSD feasibility problem, complete triangle-root binary factor, strict
+`n3<4158` bound, and Conway-99 remain `UNKNOWN`.

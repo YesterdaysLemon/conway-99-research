@@ -261,3 +261,41 @@ attempts/wave146-six-seven-coupling/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave146-six-seven-coupling/** whitespace=cr-at-eol,-blank-at-eof
 attempts/wave147-alternative-lane/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave147-pair-root-order8/** whitespace=cr-at-eol,-blank-at-eof
+
+# Waves 148--157 are sealed, checksum-pinned mixed-platform research packages.
+# Preserve their exact bytes so every manifest survives the Git index and clone.
+attempts/wave148-marked-order8/** -text
+verification/wave148-marked-order8/** -text
+attempts/wave149-terwilliger-triple/** -text
+verification/wave149-terwilliger-triple/** -text
+attempts/wave150-order8-sdp-scout/** -text
+verification/wave150-exact-rank1-witness/** -text
+attempts/wave151-triangle-root-factor/** -text
+verification/wave151-triangle-root-factor/** -text
+attempts/wave152-four-root-order8/** -text
+verification/wave152-four-root-order8/** -text
+attempts/wave153-alternative-compatibility/** -text
+verification/wave153-alternative-compatibility/** -text
+attempts/wave154-triangle-factor-portfolio/** -text
+verification/wave154-triangle-factor-portfolio/** -text
+verification/wave155-four-root-feedback/** -text
+verification/wave156-four-root-late-feedback/** -text
+attempts/wave157-general-cube-wagner/** -text
+
+attempts/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave149-terwilliger-triple/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave149-terwilliger-triple/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave150-order8-sdp-scout/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave150-exact-rank1-witness/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave151-triangle-root-factor/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave151-triangle-root-factor/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave152-four-root-order8/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave152-four-root-order8/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave153-alternative-compatibility/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave153-alternative-compatibility/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave154-triangle-factor-portfolio/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave154-triangle-factor-portfolio/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave155-four-root-feedback/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave156-four-root-late-feedback/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave157-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof

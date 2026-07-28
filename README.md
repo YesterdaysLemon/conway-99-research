@@ -338,8 +338,56 @@ and the normalized search problem.
   2,414 exact coefficient matrices, and all 208 ordinary seven-to-eight
   deletion rows.  Explicit moment entries carry `4*n3` and no prism term,
   while the `3x3` rook graph supplies a positive control.  No endpoint SDP or
-  rational dual certificate has yet been run, so this is a concrete new
-  upper-bound lane rather than a bound.
+  rational dual certificate was present at that checkpoint.
+  Waves 148--152 now execute and strengthen that lane.  Wave 148 adds 944
+  marked-vertex and 4,440 marked-pair order-eight identities.  Wave 150
+  constructs, and a clean-room verifier replays, an exact rational endpoint
+  vector satisfying 10,310 nontrivial rows and both centered pair-root blocks
+  with equality.  Thus the complete Wave44+147+148 pair-root relaxation is
+  rigorously too weak by itself.
+  Wave 152 changes the root space: four pointwise-labeled roots plus an
+  unordered free pair give nine covariance blocks of dimensions
+  `224,201,155,99,69,178,125,60,70`, still using only order-six through
+  order-eight counts.  Independent reconstruction verifies exact negative
+  directions for root masks 3 and 12, refuting the Wave 150 pseudowitness.
+  Feeding the first four primitive directions back does not yet exclude the
+  endpoint face: exact rational replacement vectors survive after two and
+  four cuts, with the active inequalities replayed exactly.  The four-cut
+  replacement also exposes root mask 13 through a negative two-by-two
+  principal minor; its unusually sparse fifth cut has only four order-seven
+  and 28 order-eight coefficients.  An exact rational replacement still
+  survives all five directions.  Three further directions give an exact
+  eight-cut replacement, and the same vector strictly satisfies a ninth
+  simplified mask-12 inequality.  Wave156 independently verifies those late
+  directions and exact nine-cut feasibility.  That inequality has the
+  human-scale constant 320,166 and only ten nonconstant class terms, arising
+  from the `(1,-1)` direction on an equal-diagonal two-by-two principal
+  submatrix.  A later equal-diagonal minor is cleaner still: at the endpoint,
+  the verified exact inequality is
+  `N_Wagner <= 3*N_cube + 9355`, where the counts are induced eight-vertex
+  Wagner graphs and 3-cubes.  It exactly separates the eight-cut rational
+  control.  Its candidate all-`n3` lift is
+  `4*N_Wagner <= 41580-n3+12*N_cube`.  Wave157 seals an exact symbolic
+  derivation of that lift; its clean-room Wave158 replay is still in progress,
+  so the general theorem remains `DERIVED` rather than `VERIFIED` in this
+  checkpoint.  Thirteen cuts still admit a new exact rational control of rank
+  887, pending independent replay.  This is genuine higher-order separation
+  but not a strict bound.
+  A separate triangle-root reformulation in Waves 149 and 151 yields an exact
+  prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
+  24-by-60 factor for two of its three fibres.  The full 36-by-60 binary
+  factor and residual 60-vertex graph remain `UNKNOWN`; a bare fixed-branch
+  solver `UNSAT` has no proof artifact and is not promoted.  Wave 154 then
+  finds a second exact 24-by-60 factor outside all 384 conjugates of the
+  first.  Its joint three-fibre exact-cover model has 69,270 triples, 292
+  symmetry orbits, 612 rows, and 1,039,050 nonzeros, but every bounded solver
+  route remains proofless `UNKNOWN`.
+  Wave153 shifts the same triangle-root problem into its complete bounded
+  rational pair-correlation polytope.  A clean-room verifier rebuilds all 275
+  coordinate orbits covering 1,140 component triples and replays 173,250 pair
+  equations plus 9,900 row margins exactly.  Every rational projection
+  survives, so the remaining obstruction must use binary integrality, common
+  higher-order coupling, or residual-graph compatibility.
   These
   independently checked boundaries identify graph-valued projector
   completion, higher structure beyond cutoff-28 Jacobi positivity,
