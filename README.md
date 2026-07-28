@@ -424,6 +424,18 @@ and the normalized search problem.
   their identical first incidence profiles: the exact determinant values are
   4,423,680 and 4,439,040.  Classifying the remaining incidence minors under
   the prism-free codegree condition is a new proof strategy, not yet a bound.
+  Wave 169 tests a smaller candidate route and retires it cleanly.  A
+  degree-saturated local gadget permits five optional mark failures
+  simultaneously, so no incompatibility graph using only the current
+  pairwise/root-local clauses can prove the pointwise four-failure target.
+  Completion remains an order-eight event; the replacement must be a
+  five-way failure hypergraph, overlapping-root closure, or full coupled
+  conic certificate.  Wave 170 extracts more exact structure from the block
+  graph: every triangle block has profile
+  `(32-p,144+3p,36-3p,p)`, the block-intersection clique number is seven, and
+  the ternary incidence Gram has rank 55.  These facts recover
+  `n3+3P=4158` and add code/star-complement data, but still give no stricter
+  endpoint bound.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary

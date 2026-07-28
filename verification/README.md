@@ -1925,6 +1925,15 @@ The rigorous interval remains `708<=n3<=4158`.
   global Cauchy-Binet coefficient identity, and
   `T*T^T=816I+10K` for the rectangular neighborhood-triple matrix.  No bound
   on the remaining eight-point types is promoted.
+- `wave169-failure-hypergraph/` uses two hostile paper audits to verify the
+  exact threshold equivalences and a five-failure local relaxation model.
+  The supported conclusion is only that current pairwise/root-local clauses
+  cannot prove the pointwise four-failure upper bound; the gadget is not an
+  SRG candidate.
+- `wave170-block-profile-ternary-code/` independently verifies the exact
+  pointwise/global block profiles, maximum clique size seven, ternary Gram
+  rank 55, and incidence rank interval 55 through 98.  These add exact
+  structure but no strict `n3` bound.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

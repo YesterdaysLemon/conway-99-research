@@ -849,6 +849,16 @@ finite coefficient model for that computation.
   most two and derives a Cauchy-Binet minor energy whose values on cube and
   Wagner point sets differ by 15,360.  Bounding the other eight-point
   configuration contributions remains an unexecuted strategy.
+- `wave169-failure-hypergraph/` proves completion uniqueness is already an
+  order-eight event, then gives a checked five-failure local gadget.  Thus a
+  pairwise incompatibility graph using the current clauses cannot prove
+  independence number at most four; the retained target is a five-way
+  failure hypergraph, overlapping-root closure, or lifted exact dual.
+- `wave170-block-profile-ternary-code/` derives the exact pointwise profile
+  `(32-p,144+3p,36-3p,p)`, recovers `n3+3P=4158` in block space, proves
+  block-intersection clique number seven, and obtains
+  `rank_F3(B*B^T)=55`.  The proposed star-complement/code classification is
+  not executed and no new numerical bound follows.
 
 Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
