@@ -826,6 +826,11 @@ finite coefficient model for that computation.
   matches the Wave156-verified primitive cut.  Wave158 independently verifies
   the complete symbolic derivation.  The theorem does not by itself imply
   `n3<4158`.
+- `wave165-general-cube-upper/` moves to fixed-four-cycle extension space.
+  Exact nine-or-ten boundary matchings and a marked-square/prism bijection
+  give `12*N_cube<=37422+3*P=41580-n3`, hence `N_cube<=3465` generally and
+  `N_cube<=3118` at the prism-free endpoint.  The proof assumes no graph
+  automorphism; it does not by itself improve `n3<=4158`.
 
 Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The

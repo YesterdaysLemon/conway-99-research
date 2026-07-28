@@ -1900,6 +1900,12 @@ The rigorous interval remains `708<=n3<=4158`.
   strict negative four-root directions at masks 3 and 12.  This verifies
   finite-relaxation feasibility and the recurring obstruction, not a graph
   or endpoint feasibility.
+- `wave165-general-cube-upper/` independently reconstructs the fixed-C4
+  partition, exact boundary matching sizes, marked-square/prism bijection,
+  and cube-face multiplicities.  Verdict: `VERIFIED_WITH_SCOPE` for
+  `12*N_cube<=37422+3*P=41580-n3`, with endpoint consequence
+  `N_cube<=3118`.  It does not prove a Wagner lower bound or exclude the
+  endpoint.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

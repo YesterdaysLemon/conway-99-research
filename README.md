@@ -384,6 +384,17 @@ and the normalized search problem.
   exposing certificate for whole covariance blocks, not another sequence of
   sampled rank-one cuts.  This is genuine higher-order separation but not a
   strict bound.
+  Wave 165 changes spaces again, from eight-vertex covariance blocks to
+  rooted extensions of an induced four-cycle.  Exact common-neighbor
+  accounting makes each consecutive singleton-class graph a partial matching
+  of size nine or ten; the size-ten exception is exactly an induced
+  triangular-prism channel.  A marked-square/prism double count and an
+  independent clean-room proof give the unrestricted theorem
+  `12*N_cube <= 37422+3*P = 41580-n3`.  Hence `N_cube<=3465` generally and
+  `N_cube<=3118` at the prism-free endpoint.  Combined with the verified
+  cube/Wagner covariance inequality, endpoint exclusion would now follow
+  from the absolute lower bound `N_Wagner>=18710`.  No such Wagner lower
+  bound is proved.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary
