@@ -1272,3 +1272,669 @@ two abstract simultaneous neighbors: VERIFIED
 full X/M/W/Q/B endpoint package: UNKNOWN
 n3=708 / Conway-99 / novelty: UNKNOWN
 ```
+
+## Wave 39 edge-local rank and proof-shard verification
+
+The [integration audit](2026-07-27-wave39-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave39-orchestrator.md) record the accepted
+scope.
+
+- `wave39-edge-local-rank/` independently enumerates all 10,395 pulled-back
+  matchings, reconstructs the eleven positive partitions of six, proves the
+  local rank formula, verifies rank transport, and promotes
+  `rank_F7(M)>=19`. Fourteen hostile and exact tests pass.
+- `wave39-proof-solver/` independently binds the branch-15 source lines, OPB
+  bytes, raw/kernel proof hashes, and generalized-unit derivation. Fresh
+  VeriPB 3.0.2 runs accept both proofs. Six tests pass. CakePB supplied no
+  conclusion.
+
+The cross-base and simultaneous `B/H` packages remain discovery-only
+`DERIVED_INCONCLUSIVE` evidence. They are published for reproducibility, not
+promoted as verified contradictions.
+
+```text
+rank_F7(M)>=19:                 VERIFIED
+branch15 AND x187=1:            VERIFIED UNSAT
+branch 15 / proof coverage:     UNKNOWN / 0 of 33
+upper bound below 4158:         NOT PROVED
+n3=4158 / Conway-99 / novelty:  UNKNOWN
+```
+
+## Wave 40 rank completion and edge-coupling verification
+
+The clean-room packages are:
+
+- `wave40-rank19-equality/`: independently reconstructs the conditional
+  rank-22 stepping stone, including all 144 third-fibre syndromes, 66
+  projective lines, 1,923 two-spaces, 25,744 three-spaces, and the positive
+  dimension-three boundary.
+- `wave40-exact-coupling-model/`: independently rebuilds all eleven
+  edge-local forms and the arbitrary-completion rank lemma. It verifies
+  `min_f rank(H^T U_f)=e` when the partition has `e` even parts, and therefore
+  promotes the universal theorem `rank_F7(M)>=25`.
+- `wave40-edge-type-coupling/`: independently reconstructs the global
+  face/surface identities, all 4,050 normalized all-`222` quotients, the
+  exact 39-block Laplacian identity, and the complete `2^18` lift census for
+  one boundary quotient.
+
+The [Wave 40 integration audit](2026-07-27-wave40-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave40-orchestrator.md) retain the exact
+scope:
+
+```text
+rank_F7(M)>=25:                    VERIFIED
+endpoint arithmetic rank pairs:    330
+one-quotient rank-33 lift census:   VERIFIED SCOPED
+endpoint proof coverage:            0 of 33
+upper bound below 4158:             NOT PROVED
+n3=4158 / Conway-99 / novelty:      UNKNOWN
+```
+
+## Wave 43 endpoint-rank and scoped reductions
+
+The Wave 43 clean-room packages are:
+
+- `wave43-rank28/`: independently exhausts every endpoint local rank-27
+  mechanism and verifies `n3=4158 => rank_F7(M)>=28`.
+- `wave43-all-rank33-lifts/`: independently reconstructs all 264 retained
+  masks and every forced-Gram and six-set census record.
+- `wave43-branch15-two-triangle/`: independently reconstructs 40,800 raw
+  cuts, 34,340 active cuts, and all 64 null probe records.
+- `wave43-seven-deck-endpoint/`: independently enumerates the complete
+  six- and seven-vertex catalogues and checks the exact unrooted count
+  witness.
+
+Each verifier has a protocol freeze, hostile controls, a run report, and a
+hash manifest. Only the rank-28 implication is a graph-theoretic theorem;
+the other three are scoped reductions or relaxation-feasibility controls.
+
+## Wave 44 aggregate rooted-count control
+
+`wave44-rooted-flags/` independently rebuilds the 170 exact equations and
+checks the 91-support integer witness. It also reproduces and explicitly
+refutes the free HiGHS false-infeasibility diagnostic by exact substitution
+and a fixed-witness solver control. The accepted scope is feasibility of the
+aggregate rooted relaxation only.
+
+## Wave 45 rooted flag moments
+
+`wave45-flag-moment/` independently enumerates the four-vertex rooted flags,
+constructs every exact overlap coefficient, checks Petersen and Clebsch
+controls, refutes the two stored aggregate witnesses, and replays all 17 cuts
+and 15 witnesses from immutable checkpoint v1. Fifteen tests and the package
+manifest pass. The accepted result is a verified finite obstruction sequence;
+the terminal timeout and the full endpoint remain `UNKNOWN`.
+
+## Waves 46--49 alternative-space verification
+
+- `wave46-f7-code/` independently verifies the conditional ordinary
+  characteristic-seven code consequences and rebuilds all 17 generic controls
+  in ranks 28 through 44. It verifies a scoped null result, not an endpoint
+  code or graph.
+- `wave47-three-root-moment/` independently reconstructs all eight labelled
+  root families, 57,006 coefficient entries, 136 stored-witness matrices,
+  2,664 exact negative directions, and 2,657 primitive cuts.
+- `wave47-branch15-polynomial/` independently reconstructs the seven
+  degree-two Macaulay windows, all 13 XOR relations, and the complete
+  34,340-row degree-four partition. It finds no contradiction or new unary
+  assignment.
+- `wave48-conic-moment/` independently reconstructs the Wave 44 affine rank
+  93 and nullity 116, then verifies the complete universal kernels of all
+  eleven Wave 45/47 moment families without opening numerical solver output.
+- `wave49-five-root-moment/` independently reconstructs the 683 labelled
+  five-roots, 21 canonical families, 2,520 `S5` relabellings, 42 controls, and
+  all 357 exact stored-witness refutations. The numerical SDP artifact is not
+  used as evidence.
+
+Every accepted claim is finite and scoped. Combined real/integer feasibility,
+endpoint exclusion, a strict upper bound below 4158, graph construction,
+novelty, priority, and Conway-99 remain `UNKNOWN` or `NOT PROVED`.
+
+## Wave 51 alternative-space verification
+
+- `wave51-global-triple-tensor/` independently reconstructs the symmetric
+  aggregate tensor, all five integral slices, 125 balance equations, and
+  exactly 100 of 625 association-algebra failures.
+- `wave51-seidel-smith/` verifies the corrected conditional Smith form,
+  mod-seven Jordan type, and `r>=14` symmetric-square bound. It explicitly
+  refutes the discovery spectrum's reversed nonprincipal multiplicities.
+- `wave51-rankone-cut-relaxation/` is the source-side exact 174-cut probe. Its
+  self-assigned verified status is procedurally rejected and treated as
+  candidate chronology.
+- `wave51-rankone-cut-relaxation-independent/` cleanly reconstructs all 170
+  equations, 174 cuts, 5,691 Wave 49 tensor evaluations, and the exact
+  rational witness. It verifies feasibility of this fixed bundle only.
+
+The three lanes are null results for endpoint exclusion. Pair-specific
+quadruple compatibility, the full PSD region, integer feasibility, a graph,
+and any strict upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
+
+## Wave 52 coherent-closure verification
+
+- `wave52-coherent-closure/` independently reconstructs the forced one-root
+  `3K6` structure, global relation valencies, and `B2/C4/D0` cross-sector
+  caps.
+- Its clean-room 2-WL implementation reproduces the exact trajectories
+  `[6]` and `[26,38,47]`, all 64 canonical cycle profiles, 39 fingerprint
+  classes, and all 4,096 fingerprint-equivalence comparisons.
+- Five hostile mutations are rejected. Explicit integral local completions
+  remain, and completed closures depend on arbitrary `B/C` selections.
+
+The accepted claim is a verified local null result. Multi-root compatibility,
+three-tuple refinement, graph realizability, endpoint exclusion, and a strict
+upper bound below 4158 remain `UNKNOWN` or `NOT PROVED`.
+
+## Waves 56--59 alternative-space verification
+
+- `wave56-percolation-closure/` independently checks the cited closure
+  theorem's scope, the target parameter census, all `n3/P/H/R/S` incidence
+  identities, 64 tip graphs, 23 endpoint masks, 35 multicovers, and 11
+  formal label-orbits. Discovery and verifier suites each pass 21 tests.
+- `wave57-star-complement/` independently reproduces the projector,
+  supported-eigenspace, star-set, and moment calculations, then materially
+  corrects the discovery using prior verified Wave 36 results and
+  `C4(X)<=27`. Its scoped verdict is `REFUTED_IN_PART`.
+- `wave58-cross-incidence-rank/` independently reconstructs both Gram
+  identities, rank transfer, normalized component censuses, exact local
+  four-cycle sets, separate controls, and the restricted Wave 40 replay.
+  Fourteen verifier and eleven discovery tests pass.
+- `wave59-incidence-spectral-excess/` independently reconstructs the
+  incidence and triangle-graph spectra, all rooted layers, the failure of
+  distance-biregularity, exact predistance polynomials and defects, the
+  pair-neighborhood Gram matrix, Ihara cycle counts, and the cage comparison.
+  Fourteen verifier tests, including hostile mutations, pass with zero
+  mathematical mismatches.
+
+The [integration audit](2026-07-27-wave59-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave59-orchestrator.md) retain the Wave 57
+correction and the unresolved simultaneous-incidence boundary. Spectral
+excess separates the conditional graphs from distance-regular equality
+cases; it does not exclude them.
+
+## Waves 53--55 corrected checkpoint verification
+
+- `wave53-proof-cover/` independently reconstructs all 10,395 normalized
+  states, 78 refined orbits, the exact 33-case compatible cover, and the
+  exported `branch15 AND x187=0` bytes. Fresh Exact, VeriPB, and CakePB runs
+  certify only `UNKNOWN` / `VERIFIED NO CONCLUSION`; complete-case coverage
+  remains `0/33`.
+- `wave53-multi-root-wl/` independently rebuilds the four finite two-root
+  templates, all 72 caps, the unique shared forced-true `B` candidate, exact
+  2-WL partitions and intersection tensors, folklore 3-WL counts, and
+  structurally different positive controls. No root relation is excluded.
+- `wave53-exact-cut-loop/` verifies the four rational witnesses, 170 base
+  equations, three retained Wave 49 cuts, and exact 177-cut feasibility. It
+  refutes the discovery's `128/128` indefinite claim: the corrected count is
+  `120/128`, and all twelve reported Wave 45 direction values are affected by
+  doubled off-diagonal coefficients.
+- `wave54-centered-enumerator/` independently reconstructs all 232 ordinary
+  MacWilliams coefficients and verifies the stated formal enumerator,
+  including omitted dual parity and `B_231>=2` checks.
+
+The [Wave 55 integration audit](2026-07-27-wave55-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave55-orchestrator.md) retain the material
+correction and the status wall. The bounded Wave 55 search needs no verifier
+promotion because it asserts no terminal mathematical result.
+
+## Waves 60--63 component, field, SDP, and cone verification
+
+- `wave60-c3-incidence-design/` independently reconstructs the
+  `216 -> 50 -> 18` component census, all 1,140 triples, 275 safe coordinate
+  orbits, candidate counts, pattern counts, and binary target ranks.
+- `wave61-c3-finite-field/` independently replays every finite-field,
+  full-pair, and pattern-parity calculation. It records
+  `VERIFIED_WITH_CORRECTION` because no nonnegative integral cubic tensor was
+  tested.
+- `wave62-terwilliger-sdp/` independently reconstructs the signed-edge
+  association scheme, all 43 endpoint parameters, and the 23,388 exact Schur
+  blocks. It clarifies the deliberate omission of one tautology.
+- `wave63-c3-integer-cone/` independently rebuilds all candidate lanes and
+  checks 46,620 exact pair equations in 74 rational certificates, including
+  coefficient-bound and hostile-mutation tests.
+
+The [integration audit](2026-07-27-wave63-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave63-orchestrator.md) retain the
+unresolved integer/higher-order boundary. No binary incidence design,
+compatible `A_Y`, endpoint exclusion, strict upper bound below 4158, or
+Conway-99 resolution follows.
+
+## Waves 64--65 rooted transition and hypergraph verification
+
+- `wave64-rooted-transition-design/` independently reconstructs all 84
+  labels, 35,560 candidate blocks, 840 transitions, 6,040 local matchings,
+  280 triangle cuts, the explicit 140-block witness, the rational full-linear
+  control, and the exact residual-codegree closure. Eight hostile and
+  deterministic tests pass.
+- `wave65-rooted-hypergraph-algebra/` independently reconstructs
+  `D+5I=ZZ^T`, the block graph and its local `3K4` structure, spectral and
+  four-cycle restrictions, target and transition moments, scalar coupling,
+  all 258 averaged PSD lanes, and the exact local control with moment deltas
+  `0,0,0,+5496,-12020,+239772`. Seven clean-room tests pass.
+
+The [integration audit](2026-07-27-wave65-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave65-orchestrator.md) promote only the
+scoped finite results. Integral transition/design compatibility, full
+codegrees, the global prism-free endpoint, a strict upper bound below 4158,
+and Conway-99 remain unresolved.
+
+## Wave 66 spherical-code and lattice verification
+
+- `wave66-spherical-code-shift/` independently reconstructs the two spherical
+  embeddings, the 99-line equiangular lift, centering, lattice saturation,
+  determinant and local Smith calculations, exact dual denominator, low-norm
+  exclusions, finite Gauss sums, Milgram phase, and Blichfeldt cross-check.
+- The verdict is `VERIFIED_WITH_CORRECTION`. Fourteen verifier tests and ten
+  discovery tests pass. The corrected universal conclusion is
+  `rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`.
+- The exact conditional lattice data are `63 M* subset M`,
+  `det(M)=9*7^(44-r)`,
+  `M*/M = Z/9 direct_sum (Z/7)^(44-r)`, and `min(M*)>=2`.
+
+The [Wave 66 integration audit](2026-07-27-wave66-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave66-orchestrator.md) preserve all three
+corrections and the unresolved status wall. No graph or lattice realization,
+endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or
+novelty result follows.
+
+## Waves 69 and 72 order-11 symmetry verification
+
+- `wave72-order11-automorphism/` independently proves that every exact
+  order-11 automorphism is fixed-point-free. Fourteen verifier tests and nine
+  discovery tests pass, with six compared fields and zero mismatches.
+- `wave69-cyclic-cover-shift/` independently reconstructs all seven quotient
+  row shapes and three diagonal cases, then exhausts 1,108,533
+  label-complete nodes and 8,980 canonical nodes with zero quotient. All six
+  transcript hashes and eleven comparison fields match; thirteen verifier
+  tests pass.
+- Combining the two verified theorems excludes every order-11 automorphism
+  and hence every vertex-transitive realization. The independent Fourier
+  lane also excludes Cayley realizations on every group of order 99.
+
+The [integration audit](2026-07-27-wave72-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave72-orchestrator.md) retain the
+restricted scope. Asymmetric targets, the endpoint, a strict upper-bound
+improvement, Conway-99, and literature novelty remain `UNKNOWN`.
+
+## Waves 71, 74, and 78 modular-theta verification
+
+- `wave71-modular-theta-extension/` independently verifies the order-nine
+  marked class, the index-three even overlattice, the exact level-seven
+  scaled dual, Skoruppa weights `154-3q`, every finite-field theta gap, and
+  `N14+N16+N18=2 mod 14` in the `q=16` row. Its verdict is
+  `VERIFIED_WITH_CORRECTION`: norm-18 `h=2` is impossible, leaving `h=0,1`.
+- `wave74-short-vector-closure/` independently checks both `h=2`
+  contradictions and all `4/20/6` aggregate histograms. Its audit retains a
+  harmless dead-lane bookkeeping clarification.
+- `wave78-short-vector-packing/` independently checks the four-subset
+  packing bounds and the exact reduced histogram counts `1/7/4`. Its
+  multiplicity-aware proof strengthens the discovery wording without
+  changing the theorem.
+
+The [integration audit](2026-07-27-wave78-integration-audit.md) and
+[orchestrator decision](2026-07-27-wave78-orchestrator.md) retain live
+norm-14, norm-16, and norm-18 structures. No lattice realization, graph,
+endpoint exclusion, strict upper bound, Conway-99 resolution, or novelty
+claim follows.
+
+## Waves 80--82 and 86 alternative-space verification
+
+- `wave80-f7-overlattice-code/` independently verifies the injective
+  `[99,44]_7` code, exact hull, rank-28 orthogonal quotient, complete
+  support-five dual exclusion, and balanced short-vector images. Ten
+  verifier tests and eight discovery tests pass.
+- `wave81-norm16-labeled-design/` independently reproduces the full
+  1,800-support and 4,985-coupling census. Its stricter graphicality
+  extension is separately checked by
+  `wave81-norm16-graphical-refinement/`, leaving 40 degree rows at `t=0`
+  and seven at `t=1`.
+- `wave82-seidel-orthogonal/` independently proves both directions of the
+  integral-orthogonal equivalence and the complete Smith form. All eight
+  imported rank rows pass the exact arithmetic checks.
+- `wave86-level7-exact/` independently reconstructs the full modular-form
+  basis, Fricke matrix, Poisson transfer, positive coefficient identity,
+  and modulo-14 rounding to `N14+N16+N18>=5868`. Its verdict is
+  `VERIFIED_WITH_LITERATURE_CORRECTION` because the printed source formula
+  omits a normalization ratio; the discovery's actual factors follow from
+  the source's preceding equations.
+
+Wave 84 is published separately as an `UNKNOWN` bounded-search report and
+receives no verifier promotion. The
+[integration audit](2026-07-28-wave86-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave86-orchestrator.md) preserve the
+status wall: no rank row, endpoint, or target graph is excluded.
+
+## Waves 90, 94, 99, and 100 norm-14 verification
+
+- `wave90-short-vector-count-upper/` independently verifies the endpoint
+  seed injection and `N14<=5544`. Six verifier and seven discovery tests
+  pass.
+- `wave94-general-n3-norm14-bound/` independently verifies the rooted-prism
+  multiplicity, every compatible identity row, and
+  `N14<=floor((55440-4*n3)/7)`. Twelve verifier and seven discovery tests
+  pass.
+- `wave99-transition-pair-moment/` independently verifies the
+  transition-pair cap 18, `N14<=4950` at `P=0`, and the rank-28 corollary
+  `407*N16+43*N18>=2165002`. Seventeen verifier and eight discovery tests
+  pass.
+- `wave100-general-pair-moment/` independently verifies the general
+  second-moment inequality
+  `N14<=2*floor((55440-5*n3)/14)` for all 1,387 compatible rows. Eighteen
+  verifier and six discovery tests pass.
+
+These are scoped shell-count theorems. They neither upper-bound `n3` nor
+control `N16` or `N18`. The
+[integration audit](2026-07-28-wave100-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave100-orchestrator.md) retain that
+boundary.
+
+## Waves 97 and 98 alternative-space verification
+
+- `wave97-f7-exterior-matroid/` independently verifies the Schur-cube,
+  second-compound code, complete Smith, generalized-weight, and finite
+  orthogonal-orbit formulas. Its verdict is
+  `VERIFIED_WITH_PROVENANCE_CORRECTION`: Wave 51 already implied
+  `R*R=1_perp` and the quadratic circuit. Fifteen verifier and fourteen
+  discovery tests pass.
+- Wave 98 has no verifier promotion. Its three tests reproduce only a finite
+  degree-1,000 positivity probe of a formal scalar theta pair, retained as
+  `UNKNOWN`.
+
+Neither lane excludes rank 28, constructs a graph, or resolves Conway-99.
+
+## Waves 101--102 all-rank theta and prism-code verification
+
+- `wave101-all-rank-level7-lp/` independently reconstructs all seven
+  modular spaces, Fricke transfers, rational LP certificates, parity
+  rounding, and scalar null controls. Its scoped verdict is
+  `VERIFIED_WITH_SHARPENING`: the triangular mod-two upper estimate improves
+  from `704(2^44-1)` to `88(2^44-1)`, but no rank row is excluded. Fourteen
+  verifier and eight discovery tests pass.
+- `wave102-prism-incidence-code/` independently verifies the parity-defect
+  bound, incidence-code factorization, binary ranks, prism-overlap cap, and
+  local null motifs. Its verdict is `VERIFIED_WITH_CORRECTIONS`: in
+  particular `P=3 => O>=4`, and the possible nonzero `ker(B^T)` weights
+  narrow to `{36,40,44,48,52,56,60}`. Ten verifier and fourteen discovery
+  tests pass.
+
+The scalar modular cone still permits `N14=N16=N18=0` in every new row, and
+the parity-null motif is not certified to extend to 99 vertices. Neither
+package supplies a graph, exclusion, strict `n3` upper bound, or novelty
+claim.
+
+## Wave 105 motif-extension verification
+
+- `wave105-c4boxk3-extension/` independently reconstructs the forced
+  `3,48,36` outside-incidence multiset, all block equations, the exact
+  `18,11,5,1` moment census, and the `18,11,4,1` graphical census.
+- The verifier supplies the missing triangle-free support proof, checks the
+  archived 549-edge linear witness and its hash, and confirms that it fails
+  2,525 of 3,741 nonlinear pair rows.
+- The complete SAT encoding and four `X0` symmetry branches are audited.
+  Preserved raw logs are byte-identical and all remain `UNKNOWN_TIMEOUT`.
+
+The verdict is `VERIFIED_WITH_CLARIFICATIONS`. Eight verifier and eight
+discovery tests pass. The [integration audit](2026-07-28-wave105-integration-audit.md)
+and [orchestrator decision](2026-07-28-wave105-orchestrator.md) retain the
+conditional scope and unresolved full extension.
+
+## Waves 96 and 112 C4-incidence verification
+
+- `wave112-c4-short-vector-incidence/` independently verifies the 2,079
+  target cycles, the four alternating-cycle minima `21,20,18,26`, the
+  evenness correction from raw ceiling 51 to 52 oriented occurrences, and
+  the exact `51,20,20,4` fixed-cycle partition. Eleven verifier and eight
+  discovery tests pass.
+- `wave96-norm16-norm18-upper/` independently verifies the weighted cap-25
+  implication, the fixed-cycle projector, the 80-point cross-polytope null
+  control, the norm-20 `10+10` classification, the `h<=3` and 15-cycle
+  bounds, and the rank-30 cap-24 implication. Its verdict is
+  `VERIFIED_WITH_CLARIFICATION`; thirteen verifier and nine discovery tests
+  pass.
+
+Neither cap is proved. No general `N16/N18` upper bound or rank exclusion
+follows.
+
+## Waves 107--110 conditional motif verification
+
+- `wave107-c4boxk3-spectrum/` independently reconstructs the conditional
+  outside characteristic polynomial, correcting the tentative quadratic
+  factor to `x^2-9x-46`. Ten verifier and seven discovery tests pass.
+- `wave109-c4boxk3-local-projector/` independently reconstructs the
+  primitive incidence kernel, its `O^-(74,7)` type, local projector, rank
+  transfer, and Smith/index formulas. Nine verifier and nine discovery tests
+  pass.
+- `wave110-c4boxk3-symmetry-sat/` independently verifies the lex CNF, the
+  simultaneous shared-potential theorem, all four invariant branch covers,
+  and the exact encoding counts. Its verdict is
+  `VERIFIED_WITH_EVIDENCE_BOUNDARY`; seven verifier and eight discovery tests
+  pass.
+
+The fresh Wave 110 runs remain `UNKNOWN_TIMEOUT`. No graph, UNSAT proof,
+motif exclusion, or rank exclusion is promoted.
+
+## Wave 116 C4 Jacobi/theta verification
+
+- `wave116-c4-jacobi-theta/` independently verifies the restricted
+  projector, the valid `K/L` marking scalings, the nondegenerate
+  `(Z/7)^4` sector and retained complement, the Poisson/Fricke factors, and
+  the exact antipodal coefficient convention.
+- The verifier sharpens the main correction: `u_i/sqrt(7)` is definitively
+  outside `K*`, so the proposed small index is invalid.
+- Rank 28 forces 52,812 antipodal incidences; the desired cap-25 upper is
+  51,975, leaving an exact gap of 837.
+- Eleven verifier and eight discovery tests pass. The verdict is
+  `VERIFIED_WITH_CLARIFICATIONS`.
+
+No Jacobi upper certificate or rank exclusion is present. Wave 118 is
+published separately as a sealed subjective estimate and receives no
+mathematical verifier promotion.
+
+The [integration audit](2026-07-28-wave116-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave116-orchestrator.md) preserve all
+conditional and `UNKNOWN` boundaries.
+
+## Waves 123 and 127--131 alternative-space verification
+
+- `wave123-fixedc4-threepoint/` independently reconstructs every exact span
+  projector, all 4,851 graph-valued pair rows, and 2,340 rooted
+  feature-Gram blocks.  Six verifier tests pass.  The nonexhaustive search
+  proves no local cap.
+- `wave127-wave129-jacobi-audit/` independently rebuilds the modular
+  dimensions, Fricke factor, cache consistency, and all 5,874 original
+  candidate rows.  Cutoffs `10--20` are exact finite feasible; cutoff 28 was
+  still `UNKNOWN` at that checkpoint and is resolved as finite-feasible by
+  Wave 130 below.  Six verifier tests pass.
+- `wave128-alternative-spaces/` independently reconstructs the finite Smith
+  split, exact quadratic Gauss phases, seven-adic gluing, both rootlessness
+  arguments, and survival of every imported row.  Eight verifier tests
+  pass.
+- `wave131-binary-lcd-enumerator/` independently checks the LCD/symplectic
+  derivation, every subset type through size three, all 200 MacWilliams
+  rows, and the nonintegral rational witness.  Six verifier tests pass; the
+  integral scout remains non-evidentiary `UNKNOWN`.
+
+The [integration audit](2026-07-28-wave131-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave131-orchestrator.md) preserve the
+status wall.  No code, lattice, graph, rank exclusion, strict `n3` upper
+bound, Conway-99 resolution, or novelty claim follows.
+
+## Waves 130 and 132--134 verification
+
+- `wave130-cdd-exact-lp/` independently regenerates all 239 Jacobi columns
+  without discovery imports or serialized caches.  It verifies the
+  cutoff-28 rational point against 454 equalities and 1,686 inequalities,
+  with zero failures and 506 tight rows.  Three verifier tests pass.
+- `wave132-distinguished-biweight/` independently verifies all 200
+  MacWilliams rows, all four split systems, the pair tables, the
+  `A94=A96=A98=0` cut, and the surviving stronger rational witness.
+- `wave133-triangle-holonomy-topology/` independently reconstructs both
+  opposite-sign local controls and the full cover, balanced quotient, link
+  normalization, Euler characteristic, and nonorientable endpoint-scale
+  surface control.
+- `wave134-z4-symmetrized-enumerator/` independently derives the quaternary
+  code types, residue/torsion restrictions, complete size-three forced-word
+  tables, sparse transform coefficients, and corrected 1,119/1,114/161 orbit
+  partition.  Its two prepublication vetoes are retained.  Corrected
+  rational and integral feasibility remain `UNKNOWN_NOT_RUN`.
+
+The [integration audit](2026-07-28-wave133-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave133-orchestrator.md), followed by the
+[Wave 134 audit](2026-07-28-wave134-integration-audit.md) and
+[decision](2026-07-28-wave134-orchestrator.md), preserve the finite and
+conditional scope.  Rank 28, the prism-free endpoint, the strict `n3`
+upper-bound question, code realization, and Conway-99 remain `UNKNOWN`.
+
+## Waves 135--142 alternative-space verification
+
+- `wave135-z4-exact-face/` independently verifies the corrected orbit
+  partition, zero-row rank 143, affine rank 145, torsion-tightened rank 146,
+  and both `UNKNOWN_WALL` records.  Thirteen hostile tests pass.
+- `wave136-alternative-spaces/` independently reconstructs the Arf/Gauss
+  branches, additive-`GF(4)` graph-state self-duality, character transform,
+  parity-zero states, and all support-at-most-three rows.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION`; quantum-shadow inequalities were not promoted.
+- `wave137-arf-krawtchouk/` independently replays all fourteen rational
+  witnesses, all ordinary/split rows, the cumulative signed ranks, and every
+  terminal shadow inequality.  Integral realization remains `UNKNOWN`.
+- `wave140-arf-sign-lattice/` independently verifies the determinant bridge
+  and opposite-sign controls.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION` because the controls are not integral
+  zero-one SRG adjacency matrices.
+- `wave141-bivariate-graph-code/` independently reconstructs two transform
+  controls, the `D8` dimensions/ranks, all 62 six-set classes, the
+  `S0`--`S6` identities, and `B[6,56]>=n3`.  Eleven hostile tests pass.
+- `wave142-interlace-isotropic/` independently verifies the local interlace
+  rows, kernel moment, all isotropic diagonal toggles, and the
+  support-intersection refinement.  Its verdict is
+  `PARTIAL_PASS_WITH_TOP_BAND_VETO`: minimum image weight 14 is unsupported,
+  so sizes 86--91 are rejected and only 92--99 remain forced.
+
+No verifier promotes a rational enumerator to a code, a local profile to a
+graph, a numerical timeout to infeasibility, a strict upper bound below
+4,158, or a Conway-99 resolution.
+
+## Waves 143--146 projection and rooted-overlap verification
+
+- `wave143-binary-s6-projection/` independently replays eight rational
+  endpoint/Arf witnesses, all ordinary and split rows, the exact `S6`
+  identity, and the full HNF reconstruction.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION`: the target proves binary minimum eight, not
+  the formal dual minimum fifteen used by the rational slice.
+- `wave144-sixset-odd-profile-cleanroom/` independently rebuilds the
+  four-/five-/six-class alignment, all 62 supports, 66 local profiles, and
+  the 65-cell endpoint aggregate.  Its verdict is `PASS_NULL_BOUNDARY`;
+  overlap consistency is absent.
+- `wave139-gf4-lower-aggregation/` refutes the Wave 139 `max` merge, verifies
+  the five corrected sums, vetoes pure-`Y` zeros 8, 10, and 12, and
+  independently calibrates the Rains shadow formula on 1,099 small graphs.
+  Corrected feasibility remains `UNKNOWN`.
+- `wave146-six-seven-coupling/` independently reconstructs the rooted
+  pattern filter, automorphism-orbit/deletion coefficients, and exact
+  rational endpoint replay.  Its scope ends at one-root aggregate
+  compatibility; it does not promote the witness to a graph.
+- `wave147-pair-root-order8/` independently reconstructs the two rooted flag
+  bases, complete order-eight class stream, full deletion layer, 24
+  representative matrices, target `n3`/prism matrices, artifact counts, and
+  rook-graph positive control.  It does not independently recompute all
+  272,054 stored coefficients.  It verifies a finite model only; no numerical
+  or exact endpoint SDP result is present.
+
+The rigorous interval remains `708<=n3<=4158`.
+
+## Waves 148--152 order-eight and triangle-root verification
+
+- `wave148-marked-order8/` independently reconstructs every marked row by
+  semantic key, all 28,654 coefficients, zero-capacity rows, column
+  identities, and rook/micro controls.  Verdict: `PASS_WITH_SCOPE`.
+- `wave150-exact-rank1-witness/` independently rebuilds all Wave147
+  coefficient matrices and Wave148 rows, replays all 10,310 equations,
+  verifies both zero centered covariance blocks, and reproduces modular rank
+  874 over `F_1000003`.  The vector is a finite-relaxation witness, not a
+  graph.
+- `wave149-terwilliger-triple/` independently derives the triangle partition,
+  prism trace, Gram matrix, exact character spectrum, and rank 32.  This
+  verifies a null first projection only.
+- `wave151-triangle-root-factor/` independently reconstructs the binary
+  24-by-60 factor and all four relevant Gram blocks.  It explicitly demotes
+  the proofless fixed-branch `UNSAT` status and leaves the full factor and
+  residual graph unknown.
+- `wave154-triangle-factor-portfolio/` independently reconstructs both
+  24-by-60 factors, the full 384-element centralizer, disjoint size-384
+  factor orbits, all 69,270 allowed triples, the 292-orbit histogram, 612
+  rows, and 1,039,050 nonzeros.  Every solver-negative status remains
+  diagnostic; the full factor and residual graph are unknown.
+- `wave152-four-root-order8/` independently rebuilds all nine flag universes
+  and order-6/7/8 products.  Exact integer quadratic values for masks 3 and
+  12 are strictly negative, so the stored Wave150 pseudowitness is
+  `VERIFIED` refuted in the stronger space.  This does not refute every
+  endpoint count vector.
+- `wave155-four-root-feedback/` independently reconstructs the first four
+  primitive covariance cuts and the exact replacement witnesses.  The
+  two-cut vector passes 10,311 equations with modular rank 885; the four-cut
+  vector passes 10,312 with rank 886.  Both finite systems remain exactly
+  rational feasible.  Later mask-13 and simplified-cut artifacts are outside
+  this verifier's pre-inspection freeze.
+- `wave156-four-root-late-feedback/` independently reconstructs the mask-13
+  principal cut, the later mask-3/12/13 directions, and both simplified
+  mask-12 inequalities.  The five- and eight-cut witnesses each pass 10,312
+  exact rows with rank 886.  The first simplified cut is positive, proving
+  retained nine-cut finite feasibility; the sparse
+  `18711+6*N_cube-2*N_Wagner>=0` cut rejects that witness, so ten-cut
+  feasibility remains unknown.
+- `wave153-alternative-compatibility/` independently rebuilds all 18
+  component graphs, six coordinate actions, and 275 orbits covering 1,140
+  triples.  It replays 173,250 pair equations and 9,900 row margins exactly.
+  Its verdict is `VERIFIED_WITH_SCOPE`: every complete bounded rational
+  pair-correlation projection survives, but no binary design or residual
+  graph is supplied.
+- `wave158-general-cube-wagner/` independently reconstructs the full symbolic
+  mask-12 covariance expansion, root count `1,014,552`, union classes and
+  coefficients, cube/Wagner isomorphisms, `N9=41580-n3`, and both primitive
+  gcd reductions.  It verifies
+  `41580-n3+12*N_cube-4*N_Wagner>=0` for every hypothetical target graph.
+  The theorem alone allows the endpoint.
+- `wave161-four-root-cut-loop/` independently rebuilds the two fresh Wave159
+  cuts and replays the exact fifteen-cut pseudowitness: support `204/887`,
+  10,313 exact rows, 10,274 restricted rows, modular rank `887/887`, all
+  fifteen cuts nonnegative, and three active.  It independently recovers
+  strict negative four-root directions at masks 3 and 12.  This verifies
+  finite-relaxation feasibility and the recurring obstruction, not a graph
+  or endpoint feasibility.
+- `wave165-general-cube-upper/` independently reconstructs the fixed-C4
+  partition, exact boundary matching sizes, marked-square/prism bijection,
+  and cube-face multiplicities.  Verdict: `VERIFIED_WITH_SCOPE` for
+  `12*N_cube<=37422+3*P=41580-n3`, with endpoint consequence
+  `N_cube<=3118`.  It does not prove a Wagner lower bound or exclude the
+  endpoint.
+- `wave166-rooted-wagner-spaces/` independently verifies the fixed-square
+  degree identity and null shell, the exact 40 marked five-cycles per
+  nonedge, eight five-cycles per Wagner, and the conditional endpoint
+  arithmetic.  It explicitly leaves
+  `P=0 => at most four failed marks per nonedge` `UNPROVED`; no Wagner lower
+  bound is promoted.
+- `wave167-nonedge-core-fringe/` independently reconstructs the 22-edge
+  nonedge cross graph, exact 18-core/four-fringe split, four mandatory
+  failures, completion uniqueness, and the global defect identity
+  `E=8*(18711-N_Wagner)`.  It verifies that the endpoint requires `E>=16`
+  and that `E<=8` would exclude it, while an explicit local shell shows the
+  current one-root equations do not prove that bound.
+- `wave168-incidence-minor-energy/` independently derives the 231-block
+  triangle incidence geometry, all point-block and block-intersection
+  spectra, and the equivalence between `P=0` and block codegree at most two.
+  It verifies cube/Wagner determinant energies 4,423,680 and 4,439,040, the
+  global Cauchy-Binet coefficient identity, and
+  `T*T^T=816I+10K` for the rectangular neighborhood-triple matrix.  No bound
+  on the remaining eight-point types is promoted.
+- `wave169-failure-hypergraph/` uses two hostile paper audits to verify the
+  exact threshold equivalences and a five-failure local relaxation model.
+  The supported conclusion is only that current pairwise/root-local clauses
+  cannot prove the pointwise four-failure upper bound; the gadget is not an
+  SRG candidate.
+- `wave170-block-profile-ternary-code/` independently verifies the exact
+  pointwise/global block profiles, maximum clique size seven, ternary Gram
+  rank 55, and incidence rank interval 55 through 98.  These add exact
+  structure but no strict `n3` bound.
+
+No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
+partial binary factor to a graph, or a numerical solver status to a proof.
+The rigorous interval remains `708<=n3<=4158`.

@@ -3,13 +3,13 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-26
+  through: 2026-07-27
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "The Wave 36 audit found established ambient orthogonality-graph theory and an Evans theorem reproducing the ternary cutoff after the target-specific substitution. No exact target-specific resolution was located, but a bounded search cannot prove openness, novelty, or priority."
-  latest_audit: "agents/2026-07-26-wave36-literature-audit.md"
-  latest_audit_sha256: "c21544dafc1eedecd6232f9c14a4e05cdb2af418cd0eebb5bc571e4b8d04ee28"
-  source_query_ledger: "attempts/wave36-literature-audit/source-query-metadata.json"
-  source_query_ledger_sha256: "a659294c30f925a7f6f65202524b4e89f0b8dc6350357c6c50a9f03b337e0fe6"
+  caveat: "The Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types. No exact characteristic-seven rank-25 theorem was located, but a bounded search cannot prove openness, novelty, or priority."
+  latest_audit: "agents/2026-07-27-wave40-rank25-literature.md"
+  latest_audit_sha256: "7a53b6bf3fc5dbb9a063812a9749b7d084ad05511cdcbed17ee48d75c4811ebc"
+  source_query_ledger: "attempts/wave40-rank25-literature/query-log.json"
+  source_query_ledger_sha256: "9c1349333ed93e12562d0e92e605c98bc887b14c66642bb1c96cdfd1d64d196a"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -22,11 +22,18 @@ literature_audit:
   exact_wave34_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave36_target_specific_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   wave36_general_prior_art_overlap: EVANS_2023_REPRODUCES_TERNARY_CUTOFF
+  exact_wave40_rank25_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave42_rank27_prior_hit: NOT_SEARCHED_THIS_WAVE
+  wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
+latest_public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
+rigorous_n3_interval: "708<=n3<=4158"
+endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
   full_search_assumes_nontrivial_automorphism: false
   note: "Symmetry-conditioned branches must be labeled as restricted subproblems."
@@ -2431,4 +2438,746 @@ thirty_eighth_research_wave:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Wave 38 verifies the exact 33-case queue, a complete all-prism construction and oracle, the universal rank_F7(M)>=13 necessity, and scoped higher-order identities. It supplies no target formula result, graph, SAT assignment, UNSAT proof, completed lazy-cut sequence, endpoint exclusion, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
-last_updated: 2026-07-27
+thirty_ninth_research_wave:
+  public_base_commit: "37f635ab67d2348c73986fae5e81b9b7a40a345a"
+  frozen_discovery_input_commit: "019b78ac9a5170107d105ad4d8fcd27f55dde642"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  edge_local_rank_status: VERIFIED
+  edge_local_normal_forms: 11
+  edge_local_labelled_matching_configurations: 10395
+  edge_local_rank_formula: "25-2*(number of even parts)"
+  characteristic_seven_rank_floor: "rank_F7(M)>=19"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=13"
+  endpoint_edge_partitions: "2+2+2,2+4,3+3,6"
+  endpoint_edge_partition_ranks: "19,21,25,23"
+  modular_rank_pairs: 429
+  previous_modular_rank_pairs: 528
+  ternary_boundary_consequence: "r3=12 implies even r7>=20"
+  edge_local_result: "attempts/wave39-edge-local-rank/exact-results.json"
+  edge_local_result_sha256: "90afac4d1203048b27715d8b083ef850b59d0d7714d53bf240bbafeaa3ee7172"
+  edge_local_discovery_manifest: "attempts/wave39-edge-local-rank/package-manifest.sha256"
+  edge_local_discovery_manifest_sha256: "7875723d4999cdbcde98781763638e5513c78dc88c53161c341f0390658d23de"
+  edge_local_independent_result: "verification/wave39-edge-local-rank/independent-results.json"
+  edge_local_independent_result_sha256: "85b8d36d6ce5ebd638e957e1731864eff75f38405935f5e51ad5b629edea5966"
+  edge_local_verifier_manifest: "verification/wave39-edge-local-rank/package-manifest.sha256"
+  edge_local_verifier_manifest_sha256: "c11b09f9da2300261bf8b0bc665fc5cc4b5654c6a460a9b7b43d5a53ee3ad970"
+  proof_shard_status: VERIFIED_ONE_POLARITY_SHARD_ONLY
+  proof_shard: "branch15 AND x187=1"
+  proof_shard_conclusion: UNSAT
+  branch_15_entailed_literal: "x187=0"
+  branch_15_status: UNKNOWN
+  proof_coverage: "0/33"
+  proof_shard_result: "attempts/wave39-proof-solver/exact-results.json"
+  proof_shard_result_sha256: "07f1af5ac1dae41c8fd1385bc69f7922671e70921e205de9bfee2ecfa0a45c3c"
+  proof_shard_opb_gzip_sha256: "6a5e88245acb4dece760ce67e39fa9b098e43c958bc0f164bcba9f67e8ea4e2d"
+  proof_shard_raw_proof_sha256: "b2fcb06206d8a09ab636535f0358f6013e5daddaf14b7132180698a2f59340d5"
+  proof_shard_kernel_proof_sha256: "5645dded139847ff144e84ddc6dd59e90267a9c585a986f13e20748b773c07a0"
+  proof_shard_discovery_manifest: "attempts/wave39-proof-solver/package-manifest.sha256"
+  proof_shard_discovery_manifest_sha256: "72baea5f8143e93fcd1bb900bdb5bdb9b40d723fcee4f40185c5f9de5dab0315"
+  proof_shard_independent_result: "verification/wave39-proof-solver/exact-results.json"
+  proof_shard_independent_result_sha256: "3afc665de9d8d0e5a5a4dab6b600db1e5b726ef1dfba685eeba92c80da1df5e4"
+  proof_shard_verifier_manifest: "verification/wave39-proof-solver/package-manifest.sha256"
+  proof_shard_verifier_manifest_sha256: "62af7bb7e0ff6dedb64fe8173394e04ca16c082d9eedc43ea30bfb05dcc0e98e"
+  proof_shard_raw_veripb: VERIFIED_UNSATISFIABLE
+  proof_shard_kernel_veripb: VERIFIED_UNSATISFIABLE
+  proof_shard_cakepb: NO_CONCLUSION_NOT_REPLAYED
+  cross_base_status: DERIVED_INCONCLUSIVE
+  cross_base_result: "attempts/wave39-cross-base-rank/exact-results.json"
+  cross_base_result_sha256: "3955106a57f3910813f1ac680bc9bab6cb28024b883af4b08d157541e973a11b"
+  cross_base_manifest: "attempts/wave39-cross-base-rank/package-manifest.sha256"
+  cross_base_manifest_sha256: "35c6369560e72cc09df9e2d53d359a7a574c44c6be971c3cb3b6e7fe30924368"
+  simultaneous_bh_status: DERIVED_INCONCLUSIVE
+  simultaneous_bh_result: "attempts/wave39-simultaneous-bh/exact-results.json"
+  simultaneous_bh_result_sha256: "1aab10ae2bf080d682a22d6c1e66a29f001ab2a889dc6b190b67fe0a0e0ad77d"
+  simultaneous_bh_manifest: "attempts/wave39-simultaneous-bh/package-manifest.sha256"
+  simultaneous_bh_manifest_sha256: "0ff05f1409d54e0aa38c6be6e086f02352911d5eb50f6bff9bd4b5bc6240b20b"
+  mathematical_and_artifact_tests_total: 62
+  discovery_tests_total: 42
+  independent_tests_total: 20
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave39-integration-audit.md"
+  integration_audit_sha256: "9d22f5ae2ed1f1ec756975508030f2b6b440580d1215604d4f353256bae1483b"
+  orchestrator_decision: "verification/2026-07-27-wave39-orchestrator.md"
+  orchestrator_decision_sha256: "094db8281faf23f402f5093a617c43ebe428dae6f8ce1eceae8621472fc37111"
+  solver_evidence_promoted: "ONE_NAMED_BRANCH_15_POLARITY_SHARD_ONLY"
+  novelty_status: UNKNOWN
+  caveat: "Wave 39 verifies the universal rank_F7(M)>=19 necessity and the UNSAT branch15 AND x187=1 shard, and retains exact cross-base and simultaneous B/H discovery restrictions. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+fortieth_research_wave:
+  public_base_commit: "6b28af70c67f062d687251494a047debe70a246f"
+  frozen_discovery_input_commit: "6b28af70c67f062d687251494a047debe70a246f"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=25"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=19"
+  local_partition_count: 11
+  local_rank_formula: "25-2e where e is the number of even parts"
+  minimum_third_fibre_projection_rank: "e for every local partition"
+  endpoint_modular_rank_pairs: 330
+  previous_endpoint_modular_rank_pairs: 429
+  ternary_boundary_consequence: "r3=12 implies even r7>=26"
+  rank22_stepping_stone_status: VERIFIED_SUPERSEDED
+  rank22_result: "attempts/wave40-rank19-equality/exact-results.json"
+  rank22_result_sha256: "631b36c1a3a8693ea193c21ebc0f9fa57aee68bdf5f7c52b28aa469a475e4553"
+  rank22_discovery_manifest: "attempts/wave40-rank19-equality/package-manifest.sha256"
+  rank22_discovery_manifest_sha256: "ee7a18dc514379eb37f653b6c4c07ce62655e420d98bf9525a1f98f643ef401e"
+  rank22_independent_result: "verification/wave40-rank19-equality/independent-results.json"
+  rank22_independent_result_sha256: "b6d555b2937b3d0d93b65ee53a413e692c3f721bd483997bc12bd2757a7850be"
+  rank22_verifier_manifest: "verification/wave40-rank19-equality/package-manifest.sha256"
+  rank22_verifier_manifest_sha256: "56b9994cef82de23a123921df6c21d8745c324c691e75e86dd35a4e39889e872"
+  rank25_result: "attempts/wave40-exact-coupling-model/exact-results.json"
+  rank25_result_sha256: "8613c05c94a9a5f88c45eddbeccbf4c8906c3783aab25747e439f50423bde9ce"
+  rank25_subspace_certificate: "attempts/wave40-exact-coupling-model/subspace-certificate.json"
+  rank25_subspace_certificate_sha256: "90b8eb3f88424ffe6ae7618a3063620a2dedff604ad2fac10894fb6278f17c9a"
+  rank25_discovery_manifest: "attempts/wave40-exact-coupling-model/package-manifest.sha256"
+  rank25_discovery_manifest_sha256: "3b9f073cfe5bdaa0295d6cf9507c443c7f6178ae00bf6c16f5dd35c825aa1a87"
+  rank25_independent_result: "verification/wave40-exact-coupling-model/independent-results.json"
+  rank25_independent_result_sha256: "ff7916d0f5c74c47c8d7787c5cbcc84785cbccd3644d8d03d73e47b73908c0f5"
+  rank25_verifier_manifest: "verification/wave40-exact-coupling-model/package-manifest.sha256"
+  rank25_verifier_manifest_sha256: "e2c7fc77586e894eff55b0652719d281fbb0eda4cd42f177864f9729e02cc32d"
+  edge_coupling_status: VERIFIED_SCOPED
+  edge_coupling_normalized_quotients: 4050
+  edge_coupling_rank11_quotients: 8
+  edge_coupling_lift_masks: 262144
+  edge_coupling_triangle_free_lifts: 37378
+  edge_coupling_K39_rank_distribution: "33:264,34:7348,35:29766"
+  edge_coupling_result: "attempts/wave40-edge-type-coupling/exact-results.json"
+  edge_coupling_result_sha256: "1be5ccadeb5b3273a7f37050e91fc6e37f89b3c7d548e8e02bd6cbbff9e4f062"
+  edge_coupling_discovery_manifest: "attempts/wave40-edge-type-coupling/package-manifest.sha256"
+  edge_coupling_discovery_manifest_sha256: "8f694a29a8b2154b22827043b78fcb7d126ee03e6e7916c2a3b61dbd229c846d"
+  edge_coupling_independent_result: "verification/wave40-edge-type-coupling/independent-results.json"
+  edge_coupling_independent_result_sha256: "822f758e04bcf95576cf8c5adc5cff2131ffa13cd286a6924137149de0dc3a9e"
+  edge_coupling_verifier_manifest: "verification/wave40-edge-type-coupling/package-manifest.sha256"
+  edge_coupling_verifier_manifest_sha256: "4b0c321c55af4282bf9ff48e4bfcd14f927d64640a875351787157700b3aa739"
+  rank25_literature_status: NO_EXACT_EQUIVALENT_FOUND_IN_BOUNDED_CORPUS
+  rank25_novelty_status: UNKNOWN
+  edge_scaffold_prior_art: GRAY_TAYLOR_2020
+  literature_source_ledger: "attempts/wave40-rank25-literature/source-ledger.json"
+  literature_source_ledger_sha256: "0d91c5684cda5aae56b7f29a967cf9e3d546677b965ed725bb1721dc296669d7"
+  literature_query_log: "attempts/wave40-rank25-literature/query-log.json"
+  literature_query_log_sha256: "9c1349333ed93e12562d0e92e605c98bc887b14c66642bb1c96cdfd1d64d196a"
+  literature_manifest: "attempts/wave40-rank25-literature/package-manifest.sha256"
+  literature_manifest_sha256: "5a0993a6ee24c7a188214ee09cf3d60edac20c5ddced69ef85a480595e45a6cc"
+  mathematical_and_artifact_tests_total: 90
+  discovery_tests_total: 46
+  independent_tests_total: 44
+  package_manifests: 7
+  package_manifest_entries: 53
+  public_checkpoint: "logs/2026-07-27-wave40-public-checkpoint.json"
+  public_checkpoint_sha256: "d4671661496bce37629274ec964e4551cfd8099dcc7f24a772c27d57002e2670"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave40-integration-audit.md"
+  integration_audit_sha256: "afc812a8740210c2c181b1bd0775da0a3526aa95e8706437cb918815f4543e10"
+  orchestrator_decision: "verification/2026-07-27-wave40-orchestrator.md"
+  orchestrator_decision_sha256: "a136b971ba4e675a5edfe62780e7754b7c716ff1753507be0201eadf3042dfbf"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 40 verifies the universal rank_F7(M)>=25 necessity, reduces conditional endpoint arithmetic to 330 pairs, and verifies scoped global edge-complex and one-quotient lift censuses. It supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_first_research_wave:
+  public_base_commit: "4f1754a28723a8e0e4ea3025312cd264b1b117d2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=26"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=25"
+  local_partition_count: 11
+  all_odd_partition_count: 4
+  even_partition_count: 7
+  even_minimum_projection_permutations: 164928
+  even_distinct_right_kernels: 52
+  even_distinct_equality_targets: 164278
+  even_grouped_matching_evaluations: 540540
+  rank25_survivors: 0
+  rank26_discovery_result: "attempts/wave41-evenpart-equality/exact-results.json"
+  rank26_discovery_result_sha256: "8a9e58aaa1073ae4a87e183f904ce7f43eaa620bbac5a6f5d1f8445dd795dc85"
+  rank26_primary_result: "verification/wave41-evenpart-equality/independent-results.json"
+  rank26_primary_result_sha256: "ec371dad71c794d57d4e27b21d17b08fac1d17e22167749ef797d950c18299e4"
+  rank26_composition_result: "verification/wave41-evenpart-equality/discovery-comparison.json"
+  rank26_composition_result_sha256: "6ece1335fa595e4feed57b45cf63e6229697d0f410b2ebae1c32cde9e1cdcc1c"
+  rank26_primary_manifest: "verification/wave41-evenpart-equality/package-manifest.sha256"
+  rank26_primary_manifest_sha256: "e438bcfc92762608a22ca312807845087d6d5e41ec1dbb0a1e3a827aef57a815"
+  rank26_secondary_result: "verification/wave41-rank26-secondary/secondary-results.json"
+  rank26_secondary_result_sha256: "6dec058084c3336449cbf4ce29dd837b87f8f1b1af982810d2ca594784e38766"
+  rank26_secondary_manifest: "verification/wave41-rank26-secondary/package-manifest.sha256"
+  rank26_secondary_manifest_sha256: "88a0e47d6e7531067d0090735cba5b6b99078d5db99184f0389fa2630b0e885e"
+  endpoint_modular_rank_pairs: 314
+  previous_endpoint_modular_rank_pairs: 330
+  conditional_all222_rank_status: VERIFIED_SCOPED
+  conditional_all222_assumptions: "n3=4158,r3=12,all edges type 2+2+2"
+  conditional_all222_rank_floor: "even r7>=34"
+  all222_rank11_quotients: 8
+  all222_fibre_coloured_isomorphism_classes: 1
+  all222_triangle_free_lifts_per_quotient: 37378
+  all222_K39_rank_distribution: "33:264,34:7348,35:29766"
+  all222_independent_result: "verification/wave41-allquotient-lifts/independent-results.json"
+  all222_independent_result_sha256: "062785a47ddb8f85ddec10a76a663c262ec9c60c133b681be5228639b022260b"
+  compact_kernel_status: VERIFIED
+  compact_kernel_dimension_per_triangle: 3
+  overlap_status: CANDIDATE_BOUNDED_POSITIVE_CONTROL
+  overlap_result: "attempts/wave41-overlap-compatibility/exact-results.json"
+  overlap_result_sha256: "d8d2dba8e75116e19ae28ea7d445fd57bbf1431f5657a233c7c605f0bfdd5460"
+  overlap_relaxation_rank_floor: 35
+  proof_producing_status: CANDIDATE_PROPAGATION_AND_NULL_SCOUT_ONLY
+  branch15_forced_variables: 830
+  branch15_forced_primary_variables: 174
+  branch15_unfixed_primary_variables: 3312
+  branch15_propagation_certificate: "attempts/wave41-proof-producing-search/branch-15-propagation-certificate.json"
+  branch15_propagation_certificate_sha256: "3da90e49e4e9469bdc397af107d877ee7075ad551a6f8df1afbd8d5d1150707f"
+  failed_literal_probes: 64
+  failed_polarities: 0
+  proof_coverage: "0/33"
+  mathematical_and_artifact_tests_total: 128
+  discovery_tests_total: 53
+  independent_tests_total: 75
+  package_manifests: 9
+  package_manifest_entries: 110
+  public_checkpoint: "logs/2026-07-27-wave41-public-checkpoint.json"
+  public_checkpoint_sha256: "5130e52e4cfab02b5d3ca9275cc5b996c789d3b815a4498c2465560fba22e0c5"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave41-integration-audit.md"
+  integration_audit_sha256: "145951c957055f519cbac8cf3853d42795758bc88b559528495b9f42ff2b16a9"
+  orchestrator_decision: "verification/2026-07-27-wave41-orchestrator.md"
+  orchestrator_decision_sha256: "48056d37fb87bf940ff80589c3a3ab2794401a0b7087fad0818e23137c28107e"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 41 verifies the universal rank_F7(M)>=26 necessity and a conditional all-222,r3=12 floor even r7>=34. It removes r7=25 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, prism-forcing theorem, upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_second_research_wave:
+  public_base_commit: "ef49b60aafd67f9007f6c218c39fd50392453a1b"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: VERIFIED
+  characteristic_seven_rank_floor: "rank_F7(M)>=27"
+  previous_characteristic_seven_rank_floor: "rank_F7(M)>=26"
+  local_partition_count: 11
+  all_odd_partition_count: 4
+  even_partition_count: 7
+  minimum_F_permutations: 164928
+  distinct_right_kernels: 52
+  explicit_even_labelled_pairs: 1714426560
+  implicit_all_odd_labelled_pairs: 19916886528000
+  combined_labelled_pair_coverage: 19918600954560
+  rank_at_most_one_survivors: 0
+  rank27_discovery_result: "attempts/wave42-rank26-equality/exact-results.json"
+  rank27_discovery_result_sha256: "94473b4c9f35184376765f76ab16646956222112836f49bcb22e950142a863a1"
+  rank27_discovery_manifest: "attempts/wave42-rank26-equality/package-manifest.sha256"
+  rank27_discovery_manifest_sha256: "b6bc79259a6d32270c5cb56afcd093fd5ed78987925e9e6ab173def2c3af2f21"
+  rank27_independent_result: "verification/wave42-rank27/independent-results.json"
+  rank27_independent_result_sha256: "a207b1bcc267aaefdea704c1173e3ed01a81029507d3bc76aa295caccad03be4"
+  rank27_comparison_result: "verification/wave42-rank27/comparison.json"
+  rank27_comparison_result_sha256: "ca7ca8b2f4e3e103da63a74ca1920790a349ae98baf8e00381a0f9c84fc3b183"
+  rank27_verifier_manifest: "verification/wave42-rank27/package-manifest.sha256"
+  rank27_verifier_manifest_sha256: "ae50823d082c1bdcb1910048d25bc4ca09300c34d1455e71affa4aa6ad3e58b8"
+  rank27_first_freeze_status: FAILED_NONDETERMINISTIC_TIMING_METADATA_ONLY
+  rank27_first_result_sha256: "bb4c1fa6d8c46343df26caa475895906d22c8f80000e8225e6a1f4bb9eb760eb"
+  rank27_deterministic_full_replay: PASS
+  endpoint_modular_rank_pairs: 297
+  previous_endpoint_modular_rank_pairs: 314
+  endpoint_removed_rank_layer: "r7=26 with even r3"
+  ternary_boundary_consequence: "r3=12 implies even r7>=28"
+  joint_incidence_status: VERIFIED_SCOPED
+  joint_incidence_assumptions: "n3=4158,r3=12,all edges type 2+2+2,canonical rank-33 mask 51739 occurs"
+  joint_incidence_six_set_filter_counts: "216000,118718,49736,45032"
+  joint_incidence_column_overlap_counts: "458,1004,308"
+  joint_incidence_H_edges_by_overlap: "96,144,0"
+  joint_incidence_H_triangles: 32
+  joint_incidence_H_four_cycles: 181
+  joint_incidence_full_B_status: UNKNOWN
+  joint_incidence_compatible_H_status: UNKNOWN
+  joint_incidence_discovery_result: "attempts/wave42-joint-incidence/exact-results.json"
+  joint_incidence_discovery_result_sha256: "40bfee8fd082972d5e7ea0a5ef959be2b1b5c75232076ec8510d42b6c98be9cc"
+  joint_incidence_discovery_manifest: "attempts/wave42-joint-incidence/package-manifest.sha256"
+  joint_incidence_discovery_manifest_sha256: "13aa8b1f5d4d09a1d16637513c9d0a3d68a68d705616ce6d2087c333a4bb4db8"
+  joint_incidence_independent_result: "verification/wave42-joint-incidence/independent-results.json"
+  joint_incidence_independent_result_sha256: "4032826b875d8ebadcd4d9b864a9789068546e33705c62970001c9011ba76b13"
+  joint_incidence_comparison_result: "verification/wave42-joint-incidence/comparison.json"
+  joint_incidence_comparison_result_sha256: "4275129fc6393a9e3c64a96d3cc763ba8a9635df9f5a3e851451d07303c75edc"
+  joint_incidence_verifier_manifest: "verification/wave42-joint-incidence/package-manifest.sha256"
+  joint_incidence_verifier_manifest_sha256: "332f01d28529426b5c38b6299bbc16ce7c3c190d559917af9e3d8703123fec8b"
+  branch15_triangle_delta_status: VERIFIED_SCOPED
+  branch15_forced_triangle_zero_based: "1,15,17"
+  branch15_raw_new_clauses: 64932
+  branch15_active_new_clauses: 33778
+  branch15_active_units: 0
+  branch15_active_empty_clauses: 0
+  branch15_status: UNKNOWN
+  branch15_discovery_result: "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-result.json"
+  branch15_discovery_result_sha256: "2faa09eee4217d19fc1e1ac8f9705129e1cd57d47c0016a1d2bc229d87d8b184"
+  branch15_discovery_manifest: "attempts/wave42-endpoint-certificate/package-manifest.sha256"
+  branch15_discovery_manifest_sha256: "ecdb2f5716ccf407ec755e2f0fa51acab78ba0ad9f48937fa54a2e913d2cf890"
+  branch15_independent_result: "verification/wave42-branch15-triangle-delta/independent-results.json"
+  branch15_independent_result_sha256: "5402d5ea9d3a2d8dfaee3077c699e7bc1a0399512c49007d57fe8c6276ab4fbb"
+  branch15_comparison_result: "verification/wave42-branch15-triangle-delta/comparison.json"
+  branch15_comparison_result_sha256: "f13ec40969d54d08ed14ab3b288468be871aad2c0eacbd6844082a2efd4956d6"
+  branch15_verifier_manifest: "verification/wave42-branch15-triangle-delta/package-manifest.sha256"
+  branch15_verifier_manifest_sha256: "e7bdcb12a22225344e009d315118181915503047e084c835ece9c39873f0b23b"
+  mathematical_and_artifact_tests_total: 88
+  discovery_tests_total: 37
+  independent_tests_total: 51
+  package_manifests: 6
+  package_manifest_entries: 88
+  public_checkpoint: "logs/2026-07-27-wave42-public-checkpoint.json"
+  public_checkpoint_sha256: "2c1f8130939c02baeffd8e288d88349ee08008caff9e28fbc76c32333f2fe1cb"
+  integration_status: PASS
+  integration_audit: "verification/2026-07-27-wave42-integration-audit.md"
+  integration_audit_sha256: "e61ad4971b899d7c35a3324f42bc32cdfd191e270bd58289698574080225f2ae"
+  orchestrator_decision: "verification/2026-07-27-wave42-orchestrator.md"
+  orchestrator_decision_sha256: "a0104d780e143f23bb14b5a1548295757365f0ca84e1d98d4011474d98987297"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 42 verifies the universal rank_F7(M)>=27 necessity and two scoped conditional endpoint reductions. It removes r7=26 at the prism-free endpoint but supplies no graph, complete endpoint case closure, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_third_research_wave:
+  public_base_commit: "e28f90464d00b98d37672b0b2b23dba15399a6f2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_conditional_lower_bound: "n3>=708"
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  universal_rank_status: "rank_F7(M)>=27 VERIFIED"
+  conditional_endpoint_rank_status: VERIFIED
+  conditional_endpoint_rank_theorem: "n3=4158 implies rank_F7(M)>=28"
+  equivalent_rank27_consequence: "rank_F7(M)=27 implies an induced triangular prism and n3<=4155"
+  endpoint_modular_rank_pairs: 281
+  previous_endpoint_modular_rank_pairs: 297
+  endpoint_rank_types: "222,24,33,6"
+  endpoint_rank_discovery_even_result: "attempts/wave43-rank28-motif/exact-results.json"
+  endpoint_rank_discovery_even_result_sha256: "8878b40898ba9577ef01fb51ab5631632fb0e6bca3394c594b9c399d51385230"
+  endpoint_rank_discovery_type33_result: "attempts/wave43-type33-rank2/exact-results.json"
+  endpoint_rank_discovery_type33_result_sha256: "f9f023a7f5da0b51df1f825c83a2405de16a6e4d5245965332df4ace46e8bd8d"
+  endpoint_rank_independent_result: "verification/wave43-rank28/independent-results.json"
+  endpoint_rank_independent_result_sha256: "4e6bc6a04fb65b6dd2a873c9b446d305d65aaca46fecf8703da2886aa1859025"
+  endpoint_rank_comparison: "verification/wave43-rank28/comparison.json"
+  endpoint_rank_comparison_sha256: "3cc27ac01281d47c238748bda30602fc6fcbe38c19ae48ae073c0f47df5a1f43"
+  endpoint_rank_comparison_fields: "36/36"
+  all_rank33_lifts_status: VERIFIED_SCOPED
+  all_rank33_lifts: 264
+  all_rank33_component_sizes: "12+24"
+  all_rank33_fibre_balances: "4+8 in each fibre"
+  all_rank33_candidate_class_multiplicities: "48,48,24,48,96"
+  all_rank33_excluded_lifts: 0
+  all_rank33_discovery_result: "attempts/wave43-all-rank33-lifts/exact-results.json"
+  all_rank33_discovery_result_sha256: "31e2e5d767c02f9e520f33a980584e2ae24df8a4fc1bbd7b381797209b97e198"
+  all_rank33_independent_result: "verification/wave43-all-rank33-lifts/independent-results.json"
+  all_rank33_independent_result_sha256: "8d8482f30e456b06104eee6c0844452461f42c72897cb89dcdd13d2ae9387667"
+  branch15_two_triangle_status: VERIFIED_SCOPED
+  branch15_two_triangle_raw_clauses: 40800
+  branch15_two_triangle_active_clauses: 34340
+  branch15_two_triangle_failed_polarities: 0
+  branch15_two_triangle_discovery_result: "attempts/wave43-branch15-two-triangle/branch-15-two-coordinate-triangle-result.json"
+  branch15_two_triangle_discovery_result_sha256: "1ab1cc6ad5a3727fec508b8b3f2eb9b52d4034f6aa6768b25feef8f219c45ec8"
+  branch15_two_triangle_independent_result: "verification/wave43-branch15-two-triangle/independent-results.json"
+  branch15_two_triangle_independent_result_sha256: "564a8b390b083b0f69361506933c67a566245b3961eec8e2e0649724235be7bc"
+  joint_completion_status: UNKNOWN
+  joint_completion_candidate_variables: 45032
+  joint_completion_cnf_variables: 82532
+  joint_completion_cnf_clauses: 338528
+  joint_completion_milp_rows: 612
+  joint_completion_milp_nonzeros: 675480
+  joint_completion_pairing_result: "attempts/wave43-joint-completion/pairing-reduction.json"
+  joint_completion_pairing_result_sha256: "3adaf3653e2f4e6b43ba59a0b28ff6a877a636bcac543348a3d7901023553b52"
+  joint_completion_cadical_status: UNKNOWN
+  joint_completion_cadical_result_sha256: "ef21fa60fdbabe1f6139afaff3736485bc9b675119ee4f98da193ba4e0346e30"
+  joint_completion_milp_status: UNKNOWN
+  joint_completion_milp_result_sha256: "7c55dd27f9ad4840687e22645a8b12a88181a51071e213e48f879be36a95634a"
+  seven_deck_status: VERIFIED_SCOPED_EXACT_FEASIBLE
+  seven_deck_six_classes: 62
+  seven_deck_seven_classes: 208
+  seven_deck_equations: 81
+  seven_deck_support_size: 99
+  seven_deck_total: 14887031544
+  seven_deck_discovery_result: "attempts/wave43-seven-deck-endpoint/exact-results.json"
+  seven_deck_discovery_result_sha256: "06b498a736a511a7d6f5912bd4686e5d4eb30f4041477e3ee9cbc1704f1757c8"
+  seven_deck_independent_result: "verification/wave43-seven-deck-endpoint/independent-result.json"
+  seven_deck_independent_result_sha256: "e38f369d338fada4a561d48019f306511961dd1fd7816e54a12a9ecb09e69f3b"
+  seven_deck_comparison_sha256: "fde3a83d28a53b1fdbe56a010605d7aa1a7bee34811d8186e286ac7432ca2c64"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 43 verifies only a conditional endpoint rank-28 theorem and scoped reductions/positive controls. It supplies no graph, complete endpoint case closure, endpoint exclusion, strict general upper bound below 4158, Conway-99 resolution, or novelty and priority result."
+forty_fourth_research_wave:
+  public_base_commit: "e28f90464d00b98d37672b0b2b23dba15399a6f2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  rooted_count_status: VERIFIED_SCOPED_EXACT_FEASIBLE
+  variables: 209
+  total_rows: 170
+  unrooted_rows: 81
+  vertex_root_rows: 7
+  ordered_edge_root_rows: 36
+  ordered_nonedge_root_rows: 46
+  finite_field_rank_progression: "81,82,87,93"
+  witness_y_h11_over_4: 4158
+  witness_h11: 16632
+  witness_support_size: 91
+  witness_zero_classes: 117
+  witness_total: 14887031544
+  exact_nonzero_residuals: 0
+  discovery_result: "attempts/wave44-rooted-flags/exact-results.json"
+  discovery_result_sha256: "c41b194d2d4ae8121883d84ba4f5011f48336a58a0dd4f5cebf9ab560ee3ae19"
+  row_system: "attempts/wave44-rooted-flags/row-system.json"
+  row_system_sha256: "fb81601a9c97fc6860702403e56da65c2ba8fd69ee6a61007a0da53cade1d722"
+  rooted_witness: "attempts/wave44-rooted-flags/rooted-witness.json"
+  rooted_witness_sha256: "9be153b2487c3e07e20bffeb7ee6c890e69caa6e8d6b6e2936fbc5d8927bd5b9"
+  discovery_manifest: "attempts/wave44-rooted-flags/package-manifest.sha256"
+  discovery_manifest_sha256: "290d23316f09ca9ba6509363de04eb03ad613598333b24ce2183a6038a585ed2"
+  independent_result: "verification/wave44-rooted-flags/independent-results.json"
+  independent_result_sha256: "545ca76fed3f45aabc21ec2eeec291cc2eb93ab78346b8aaa213f751c6fa29c7"
+  comparison: "verification/wave44-rooted-flags/comparison.json"
+  comparison_sha256: "6d4b8370d51a8a8dac979087b4c7ee173d9852a8e255e46715baaf683afe910b"
+  verifier_manifest: "verification/wave44-rooted-flags/package-manifest.sha256"
+  verifier_manifest_sha256: "fe9d4d4c1fa4e3376f39cfcf7197ffd584e6671632869571dfdd4031c594f76b"
+  semantic_coefficients_compared: 35530
+  semantic_rhs_values_compared: 170
+  scipy_free_milp_status: FALSE_INFEASIBLE_REFUTED
+  scipy_status_used_as_evidence: false
+  wave43_44_discovery_tests_total: 53
+  wave43_44_independent_tests_total: 43
+  wave43_44_tests_total: 96
+  wave43_44_package_manifests: 12
+  wave43_44_manifest_entries: 132
+  public_checkpoint: "logs/2026-07-27-wave44-public-checkpoint.json"
+  public_checkpoint_sha256: "0661add10f1be5a15b133a75b95cfd44eca1d14c68f6d104a9095bd4e678bee1"
+  integration_audit: "verification/2026-07-27-wave44-integration-audit.md"
+  integration_audit_sha256: "470fa94cb632770daa3ddb24150b718e1cfd05834262ca5f4b14edca51afdd48"
+  orchestrator_decision: "verification/2026-07-27-wave44-orchestrator.md"
+  orchestrator_decision_sha256: "efb1ef15f20fd0f393ff657db2a06c870489b9a4d017aaef665c9e1608ec4c95"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 44 proves exact feasibility only of an aggregate rooted order-seven count relaxation. The witness is not a graph or endpoint evidence, overlap compatibility is absent, the general upper bound remains 4158, and Conway-99 remains UNKNOWN."
+forty_fifth_research_wave:
+  public_base_commit: "4636864ffc6310acaa71a41fff239a24e28404fc"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  flag_moment_status: VERIFIED_SCOPED_INCOMPLETE
+  vertex_root_matrix_size: 17
+  ordered_edge_root_matrix_size: 16
+  ordered_nonedge_root_matrix_size: 19
+  unrooted_class_counts_by_order: "4:9,5:21,6:62,7:208"
+  class_matrix_records_compared: 484
+  nonzero_ordered_coefficients_compared: 16660
+  explicit_control_graphs: "Petersen,Clebsch"
+  stored_witnesses_refuted: "wave43,wave44"
+  exact_negative_directions_replayed: 12
+  immutable_checkpoint: "attempts/wave45-flag-moment/checkpoint-v1-seed0-17cuts-15witnesses.json"
+  immutable_checkpoint_sha256: "96a50f9add4b12b2c86587da29ade8b9da34f88a7b7617c048ffb7139c12b64b"
+  immutable_checkpoint_cuts: 17
+  immutable_checkpoint_witnesses: 15
+  immutable_checkpoint_terminal_status: QF_LIA_UNKNOWN_TIMEOUT
+  discovery_replay: "attempts/wave45-flag-moment/replay-v1-results.json"
+  discovery_replay_sha256: "39b4ca9bb457693e0744a9a78a9051e8f2c5efb0d251e97097a34590e1508094"
+  discovery_manifest: "attempts/wave45-flag-moment/package-manifest-v1.sha256"
+  discovery_manifest_sha256: "57f184e5df79ada19f0f08ea6eb9c6c1040517172a0f5e1e6878d09c8d0dd658"
+  discovery_manifest_entries: 9
+  independent_result: "verification/wave45-flag-moment/independent-results.json"
+  independent_result_sha256: "8d9a004392e3f642c0aacf272a33f7cce2bc21254e79fe4123bec5a065ae0bac"
+  comparison: "verification/wave45-flag-moment/comparison-results.json"
+  comparison_sha256: "936fca299c5c0cfb6fd226e0542b07bf744877eab6366a6e840895888cf3daf1"
+  verifier_manifest: "verification/wave45-flag-moment/package-manifest.sha256"
+  verifier_manifest_sha256: "d6e4d8b0b549318cd5d109718cff0bc94eb615956e7e3c5ade7d1e0362a10bf0"
+  verifier_tests: 15
+  public_checkpoint: "logs/2026-07-27-wave45-public-checkpoint.json"
+  public_checkpoint_sha256: "f371b0a1e8f4fdc1d0241cf73c3068bda7a0967ab723f1bc0fee3bd33e6c6518"
+  integration_audit: "verification/2026-07-27-wave45-integration-audit.md"
+  integration_audit_sha256: "af107d2b44c9e23e5beb3e53825dda6d8f2ae4a12848b6c12930b9f4c6b14c47"
+  orchestrator_decision: "verification/2026-07-27-wave45-orchestrator.md"
+  orchestrator_decision_sha256: "455cfa78f4017577cb2d1d2af950cdf0e640a2ee4a94520626d039cc2fddd3aa"
+  proof_coverage: "0/33"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 45 verifies exact rooted-flag moment coefficients and a finite sequence of witness-separating cuts. It refutes only two stored aggregate vectors and 15 successive replacements; the full PSD-constrained region, endpoint, strict upper bound, Conway-99, novelty, and priority remain UNKNOWN."
+waves_56_58_checkpoint:
+  public_base_commit: "4bb1989e9e286b2ec753a855db58ad584e31f63a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave56_status: VERIFIED_SCOPED
+  wave56_nonedge_closure: "all 99 vertices or K3 square K3"
+  wave56_endpoint_percolating_nonedges: 4158
+  wave56_endpoint_masks: 23
+  wave56_endpoint_profiles: 35
+  wave56_discovery_manifest_sha256: "911e882f2450690d409558e59777bf828a616bb9487e1be4914e0cda8baec37b"
+  wave56_verifier_manifest_sha256: "2e5080a94a9d0683cccd986046c83ec1134978bba3dbb064042571be81e69efb"
+  wave57_status: REFUTED_IN_PART
+  wave57_projector_star_set_core: VERIFIED_SCOPED
+  wave57_discovery_live_rows: 18
+  wave57_corrected_project_live_rows: 3
+  wave57_discovery_C4_ceiling: 89
+  wave57_corrected_C4_ceiling: 27
+  wave57_discovery_manifest_sha256: "c32b4e23cd8ba465a969abf538a85da1471f6c7452a0718740f2035ca6ad62f0"
+  wave57_verifier_manifest_sha256: "61ebd615bdfdfe13977c20868db85544f56bd10f530f121670456e8448b2d9b5"
+  wave58_status: VERIFIED_SCOPED
+  wave58_surviving_rows: "(18,8,1,34);(18,9,2,33);(18,10,3,32)"
+  wave58_m4_normalized_census: "216 raw;50 accepted"
+  wave58_m6_normalized_census: "162000 raw;34640 accepted"
+  wave58_kappa3_exact_local_C4: "6,8,10,12,14,16,18"
+  wave58_simultaneous_B_A_Y_status: UNKNOWN
+  wave58_discovery_manifest_sha256: "972a7700b0d9f1596ba42f32811a5b6b5eb66410e4099ae6c8d2d3fd64527a27"
+  wave58_verifier_manifest_sha256: "ef7dcdc04dab83fec1a8bb61e74c741eca5c2d7b59f5142cc57d145005602f36"
+  public_checkpoint: "logs/2026-07-27-wave58-public-checkpoint.json"
+  public_checkpoint_sha256: "43c5ed4c2981cdc7d99cbae112093e5bb336e8c5be83f900c7962806b819b84e"
+  integration_audit: "verification/2026-07-27-wave58-integration-audit.md"
+  integration_audit_sha256: "9c6c1ccaac0f5a66b0b800c6b24f00cdd2cd2533a8dd950b043ea87d9fa631ad"
+  orchestrator_decision: "verification/2026-07-27-wave58-orchestrator.md"
+  orchestrator_decision_sha256: "ec80a3cd78eb2d71165baba60d42d6115c58528e774443fa2a47b6749cf97319"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 56--58 verify conditional closure, projector, rank, and component restrictions with a material Wave 57 correction. They supply no simultaneous B/A_Y, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_56_59_checkpoint:
+  public_base_commit: "4bb1989e9e286b2ec753a855db58ad584e31f63a"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave58-public-checkpoint.json"
+  wave59_status: VERIFIED_SCOPED
+  wave59_incidence_order: 330
+  wave59_incidence_degrees: "7,3"
+  wave59_incidence_girth: 8
+  wave59_incidence_diameter: 6
+  wave59_incidence_distance_biregular: false
+  wave59_triangle_graph_degree: 18
+  wave59_triangle_graph_diameter: 3
+  wave59_triangle_graph_spectral_excess: 50
+  wave59_triangle_graph_actual_excess: 32
+  wave59_pair_neighborhood_gram_rank: 231
+  wave59_discovery_manifest_sha256: "c3d29fb9c55dd28012238d042aa6d863b487e550448aad374e1bdcf55bcf413f"
+  wave59_verifier_manifest_sha256: "a660ede44009ed40c20bb1661d54b0b977f1817269b85983777f04aa4a78c574"
+  public_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
+  public_checkpoint_sha256: "12175e98e1aba3c7b2d79f319d37cc7ad07f6ffe9313c68fbe9cd1bed98fa424"
+  integration_audit: "verification/2026-07-27-wave59-integration-audit.md"
+  integration_audit_sha256: "9664fb39d7a9315b5038d9b8951b8771e02dc6495a4615e719fb96261fc32a26"
+  orchestrator_decision: "verification/2026-07-27-wave59-orchestrator.md"
+  orchestrator_decision_sha256: "baac955974b4a89f4f116e9948d0ff5d713ae9db496c53a0c0414a44f44e9704"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Wave 59 verifies exact conditional incidence and spectral geometry, including strict failure of distance-regular equality. The constraints are consistent and supply no graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_60_63_checkpoint:
+  public_base_commit: "81c8d45426938ea8490af55d81f05b7c2ad99035"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave59-public-checkpoint.json"
+  wave60_status: VERIFIED_SCOPED
+  wave60_component_census: "216 normalized;50 accepted;18 fibre-preserving types"
+  wave60_triples_and_safe_orbits: "1140;275"
+  wave60_candidate_range: "15936..27200"
+  wave60_eliminated_triples: 0
+  wave60_discovery_manifest_sha256: "ccf35d05a4125178a7cb065b73972ef310584b14c6a447ea889f3b06a170629b"
+  wave60_verifier_manifest_sha256: "9bb26011e087e8f127d2a830635ebeecdae3da72d31e69b6e31f73d7513e3f2f"
+  wave61_status: VERIFIED_WITH_CORRECTION
+  wave61_full_pair_eliminations: 0
+  wave61_tensor_feasibility_tested: false
+  wave61_discovery_manifest_sha256: "63343515a1abd1e053e4fed84de0ba88d9c53833994a8ac08d4325520b83c252"
+  wave61_verifier_manifest_sha256: "f2ffa83a03772af8f8aa3ecf5e17459eaaa24f8c566474c61b81dd004f587cc9"
+  wave62_status: VERIFIED_SCOPED
+  wave62_endpoint_parameter_range: "0..42"
+  wave62_averaged_matrices: 1949
+  wave62_exact_blocks: 23388
+  wave62_negative_blocks: 0
+  wave62_discovery_manifest_sha256: "d62af7171cd825001c8bce4b9b1502970718640f5c441164eb49d4e59ba26401"
+  wave62_verifier_manifest_sha256: "439bd26e463ae19ce7cbac9989b23a681236d7a1df623005e5a829e5f8957968"
+  wave63_status: VERIFIED_SCOPED
+  wave63_tested_lanes: 74
+  wave63_exact_pair_equations_replayed: 46620
+  wave63_rational_witnesses: 74
+  wave63_integer_designs: 0
+  wave63_discovery_manifest_sha256: "c85f9dcf3d0bdba2a41299c4a3c4fdd8c9802903cff04ab237f40d9840df6018"
+  wave63_verifier_manifest_sha256: "3c19b9c226e141850a7763467c1eb7e19a15752dac03cdca9f6a4b7cb3dae017"
+  public_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
+  public_checkpoint_sha256: "0e53832e00e8a1b44a2b6a983160e425cb97c9d64d399d1887440f7f54ba1c0e"
+  integration_audit: "verification/2026-07-27-wave63-integration-audit.md"
+  integration_audit_sha256: "6e3b45b222433e92640d87daa1355576e7d89e8a664d474055615d642c71eb40"
+  orchestrator_decision: "verification/2026-07-27-wave63-orchestrator.md"
+  orchestrator_decision_sha256: "9d05227fae17fde0f2e1a92a47c4e82298cc8d750a01e90782db4d302b39061a"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 60--63 verify exact component, finite-field, one-root invariant-SDP, and rational-cone boundaries with narrow Wave 61 and Wave 62 documentation corrections. They supply no integer incidence design, compatible A_Y, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_64_65_checkpoint:
+  public_base_commit: "6dba25f93ba8b0375a6d7057eac4c83e58934fb4"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  prior_checkpoint: "logs/2026-07-27-wave63-public-checkpoint.json"
+  wave64_status: VERIFIED_SCOPED
+  wave64_residual_labels: 84
+  wave64_candidate_blocks: 35560
+  wave64_allowed_transitions: 840
+  wave64_local_transition_matchings_per_base: 6040
+  wave64_transition_triangle_cuts: 280
+  wave64_block_witness_blocks: 140
+  wave64_full_linear_rational_control: VERIFIED
+  wave64_integral_strong_witness: UNKNOWN
+  wave64_discovery_manifest_sha256: "b3ab03ee16ea80fbda0e4279090a48174797722843e17b890c2aba509b01ff74"
+  wave64_verifier_manifest_sha256: "dd138310fcaa4e3e2d2989281f9c7487b498ad1d15901403b32919d7018bb905"
+  wave65_status: VERIFIED_SCOPED
+  wave65_block_graph_minus3_multiplicity_floor: 56
+  wave65_block_graph_c4_range: "1260..2331"
+  wave65_scalar_w_range: "64/5..16"
+  wave65_averaged_psd_lanes: 258
+  wave65_averaged_psd_minimum: "12/5"
+  wave65_control_moment_deltas: "0,0,0,+5496,-12020,+239772"
+  wave65_discovery_manifest_sha256: "085b2ecae05f7268080b49e2bff8e719d1d693072f4dd4d32a288e9de6b0a02f"
+  wave65_verifier_manifest_sha256: "ed910ace571fee408d5560cf943f125e4c04fe7a9f5fe726e7c7a288f6edf4b5"
+  public_checkpoint: "logs/2026-07-27-wave65-public-checkpoint.json"
+  public_checkpoint_sha256: "227ba00e6e1c669126a6bab132f982d85f106335bb000174c7a99995bd2f8d89"
+  integration_audit: "verification/2026-07-27-wave65-integration-audit.md"
+  integration_audit_sha256: "d67ffdc43c01455fa99bd7c48e3d90dbb10e2442951c1e0be3fc79dc66498d68"
+  orchestrator_decision: "verification/2026-07-27-wave65-orchestrator.md"
+  orchestrator_decision_sha256: "a4e2d1da5a0d506b9825542fdee6148e1316e5448ed5fd0b7f9910d25a042529"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 64--65 verify the exact rooted transition/design formulation, finite block and transition censuses, rational linear control, and hypergraph-algebra restrictions. They supply no integral strong witness, full residual codegree solution, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_123_134_alternative_space_checkpoint:
+  public_base_commit: "aef7b93124f8caeb1a7487f58289436bc4118880"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave123_projector_status: VERIFIED_SCOPED
+  wave123_discovery_manifest_sha256: "39d680e78bf547c4fb5564048c6b7b1561382fd7d289f54a8a86154cff1a08a7"
+  wave123_verifier_manifest_sha256: "9cd5c9de7ed6b8a919804cf94bab8f0df1bacefd6f57ea273453e14c122fe6c1"
+  wave127_130_jacobi_status: VERIFIED_SCOPED_FINITE_FEASIBLE_THROUGH_CUTOFF_28
+  wave130_equalities: 454
+  wave130_inequalities: 1686
+  wave130_tight_inequalities: 506
+  wave130_discovery_manifest_sha256: "8b1da27e3acaa059934704a85aaa380e101e1db330925ced6e048330d318e3ae"
+  wave130_verifier_manifest_sha256: "5d1aed1c539901077a709ca57e759d71676e432fa31dd80cadf990df7d1a9a8e"
+  wave128_finite_primary_status: VERIFIED_SCOPED_ALL_IMPORTED_ROWS_SURVIVE
+  wave128_discovery_manifest_sha256: "851df7c40ab2056f6a5f927093707e5e9b578df2b18662e6b95fcf6335033038"
+  wave128_verifier_manifest_sha256: "8d48809b536d5eff823c05254b8a34bfdf743f8b97facf5799352ddad2bae606"
+  wave131_ordinary_enumerator_status: VERIFIED_SCOPED_RATIONAL_SUPERSEDED
+  wave131_witness_refuted_by_wave132: true
+  wave132_distinguished_status: VERIFIED_SCOPED_RATIONAL
+  wave132_forced_zero_weights: "94,96,98"
+  wave132_integral_feasibility: UNKNOWN
+  wave132_full_genus_two_feasibility: UNKNOWN
+  wave132_discovery_manifest_sha256: "0b99e87b0f39b1c203709d34ffba3f7b5c94f0078c53fe4020dfc3cd03ec510c"
+  wave132_verifier_manifest_sha256: "a49d3686fe7ec985f973b198529da97530931b186ca0e166a1f81d73b77a8a26"
+  wave133_holonomy_status: VERIFIED_SCOPED_CONTROL
+  wave133_endpoint_excluded: false
+  wave133_aggregate_parity_obstruction: REFUTED
+  wave133_discovery_manifest_sha256: "dae34acdfd3a95c99db79567bf9b8ed20aa1423812dcb4dbe7681730b6d9870a"
+  wave133_verifier_manifest_sha256: "96081553148ba8bac3aafdb17a705e2764621e6ffc8aa2373cf77181939f23a9"
+  wave134_quaternary_status: VERIFIED_SCOPED_DERIVATION
+  wave134_primal_orbits: 1119
+  wave134_allowed_dual_orbits: 1114
+  wave134_forbidden_dual_orbits: 161
+  wave134_primal_forced_compositions: 84
+  wave134_primal_forced_words: 8557760
+  wave134_dual_forced_compositions: 44
+  wave134_dual_forced_words: 4126784
+  wave134_corrected_rational_feasibility: UNKNOWN_NOT_RUN
+  wave134_corrected_integral_feasibility: UNKNOWN_NOT_RUN
+  wave134_discovery_manifest_sha256: "581678d37091754f4bf1f197223a120d82f3051020a45b601e84889dfdad81e9"
+  wave134_verifier_manifest_sha256: "7fc68ba875d7fdc31dd03584d95bd7f80e7ddec01d9c247ce351ac4b4ae6a858"
+  public_checkpoint: "logs/2026-07-28-wave134-public-checkpoint.json"
+  public_checkpoint_sha256: "0a5f2ca03ce1aad786948a5a8a32f60d2a47bcffa4100e9a3966b32d9f1cf12b"
+  wave133_integration_audit: "verification/2026-07-28-wave133-integration-audit.md"
+  integration_audit: "verification/2026-07-28-wave134-integration-audit.md"
+  integration_audit_sha256: "c037cf7484c00c83159eb962de6031354d407f87765da233815ddea28ab457e7"
+  orchestrator_decision: "verification/2026-07-28-wave134-orchestrator.md"
+  orchestrator_decision_sha256: "aa78f109f9746d2fb92b8ce47c3e9d6cd59d86aece5666f9588c3a26d8d0031b"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 123--134 verify scoped projector, finite Jacobi, finite-primary, binary-enumerator, holonomy-control, and quaternary-enumerator boundaries with multiple public corrections. They supply no realized code, lattice, graph, rank exclusion, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_135_147_alternative_space_checkpoint:
+  public_base_commit: "0a15bfe548e301ea98c83e292ba8931322e39945"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave135_status: VERIFIED_SCOPED_UNKNOWN_WALL
+  wave141_status: VERIFIED_BIVARIATE_IDENTITIES
+  wave141_s6_identity: "2024484+(512/3)n3"
+  wave142_status: PARTIAL_PASS_WITH_TOP_BAND_VETO
+  wave142_target_forced_top_band: "92..99"
+  wave143_status: PASS_WITH_SCOPE_CORRECTION
+  wave143_equality_projection: "n3 congruent 0 mod 3"
+  wave143_target_dual_distance_15: NOT_PROVED
+  wave144_status: PASS_NULL_BOUNDARY
+  wave144_endpoint_integer_cells: 65
+  wave145_status: PASS_WITH_WAVE139_VETO
+  wave145_corrected_pure_y_zeros: "2,4,6,94,96,98"
+  wave146_status: PASS_RATIONAL_RELAXATION
+  wave146_variables: 13973
+  wave146_equalities: 8981
+  wave146_matrix_nonzeros: 110269
+  wave146_positive_rational_coordinates: 2998
+  wave146_maximum_denominator: 4
+  wave146_discovery_manifest_sha256: "6a4f1125d877f4bc1dfcfe522dea66e95216416bd09550fa36aadbcbeb1f2b17"
+  wave146_verifier_manifest_sha256: "cc683fa0977c93fde09cdb087c923d0a4927957a5ee6508eb5be197f1296cebf"
+  wave147_status: PASS_WITH_SCOPE_FINITE_MODEL
+  wave147_edge_flag_basis: 66
+  wave147_nonedge_flag_basis: 87
+  wave147_order8_classes: 916
+  wave147_coefficient_matrices: 2414
+  wave147_deletion_rows: 208
+  wave147_n3_carrier_coefficient: 4
+  wave147_numerical_sdp: NOT_RUN
+  wave147_rational_dual: NOT_OBTAINED
+  wave147_discovery_manifest_sha256: "0c7585f996374246918948eb1537e61e2e165474f815a66eff24bf82e7c8e690"
+  wave147_verifier_manifest_sha256: "ce892c1af0ccc5c69605513b4d427c1741a1d13e354997b4c56b45a6f1c85400"
+  public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
+  public_checkpoint_sha256: "a3b694d3ca5d94283f24fcc77c20209682a749fc43b90e3b6c6f05600889bb78"
+  integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
+  integration_audit_sha256: "d6ddc51c60d4ed7eac4388a4f29472b6941100273af7c13c54ceed6d80838cb3"
+  orchestrator_decision: "verification/2026-07-28-wave147-orchestrator.md"
+  orchestrator_decision_sha256: "57f961c96f9d41c3b71de34acaa5dc58aadf5acdf4b2d61dba92ef37bb07145c"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 135--147 verify scoped quadratic-form, graph-code, profile, one-root, and finite two-root/order-eight boundaries with material corrections. They supply no graph, code realization, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+last_updated: 2026-07-28

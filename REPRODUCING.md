@@ -2734,6 +2734,219 @@ rigorous interval:           708 <= n3 <= 4158
 n3=4158 / Conway-99:         UNKNOWN
 ```
 
+## Wave 39 edge-local rank and proof-shard checks
+
+Replay the edge-local discovery and clean-room verification:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-edge-local-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-edge-local-rank\exact_check.py `
+  --output $env:TEMP\wave39-edge-local-rank.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave39-edge-local-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave39-edge-local-rank\independent_check.py `
+  --output $env:TEMP\wave39-edge-local-rank-independent.json
+```
+
+The independent command exhausts all 10,395 pulled-back matchings and
+reconstructs the eleven partitions and rank formula without importing the
+discovery implementation.
+
+Replay the branch-15 proof shard:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-proof-solver -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-proof-solver\verify_certificate.py `
+  attempts\wave39-proof-solver\branch-15-x187-positive-certificate.json `
+  --output $env:TEMP\wave39-proof-shard.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave39-proof-solver -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave39-proof-solver\independent_check.py `
+  --output $env:TEMP\wave39-proof-shard-independent.json
+```
+
+The compressed OPB and raw/kernel VeriPB proofs are retained in the attempt
+package. The uncompressed `.opb` is reproducible and ignored. Fresh strict
+VeriPB replay is part of the independent verifier; CakePB supplied no
+conclusion.
+
+Replay the two exact discovery-only compatibility lanes:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-cross-base-rank -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-cross-base-rank\exact_check.py `
+  --output $env:TEMP\wave39-cross-base-rank.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave39-simultaneous-bh -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave39-simultaneous-bh\exact_check.py `
+  --output $env:TEMP\wave39-simultaneous-bh.json
+```
+
+```text
+Wave 39 tests:                         62 / 62 PASS
+rank_F7(M)>=19:                       VERIFIED
+branch15 AND x187=1:                  VERIFIED UNSAT
+complete endpoint proof coverage:     0 / 33
+rigorous interval:                     708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:         UNKNOWN
+```
+
+## Wave 40 universal rank and edge-coupling checks
+
+Replay the rank-22 stepping stone, the rank-25 discovery package, and its
+clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-rank19-equality -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-rank19-equality -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-rank19-equality\independent_check.py `
+  --verify verification\wave40-rank19-equality\independent-results.json
+
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-exact-coupling-model -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-exact-coupling-model\exact_check.py `
+  --verify attempts\wave40-exact-coupling-model\exact-results.json `
+  --certificate attempts\wave40-exact-coupling-model\subspace-certificate.json
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-exact-coupling-model\full_block_scout.py `
+  --verify attempts\wave40-exact-coupling-model\full-block-scout-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-exact-coupling-model -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-exact-coupling-model\independent_check.py `
+  --verify verification\wave40-exact-coupling-model\independent-results.json
+```
+
+The discovery and verification implementations are independent. Each covers
+all eleven edge partitions and all third-fibre permutations through complete
+projective-subspace and bipartite-matching certificates.
+
+Replay the global edge-type and one-triangle lift packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave40-edge-type-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave40-edge-type-coupling\exact_check.py `
+  --verify attempts\wave40-edge-type-coupling\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave40-edge-type-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave40-edge-type-coupling\independent_check.py `
+  --verify verification\wave40-edge-type-coupling\independent-results.json
+```
+
+```text
+rank_F7(M)>=25:                     VERIFIED
+endpoint arithmetic rank pairs:     330
+complete endpoint proof coverage:    0 / 33
+rigorous interval:                   708 <= n3 <= 4158
+n3=4158 / Conway-99 / novelty:       UNKNOWN
+```
+
+## Wave 43 endpoint rank, lift census, branch cuts, and count deck
+
+Replay the conditional rank-28 theorem and its independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-rank28-motif -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-type33-rank2 -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave43-rank28 -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-rank28\independent_check.py --verify `
+  verification\wave43-rank28\independent-results.json --deterministic
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-rank28\comparison_check.py --verify `
+  verification\wave43-rank28\comparison.json
+```
+
+Replay the two scoped structural verifiers:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-all-rank33-lifts\independent_check.py --verify `
+  verification\wave43-all-rank33-lifts\independent-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-branch15-two-triangle\independent_check.py --verify `
+  verification\wave43-branch15-two-triangle\independent-results.json
+```
+
+The branch-15 replay scans the full frozen OPB and can take roughly two
+minutes. It proves only the named clause catalogue and probe record.
+
+Replay the compact three-way-matching formulation tests and the independently
+checked unrooted order-seven count witness:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave43-joint-completion -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave43-seven-deck-endpoint\endpoint_deck.py --verify `
+  attempts\wave43-seven-deck-endpoint\exact-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave43-seven-deck-endpoint\independent_check.py `
+  --verify verification\wave43-seven-deck-endpoint\independent-result.json
+```
+
+The retained CaDiCaL and MILP records are `UNKNOWN`; do not treat their solver
+statuses as certificates.
+
+## Wave 44 aggregate rooted-count control
+
+Replay the exact rooted witness and its clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave44-rooted-flags\exact_check.py --verify `
+  attempts\wave44-rooted-flags\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave44-rooted-flags -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave44-rooted-flags\independent_check.py --verify
+```
+
+The exact witness, not the discovery solver, is the certificate. The
+historical HiGHS `infeasible` status is a retained false negative.
+
+## Wave 45 rooted flag moments
+
+Replay the independent finite-moment construction and immutable checkpoint:
+
+```powershell
+.\.venv\Scripts\python.exe `
+  attempts\wave45-flag-moment\replay-v1.py
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\independent_verify.py --verify `
+  verification\wave45-flag-moment\independent-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\compare_discovery.py --verify `
+  verification\wave45-flag-moment\comparison-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave45-flag-moment -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave45-flag-moment\manifest_check.py
+```
+
+Only the no-clobber `checkpoint-v1-*` discovery files are in verification
+scope. Mutable cutting-plane files and later live runs are not checkpoint-v1
+evidence. A terminal `unknown` or timeout is not an infeasibility certificate.
+
 The combined detached clean-source replay for Waves 21-24 is recorded in
 `verification/2026-07-23-wave24-clean-clone.md`. It runs 278 submitted and
 independent tests, regenerates 15 exact files from 14 commands, checks seven
@@ -2762,6 +2975,263 @@ python verification/check_srg.py candidates/conway-99.srg.json
 
 No such target certificate is currently claimed. `STATUS.yaml` remains the
 authoritative machine-readable status.
+
+## Waves 56--59 alternative-space replay
+
+Replay the closure discovery and independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave56-percolation-closure\percolation_closure.py --verify `
+  attempts\wave56-percolation-closure\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave56-percolation-closure -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave56-percolation-closure\independent_check.py `
+  --discovery attempts\wave56-percolation-closure\exact-results.json `
+  --verify-output verification\wave56-percolation-closure\independent-result.json
+```
+
+Replay the corrected star-complement and cross-incidence packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave57-star-complement\independent_check.py `
+  --verify verification\wave57-star-complement\independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave57-star-complement -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave58-cross-incidence-rank\exact_check.py `
+  --verify attempts\wave58-cross-incidence-rank\exact-results.json
+.\.venv\Scripts\python.exe -B `
+  verification\wave58-cross-incidence-rank\independent_check.py `
+  --verify verification\wave58-cross-incidence-rank\independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave58-cross-incidence-rank -p "test_*.py" -v
+```
+
+Wave 57 must be read with its verifier correction. The replay proves no
+simultaneous `B,A_Y` system and no endpoint conclusion.
+
+Replay the incidence-spectrum discovery and independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave59-incidence-spectral-excess\incidence_spectral.py `
+  --verify attempts\wave59-incidence-spectral-excess\exact-result.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave59-incidence-spectral-excess -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification\wave59-incidence-spectral-excess\independent_verifier.py `
+  --compare-discovery attempts\wave59-incidence-spectral-excess\exact-result.json `
+  --output verification\wave59-incidence-spectral-excess\independent-result.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave59-incidence-spectral-excess -p "test_*.py" -v
+```
+
+Wave 59 verifies conditional finite identities and non-distance-regularity.
+It proves neither endpoint nonexistence nor a strict upper bound.
+
+## Waves 130 and 132--134 alternative-space replay
+
+Replay the exact cutoff-28 Jacobi point and its independent no-cache
+reconstruction:
+
+```powershell
+$env:PYTHONPATH='attempts/wave130-cdd-exact-lp'
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave130-cdd-exact-lp -p test_exact_cdd_lp.py -v
+.\.venv\Scripts\python.exe -B `
+  verification/wave130-cdd-exact-lp/independent_no_cache_verify.py `
+  --verify verification/wave130-cdd-exact-lp/independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave130-cdd-exact-lp -p "test_*.py" -v
+```
+
+Replay the distinguished split-enumerator package:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave132-distinguished-biweight -p "test_*.py" -v
+$wave132Manifest = (Get-FileHash -Algorithm SHA256 `
+  attempts/wave132-distinguished-biweight/package-manifest.sha256).Hash.ToLowerInvariant()
+.\.venv\Scripts\python.exe -B `
+  verification/wave132-distinguished-biweight/verify_wave132.py `
+  --repository . `
+  --package attempts/wave132-distinguished-biweight `
+  --expected-manifest $wave132Manifest
+```
+
+Replay the rooted-triangle holonomy and abstract surface control:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave133-triangle-holonomy-topology -p "test_*.py" -v
+$wave133Manifest = (Get-FileHash -Algorithm SHA256 `
+  attempts/wave133-triangle-holonomy-topology/package-manifest.sha256).Hash.ToLowerInvariant()
+.\.venv\Scripts\python.exe -B `
+  verification/wave133-triangle-holonomy-topology/verify_wave133.py `
+  --repository . `
+  --package attempts/wave133-triangle-holonomy-topology `
+  --expected-manifest $wave133Manifest
+```
+
+These replays certify finite or abstract controls only. They do not construct
+a graph, exclude rank 28 or the endpoint, or improve the rigorous interval
+`708<=n3<=4158`.
+
+Replay the corrected quaternary forced-word and transform package and its
+independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts/wave134-z4-symmetrized-enumerator/exact_check.py `
+  --verify attempts/wave134-z4-symmetrized-enumerator/exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave134-z4-symmetrized-enumerator -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification/wave134-z4-symmetrized-enumerator/independent_verify.py `
+  --verify verification/wave134-z4-symmetrized-enumerator/independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave134-z4-symmetrized-enumerator -p "test_*.py" -v
+```
+
+This certifies the corrected code-type, forced-word, and transform-state
+derivations only. The corrected rational and integral enumerator systems were
+not solved and remain `UNKNOWN_NOT_RUN`.
+
+## Waves 135--142 quadratic/code/interlace replay
+
+Replay the tightened quaternary face and its clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave135-z4-exact-face -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave135-z4-exact-face -p "test_*.py" -v
+```
+
+Both exact row-generation records remain `UNKNOWN_WALL`.  Do not infer
+infeasibility from that status.
+
+Replay the additive-`GF(4)` graph-state and Arf/Krawtchouk packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave136-alternative-spaces -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave137-z4-arf-branches -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave137-arf-krawtchouk -p "test_*.py" -v
+```
+
+The Wave 137 outputs are exact rational formal witnesses.  They do not
+construct an additive code or graph.
+
+Replay the two-adic Arf-sign boundary:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave140-arf-sign-lattice -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave140-arf-sign-lattice -p "test_*.py" -v
+```
+
+The opposite-sign controls are local algebraic controls, not zero-one
+strongly regular adjacency matrices.
+
+Replay the bivariate graph-code bridge:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts/wave141-bivariate-graph-code/exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave141-bivariate-graph-code -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave141-bivariate-graph-code -p "test_*.py" -v
+```
+
+The numerical scout is telemetry only.  The exact evidence is the
+Krawtchouk transform, `D8` rank, low rows, and `S6/n3` identity.
+
+Replay the interlace/isotropic discovery and verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave142-interlace-isotropic -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave142-interlace-isotropic -p "test_*.py" -v
+```
+
+Read the verifier report before using the discovery result.  It vetoes the
+unsupported sizes 86--91 top band and retains only sizes 92--99.  The valid
+local interlace rows give no improvement over `n3<=4158`.
+
+## Waves 143--147 projection and overlap replay
+
+Replay the binary `S6` projection with the environment that supplies
+`python-flint`:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave143-binary-s6-projection -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave143-binary-s6-projection -p "test_*.py" -v
+```
+
+The verifier report is mandatory reading.  The rational points impose a
+formal dual-distance-15 slice not proved for the graph; only minimum eight is
+target-forced.
+
+Replay the exact six-set outside-profile package and its clean-room verifier:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave144-sixset-odd-profile -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave144-sixset-odd-profile-cleanroom -p "test_*.py" -v
+```
+
+The 65-cell endpoint certificate is an aggregate integer witness, not a
+consistent assignment to overlapping six-sets.
+
+Replay the corrected Wave 139/145 additive-`GF(4)` audit:
+
+```powershell
+python -B -m unittest discover `
+  -s verification\wave139-gf4-lower-aggregation -p "test_*.py" -v
+```
+
+This audit refutes `max` aggregation and the proposed pure-`Y` zero rows
+8, 10, and 12.  It does not solve the corrected feasibility problem.
+
+Replay the Wave 146 rooted six-to-seven exact witness:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave146-six-seven-coupling\exact_witness.py `
+  --verify attempts\wave146-six-seven-coupling\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave146-six-seven-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave146-six-seven-coupling -p "test_*.py" -v
+```
+
+The stored sparse rational vector, not the retained HiGHS diagnostics, is the
+certificate.  It proves feasibility only of the one-root aggregate
+relaxation at `n3=4158`.
+
+Replay the Wave 147 two-root/order-eight coefficient package:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave147-alternative-lane -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave147-pair-root-order8 -p "test_*.py" -v
+```
+
+Wave 147 builds exact PSD coefficient data and a positive control but does
+not run an endpoint SDP or produce a rational dual bound.
 
 `requirements-search.txt` pins the prototyping API version, but it is not an
 archival proof lockfile. Before a proof-producing run, also pin the Python ABI,

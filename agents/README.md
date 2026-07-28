@@ -140,3 +140,150 @@ Wave 38 reports:
 - `2026-07-27-wave38-higher-order.md`: signed four-cycle and ternary
   fixed-triangle rank derivations plus a rank-ten local positive control.
   Simultaneous completion remains the missing step.
+
+Wave 39 reports:
+
+- `2026-07-27-wave39-edge-local-rank.md`: discovery proof of the eleven
+  edge-local normal forms and candidate `rank_F7(M)>=19` theorem. Read it with
+  the independent verifier, which promotes the theorem.
+- `2026-07-27-wave39-proof-solver.md`: construction report for the
+  `branch15 AND x187=1` pseudo-Boolean proof shard. Independent VeriPB replay
+  verifies only that named shard; branch 15 remains open.
+- `2026-07-27-wave39-cross-base-rank.md`: conditional `r3=12` projection
+  collisions and quotient controls. The result is `DERIVED_INCONCLUSIVE`.
+- `2026-07-27-wave39-simultaneous-bh.md`: conditional centered-code and
+  simultaneous `B/H` overlap restrictions. Nonnegative transforms leave the
+  boundary unexcluded.
+
+Wave 40 reports:
+
+- `2026-07-27-wave40-rank19-equality.md`: proof-A discovery of the
+  conditional rank-22 stepping stone from exact third-fibre syndrome
+  matching. A separate verifier promotes the scoped theorem.
+- `2026-07-27-wave40-exact-coupling-model.md`: construction discovery that
+  unifies all eleven edge partitions and raises the candidate universal
+  characteristic-seven rank floor to 25. A clean-room verifier independently
+  promotes the theorem.
+- `2026-07-27-wave40-edge-type-coupling.md`: proof-B global edge-complex,
+  quotient, Laplacian, and one-quotient full-lift census. Read it with the
+  independent verifier; its surviving controls are not endpoint matrices.
+- `2026-07-27-wave40-rank25-literature.md`: bounded primary-source audit for
+  the exact rank-25 statement and equivalent terminology. Non-discovery does
+  not establish novelty or priority.
+
+Wave 43 reports:
+
+- `2026-07-27-wave43-rank28-motif.md` and
+  `2026-07-27-wave43-type33-rank2.md`: discovery derivations excluding local
+  endpoint rank 27. Read them with the independent rank-28 verifier report.
+- `2026-07-27-wave43-all-rank33-lifts.md`: discovery extension of the
+  component and candidate-census reduction to all 264 rank-33 lifts; a
+  separate report records clean-room verification.
+- `2026-07-27-wave43-branch15-two-triangle.md`: complete named two-triangle
+  prism-cut family and null probes; a separate verifier preserves the scope.
+- `2026-07-27-wave43-joint-completion.md`: exact CNF/MILP formulations and
+  two nonterminal solver records.
+- `2026-07-27-wave43-alternative-spaces.md`: comparison of transportation,
+  rooted-flag, polynomial-calculus, multi-block rank, orthogonal-geometry,
+  and star-complement lanes.
+- `2026-07-27-wave43-seven-deck-verifier.md`: independent verification that
+  the unrooted order-seven count system is exactly feasible.
+- `2026-07-27-wave43-success-forecast.md`: bounded strategy and timing
+  forecast. Its probabilities are planning judgments, not evidence.
+
+Wave 44 report:
+
+- `2026-07-27-wave44-rooted-flags.md`: exact aggregate rooted-count witness
+  and retained false-HiGHS chronology. Read with the independent Wave 44
+  verifier; neither artifact is a graph or endpoint result.
+
+Wave 45 report:
+
+- `2026-07-27-wave45-flag-moment.md`: discovery-side finite Gram
+  construction, immutable v1 handoff, and exact 17-witness rejection ledger.
+- `2026-07-27-wave45-flag-moment-verifier.md`: clean-room reconstruction of
+  the finite rooted Gram matrices, exact refutation of two stored aggregate
+  witnesses, and replay of immutable checkpoint v1. The terminal timeout is
+  retained as `UNKNOWN`.
+
+Wave 46 reports:
+
+- `2026-07-27-wave46-f7-code.md`: ordinary characteristic-seven row-code,
+  enumerator-moment, Schur-cube, and generic-control discovery package.
+- `2026-07-27-wave46-f7-code-verifier.md`: clean-room verification of the
+  conditional code consequences and all rank-28-through-44 generic controls.
+  The null endpoint conclusion is retained.
+
+Wave 47 reports:
+
+- `2026-07-27-wave47-three-root-moment.md`: discovery construction of all
+  eight three-labelled-root moment families and exact directions against 17
+  stored aggregate witnesses.
+- `2026-07-27-wave47-three-root-moment-verifier.md`: clean-room reconstruction
+  of all coefficients, controls, 2,664 directions, and 2,657 primitive cuts.
+- `2026-07-27-wave47-polynomial-calculus.md`: seven local squarefree
+  degree-two Macaulay calculations for branch 15.
+- `2026-07-27-wave47-polynomial-calculus-verifier.md`: independent replay of
+  the 13 XOR relations, the null contradiction/assignment result, and the
+  degree-four barrier for all 34,340 active Wave 43 cuts.
+
+Wave 48 report:
+
+- `2026-07-27-wave48-conic-moment.md`: combined real moment scout and exact
+  affine facial reduction. Floating statuses are non-evidentiary and
+  feasibility remains `UNKNOWN`.
+- `2026-07-27-wave48-conic-moment-verifier.md`: clean-room exact
+  reconstruction of affine rank 93, nullity 116, and all eleven complete
+  universal moment kernels; no numerical artifact is used.
+
+Wave 49 reports:
+
+- `2026-07-27-wave49-five-root-moment.md`: exact construction of the 21
+  five-root/one-free families and retained near-boundary numerical scout.
+- `2026-07-27-wave49-five-root-moment-verifier.md`: clean-room reconstruction
+  of all 2,520 relabellings, 42 controls, and 357 stored-witness
+  refutations; endpoint status remains `UNKNOWN`.
+
+Wave 51 reports:
+
+- `2026-07-27-wave51-global-triple-tensor.md`: discovery of an exact positive
+  aggregate triple-count control.
+- `2026-07-27-wave51-global-triple-tensor-verifier.md`: independent tensor,
+  balance, hostile-mutation, and association-failure replay.
+- `2026-07-27-wave51-seidel-smith.md`: candidate conditional Smith-form and
+  modular-representation derivation.
+- `2026-07-27-wave51-seidel-smith-verifier.md`: independent proof of the
+  corrected Smith/Jordan theorem and explicit refutation of the discovery
+  spectrum.
+- `2026-07-27-wave51-rankone-cut-relaxation.md`: source-side balanced 174-cut
+  probe; its self-verification is not accepted.
+- `2026-07-27-wave51-rankone-cut-relaxation-verifier.md`: clean-room exact
+  replay that promotes only the fixed-bundle rational-feasibility result.
+
+Wave 52 reports:
+
+- `2026-07-27-wave52-coherent-closure.md`: automorphism-free one-root
+  coherent-closure discovery and explicit local completion controls.
+- `2026-07-27-wave52-coherent-closure-verifier.md`: independent derivation,
+  clean-room 2-WL replay, complete 64-profile comparison, and hostile tests.
+
+Waves 60--63 reports:
+
+- `2026-07-27-wave60-c3-incidence-design.md`: discovery-side component,
+  safe-orbit, candidate-column, and bounded-search report for the conditional
+  three-component lane. Read it with the independent Wave 60 verifier.
+- Wave 61 finite-field, Wave 62 one-root SDP, and Wave 63 rational-cone
+  reports are packaged with their exact checkers under `attempts/`; their
+  independent audits are under `verification/`.
+
+Waves 130--134 reports:
+
+- `2026-07-28-wave130-cdd-exact-lp-verifier.md`: independent no-cache
+  verification of exact rational Jacobi feasibility through cutoff 28.
+- `2026-07-28-wave133-triangle-holonomy-topology.md`: rooted-triangle
+  holonomy sign identity, opposite-sign local controls, and the
+  endpoint-scale nonorientable surface null boundary.  Read it with the
+  independent verifier under `verification/wave133-triangle-holonomy-topology/`.
+- `2026-07-28-wave134-z4-symmetrized-enumerator.md`: full-problem
+  quaternary-code shift, corrected forced-word tables and transform orbit
+  partition, both verifier-veto repairs, and the unchanged feasibility wall.

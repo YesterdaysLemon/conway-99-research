@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-27
+as_of: 2026-07-28
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -1818,6 +1818,588 @@ claims:
       still 708<=n3<=4158, proof coverage is 0/33, and novelty and priority
       remain UNKNOWN.
 
+  - id: C-WAVE39-EDGE-LOCAL-RANK-076
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=19 for the
+      integral triangle projector M=21E_0. For every edge, the associated
+      27-vertex principal block has one of eleven normal forms indexed by the
+      positive partitions of six and has rank
+      25-2*(number of even parts) over F_7.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "agents/2026-07-27-wave39-edge-local-rank.md"
+      - "attempts/wave39-edge-local-rank/exact-results.json"
+      - "verification/wave39-edge-local-rank/independent-results.json"
+      - "verification/wave39-edge-local-rank/README.md"
+      - "verification/wave39-edge-local-rank/run-report.yaml"
+    limitations: >-
+      The theorem is a necessary rank condition, not a graph construction or
+      endpoint contradiction. No global compatibility theorem for the local
+      edge types is proved, the upper bound remains n3<=4158, and novelty and
+      priority remain UNKNOWN.
+
+  - id: C-WAVE39-ENDPOINT-RANK-CENSUS-077
+    statement: >-
+      At the prism-free endpoint, the edge-local partitions are exactly
+      2+2+2, 2+4, 3+3, and 6 with local F_7 ranks 19,21,25,23. The verified
+      modular arithmetic census has 429 surviving (r3,r7) pairs; if r3=12,
+      then r7 is even and at least 20.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ARITHMETIC
+    evidence:
+      - "attempts/wave39-edge-local-rank/exact-results.json"
+      - "verification/wave39-edge-local-rank/independent-results.json"
+      - "verification/2026-07-27-wave39-integration-audit.md"
+    limitations: >-
+      The 429 pairs are arithmetic survivors, not matrices or graphs. The
+      endpoint remains UNKNOWN.
+
+  - id: C-WAVE39-PROOF-SHARD-078
+    statement: >-
+      In refined endpoint branch 15, the frozen formula entails x187=0;
+      equivalently branch15 AND x187=1 is UNSAT. Exact raw and kernel
+      pseudo-Boolean proofs receive fresh independent strict VeriPB 3.0.2
+      acceptance.
+    label: VERIFIED
+    scope: ONE_EXPLICIT_POLARITY_SHARD_INSIDE_REFINED_BRANCH_15
+    evidence:
+      - "agents/2026-07-27-wave39-proof-solver.md"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.raw.pbp"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.kernel.pbp"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.raw-check.txt"
+      - "attempts/wave39-proof-solver/branch-15-x187-positive.kernel-check.txt"
+      - "verification/wave39-proof-solver/exact-results.json"
+      - "verification/wave39-proof-solver/README.md"
+    limitations: >-
+      The x187=0 shard is open. Branch 15 and all complete endpoint cases
+      remain unresolved, proof coverage is 0/33, and CakePB supplied no
+      conclusion.
+
+  - id: C-WAVE39-COMPATIBILITY-LANES-079
+    statement: >-
+      Conditional on the prism-free r3=12 boundary, the cross-base lane forces
+      at least twelve equal-projection pairs per 84-triangle vertex star, and
+      the simultaneous B/H lane derives a projective self-orthogonal
+      [231,11]_3 code boundary together with exact conditional H-edge
+      decompositions.
+    label: DERIVED
+    scope: CONDITIONAL_DISCOVERY_ONLY_COMPATIBILITY_RESTRICTIONS
+    evidence:
+      - "agents/2026-07-27-wave39-cross-base-rank.md"
+      - "attempts/wave39-cross-base-rank/exact-results.json"
+      - "agents/2026-07-27-wave39-simultaneous-bh.md"
+      - "attempts/wave39-simultaneous-bh/exact-results.json"
+    limitations: >-
+      These discovery-only lanes were not promoted by an independent verifier.
+      Positive quotient controls and nonnegative Delsarte transforms prevent
+      an endpoint contradiction. No simultaneous completion or graph is
+      supplied.
+
+  - id: C-WAVE39-CONTINUATION-080
+    statement: >-
+      Excluding n3=4158 still requires a checked endpoint graph, checked UNSAT
+      certificates covering every refined case, or a global contradiction
+      coupling the local edge types, cross-base dependencies, or simultaneous
+      B/H equations. The Wave 39 rank theorem and one closed polarity shard do
+      not satisfy this condition.
+    label: UNKNOWN
+    scope: WAVE39_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave39-integration-audit.md"
+      - "verification/2026-07-27-wave39-orchestrator.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval remains
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
+  - id: C-WAVE40-UNIVERSAL-RANK-081
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=25 for the
+      integral triangle projector M=21E_0. For an edge type indexed by a
+      partition pi of six with e even parts, the 27-point block has rank
+      25-2e and the exact minimum third-fibre kernel-projection rank over all
+      twelve-point permutations is e; the bordered principal block therefore
+      has rank at least 25.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "agents/2026-07-27-wave40-exact-coupling-model.md"
+      - "attempts/wave40-exact-coupling-model/exact-results.json"
+      - "attempts/wave40-exact-coupling-model/subspace-certificate.json"
+      - "verification/wave40-exact-coupling-model/independent-results.json"
+      - "verification/wave40-exact-coupling-model/README.md"
+      - "verification/wave40-exact-coupling-model/run-report.yaml"
+    limitations: >-
+      This is a universal necessary rank condition, not a construction,
+      endpoint contradiction, or upper-bound improvement. Literature novelty
+      and priority remain UNKNOWN.
+
+  - id: C-WAVE40-ENDPOINT-RANK-CENSUS-082
+    statement: >-
+      At the conditional prism-free endpoint, the universal rank-25 theorem
+      leaves exactly 330 arithmetic (r3,r7) pairs. If r3=12, parity forces r7
+      to be even and at least 26.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ARITHMETIC
+    evidence:
+      - "attempts/wave40-exact-coupling-model/exact-results.json"
+      - "verification/wave40-exact-coupling-model/independent-results.json"
+      - "verification/2026-07-27-wave40-integration-audit.md"
+    limitations: >-
+      The 330 pairs are arithmetic survivors, not matrices or graphs. The
+      endpoint remains UNKNOWN and the upper bound remains n3<=4158.
+
+  - id: C-WAVE40-EDGE-COMPLEX-083
+    statement: >-
+      At n3=4158, the four edge-local types glue into a closed
+      two-dimensional incidence complex with face identities
+      F4=3a+b,F6=2c,F8=b,F12=d. Around one all-222 triangle, the complete
+      normalized quotient census has 4,050 forms and rank_F3(P_T-I)
+      distribution 11:8,12:1,13:400,14:46,15:2616,16:979.
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_GLOBAL_EDGE_TYPE_AND_ONE_TRIANGLE_QUOTIENT_IDENTITIES
+    evidence:
+      - "agents/2026-07-27-wave40-edge-type-coupling.md"
+      - "attempts/wave40-edge-type-coupling/exact-results.json"
+      - "verification/wave40-edge-type-coupling/independent-results.json"
+      - "verification/wave40-edge-type-coupling/README.md"
+    limitations: >-
+      The Euler characteristic can be negative and the rank-11 quotient
+      boundary survives. These identities do not exclude any global endpoint
+      case.
+
+  - id: C-WAVE40-CORE-LAPLACIAN-084
+    statement: >-
+      For a base triangle T with cubic 36-vertex neighbor core A_X,
+      rank_F7(K[T union N(T)])=1+rank_F7(3I-A_X). For one explicit rank-11
+      all-222 quotient, all 2^18 endpoint-pairing lifts have exactly 37,378
+      triangle-free cases with 39-block rank distribution
+      33:264,34:7348,35:29766.
+    label: VERIFIED
+    scope: UNIVERSAL_LOCAL_RANK_IDENTITY_AND_ONE_QUOTIENT_COMPLETE_LIFT_CENSUS
+    evidence:
+      - "attempts/wave40-edge-type-coupling/exact-results.json"
+      - "verification/wave40-edge-type-coupling/independent-results.json"
+      - "verification/wave40-edge-type-coupling/README.md"
+    limitations: >-
+      The 2^18 census covers one quotient only. It is not a universal rank-33
+      theorem, a simultaneous global completion, an endpoint matrix, or a
+      Conway graph.
+
+  - id: C-WAVE40-CONTINUATION-085
+    statement: >-
+      Excluding n3=4158 still requires a checked endpoint graph, checked
+      UNSAT certificates covering every refined case, or a global
+      contradiction coupling all triangle-neighbor cores. The universal
+      rank-25 theorem, the edge-type surface identities, and one-quotient
+      lift census do not satisfy this condition.
+    label: UNKNOWN
+    scope: WAVE40_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave40-integration-audit.md"
+      - "verification/2026-07-27-wave40-orchestrator.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval remains
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
+  - id: C-WAVE40-LITERATURE-086
+    statement: >-
+      The bounded primary-source audit found Gray Taylor's pinned 2020
+      notebook and repository to be exact prior art for the 27-vertex
+      edge-neighborhood scaffold and its eleven local types. No exact or
+      equivalent rank_F7(M)>=25 statement was located in the corpus searched
+      through 2026-07-27.
+    label: CITED
+    scope: WAVE40_LITERATURE_AND_PRIORITY_BOUNDARY_ONLY
+    evidence:
+      - "agents/2026-07-27-wave40-rank25-literature.md"
+      - "attempts/wave40-rank25-literature/query-log.json"
+      - "attempts/wave40-rank25-literature/source-ledger.json"
+      - "attempts/wave40-rank25-literature/package-manifest.sha256"
+    limitations: >-
+      Taylor's prior art forbids claiming invention of the local scaffold or
+      eleven-type classification. Bounded non-discovery cannot establish
+      novelty, priority, openness, completeness, or mathematical truth;
+      novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE41-UNIVERSAL-RANK-087
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=26. Exact
+      equality analysis excludes rank 25 for the four all-odd edge types and
+      for all seven types containing an even part, thereby covering all
+      eleven positive partitions of six.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "attempts/wave41-multiedge-rank-packing/exact-results.json"
+      - "verification/wave41-multiedge-rank-packing/independent-results.json"
+      - "attempts/wave41-evenpart-equality/exact-results.json"
+      - "verification/wave41-evenpart-equality/independent-results.json"
+      - "verification/wave41-evenpart-equality/discovery-comparison.json"
+      - "verification/wave41-evenpart-equality/audit.md"
+      - "verification/wave41-rank26-secondary/secondary-results.json"
+      - "verification/wave41-rank26-secondary/comparison.json"
+    limitations: >-
+      This is a necessary rank condition, not a graph construction,
+      endpoint contradiction, general n3 upper-bound improvement, or
+      Conway-99 resolution. Novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE41-EVEN-EQUALITY-088
+    statement: >-
+      For the seven edge-local partition types containing an even part, the
+      complete rank-25 equality census has 164,928 minimum-projection
+      permutations, 52 distinct right kernels, 164,278 equality targets,
+      and 540,540 grouped evaluations over all 10,395 labelled third-fibre
+      perfect matchings per kernel, with zero compatible rank-25 cases.
+    label: VERIFIED
+    scope: COMPLETE_EVEN_PART_39_BLOCK_RANK25_EQUALITY_CLASSIFICATION
+    evidence:
+      - "agents/2026-07-27-wave41-evenpart-equality.md"
+      - "attempts/wave41-evenpart-equality/exact-results.json"
+      - "attempts/wave41-evenpart-equality/package-manifest.sha256"
+      - "agents/2026-07-27-wave41-rank26-verifier.md"
+      - "verification/wave41-evenpart-equality/independent-results.json"
+      - "verification/wave41-evenpart-equality/package-manifest.sha256"
+    limitations: >-
+      The finite classification concerns the 39-point local block. Its
+      universal consequence additionally uses the separately verified
+      all-odd classification and rank transport.
+
+  - id: C-WAVE41-ALL222-RANK-089
+    statement: >-
+      Conditional on n3=4158, rank_F3(M)=12, and every edge having local type
+      2+2+2, all eight ternary-rank-eleven normalized quotients form one
+      strict fibre-preserving isomorphism class. Each has 37,378
+      triangle-free lifts with K39 rank distribution
+      33:264,34:7348,35:29766, forcing even rank_F7(M)>=34.
+    label: VERIFIED
+    scope: CONDITIONAL_ALL222_R3_12_ENDPOINT_BRANCH
+    evidence:
+      - "agents/2026-07-27-wave41-allquotient-lifts.md"
+      - "attempts/wave41-allquotient-lifts/exact-results.json"
+      - "verification/wave41-allquotient-lifts/independent-results.json"
+      - "verification/wave41-allquotient-lifts/audit.md"
+      - "verification/wave41-allquotient-lifts/package-manifest.sha256"
+    limitations: >-
+      The endpoint, all-222 condition, and r3=12 are assumptions. The result
+      does not supply the sixty outside vertices, global compatibility,
+      endpoint exclusion, a graph, or an improved n3 upper bound. The
+      discovery-only lift-count census for quotient ranks 12 through 16 is
+      not promoted.
+
+  - id: C-WAVE41-COMPACT-KERNEL-090
+    statement: >-
+      For every graph vertex v, h_v=(A+4I)e_v lies in the F7 kernel of
+      J-I-2A. The three such vectors for a base triangle are independent,
+      supported inside its 39-point block, and annihilated by every legal
+      outside column. Hence raw local kernel projections and nominal block
+      ranks cannot be packed additively.
+    label: VERIFIED
+    scope: UNIVERSAL_CHARACTERISTIC_SEVEN_COMPACT_KERNEL_OBSTRUCTION
+    evidence:
+      - "attempts/wave41-multiedge-rank-packing/exact-results.json"
+      - "verification/wave41-multiedge-rank-packing/independent-results.json"
+      - "verification/wave41-multiedge-rank-packing/audit.md"
+      - "verification/wave41-allquotient-lifts/audit.md"
+    limitations: >-
+      This identifies and closes one failed proof route. It is not evidence
+      for graph existence and does not itself force a contradiction.
+
+  - id: C-WAVE41-CONTINUATION-091
+    statement: >-
+      Excluding n3=4158 still requires a checked prism-free graph, checked
+      UNSAT certificates covering all 33 refined endpoint cases, or a global
+      contradiction using simultaneous outside incidence, outside
+      adjacency, K^2=0, or complete multi-triangle compatibility. Wave 41
+      local rank and propagation results do not discharge this requirement.
+    label: UNKNOWN
+    scope: WAVE41_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "attempts/wave41-overlap-compatibility/README.md"
+      - "attempts/wave41-proof-producing-search/README.md"
+      - "verification/wave41-evenpart-equality/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
+  - id: C-WAVE42-UNIVERSAL-RANK-092
+    statement: >-
+      Every hypothetical srg(99,14,1,2) satisfies rank_F7(M)>=27. Equality
+      analysis excludes rank 26 for all eleven edge-local partition types:
+      seven even-part types have zero rank-at-most-one residuals among
+      1,714,426,560 explicitly checked labelled pairs, and a complete
+      pivot/mate CSP covers 19,916,886,528,000 all-odd labelled pairs with
+      zero compatible leaves.
+    label: VERIFIED
+    scope: UNIVERSAL_NECESSARY_CHARACTERISTIC_SEVEN_RANK_CONDITION
+    evidence:
+      - "attempts/wave42-rank26-equality/exact-results.json"
+      - "attempts/wave42-rank26-equality/package-manifest.sha256"
+      - "verification/wave42-rank27/independent-results.json"
+      - "verification/wave42-rank27/comparison.json"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-rank27/package-manifest.sha256"
+    limitations: >-
+      This is a universal necessary rank theorem, not a graph construction,
+      prism-free endpoint contradiction, general n3 upper-bound improvement,
+      Conway-99 resolution, or novelty and priority result.
+
+  - id: C-WAVE42-JOINT-INCIDENCE-093
+    statement: >-
+      Conditional on n3=4158, rank_F3(M)=12, every edge having local type
+      2+2+2, and occurrence of canonical rank-33 lift mask 51739, the
+      60-column outside incidence problem is exactly a three-way matching of
+      three labelled 60-pair sets. Necessary unrestricted six-set filters
+      have census 216000,118718,49736,45032; any completion has overlap
+      census 458,1004,308, while a compatible outside graph requires
+      96,144,0 edges by overlap, 32 triangles, and 181 four-cycles.
+    label: VERIFIED
+    scope: CONDITIONAL_CANONICAL_MASK51739_JOINT_INCIDENCE_REDUCTION
+    evidence:
+      - "attempts/wave42-joint-incidence/exact-results.json"
+      - "attempts/wave42-joint-incidence/package-manifest.sha256"
+      - "verification/wave42-joint-incidence/independent-results.json"
+      - "verification/wave42-joint-incidence/comparison.json"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-joint-incidence/package-manifest.sha256"
+    limitations: >-
+      The result covers one canonical local lift under unproved joint
+      hypotheses. Two distinct certificates cover only two fibres. No full B,
+      compatible H, branch exclusion, endpoint exclusion, graph, upper-bound
+      improvement, solution, or novelty result is supplied.
+
+  - id: C-WAVE42-BRANCH15-DELTA-094
+    statement: >-
+      In frozen refined endpoint branch 15, x2=1 completes rooted full
+      zero-based triangle [1,15,17]. Prism-freeness soundly adds 64,932 exact
+      negative clauses; an independent generalized-unit closure leaves
+      33,778 active clauses, and the complete normalized discovery and
+      verifier clause streams agree exactly.
+    label: VERIFIED
+    scope: CONDITIONAL_REFINED_BRANCH15_SEVENTH_TRIANGLE_REDUCTION
+    evidence:
+      - "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-result.json"
+      - "attempts/wave42-endpoint-certificate/branch-15-seventh-triangle-delta.opb.gz"
+      - "attempts/wave42-endpoint-certificate/package-manifest.sha256"
+      - "verification/wave42-branch15-triangle-delta/independent-results.json"
+      - "verification/wave42-branch15-triangle-delta/comparison.json"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+      - "verification/wave42-branch15-triangle-delta/package-manifest.sha256"
+    limitations: >-
+      No active unit or empty clause is produced. Branch 15 remains UNKNOWN,
+      endpoint coverage remains 0/33, and no SAT, UNSAT, graph, endpoint,
+      upper-bound, Conway-99, or novelty conclusion follows.
+
+  - id: C-WAVE42-CONTINUATION-095
+    statement: >-
+      Excluding n3=4158 still requires a checked prism-free graph, checked
+      UNSAT certificates covering all 33 refined cases, or a global
+      contradiction coupling complete outside incidence, outside adjacency,
+      K^2=0, or higher-order triangle compatibility. Universal rank 27 and
+      the two scoped Wave 42 reductions do not discharge this requirement.
+    label: UNKNOWN
+    scope: WAVE42_PRISM_FREE_ENDPOINT_AND_GENERAL_UPPER_BOUND_CONTINUATION
+    evidence:
+      - "verification/2026-07-27-wave42-integration-audit.md"
+      - "verification/2026-07-27-wave42-orchestrator.md"
+      - "verification/wave42-rank27/audit.md"
+      - "verification/wave42-joint-incidence/audit.md"
+      - "verification/wave42-branch15-triangle-delta/audit.md"
+    limitations: >-
+      The endpoint and Conway-99 remain UNKNOWN. The rigorous interval is
+      708<=n3<=4158, proof coverage remains 0/33, and novelty and priority
+      remain UNKNOWN.
+
+  - id: C-WAVE43-ENDPOINT-RANK28-096
+    statement: >-
+      Conditional on n3=4158, every one of the four possible edge-local
+      types 222, 24, 33, and 6 has rank_F7(K39)>=28. Hence
+      rank_F7(M)>=28. Equivalently, rank_F7(M)=27 forces an induced
+      triangular prism and therefore n3<=4155.
+    label: VERIFIED
+    scope: CONDITIONAL_ON_PRISM_FREE_ENDPOINT
+    evidence:
+      - "attempts/wave43-rank28-motif/exact-results.json"
+      - "attempts/wave43-rank28-motif/package-manifest.sha256"
+      - "attempts/wave43-type33-rank2/exact-results.json"
+      - "attempts/wave43-type33-rank2/package-manifest.sha256"
+      - "verification/wave43-rank28/independent-results.json"
+      - "verification/wave43-rank28/comparison.json"
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-rank28/package-manifest.sha256"
+    limitations: >-
+      This is conditional on n3=4158 and is compatible with the global
+      rank ceiling 44. It does not exclude the endpoint or prove a strict
+      general upper bound below 4158. Novelty and priority remain UNKNOWN.
+
+  - id: C-WAVE43-ALL-RANK33-LIFTS-097
+    statement: >-
+      Conditional on n3=4158, r3=12, every edge having type 222, and the
+      canonical rank-33 lift lane, all 264 labelled triangle-free lifts have
+      12+24 components, fibre balances 4+8 in every fibre, exactly the three
+      expected rational Gram-kernel directions, and one of five exact
+      necessary six-set candidate censuses.
+    label: VERIFIED
+    scope: CONDITIONAL_ALL222_R3_12_RANK33_LIFTS
+    evidence:
+      - "attempts/wave43-all-rank33-lifts/exact-results.json"
+      - "attempts/wave43-all-rank33-lifts/package-manifest.sha256"
+      - "verification/wave43-all-rank33-lifts/independent-results.json"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-all-rank33-lifts/package-manifest.sha256"
+    limitations: >-
+      Every lift survives. The five rows are numerical census classes, not
+      proved isomorphism classes. No complete B, compatible H, endpoint
+      exclusion, or target graph is supplied.
+
+  - id: C-WAVE43-BRANCH15-TWO-TRIANGLE-098
+    statement: >-
+      In the frozen refined endpoint branch 15, exhaustive pairs of
+      coordinate-anchored unfixed triangles generate exactly 40800 distinct
+      width-four prism clauses; independent closure leaves 34340 active
+      slack-three clauses, and all 64 selected polarity probes remain
+      nonterminal.
+    label: VERIFIED
+    scope: CONDITIONAL_BRANCH15_COORDINATE_TRIANGLE_FAMILY
+    evidence:
+      - "attempts/wave43-branch15-two-triangle/branch-15-two-coordinate-triangle-result.json"
+      - "attempts/wave43-branch15-two-triangle/package-manifest.sha256"
+      - "verification/wave43-branch15-two-triangle/independent-results.json"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-branch15-two-triangle/package-manifest.sha256"
+    limitations: >-
+      Prisms based at non-coordinate-anchored triangles remain omitted. No
+      unit, contradiction, SAT witness, or UNSAT proof follows; branch 15
+      and endpoint proof coverage remain UNKNOWN and 0/33.
+
+  - id: C-WAVE43-JOINT-COMPLETION-099
+    statement: >-
+      For canonical mask 51739, the 45032 admissible outside six-sets admit
+      an exact reduction to three pairwise perfect-matching partitions. The
+      compact sequential-counter CNF has 82532 variables and 338528 clauses;
+      the equivalent sparse binary MILP has 45032 variables, 612 equality
+      rows, and 675480 nonzeros.
+    label: DERIVED
+    scope: CONDITIONAL_CANONICAL_MASK_51739_FORMULATION
+    evidence:
+      - "attempts/wave43-joint-completion/pairing-reduction.json"
+      - "attempts/wave43-joint-completion/solve-result-pairing-cadical-seed3-c5000000.json"
+      - "attempts/wave43-joint-completion/solve-result-milp-t600.json"
+      - "attempts/wave43-joint-completion/package-manifest.sha256"
+      - "agents/2026-07-27-wave43-joint-completion.md"
+    limitations: >-
+      Both retained solver runs ended UNKNOWN and supplied neither a
+      candidate nor a proof. The reduction has not received a clean-room
+      mathematical verifier and does not construct or exclude B or H.
+
+  - id: C-WAVE43-SEVEN-DECK-FEASIBLE-100
+    statement: >-
+      At n3=4158 and h11=16632, the complete finite relaxation on 208
+      locally admissible seven-vertex types, all 62 six-to-seven deletion
+      equations, and all 19 Hamiltonian formulas has an exact nonnegative
+      integer solution of support 99 and total binom(99,7)=14887031544.
+      Every seven-type containing a triangular prism has count zero.
+    label: VERIFIED
+    scope: UNROOTED_ORDER_SEVEN_COUNT_RELAXATION_ONLY
+    evidence:
+      - "attempts/wave43-seven-deck-endpoint/exact-results.json"
+      - "attempts/wave43-seven-deck-endpoint/package-manifest.sha256"
+      - "verification/wave43-seven-deck-endpoint/independent-result.json"
+      - "verification/wave43-seven-deck-endpoint/comparison.json"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+      - "verification/wave43-seven-deck-endpoint/package-manifest.sha256"
+    limitations: >-
+      This is an aggregate count vector, not a coherent assignment to
+      overlapping seven-subsets and not a 99-vertex graph. Feasibility is
+      not evidence that the endpoint or Conway-99 graph exists.
+
+  - id: C-WAVE44-ROOTED-COUNT-FEASIBLE-101
+    statement: >-
+      At n3=4158 and h11=16632, augmenting the complete order-seven count
+      system by all seven vertex-root rows, 36 ordered-edge-root rows, and
+      46 ordered-nonedge-root rows gives 170 exact equations in 209 integer
+      variables with a nonnegative solution of support 91. The coefficient
+      rank rises from 81 to 93 over each of F101, F103, and F107.
+    label: VERIFIED
+    scope: AGGREGATE_ROOTED_ORDER_SEVEN_COUNT_RELAXATION_ONLY
+    evidence:
+      - "attempts/wave44-rooted-flags/row-system.json"
+      - "attempts/wave44-rooted-flags/rooted-witness.json"
+      - "attempts/wave44-rooted-flags/exact-results.json"
+      - "attempts/wave44-rooted-flags/package-manifest.sha256"
+      - "verification/wave44-rooted-flags/independent-results.json"
+      - "verification/wave44-rooted-flags/comparison.json"
+      - "verification/wave44-rooted-flags/audit.md"
+      - "verification/wave44-rooted-flags/package-manifest.sha256"
+    limitations: >-
+      Aggregate rooted equations do not enforce compatibility between
+      overlapping subsets. The witness is not a graph or evidence of endpoint
+      existence. A floating-point HiGHS infeasible status was refuted by the
+      exact witness and has no certificate authority.
+
+  - id: C-WAVE45-FLAG-MOMENT-103
+    statement: >-
+      The complete four-vertex rooted-flag Gram construction gives exact
+      17-by-17 vertex-root, 16-by-16 ordered-edge-root, and 19-by-19
+      ordered-nonedge-root positive-semidefinite moment matrices. A clean-room
+      verifier matches all 484 class-matrix records and 16660 nonzero ordered
+      coefficients, refutes the stored Wave 43 and Wave 44 count witnesses by
+      twelve exact negative integer directions, and replays an immutable
+      checkpoint of 17 valid cuts against 15 successive exact witnesses.
+    label: VERIFIED
+    scope: FINITE_ROOTED_FLAG_MOMENTS_AND_IMMUTABLE_CHECKPOINT_V1_ONLY
+    evidence:
+      - "attempts/wave45-flag-moment/checkpoint-v1-manifest.sha256"
+      - "attempts/wave45-flag-moment/checkpoint-v1-seed0-17cuts-15witnesses.json"
+      - "attempts/wave45-flag-moment/replay-v1-results.json"
+      - "attempts/wave45-flag-moment/run-report-v1.yaml"
+      - "attempts/wave45-flag-moment/package-manifest-v1.sha256"
+      - "agents/2026-07-27-wave45-flag-moment.md"
+      - "verification/wave45-flag-moment/independent-results.json"
+      - "verification/wave45-flag-moment/comparison-results.json"
+      - "verification/wave45-flag-moment/verification-report.md"
+      - "verification/wave45-flag-moment/package-manifest.sha256"
+    limitations: >-
+      Refuting particular aggregate witnesses does not refute the endpoint.
+      The next exact solver call timed out with QF_LIA_UNKNOWN; the full
+      positive-semidefinite feasible region was not exhausted. Live searches
+      after checkpoint v1 are outside this claim.
+
+  - id: C-WAVE45-CONTINUATION-104
+    statement: >-
+      Wave 45 supplies no graph, endpoint exclusion, strict upper bound below
+      n3=4158, or complete proof-producing infeasibility certificate.
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "attempts/wave45-flag-moment/run-report-v1.yaml"
+      - "verification/wave45-flag-moment/README.md"
+      - "verification/wave45-flag-moment/run-report.yaml"
+    limitations: >-
+      The rigorous interval remains 708<=n3<=4158. Endpoint status,
+      Conway-99, novelty, and priority remain UNKNOWN.
+
+  - id: C-WAVE43-CONTINUATION-102
+    statement: >-
+      Wave 43 supplies no graph, complete endpoint proof, endpoint exclusion,
+      or strict general upper bound below n3=4158. Exact endpoint proof
+      coverage remains 0/33.
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-27-wave44-integration-audit.md"
+      - "verification/2026-07-27-wave44-orchestrator.md"
+      - "verification/wave43-rank28/audit.md"
+      - "verification/wave43-all-rank33-lifts/audit.md"
+      - "verification/wave43-branch15-two-triangle/audit.md"
+      - "verification/wave43-seven-deck-endpoint/2026-07-27T162423Z-audit.md"
+    limitations: >-
+      The rigorous interval remains 708<=n3<=4158. Endpoint status,
+      Conway-99, novelty, and priority remain UNKNOWN.
+
   - id: C-REIMBAYEV-DECK-001
     statement: "In the pinned TeX of arXiv:2508.03377v2, the printed m7(n-5) five-to-six deletion equation is false as written: its left-minus-right residual is exactly n23, and its N23 coefficient column sums to five rather than six."
     label: REFUTED
@@ -1958,6 +2540,294 @@ claims:
       - "verification/2026-07-23-wave18-status-audit.md"
       - "SOURCES.bib"
     limitations: "The exact correction refutes equation (88)'s uniform H2-to-H1 degree premise: the degrees are 1^20,2^51 and the count is 122=2(71)-20, not 142. This does not refute the theorem statement or prove existence; both target outcomes remain UNKNOWN."
+
+  - id: C-WAVE53-PROOF-COVER-001
+    statement: "Conditional on the normalized prism-free endpoint, the exact refined search space consists of 33 compatible cases of total orbit weight 6644 and 45 incompatible orbits of weight 3751, covering all 10395 normalized states."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CASE_COVER
+    evidence:
+      - "verification/wave53-proof-cover/independent-results.json"
+      - "verification/wave53-proof-cover/audit.md"
+      - "verification/wave53-proof-cover/package-manifest.sha256"
+    limitations: "This is case coverage, not UNSAT coverage. No complete case has a checked terminal proof; coverage is 0/33."
+
+  - id: C-WAVE53-MULTI-ROOT-001
+    statement: "The four finite two-root cap-incidence templates K, B, C, and D have exact stable 2-WL color counts 285,584,321,63 and triangle-core folklore-3-WL counts 107,321,240,61; the B template has one shared candidate forced true."
+    label: VERIFIED
+    scope: CONDITIONAL_FINITE_TWO_ROOT_RELAXATION
+    evidence:
+      - "verification/wave53-multi-root-wl/independent-result.json"
+      - "verification/wave53-multi-root-wl/audit.md"
+      - "verification/wave53-multi-root-wl/package-manifest.sha256"
+    limitations: "Every relation has an exact local positive control. No root relation, endpoint, or target graph is excluded."
+
+  - id: C-WAVE53-CUT-LOOP-001
+    statement: "The fixed Wave 53 174-to-177-cut rational relaxation has four exact feasible witnesses and valid retained Wave 49 cuts at roots 220,62,221."
+    label: VERIFIED
+    scope: FIXED_AGGREGATE_RATIONAL_RELAXATION
+    evidence:
+      - "verification/wave53-exact-cut-loop/independent-result.json"
+      - "verification/wave53-exact-cut-loop/comparison-result.json"
+      - "verification/wave53-exact-cut-loop/audit.md"
+    limitations: "Rational aggregate feasibility is not integer feasibility, full PSD feasibility, or graph existence."
+
+  - id: C-WAVE53-CUT-LOOP-002
+    statement: "All 128 Wave 45, Wave 47, and Wave 49 moment matrices tested at the four Wave 53 rational witnesses are indefinite."
+    label: REFUTED
+    scope: WAVE53_DISCOVERY_MATRIX_HEADLINE
+    evidence:
+      - "verification/wave53-exact-cut-loop/independent-result.json"
+      - "verification/wave53-exact-cut-loop/comparison-result.json"
+      - "verification/wave53-exact-cut-loop/audit.md"
+    limitations: "Independent reconstruction finds 120 indefinite and eight positive-semidefinite matrices. The defect doubles already-symmetric Wave 45 off-diagonal coefficients; the corrected fixed-bundle feasibility result survives."
+
+  - id: C-WAVE54-ENUMERATOR-001
+    statement: "The stated seven-weight formal distribution is an exact integral solution of the frozen ordinary MacWilliams constraints for the conditional centered ternary [231,11] code."
+    label: VERIFIED
+    scope: FORMAL_ORDINARY_WEIGHT_ENUMERATOR
+    evidence:
+      - "verification/wave54-centered-enumerator/independent-results.json"
+      - "verification/wave54-centered-enumerator/audit.md"
+      - "verification/wave54-centered-enumerator/package-manifest.sha256"
+    limitations: "The formal enumerator is not a realized linear code, point set, graph, or endpoint object."
+
+  - id: C-WAVE55-BOUNDED-SEARCH-001
+    statement: "The 120-second pinned Exact run closes branch15 AND x187=0."
+    label: REFUTED
+    scope: BOUNDED_ENDPOINT_SHARD_SEARCH
+    evidence:
+      - "attempts/wave55-branch15-remainder-search/result.json"
+      - "attempts/wave55-branch15-remainder-search/solver.txt"
+      - "attempts/wave55-branch15-remainder-search/package-manifest.sha256"
+    limitations: "Exact returned UNKNOWN. Zero solutions and a nonterminal proof prefix prove no formula consequence."
+
+  - id: C-WAVE56-PERCOLATION-001
+    statement: "Conditional on a hypothetical srg(99,14,1,2), a nonedge either 2-percolates to all 99 vertices or has induced closure K3 square K3; at n3=4158 all 4158 nonedges percolate."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CLOSURE
+    evidence:
+      - "verification/wave56-percolation-closure/independent-result.json"
+      - "verification/wave56-percolation-closure/audit.md"
+      - "verification/wave56-percolation-closure/package-manifest.sha256"
+    limitations: "Percolation is not an endpoint contradiction or a linear-span theorem. The 35 early-wave profiles are local multicovers, not graph completions."
+
+  - id: C-WAVE57-STAR-CORRECTION-001
+    statement: "All 18 Wave 57 moment-feasible multiplicity pairs are live endpoint possibilities and C4(X)<=89 is the active project bound."
+    label: REFUTED
+    scope: CONDITIONAL_ENDPOINT_PARAMETER_LEDGER
+    evidence:
+      - "verification/wave57-star-complement/independent-results.json"
+      - "verification/wave57-star-complement/audit.md"
+      - "verification/wave57-star-complement/package-manifest.sha256"
+    limitations: "Prior verified Wave 36 leaves only (18,8),(18,9),(18,10), and cubic wedge counting gives C4(X)<=27. The Wave 57 projector and exact star-set minimum-hit arguments remain valid in their narrower scope."
+
+  - id: C-WAVE58-CROSS-INCIDENCE-001
+    statement: "At the conditional prism-free endpoint, fixed-triangle component balance and cross-incidence rank leave exactly (mult_Y(3),mult_Y(-4),kappa,rank(B)) equal to (18,8,1,34), (18,9,2,33), or (18,10,3,32), with C4(X)<=27."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_CROSS_INCIDENCE
+    evidence:
+      - "verification/wave58-cross-incidence-rank/independent-results.json"
+      - "verification/wave58-cross-incidence-rank/audit.md"
+      - "verification/wave58-cross-incidence-rank/package-manifest.sha256"
+    limitations: "The rank identities are prior Wave 36 work combined with new exact component restrictions. No simultaneous binary B, compatible A_Y, or endpoint graph is supplied."
+
+  - id: C-WAVE59-INCIDENCE-SPECTRAL-001
+    statement: "At the conditional prism-free endpoint, the point-triangle incidence graph has order 330, bidegrees (7,3), girth 8, diameter 6, and spectrum +/-sqrt(21)^1, +/-sqrt(10)^54, +/-sqrt(3)^44, 0^132; its triangle graph has spectral excess 50 and actual excess 32."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_INCIDENCE_GEOMETRY
+    evidence:
+      - "verification/wave59-incidence-spectral-excess/independent-result.json"
+      - "verification/wave59-incidence-spectral-excess/audit.md"
+      - "verification/wave59-incidence-spectral-excess/package-manifest.sha256"
+    limitations: "The strict spectral-excess gap proves non-distance-regularity, not nonexistence. The exact Gram and cycle constraints are consistent; no endpoint case or strict upper bound is obtained."
+
+  - id: C-WAVE60-C3-DESIGN-001
+    statement: "In the conditional prism-free kappa=3 fixed-triangle lane, exact normalization gives 18 fibre-preserving component types, 1,140 unordered triples, 275 safe simultaneous-coordinate orbits, and 15,936--27,200 allowed six-set columns per triple; the stated F2 rank filter excludes none."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_COMPONENT_AND_CANDIDATE_CENSUS
+    evidence:
+      - "verification/wave60-c3-incidence-design/independent-results.json"
+      - "verification/wave60-c3-incidence-design/audit.md"
+      - "verification/wave60-c3-incidence-design/package-manifest.sha256"
+    limitations: "The SAT and local-search records are UNKNOWN. No simultaneous binary incidence matrix, compatible A_Y, endpoint graph, or endpoint exclusion is supplied."
+
+  - id: C-WAVE61-C3-FINITE-FIELD-001
+    statement: "All 1,140 conditional kappa=3 targets survive the verified within-component, full 630-pair, pattern-parity, quadratic/Witt, and stated odd-prime finite-field screens."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_FINITE_FIELD_RELAXATIONS
+    evidence:
+      - "verification/wave61-c3-finite-field/independent-results.json"
+      - "verification/wave61-c3-finite-field/audit.md"
+      - "verification/wave61-c3-finite-field/package-manifest.sha256"
+    limitations: "The verifier corrects the cubic wording: only the displayed margin identity and scalar totals were tested. No nonnegative integral T tensor, binary B, compatible A_Y, or endpoint result follows."
+
+  - id: C-WAVE62-ROOTED-SDP-001
+    statement: "At the prism-free endpoint, the exact one-root signed-edge invariant projector SDP and the declared nontrivial degree-24 Schur family are feasible for every y=0,...,42; 23,388 scalar blocks contain no negative value."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ONE_ROOT_INVARIANT_SDP
+    evidence:
+      - "verification/wave62-terwilliger-sdp/exact-verifier-result.json"
+      - "verification/wave62-terwilliger-sdp/verification-report.md"
+      - "verification/wave62-terwilliger-sdp/package-manifest.sha256"
+    limitations: "The implementation checks 1,949 nontrivial matrices after omitting one tautology; including it leaves the null result unchanged. Averaged feasibility is not a residual graph or endpoint certificate."
+
+  - id: C-WAVE63-C3-RATIONAL-CONE-001
+    statement: "Each lane in the fixed 74-triple stress subset has an exact nonnegative rational witness satisfying all 630 pair equations, total weight 60, and coefficient bounds x_s<=1."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_KAPPA3_74_LANE_RATIONAL_PAIR_CONE
+    evidence:
+      - "verification/wave63-c3-integer-cone/independent-results.json"
+      - "verification/wave63-c3-integer-cone/verification-report.md"
+      - "verification/wave63-c3-integer-cone/package-manifest.sha256"
+    limitations: "Only 74 of 1,140 triples are covered. Rational coefficients are not zero-one incidence designs; the bounded binary MILP record is UNKNOWN."
+
+  - id: C-WAVE64-ROOTED-TRANSITION-DESIGN-001
+    statement: "At the conditional prism-free endpoint, the 84 rooted residual labels form the edges of K14-7K2; residual edges decompose into fourteen local transition matchings and 140 three-edge-matching blocks, with the verified finite censuses and exact residual-codegree closure formula recorded in Wave 64."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ROOTED_TRANSITION_DESIGN
+    evidence:
+      - "verification/wave64-rooted-transition-design/independent-result.json"
+      - "verification/wave64-rooted-transition-design/verification-report.md"
+      - "verification/wave64-rooted-transition-design/package-manifest.sha256"
+    limitations: "The explicit integer witness satisfies only the block master, and the stronger master has only a rational control. No integral transition/design, full residual graph, endpoint exclusion, or global prism-free certificate is supplied."
+
+  - id: C-WAVE65-HYPERGRAPH-ALGEBRA-001
+    statement: "For the conditional rooted endpoint hypergraph, D+5I=ZZ^T and R=Z^TZ-3I force lambda_min(R)>=-3, mult_R(-3)>=56, c4(R)=1260+c4(D), and 1260<=c4(R)<=2331; the stated scalar coupling and all 258 averaged PSD lanes are exactly feasible."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_ROOTED_HYPERGRAPH_ALGEBRA
+    evidence:
+      - "verification/wave65-rooted-hypergraph-algebra/independent-results.json"
+      - "verification/wave65-rooted-hypergraph-algebra/audit.md"
+      - "verification/wave65-rooted-hypergraph-algebra/package-manifest.sha256"
+    limitations: "The exact local control fails target moments in degrees four through six and is not a rooted or target object. Entrywise noncommutative placement of Z and T relative to Q, endpoint existence, and novelty remain UNKNOWN."
+
+  - id: C-WAVE130-JACOBI-001
+    statement: "The rank-28, discriminant-16, level-seven index-10/index-70 Jacobi necessary-condition relaxation has an exact rational feasible point through Fourier cutoff 28; the point satisfies all 454 equalities and 1686 inequalities, with 506 tight inequalities."
+    label: VERIFIED
+    scope: FINITE_JACOBI_NECESSARY_CONDITION_RELAXATION
+    evidence:
+      - "attempts/wave130-cdd-exact-lp/result-cutoff28-warm.json"
+      - "attempts/wave130-cdd-exact-lp/MANIFEST.sha256"
+      - "verification/wave130-cdd-exact-lp/independent-results.json"
+      - "verification/wave130-cdd-exact-lp/package-manifest.sha256"
+    limitations: "Finite feasibility refutes the earlier floating infeasibility diagnostic only. It constructs no graph or lattice, realizes or excludes no rank, and proves no all-cutoff integral modular object."
+
+  - id: C-WAVE132-DISTINGUISHED-BIWEIGHT-001
+    statement: "For the conditional binary image/dual code pair, exact distinguished-row moments force A94=A96=A98=0, refuting the Wave 131 ordinary-enumerator point; a stronger exact rational low-degree split-enumerator point survives all four distinguished systems."
+    label: VERIFIED
+    scope: CONDITIONAL_RATIONAL_DISTINGUISHED_SPLIT_ENUMERATOR
+    evidence:
+      - "attempts/wave132-distinguished-biweight/exact-results.json"
+      - "attempts/wave132-distinguished-biweight/package-manifest.sha256"
+      - "verification/wave132-distinguished-biweight/verification.json"
+      - "verification/wave132-distinguished-biweight/MANIFEST.sha256"
+    limitations: "The surviving point is rational and low-degree. Integral feasibility, full genus-two feasibility, binary-code realization, graph realization, and Conway-99 remain UNKNOWN."
+
+  - id: C-WAVE133-HOLONOMY-001
+    statement: "At the conditional prism-free endpoint, rooted-triangle holonomy obeys product_T sign(h_T)=(-1)^(chi+E-F); both local derangement signs occur, and a connected endpoint-scale nonorientable abstract surface realizes the aggregate all-222 parity data."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_HOLONOMY_AND_ABSTRACT_SURFACE_CONTROL
+    evidence:
+      - "attempts/wave133-triangle-holonomy-topology/exact-results.json"
+      - "attempts/wave133-triangle-holonomy-topology/package-manifest.sha256"
+      - "verification/wave133-triangle-holonomy-topology/verification.json"
+      - "verification/wave133-triangle-holonomy-topology/MANIFEST.sha256"
+    limitations: "The surface is an abstract incidence control, not the N3 relation of a graph. Parity alone does not exclude the endpoint; point-level orientability or twist compatibility remains unproved."
+
+  - id: C-WAVE134-Z4-ENUMERATOR-001
+    statement: "Conditional on a hypothetical srg(99,14,1,2), its quaternary adjacency row code has type 4^54 2 and dual type 4^44 2; the corrected size-three forced tables contain 84 primal and 44 dual compositions representing 8557760 and 4126784 distinct words, and the symmetrized transform has 1119 primal, 1114 allowed dual, and 161 forbidden dual orbits."
+    label: VERIFIED
+    scope: CONDITIONAL_FULL_PROBLEM_QUATERNARY_ENUMERATOR_DERIVATION
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/exact-results.json"
+      - "attempts/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+      - "verification/wave134-z4-symmetrized-enumerator/independent-results.json"
+      - "verification/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+    limitations: "This verifies code types, forced lower bounds, transform coefficients, and structural zero rows only. It constructs no quaternary code or graph and supplies no rational or integral enumerator witness."
+
+  - id: C-WAVE134-CONTINUATION-001
+    statement: "Rational and integral feasibility of the corrected Wave 134 quaternary symmetrized-enumerator system are UNKNOWN_NOT_RUN."
+    label: UNKNOWN
+    scope: CORRECTED_QUATERNARY_ENUMERATOR_FEASIBILITY
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/search-status.json"
+      - "attempts/wave134-z4-symmetrized-enumerator/failed-routes.md"
+      - "verification/wave134-z4-symmetrized-enumerator/verification-report.md"
+    limitations: "Every provisional solver run used an undercounted preseal model and is invalidated. A timeout, floating solve error, or missing rational point is not an infeasibility certificate."
+
+  - id: C-WAVE133-CONTINUATION-001
+    statement: "Waves 130, 132, and 133 supply no graph, rank exclusion, prism-free endpoint exclusion, strict upper bound below n3=4158, or Conway-99 resolution."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-28-wave133-integration-audit.md"
+      - "verification/2026-07-28-wave133-orchestrator.md"
+    limitations: "The rigorous interval remains 708<=n3<=4158. Endpoint status, target existence or nonexistence, literature novelty, and priority remain UNKNOWN."
+
+  - id: C-WAVE141-BIVARIATE-001
+    statement: "The bivariate graph-code enumerator B[i,j]=#{x:wt(x)=i,wt(Ax)=j} has the verified D8 transform structure and satisfies sum_j(-1)^(j/2)B[6,j]=2024484+(512/3)n3 and B[6,56]>=n3."
+    label: VERIFIED
+    scope: CONDITIONAL_FULL_PROBLEM_BIVARIATE_BINARY_GRAPH_CODE
+    evidence:
+      - "attempts/wave141-bivariate-graph-code/exact-results.json"
+      - "attempts/wave141-bivariate-graph-code/package-manifest.sha256"
+      - "verification/wave141-bivariate-graph-code/verification-results.json"
+      - "verification/wave141-bivariate-graph-code/package-manifest.sha256"
+    limitations: "The exact identities give only n3<=6553737 by nonnegativity, weaker than 4158. The numerical row-generation record is non-evidentiary and no binary code or graph is constructed."
+
+  - id: C-WAVE143-BINARY-PROJECTION-001
+    statement: "Both Arf signs admit exact rational endpoint witnesses in the strengthened formal binary S6 projection, while the exact equality-lattice projection gives only n3 congruent to 0 modulo 3."
+    label: VERIFIED
+    scope: FORMAL_RATIONAL_BINARY_ENUMERATOR_AND_EQUALITY_LATTICE
+    evidence:
+      - "attempts/wave143-binary-s6-projection/exact-results.json"
+      - "attempts/wave143-binary-s6-projection/package-manifest.sha256"
+      - "verification/wave143-binary-s6-projection/verification-results.json"
+      - "verification/wave143-binary-s6-projection/package-manifest.sha256"
+    limitations: "The rational points assume formal image minimum 14 and dual minimum 15, whereas the target proves only image and kernel minimum 8. Integral nonnegative feasibility, code realization, graph realization, and any new target bound remain UNKNOWN."
+
+  - id: C-WAVE144-SIX-PROFILE-001
+    statement: "All 62 six-vertex classes have exact 64-cell outside-neighborhood supports, and an explicit 65-cell nonnegative integer aggregate satisfies the class marginals and Wave141 moments at n3=4158."
+    label: VERIFIED
+    scope: ENDPOINT_AGGREGATE_SIX_SET_OUTSIDE_PROFILES
+    evidence:
+      - "attempts/wave144-sixset-odd-profile/exact-results.json"
+      - "attempts/wave144-sixset-odd-profile/package-manifest.sha256"
+      - "verification/wave144-sixset-odd-profile-cleanroom/verification-results.json"
+      - "verification/wave144-sixset-odd-profile-cleanroom/package-manifest.sha256"
+    limitations: "The local profiles are not glued to overlapping six-subsets of one 99-vertex set. The witness is not a graph and does not improve n3<=4158."
+
+  - id: C-WAVE145-GF4-CORRECTION-001
+    statement: "Wave139's max aggregation undercounts five collided GF(4) states, whose corrected sums are 198, 8316, 149688, 55440, and 462; pure-Y zero rows 8, 10, and 12 are unsupported."
+    label: VERIFIED
+    scope: CORRECTED_ADDITIVE_GF4_LOWER_BOUNDS_AND_SHADOW_ROWS
+    evidence:
+      - "verification/wave139-gf4-lower-aggregation/verification-results.json"
+      - "verification/wave139-gf4-lower-aggregation/verification-report.md"
+      - "verification/wave139-gf4-lower-aggregation/package-manifest.sha256"
+    limitations: "The corrected pure-Y zero set is {2,4,6,94,96,98}. Corrected rational or integral feasibility was not solved and remains UNKNOWN."
+
+  - id: C-WAVE146-ROOTED-DECK-001
+    statement: "The complete one-root six-to-seven aggregate endpoint relaxation has an exact nonnegative rational witness at n3=4158 with 13973 variables, 8981 equalities, 110269 integer nonzeros, 2998 positive coordinates, and maximum denominator four."
+    label: VERIFIED
+    scope: ENDPOINT_ONE_ROOT_SIX_TO_SEVEN_RATIONAL_RELAXATION
+    evidence:
+      - "attempts/wave146-six-seven-coupling/exact-results.json"
+      - "attempts/wave146-six-seven-coupling/package-manifest.sha256"
+      - "verification/wave146-six-seven-coupling/verification-results.json"
+      - "verification/wave146-six-seven-coupling/package-manifest.sha256"
+    limitations: "The variables are aggregate and need not decompose over individual six-sets; two rooted seven-set views are not coupled on their eight-vertex union. No graph, endpoint exclusion, or strict upper bound follows."
+
+  - id: C-WAVE147-PAIR-ROOT-001
+    statement: "The two-root order-five flag construction has exact 66-by-66 ordered-edge and 87-by-87 ordered-nonedge moment blocks, complete class streams through 916 order-eight classes, 2414 class coefficient matrices, and explicit entries with n3 coefficient 4 and prism coefficient 0."
+    label: VERIFIED
+    scope: FINITE_TWO_ROOT_ORDER_EIGHT_FLAG_COEFFICIENT_MODEL
+    evidence:
+      - "attempts/wave147-alternative-lane/exact-results.json"
+      - "attempts/wave147-alternative-lane/package-manifest.sha256"
+      - "verification/wave147-pair-root-order8/verification-results.json"
+      - "verification/wave147-pair-root-order8/package-manifest.sha256"
+    limitations: "No endpoint SDP, rational dual certificate, strict upper bound, endpoint exclusion, graph, or target resolution is supplied. Stronger marked order-eight extension rows remain to be built."
 
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."

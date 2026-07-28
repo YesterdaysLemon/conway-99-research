@@ -165,3 +165,702 @@ nonhit improves the general interval `708<=n3<=4158`.
 All solver activity, partial pools, local controls, and arithmetic survivors
 remain nonterminal. The endpoint, upper-bound improvement, Conway-99, and
 novelty are `UNKNOWN`.
+
+## Wave 39: edge-local rank, proof shard, and compatibility restrictions
+
+- `wave39-edge-local-rank/` derives the eleven edge-local cycle normal forms
+  and the characteristic-seven rank formula
+  `25-2*(number of even parts)`. Independent verification promotes the
+  universal necessity `rank_F7(M)>=19`.
+- `wave39-proof-solver/` exports the `branch15 AND x187=1` OPB shard and
+  retains raw, elaborated, and kernel pseudo-Boolean proofs. Independent
+  VeriPB replay accepts the raw and kernel proofs. The other polarity shard
+  is open, so branch 15 and endpoint proof coverage remain unresolved.
+- `wave39-cross-base-rank/` records conditional projection collisions and
+  explicit support-four/six dependencies, together with controls refuting a
+  universal local rank-twelve shortcut.
+- `wave39-simultaneous-bh/` records conditional centered-code and compatible
+  `H` overlap restrictions. Its Delsarte transforms are nonnegative and it
+  supplies no completion or exclusion.
+
+The Wave 39 packages do not construct a graph, force a prism, close a complete
+endpoint case, improve `n3<=4158`, or establish novelty.
+
+## Wave 40: third-fibre rank completion and global edge coupling
+
+- `wave40-rank19-equality/` records the discovery route from the Wave 39
+  rank-19 equality type through third-fibre quotient syndromes. It proves the
+  conditional stepping stone `n3=4158 => rank_F7(M)>=22`, retains the exact
+  `0,4,8,12` matching boundary, and is independently verified.
+- `wave40-exact-coupling-model/` extends the third-fibre argument to all
+  eleven edge partitions. Its complete subspace certificate and matching
+  census give the candidate universal theorem `rank_F7(M)>=25`; a separate
+  clean-room implementation promotes that theorem to `VERIFIED`. The
+  full-39-block scout is explicitly bounded and non-evidentiary.
+- `wave40-edge-type-coupling/` glues the four prism-free edge types into a
+  closed incidence complex, exhausts the 4,050 normalized all-`222`
+  one-triangle quotients, proves the exact cubic-core Laplacian rank identity,
+  and exhausts all `2^18` lifts of one boundary quotient. The resulting
+  rank-33 controls survive and do not exclude the endpoint.
+- `wave40-rank25-literature/` freezes a bounded primary-source search for the
+  exact rank-25 theorem and equivalent formulations. Search nonhits do not
+  establish novelty or priority.
+
+Wave 40 raises the verified universal characteristic-seven rank floor from
+19 to 25 and reduces conditional endpoint arithmetic from 429 to 330 pairs.
+It does not construct a graph, force a prism, close an endpoint case, or
+improve the general upper bound `n3<=4158`.
+
+## Wave 43: conditional endpoint rank 28 and alternative-space controls
+
+- `wave43-rank28-motif/` and `wave43-type33-rank2/` exhaust the two local
+  rank-27 mechanisms for all four endpoint edge types. A clean-room verifier
+  promotes `n3=4158 => rank_F7(M)>=28`.
+- `wave43-all-rank33-lifts/` extends the exact component and six-set reduction
+  to all 264 canonical rank-33 lifts. Every lift survives.
+- `wave43-branch15-two-triangle/` adds 40,800 exact width-four prism cuts to
+  branch 15; 34,340 remain active and no probe closes the branch.
+- `wave43-joint-completion/` records exact compact CNF and sparse MILP
+  formulations for the canonical 45,032-candidate three-way matching.
+  Both retained solver runs are `UNKNOWN`.
+- `wave43-seven-deck-endpoint/` gives an independently verified exact
+  99-support solution of every unrooted count equation through order seven.
+
+The conditional rank theorem removes 16 endpoint arithmetic pairs but does
+not exclude `n3=4158`. Count feasibility is a positive control for the
+relaxation only, not graph evidence.
+
+## Wave 44: aggregate rooted order-seven control
+
+- `wave44-rooted-flags/` adds every vertex-root, ordered-edge-root, and
+  ordered-nonedge-root category equation to the order-seven deck.
+- The 170-row system is strictly stronger than the unrooted 81-row system
+  but has an exact nonnegative 91-support integer witness at `h11=16632`.
+- A floating-point HiGHS `infeasible` report is retained as a refuted
+  numerical false negative. Only the exact witness and direct substitution
+  are evidentiary.
+
+This closes the aggregate rooted-count lane as a null result. A useful next
+step must impose overlapping-subset compatibility, a PSD flag moment matrix,
+order-eight variables, or the full simultaneous `B/H` equations.
+
+## Wave 45: positive-semidefinite rooted-flag checkpoint
+
+- `wave45-flag-moment/checkpoint-v1-*` is the immutable discovery checkpoint
+  accepted by the clean-room verifier. It contains the exact rooted-moment
+  coefficient stream, the two stored-witness attacks, and 17 cuts against 15
+  successive exact count witnesses.
+- `wave45-flag-moment/README-v1.md`, `replay-v1.py`, and
+  `package-manifest-v1.sha256` provide the versioned discovery replay and
+  nine-entry package boundary.
+- Mutable cutting-plane files and later solver runs in the same directory are
+  work in progress and are not part of checkpoint-v1 evidence.
+
+The checkpoint refutes the stored Wave 43 and Wave 44 count vectors, not the
+endpoint. Its next solver call timed out, so the full PSD-constrained region
+remains `UNKNOWN`.
+
+## Waves 46--49: code, polynomial, and higher rooted moments
+
+- `wave46-f7-code/` records the ordinary characteristic-seven row-code
+  consequences and generic positive controls in every rank 28 through 44.
+  Independent verification confirms a null obstruction: the distinguished
+  projector-row geometry is not captured by the ordinary code constraints.
+- `wave47-three-root-moment/` constructs eight exact three-root/two-free Gram
+  families. A clean-room verifier reproduces 2,664 exact negative directions
+  and 2,657 distinct cuts against the 17 stored witnesses.
+- `wave47-branch15-polynomial/` computes the complete stated degree-two
+  squarefree Macaulay closure in seven branch-15 windows. Independent replay
+  verifies 13 local XOR relations, zero contradictions, zero new unary
+  assignments, and the degree-four representation barrier for all 34,340
+  active Wave 43 cuts.
+- `wave48-conic-moment/` combines the 170 count equations with eleven moment
+  families. A clean-room verifier confirms exact affine rank 93, nullity 116,
+  and all universal kernels; floating Clarabel/SCS points remain
+  non-evidentiary and no exact feasible point or infeasibility witness is
+  retained.
+- `wave49-five-root-moment/` constructs all 21 canonical five-root/one-free
+  Gram families without a target-graph automorphism. Independent comparison
+  verifies all 2,520 root relabellings, 42 known-graph controls, and 357 exact
+  stored-witness refutations.
+
+These lanes strengthen the finite relaxations and preserve useful failure
+information. None solves the complete PSD-constrained count region, closes an
+endpoint SAT branch, constructs a graph, or proves `n3<4158`.
+
+## Wave 51: alternative algebra and aggregate controls
+
+- `wave51-global-triple-tensor/` gives an explicit nonnegative symmetric
+  triple-count tensor for the five triangle-pair relations. Independent replay
+  verifies the aggregate control and refutes its interpretation as an
+  association scheme.
+- `wave51-seidel-smith/` derives a candidate conditional Smith normal form
+  and a symmetric-square rank bound. Its independent verifier corrects the
+  discovery spectrum and verifies the unaffected scoped theorem.
+
+Both discovery packages are necessary-condition or relaxation work. Neither
+constructs a graph, supplies pair-specific quadruple compatibility, excludes
+the endpoint, or improves `n3<=4158`.
+
+## Wave 52: one-root coherent closure
+
+- `wave52-coherent-closure/` derives the forced 19-triangle `3K6` root and
+  `B2/C4/D0` cross-sector caps, then applies exact 2-WL to both the partial
+  relation structure and a completion-free 163-node incidence lift.
+- Explicit integral cap completions survive. Sixty-four canonical
+  two-factor-profile diagnostics produce 39 different closure fingerprints,
+  proving that completed colors depend on arbitrary local choices.
+
+This is a discovery null result. Independent verification accepts the finite
+arithmetic and color refinement only; no graph or improved bound follows.
+
+## Waves 53--55: proof cover, two-root lift, cut correction, and bounded search
+
+- `wave53-proof-cover/` freezes the exact normalized 33-case endpoint cover
+  and exports `branch15 AND x187=0`. Its bounded proof-tool transcripts end
+  with `UNKNOWN` or `VERIFIED NO CONCLUSION`; none is a terminal proof.
+- `wave53-multi-root-wl/` merges two rooted cap systems for relations
+  `K,B,C,D`. It derives one forced-true shared candidate in relation `B` and
+  exact 2-WL/folklore-3-WL closures. Positive local controls survive in every
+  relation.
+- `wave53-exact-cut-loop/` records four exact rational witnesses and three
+  retained Wave 49 cuts. Its headline that all 128 tested matrices are
+  indefinite is refuted by independent replay: eight Wave 45 matrices are
+  positive semidefinite, due to a doubled-off-diagonal source defect.
+- `wave54-centered-enumerator/` constructs an exact seven-weight formal
+  ordinary enumerator satisfying the frozen integral MacWilliams system.
+  It is not a realized ternary code.
+- `wave55-branch15-remainder-search/` retains the exact solver transcript and
+  metadata from a 120-second run on the open branch-15 shard. Exact returns
+  `UNKNOWN`; the ignored 488 MB nonterminal proof prefix is not evidence.
+
+The corrected fixed 177-cut rational relaxation and formal enumerator remain
+feasible, while endpoint proof coverage remains `0/33`. No graph, endpoint
+exclusion, strict upper bound below 4158, or novelty claim follows.
+
+## Waves 56--59: alternative closure, incidence, and spectral spaces
+
+- `wave56-percolation-closure/` derives the nonedge closure dichotomy,
+  `n3+3P=4158`, `R=18H`, `6H<=P`, and the exact 23-mask/35-profile endpoint
+  multicover. Independent verification accepts the finite conditional scope.
+- `wave57-star-complement/` derives correct projector and star-set formulas
+  but overstates the live parameter space. Its verifier retains a
+  `REFUTED_IN_PART` verdict: prior Wave 36 leaves three live rows and cubic
+  wedge counting sharpens the four-cycle ceiling from 89 to 27.
+- `wave58-cross-incidence-rank/` combines the corrected rank transfer with
+  exact normalized `m=4` and `m=6` component censuses. Independent replay
+  verifies the three-row synthesis and all exact-set-versus-bound wording.
+- `wave59-incidence-spectral-excess/` recasts the endpoint as a
+  `(7,3)`-biregular point--triangle incidence graph and an 18-regular
+  triangle graph. It derives exact spectra, distance layers, predistance
+  defects, pair-neighborhood Gram rank, and short Ihara cycle counts.
+  Independent verification accepts every scoped finite claim.
+
+None of these packages constructs or excludes the simultaneous `B,A_Y`
+system. Non-distance-regularity is not nonexistence. The endpoint, strict
+upper-bound improvement, Conway-99, and novelty remain `UNKNOWN`.
+
+## Waves 60--63: integer information beyond scalar incidence geometry
+
+- `wave60-c3-incidence-design/` classifies the 18 fibre-preserving
+  twelve-vertex component types, all 1,140 triples, 275 safe coordinate
+  orbits, and their allowed six-set columns. Its bounded searches are
+  `UNKNOWN`.
+- `wave61-c3-finite-field/` tests the complete triple set in several finite
+  fields and pair-coordinate parity spaces. No triple is eliminated. The
+  cubic section is limited to its displayed identities and scalar totals.
+- `wave62-terwilliger-sdp/` diagonalizes the one-root signed-edge invariant
+  projector SDP and a degree-24 Schur family exactly. All endpoint parameters
+  survive.
+- `wave63-c3-integer-cone/` stores exact rational pair-cone witnesses for a
+  fixed 74-lane stress subset. Every coefficient is at most one, but none of
+  the witnesses is a zero-one design.
+
+Independent verification accepts each finite scope, with the Wave 61 wording
+correction and Wave 62 tautology-count clarification. Integer and higher-order
+compatibility, a compatible `A_Y`, endpoint exclusion, and Conway-99 remain
+`UNKNOWN`.
+
+## Waves 64--65: rooted transition design and hypergraph algebra
+
+- `wave64-rooted-transition-design/` identifies the 84 residual labels with
+  the edges of `K14-7K2`, enumerates 35,560 matching blocks and 840 allowed
+  transitions, stores a 140-block relaxation witness, and gives an exact
+  rational point of the stronger linear master. Its complete binary
+  codegree closure is specified but unsolved.
+- `wave65-rooted-hypergraph-algebra/` studies `B=T+D` through the incidence
+  factorization `D+5I=ZZ^T`, the 140-vertex block graph, trace and four-cycle
+  identities, scalar spectral coupling, averaged PSD lanes, and an exact
+  local positive control that fails the target moments.
+
+Independent verification accepts both finite scopes. Neither package supplies
+an integral strong witness, endpoint exclusion, graph, or strict upper bound
+below 4158.
+
+## Wave 66: spherical-code and difference-lattice shift
+
+- `wave66-spherical-code-shift/` lifts the negative-eigenspace embedding to
+  99 equiangular lines of common angle `1/7` in `R^45`, centers it to an even
+  rank-44 lattice `M`, and derives exact dual-denominator, determinant,
+  discriminant-group, dual-minimum, and Milgram restrictions.
+- The independent verifier records three discovery corrections: the imported
+  universal lower rank was 27 rather than the endpoint-only 28; one listed
+  weight-eight fact is unused; and only eight, not all 17, imported rank rows
+  survive.
+- With those corrections, the universal conclusion is
+  `rank_F7(2A-J+I) in {28,30,32,34,36,38,40,42}`.
+
+No lattice realization, graph, norm-14 exclusion, endpoint contradiction, or
+literature-priority result is supplied. Conway-99 remains `UNKNOWN`.
+
+## Waves 69 and 72: order-11 symmetry and cyclic-cover shift
+
+- `wave72-order11-automorphism/` proves that every exact order-11
+  automorphism of a hypothetical target is fixed-point-free. The fixed set
+  has size divisible by 11, induced degrees in `{3,14}`, and exact
+  common-neighbor closure; the only positive cases `11,22,99` reduce to
+  contradictions or the identity.
+- `wave69-cyclic-cover-shift/` derives the 9-by-9 quotient equation
+  `Q^2+Q=12I+22J`, all seven row shapes, and all three diagonal cases. Its
+  label-complete search visits 1,108,533 nodes and finds zero quotients; an
+  independent canonical search visits 8,980 nodes and also finds zero.
+- The combination excludes order-11 automorphisms and vertex-transitive
+  realizations. An independent abelian-character argument excludes Cayley
+  realizations on both groups of order 99.
+
+Both discoveries have clean-room verification. The result is restricted:
+it does not exclude asymmetric targets and does not improve
+`708<=n3<=4158`. Conway-99 remains `UNKNOWN`.
+
+## Waves 71, 74, and 78: level-seven theta and short-vector packing
+
+- `wave71-modular-theta-extension/` removes the order-nine discriminant
+  factor by an index-three even overlattice, forms the exact level-seven
+  scaled dual `K`, and applies Skoruppa's mod-seven theta reduction.
+  For `q=16`, equivalently `rank_F7(2A-J+I)=28`, it forces
+  `N14+N16+N18=2 mod 14` for integer `-4` eigenvectors.
+- The short vectors reduce to signed unit supports: complementary-Fano
+  `7+7` at norm 14, 4-regular bipartite `8+8` at norm 16, and `9+9`
+  structures at norm 18. Independent verification corrects Wave 71 by
+  excluding the norm-18 `h=2` branch.
+- `wave74-short-vector-closure/` records the exact outside-incidence
+  contradiction and the remaining aggregate histograms.
+- `wave78-short-vector-packing/` proves `d<=2` at norm 16 and `d<=3` at
+  norm 18, reducing histogram counts from `4/20/6` to `1/7/4`.
+
+All three packages have clean-room verification. Surviving histograms are
+necessary conditions, not labelled designs or graphs. Conway-99 and novelty
+remain `UNKNOWN`.
+
+## Waves 80--82: coding, labelled design, and integral-orthogonal shifts
+
+- `wave80-f7-overlattice-code/` turns the marked lattice into an injective
+  `[99,44]_7` evaluation code. It derives the exact hull
+  `row_F7(2A-J+I)`, dual distance at least six, orthogonal-array strength
+  five, and the non-split rank-28 quotient `O^-(16,7)`.
+- `wave81-norm16-labeled-design/` enumerates 1,800 anchored `8+8`
+  4-regular bipartite supports, five support orbits, and 4,985 exact
+  deficiency-coupling multisets. Necessary flow and spectrum tests retain
+  every support orbit.
+- `wave82-seidel-orthogonal/` gives the exact equivalent matrix problem
+  `T=18A-2J+9I`, with `T1=63*1`, `T^2=3969I`, alphabet
+  `{7,16,-2}`, and a complete conditional Smith form for every surviving
+  characteristic-seven rank.
+
+Independent verification accepts each scoped theorem. None of the finite
+orthogonal spaces, labelled supports, Smith profiles, or local code moments
+constructs or excludes a target graph.
+
+## Wave 84: complete-domain SAT portfolio
+
+- `wave84-rooted-sat-portfolio/` records three CaDiCaL configurations and
+  one independently built Kissat configuration against the byte-matched
+  Wave 34 rooted CNF.
+- Every 900-second run stopped without a model or an UNSAT proof. The
+  package is retained as `UNKNOWN` chronology, not promoted evidence.
+
+## Wave 86: full level-seven modular-form squeeze
+
+- `wave86-level7-exact/` works in the complete 15-dimensional space
+  `M_22(Gamma0(7))`, uses the exact Fricke exchange and Sturm bound 14,
+  and derives, in the `q=16` or rank-28 row,
+  `N14+N16+N18>=5868`.
+- An exact formal scalar pair attains 5,868 through the Sturm range and
+  stays integral, even, and nonnegative through degree 50. It is not a
+  lattice, marked frame, or graph.
+
+The independent verifier confirms the inequality and records a source
+normalization correction: the printed cited equation omits a ratio, while
+the factors actually used follow from the source's preceding definitions
+and transformation equation. Rank 28 and Conway-99 remain `UNKNOWN`.
+
+## Waves 90, 94, 99, and 100: rooted norm-14 shell bounds
+
+- `wave90-short-vector-count-upper/` maps every oriented norm-14 vector to
+  one of 560 rooted complementary-Fano seeds. At the prism-free endpoint,
+  transition incidence gives `N14<=5544`.
+- `wave94-general-n3-norm14-bound/` counts rooted prisms and extends the
+  first-moment argument to every compatible row:
+  `N14<=floor((55440-4*n3)/7)`.
+- `wave99-transition-pair-moment/` adds an exact second moment and sharpens
+  the endpoint to `N14<=4950`. In the additional rank-28 row this combines
+  with Wave 86 to force `407*N16+43*N18>=2165002`.
+- `wave100-general-pair-moment/` proves the rank-free general strengthening
+  `N14<=2*floor((55440-5*n3)/14)`.
+
+All four shell bounds have separate clean-room verification. They bound
+`N14`, not `n3`; no `N16` or `N18` upper bound, endpoint exclusion, or graph
+resolution follows.
+
+## Wave 97: characteristic-seven exterior and matroid shift
+
+- `wave97-f7-exterior-matroid/` derives `R*R*R=F7^99`, `C*C=F7^99`, and a
+  projective self-orthogonal second-compound `[4851,378]_7` code.
+- At rank 28 its exact Smith form is
+  `1^378,7^1204,49^1687,343^1204,2401^280,24010^98`.
+- The finite orthogonal orbit reduction shows that norm-16 and norm-18
+  short classes occupy the same square-anisotropic projective orbit, so
+  abstract orthogonal geometry alone cannot distinguish them.
+
+Independent verification accepts the mathematics with a provenance
+correction: `R*R=1_perp` and the quadratic circuit were already immediate
+consequences of Wave 51. No obstruction or graph follows.
+
+## Wave 98: scalar-theta long-prefix probe
+
+- `wave98-scalar-positivity-probe/` independently reconstructs the Wave 86
+  formal scalar pair and finds no negative, odd, or nonintegral coefficient
+  through degree 1,000.
+
+This is an `UNKNOWN` finite null result. It is not an all-orders theorem and
+does not realize a lattice, frame, or graph.
+
+## Wave 101: all-rank level-seven scalar theta LP
+
+- `wave101-all-rank-level7-lp/` repeats the complete
+  `M_22(Gamma0(7))` calculation for all seven surviving rank rows. Exact
+  rational primal/dual certificates give parity-rounded lower bounds
+  `182,1584,11400,80110,561084,189901474,1831606638` on the total shell
+  through norm 28.
+- Every row nevertheless has an exact scalar control with
+  `N14=N16=N18=0`. The graph-specific signed-unit dictionary therefore
+  cannot yet be applied to the forced mass.
+
+Independent verification accepts the scoped bounds and sharpens one generic
+mod-two upper estimate by a factor of eight. The sharpened estimate still
+excludes no rank row.
+
+## Wave 102: rooted prism-incidence code
+
+- `wave102-prism-incidence-code/` factors the rooted-prism parity vector
+  through the binary triangle-incidence code and retains its exact odd-root
+  defect:
+  `7*N14<=55440-5*n3-O/2`.
+- It proves the two-prism overlap cap and small-prism parity controls.
+  Independent verification strengthens the latter to `P=3 => O>=4`.
+- The 12-vertex `C4 box K3` motif contains four prisms with zero rooted
+  parity and passes the local cap and interlacing tests.
+
+The motif is not a 99-vertex construction. The code constraints do not force
+`O>0` in general, so no strict upper bound on `n3` follows.
+
+## Wave 105: `C4 box K3` conditional extension
+
+- `wave105-c4boxk3-extension/` expands the SRG equation into exact
+  motif/outside blocks. Conditional on the motif, the 87 outside vertices
+  have types `3,48,36`, span 549 outside edges, and leave 34 separately
+  graphical aggregate degree rows.
+- A checked 549-edge graph satisfies all degrees and all 1,044 linear
+  motif-incidence entries. It is a linear witness only.
+- A complete 321,726-variable nonlinear encoding covers all four
+  three-vertex `X0` graph branches. Four 45-second runs remain
+  `UNKNOWN_TIMEOUT`.
+
+Independent verification supplies the triangle-free support argument,
+checks encoding completeness, and confirms that the linear witness fails
+2,525 nonlinear pair equations. Full extension remains `UNKNOWN`.
+
+## Waves 96 and 112: four-cycle shell incidence and norm 20
+
+- `wave112-c4-short-vector-incidence/` proves that the target has exactly
+  2,079 induced four-cycles and that every live norm-14, norm-16, and
+  norm-18 support contains at least `21,20,18,26` alternating cycles in the
+  four respective lanes.
+- The rank-28 shell lower bound then forces at least 52 oriented extensions,
+  or 26 antipodal support pairs, through some cycle. A universal cap of 25
+  pairs would exclude rank 28; the cap is not proved.
+- `wave96-norm16-norm18-upper/` verifies the sharper weighted implication
+  and shows why a projector-plus-distance proof cannot suffice: its
+  fixed-cycle relaxation contains an exact 80-point cross-polytope.
+- The same package extends the graph dictionary to norm 20. Every integer
+  norm-20 `-4` eigenvector has ten `+1` and ten `-1` coordinates, at most
+  three same-sign edges, and at least 15 alternating four-cycles. A
+  universal cap of 24 pairs through norm 20 would exclude rank 30.
+
+Both caps remain `UNKNOWN`. No general `N16` or `N18` upper bound, rank
+exclusion, or graph resolution follows.
+
+## Waves 107, 109, and 110: motif spectrum, local lattice, and safe SAT symmetry
+
+- `wave107-c4boxk3-spectrum/` derives the exact characteristic polynomial
+  of the conditional 87-vertex outside graph. It corrects the tentative
+  quadratic factor to `x^2-9x-46` and forces 549 edges, 167 triangles,
+  1,356 four-cycles, connectedness, and nullity four.
+- `wave109-c4boxk3-local-projector/` constructs the primitive rank-74
+  incidence-kernel lattice. Modulo seven it is `O^-(74,7)`, and the local
+  projector transfers the eight global ranks to `16,18,...,30`; all remain
+  feasible.
+- `wave110-c4boxk3-symmetry-sat/` proves simultaneous external row-lex
+  symmetry breaking by one shared orbit potential, without assuming a
+  target automorphism. The four invariant `e(X0)=0,1,2,3` branches cover the
+  complete encoding.
+
+All four fresh 45-second Wave 110 runs return `UNKNOWN_TIMEOUT`. No spectrum,
+local rank, or bounded solver result extends or excludes the motif.
+
+## Wave 116: corrected aggregate C4 Jacobi route
+
+- `wave116-c4-jacobi-theta/` verifies the common four-coordinate projector
+  Gram matrix for every induced cycle.
+- It rejects the proposed small scalar index: the corresponding marking is
+  outside the required dual lattice.
+- The valid markings give paired indices `G_K/2` and `G_L/2`, with
+  `G_K=7G_L` and `det(G_K)=1,023,942,465`.
+- The selected Fourier coefficient counts antipodal short-vector/cycle
+  incidences exactly. Rank 28 forces at least 52,812, while a cap-25 upper
+  certificate would be 51,975.
+- A degree-32 harmonic interpolation is exact on the three short shells,
+  but its coefficients are signed.
+
+No Jacobi basis, Sturm bound, positivity cone, or dual upper certificate was
+obtained. The route is a corrected reduction, not a rank exclusion.
+
+## Wave 118: subjective strategy estimate
+
+- `wave118-strategy-estimate/` records conservative, central, and liberal
+  six-month judgments for the C4-incidence program.
+- Its central estimates are 55% for a useful verified theorem, 20% for
+  excluding one hard rank row with a C4 variant, and 1% for a complete
+  Conway-99 resolution by this strategy alone.
+- The report recommends aggregate Jacobi/harmonic-theta bounds over the
+  pointwise cap route.
+
+These numbers are subjective research judgments, not mathematical evidence,
+calibrated forecasts, or deadlines.
+
+## Waves 123 and 127--131: projector, Jacobi, discriminant, and binary shifts
+
+- `wave123-fixedc4-threepoint/` applies the actual `-4` eigenspace
+  projector to the Wave 120 coordinate supports.  The displayed 40-record
+  family has 46 leverage violations.  An alternate 26-record subset passes
+  diagonal leverage and 2,340 exact rooted feature-Gram tests but fails 352
+  graph-valued two-by-two completion rows.  Its bounded subset search is
+  explicitly nonexhaustive.
+- `wave127-independent-jacobi-certificate/` and
+  `wave129-jacobi-stress/` independently reconstruct the 239-dimensional
+  index-10/index-70 level-seven Jacobi relaxation.  Exact rational feasible
+  points replay at cutoffs `10,12,14,16,18,20`.  At that checkpoint cutoff
+  28 was `UNKNOWN`; Wave 130 below subsequently supplied an exact rational
+  feasible point.
+- `wave128-alternative-spaces/` splits the conditional Wave 109
+  incidence-kernel lattice into finite-primary rational eigenlattices.  It
+  fixes their non-seven discriminant groups, Gauss phases, rootlessness,
+  and nonsplit `O^-(k,7)` seven-primary type.  Every imported row survives.
+- `wave131-binary-lcd-enumerator/` derives the complete codeword counts
+  forced by vertex subsets of size at most three.  An exact rational
+  MacWilliams witness permits image/dual distances `14/15`; it is
+  nonintegral, and the bounded integral scout remains `UNKNOWN`.
+
+All four lanes have separate clean-room verification.  They are finite or
+conditional necessary-condition results, not a code, lattice, graph,
+rank exclusion, or Conway-99 resolution.
+
+## Waves 130 and 132--134: exact boundaries beyond the first alternatives
+
+- `wave130-cdd-exact-lp/` gives an exact rational cutoff-28 Jacobi point.
+  It replays all 454 original equalities and 1,686 inequalities with zero
+  failures and 506 tight rows.  This refutes the earlier numerical
+  cutoff-28 infeasibility diagnostic, not rank 28 or Conway-99.
+- `wave132-distinguished-biweight/` retains intersections with the 99
+  distinguished neighborhood and closed-neighborhood rows.  It forces
+  `A94=A96=A98=0` and refutes the Wave 131 rational witness, but a stronger
+  exact rational split-enumerator witness survives.  Integral and full
+  genus-two feasibility remain `UNKNOWN`.
+- `wave133-triangle-holonomy-topology/` derives
+  `product_T sign(h_T)=(-1)^(chi+E-F)`.  Both local signs survive, and an
+  endpoint-scale connected nonorientable surface control realizes the
+  aggregate parity data.  A future topological obstruction must constrain
+  orientability or the edge-twist class using additional point-level
+  equations.
+- `wave134-z4-symmetrized-enumerator/` lifts the full adjacency row code to
+  `Z/4Z`.  It derives the exact code types, torsion symmetry, sparse
+  symmetrized MacWilliams transform, 8,557,760 forced primal words and
+  4,126,784 forced dual words.  Independent verification twice vetoed
+  incomplete prepublication models; the corrected transform has 1,119
+  primal, 1,114 allowed dual, and 161 forbidden dual orbits.  Corrected
+  rational and integral feasibility are `UNKNOWN_NOT_RUN`.
+
+All four packages have independent clean-room verification.  They are
+finite-relaxation, conditional-enumerator, or abstract-control results, not a
+graph, lattice, realized code, rank exclusion, strict `n3` upper bound, or
+Conway-99 resolution.
+
+## Waves 135--142: alternative-space continuation
+
+- `wave135-z4-exact-face/` adds the independent primal torsion-shell equality
+  to the corrected quaternary face.  Exact row generation remains
+  `UNKNOWN_WALL`; no primal or Farkas certificate was produced.
+- `wave136-alternative-spaces/` derives the binary Arf/Gauss split and the
+  self-dual additive-`GF(4)` graph-state formulation.
+- `wave137-z4-arf-branches/` stores exact rational witnesses for both Arf
+  signs through signed Krawtchouk degree five and all approved shadow bounds.
+  The quaternary numerical branches remain non-evidentiary.
+- `wave139-gf4-n3-bound/` records the three-class invariant-space dimension
+  and an inconclusive numerical scout.  Its lower-bound aggregation and
+  pure-`Y` zero rows require the separate Wave 145 audit before use.
+- `wave140-arf-sign-lattice/` proves the two-adic determinant/Arf bridge and
+  supplies opposite-sign local controls with an explicit non-graph scope
+  wall.
+- `wave141-bivariate-graph-code/` derives the `D8` bivariate transform,
+  exact low input rows, and
+  `S6=2024484+(512/3)n3`.  Its floating row-generation scout is
+  `UNKNOWN_NUMERICAL`.
+- `wave142-interlace-isotropic/` derives exact local interlace and isotropic
+  rows.  Its sizes 86--91 top-band claim is rejected by the verifier; only
+  sizes 92--99 are target-forced.
+
+These attempts change the representation and expose new exact constraints,
+but none improves `n3<=4158`, constructs a code or graph, or resolves
+Conway-99.
+
+## Waves 143--146: projection and rooted overlap
+
+- `wave143-binary-s6-projection/` substitutes the exact `S6/n3` identity
+  into the binary enumerator and equality lattice.  Rational endpoint
+  witnesses survive both Arf signs.  The target does not justify the
+  stronger formal dual-distance-15 slice, and the equality projection gives
+  only `n3=0 mod 3`.
+- `wave144-sixset-odd-profile/` enumerates exact 64-cell outside-neighborhood
+  profiles for all 62 six-vertex classes.  A 65-cell nonnegative integer
+  aggregate survives at `n3=4158`, but it does not glue overlapping
+  six-sets.
+- `wave139-gf4-n3-bound/` is superseded in part by the Wave 145 audit.  Its
+  five collided lower bounds must be summed, not maximized, and its pure-`Y`
+  zero rows 8, 10, and 12 are vetoed.  Corrected feasibility is `UNKNOWN`.
+- `wave146-six-seven-coupling/` filters every outside pattern through exact
+  rooted seven-vertex admissibility and glues all rooted orbit totals to the
+  complete 208-class order-seven deck.  It removes 25 local weight cells and
+  refutes the selected Wave 144 witness, but a full exact rational endpoint
+  witness survives all 8,981 equations with denominator at most four.
+- `wave147-alternative-lane/` builds the two-root/order-eight flag space:
+  66 and 87 rooted flags, 916 admissible order-eight classes, 2,414 exact
+  coefficient matrices, and 208 deletion rows.  Its moment entries expose
+  `4*n3` with zero prism coefficient.  No endpoint SDP or dual certificate
+  is claimed.
+
+Wave 146 is the first exact overlap lift in this sequence.  Its surviving
+certificate shows that one outside root is still too coarse; two-root or
+order-eight compatibility is the next boundary, and Wave 147 supplies the
+finite coefficient model for that computation.
+
+## Waves 148--152: order-eight execution and alternative roots
+
+- `wave148-marked-order8/` adds 944 marked-vertex and 4,440 ordered-pair
+  identities between order-seven and order-eight class counts.  All 5,384
+  rows and 28,654 stored coefficients have an independent semantic replay.
+- `wave150-order8-sdp-scout/` combines Wave44, ordinary deletion, Wave148, and
+  both Wave147 centered pair-root blocks.  Its exact rational `n3=4158`
+  witness has order-7/8 supports `204/874`, denominators at most four, and
+  passes 10,310 nontrivial exact equations.  Both pair-root covariance blocks
+  are exactly zero.  This retires that finite relaxation as a standalone
+  endpoint-exclusion route.
+- `wave149-terwilliger-triple/` roots at a triangle and produces an explicit
+  zero-prism permutation system whose forced 36-by-36 Gram matrix has exact
+  spectrum `0^4,6^9,10^9,12^13,60^1` and rank 32.
+- `wave151-triangle-root-factor/` realizes the first two 12-row fibres as an
+  exact binary 24-by-60 factor.  The third fibre is not constructed; the
+  fixed-first-factor `UNSAT` status has no proof artifact and remains a
+  branch-scoped diagnostic.
+- `wave154-triangle-factor-portfolio/` constructs a second exact 24-by-60
+  factor outside all 384 conjugates of the first.  The complete joint model
+  has 69,270 allowed triples in 292 centralizer orbits, 612 rows, and
+  1,039,050 incidence nonzeros.  No full 36-by-60 factor or checkable
+  impossibility proof was found.
+- `wave152-four-root-order8/` uses four pointwise-labeled roots and an
+  unordered free pair.  Clean-room verification confirms exact negative
+  covariance directions for root masks 3 and 12, so the Wave150 vector is
+  not a graph-compatible moment sequence.  Four primitive cutting planes
+  still admit exact rational replacement vectors on the old zero-covariance
+  face.  The four-cut replacement adds an exact mask-13 violation in a
+  two-by-two principal minor; its sparse fifth cut also leaves an exact
+  rational control.  Wave156 verifies that eight directions and a ninth
+  simplified mask-12 inequality retain an exact rational control.  The next
+  equal-diagonal minor yields the sparse endpoint theorem
+  `N_Wagner <= 3*N_cube+9355`; it separates that control.  Its candidate
+  symbolic lift is
+  `4*N_Wagner <= 41580-n3+12*N_cube`.  Thirteen cuts admit an exact rational
+  control with support `204/887` and rank 887.
+- `wave159-four-root-cut-loop/` adds exact root-mask-3 and root-mask-12 cuts
+  to that control.  The resulting fifteen-cut relaxation still has an exact
+  nonnegative rational witness with support `204/887`, all 10,313 rows
+  passing, and modular rank 887.  Full four-root reevaluation again finds
+  exact negative directions at precisely masks 3 and 12.  Wave161 verifies
+  this finite-relaxation result independently.  It is a cutting-plane loop,
+  not endpoint infeasibility.
+- `wave162-four-root-facial-reduction/` tests whether the three active
+  Wave159 cuts expose a forced positive-semidefinite face.  Exact replay on
+  six fixed-slice witnesses shows that every active functional varies on the
+  common stored affine slice, while the newest negative directions are
+  independent of the active spans.  Thus no unconditional face follows from
+  the stored data.  A true next step requires a coupled exact conic-dual
+  exposing certificate, not more sampled rank-one cuts.
+- `wave153-alternative-compatibility/` tests the complete bounded rational
+  pair-correlation projection for all 275 safe coordinate orbits covering
+  all 1,140 triangle-component triples.  A clean-room verifier replays all
+  173,250 pair equations and 9,900 row margins exactly.  Every rational
+  projection survives, locating the remaining obstruction in binary
+  integrality, common higher-order coupling, or residual-graph compatibility.
+- `wave157-general-cube-wagner/` independently expands the sparse mask-12
+  covariance direction before endpoint substitution and derives
+  `41580-n3+12*N_cube-4*N_Wagner>=0`.  Its endpoint specialization exactly
+  matches the Wave156-verified primitive cut.  Wave158 independently verifies
+  the complete symbolic derivation.  The theorem does not by itself imply
+  `n3<4158`.
+- `wave165-general-cube-upper/` moves to fixed-four-cycle extension space.
+  Exact nine-or-ten boundary matchings and a marked-square/prism bijection
+  give `12*N_cube<=37422+3*P=41580-n3`, hence `N_cube<=3465` generally and
+  `N_cube<=3118` at the prism-free endpoint.  The proof assumes no graph
+  automorphism; it does not by itself improve `n3<=4158`.
+- `wave166-rooted-wagner-spaces/` derives exact fixed-square shell equations,
+  supplies a shell null model, counts 40 marked induced five-cycles at every
+  nonedge, and reduces endpoint exclusion to at most four failed Wagner marks
+  per nonedge.  That four-failure lemma is explicitly `UNPROVED`.  The package
+  also records the exact pair-root pseudowitness obstruction and the
+  root-3/root-12 or order-eleven continuation.
+- `wave167-nonedge-core-fringe/` corrects and sharpens that target.  At `P=0`
+  each nonedge has exactly 36 core and four fringe marks, all four fringe
+  marks fail, and completion is unique when it exists.  Hence
+  `F=166320-8*N_Wagner` and the extra defect is
+  `E=8*(18711-N_Wagner)`.  Endpoint exclusion needs only the global bound
+  `E<=8`; a checked abstract shell proves the current one-root equations
+  cannot establish the stronger pointwise equality.
+- `wave168-incidence-minor-energy/` moves to the partial linear geometry of
+  the 231 unique edge-triangles.  It translates `P=0` to block codegree at
+  most two and derives a Cauchy-Binet minor energy whose values on cube and
+  Wagner point sets differ by 15,360.  Bounding the other eight-point
+  configuration contributions remains an unexecuted strategy.
+- `wave169-failure-hypergraph/` proves completion uniqueness is already an
+  order-eight event, then gives a checked five-failure local gadget.  Thus a
+  pairwise incompatibility graph using the current clauses cannot prove
+  independence number at most four; the retained target is a five-way
+  failure hypergraph, overlapping-root closure, or lifted exact dual.
+- `wave170-block-profile-ternary-code/` derives the exact pointwise profile
+  `(32-p,144+3p,36-3p,p)`, recovers `n3+3P=4158` in block space, proves
+  block-intersection clique number seven, and obtains
+  `rank_F3(B*B^T)=55`.  The proposed star-complement/code classification is
+  not executed and no new numerical bound follows.
+
+Every promoted theorem or finite-feasibility statement above has a separate
+verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
+full four-root PSD feasibility problem, complete triangle-root binary factor,
+strict `n3<4158` bound, and Conway-99 remain `UNKNOWN`.

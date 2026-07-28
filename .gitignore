@@ -25,3 +25,6 @@ verification/n3-42-equality/14_3_4.scd
 # Keep small, intentionally committed fixtures despite broad artifact ignores.
 !verification/fixtures/**/*.cnf
 !verification/fixtures/**/*.lrat
+
+# Wave 48 verifier transcript is checksum-pinned by its public manifest.
+!verification/wave48-conic-moment/reconstruct.stdout.log
