@@ -1893,6 +1893,13 @@ The rigorous interval remains `708<=n3<=4158`.
   gcd reductions.  It verifies
   `41580-n3+12*N_cube-4*N_Wagner>=0` for every hypothetical target graph.
   The theorem alone allows the endpoint.
+- `wave161-four-root-cut-loop/` independently rebuilds the two fresh Wave159
+  cuts and replays the exact fifteen-cut pseudowitness: support `204/887`,
+  10,313 exact rows, 10,274 restricted rows, modular rank `887/887`, all
+  fifteen cuts nonnegative, and three active.  It independently recovers
+  strict negative four-root directions at masks 3 and 12.  This verifies
+  finite-relaxation feasibility and the recurring obstruction, not a graph
+  or endpoint feasibility.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

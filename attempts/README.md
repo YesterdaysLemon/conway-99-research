@@ -798,10 +798,22 @@ finite coefficient model for that computation.
   equal-diagonal minor yields the sparse endpoint theorem
   `N_Wagner <= 3*N_cube+9355`; it separates that control.  Its candidate
   symbolic lift is
-  `4*N_Wagner <= 41580-n3+12*N_cube`.  Thirteen cuts still admit a newly
-  reconstructed exact rational control with support `204/887` and rank 887,
-  pending a later verifier.  This is a live exact cut loop, not endpoint
-  infeasibility.
+  `4*N_Wagner <= 41580-n3+12*N_cube`.  Thirteen cuts admit an exact rational
+  control with support `204/887` and rank 887.
+- `wave159-four-root-cut-loop/` adds exact root-mask-3 and root-mask-12 cuts
+  to that control.  The resulting fifteen-cut relaxation still has an exact
+  nonnegative rational witness with support `204/887`, all 10,313 rows
+  passing, and modular rank 887.  Full four-root reevaluation again finds
+  exact negative directions at precisely masks 3 and 12.  Wave161 verifies
+  this finite-relaxation result independently.  It is a cutting-plane loop,
+  not endpoint infeasibility.
+- `wave162-four-root-facial-reduction/` tests whether the three active
+  Wave159 cuts expose a forced positive-semidefinite face.  Exact replay on
+  six fixed-slice witnesses shows that every active functional varies on the
+  common stored affine slice, while the newest negative directions are
+  independent of the active spans.  Thus no unconditional face follows from
+  the stored data.  A true next step requires a coupled exact conic-dual
+  exposing certificate, not more sampled rank-one cuts.
 - `wave153-alternative-compatibility/` tests the complete bounded rational
   pair-correlation projection for all 275 safe coordinate orbits covering
   all 1,140 triangle-component triples.  A clean-room verifier replays all
@@ -815,6 +827,7 @@ finite coefficient model for that computation.
   the complete symbolic derivation.  The theorem does not by itself imply
   `n3<4158`.
 
-Every promoted statement above has a separate verifier.  The full four-root
-PSD feasibility problem, complete triangle-root binary factor, strict
-`n3<4158` bound, and Conway-99 remain `UNKNOWN`.
+Every promoted theorem or finite-feasibility statement above has a separate
+verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
+full four-root PSD feasibility problem, complete triangle-root binary factor,
+strict `n3<4158` bound, and Conway-99 remain `UNKNOWN`.

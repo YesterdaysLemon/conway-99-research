@@ -282,6 +282,9 @@ verification/wave155-four-root-feedback/** -text
 verification/wave156-four-root-late-feedback/** -text
 attempts/wave157-general-cube-wagner/** -text
 verification/wave158-general-cube-wagner/** -text
+attempts/wave159-four-root-cut-loop/** -text
+verification/wave161-four-root-cut-loop/** -text
+attempts/wave162-four-root-facial-reduction/** -text
 
 attempts/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave148-marked-order8/** whitespace=cr-at-eol,-blank-at-eof
@@ -301,3 +304,6 @@ verification/wave155-four-root-feedback/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave156-four-root-late-feedback/** whitespace=cr-at-eol,-blank-at-eof
 attempts/wave157-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave158-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave159-four-root-cut-loop/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave161-four-root-cut-loop/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave162-four-root-facial-reduction/** whitespace=cr-at-eol,-blank-at-eof

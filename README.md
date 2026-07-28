@@ -372,8 +372,18 @@ and the normalized search problem.
   the root count, complete union census, coefficients, named graph
   isomorphisms, six-set formula, and primitive scaling.  Thus this is a
   verified general structural theorem.  Thirteen cuts still admit a new exact
-  rational control of rank 887, pending independent replay.  This is genuine
-  higher-order separation but not a strict bound.
+  rational control of rank 887.  Wave 159 adds the next root-3 and root-12
+  directions, but a fifteen-cut exact rational control still survives with
+  support `204/887`, 10,313 exact rows, and full modular rank 887.  Wave 161
+  independently verifies that certificate and reconstructs exact negative
+  directions again at precisely root masks 3 and 12.  Wave 162 then tests the
+  apparent active face: all three active scalar functionals vary on the common
+  stored affine slice, and the newest negative directions escape their spans.
+  Hence no unconditional facial reduction follows from the stored data.  The
+  next proof-producing matrix route must seek a coupled exact conic-dual
+  exposing certificate for whole covariance blocks, not another sequence of
+  sampled rank-one cuts.  This is genuine higher-order separation but not a
+  strict bound.
   A separate triangle-root reformulation in Waves 149 and 151 yields an exact
   prism-free 36-by-36 PSD Gram control of rank 32 and a verified binary
   24-by-60 factor for two of its three fibres.  The full 36-by-60 binary
