@@ -1783,3 +1783,60 @@ The [integration audit](2026-07-28-wave133-integration-audit.md) and
 [decision](2026-07-28-wave134-orchestrator.md), preserve the finite and
 conditional scope.  Rank 28, the prism-free endpoint, the strict `n3`
 upper-bound question, code realization, and Conway-99 remain `UNKNOWN`.
+
+## Waves 135--142 alternative-space verification
+
+- `wave135-z4-exact-face/` independently verifies the corrected orbit
+  partition, zero-row rank 143, affine rank 145, torsion-tightened rank 146,
+  and both `UNKNOWN_WALL` records.  Thirteen hostile tests pass.
+- `wave136-alternative-spaces/` independently reconstructs the Arf/Gauss
+  branches, additive-`GF(4)` graph-state self-duality, character transform,
+  parity-zero states, and all support-at-most-three rows.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION`; quantum-shadow inequalities were not promoted.
+- `wave137-arf-krawtchouk/` independently replays all fourteen rational
+  witnesses, all ordinary/split rows, the cumulative signed ranks, and every
+  terminal shadow inequality.  Integral realization remains `UNKNOWN`.
+- `wave140-arf-sign-lattice/` independently verifies the determinant bridge
+  and opposite-sign controls.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION` because the controls are not integral
+  zero-one SRG adjacency matrices.
+- `wave141-bivariate-graph-code/` independently reconstructs two transform
+  controls, the `D8` dimensions/ranks, all 62 six-set classes, the
+  `S0`--`S6` identities, and `B[6,56]>=n3`.  Eleven hostile tests pass.
+- `wave142-interlace-isotropic/` independently verifies the local interlace
+  rows, kernel moment, all isotropic diagonal toggles, and the
+  support-intersection refinement.  Its verdict is
+  `PARTIAL_PASS_WITH_TOP_BAND_VETO`: minimum image weight 14 is unsupported,
+  so sizes 86--91 are rejected and only 92--99 remain forced.
+
+No verifier promotes a rational enumerator to a code, a local profile to a
+graph, a numerical timeout to infeasibility, a strict upper bound below
+4,158, or a Conway-99 resolution.
+
+## Waves 143--146 projection and rooted-overlap verification
+
+- `wave143-binary-s6-projection/` independently replays eight rational
+  endpoint/Arf witnesses, all ordinary and split rows, the exact `S6`
+  identity, and the full HNF reconstruction.  Its verdict is
+  `PASS_WITH_SCOPE_CORRECTION`: the target proves binary minimum eight, not
+  the formal dual minimum fifteen used by the rational slice.
+- `wave144-sixset-odd-profile-cleanroom/` independently rebuilds the
+  four-/five-/six-class alignment, all 62 supports, 66 local profiles, and
+  the 65-cell endpoint aggregate.  Its verdict is `PASS_NULL_BOUNDARY`;
+  overlap consistency is absent.
+- `wave139-gf4-lower-aggregation/` refutes the Wave 139 `max` merge, verifies
+  the five corrected sums, vetoes pure-`Y` zeros 8, 10, and 12, and
+  independently calibrates the Rains shadow formula on 1,099 small graphs.
+  Corrected feasibility remains `UNKNOWN`.
+- `wave146-six-seven-coupling/` independently reconstructs the rooted
+  pattern filter, automorphism-orbit/deletion coefficients, and exact
+  rational endpoint replay.  Its scope ends at one-root aggregate
+  compatibility; it does not promote the witness to a graph.
+- `wave147-pair-root-order8/` independently reconstructs the two rooted flag
+  bases, complete order-eight class stream, full deletion layer, 24
+  representative matrices, target `n3`/prism matrices, artifact counts, and
+  rook-graph positive control.  It does not independently recompute all
+  272,054 stored coefficients.  It verifies a finite model only; no numerical
+  or exact endpoint SDP result is present.
+
+The rigorous interval remains `708<=n3<=4158`.

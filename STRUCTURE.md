@@ -3849,3 +3849,324 @@ corrected quaternary rational/integral system:   UNKNOWN NOT RUN
 rank 28 / prism-free endpoint / Conway-99:       UNKNOWN
 rigorous interval:                               708 <= n3 <= 4158
 ```
+
+## Waves 135--142: quadratic forms, graph codes, and interlace data
+
+### Tightened quaternary face (`VERIFIED UNKNOWN WALL`)
+
+Wave 135 reconstructs the corrected 1,119-variable `Z/4Z` scalar model
+exactly.  The forbidden dual rows have equality rank 143 and nullity 976.
+Normalization and the code-size rows raise the affine rank to 145.  The
+previously omitted primal torsion-shell equation
+
+```text
+sum_(primal states with b=0) coefficient = 2^54
+```
+
+is independent and raises the rank to 146, leaving affine dimension 973.
+The analogous dual torsion sum is redundant.  Exact rational row generation
+ends `UNKNOWN_WALL` in both the unshifted and torsion-tightened runs.  No
+nonzero Farkas vector, rational primal, integral enumerator, code, or graph is
+present.
+
+### Binary Arf and signed Krawtchouk branches (`VERIFIED FORMAL`)
+
+For `R=im_F2(A)`, define
+
+```text
+q(x)=wt(x)/2 mod 2.
+```
+
+The restriction of `q` to `R` is nondegenerate, so its Gauss sum is
+
+```text
+G_R=epsilon*2^27, epsilon in {+1,-1}.
+```
+
+For a `t`-set `T`, exact graph algebra gives
+
+```text
+q(A 1_T)=t+e(T) mod 2
+```
+
+and hence
+
+```text
+M_t=sum_(w even)(-1)^(w/2)K_t(w)A_w=G_R*S_t,
+S_t=sum_(|T|=t)(-1)^(t+e(T)).
+```
+
+Independent reconstruction gives
+
+```text
+S0=1, S1=-99, S2=3465, S3=-56595,
+S4=462924, S5=-1821204.
+```
+
+Both Arf signs have exact rational formal witnesses through `S5`, including
+all ordinary MacWilliams rows, the four distinguished split systems, and all
+approved absolute shadow bounds.  These witnesses are not integral
+enumerators or codes.
+
+Over the two-adic completion, the even hyperplane has negative Arf sign and
+the rank-54 `3`-eigenspace lattice gives the bridge
+
+```text
+epsilon_R=(2/det U).
+```
+
+Opposite-sign local controls have the same recorded rank, spectrum, Smith
+factors, and coarse discriminant group, but different full discriminant
+forms.  They are not integral zero-one SRG adjacency matrices.  Thus the
+coarse data do not determine the target sign; entrywise and odd-primary
+compatibility remain open.
+
+### Bivariate graph-code enumerator (`VERIFIED`)
+
+Define
+
+```text
+B[i,j]=#{x in F2^99 : wt(x)=i and wt(Ax)=j}.
+```
+
+The exact marginals and symmetries are
+
+```text
+sum_j B[i,j]=binom(99,i),
+sum_i B[i,j]=2^45 A_j,
+B[i,j]=0 for odd j,
+B[i,j]=B[99-i,j].
+```
+
+The symplectic self-duality of `{(x,Ax)}` gives
+
+```text
+B[i,j]=2^-99 sum_(a,b) K_i(b)K_j(a)B[a,b].
+```
+
+Output parity and this transform generate `D8`.  Exact Burnside traces give
+an invariant dimension of 1,275 in the 5,000 output-even states, hence
+equality rank 3,725.  Input complementation leaves 2,500 working variables
+and transform rank 1,225.
+
+The exact rows through input weight three are
+
+```text
+B[0,*]: 0^1
+B[1,*]: 14^99
+B[2,*]: 24^4158, 26^693
+B[3,*]: 30^70686, 32^41580, 34^36036, 36^8547.
+```
+
+Replaying all 62 six-vertex count formulas gives the new target equation
+
+```text
+sum_(j even)(-1)^(j/2)B[6,j]
+  = 2024484 + (512/3)n3.
+```
+
+Every `N3` has outside profile `0^33,1^52,2^8`, so its image has weight 56
+and
+
+```text
+B[6,56]>=n3.
+```
+
+Nonnegativity alone gives only `n3<=6,553,737`.  The bounded floating
+row-generation scout has large inactive transform residuals and remains
+`UNKNOWN_NUMERICAL`; it is neither a primal nor a dual certificate.
+
+### Interlace/isotropic lift (`PARTIAL PASS WITH VETO`)
+
+The size-refined interlace specialization has exact six-set rows
+
+```text
+I60 = 45,845,415 + (4/3)n3
+I62 = 470,213,205 - 3n3
+I64 = 503,184,528 + (4/3)n3
+I66 = 101,286,108 + (1/3)n3
+```
+
+and kernel-size moment
+
+```text
+sum 2^nullity = 16,459,961,595 + 32n3.
+```
+
+All 3,968 diagonal-toggle cells of the isotropic model were independently
+replayed.  Its strongest decreasing cell gives only
+`n3<=7,609,140`, which is weaker than the established 4,158 cap.  The
+interlace data require a support-intersection refinement beyond the
+bivariate `B[i,j]` table; no target-specific elimination back to a stronger
+`B` inequality is known.
+
+The discovery top-complement claim for sizes 86--91 is vetoed.  The frozen
+target evidence proves `d(im A)>=8`, while minimum 14 belongs only to an
+unrealized rational formal witness.  The corrected target-forced band is
+therefore sizes 92--99.  All local interlace identities above remain valid.
+
+```text
+strict upper bound below 4158: NOT PROVED
+binary/quaternary/code realization: UNKNOWN
+Conway-99 / external novelty: UNKNOWN
+```
+
+## Waves 143--146: exact `S6` projection and rooted deck coupling
+
+### Binary `S6` projection (`VERIFIED WITH SCOPE CORRECTION`)
+
+Wave 143 substitutes
+
+```text
+S6 = 2024484 + (512/3)n3
+```
+
+into the ordinary and distinguished binary enumerator systems.  Exact
+rational witnesses survive at `n3=708` and `n3=4158` for both Arf signs.
+The weak shadow projection gives only
+
+```text
+0 <= n3 <= 838878579/128.
+```
+
+An exact `109 x 142` Hermite-normal-form calculation has rank 109 and
+nullity 33.  Projecting that equality lattice yields `n3=0 mod 3`, already
+known from the graph count identities.
+
+The rational witnesses live in a stronger formal slice with image minimum
+14 and dual minimum 15.  A target adjacency matrix proves only
+`d(im A),d(ker A)>=8`.  The verifier therefore vetoes every target
+implication that uses the stronger zeros.  The HNF calculation is weaker
+again: it omits those dual zeros and all inequalities.  Integral
+nonnegative feasibility and graph realization remain unknown.
+
+### Exact six-set outside profiles (`VERIFIED NULL BOUNDARY`)
+
+For a six-set `S` with induced class `H`, Wave 144 introduces
+
+```text
+z_P = #{x outside S : N(x) intersect S = P}
+```
+
+for all 64 subsets `P` of `S`.  The total, six degree rows, fifteen
+pair-common-neighbor rows, and output parity exactly enumerate 368 attainable
+`(H,wt(A1_S))` cells across all 62 classes.  Four classes have a unique
+output weight:
+
+```text
+class 1 -> 66, class 3 -> 56,
+class 5 -> 46, class 14 -> 36.
+```
+
+An explicit 65-cell nonnegative integer aggregate at `n3=4158` satisfies all
+62 class marginals, the Wave 141 reciprocity moments through degree three,
+and the signed `S6` row.  Clean-room replay verifies all 66 stored local
+profiles.  The witness does not assign the same outside vertices to
+overlapping six-sets, so it is not a graph.
+
+### Corrected additive-`GF(4)` boundary (`VERIFIED VETO`)
+
+Wave 145 audits the Wave 139 lower-bound merge.  Five raw families collide
+and must be summed, giving
+
+```text
+(84,0,15): 198
+(73,0,26): 8316
+(66,0,33): 149688
+(62,0,37): 55440
+(60,0,39): 462.
+```
+
+Using `max` undercounted every one of these states.  The pure-`Y` zeros at
+weights 8, 10, and 12 are also unsupported; only
+`{2,4,6,94,96,98}` are justified.  The Rains shadow transform is
+independently calibrated on all 1,099 simple graphs through order five.
+Corrected full feasibility was not solved and remains `UNKNOWN`.
+
+### One-root six-to-seven lift (`EXACT RATIONAL NULL BOUNDARY`)
+
+Wave 146 first requires each positive `z_P` cell to form a locally
+admissible induced seven-vertex graph with its outside root.  This is
+equivalent to
+
+```text
+#{v in P : uv in E(H)} <= 1 if u in P,
+#{v in P : uv in E(H)} <= 2 if u not in P,
+```
+
+together with the residual pair-capacity rows inside `S`.  It removes 25
+weight cells across 16 classes.
+
+Rooted patterns are grouped only under `Aut(H)`.  If `X_(H,w,P)` is their
+aggregate count and `Y_K` counts the 208 order-seven classes, exact double
+counting gives 944 rows
+
+```text
+sum_w sum_(P in orbit P0) X_(H,w,P)
+  = sum_K m(K;H,P0) Y_K.
+```
+
+The selected Wave 144 profiles violate the two-row identity
+`R_(38,8)=2R_(37,12)` by `3,076,026,288`.  This refutes that witness only.
+Freeing every local profile still refutes the fixed 65-cell aggregate table,
+but the full 343-cell endpoint relaxation has an exact rational witness:
+
+```text
+variables:             13,973
+equalities:             8,981
+integer nonzeros:     110,269
+positive coordinates:   2,998
+maximum denominator:         4
+h11:                     16,632.
+```
+
+All equations replay exactly.  The variables remain aggregate: two rooted
+seven-set views need not agree on their eight-vertex union.  Consequently
+the next genuine compatibility level is a two-root/order-eight model.
+
+### Two-root order-eight flag space (`VERIFIED FINITE MODEL`)
+
+Wave 147 constructs the next level without running a numerical endpoint SDP.
+The root is an ordered edge or ordered nonedge, and each flag adds three
+unordered free vertices.  Exact canonicalization gives flag bases
+
+```text
+ordered-edge root:      66
+ordered-nonedge root:   87.
+```
+
+Products of two such flags have unions of orders five through eight.  The
+complete locally admissible class streams have sizes
+
+```text
+order 5: 21, order 6: 62, order 7: 208, order 8: 916.
+```
+
+For every class `H` the package records the integer embedding matrix
+`C_H^sigma`.  Across both root families this is 2,414 matrices with 272,054
+nonzero upper-triangular entries.  The moment expansion is
+
+```text
+M_sigma = sum_(h=5)^8 sum_(H in H_h) x_H C_H^sigma >= 0.
+```
+
+All 208 ordinary deletion rows
+
+```text
+92*x_H7 = sum_K d(H7,K8)x_K8
+```
+
+are included.  In each root family an explicit matrix entry has coefficient
+`4*n3` and triangular-prism coefficient zero, so the space can address the
+upper-bound objective directly rather than only through an aggregate
+surrogate.
+
+The `3 x 3` rook graph, `srg(9,4,1,2)`, supplies an exact positive control:
+both moment matrices are explicit sums of 36 integer outer products.  The
+verifier independently rebuilds 24 representative class matrices and the
+complete `N3`/prism matrices, while checking the full artifact's hashes,
+record counts, deletion layer, and class streams; it does not recompute all
+272,054 stored coefficients independently.  The current package does not add
+the stronger marked degree/common-neighbor extension rows, run an endpoint
+SDP, or extract a rational dual.  It is an exact finite route to the next
+bound attempt, not a bound itself.

@@ -211,3 +211,53 @@ attempts/wave134-z4-symmetrized-enumerator/** -text
 verification/wave134-z4-symmetrized-enumerator/** -text
 attempts/wave134-z4-symmetrized-enumerator/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave134-z4-symmetrized-enumerator/** whitespace=cr-at-eol,-blank-at-eof
+
+# Waves 135--147 are sealed, checksum-pinned mixed-platform research packages.
+# Preserve exact bytes so package manifests replay after a clean checkout.
+attempts/wave135-z4-exact-face/** -text
+verification/wave135-z4-exact-face/** -text
+attempts/wave136-alternative-spaces/** -text
+verification/wave136-alternative-spaces/** -text
+attempts/wave137-z4-arf-branches/** -text
+verification/wave137-arf-krawtchouk/** -text
+attempts/wave139-gf4-n3-bound/** -text
+verification/wave139-gf4-lower-aggregation/** -text
+attempts/wave140-arf-sign-lattice/** -text
+verification/wave140-arf-sign-lattice/** -text
+attempts/wave141-bivariate-graph-code/** -text
+verification/wave141-bivariate-graph-code/** -text
+attempts/wave142-interlace-isotropic/** -text
+verification/wave142-interlace-isotropic/** -text
+attempts/wave143-binary-s6-projection/** -text
+verification/wave143-binary-s6-projection/** -text
+attempts/wave144-sixset-odd-profile/** -text
+verification/wave144-sixset-odd-profile-cleanroom/** -text
+attempts/wave146-six-seven-coupling/** -text
+verification/wave146-six-seven-coupling/** -text
+attempts/wave147-alternative-lane/** -text
+verification/wave147-pair-root-order8/** -text
+
+# CR is part of the sealed Windows byte stream rather than trailing whitespace.
+# Blank terminal lines are likewise retained because changing them breaks hashes.
+attempts/wave135-z4-exact-face/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave135-z4-exact-face/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave136-alternative-spaces/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave136-alternative-spaces/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave137-z4-arf-branches/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave137-arf-krawtchouk/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave139-gf4-n3-bound/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave139-gf4-lower-aggregation/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave140-arf-sign-lattice/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave140-arf-sign-lattice/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave141-bivariate-graph-code/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave141-bivariate-graph-code/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave142-interlace-isotropic/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave142-interlace-isotropic/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave143-binary-s6-projection/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave143-binary-s6-projection/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave144-sixset-odd-profile/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave144-sixset-odd-profile-cleanroom/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave146-six-seven-coupling/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave146-six-seven-coupling/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave147-alternative-lane/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave147-pair-root-order8/** whitespace=cr-at-eol,-blank-at-eof

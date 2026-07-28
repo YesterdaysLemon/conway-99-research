@@ -284,14 +284,69 @@ and the normalized search problem.
   two.  It exactly forces code types `4^54 2` and `4^44 2`, 84 primal and
   44 dual distinguished compositions, and a corrected transform partition
   of 1,119 primal, 1,114 allowed dual, and 161 forbidden dual orbits.
-  Corrected rational and integral feasibility have not yet been run and
-  remain `UNKNOWN`.  These
+  Wave 135 adds the exact torsion-shell equality missing from the first
+  quaternary model and raises the affine equality rank to 146, but two exact
+  row-generation runs stop at `UNKNOWN_WALL`; no primal or Farkas
+  certificate is present.  The binary quadratic-form shift then forces two
+  Arf branches and the signed Krawtchouk identities through degree five.
+  Exact rational witnesses survive both signs and every approved shadow
+  inequality.  A separate two-adic audit proves an Arf-sign/determinant
+  bridge, while opposite-sign local controls show that the recorded coarse
+  Smith and spectral data do not select the sign.
+  Wave 141 retains both the input weight and the image weight in
+  `B[i,j]=#{x:wt(x)=i,wt(Ax)=j}`.  Its output-parity/MacWilliams group is
+  `D8`, with invariant dimension 1,275, and clean-room verification proves
+  the new exact bridge
+
+  ```text
+  sum_(j even) (-1)^(j/2) B[6,j]
+      = 2024484 + (512/3)n3,
+  B[6,56] >= n3.
+  ```
+
+  The current numerical bivariate scout remains non-evidentiary
+  `UNKNOWN_NUMERICAL` and gives no improved bound.  Wave 142 moves further
+  to interlace/isotropic-matroid data and verifies new six-set nullity rows,
+  but its best inequality is weaker than `n3<=4158`.  Its verifier vetoes
+  the discovery claim for principal-submatrix sizes 86--91: target evidence
+  proves binary image minimum at least eight, not fourteen, so only sizes
+  92--99 are forced.  Corrected rational and integral quaternary feasibility
+  remain `UNKNOWN`.
+  Waves 143--146 then push the graph-code data back toward actual induced
+  subgraphs.  The exact binary `S6` projection has rational witnesses at both
+  endpoints and both Arf signs, and its equality lattice yields only the
+  already known congruence `n3=0 mod 3`.  Its clean-room verifier vetoes any
+  target use of the stronger formal dual-distance-15 slice: the graph proves
+  only binary image and kernel minimum at least eight.  Wave 144 enumerates
+  every 64-cell outside-neighborhood profile for each six-vertex class.  An
+  explicit integer aggregate survives at `n3=4158`, but it does not glue
+  overlapping six-sets.  Wave 145 independently refutes two Wave 139
+  shortcuts: collided lower-bound states must be summed rather than maximized,
+  and pure-`Y` weights 8, 10, and 12 are not forced zero.  Corrected `GF(4)`
+  feasibility remains `UNKNOWN`.
+  Wave 146 performs the first exact gluing step.  Requiring every outside
+  pattern to extend to a locally admissible seventh vertex removes 25 weight
+  cells across 16 classes.  The selected Wave 144 endpoint witness then fails
+  an exact rooted-orbit identity, and even its fixed aggregate table cannot be
+  repaired.  Once all 343 surviving class/weight cells are freed, however, an
+  exact nonnegative rational witness with 13,973 variables, 8,981 equations,
+  110,269 integer coefficients, 2,998 positive coordinates, and denominator
+  at most four survives at `n3=4158`.  Thus one-root six-to-seven
+  compatibility is still insufficient.  Wave 147 builds that next
+  mathematical space exactly: ordered-edge and ordered-nonedge two-root flag
+  bases of sizes 66 and 87, all 916 locally admissible order-eight classes,
+  2,414 exact coefficient matrices, and all 208 ordinary seven-to-eight
+  deletion rows.  Explicit moment entries carry `4*n3` and no prism term,
+  while the `3x3` rook graph supplies a positive control.  No endpoint SDP or
+  rational dual certificate has yet been run, so this is a concrete new
+  upper-bound lane rather than a bound.
+  These
   independently checked boundaries identify graph-valued projector
-  completion, higher structure beyond cutoff-28 Jacobi positivity, labelled
-  joint code enumerators over both `F2` and `Z/4Z`, and point-level twist
-  compatibility as the live alternatives.  No rank, motif, endpoint, code,
-  or target graph is excluded or constructed.
-  The
+  completion, higher structure beyond cutoff-28 Jacobi positivity,
+  overlapping-six-set compatibility, labelled joint code enumerators over
+  both `F2` and `Z/4Z`, and point-level twist compatibility as the live
+  alternatives.  No rank, motif, endpoint, code, or target graph is excluded
+  or constructed.  The
   current alternative-space frontier is therefore exact and reproducible
   but still supplies no rank exclusion, strict `n3` upper bound, or
   Conway-99 resolution.

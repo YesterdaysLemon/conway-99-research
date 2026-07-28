@@ -2490,3 +2490,43 @@ obligations:
       Corrected rational and integral feasibility are UNKNOWN_NOT_RUN. All
       earlier solver records used undercounted forced tables and are
       explicitly invalidated.
+
+  - id: O-WAVE147-ALTERNATIVE-SPACE-CHECKPOINT
+    requirement: >-
+      Independently verify the binary S6 projection and its scope correction,
+      all six-set outside-profile supports and endpoint aggregate, the
+      corrected GF4 lower-bound merge and shadow rows, the one-root
+      six-to-seven rational endpoint witness, and the finite two-root
+      order-eight coefficient model before publication.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-28-wave147-integration-audit.md"
+      - "verification/2026-07-28-wave147-orchestrator.md"
+      - "verification/wave143-binary-s6-projection/package-manifest.sha256"
+      - "verification/wave144-sixset-odd-profile-cleanroom/package-manifest.sha256"
+      - "verification/wave139-gf4-lower-aggregation/package-manifest.sha256"
+      - "verification/wave146-six-seven-coupling/package-manifest.sha256"
+      - "verification/wave147-pair-root-order8/package-manifest.sha256"
+    note: >-
+      The scoped exact identities, corrections, rational witness, and finite
+      coefficient model pass. They preserve the rigorous interval
+      708<=n3<=4158 and do not construct or exclude the target graph.
+
+  - id: O-WAVE147-TWO-ROOT-ENDPOINT-SDP
+    requirement: >-
+      Complete the marked degree/common-neighbor order-eight extension rows,
+      solve the unrestricted two-root endpoint moment problem, and supply an
+      independently checked exact rational dual certificate for any claimed
+      strict n3 upper bound; alternatively supply an exact feasible moment
+      witness and retain the null boundary.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave147-alternative-lane/exact-results.json"
+      - "attempts/wave147-alternative-lane/failed-routes.md"
+      - "verification/wave147-pair-root-order8/verification-report.md"
+    note: >-
+      Exact coefficient matrices, ordinary deletion rows, n3 carrier entries,
+      and a positive control do not discharge the endpoint SDP. No numerical
+      run, rational dual, strict upper bound, or target resolution exists.

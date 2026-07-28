@@ -30,8 +30,8 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-28-wave134-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-28-wave134-integration-audit.md"
+latest_public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3131,4 +3131,53 @@ waves_123_134_alternative_space_checkpoint:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Waves 123--134 verify scoped projector, finite Jacobi, finite-primary, binary-enumerator, holonomy-control, and quaternary-enumerator boundaries with multiple public corrections. They supply no realized code, lattice, graph, rank exclusion, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_135_147_alternative_space_checkpoint:
+  public_base_commit: "0a15bfe548e301ea98c83e292ba8931322e39945"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave135_status: VERIFIED_SCOPED_UNKNOWN_WALL
+  wave141_status: VERIFIED_BIVARIATE_IDENTITIES
+  wave141_s6_identity: "2024484+(512/3)n3"
+  wave142_status: PARTIAL_PASS_WITH_TOP_BAND_VETO
+  wave142_target_forced_top_band: "92..99"
+  wave143_status: PASS_WITH_SCOPE_CORRECTION
+  wave143_equality_projection: "n3 congruent 0 mod 3"
+  wave143_target_dual_distance_15: NOT_PROVED
+  wave144_status: PASS_NULL_BOUNDARY
+  wave144_endpoint_integer_cells: 65
+  wave145_status: PASS_WITH_WAVE139_VETO
+  wave145_corrected_pure_y_zeros: "2,4,6,94,96,98"
+  wave146_status: PASS_RATIONAL_RELAXATION
+  wave146_variables: 13973
+  wave146_equalities: 8981
+  wave146_matrix_nonzeros: 110269
+  wave146_positive_rational_coordinates: 2998
+  wave146_maximum_denominator: 4
+  wave146_discovery_manifest_sha256: "6a4f1125d877f4bc1dfcfe522dea66e95216416bd09550fa36aadbcbeb1f2b17"
+  wave146_verifier_manifest_sha256: "cc683fa0977c93fde09cdb087c923d0a4927957a5ee6508eb5be197f1296cebf"
+  wave147_status: PASS_WITH_SCOPE_FINITE_MODEL
+  wave147_edge_flag_basis: 66
+  wave147_nonedge_flag_basis: 87
+  wave147_order8_classes: 916
+  wave147_coefficient_matrices: 2414
+  wave147_deletion_rows: 208
+  wave147_n3_carrier_coefficient: 4
+  wave147_numerical_sdp: NOT_RUN
+  wave147_rational_dual: NOT_OBTAINED
+  wave147_discovery_manifest_sha256: "0c7585f996374246918948eb1537e61e2e165474f815a66eff24bf82e7c8e690"
+  wave147_verifier_manifest_sha256: "ce892c1af0ccc5c69605513b4d427c1741a1d13e354997b4c56b45a6f1c85400"
+  public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
+  public_checkpoint_sha256: "a3b694d3ca5d94283f24fcc77c20209682a749fc43b90e3b6c6f05600889bb78"
+  integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
+  integration_audit_sha256: "d6ddc51c60d4ed7eac4388a4f29472b6941100273af7c13c54ceed6d80838cb3"
+  orchestrator_decision: "verification/2026-07-28-wave147-orchestrator.md"
+  orchestrator_decision_sha256: "57f961c96f9d41c3b71de34acaa5dc58aadf5acdf4b2d61dba92ef37bb07145c"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 135--147 verify scoped quadratic-form, graph-code, profile, one-root, and finite two-root/order-eight boundaries with material corrections. They supply no graph, code realization, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
 last_updated: 2026-07-28

@@ -2764,6 +2764,71 @@ claims:
       - "verification/2026-07-28-wave133-orchestrator.md"
     limitations: "The rigorous interval remains 708<=n3<=4158. Endpoint status, target existence or nonexistence, literature novelty, and priority remain UNKNOWN."
 
+  - id: C-WAVE141-BIVARIATE-001
+    statement: "The bivariate graph-code enumerator B[i,j]=#{x:wt(x)=i,wt(Ax)=j} has the verified D8 transform structure and satisfies sum_j(-1)^(j/2)B[6,j]=2024484+(512/3)n3 and B[6,56]>=n3."
+    label: VERIFIED
+    scope: CONDITIONAL_FULL_PROBLEM_BIVARIATE_BINARY_GRAPH_CODE
+    evidence:
+      - "attempts/wave141-bivariate-graph-code/exact-results.json"
+      - "attempts/wave141-bivariate-graph-code/package-manifest.sha256"
+      - "verification/wave141-bivariate-graph-code/verification-results.json"
+      - "verification/wave141-bivariate-graph-code/package-manifest.sha256"
+    limitations: "The exact identities give only n3<=6553737 by nonnegativity, weaker than 4158. The numerical row-generation record is non-evidentiary and no binary code or graph is constructed."
+
+  - id: C-WAVE143-BINARY-PROJECTION-001
+    statement: "Both Arf signs admit exact rational endpoint witnesses in the strengthened formal binary S6 projection, while the exact equality-lattice projection gives only n3 congruent to 0 modulo 3."
+    label: VERIFIED
+    scope: FORMAL_RATIONAL_BINARY_ENUMERATOR_AND_EQUALITY_LATTICE
+    evidence:
+      - "attempts/wave143-binary-s6-projection/exact-results.json"
+      - "attempts/wave143-binary-s6-projection/package-manifest.sha256"
+      - "verification/wave143-binary-s6-projection/verification-results.json"
+      - "verification/wave143-binary-s6-projection/package-manifest.sha256"
+    limitations: "The rational points assume formal image minimum 14 and dual minimum 15, whereas the target proves only image and kernel minimum 8. Integral nonnegative feasibility, code realization, graph realization, and any new target bound remain UNKNOWN."
+
+  - id: C-WAVE144-SIX-PROFILE-001
+    statement: "All 62 six-vertex classes have exact 64-cell outside-neighborhood supports, and an explicit 65-cell nonnegative integer aggregate satisfies the class marginals and Wave141 moments at n3=4158."
+    label: VERIFIED
+    scope: ENDPOINT_AGGREGATE_SIX_SET_OUTSIDE_PROFILES
+    evidence:
+      - "attempts/wave144-sixset-odd-profile/exact-results.json"
+      - "attempts/wave144-sixset-odd-profile/package-manifest.sha256"
+      - "verification/wave144-sixset-odd-profile-cleanroom/verification-results.json"
+      - "verification/wave144-sixset-odd-profile-cleanroom/package-manifest.sha256"
+    limitations: "The local profiles are not glued to overlapping six-subsets of one 99-vertex set. The witness is not a graph and does not improve n3<=4158."
+
+  - id: C-WAVE145-GF4-CORRECTION-001
+    statement: "Wave139's max aggregation undercounts five collided GF(4) states, whose corrected sums are 198, 8316, 149688, 55440, and 462; pure-Y zero rows 8, 10, and 12 are unsupported."
+    label: VERIFIED
+    scope: CORRECTED_ADDITIVE_GF4_LOWER_BOUNDS_AND_SHADOW_ROWS
+    evidence:
+      - "verification/wave139-gf4-lower-aggregation/verification-results.json"
+      - "verification/wave139-gf4-lower-aggregation/verification-report.md"
+      - "verification/wave139-gf4-lower-aggregation/package-manifest.sha256"
+    limitations: "The corrected pure-Y zero set is {2,4,6,94,96,98}. Corrected rational or integral feasibility was not solved and remains UNKNOWN."
+
+  - id: C-WAVE146-ROOTED-DECK-001
+    statement: "The complete one-root six-to-seven aggregate endpoint relaxation has an exact nonnegative rational witness at n3=4158 with 13973 variables, 8981 equalities, 110269 integer nonzeros, 2998 positive coordinates, and maximum denominator four."
+    label: VERIFIED
+    scope: ENDPOINT_ONE_ROOT_SIX_TO_SEVEN_RATIONAL_RELAXATION
+    evidence:
+      - "attempts/wave146-six-seven-coupling/exact-results.json"
+      - "attempts/wave146-six-seven-coupling/package-manifest.sha256"
+      - "verification/wave146-six-seven-coupling/verification-results.json"
+      - "verification/wave146-six-seven-coupling/package-manifest.sha256"
+    limitations: "The variables are aggregate and need not decompose over individual six-sets; two rooted seven-set views are not coupled on their eight-vertex union. No graph, endpoint exclusion, or strict upper bound follows."
+
+  - id: C-WAVE147-PAIR-ROOT-001
+    statement: "The two-root order-five flag construction has exact 66-by-66 ordered-edge and 87-by-87 ordered-nonedge moment blocks, complete class streams through 916 order-eight classes, 2414 class coefficient matrices, and explicit entries with n3 coefficient 4 and prism coefficient 0."
+    label: VERIFIED
+    scope: FINITE_TWO_ROOT_ORDER_EIGHT_FLAG_COEFFICIENT_MODEL
+    evidence:
+      - "attempts/wave147-alternative-lane/exact-results.json"
+      - "attempts/wave147-alternative-lane/package-manifest.sha256"
+      - "verification/wave147-pair-root-order8/verification-results.json"
+      - "verification/wave147-pair-root-order8/package-manifest.sha256"
+    limitations: "No endpoint SDP, rational dual certificate, strict upper bound, endpoint exclusion, graph, or target resolution is supplied. Stronger marked order-eight extension rows remain to be built."
+
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."
     label: UNKNOWN

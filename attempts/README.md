@@ -704,3 +704,61 @@ All four packages have independent clean-room verification.  They are
 finite-relaxation, conditional-enumerator, or abstract-control results, not a
 graph, lattice, realized code, rank exclusion, strict `n3` upper bound, or
 Conway-99 resolution.
+
+## Waves 135--142: alternative-space continuation
+
+- `wave135-z4-exact-face/` adds the independent primal torsion-shell equality
+  to the corrected quaternary face.  Exact row generation remains
+  `UNKNOWN_WALL`; no primal or Farkas certificate was produced.
+- `wave136-alternative-spaces/` derives the binary Arf/Gauss split and the
+  self-dual additive-`GF(4)` graph-state formulation.
+- `wave137-z4-arf-branches/` stores exact rational witnesses for both Arf
+  signs through signed Krawtchouk degree five and all approved shadow bounds.
+  The quaternary numerical branches remain non-evidentiary.
+- `wave139-gf4-n3-bound/` records the three-class invariant-space dimension
+  and an inconclusive numerical scout.  Its lower-bound aggregation and
+  pure-`Y` zero rows require the separate Wave 145 audit before use.
+- `wave140-arf-sign-lattice/` proves the two-adic determinant/Arf bridge and
+  supplies opposite-sign local controls with an explicit non-graph scope
+  wall.
+- `wave141-bivariate-graph-code/` derives the `D8` bivariate transform,
+  exact low input rows, and
+  `S6=2024484+(512/3)n3`.  Its floating row-generation scout is
+  `UNKNOWN_NUMERICAL`.
+- `wave142-interlace-isotropic/` derives exact local interlace and isotropic
+  rows.  Its sizes 86--91 top-band claim is rejected by the verifier; only
+  sizes 92--99 are target-forced.
+
+These attempts change the representation and expose new exact constraints,
+but none improves `n3<=4158`, constructs a code or graph, or resolves
+Conway-99.
+
+## Waves 143--146: projection and rooted overlap
+
+- `wave143-binary-s6-projection/` substitutes the exact `S6/n3` identity
+  into the binary enumerator and equality lattice.  Rational endpoint
+  witnesses survive both Arf signs.  The target does not justify the
+  stronger formal dual-distance-15 slice, and the equality projection gives
+  only `n3=0 mod 3`.
+- `wave144-sixset-odd-profile/` enumerates exact 64-cell outside-neighborhood
+  profiles for all 62 six-vertex classes.  A 65-cell nonnegative integer
+  aggregate survives at `n3=4158`, but it does not glue overlapping
+  six-sets.
+- `wave139-gf4-n3-bound/` is superseded in part by the Wave 145 audit.  Its
+  five collided lower bounds must be summed, not maximized, and its pure-`Y`
+  zero rows 8, 10, and 12 are vetoed.  Corrected feasibility is `UNKNOWN`.
+- `wave146-six-seven-coupling/` filters every outside pattern through exact
+  rooted seven-vertex admissibility and glues all rooted orbit totals to the
+  complete 208-class order-seven deck.  It removes 25 local weight cells and
+  refutes the selected Wave 144 witness, but a full exact rational endpoint
+  witness survives all 8,981 equations with denominator at most four.
+- `wave147-alternative-lane/` builds the two-root/order-eight flag space:
+  66 and 87 rooted flags, 916 admissible order-eight classes, 2,414 exact
+  coefficient matrices, and 208 deletion rows.  Its moment entries expose
+  `4*n3` with zero prism coefficient.  No endpoint SDP or dual certificate
+  is claimed.
+
+Wave 146 is the first exact overlap lift in this sequence.  Its surviving
+certificate shows that one outside root is still too coarse; two-root or
+order-eight compatibility is the next boundary, and Wave 147 supplies the
+finite coefficient model for that computation.

@@ -3100,6 +3100,139 @@ This certifies the corrected code-type, forced-word, and transform-state
 derivations only. The corrected rational and integral enumerator systems were
 not solved and remain `UNKNOWN_NOT_RUN`.
 
+## Waves 135--142 quadratic/code/interlace replay
+
+Replay the tightened quaternary face and its clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave135-z4-exact-face -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave135-z4-exact-face -p "test_*.py" -v
+```
+
+Both exact row-generation records remain `UNKNOWN_WALL`.  Do not infer
+infeasibility from that status.
+
+Replay the additive-`GF(4)` graph-state and Arf/Krawtchouk packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave136-alternative-spaces -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave137-z4-arf-branches -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave137-arf-krawtchouk -p "test_*.py" -v
+```
+
+The Wave 137 outputs are exact rational formal witnesses.  They do not
+construct an additive code or graph.
+
+Replay the two-adic Arf-sign boundary:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave140-arf-sign-lattice -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave140-arf-sign-lattice -p "test_*.py" -v
+```
+
+The opposite-sign controls are local algebraic controls, not zero-one
+strongly regular adjacency matrices.
+
+Replay the bivariate graph-code bridge:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts/wave141-bivariate-graph-code/exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave141-bivariate-graph-code -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave141-bivariate-graph-code -p "test_*.py" -v
+```
+
+The numerical scout is telemetry only.  The exact evidence is the
+Krawtchouk transform, `D8` rank, low rows, and `S6/n3` identity.
+
+Replay the interlace/isotropic discovery and verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave142-interlace-isotropic -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave142-interlace-isotropic -p "test_*.py" -v
+```
+
+Read the verifier report before using the discovery result.  It vetoes the
+unsupported sizes 86--91 top band and retains only sizes 92--99.  The valid
+local interlace rows give no improvement over `n3<=4158`.
+
+## Waves 143--147 projection and overlap replay
+
+Replay the binary `S6` projection with the environment that supplies
+`python-flint`:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave143-binary-s6-projection -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave143-binary-s6-projection -p "test_*.py" -v
+```
+
+The verifier report is mandatory reading.  The rational points impose a
+formal dual-distance-15 slice not proved for the graph; only minimum eight is
+target-forced.
+
+Replay the exact six-set outside-profile package and its clean-room verifier:
+
+```powershell
+python -B -m unittest discover `
+  -s attempts\wave144-sixset-odd-profile -p "test_*.py" -v
+python -B -m unittest discover `
+  -s verification\wave144-sixset-odd-profile-cleanroom -p "test_*.py" -v
+```
+
+The 65-cell endpoint certificate is an aggregate integer witness, not a
+consistent assignment to overlapping six-sets.
+
+Replay the corrected Wave 139/145 additive-`GF(4)` audit:
+
+```powershell
+python -B -m unittest discover `
+  -s verification\wave139-gf4-lower-aggregation -p "test_*.py" -v
+```
+
+This audit refutes `max` aggregation and the proposed pure-`Y` zero rows
+8, 10, and 12.  It does not solve the corrected feasibility problem.
+
+Replay the Wave 146 rooted six-to-seven exact witness:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave146-six-seven-coupling\exact_witness.py `
+  --verify attempts\wave146-six-seven-coupling\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave146-six-seven-coupling -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave146-six-seven-coupling -p "test_*.py" -v
+```
+
+The stored sparse rational vector, not the retained HiGHS diagnostics, is the
+certificate.  It proves feasibility only of the one-root aggregate
+relaxation at `n3=4158`.
+
+Replay the Wave 147 two-root/order-eight coefficient package:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave147-alternative-lane -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave147-pair-root-order8 -p "test_*.py" -v
+```
+
+Wave 147 builds exact PSD coefficient data and a positive control but does
+not run an endpoint SDP or produce a rational dual bound.
+
 `requirements-search.txt` pins the prototyping API version, but it is not an
 archival proof lockfile. Before a proof-producing run, also pin the Python ABI,
 wheel hashes, proof-producing solver binary, and independent checker binaries,
