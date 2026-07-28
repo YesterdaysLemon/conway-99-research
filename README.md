@@ -245,6 +245,20 @@ and the normalized search problem.
   not lattice-compatible, while the valid common index is much larger. Its
   target coefficient is at least 52,812 antipodal incidences; an upper bound
   of 51,975 would close rank 28, but no such certificate is known. The
+  fixed-cycle follow-up in Waves 120, 121, and 124 is now independently
+  checked.  A doubled alternating four-cycle coordinate has exact real
+  affine minimum `112/5` and integer minimum at least 32; nevertheless an
+  explicit 40-record formal family survives every pairwise Gram,
+  constant-weight-code, and fixed-anchor test, so those relaxations cannot
+  prove the needed cap.  The primitive four-cycle marking gives the exact
+  Jacobi indices 70 and 10 and the tight-frame moment identities
+  `11*sum(r^2*c_K(n,r))=70*n*sum(c_K(n,r))` and its index-10 analogue.
+  Full-level signed modular directions still escape the scalar constraints,
+  while a new fifth-even-moment observation is only a candidate for the
+  larger `Gamma0(7)` space.  A separate 900-second Wave 125 motif-SAT run
+  ended `UNKNOWN_TIMEOUT` with the 15% memory reserve preserved.  None of
+  these results excludes rank 28 or rank 30.
+  The
   current alternative-space frontier is therefore exact and reproducible
   but still supplies no rank exclusion, strict `n3` upper bound, or
   Conway-99 resolution.

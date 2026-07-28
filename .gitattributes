@@ -136,3 +136,14 @@ attempts/wave96-norm16-norm18-upper/package-manifest.sha256 -text -diff
 verification/wave96-norm16-norm18-upper/independent-results.json -text -diff
 attempts/wave109-c4boxk3-local-projector/exact-results.json -text -diff
 verification/wave109-c4boxk3-local-projector/exact-results.json -text -diff
+
+# Waves 120--125 contain checksum-pinned generated Windows byte streams.
+attempts/wave120-fixedc4-sumdiff/exact-results.json -text -diff
+verification/wave120-fixedc4-sumdiff/independent-results.json -text -diff
+attempts/wave121-vector-theta-orbits/exact-results.json -text -diff
+attempts/wave121-vector-theta-orbits/scalar-jacobi-results.json -text -diff
+verification/wave121-vector-theta-orbits/comparison.json -text -diff
+attempts/wave124-c4-index70-jacobi/exact-results.json -text -diff
+verification/wave124-c4-index70-jacobi/comparison.json -text -diff
+verification/wave124-c4-index70-jacobi/independent-jacobi-results.json -text -diff
+attempts/wave125-long-motif-sat/branch0-900s-launch2.stdout.txt -text -diff
