@@ -1676,3 +1676,59 @@ The verdict is `VERIFIED_WITH_CLARIFICATIONS`. Eight verifier and eight
 discovery tests pass. The [integration audit](2026-07-28-wave105-integration-audit.md)
 and [orchestrator decision](2026-07-28-wave105-orchestrator.md) retain the
 conditional scope and unresolved full extension.
+
+## Waves 96 and 112 C4-incidence verification
+
+- `wave112-c4-short-vector-incidence/` independently verifies the 2,079
+  target cycles, the four alternating-cycle minima `21,20,18,26`, the
+  evenness correction from raw ceiling 51 to 52 oriented occurrences, and
+  the exact `51,20,20,4` fixed-cycle partition. Eleven verifier and eight
+  discovery tests pass.
+- `wave96-norm16-norm18-upper/` independently verifies the weighted cap-25
+  implication, the fixed-cycle projector, the 80-point cross-polytope null
+  control, the norm-20 `10+10` classification, the `h<=3` and 15-cycle
+  bounds, and the rank-30 cap-24 implication. Its verdict is
+  `VERIFIED_WITH_CLARIFICATION`; thirteen verifier and nine discovery tests
+  pass.
+
+Neither cap is proved. No general `N16/N18` upper bound or rank exclusion
+follows.
+
+## Waves 107--110 conditional motif verification
+
+- `wave107-c4boxk3-spectrum/` independently reconstructs the conditional
+  outside characteristic polynomial, correcting the tentative quadratic
+  factor to `x^2-9x-46`. Ten verifier and seven discovery tests pass.
+- `wave109-c4boxk3-local-projector/` independently reconstructs the
+  primitive incidence kernel, its `O^-(74,7)` type, local projector, rank
+  transfer, and Smith/index formulas. Nine verifier and nine discovery tests
+  pass.
+- `wave110-c4boxk3-symmetry-sat/` independently verifies the lex CNF, the
+  simultaneous shared-potential theorem, all four invariant branch covers,
+  and the exact encoding counts. Its verdict is
+  `VERIFIED_WITH_EVIDENCE_BOUNDARY`; seven verifier and eight discovery tests
+  pass.
+
+The fresh Wave 110 runs remain `UNKNOWN_TIMEOUT`. No graph, UNSAT proof,
+motif exclusion, or rank exclusion is promoted.
+
+## Wave 116 C4 Jacobi/theta verification
+
+- `wave116-c4-jacobi-theta/` independently verifies the restricted
+  projector, the valid `K/L` marking scalings, the nondegenerate
+  `(Z/7)^4` sector and retained complement, the Poisson/Fricke factors, and
+  the exact antipodal coefficient convention.
+- The verifier sharpens the main correction: `u_i/sqrt(7)` is definitively
+  outside `K*`, so the proposed small index is invalid.
+- Rank 28 forces 52,812 antipodal incidences; the desired cap-25 upper is
+  51,975, leaving an exact gap of 837.
+- Eleven verifier and eight discovery tests pass. The verdict is
+  `VERIFIED_WITH_CLARIFICATIONS`.
+
+No Jacobi upper certificate or rank exclusion is present. Wave 118 is
+published separately as a sealed subjective estimate and receives no
+mathematical verifier promotion.
+
+The [integration audit](2026-07-28-wave116-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave116-orchestrator.md) preserve all
+conditional and `UNKNOWN` boundaries.

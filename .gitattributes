@@ -129,3 +129,10 @@ attempts/wave94-general-n3-norm14-bound/test_exact_check.py whitespace=-blank-at
 # The sealed Wave 101 verifier retains generated terminal blank records.
 verification/wave101-all-rank-level7-lp/README.md whitespace=-blank-at-eof
 verification/wave101-all-rank-level7-lp/audit.md whitespace=-blank-at-eof
+
+# Waves 96 and 109 contain checksum-pinned generated CRLF byte streams.
+attempts/wave96-norm16-norm18-upper/exact-results.json -text -diff
+attempts/wave96-norm16-norm18-upper/package-manifest.sha256 -text -diff
+verification/wave96-norm16-norm18-upper/independent-results.json -text -diff
+attempts/wave109-c4boxk3-local-projector/exact-results.json -text -diff
+verification/wave109-c4boxk3-local-projector/exact-results.json -text -diff

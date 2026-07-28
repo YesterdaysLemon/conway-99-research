@@ -226,6 +226,28 @@ and the normalized search problem.
   equations, and four complete-encoding searches time out. Thus the precise
   remaining boundary is nonlinear compatibility, not scalar or linear
   feasibility; full extension and Conway-99 remain `UNKNOWN`.
+  Waves 107, 109, and 110 continue the motif lane without assuming that the
+  motif occurs. Conditional on it, the 87-vertex outside graph has a forced
+  exact spectrum, connectedness, 1,356 four-cycles, and a rank-74
+  characteristic-seven lattice of type `O^-(74,7)`. These constraints
+  exclude no surviving rank row. A shared-potential proof validates
+  simultaneous row-lex symmetry breaking inside identical motif-neighborhood
+  classes, but four fresh complete-encoding runs again return
+  `UNKNOWN_TIMEOUT`.
+  Waves 112 and 96 shift the rank-28 squeeze to the 2,079 induced
+  four-cycles. They verify that some cycle lies in at least 26 antipodal
+  norm-14/16/18 supports; a universal cap of 25 would exclude rank 28, but
+  the fixed-cycle metric relaxation already admits an 80-point
+  cross-polytope. Wave 96 also classifies every norm-20 integer
+  `-4`-eigenvector as exactly ten `+1` and ten `-1` coordinates. A cap of
+  24 through norm 20 would exclude rank 30, but that cap is also unproved.
+  Wave 116 corrects the aggregate Jacobi route: the tempting small index is
+  not lattice-compatible, while the valid common index is much larger. Its
+  target coefficient is at least 52,812 antipodal incidences; an upper bound
+  of 51,975 would close rank 28, but no such certificate is known. The
+  current alternative-space frontier is therefore exact and reproducible
+  but still supplies no rank exclusion, strict `n3` upper bound, or
+  Conway-99 resolution.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

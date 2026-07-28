@@ -579,3 +579,71 @@ The motif is not a 99-vertex construction. The code constraints do not force
 Independent verification supplies the triangle-free support argument,
 checks encoding completeness, and confirms that the linear witness fails
 2,525 nonlinear pair equations. Full extension remains `UNKNOWN`.
+
+## Waves 96 and 112: four-cycle shell incidence and norm 20
+
+- `wave112-c4-short-vector-incidence/` proves that the target has exactly
+  2,079 induced four-cycles and that every live norm-14, norm-16, and
+  norm-18 support contains at least `21,20,18,26` alternating cycles in the
+  four respective lanes.
+- The rank-28 shell lower bound then forces at least 52 oriented extensions,
+  or 26 antipodal support pairs, through some cycle. A universal cap of 25
+  pairs would exclude rank 28; the cap is not proved.
+- `wave96-norm16-norm18-upper/` verifies the sharper weighted implication
+  and shows why a projector-plus-distance proof cannot suffice: its
+  fixed-cycle relaxation contains an exact 80-point cross-polytope.
+- The same package extends the graph dictionary to norm 20. Every integer
+  norm-20 `-4` eigenvector has ten `+1` and ten `-1` coordinates, at most
+  three same-sign edges, and at least 15 alternating four-cycles. A
+  universal cap of 24 pairs through norm 20 would exclude rank 30.
+
+Both caps remain `UNKNOWN`. No general `N16` or `N18` upper bound, rank
+exclusion, or graph resolution follows.
+
+## Waves 107, 109, and 110: motif spectrum, local lattice, and safe SAT symmetry
+
+- `wave107-c4boxk3-spectrum/` derives the exact characteristic polynomial
+  of the conditional 87-vertex outside graph. It corrects the tentative
+  quadratic factor to `x^2-9x-46` and forces 549 edges, 167 triangles,
+  1,356 four-cycles, connectedness, and nullity four.
+- `wave109-c4boxk3-local-projector/` constructs the primitive rank-74
+  incidence-kernel lattice. Modulo seven it is `O^-(74,7)`, and the local
+  projector transfers the eight global ranks to `16,18,...,30`; all remain
+  feasible.
+- `wave110-c4boxk3-symmetry-sat/` proves simultaneous external row-lex
+  symmetry breaking by one shared orbit potential, without assuming a
+  target automorphism. The four invariant `e(X0)=0,1,2,3` branches cover the
+  complete encoding.
+
+All four fresh 45-second Wave 110 runs return `UNKNOWN_TIMEOUT`. No spectrum,
+local rank, or bounded solver result extends or excludes the motif.
+
+## Wave 116: corrected aggregate C4 Jacobi route
+
+- `wave116-c4-jacobi-theta/` verifies the common four-coordinate projector
+  Gram matrix for every induced cycle.
+- It rejects the proposed small scalar index: the corresponding marking is
+  outside the required dual lattice.
+- The valid markings give paired indices `G_K/2` and `G_L/2`, with
+  `G_K=7G_L` and `det(G_K)=1,023,942,465`.
+- The selected Fourier coefficient counts antipodal short-vector/cycle
+  incidences exactly. Rank 28 forces at least 52,812, while a cap-25 upper
+  certificate would be 51,975.
+- A degree-32 harmonic interpolation is exact on the three short shells,
+  but its coefficients are signed.
+
+No Jacobi basis, Sturm bound, positivity cone, or dual upper certificate was
+obtained. The route is a corrected reduction, not a rank exclusion.
+
+## Wave 118: subjective strategy estimate
+
+- `wave118-strategy-estimate/` records conservative, central, and liberal
+  six-month judgments for the C4-incidence program.
+- Its central estimates are 55% for a useful verified theorem, 20% for
+  excluding one hard rank row with a C4 variant, and 1% for a complete
+  Conway-99 resolution by this strategy alone.
+- The report recommends aggregate Jacobi/harmonic-theta bounds over the
+  pointwise cap route.
+
+These numbers are subjective research judgments, not mathematical evidence,
+calibrated forecasts, or deadlines.
