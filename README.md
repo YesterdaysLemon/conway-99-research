@@ -32,6 +32,10 @@ and the normalized search problem.
 - **Resolution claim:** none.
 - **Strongest internally verified conditional bound:** `n3>=708`, hence at
   least `209,994` induced six-cycles; this does not resolve existence.
+- **Strongest rank-specific short-vector bound:** in the surviving
+  `rank_F7(2A-J+I)=28` row, exact full-space level-seven modularity forces
+  `N14+N16+N18>=5868`. This is conditional on a hypothetical graph and does
+  not exclude the rank row.
 - **Endpoint arithmetic:** at `n3=708`, the independently verified
   necessary arithmetic includes `tr(C^2)>=10` and `det(B)<=6525`. Wave 27
   conditionally excludes every full orthogonal ADE root-lattice form. Wave 28
@@ -173,7 +177,23 @@ and the normalized search problem.
   elementary packing collapses the remaining outside-degree histograms to
   one norm-16 row and eleven norm-18 rows. The norm-14, norm-16, and
   norm-18 branches all still have live structures, so this is a finite
-  reduction rather than a resolution.
+  reduction rather than a resolution. Waves 80--82 and 86 then move the
+  same boundary into four different spaces. The marked frame gives an
+  exact `[99,44]_7` evaluation code whose hull is
+  `row_F7(2A-J+I)`, whose dual has minimum distance at least six, and whose
+  rank-28 quotient is `O^-(16,7)`. A complete norm-16 labelled-support
+  census reduces 1,800 anchored matrices to five support orbits and 4,985
+  coupling multisets; exact graphicality leaves 47 outside degree rows, but
+  every support orbit remains live. The equivalent integral-orthogonal
+  matrix `T=18A-2J+9I` satisfies `T^2=3969I` and has a fully determined
+  conditional Smith form, yet all eight rank rows survive. Finally, a
+  basis of the full 15-dimensional space `M_22(Gamma0(7))`, together with
+  the exact Fricke relation and Sturm bound, proves in the rank-28 row
+  `N14+N16+N18>=5868`. Wave 84 separately records four complete-domain
+  900-second SAT runs as `UNKNOWN`; no model or proof was produced. These
+  shifts create a concrete lower-bound-versus-packing squeeze, but no
+  matching strict upper bound is yet verified, so the interval remains
+  `708<=n3<=4158` and Conway-99 remains `UNKNOWN`.
 - **Symmetry policy:** no nontrivial automorphism, transitivity, Cayley, or
   circulant assumption is imposed on the full search.
 

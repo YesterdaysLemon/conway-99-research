@@ -451,3 +451,45 @@ it does not exclude asymmetric targets and does not improve
 All three packages have clean-room verification. Surviving histograms are
 necessary conditions, not labelled designs or graphs. Conway-99 and novelty
 remain `UNKNOWN`.
+
+## Waves 80--82: coding, labelled design, and integral-orthogonal shifts
+
+- `wave80-f7-overlattice-code/` turns the marked lattice into an injective
+  `[99,44]_7` evaluation code. It derives the exact hull
+  `row_F7(2A-J+I)`, dual distance at least six, orthogonal-array strength
+  five, and the non-split rank-28 quotient `O^-(16,7)`.
+- `wave81-norm16-labeled-design/` enumerates 1,800 anchored `8+8`
+  4-regular bipartite supports, five support orbits, and 4,985 exact
+  deficiency-coupling multisets. Necessary flow and spectrum tests retain
+  every support orbit.
+- `wave82-seidel-orthogonal/` gives the exact equivalent matrix problem
+  `T=18A-2J+9I`, with `T1=63*1`, `T^2=3969I`, alphabet
+  `{7,16,-2}`, and a complete conditional Smith form for every surviving
+  characteristic-seven rank.
+
+Independent verification accepts each scoped theorem. None of the finite
+orthogonal spaces, labelled supports, Smith profiles, or local code moments
+constructs or excludes a target graph.
+
+## Wave 84: complete-domain SAT portfolio
+
+- `wave84-rooted-sat-portfolio/` records three CaDiCaL configurations and
+  one independently built Kissat configuration against the byte-matched
+  Wave 34 rooted CNF.
+- Every 900-second run stopped without a model or an UNSAT proof. The
+  package is retained as `UNKNOWN` chronology, not promoted evidence.
+
+## Wave 86: full level-seven modular-form squeeze
+
+- `wave86-level7-exact/` works in the complete 15-dimensional space
+  `M_22(Gamma0(7))`, uses the exact Fricke exchange and Sturm bound 14,
+  and derives, in the `q=16` or rank-28 row,
+  `N14+N16+N18>=5868`.
+- An exact formal scalar pair attains 5,868 through the Sturm range and
+  stays integral, even, and nonnegative through degree 50. It is not a
+  lattice, marked frame, or graph.
+
+The independent verifier confirms the inequality and records a source
+normalization correction: the printed cited equation omits a ratio, while
+the factors actually used follow from the source's preceding definitions
+and transformation equation. Rank 28 and Conway-99 remain `UNKNOWN`.

@@ -93,3 +93,19 @@ attempts/wave66-spherical-code-shift/*.sha256 whitespace=-blank-at-eof
 verification/wave72-order11-automorphism/discovery-inventory-preinspection.tsv whitespace=-blank-at-eof
 verification/wave72-order11-automorphism/protocol.md whitespace=-blank-at-eof
 verification/wave72-order11-automorphism/test_independent_verify.py whitespace=-blank-at-eof
+
+# Waves 82 and 86 contain checksum-pinned generated JSON with retained CRLF.
+verification/wave82-seidel-orthogonal/independent-results.json -text -diff
+attempts/wave86-level7-exact/exact-results.json -text -diff
+
+# Sealed Wave 82 and 84 files deliberately retain generated terminal records.
+attempts/wave82-seidel-orthogonal/README.md whitespace=-blank-at-eof
+attempts/wave82-seidel-orthogonal/derivation.md whitespace=-blank-at-eof
+attempts/wave82-seidel-orthogonal/failed-routes.md whitespace=-blank-at-eof
+attempts/wave82-seidel-orthogonal/input-freeze.sha256 whitespace=-blank-at-eof
+attempts/wave82-seidel-orthogonal/protocol.md whitespace=-blank-at-eof
+attempts/wave82-seidel-orthogonal/strategy-memo.md whitespace=-blank-at-eof
+attempts/wave84-rooted-sat-portfolio/README.md whitespace=-blank-at-eof
+attempts/wave84-rooted-sat-portfolio/exact-results.json whitespace=-blank-at-eof
+attempts/wave84-rooted-sat-portfolio/failed-routes.md whitespace=-blank-at-eof
+attempts/wave84-rooted-sat-portfolio/protocol.md whitespace=-blank-at-eof

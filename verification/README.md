@@ -1575,3 +1575,30 @@ The [integration audit](2026-07-27-wave78-integration-audit.md) and
 norm-14, norm-16, and norm-18 structures. No lattice realization, graph,
 endpoint exclusion, strict upper bound, Conway-99 resolution, or novelty
 claim follows.
+
+## Waves 80--82 and 86 alternative-space verification
+
+- `wave80-f7-overlattice-code/` independently verifies the injective
+  `[99,44]_7` code, exact hull, rank-28 orthogonal quotient, complete
+  support-five dual exclusion, and balanced short-vector images. Ten
+  verifier tests and eight discovery tests pass.
+- `wave81-norm16-labeled-design/` independently reproduces the full
+  1,800-support and 4,985-coupling census. Its stricter graphicality
+  extension is separately checked by
+  `wave81-norm16-graphical-refinement/`, leaving 40 degree rows at `t=0`
+  and seven at `t=1`.
+- `wave82-seidel-orthogonal/` independently proves both directions of the
+  integral-orthogonal equivalence and the complete Smith form. All eight
+  imported rank rows pass the exact arithmetic checks.
+- `wave86-level7-exact/` independently reconstructs the full modular-form
+  basis, Fricke matrix, Poisson transfer, positive coefficient identity,
+  and modulo-14 rounding to `N14+N16+N18>=5868`. Its verdict is
+  `VERIFIED_WITH_LITERATURE_CORRECTION` because the printed source formula
+  omits a normalization ratio; the discovery's actual factors follow from
+  the source's preceding equations.
+
+Wave 84 is published separately as an `UNKNOWN` bounded-search report and
+receives no verifier promotion. The
+[integration audit](2026-07-28-wave86-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave86-orchestrator.md) preserve the
+status wall: no rank row, endpoint, or target graph is excluded.
