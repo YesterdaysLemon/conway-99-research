@@ -1741,8 +1741,9 @@ conditional and `UNKNOWN` boundaries.
   proves no local cap.
 - `wave127-wave129-jacobi-audit/` independently rebuilds the modular
   dimensions, Fricke factor, cache consistency, and all 5,874 original
-  candidate rows.  Cutoffs `10--20` are exact finite feasible; cutoff 28
-  remains `UNKNOWN`.  Six verifier tests pass.
+  candidate rows.  Cutoffs `10--20` are exact finite feasible; cutoff 28 was
+  still `UNKNOWN` at that checkpoint and is resolved as finite-feasible by
+  Wave 130 below.  Six verifier tests pass.
 - `wave128-alternative-spaces/` independently reconstructs the finite Smith
   split, exact quadratic Gauss phases, seven-adic gluing, both rootlessness
   arguments, and survival of every imported row.  Eight verifier tests
@@ -1756,3 +1757,29 @@ The [integration audit](2026-07-28-wave131-integration-audit.md) and
 [orchestrator decision](2026-07-28-wave131-orchestrator.md) preserve the
 status wall.  No code, lattice, graph, rank exclusion, strict `n3` upper
 bound, Conway-99 resolution, or novelty claim follows.
+
+## Waves 130 and 132--134 verification
+
+- `wave130-cdd-exact-lp/` independently regenerates all 239 Jacobi columns
+  without discovery imports or serialized caches.  It verifies the
+  cutoff-28 rational point against 454 equalities and 1,686 inequalities,
+  with zero failures and 506 tight rows.  Three verifier tests pass.
+- `wave132-distinguished-biweight/` independently verifies all 200
+  MacWilliams rows, all four split systems, the pair tables, the
+  `A94=A96=A98=0` cut, and the surviving stronger rational witness.
+- `wave133-triangle-holonomy-topology/` independently reconstructs both
+  opposite-sign local controls and the full cover, balanced quotient, link
+  normalization, Euler characteristic, and nonorientable endpoint-scale
+  surface control.
+- `wave134-z4-symmetrized-enumerator/` independently derives the quaternary
+  code types, residue/torsion restrictions, complete size-three forced-word
+  tables, sparse transform coefficients, and corrected 1,119/1,114/161 orbit
+  partition.  Its two prepublication vetoes are retained.  Corrected
+  rational and integral feasibility remain `UNKNOWN_NOT_RUN`.
+
+The [integration audit](2026-07-28-wave133-integration-audit.md) and
+[orchestrator decision](2026-07-28-wave133-orchestrator.md), followed by the
+[Wave 134 audit](2026-07-28-wave134-integration-audit.md) and
+[decision](2026-07-28-wave134-orchestrator.md), preserve the finite and
+conditional scope.  Rank 28, the prism-free endpoint, the strict `n3`
+upper-bound question, code realization, and Conway-99 remain `UNKNOWN`.

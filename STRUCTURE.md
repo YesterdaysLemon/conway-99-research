@@ -3777,3 +3777,75 @@ full residual codegree compatibility:          UNKNOWN
 strict upper bound below 4158:                 NOT PROVED
 Conway-99 / novelty:                           UNKNOWN
 ```
+
+## Waves 130 and 132--134: Jacobi, code-enumerator, and topology shifts
+
+Three independent changes of mathematical language sharpen the current
+boundary without resolving the graph.
+
+The Jacobi-form lane translates rank constraints into a finite system of
+linear equations and inequalities for Fourier coefficients. At cutoff 28,
+an exact rational point satisfies all 454 equations and 1,686 inequalities.
+Thus this finite approximation is consistent and cannot exclude rank 28.
+
+The binary-code lane studies the row space of the hypothetical adjacency
+matrix over the field with two elements. Keeping intersections with the 99
+distinguished neighborhood rows forces the three highest possible image
+weights to vanish:
+
+```text
+A94=A96=A98=0.
+```
+
+This refutes the first ordinary weight-enumerator point, but a stronger
+rational split-enumerator point survives. Integrality and realization by an
+actual code remain open.
+
+For a graph triangle, the twelve outside neighbors attached to each of its
+three vertices form three fibres. Pairwise perfect matchings between these
+fibres compose to a permutation `h_T`. Its fixed points are exactly induced
+triangular prisms based at the triangle. At the prism-free endpoint every
+`h_T` is therefore a derangement, and the exact global sign identity is
+
+```text
+product_T sign(h_T)=(-1)^(chi+E-F).
+```
+
+Both signs occur in exact local controls. A connected, nonorientable abstract
+surface with the endpoint aggregate counts realizes the parity data, so
+parity by itself cannot exclude the endpoint. A successful continuation must
+couple the edge-twist/orientability data back to point-level graph equations.
+
+The quaternary lane keeps the adjacency rows over `Z/4Z`, rather than reducing
+all overlap counts modulo two. Smith normal form forces
+
+```text
+C=row_Z4(A): 4^54 2^1,
+Cperp:       4^44 2^1.
+```
+
+Translation by the common order-two word `2*1` exchanges the numbers of zero
+and two symbols. Complete coefficient patterns on at most three graph rows
+force 84 symmetrized compositions and 8,557,760 distinct words; the analogous
+dual closed-row patterns force 44 compositions and 4,126,784 words. The
+corrected sparse MacWilliams system has
+
+```text
+1119 primal orbits,
+1114 allowed dual orbits,
+161 forbidden dual orbits.
+```
+
+The exact transform and forced tables are verified, but the corrected
+rational and integral feasibility problems have not been run. They remain
+`UNKNOWN`, so no quaternary code or graph is claimed.
+
+```text
+cutoff-28 finite Jacobi relaxation:             VERIFIED FEASIBLE
+distinguished rational split-enumerator:        VERIFIED FEASIBLE
+endpoint aggregate holonomy parity obstruction: REFUTED
+quaternary transform and forced tables:          VERIFIED
+corrected quaternary rational/integral system:   UNKNOWN NOT RUN
+rank 28 / prism-free endpoint / Conway-99:       UNKNOWN
+rigorous interval:                               708 <= n3 <= 4158
+```

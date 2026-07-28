@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-27
+as_of: 2026-07-28
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -2414,3 +2414,79 @@ obligations:
       Block-only integrality, rational linear feasibility, scalar spectra,
       averaged PSD feasibility, local controls, and bounded solver nonhits do
       not discharge this obligation.
+
+  - id: O-WAVE133-ALTERNATIVE-SPACE-CHECKPOINT
+    requirement: >-
+      Independently reconstruct the exact cutoff-28 Jacobi point, the
+      distinguished binary split-enumerator identities and survivor, and the
+      rooted-triangle holonomy identity plus endpoint-scale surface control;
+      preserve every finite, rational, abstract-control, and UNKNOWN boundary.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-28-wave133-integration-audit.md"
+      - "verification/2026-07-28-wave133-orchestrator.md"
+      - "verification/wave130-cdd-exact-lp/package-manifest.sha256"
+      - "verification/wave132-distinguished-biweight/MANIFEST.sha256"
+      - "verification/wave133-triangle-holonomy-topology/MANIFEST.sha256"
+    note: >-
+      All three scoped boundaries pass clean-room verification. They are
+      finite-relaxation or abstract-control results and do not improve the
+      rigorous interval 708<=n3<=4158.
+
+  - id: O-WAVE133-GLOBAL-COMPATIBILITY
+    requirement: >-
+      Supply a global ingredient beyond the surviving finite relaxations:
+      either graph-valued projector completion, an all-cutoff integral
+      modular obstruction, a realizable or impossible labelled joint code
+      enumerator, or a point-level theorem constraining the holonomy twist
+      class. Any exclusion must be independently certified on the complete
+      claimed domain.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "verification/wave130-cdd-exact-lp/verification-report.md"
+      - "verification/wave132-distinguished-biweight/README.md"
+      - "verification/wave133-triangle-holonomy-topology/README.md"
+      - "verification/2026-07-28-wave133-orchestrator.md"
+    note: >-
+      Exact finite primal points, rational split witnesses, local controls,
+      abstract surfaces, numerical solver failures, and bounded timeouts do
+      not discharge this obligation. Conway-99 and the prism-free endpoint
+      remain UNKNOWN.
+
+  - id: O-WAVE134-Z4-CHECKPOINT
+    requirement: >-
+      Independently reconstruct the quaternary code types, residue and
+      torsion restrictions, all size-three forced compositions, the sparse
+      symmetrized MacWilliams transform, the allowed and forbidden orbit
+      partition, and every invalidated provisional-search qualifier.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+      - "verification/wave134-z4-symmetrized-enumerator/independent-results.json"
+      - "verification/wave134-z4-symmetrized-enumerator/verification-report.md"
+      - "verification/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+    note: >-
+      The verifier twice vetoed incomplete prepublication models. The final
+      1119/1114/161 transform partition and 84/44 forced tables pass, but no
+      enumerator or code realization follows.
+
+  - id: O-WAVE134-EXACT-ENUMERATOR-FEASIBILITY
+    requirement: >-
+      For the corrected 1119-variable quaternary symmetrized MacWilliams
+      system, produce either an exact rational primal satisfying all 1114
+      allowed and 161 zero dual rows, or an exact Farkas certificate for
+      infeasibility; then separately decide integral feasibility before any
+      code-realization claim.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/search-status.json"
+      - "attempts/wave134-z4-symmetrized-enumerator/failed-routes.md"
+      - "verification/wave134-z4-symmetrized-enumerator/verification-report.md"
+    note: >-
+      Corrected rational and integral feasibility are UNKNOWN_NOT_RUN. All
+      earlier solver records used undercounted forced tables and are
+      explicitly invalidated.

@@ -659,8 +659,9 @@ calibrated forecasts, or deadlines.
 - `wave127-independent-jacobi-certificate/` and
   `wave129-jacobi-stress/` independently reconstruct the 239-dimensional
   index-10/index-70 level-seven Jacobi relaxation.  Exact rational feasible
-  points replay at cutoffs `10,12,14,16,18,20`; cutoff 28 remains
-  `UNKNOWN`.
+  points replay at cutoffs `10,12,14,16,18,20`.  At that checkpoint cutoff
+  28 was `UNKNOWN`; Wave 130 below subsequently supplied an exact rational
+  feasible point.
 - `wave128-alternative-spaces/` splits the conditional Wave 109
   incidence-kernel lattice into finite-primary rational eigenlattices.  It
   fixes their non-seven discriminant groups, Gauss phases, rootlessness,
@@ -673,3 +674,33 @@ calibrated forecasts, or deadlines.
 All four lanes have separate clean-room verification.  They are finite or
 conditional necessary-condition results, not a code, lattice, graph,
 rank exclusion, or Conway-99 resolution.
+
+## Waves 130 and 132--134: exact boundaries beyond the first alternatives
+
+- `wave130-cdd-exact-lp/` gives an exact rational cutoff-28 Jacobi point.
+  It replays all 454 original equalities and 1,686 inequalities with zero
+  failures and 506 tight rows.  This refutes the earlier numerical
+  cutoff-28 infeasibility diagnostic, not rank 28 or Conway-99.
+- `wave132-distinguished-biweight/` retains intersections with the 99
+  distinguished neighborhood and closed-neighborhood rows.  It forces
+  `A94=A96=A98=0` and refutes the Wave 131 rational witness, but a stronger
+  exact rational split-enumerator witness survives.  Integral and full
+  genus-two feasibility remain `UNKNOWN`.
+- `wave133-triangle-holonomy-topology/` derives
+  `product_T sign(h_T)=(-1)^(chi+E-F)`.  Both local signs survive, and an
+  endpoint-scale connected nonorientable surface control realizes the
+  aggregate parity data.  A future topological obstruction must constrain
+  orientability or the edge-twist class using additional point-level
+  equations.
+- `wave134-z4-symmetrized-enumerator/` lifts the full adjacency row code to
+  `Z/4Z`.  It derives the exact code types, torsion symmetry, sparse
+  symmetrized MacWilliams transform, 8,557,760 forced primal words and
+  4,126,784 forced dual words.  Independent verification twice vetoed
+  incomplete prepublication models; the corrected transform has 1,119
+  primal, 1,114 allowed dual, and 161 forbidden dual orbits.  Corrected
+  rational and integral feasibility are `UNKNOWN_NOT_RUN`.
+
+All four packages have independent clean-room verification.  They are
+finite-relaxation, conditional-enumerator, or abstract-control results, not a
+graph, lattice, realized code, rank exclusion, strict `n3` upper bound, or
+Conway-99 resolution.

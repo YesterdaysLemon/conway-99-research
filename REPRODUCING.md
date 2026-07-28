@@ -3032,6 +3032,74 @@ Replay the incidence-spectrum discovery and independent verifier:
 Wave 59 verifies conditional finite identities and non-distance-regularity.
 It proves neither endpoint nonexistence nor a strict upper bound.
 
+## Waves 130 and 132--134 alternative-space replay
+
+Replay the exact cutoff-28 Jacobi point and its independent no-cache
+reconstruction:
+
+```powershell
+$env:PYTHONPATH='attempts/wave130-cdd-exact-lp'
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave130-cdd-exact-lp -p test_exact_cdd_lp.py -v
+.\.venv\Scripts\python.exe -B `
+  verification/wave130-cdd-exact-lp/independent_no_cache_verify.py `
+  --verify verification/wave130-cdd-exact-lp/independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave130-cdd-exact-lp -p "test_*.py" -v
+```
+
+Replay the distinguished split-enumerator package:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave132-distinguished-biweight -p "test_*.py" -v
+$wave132Manifest = (Get-FileHash -Algorithm SHA256 `
+  attempts/wave132-distinguished-biweight/package-manifest.sha256).Hash.ToLowerInvariant()
+.\.venv\Scripts\python.exe -B `
+  verification/wave132-distinguished-biweight/verify_wave132.py `
+  --repository . `
+  --package attempts/wave132-distinguished-biweight `
+  --expected-manifest $wave132Manifest
+```
+
+Replay the rooted-triangle holonomy and abstract surface control:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave133-triangle-holonomy-topology -p "test_*.py" -v
+$wave133Manifest = (Get-FileHash -Algorithm SHA256 `
+  attempts/wave133-triangle-holonomy-topology/package-manifest.sha256).Hash.ToLowerInvariant()
+.\.venv\Scripts\python.exe -B `
+  verification/wave133-triangle-holonomy-topology/verify_wave133.py `
+  --repository . `
+  --package attempts/wave133-triangle-holonomy-topology `
+  --expected-manifest $wave133Manifest
+```
+
+These replays certify finite or abstract controls only. They do not construct
+a graph, exclude rank 28 or the endpoint, or improve the rigorous interval
+`708<=n3<=4158`.
+
+Replay the corrected quaternary forced-word and transform package and its
+independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts/wave134-z4-symmetrized-enumerator/exact_check.py `
+  --verify attempts/wave134-z4-symmetrized-enumerator/exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts/wave134-z4-symmetrized-enumerator -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  verification/wave134-z4-symmetrized-enumerator/independent_verify.py `
+  --verify verification/wave134-z4-symmetrized-enumerator/independent-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification/wave134-z4-symmetrized-enumerator -p "test_*.py" -v
+```
+
+This certifies the corrected code-type, forced-word, and transform-state
+derivations only. The corrected rational and integral enumerator systems were
+not solved and remain `UNKNOWN_NOT_RUN`.
+
 `requirements-search.txt` pins the prototyping API version, but it is not an
 archival proof lockfile. Before a proof-producing run, also pin the Python ABI,
 wheel hashes, proof-producing solver binary, and independent checker binaries,

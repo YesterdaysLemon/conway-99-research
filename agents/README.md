@@ -275,3 +275,15 @@ Waves 60--63 reports:
 - Wave 61 finite-field, Wave 62 one-root SDP, and Wave 63 rational-cone
   reports are packaged with their exact checkers under `attempts/`; their
   independent audits are under `verification/`.
+
+Waves 130--134 reports:
+
+- `2026-07-28-wave130-cdd-exact-lp-verifier.md`: independent no-cache
+  verification of exact rational Jacobi feasibility through cutoff 28.
+- `2026-07-28-wave133-triangle-holonomy-topology.md`: rooted-triangle
+  holonomy sign identity, opposite-sign local controls, and the
+  endpoint-scale nonorientable surface null boundary.  Read it with the
+  independent verifier under `verification/wave133-triangle-holonomy-topology/`.
+- `2026-07-28-wave134-z4-symmetrized-enumerator.md`: full-problem
+  quaternary-code shift, corrected forced-word tables and transform orbit
+  partition, both verifier-veto repairs, and the unchanged feasibility wall.

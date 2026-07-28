@@ -30,8 +30,8 @@ project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-27-wave65-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-27-wave65-integration-audit.md"
+latest_public_checkpoint: "logs/2026-07-28-wave134-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-28-wave134-integration-audit.md"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3075,4 +3075,60 @@ waves_64_65_checkpoint:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Waves 64--65 verify the exact rooted transition/design formulation, finite block and transition censuses, rational linear control, and hypergraph-algebra restrictions. They supply no integral strong witness, full residual codegree solution, graph, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
-last_updated: 2026-07-27
+waves_123_134_alternative_space_checkpoint:
+  public_base_commit: "aef7b93124f8caeb1a7487f58289436bc4118880"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  endpoint_proof_coverage: "0/33"
+  wave123_projector_status: VERIFIED_SCOPED
+  wave123_discovery_manifest_sha256: "39d680e78bf547c4fb5564048c6b7b1561382fd7d289f54a8a86154cff1a08a7"
+  wave123_verifier_manifest_sha256: "9cd5c9de7ed6b8a919804cf94bab8f0df1bacefd6f57ea273453e14c122fe6c1"
+  wave127_130_jacobi_status: VERIFIED_SCOPED_FINITE_FEASIBLE_THROUGH_CUTOFF_28
+  wave130_equalities: 454
+  wave130_inequalities: 1686
+  wave130_tight_inequalities: 506
+  wave130_discovery_manifest_sha256: "8b1da27e3acaa059934704a85aaa380e101e1db330925ced6e048330d318e3ae"
+  wave130_verifier_manifest_sha256: "5d1aed1c539901077a709ca57e759d71676e432fa31dd80cadf990df7d1a9a8e"
+  wave128_finite_primary_status: VERIFIED_SCOPED_ALL_IMPORTED_ROWS_SURVIVE
+  wave128_discovery_manifest_sha256: "851df7c40ab2056f6a5f927093707e5e9b578df2b18662e6b95fcf6335033038"
+  wave128_verifier_manifest_sha256: "8d48809b536d5eff823c05254b8a34bfdf743f8b97facf5799352ddad2bae606"
+  wave131_ordinary_enumerator_status: VERIFIED_SCOPED_RATIONAL_SUPERSEDED
+  wave131_witness_refuted_by_wave132: true
+  wave132_distinguished_status: VERIFIED_SCOPED_RATIONAL
+  wave132_forced_zero_weights: "94,96,98"
+  wave132_integral_feasibility: UNKNOWN
+  wave132_full_genus_two_feasibility: UNKNOWN
+  wave132_discovery_manifest_sha256: "0b99e87b0f39b1c203709d34ffba3f7b5c94f0078c53fe4020dfc3cd03ec510c"
+  wave132_verifier_manifest_sha256: "a49d3686fe7ec985f973b198529da97530931b186ca0e166a1f81d73b77a8a26"
+  wave133_holonomy_status: VERIFIED_SCOPED_CONTROL
+  wave133_endpoint_excluded: false
+  wave133_aggregate_parity_obstruction: REFUTED
+  wave133_discovery_manifest_sha256: "dae34acdfd3a95c99db79567bf9b8ed20aa1423812dcb4dbe7681730b6d9870a"
+  wave133_verifier_manifest_sha256: "96081553148ba8bac3aafdb17a705e2764621e6ffc8aa2373cf77181939f23a9"
+  wave134_quaternary_status: VERIFIED_SCOPED_DERIVATION
+  wave134_primal_orbits: 1119
+  wave134_allowed_dual_orbits: 1114
+  wave134_forbidden_dual_orbits: 161
+  wave134_primal_forced_compositions: 84
+  wave134_primal_forced_words: 8557760
+  wave134_dual_forced_compositions: 44
+  wave134_dual_forced_words: 4126784
+  wave134_corrected_rational_feasibility: UNKNOWN_NOT_RUN
+  wave134_corrected_integral_feasibility: UNKNOWN_NOT_RUN
+  wave134_discovery_manifest_sha256: "581678d37091754f4bf1f197223a120d82f3051020a45b601e84889dfdad81e9"
+  wave134_verifier_manifest_sha256: "7fc68ba875d7fdc31dd03584d95bd7f80e7ddec01d9c247ce351ac4b4ae6a858"
+  public_checkpoint: "logs/2026-07-28-wave134-public-checkpoint.json"
+  public_checkpoint_sha256: "0a5f2ca03ce1aad786948a5a8a32f60d2a47bcffa4100e9a3966b32d9f1cf12b"
+  wave133_integration_audit: "verification/2026-07-28-wave133-integration-audit.md"
+  integration_audit: "verification/2026-07-28-wave134-integration-audit.md"
+  integration_audit_sha256: "c037cf7484c00c83159eb962de6031354d407f87765da233815ddea28ab457e7"
+  orchestrator_decision: "verification/2026-07-28-wave134-orchestrator.md"
+  orchestrator_decision_sha256: "aa78f109f9746d2fb92b8ce47c3e9d6cd59d86aece5666f9588c3a26d8d0031b"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  caveat: "Waves 123--134 verify scoped projector, finite Jacobi, finite-primary, binary-enumerator, holonomy-control, and quaternary-enumerator boundaries with multiple public corrections. They supply no realized code, lattice, graph, rank exclusion, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+last_updated: 2026-07-28

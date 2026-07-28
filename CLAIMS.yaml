@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-27
+as_of: 2026-07-28
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -2700,6 +2700,69 @@ claims:
       - "verification/wave65-rooted-hypergraph-algebra/audit.md"
       - "verification/wave65-rooted-hypergraph-algebra/package-manifest.sha256"
     limitations: "The exact local control fails target moments in degrees four through six and is not a rooted or target object. Entrywise noncommutative placement of Z and T relative to Q, endpoint existence, and novelty remain UNKNOWN."
+
+  - id: C-WAVE130-JACOBI-001
+    statement: "The rank-28, discriminant-16, level-seven index-10/index-70 Jacobi necessary-condition relaxation has an exact rational feasible point through Fourier cutoff 28; the point satisfies all 454 equalities and 1686 inequalities, with 506 tight inequalities."
+    label: VERIFIED
+    scope: FINITE_JACOBI_NECESSARY_CONDITION_RELAXATION
+    evidence:
+      - "attempts/wave130-cdd-exact-lp/result-cutoff28-warm.json"
+      - "attempts/wave130-cdd-exact-lp/MANIFEST.sha256"
+      - "verification/wave130-cdd-exact-lp/independent-results.json"
+      - "verification/wave130-cdd-exact-lp/package-manifest.sha256"
+    limitations: "Finite feasibility refutes the earlier floating infeasibility diagnostic only. It constructs no graph or lattice, realizes or excludes no rank, and proves no all-cutoff integral modular object."
+
+  - id: C-WAVE132-DISTINGUISHED-BIWEIGHT-001
+    statement: "For the conditional binary image/dual code pair, exact distinguished-row moments force A94=A96=A98=0, refuting the Wave 131 ordinary-enumerator point; a stronger exact rational low-degree split-enumerator point survives all four distinguished systems."
+    label: VERIFIED
+    scope: CONDITIONAL_RATIONAL_DISTINGUISHED_SPLIT_ENUMERATOR
+    evidence:
+      - "attempts/wave132-distinguished-biweight/exact-results.json"
+      - "attempts/wave132-distinguished-biweight/package-manifest.sha256"
+      - "verification/wave132-distinguished-biweight/verification.json"
+      - "verification/wave132-distinguished-biweight/MANIFEST.sha256"
+    limitations: "The surviving point is rational and low-degree. Integral feasibility, full genus-two feasibility, binary-code realization, graph realization, and Conway-99 remain UNKNOWN."
+
+  - id: C-WAVE133-HOLONOMY-001
+    statement: "At the conditional prism-free endpoint, rooted-triangle holonomy obeys product_T sign(h_T)=(-1)^(chi+E-F); both local derangement signs occur, and a connected endpoint-scale nonorientable abstract surface realizes the aggregate all-222 parity data."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_HOLONOMY_AND_ABSTRACT_SURFACE_CONTROL
+    evidence:
+      - "attempts/wave133-triangle-holonomy-topology/exact-results.json"
+      - "attempts/wave133-triangle-holonomy-topology/package-manifest.sha256"
+      - "verification/wave133-triangle-holonomy-topology/verification.json"
+      - "verification/wave133-triangle-holonomy-topology/MANIFEST.sha256"
+    limitations: "The surface is an abstract incidence control, not the N3 relation of a graph. Parity alone does not exclude the endpoint; point-level orientability or twist compatibility remains unproved."
+
+  - id: C-WAVE134-Z4-ENUMERATOR-001
+    statement: "Conditional on a hypothetical srg(99,14,1,2), its quaternary adjacency row code has type 4^54 2 and dual type 4^44 2; the corrected size-three forced tables contain 84 primal and 44 dual compositions representing 8557760 and 4126784 distinct words, and the symmetrized transform has 1119 primal, 1114 allowed dual, and 161 forbidden dual orbits."
+    label: VERIFIED
+    scope: CONDITIONAL_FULL_PROBLEM_QUATERNARY_ENUMERATOR_DERIVATION
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/exact-results.json"
+      - "attempts/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+      - "verification/wave134-z4-symmetrized-enumerator/independent-results.json"
+      - "verification/wave134-z4-symmetrized-enumerator/package-manifest.sha256"
+    limitations: "This verifies code types, forced lower bounds, transform coefficients, and structural zero rows only. It constructs no quaternary code or graph and supplies no rational or integral enumerator witness."
+
+  - id: C-WAVE134-CONTINUATION-001
+    statement: "Rational and integral feasibility of the corrected Wave 134 quaternary symmetrized-enumerator system are UNKNOWN_NOT_RUN."
+    label: UNKNOWN
+    scope: CORRECTED_QUATERNARY_ENUMERATOR_FEASIBILITY
+    evidence:
+      - "attempts/wave134-z4-symmetrized-enumerator/search-status.json"
+      - "attempts/wave134-z4-symmetrized-enumerator/failed-routes.md"
+      - "verification/wave134-z4-symmetrized-enumerator/verification-report.md"
+    limitations: "Every provisional solver run used an undercounted preseal model and is invalidated. A timeout, floating solve error, or missing rational point is not an infeasibility certificate."
+
+  - id: C-WAVE133-CONTINUATION-001
+    statement: "Waves 130, 132, and 133 supply no graph, rank exclusion, prism-free endpoint exclusion, strict upper bound below n3=4158, or Conway-99 resolution."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-28-wave133-integration-audit.md"
+      - "verification/2026-07-28-wave133-orchestrator.md"
+    limitations: "The rigorous interval remains 708<=n3<=4158. Endpoint status, target existence or nonexistence, literature novelty, and priority remain UNKNOWN."
 
   - id: C-EXISTS-001
     statement: "A graph srg(99,14,1,2) exists."

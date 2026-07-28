@@ -189,3 +189,25 @@ verification/wave131-binary-lcd-enumerator/** -text
 verification/wave131-binary-lcd-enumerator/*.json -diff
 verification/wave131-binary-lcd-enumerator/*.sha256 -diff
 verification/wave131-binary-lcd-enumerator/*.txt -diff
+
+# Waves 130, 132, and 133 are sealed, checksum-pinned research packages.
+# Preserve their exact mixed-platform bytes so every package manifest replays
+# after a clean checkout.
+attempts/wave130-cdd-exact-lp/** -text
+verification/wave130-cdd-exact-lp/** -text
+attempts/wave132-distinguished-biweight/** -text
+verification/wave132-distinguished-biweight/** -text
+attempts/wave133-triangle-holonomy-topology/** -text
+verification/wave133-triangle-holonomy-topology/** -text
+attempts/wave130-cdd-exact-lp/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave130-cdd-exact-lp/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave132-distinguished-biweight/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave132-distinguished-biweight/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave133-triangle-holonomy-topology/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave133-triangle-holonomy-topology/** whitespace=cr-at-eol,-blank-at-eof
+
+# Wave 134 is another checksum-pinned mixed-platform research package.
+attempts/wave134-z4-symmetrized-enumerator/** -text
+verification/wave134-z4-symmetrized-enumerator/** -text
+attempts/wave134-z4-symmetrized-enumerator/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave134-z4-symmetrized-enumerator/** whitespace=cr-at-eol,-blank-at-eof

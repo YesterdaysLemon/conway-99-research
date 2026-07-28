@@ -258,26 +258,39 @@ and the normalized search problem.
   larger `Gamma0(7)` space.  A separate 900-second Wave 125 motif-SAT run
   ended `UNKNOWN_TIMEOUT` with the 15% memory reserve preserved.  None of
   these results excludes rank 28 or rank 30.
-  Waves 123 and 127--131 then test four sharper changes of mathematical
+  Waves 123 and 127--134 then test sharper changes of mathematical
   space.  Exact span projectors refute the displayed 40-record coordinate
   family and one alternate 26-record family, but a different 26-record
   subset passes diagonal leverage and 2,340 rooted three-point PSD blocks
   before failing 352 graph-valued two-by-two completion rows.  Thus the
   missing condition is common graph-projector compatibility, not ordinary
   code geometry.  Independently reconstructed level-seven Jacobi
-  relaxations have exact rational feasible points at cutoffs
-  `10,12,14,16,18,20`; cutoff 28 has neither a rational point nor a Farkas
-  certificate and remains `UNKNOWN`.  A finite-primary discriminant split
+  relaxations now have exact rational feasible points through cutoff 28.
+  The cutoff-28 point satisfies all 454 equalities and 1,686 inequalities,
+  so the earlier numerical infeasibility diagnostic is refuted and this
+  finite Jacobi relaxation supplies no rank-28 exclusion.  A finite-primary discriminant split
   fixes both conditional motif eigenlattices down to their local Smith
   factors, Gauss phases, rootlessness, and `O^-(k,7)` seven-primary type,
   but every `k=16,18,...,30` survives.  Finally, the binary idempotent/LCD
   shift forces complete one-, two-, and three-subset word distributions;
-  an exact rational MacWilliams witness still permits image/dual distances
-  `14/15`, while integral formal feasibility remains `UNKNOWN`.  These
+  distinguished-row moments additionally force `A94=A96=A98=0`, refuting
+  the first rational witness.  A stronger rational split-enumerator witness
+  still permits image/dual distances `14/15`, while integral and full
+  genus-two feasibility remain `UNKNOWN`.  The rooted-triangle holonomy
+  shift proves the exact global sign identity, but opposite-sign local
+  controls and a connected endpoint-scale nonorientable surface control show
+  that parity alone cannot exclude the prism-free endpoint.  A full-problem
+  lift to the row code over `Z/4Z` retains overlap multiplicity lost modulo
+  two.  It exactly forces code types `4^54 2` and `4^44 2`, 84 primal and
+  44 dual distinguished compositions, and a corrected transform partition
+  of 1,119 primal, 1,114 allowed dual, and 161 forbidden dual orbits.
+  Corrected rational and integral feasibility have not yet been run and
+  remain `UNKNOWN`.  These
   independently checked boundaries identify graph-valued projector
-  completion, exact cutoff-28 Jacobi feasibility, and labelled joint code
-  enumerators as the live alternatives.  No rank, motif, or target graph is
-  excluded or constructed.
+  completion, higher structure beyond cutoff-28 Jacobi positivity, labelled
+  joint code enumerators over both `F2` and `Z/4Z`, and point-level twist
+  compatibility as the live alternatives.  No rank, motif, endpoint, code,
+  or target graph is excluded or constructed.
   The
   current alternative-space frontier is therefore exact and reproducible
   but still supplies no rank exclusion, strict `n3` upper bound, or
