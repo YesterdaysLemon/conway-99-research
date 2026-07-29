@@ -859,8 +859,263 @@ finite coefficient model for that computation.
   block-intersection clique number seven, and obtains
   `rank_F3(B*B^T)=55`.  The proposed star-complement/code classification is
   not executed and no new numerical bound follows.
+- `wave171-pq-centered-code/` reframes the graph as the point graph of
+  `PQ(2,6,2)` and the triangle-block geometry as the square-zero ternary
+  polynomial `X=K-K^2`.  Every row has weight 198 with exact composition
+  `(33,36-3*p_L,162+3*p_L)`, the 99 point-stars are intrinsic in `K`, and
+  `rank_F3(X)=rank_F3(C)-1`.  Independent verification shows
+  `X=2(C+J)`: this is exactly the earlier centered code in a cleaner
+  geometric language, not a new obstruction.  No search was used.
+- `wave172-weight3-dual-rigidity/` adds a marked complete-weight constraint
+  at `P=0`.  Every weight-three word in the dual centered code has equal
+  nonzero coefficients, is supported on three mutually nonadjacent triangle
+  blocks inducing `3K3`, and forces joint row counts
+  `000^15,111^144,222^18,(012 permutations)^54`.  Mixed signs are excluded
+  by exact integer reflection norms.  This does not determine whether such
+  a dual word exists or exclude the endpoint.
+- `wave173-complete-enumerator-lift/` uses the resulting mixed
+  weight-three zeros to refute the Wave54 ordinary enumerator as a possible
+  complete endpoint enumerator.  Exact degree-two and degree-three moments
+  force a required contribution larger than its maximum by
+  `149881671/2`.  A separate six-cell rational control satisfies the general
+  projective marked moments through degree three, so the refutation is
+  specific to Wave54's distribution and is not an endpoint exclusion.
+- `wave174-no-weight3-dual/` eliminates every weight-three dual word at
+  `P=0`.  A block dependence becomes a ternary line-sum coloring; exact
+  five-cell interlacing leaves `c=8,9`, common-neighbor convexity eliminates
+  eight, and equality at nine forces three new triangles forming a forbidden
+  prism.  The verifier found and repaired the initially omitted empty-cell
+  case `c=18` with the exact quadratic value `-1152`.  Thus
+  `d(W^perp)>=4`, with no rank assumption and no graph search.
+- `wave175-polar-cap-boundary/` moves the smallest surviving centered rank
+  `k=11` into the parabolic quadric `Q(10,3)`.  Exact polar spectral energies,
+  the mod-three refined outside-point second moment, and standard polar-cap
+  bounds all fail to contradict the 231-point set.  The quadratic Veronese
+  map does impose
+  `rank_F3(J-I-R)<=65` and `rank_F3(I+R)<=66`.  These are verified
+  new-to-repository necessary conditions, not an endpoint exclusion; the
+  ordinary polar-cap definition is inapplicable because the set has 3,696
+  orthogonal pairs.
+- `wave176-star-projector-circuits/` restores the 99 labelled point-stars
+  as nondegenerate six-spaces in the conditional rank-11 polar model.  Their
+  canonical trace-zero projectors give `rank_F3(BLB^T)<=65`.  Dimension
+  forces a cross-star dual relation for every nonedge, while an exact
+  four-cycle-type calculation proves the same for every edge.  The adjacent
+  Gram ranks are `10,10,8,9`; only the two rank-10 cases promote exact
+  non-star support minima 8 and 4.  This finite-algebra calculation searches
+  no graph or code and does not exclude the endpoint.
+- `wave177-relation-averaging-conic/` averages over the true ternary
+  relation codes after removing the complete individual-star subcodes.
+  Every edge thereby indexes a genuine cross-star relation of weight `4..8`
+  and every nonedge one of weight `4..9`; no distinctness across pairs is
+  claimed.  The type `4+2` weight-four word is exactly a complete
+  `Q(2,3)` conic, whose frame contribution is canceled by the other nine
+  points of `PG(2,3)`.  This is a verified analytic short-circuit theorem and
+  a local divisibility null control, not an endpoint exclusion.
+- `wave178-edge-circuit-injection/` closes the edge-multiplicity gap with a
+  `lambda=1` triangle-incidence proof.  The 693 edges inject into distinct
+  projective dual circuits.  A tiny classification of four derived local
+  Gram kernels shows that the chosen circuits have weights `4,6,8`, equal
+  support on the two outer stars, and equal coefficient counts `1,2`.
+  Consequently `B_4+B_6+B_8>=1386`.  No graph, code, SAT, or isomorphism
+  search is used, and the endpoint remains unexcluded.
+- `wave179-global-transversal-circuits/` treats every cross circuit support
+  as an exact two-transversal of graph triangles.  One support cross-realizes
+  at most three vertex pairs; disjoint realizations have multiplicity two
+  and both pairs are nonedges.  Wave178 balance globally isolates all 693
+  edge circuits, while the 4,158 nonedges need at least 1,386 additional
+  projective circuits.  Hence there are at least 2,079 projective circuits
+  of weights `4..9` and `B_4+...+B_9>=4158`.  This is a verified conditional
+  rank-11 necessity, not an endpoint contradiction.
+- `wave180-capacity3-companion/` classifies the three-nonedge equality case
+  inside one nondegenerate finite-polar star space.  The seven local
+  cross-edge counts and star projector leave one marked triple, producing a
+  weight-four `Q(2,3)` conic circuit and a weight-five complementary circuit
+  with exactly the same three labels.  A minimal-cover companion involution
+  forces at least 2,079 nonedge-realizing and 2,772 total projective circuits,
+  hence `B_4+...+B_9>=5544`.  The theorem is independently verified and uses
+  no graph, code, SAT, configuration, or isomorphism search.  It strengthens
+  the rank-11 endpoint boundary without excluding it.
+- `wave181-c4-conic-equality/` excludes shared-center multiplicity-two
+  circuits and identifies every surviving twice-used support with the four
+  edge-triangles of the canonical induced quadrilateral on a paired
+  nonedge.  Its unique checkerboard relation is a `Q(2,3)` conic.  Equality
+  in Wave180's nonedge lower bound therefore requires all 2,079 canonical
+  quadrilaterals to be conics.  The signed square--triangle matrix then has
+  conditional rank at most 220 and exact Gram `2K+L` over `F_3`. At that
+  checkpoint, proving rank at least 221 was the exposed continuation. The
+  first global conic-projector sum is a verified characteristic-three null
+  boundary; Wave186 later excludes the equality face by a different
+  star-translation argument.
+
+- `wave182-a6-root-gluing/` recasts Wave181 equality as 99 glued local
+  21-point negative-`A6` root systems. The two local root sets attached to
+  nonadjacent stars meet in exactly their canonical norm-one root, every
+  root color induces a 4-regular graph in the complement, and exact edge
+  capacities plus second moments give
+  support sizes `5..10` and `231..415` global roots.  The all-nine lower
+  boundary has incidence Gram `20I+5A+J`; its positive spectrum and first
+  characteristic-three frame sum are verified null tests, not feasibility.
+- `wave183-root-support-girth/` strengthens the same equality face without
+  a construction search.  Opposite canonical-square roots are orthogonal,
+  so no pair in one root support can have two internal common neighbors.
+  An internal two-path injection excludes support multiplicities nine and
+  ten, and a cubic triangle-packing argument excludes eight.  The remaining
+  induced support graphs are exactly `5K1`, `3K2`, and `C7`, giving the
+  verified conditional root interval `297..415` and a split finite-polar
+  frame identity. This argument alone does not exclude Wave181 equality;
+  Wave186 later does so by star translation.
+- `wave184-root-support-intersections/` proves that distinct root supports
+  meet in at most two vertices, with every two-point intersection a graph
+  edge.  Root/internal-edge incidences inject into distinct projective
+  weight-four edge circuits.  The exact count `3*n_6+7*n_7` is at least 12,
+  so Wave181 equality conditionally forces at least 2,091 projective
+  weight-four circuits and `B_4>=4182`. This theorem is independently
+  verified; no incompatible upper bound on `B_4` is known, while Wave186
+  later excludes the equality face by a different invariant.
+- `wave185-local-a6-transition-collapse/` finishes the local transition
+  analysis on that former equality face. Prism-free cell geometry forces
+  `n_7=0`; the exact type-5 and type-6 transition profiles are
+  `(0,2,2,8)` and `(1,2,0,9)`. Consequently `n_5>=15`, the conditional
+  global-root interval is `349..415`, and the root complement contains at
+  least 94,264 rainbow triangles. The theorem is independently verified.
+- `wave186-star-translation-cover/` leaves the equality face and acts
+  directly on a minimum short-circuit cover of the 4,158 nonedges.
+  Endpoint-star translations give two distinct external short circuits for
+  each private label on a multiplicity-two support; multiplicity-three
+  supports also have two distinct companions. Exact cover accounting then
+  gives `9Q>=8*4158`, hence `Q>=3696`, at least 4,389 total projective
+  circuits of weights four through nine, and
+  `B_4+B_5+B_6+B_7+B_8+B_9>=8778`. This independently verified theorem
+  excludes `Q=2079` and closes the Waves181--185 equality branch, but it
+  does not exclude rank 11 or improve the global `n_3` interval.
+- `wave187-code-geometry-proof-b/` supplies an exact rational hostile
+  control for the stronger code-theoretic lane. It has `B1=B2=B3=0`,
+  fixes the 231 marked weight-198 scalar pairs, satisfies every ordinary
+  MacWilliams inequality, all complete coefficients through degree six,
+  and the typed quadratic moments through degree three. Its short dual-word
+  count greatly exceeds 18,018. The control is not a code; its first
+  negative complete coefficient occurs in degree seven. These claims were
+  reconstructed independently in exact arithmetic.
+- `wave188-affine-star-word-amplification/` counts actual translated dual
+  words rather than circuits. The affine `3 by 3` two-star orbit has at
+  least three short projective words; support capacity and the one-block
+  projector classification separate the private-label contributions.
+  Exact accounting gives at least 8,316 nonedge-realizing and 9,009 total
+  projective dual words of weights four through nine, hence
+  `B_4+B_5+B_6+B_7+B_8+B_9>=18018`. The theorem is independently
+  verified but does not exclude rank 11 or the endpoint.
+- `wave189-orbit-closed-star-translations/` closes the raw extraction pool
+  under the exact-three companion involution and uses private-label
+  ownership plus the `6+2` versus `2+6` common-center orientation to cut
+  orbit capacity. A checkerboard subtraction excludes the sole scalar
+  equality face. The independently verified conditional conclusion is
+  `Q>=4852`; its 13,860-flag Hoffman calculation is a sharp design null
+  boundary, not an integral construction.
+- `wave189-degree7-star-complete/` gives an exact 16-cell rational control
+  satisfying the one-star polygon, complete MacWilliams rows through degree
+  seven with `B_(7,0)=B_(0,7)=99`, the forced star-pair rows in degrees
+  12--14, ordinary rows, and typed moments. This independently verified
+  feasibility result is not a code, point set, graph, or endpoint.
+- `wave190-residual-stability-proof-b/` charges raw and residual assignments
+  to the same three-label companion-orbit capacity. Its exact slack identity
+  and coefficient certificate `6Q>=8*4158` give the independently verified
+  conditional circuit bound `Q>=5544`, at least 6,237 projective short
+  circuits after adjoining the edge family, and the circuit-only scalar
+  bound `B_4+...+B_9>=12474`. The sharp row is arithmetic only.
+- `wave191-exact-three-residual-proof-a/` and
+  `wave191-global-star-module-proof-b/` exclude exact-three private-leaf raw
+  extraction and couple the residual capacities, giving the independently
+  verified conditional bound `Q>=6237`.
+- `wave192-equality-face-proof-a/` and `wave192-c4-cohomology-proof-b/`
+  reconstruct and exclude equality in Wave 191 by canonical-square
+  checkerboard translations, giving the verified strict bound `Q>=6238`.
+- `wave193-global-low-target-proof-a/` and its aggregate proof-B audit combine
+  the raw-assignment and residual pools in the exact row `117Q>=177C`, hence
+  the verified conditional bound `Q>=6291`.
+- `wave194-type2-residual-low-u-proof-a/` and its five-thirds proof-B audit
+  prove the doubled type-two residual and joint leaf-capacity rows. Their
+  exact certificate gives the verified conditional bound `Q>=6930`.
+- `wave195-leaf-packet-intersection-proof-a/` and
+  `wave195-packet-cohomology-proof-b/` recast fixed-center flags as simple
+  intersecting 3-subset families of a seven-set. Hilton--Milner and the
+  common-star case give the verified conditional bound `Q>=6980`.
+- `wave196-four-fiber-hilton-milner-proof-a/` and its proof-B audit use the
+  four vertices in each of the 21 local pair fibers and the two
+  Hilton--Milner equality templates to prove `c_x<=13`, `j_x<=36`, and the
+  verified conditional bound `Q>=7029`.
+- `wave197-degree10-flag-cap-proof-a/` and its hostile audit retain the five
+  flags per oriented nonedge, private-label degree one, and full-pool
+  headroom. The verified exact certificate gives `Q>=7033`.
+- `wave198-orientation-lift-proof-b/` and its hostile proof-A audit keep the
+  two orientations separate and prove the weighted row
+  `S5=17820-3n3-4p3-5a3-5b3>=0`, yielding the verified bound `Q>=7037`.
+- `wave199-near-face-gluing-proof-a/` and its proof-B audit exclude the first
+  integer face above the Wave 198 rational target. They are subsumed by the
+  independently verified Wave 200 theorem.
+- `wave200-two-face-gluing-proof-a/` and its proof-B audit prove additive
+  loss for multiplicity-five labels in distinct four-point fibers and
+  exclude both `Q0=7037,7038`, giving the verified bound `Q>=7039`.
+- `wave201-multiplicity-weighted-fiber-loss-proof-a/` and its proof-B audit
+  handle arbitrary same-fiber multiplicity profiles, including multiplicity
+  one. The row `delta>=3q-epsilon` and exact certificate give the verified
+  conditional bound `Q>=7059`, or 7,752 projective short circuits after
+  adjoining the edge-isolated family.
+- `wave202-three-unit-equality-face-proof-a/` characterizes all symbolic
+  partitions and local zero conditions at `Q0=7059`. It records the honest
+  stopping point: its one-center rows do not exclude the face, so no
+  `Q>=7060` or endpoint exclusion is claimed.
+- `wave203-two-center-incidence-proof-b/` and its hostile proof-A audit prove
+  that the two orientations of one nonedge share five third-block slots. A
+  matched reverse pair would force the all-equal word on the canonical
+  quadrilateral, contrary to its verified checkerboard Gram kernel. Thus the
+  combined directional flag multiplicity is at most five and
+  `epsilon>=5b` for `b` both-oriented labels. Since no checked row forces
+  `b>0`, the conditional bound remains `Q>=7059`.
 
 Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
 full four-root PSD feasibility problem, complete triangle-root binary factor,
 strict `n3<4158` bound, and Conway-99 remain `UNKNOWN`.
+
+Wave 204 attempts:
+
+- `wave204-literature-hostile-controls/` gives an exact relaxed 99-center
+  `b=0` certificate and a focused primary-source hypothesis audit. The
+  certificate refutes only the frozen local-interface force-`b>0` lemma; it
+  is not an SRG, ternary code, or endpoint.
+- `wave204-global-slot-holonomy-proof-a/` identifies the true triangle-block
+  gain as a coboundary and uses exact relaxed rank-11 controls to refute
+  center-walk chaining and determined total-`S_5` transport from Wave 203's
+  partial slots.
+- `wave204-projector-fourth-order-proof-b/` proves the conditional adjacent
+  fourth-trace detector for the four outer edge types and records exact
+  controls showing that pair trace plus intersection dimension does not fix
+  the fourth trace.
+
+All promoted claims pass `wave204-global-compatibility-verifier/`. The next
+route is a graph-specific classification of nonedge fourth traces and a
+global identity for the full `99 by 99` fourth-trace matrix. The conditional
+bound remains `Q>=7059`, the rigorous interval remains `708<=n3<=4158`, and
+Conway-99 remains `UNKNOWN`.
+
+Wave 205 attempts:
+
+- `wave205-fourth-trace-globalization/` freezes the branch, evidence
+  boundary, and inflection criteria.
+- `wave205-nonedge-fourth-trace-proof-a/` derives the exact nonedge
+  cross-Gram profiles, exhausts the normalized `t=6,7` frontier, and gives
+  four 28-vertex rank-11 local certificates. These controls refute only
+  pair-local implications.
+- `wave205-global-fourth-moment-proof-b/` proves `H=U K_D U^T`,
+  `rank(U)=99`, and the row-localizer contractions, while recording why
+  ambient rank and first-moment shortcuts fail.
+- `wave205-fourth-trace-hostile-controls/` gives a stronger relaxed
+  99-projector/231-column incidence control whose nonedge fourth traces vary,
+  while explicitly failing projective distinctness and the target
+  `lambda/mu` laws.
+
+The independently verified inflection is that pair-local fourth-order data
+cannot decide the endpoint. Further work must control simultaneous
+99-center extension, the crossing kernel on `row(U)`, or an equivalent
+three-center invariant. No endpoint or Conway-99 claim is promoted.

@@ -2530,3 +2530,94 @@ obligations:
       Exact coefficient matrices, ordinary deletion rows, n3 carrier entries,
       and a positive control do not discharge the endpoint SDP. No numerical
       run, rational dual, strict upper bound, or target resolution exists.
+
+  - id: O-WAVE204-GLOBAL-COMPATIBILITY-CHECKPOINT
+    requirement: >-
+      Independently freeze and verify the relaxed b=0 certificate, the honest
+      triangle-block coboundary, the failure of center-walk and total-S5
+      implications, the conditional adjacent fourth-order detector, and the
+      failure of pair trace plus intersection dimension to determine fourth
+      trace; retain every blind/source discrepancy and target premise.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-29-wave204-integration-audit.md"
+      - "verification/2026-07-29-wave204-orchestrator.md"
+      - "verification/wave204-global-compatibility-verifier/SOURCE_BLIND_FREEZE.sha256"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+      - "verification/wave204-global-compatibility-verifier/package-manifest.sha256"
+    note: >-
+      All 32 submitted entries match; submitted tests pass 8+10+10; the
+      source-blind suite passes 11 tests; and the post-source semantic suite
+      passes five tests. The optional global projector controls are not
+      independently promoted. The scoped results do not improve Q>=7059 or
+      708<=n3<=4158 and do not decide an endpoint or the target.
+
+  - id: O-WAVE204-FOURTH-TRACE-GLOBALIZATION
+    requirement: >-
+      Classify h_xy=tr(P_xP_yP_xP_y) for every nonadjacent pair in an actual
+      rank-11 endpoint realization and derive an exact graph-specific row,
+      moment, module, or rank identity for the full 99-by-99 fourth-trace
+      matrix that is incompatible with all possible 4+2 edge-type
+      distributions; alternatively construct a full endpoint-compatible
+      fourth-trace realization.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave204-projector-fourth-order-proof-b/derivation.md"
+      - "attempts/wave204-projector-fourth-order-proof-b/failed-routes.md"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+      - "verification/2026-07-29-wave204-orchestrator.md"
+    note: >-
+      Adjacent h detects type 4+2, but pair traces, intersection dimensions,
+      local slots, and repeated-direction relaxed projector systems do not
+      determine the global fourth tensor. Any completion must use actual SRG
+      common-neighbor geometry or the 231-column incidence frame and receive
+      independent verification before endpoint promotion.
+
+  - id: O-WAVE205-FOURTH-TRACE-INFLECTION-CHECKPOINT
+    requirement: >-
+      Independently freeze and verify the exact nonedge cross-Gram profiles,
+      the complete normalized t=6 and t=7 census, all full-rank local
+      certificates and Gram-radical guards, the full H=U K_D U^T
+      factorization, star-pair rank, row localizers, correct tensor
+      dimensions, generic first-moment countercontrol, and stronger
+      99-projector/231-column hostile control with every failed target premise
+      retained.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-29-wave205-integration-audit.md"
+      - "verification/2026-07-29-wave205-orchestrator.md"
+      - "verification/wave205-fourth-trace-globalization-verifier/SOURCE_BLIND_FREEZE.sha256"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+      - "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256"
+    note: >-
+      The source-blind and post-source suites pass 17 tests, submitted
+      Proof-A and Proof-B suites pass 13 and 12 tests, and all six hostile
+      tests pass. The result is an important route-selection inflection:
+      pair-local fourth-order data and generic moment/rank shortcuts are
+      insufficient. No endpoint or target status is promoted.
+
+  - id: O-WAVE205-SIMULTANEOUS-GLOBAL-EXTENSION
+    requirement: >-
+      Prove a simultaneous 99-center extension law that controls the
+      crossing kernel K_D on row(U), the Hadamard localizers
+      Q o (D S_x D), the norms and overlaps of w_TU, or an equivalent
+      three-center invariant; then use it to classify actual endpoint
+      nonedge fourth traces and derive a checked endpoint contradiction or
+      construct a compatible full endpoint object.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave205-nonedge-fourth-trace-proof-a/failed-routes.md"
+      - "attempts/wave205-global-fourth-moment-proof-b/failed-routes.md"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+      - "verification/2026-07-29-wave205-orchestrator.md"
+    note: >-
+      The 28-vertex controls leave unsaturated pairs uncompleted, the generic
+      99-label projector control has no target incidence, and the stronger
+      99-by-231 control fails projective distinctness and lambda/mu. Pair-local
+      censuses, relaxed controls, or ambient coordinate counts do not
+      discharge this obligation. Actual nonedge h, rank 11, n3=4158, and
+      Conway-99 remain UNKNOWN.

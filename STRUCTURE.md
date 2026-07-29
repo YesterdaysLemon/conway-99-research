@@ -4170,3 +4170,75 @@ record counts, deletion layer, and class streams; it does not recompute all
 the stronger marked degree/common-neighbor extension rows, run an endpoint
 SDP, or extract a rational dual.  It is an exact finite route to the next
 bound attempt, not a bound itself.
+
+## Wave 204: global compatibility and fourth-order star pairs
+
+Wave 204 tested whether the surviving `b=0` face could be closed by local
+slot holonomy or by higher projector moments.
+
+The honest flag transition is on triangle blocks:
+
+```text
+S -> T,  g(S->T)=z_T-z_S.
+```
+
+It is the literal coboundary `dz`, so it telescopes on true block cycles.
+Wave 203 does not identify the incoming and outgoing block at an intermediate
+center and supplies only partial five-slot maps. Exact relaxed rank-11 `A6`
+controls and ambiguous total `S_5` extensions therefore refute center-walk
+chaining and determined monodromy from those local premises.
+
+A separate exact relaxed 99-center certificate realizes all frozen
+degree/complement, Hilton--Milner, fiber, equality-row, and slot-capacity
+data with `b=0`. It is not strongly regular and has no ternary columns or
+endpoint code, so it refutes only the local-interface force-`b>0` lemma.
+
+The positive theorem is fourth-order. For adjacent endpoint stars, with
+outer biadjacency matrix `N`,
+
+```text
+P_xP_yP_x|E_x=NN^T,
+h_xy=tr(P_xP_yP_xP_y)=tr((NN^T)^2).
+```
+
+Over `F_3`, `h_xy` equals one precisely for edge type `4+2` and zero for
+types `6`, `3+3`, and `2+2+2`. It is also the exterior-square projector
+trace. Pair trace plus intersection dimension does not determine it.
+
+The independent verifier passed 11 source-blind and five post-source hostile
+tests, all 32 submitted manifest entries, and all 28 submitted tests.
+The optional repeated-direction 99-projector control was source-replayed but
+not independently promoted.
+
+The next exact target is to classify nonedge `h_xy` and derive a
+graph-specific global identity for the full fourth-trace matrix. No rank-11
+or prism-free endpoint exclusion, `Q>=7060`, strict improvement of
+`708<=n3<=4158`, graph, or Conway-99 resolution follows.
+
+## Wave 205: fourth-trace globalization inflection
+
+Wave 205 derives the exact nonedge cross-Gram profiles and exhausts the
+normalized `t=6,7` frontier.  Full-rank local controls show that projectivity
+does not force `t>=7` and that fixed `t=7` does not determine the fourth
+trace.  These are 28-vertex two-center controls, not global graphs.
+
+The global lane proves
+
+```text
+H=U K_D U^T,
+rank_F3(U)=99,
+```
+
+and identifies the missing graph-specific data as the crossing kernel on
+`row(U)`, the Hadamard localizers `Q o (D S_x D)`, or the vectors `w_TU`.
+Correct tensor coordinate spaces are all larger than 99, and a scoped
+control refutes the generic implication `sum_x P_x=0 => H1=0`.
+
+The hostile lane adds a relaxed 99-projector/231-column incidence coupling
+whose nonedge fourth traces vary while all edge fourth traces agree.  It
+fails projective distinctness and the target `lambda/mu` laws.
+
+A fresh verifier froze nine tests before source exposure and passed eight
+more independent post-source tests.  Verdict: `PASS_SCOPED_INFLECTION`.
+Actual endpoint nonedge traces, rank 11, `n3=4158`, and Conway-99 remain
+`UNKNOWN`.

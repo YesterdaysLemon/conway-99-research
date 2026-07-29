@@ -307,3 +307,21 @@ verification/wave158-general-cube-wagner/** whitespace=cr-at-eol,-blank-at-eof
 attempts/wave159-four-root-cut-loop/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave161-four-root-cut-loop/** whitespace=cr-at-eol,-blank-at-eof
 attempts/wave162-four-root-facial-reduction/** whitespace=cr-at-eol,-blank-at-eof
+
+# Waves 163--203 are sealed, checksum-pinned mixed-platform research packages.
+# Preserve exact bytes so every manifest survives the Git index and clone.
+attempts/wave1[6-9]*/** -text
+verification/wave1[6-9]*/** -text
+attempts/wave20[0-3]*/** -text
+verification/wave20[0-3]*/** -text
+verification/wave144-sixset-odd-profile/** -text
+agents/2026-07-*-wave1[7-9]*.md -text
+agents/2026-07-*-wave20[0-3]*.md -text
+
+attempts/wave1[6-9]*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave1[6-9]*/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave20[0-3]*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave20[0-3]*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave144-sixset-odd-profile/** whitespace=cr-at-eol,-blank-at-eof
+agents/2026-07-*-wave1[7-9]*.md whitespace=cr-at-eol,-blank-at-eof
+agents/2026-07-*-wave20[0-3]*.md whitespace=cr-at-eol,-blank-at-eof
