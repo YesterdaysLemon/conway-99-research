@@ -2840,3 +2840,132 @@ claims:
     label: UNKNOWN
     scope: TARGET
     evidence: []
+
+  - id: C-WAVE204-RELAXED-B0-001
+    statement: "The frozen degree/complement, local Hilton--Milner, four-point-fiber, Wave201 equality-row, and Wave203 slot-capacity premises force bidirectional selected-label occupancy b>0."
+    label: REFUTED
+    scope: RELAXED_LOCAL_INTERFACE_FORCE_B_POSITIVE_IMPLICATION
+    evidence:
+      - "attempts/wave204-literature-hostile-controls/countermodel.json"
+      - "attempts/wave204-literature-hostile-controls/package-manifest.sha256"
+      - "verification/wave204-global-compatibility-verifier/post_source_result.json"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+    limitations: "The certificate's circulant skeleton is not strongly regular; its fibers are declared relaxation data; and it contains no ternary columns, rank-11 code, circuit cover, or endpoint. It is not evidence that b=0 occurs in a target graph."
+
+  - id: C-WAVE204-BLOCK-COBOUNDARY-001
+    statement: "For every true selected flag, the canonical triangle-block gain g(S->T)=z_T-z_S is the coboundary dz and hence telescopes to zero on every genuine directed block cycle."
+    label: VERIFIED
+    scope: CONDITIONAL_TRUE_TRIANGLE_BLOCK_CYCLES
+    evidence:
+      - "attempts/wave204-global-slot-holonomy-proof-a/derivation.md"
+      - "attempts/wave204-global-slot-holonomy-proof-a/exact-results.json"
+      - "verification/wave204-global-compatibility-verifier/blind_result.json"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+    limitations: "The identity is definitional and supplies no obstruction. Wave203 does not prove that consecutive center-walk arrows share the same intermediate triangle block."
+
+  - id: C-WAVE204-CENTER-HOLONOMY-001
+    statement: "Wave203 partial slot injections plus local normalized A6 flag equations force center-walk block chaining and determine a total S5 monodromy."
+    label: REFUTED
+    scope: LOCAL_RANK11_CENTER_HOLONOMY_IMPLICATION
+    evidence:
+      - "attempts/wave204-global-slot-holonomy-proof-a/exact-results.json"
+      - "attempts/wave204-global-slot-holonomy-proof-a/package-manifest.sha256"
+      - "verification/wave204-global-compatibility-verifier/post_source_result.json"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+    limitations: "The countercontrols omit 99 stars, 231 global columns, the global frame, graph incidence, cover totals, and endpoint realization. They refute only the stated local implication."
+
+  - id: C-WAVE204-FOURTH-TRACE-001
+    statement: "Conditional on the rank-11 endpoint adjacent-star Gram blocks, h_xy=tr(P_xP_yP_xP_y) equals 1 exactly for outer edge type 4+2 and 0 for types 6, 3+3, and 2+2+2; the exterior-square trace equals h_xy and the symmetric-square trace equals 2h_xy."
+    label: VERIFIED
+    scope: CONDITIONAL_ADJACENT_ENDPOINT_STAR_PAIRS_OVER_F3
+    evidence:
+      - "attempts/wave204-projector-fourth-order-proof-b/derivation.md"
+      - "attempts/wave204-projector-fourth-order-proof-b/exact-results.json"
+      - "attempts/wave204-projector-fourth-order-proof-b/package-manifest.sha256"
+      - "verification/wave204-global-compatibility-verifier/blind_result.json"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+    limitations: "Only adjacent pairs are classified. The distribution of 4+2 edges, all nonedge fourth traces, and any full-matrix rank or moment consequence remain UNKNOWN."
+
+  - id: C-WAVE204-FOURTH-UNDERDETERMINATION-001
+    statement: "Pair trace together with star-space intersection dimension determines tr(P_xP_yP_xP_y) for exact rank-11 orthogonal projectors over F3."
+    label: REFUTED
+    scope: PAIR_INVARIANTS_DETERMINE_FOURTH_TRACE_IMPLICATION
+    evidence:
+      - "attempts/wave204-projector-fourth-order-proof-b/exact-results.json"
+      - "verification/wave204-global-compatibility-verifier/blind_result.json"
+      - "verification/wave204-global-compatibility-verifier/audit.md"
+    limitations: "The independent witnesses are projector pairs, not adjacent or nonadjacent pairs in a target graph. They refute only determination from the two named pair invariants."
+
+  - id: C-WAVE204-TARGET-001
+    statement: "Wave204 does not decide the rank-11 endpoint, n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-29-wave204-integration-audit.md"
+      - "verification/2026-07-29-wave204-orchestrator.md"
+      - "logs/2026-07-29-wave204-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. Novelty and priority remain UNKNOWN."
+
+  - id: C-WAVE205-NONEDGE-PROFILE-001
+    statement: "Conditional on the prism-free rank-11 endpoint, every nonedge two-star cross Gram has marked corner [[1,2],[2,1]], marked profile 0^0 1^5 2^2, ordinary row and column total six, t_xy>=6, nonneighbor average t_xy=7, and tr(P_xP_y)=2t_xy over F3."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_NONEDGE_TWO_STAR_GEOMETRY
+    evidence:
+      - "attempts/wave205-nonedge-fourth-trace-proof-a/derivation.md"
+      - "attempts/wave205-nonedge-fourth-trace-proof-a/package-manifest.sha256"
+      - "verification/wave205-fourth-trace-globalization-verifier/post_source_result.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+    limitations: "The theorem gives necessary pair-local constraints only. It does not classify the actual nonedge fourth traces or complete any two-center ball to a 99-vertex graph."
+
+  - id: C-WAVE205-PAIR-LOCAL-001
+    statement: "Local rank-11 projectivity and true-relation distance force t_xy>=7, and fixing t_xy=7 together with the checked pair invariants determines h_xy."
+    label: REFUTED
+    scope: PAIR_LOCAL_NONEDGE_FOURTH_TRACE_IMPLICATIONS
+    evidence:
+      - "attempts/wave205-nonedge-fourth-trace-proof-a/controls.json"
+      - "attempts/wave205-nonedge-fourth-trace-proof-a/exact-results.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/post_source_result.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+    limitations: "The complete normalized census covers t=6 and t=7. The four witnesses are 28-vertex local controls with unsaturated pairs, not target graphs or global endpoint completions."
+
+  - id: C-WAVE205-GLOBAL-FOURTH-MOMENT-001
+    statement: "For the conditional endpoint star system, the full fourth-trace matrix factors as H=U K_D U^T, the ordered star-pair feature U has rank 99, and the stated Hadamard row-localizer and w_TU norm contractions hold exactly."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_GLOBAL_FOURTH_TRACE_FACTORIZATION
+    evidence:
+      - "attempts/wave205-global-fourth-moment-proof-b/derivation.md"
+      - "attempts/wave205-global-fourth-moment-proof-b/package-manifest.sha256"
+      - "verification/wave205-fourth-trace-globalization-verifier/post_source_result.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+    limitations: "The factorization exposes the unknown crossing kernel rather than eliminating it. The source feature has full rank, and all valid tensor-coordinate caps exceed 99."
+
+  - id: C-WAVE205-FIRST-MOMENT-001
+    statement: "For rank-six trace-zero projectors in the nonsquare 11-space with exact local seven-column simplexes, sum_x P_x=0 generically forces the fourth-trace row sum H1=0."
+    label: REFUTED
+    scope: GENERIC_PROJECTOR_FIRST_TO_SECOND_MOMENT_IMPLICATION
+    evidence:
+      - "attempts/wave205-global-fourth-moment-proof-b/exact-results.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/post_source_result.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+    limitations: "The exact 99-label control repeats projectors and supplies no target 231-column incidence. It cannot refute a future identity using the omitted graph-specific premises."
+
+  - id: C-WAVE205-HOSTILE-CONTROL-001
+    statement: "Two exact relaxed 99-projector and 231-column systems can share the full pair-trace matrix and all 693 edge fourth traces while differing on 3888 ordered nonedge fourth traces."
+    label: VERIFIED
+    scope: RELAXED_LINEAR_TRIPLE_INCIDENCE_PROJECTOR_CONTROL
+    evidence:
+      - "attempts/wave205-fourth-trace-hostile-controls/certificate.json"
+      - "attempts/wave205-fourth-trace-hostile-controls/package-manifest.sha256"
+      - "verification/wave205-fourth-trace-globalization-verifier/post_source_result.json"
+      - "verification/wave205-fourth-trace-globalization-verifier/audit.md"
+    limitations: "The systems use only 21 projective directions; their graph is disconnected and fails lambda=1 and mu=2, with extra triangles and no endpoint cover, distance, or prism constraints. They are not target graphs."
+
+  - id: C-WAVE205-TARGET-001
+    statement: "Wave205 does not classify actual endpoint nonedge fourth traces or decide the rank-11 endpoint, n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-29-wave205-integration-audit.md"
+      - "verification/2026-07-29-wave205-orchestrator.md"
+      - "logs/2026-07-29-wave205-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. Novelty and priority remain UNKNOWN."

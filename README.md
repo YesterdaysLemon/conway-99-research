@@ -27,7 +27,7 @@ and the normalized search problem.
 ## Current status
 
 - **Literature status:** no resolution found in the sources searched through
-  2026-07-28; this is not a proof of openness or exhaustive coverage.
+  2026-07-29; this is not a proof of openness or exhaustive coverage.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
 - **Strongest internally verified conditional bound:** `n3>=708`, hence at
@@ -36,6 +36,16 @@ and the normalized search problem.
   `rank_F7(2A-J+I)=28` row, exact full-space level-seven modularity forces
   `N14+N16+N18>=5868`. This is conditional on a hypothetical graph and does
   not exclude the rank row.
+- **Newest rank-11 structural invariant and boundary:** for adjacent
+  endpoint stars,
+  `h_xy=tr(P_xP_yP_xP_y)` is `1` exactly for outer type `4+2` and `0`
+  for types `6`, `3+3`, and `2+2+2`; the exterior-square trace is the same
+  detector. Independent hostile controls show that pair trace and
+  intersection dimension do not determine `h`. A separate exact relaxed
+  99-center certificate has `b=0`, and the Wave 203 partial slot data do not
+  define center-to-center or total-`S_5` holonomy. These are scoped structural
+  results, not an endpoint exclusion: `Q>=7059`, `708<=n3<=4158`, and
+  Conway-99 remains `UNKNOWN`.
 - **Strongest prism-free rank-11 endpoint circuit bound:** the independently
   verified multiplicity-weighted four-fiber certificate gives `Q>=7059`
   projective short circuits cross-realizing graph nonedges. Together with
@@ -3956,6 +3966,34 @@ status.
 - `formal/`: proof-assistant or proof-certificate work.
 - `logs/`: run manifests and summarized logs; bulky raw output stays in releases
   or external archives with checksums.
+
+## Current verified frontier: Wave 205
+
+Wave 205 closes the pair-local version of the fourth-trace route.  For a
+nonedge, exact two-star geometry forces `t_xy>=6`, average `t_xy=7`, and
+
+```text
+tr(P_xP_y)=2t_xy,
+h_xy=tr((C C^T)^2).
+```
+
+The complete normalized frontier contains 646 matrices at `t=6` and 7,886
+at `t=7`.  Full-rank local modules exist at `t=6`; at `t=7` they realize all
+three possible fourth traces.  Four exact 28-vertex certificates verify this
+pair-local boundary, but they are not global graphs.
+
+For the full 99-star system, the verified factorization is
+
+```text
+H=U K_D U^T,
+rank_F3(U)=99.
+```
+
+Consequently the next theorem must control the graph-specific crossing
+kernel, the equivalent localizers, or a simultaneous three-center/99-center
+extension law.  A fresh source-blind verifier passed all 17 independent
+tests.  Actual endpoint nonedge traces, rank 11, `n3=4158`, the interval
+`708<=n3<=4158`, and Conway-99 remain `UNKNOWN`.
 
 ## Primary starting points
 

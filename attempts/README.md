@@ -1077,3 +1077,45 @@ Every promoted theorem or finite-feasibility statement above has a separate
 verifier; Wave162 remains a clearly labeled `DERIVED` strategy audit.  The
 full four-root PSD feasibility problem, complete triangle-root binary factor,
 strict `n3<4158` bound, and Conway-99 remain `UNKNOWN`.
+
+Wave 204 attempts:
+
+- `wave204-literature-hostile-controls/` gives an exact relaxed 99-center
+  `b=0` certificate and a focused primary-source hypothesis audit. The
+  certificate refutes only the frozen local-interface force-`b>0` lemma; it
+  is not an SRG, ternary code, or endpoint.
+- `wave204-global-slot-holonomy-proof-a/` identifies the true triangle-block
+  gain as a coboundary and uses exact relaxed rank-11 controls to refute
+  center-walk chaining and determined total-`S_5` transport from Wave 203's
+  partial slots.
+- `wave204-projector-fourth-order-proof-b/` proves the conditional adjacent
+  fourth-trace detector for the four outer edge types and records exact
+  controls showing that pair trace plus intersection dimension does not fix
+  the fourth trace.
+
+All promoted claims pass `wave204-global-compatibility-verifier/`. The next
+route is a graph-specific classification of nonedge fourth traces and a
+global identity for the full `99 by 99` fourth-trace matrix. The conditional
+bound remains `Q>=7059`, the rigorous interval remains `708<=n3<=4158`, and
+Conway-99 remains `UNKNOWN`.
+
+Wave 205 attempts:
+
+- `wave205-fourth-trace-globalization/` freezes the branch, evidence
+  boundary, and inflection criteria.
+- `wave205-nonedge-fourth-trace-proof-a/` derives the exact nonedge
+  cross-Gram profiles, exhausts the normalized `t=6,7` frontier, and gives
+  four 28-vertex rank-11 local certificates. These controls refute only
+  pair-local implications.
+- `wave205-global-fourth-moment-proof-b/` proves `H=U K_D U^T`,
+  `rank(U)=99`, and the row-localizer contractions, while recording why
+  ambient rank and first-moment shortcuts fail.
+- `wave205-fourth-trace-hostile-controls/` gives a stronger relaxed
+  99-projector/231-column incidence control whose nonedge fourth traces vary,
+  while explicitly failing projective distinctness and the target
+  `lambda/mu` laws.
+
+The independently verified inflection is that pair-local fourth-order data
+cannot decide the endpoint. Further work must control simultaneous
+99-center extension, the crossing kernel on `row(U)`, or an equivalent
+three-center invariant. No endpoint or Conway-99 claim is promoted.

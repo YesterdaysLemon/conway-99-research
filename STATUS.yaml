@@ -3,13 +3,13 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-27
+  through: 2026-07-29
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "The Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types. No exact characteristic-seven rank-25 theorem was located, but a bounded search cannot prove openness, novelty, or priority."
-  latest_audit: "agents/2026-07-27-wave40-rank25-literature.md"
-  latest_audit_sha256: "7a53b6bf3fc5dbb9a063812a9749b7d084ad05511cdcbed17ee48d75c4811ebc"
-  source_query_ledger: "attempts/wave40-rank25-literature/query-log.json"
-  source_query_ledger_sha256: "9c1349333ed93e12562d0e92e605c98bc887b14c66642bb1c96cdfd1d64d196a"
+  caveat: "The focused Wave 205 theorem-by-theorem audit found no applicable finite-field fusion-frame, projector-design, trace-identity, or association-scheme theorem forcing the missing fourth moment. The latest located status source was submitted 2026-04-24. The search was bounded and cannot prove openness beyond its evidence cutoff, novelty, or priority. The earlier Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types."
+  latest_audit: "agents/2026-07-29-wave205-literature-hostile-controls.md"
+  latest_audit_sha256: "d7dea71419c3559bd6d6c56b802efcb2d3d3d644d6a73d4d312b1005ac979202"
+  source_query_ledger: "attempts/wave205-fourth-trace-hostile-controls/literature-sources.json"
+  source_query_ledger_sha256: "cc1c3fa03dc92a05a99e85e09cf1683157b3f3dced50861305e947b19fea95d2"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -24,17 +24,19 @@ literature_audit:
   wave36_general_prior_art_overlap: EVANS_2023_REPRODUCES_TERNARY_CUTOFF
   exact_wave40_rank25_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave42_rank27_prior_hit: NOT_SEARCHED_THIS_WAVE
+  exact_wave204_global_compatibility_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave205_fourth_trace_globalization_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
-latest_verified_wave: 203
-latest_verifier_package: "verification/wave203-two-center-incidence-verifier/package-manifest.sha256"
-latest_verifier_manifest_sha256: "ee0d994825ad9b687fb29eb7bcde02c86dacbd78042edff2111bd9fb4bc7d0ab"
+latest_public_checkpoint: "logs/2026-07-29-wave205-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-29-wave205-integration-audit.md"
+latest_verified_wave: 205
+latest_verifier_package: "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256"
+latest_verifier_manifest_sha256: "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3217,4 +3219,79 @@ waves_148_203_geometric_circuit_checkpoint:
   novelty_status: UNKNOWN
   next_frontier: "force bidirectional selected-label occupancy or derive a global compatibility obstruction for the 99-star zero-tight fusion frame"
   caveat: "Waves 148--203 add independently checked incidence-geometry, coding, polar-space, extremal-set, and circuit-count restrictions, culminating in the conditional rank-11 bound Q>=7059. They supply no graph, rank-11 exclusion, endpoint exclusion, strict n3 upper bound below 4158, Conway-99 resolution, or external novelty result."
-last_updated: 2026-07-28
+wave_204_global_compatibility_checkpoint:
+  public_base_commit: "e6ac24b5728ae8f2dc13b5a6ee0f50e965843b71"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave204_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave204_relaxed_b0_certificate_status: VERIFIED_SCOPED_RELAXED
+  wave204_force_b_positive_implication: REFUTED_WITH_SCOPE
+  wave204_block_coboundary_status: VERIFIED
+  wave204_center_chaining_implication: REFUTED_WITH_SCOPE
+  wave204_determined_total_s5_implication: REFUTED_WITH_SCOPE
+  wave204_adjacent_fourth_trace_detector_status: VERIFIED_CONDITIONAL
+  wave204_pair_data_determine_fourth_trace: REFUTED_WITH_SCOPE
+  wave204_optional_global_projector_controls: SOURCE_REPLAYED_SCOPED_RELAXED_NOT_PROMOTED
+  wave204_literature_status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
+  wave204_novelty_status: UNKNOWN
+  wave204_literature_hostile_manifest_sha256: "b725463de29c60e14094de5b4f58c2051e5db5657b3f47772efbbd461cc187a9"
+  wave204_proof_a_manifest_sha256: "e060f0f39c2b66b6b64a20694a2a6505f229cd85c7784374976e39cdba61dd84"
+  wave204_proof_b_manifest_sha256: "6074ec95b7a92cdf26626a031c9373fa94ccd3ab47c627d31183a64af0bdc181"
+  wave204_source_blind_freeze_sha256: "88f502d4d49f6866a73bff006097f66cf4eefb36b3cdf0eca24280df1d70f7a2"
+  wave204_verifier_manifest_sha256: "48cd018c7f7cebe7f2bc93a6dbd9440422f8dc843bc6c0fa96b29968e440f9c2"
+  public_checkpoint: "logs/2026-07-29-wave204-public-checkpoint.json"
+  public_checkpoint_sha256: "70a221a421b062c979118f728fe9686e8aa043f7085bd5648c40382f671c4ce8"
+  integration_audit: "verification/2026-07-29-wave204-integration-audit.md"
+  integration_audit_sha256: "7406b8ff7d3c2ed5aa68d491b7b7668379bfa908f75ebe7c4880ff6a5384cecf"
+  orchestrator_decision: "verification/2026-07-29-wave204-orchestrator.md"
+  orchestrator_decision_sha256: "7760a4c5a4b6a501262bbb3b061828725cd23c6837fd724fada84d94a3124edd"
+  solver_evidence_promoted: NONE
+  next_frontier: "classify nonedge h_xy=tr(P_xP_yP_xP_y) and derive a graph-specific full-matrix moment, module, or rank identity"
+  caveat: "Wave 204 verifies a conditional adjacent fourth-order detector and a definitional block coboundary, and refutes three local-to-global implications with exact scoped controls. The relaxed b=0 skeleton is not an SRG; the local holonomy controls are not an endpoint; and the optional 99-projector controls are not independently promoted. No graph, rank-11 exclusion, endpoint exclusion, Q>=7060, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
+wave_205_fourth_trace_globalization_checkpoint:
+  public_base_commit: "e6ac24b5728ae8f2dc13b5a6ee0f50e965843b71"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  actual_nonedge_fourth_trace_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave205_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave205_status: PASS_SCOPED_INFLECTION
+  wave205_nonedge_t_lower: 6
+  wave205_nonedge_t_average: 7
+  wave205_t6_normalized_matrices: 646
+  wave205_t7_normalized_matrices: 7886
+  wave205_t6_admissible_by_h_0_1_2: [0, 18, 0]
+  wave205_t7_admissible_by_h_0_1_2: [297, 324, 144]
+  wave205_pair_local_t7_forces_h: REFUTED_WITH_SCOPE
+  wave205_global_factorization: "H=U K_D U^T"
+  wave205_rank_U: 99
+  wave205_sum_projectors_zero_forces_H1_zero: REFUTED_WITH_SCOPE
+  wave205_hostile_control_status: VERIFIED_RELAXED_CONTROL
+  wave205_hostile_nonedge_h_differences: 3888
+  wave205_proof_a_manifest_sha256: "2c9976b6cb07a3036df07fd0e7ceb7ffce6a339651d604fcecdcf8c0c3da3d96"
+  wave205_proof_b_manifest_sha256: "a91a2a1cdbc129fa66e9d63b34031a774d5af78c458d18d9a1aadd7e4be217e7"
+  wave205_hostile_manifest_sha256: "b9700d135bbfdebc34aeaad88eb1264b95732fa0f9da773cf90bd002331cc971"
+  wave205_source_blind_freeze_sha256: "f8fb87d76c5eda2ff2569ec49a935b8bdb4022671f6d51f2752c14e153bcc853"
+  wave205_verifier_manifest_sha256: "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
+  public_checkpoint: "logs/2026-07-29-wave205-public-checkpoint.json"
+  public_checkpoint_sha256: "a8dde5dd616cbcfecd8de2c986b5b2258499b3c0d13db58f2a62f4e3e000cc8f"
+  integration_audit: "verification/2026-07-29-wave205-integration-audit.md"
+  integration_audit_sha256: "f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297"
+  orchestrator_decision: "verification/2026-07-29-wave205-orchestrator.md"
+  orchestrator_decision_sha256: "9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "derive simultaneous 99-center extension compatibility through K_D restricted to row(U), Q o (D S_x D), w_TU norms, or an equivalent three-center overlap law"
+  caveat: "Wave 205 independently verifies exact nonedge pair-local constraints, the complete t=6,7 census, a full fourth-trace factorization, and scoped refutations of pair-local and generic moment shortcuts. Its controls are local or relaxed and do not classify actual endpoint nonedges. No graph, rank-11 exclusion, endpoint exclusion, Q>=7060, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
+last_updated: 2026-07-29

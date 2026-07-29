@@ -372,3 +372,32 @@ Waves 199--202 reports:
   `2026-07-29-wave203-two-center-incidence-proof-a-audit.md`: independent
   derivation and hostile audit of the combined directional capacity-five
   theorem and `epsilon>=5b`, with no inflated `Q>=7060` claim.
+
+Wave 204 reports:
+
+- `2026-07-29-wave204-literature-hostile-controls.md`: focused
+  exact-hypothesis source audit and relaxed 99-center `b=0` countermodel to
+  the local-interface force-bidirectionality lemma.
+- `2026-07-29-wave204-global-slot-holonomy-proof-a.md`: triangle-block
+  coboundary derivation, center-composition type audit, and exact relaxed
+  rank-11/S5 ambiguity controls.
+- `2026-07-29-wave204-projector-fourth-order-proof-b.md`: adjacent
+  fourth-order star-pair compression, `4+2` detector, and pair-invariant
+  underdetermination controls.
+- `2026-07-29-wave204-global-compatibility-verifier.md`: source-blind and
+  post-source independent verification with all blind/source discrepancies
+  retained and no target promotion.
+
+Wave 205 reports:
+
+- `2026-07-29-wave205-nonedge-fourth-trace-proof-a.md`: exact nonedge
+  profiles, complete normalized low-count census, full-rank local controls,
+  and the simultaneous-extension scope wall.
+- `2026-07-29-wave205-global-fourth-moment-proof-b.md`: global crossing
+  factorization, rank-99 source feature, localizer identities, and audited
+  failed globalization shortcuts.
+- `2026-07-29-wave205-literature-hostile-controls.md`: bounded primary-source
+  audit and stronger relaxed incidence/projector controls.
+- `2026-07-29-wave205-fourth-trace-globalization-verifier.md`: fresh
+  source-blind and post-source verifier report with no mathematical or scope
+  finding.

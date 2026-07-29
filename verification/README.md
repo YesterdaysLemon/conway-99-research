@@ -2133,3 +2133,54 @@ The rigorous interval remains `708<=n3<=4158`.
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.
 The rigorous interval remains `708<=n3<=4158`.
+
+## Wave 204 global-compatibility verifier
+
+`wave204-global-compatibility-verifier/` froze an independent protocol,
+checker, 11 hostile tests, result, and hashes before source exposure. After
+unsealing, a second checker imported no discovery Python and directly
+validated the stronger submitted JSON semantics. Results:
+
+```text
+submitted manifest entries:       32/32 match
+submitted tests:                  8/8 + 10/10 + 10/10 pass
+source-blind tests:               11/11 pass
+post-source semantic tests:        5/5 pass
+```
+
+Promoted labels:
+
+- relaxed 99-center certificate `VERIFIED`; local interface forces `b>0`
+  `REFUTED_WITH_SCOPE`;
+- true block gain is a coboundary `VERIFIED`; center chaining and determined
+  total `S_5` `REFUTED_WITH_SCOPE`;
+- conditional adjacent fourth-order detector `VERIFIED`; pair trace plus
+  intersection dimension determines `h` `REFUTED_WITH_SCOPE`.
+
+The optional repeated-direction 99-projector controls remain
+`SOURCE_REPLAYED_SCOPED_RELAXED`, not independently promoted. No rank-11 or
+endpoint exclusion, `Q>=7060`, strict `n3` improvement, graph/code,
+Conway-99 resolution, novelty, or priority claim follows.
+
+## Wave 205 fourth-trace globalization verifier
+
+`wave205-fourth-trace-globalization-verifier/` froze an independent algebra,
+finite checker, radical guard, nine tests, result, and hashes before opening
+any Wave 205 discovery package. After source exposure, a second checker
+imported no discovery Python and independently reconstructed the normalized
+census and submitted JSON certificates.
+
+```text
+source-blind tests:             9/9 PASS
+post-source independent tests:  8/8 PASS
+Proof-A submitted tests:       13/13 PASS
+Proof-B submitted tests:       12/12 PASS
+hostile submitted tests:         6/6 PASS
+mathematical/scope findings:      NONE
+```
+
+Verdict: `VERIFIED_WITH_SCOPE_NO_FINDING`. Promoted claims are limited to
+the exact nonedge pair-local constraints and censuses, scoped refutations,
+the full crossing factorization/localizers, and the relaxed-control
+predicates. Actual endpoint nonedge traces, rank 11, `n3=4158`, and
+Conway-99 remain `UNKNOWN`.
