@@ -1934,6 +1934,201 @@ The rigorous interval remains `708<=n3<=4158`.
   pointwise/global block profiles, maximum clique size seven, ternary Gram
   rank 55, and incidence rank interval 55 through 98.  These add exact
   structure but no strict `n3` bound.
+- `wave171-pq-centered-code/` independently verifies the square-zero
+  polynomial `X=K-K^2`, its exact weight-198 row profiles, point-star kernel,
+  intrinsic recovery of the incidence geometry, and
+  `rank_F3(X)=rank_F3(C)-1`.  It also verifies that `X=2(C+J)` without the
+  endpoint hypothesis, so the code is exactly the earlier centered code and
+  supplies no new obstruction.
+- `wave172-weight3-dual-rigidity/` independently verifies, by a different
+  integer-lift and row-distance argument, that endpoint weight-three dual
+  words can only have equal coefficients and the joint distribution
+  `000^15,111^144,222^18,(012 permutations)^54`.  The result needs `P=0`
+  but not `r3=12`; it is a marked constraint, not an endpoint exclusion.
+- `wave173-complete-enumerator-lift/` independently reconstructs the
+  complete Krawtchouk moments and verifies that the Wave54 distribution has
+  no lift compatible with the 231 distinguished weight-198 compositions and
+  Wave172.  It also independently verifies the exact general six-cell
+  rational control, preserving the boundary that other ordinary
+  distributions remain unclassified.
+- `wave174-no-weight3-dual/` independently reconstructs the point--triangle
+  line-sum coloring, five-cell edge equations, spectral quotient,
+  common-neighbor convexity, and final prism.  The verifier caught the
+  degenerate `c=18` case omitted from the first draft and supplied the
+  separate exact exclusion `v^T(3I-A)v=-1152`.  With that repair it verifies
+  `d(W^perp)>=4` at `P=0`, without assuming `r3=12`.
+- `wave175-polar-cap-boundary/` independently reconstructs the
+  `Q(10,3)` polar graph, both selected-set spectral energies, outside-point
+  moments and mod-three slack, and the quadratic-Veronese rank caps
+  `65/66`.  It also checks the primary polar-cap definition and confirms that
+  its no-two-collinear hypothesis fails for the 3,696 selected orthogonal
+  pairs.  Verdict: `VERIFIED_WITH_SCOPE`; rank 11 and the endpoint survive.
+- `wave176-star-projector-circuits/` independently reconstructs the
+  six-dimensional star projectors, the trace-zero symmetric-square rank
+  cap, all four adjacent 2-regular cycle types, and their ternary Gram ranks
+  `10,10,8,9`.  A separate periodic-second-difference derivation verifies
+  the ranks, and the radical inequality is used to distinguish true column
+  relations from extra Gram-kernel vectors.  Exact minimum non-star supports
+  8 and 4 are promoted only for the two rank-10 types.  Verdict:
+  `VERIFIED_WITH_SCOPE`; global circuit compatibility and the endpoint
+  remain `UNKNOWN`.
+- `wave177-relation-averaging-conic/` independently verifies the
+  full-support relation-code averages 8 and `28/3`, hence true cross-star
+  support ranges `4..8` on edges and `4..9` on nonedges.  It also verifies
+  the edge coefficient-sum lift and reconstructs the type `4+2` word as the
+  complete `Q(2,3)` conic with frame `-I`, canceled by the nine-point
+  complement frame `+I`.  Verdict: `VERIFIED_WITH_SCOPE`; 693 edges index
+  choices but do not yet force 693 distinct words, and the endpoint survives.
+- `wave178-edge-circuit-injection/` independently verifies the shared- and
+  disjoint-endpoint multiplicity proof, the projective factor two, and all
+  four local Gram-kernel profiles using a periodic-recurrence reconstruction.
+  Verdict: `VERIFIED_WITH_SCOPE`; 693 distinct balanced projective circuits
+  of sizes `4,6,8` force `B_4+B_6+B_8>=1386`, but do not exclude rank 11.
+- `wave179-global-transversal-circuits/` independently verifies nonedge
+  cross-circuit extraction, the exact-two-transversal multiplicity bound,
+  all third-vertex collision cases, and balanced-edge global isolation.
+  Verdict: `VERIFIED_WITH_SCOPE`; at least 2,079 projective circuits of
+  sizes `4..9` force `B_4+...+B_9>=4158`.  The endpoint and strict `n3`
+  improvement remain `UNKNOWN`.
+- `wave180-capacity3-companion/` independently reconstructs the
+  multiplicity-three support shape, seven-entry cross-edge profile,
+  projector residue, duplicate-vector exclusion, and the complete
+  weight-four/weight-five conic-companion relation space.  It then checks
+  the fixed-point-free same-label involution and inclusion-minimal-cover
+  count.  Verdict: `VERIFIED_WITH_SCOPE`; at least 2,079 nonedge-realizing
+  and 2,772 total projective circuits force `B_4+...+B_9>=5544`.
+  Rank 11, the endpoint, and a strict `n3` improvement remain `UNKNOWN`.
+- `wave181-c4-conic-equality/` independently confirms that the baseline
+  edge in the shared-center star profile must be retained, excluding that
+  multiplicity-two case by projector singularity.  It reconstructs the
+  canonical nonedge involution, checkerboard four-block Gram and conic, the
+  `Q=2079` equality implications, and
+  `R_square^T R_square=36I-4K+L`. Verdict:
+  `VERIFIED_WITH_SCOPE`; at that checkpoint equality, the needed rank-221
+  lower bound, rank 11, and the endpoint remained `UNKNOWN`. Wave186 later
+  excludes the equality face independently.
+- `wave182-a6-root-gluing-verifier/` independently verifies exact nonedge
+  root intersections, 4-regular complement color classes, the support
+  bounds `5..10`, the global root interval `231..415`, and the rigid
+  231-root incidence boundary with spectrum `189^1,35^54,0^44`.  Verdict:
+  `VERIFIED_WITH_SCOPE`; the extremal design survives both the incidence
+  spectrum and characteristic-three frame test.
+- `wave183-root-support-girth-verifier/` independently verifies the
+  canonical-4-cycle common-neighbor obstruction, unordered two-path
+  injection, cubic support contradiction, and the resulting support
+  classification `5K1,3K2,C7`.  It sharpens the conditional projective-root
+  interval to `297..415` and verifies
+  `7R-2079=2n5+n6` plus the characteristic-three split frame.  Verdict:
+  `VERIFIED_WITH_SCOPE`; the split frame gives no contradiction within its
+  conditional scope. Wave186 later excludes that equality regime; rank 11
+  and the endpoint remain `UNKNOWN`.
+- `wave184-root-support-intersections-verifier/` independently verifies
+  that distinct root supports meet in at most a graph edge and that every
+  internal support-edge/root incidence gives a new, globally injective
+  projective weight-four circuit.  Exact counting gives
+  `E=3n6+7n7>=12`, hence at least 2,091 projective weight-four circuits and
+  `B4>=4182`.  Verdict: `VERIFIED_WITH_SCOPE`; the scalar equality witness
+  is not geometric and no incompatible `B4` upper bound is known. Wave186
+  later excludes the equality regime by a different invariant; rank 11 and
+  the endpoint remain `UNKNOWN`.
+- `wave185-local-a6-transition-collapse-verifier/` independently rebuilds
+  the local negative-`A6` cell geometry, excludes same-endpoint internal
+  edges, derives `n7=0`, and verifies the type-5/type-6 transition profiles,
+  `n5>=15`, the conditional root interval `349..415`, and the lower bound
+  94,264 on rainbow complement triangles. Verdict:
+  `VERIFIED_WITH_SCOPE`; it is a correct theorem on the former `Q=2079`
+  equality face.
+- `wave186-star-translation-cover-verifier/` freezes the source inputs but
+  imports none of its proof code. It independently reconstructs the
+  endpoint-star and private-leaf-star translations, distinctness from
+  dual distance four, minimum-cover private-label count, external-circuit
+  capacities, and the final linear combination
+  `9Q>=8*4158`. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=3696`, at least 4,389
+  projective circuits of weights four through nine, and
+  `B4+B5+B6+B7+B8+B9>=8778`. This excludes `Q=2079`, but does not exclude
+  rank 11 or the endpoint.
+- `wave188-affine-star-word-amplification-verifier/` independently
+  reconstructs the precise 438-profile affine-orbit census, projective
+  distinctness, support capacities, one-block projector collapse, all
+  type-one/type-two/type-three private-label words, and ten cross-family
+  collision checks. It imports and executes no discovery code. Verdict:
+  `VERIFIED_WITH_SCOPE`; at least 8,316 nonedge-realizing and 9,009 total
+  projective short-word classes force
+  `B4+B5+B6+B7+B8+B9>=18018`. These are dual words, including a necessary
+  weight-eight noncircuit, so the result is not a circuit bound
+  `Q>=8316`. Rank 11 and the endpoint remain `UNKNOWN`.
+- `wave187-code-geometry-proof-b-verifier/` independently reconstructs the
+  exact rational hostile control without importing or executing its
+  discovery checker. It verifies all 232 ordinary MacWilliams rows,
+  complete ternary nonnegativity through total degree six, the quadratic
+  type moments and integral three-point Gram census, and the first negative
+  complete cells
+  `B70=B07=-10151603437954385741/508426957500` at degree seven. Verdict:
+  `VERIFIED_RELAXATION_BOUNDARY`; this is a rational relaxation witness, not
+  a code, point set, endpoint graph, or existence result.
+- `wave189-degree7-star-orbit-verifier/` independently verifies two
+  disjoint claims. The displayed rational control is feasible for the
+  one-star polygon, all complete rows through degree seven with
+  `B70=B07=99`, the degree-12--14 star-pair rows, ordinary rows, and typed
+  moments; this is `VERIFIED_RELAXATION_FEASIBILITY`, not code existence.
+  Separately, clean-room reconstruction of singleton translation, orbit
+  closure, center orientation, and checkerboard equality exclusion gives
+  the conditional theorem `Q>=4852`. Overall verdict:
+  `VERIFIED_WITH_SCOPE`.
+- `wave190-residual-stability-verifier/` reconstructs exact-one slack,
+  raw-versus-residual label exclusivity, all collision capacities, and the
+  five-slack identity
+  `delta+3h+3Y>=p3`. The exact coefficient row
+  `6Q>=4I+n1+2(p2-n2)>=8*4158` gives the conditional theorem `Q>=5544`,
+  hence 6,237 projective short circuits and the circuit-only scalar bound
+  `B4+...+B9>=12474`. Verdict: `VERIFIED_WITH_SCOPE`; the sharp row is
+  arithmetic only and no endpoint is constructed or excluded.
+- `wave191-exact-three-residual-verifier/` independently verifies the
+  exact-three raw exclusion, orbit-closed residual capacity, and conditional
+  bound `Q>=6237`. Verdict: `VERIFIED_WITH_SCOPE`.
+- `wave192-equality-face-verifier/` independently reconstructs the Wave 191
+  equality face and excludes it by canonical-square cohomology and
+  checkerboard translations. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=6238`.
+- `wave193-global-low-target-verifier/` checks the full split accounting and
+  both collision rows behind `117Q>=177C`. Verdict:
+  `VERIFIED_WITH_SCOPE`; `Q>=6291`.
+- `wave194-five-thirds-verifier/` freezes its result before source inspection
+  and verifies the doubled type-two residual, joint leaf capacity, and
+  `3Q>=5C`. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=6930`.
+- `wave195-hilton-milner-verifier/` verifies the simple intersecting local
+  3-subset family, the exact Hilton--Milner specialization, the common-star
+  case, and the certificate `Q>=6980`. Verdict: `VERIFIED_WITH_SCOPE`.
+- `wave196-four-fiber-hilton-milner-verifier/` independently verifies the
+  21 four-point fibers, both equality templates, `c_x<=13`, `j_x<=36`, and
+  `Q>=7029`. Verdict: `VERIFIED_WITH_SCOPE`.
+- `wave197-degree10-flag-cap-verifier/` independently verifies five flags per
+  orientation, ten per unordered selected label, private degree one, and the
+  exact target `70323/10`. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=7033`.
+- `wave198-orientation-lift-verifier/` verifies orientation multiplicities,
+  selected/full-pool separation, the weighted `S5` row, and target
+  `281457/40`. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=7037`.
+- `wave200-two-face-gluing-verifier/` verifies additive saturated-fiber loss
+  and explicitly repairs the source wording by using simple-family pair
+  degree at most five. Verdict: `VERIFIED_WITH_SCOPE`; `Q>=7039`.
+- `wave201-multiplicity-weighted-fiber-loss-verifier/` independently handles
+  multiple selected values in one fiber, multiplicity one, deficient
+  centers, and exactly three tight Hilton--Milner baselines. It verifies
+  `delta>=3q-epsilon` and the exact target `70587/10`. Verdict:
+  `VERIFIED_WITH_SCOPE`; `Q>=7059`, 7,752 projective and 15,504 scalar short
+  circuits after adjoining the edge-isolated family.
+- `wave202-three-unit-equality-face-verifier/` verifies the complete
+  three-unit partition at `Q0=7059`, the raw-variable formulas, local
+  equality conditions, `c_x in {12,13}`, and the cap of three
+  multiplicity-one nonprivate orientations. Verdict:
+  `VERIFIED_FACE_CHARACTERIZATION_NO_EXCLUSION`; an alternate local
+  multiplicity control survives, so `Q>=7059` is unchanged.
+- `wave203-two-center-incidence-verifier/` independently verifies the shared
+  five-slot geometry, reverse matched-block implication, normalized
+  all-equal relation, and canonical-quadrilateral Gram obstruction. Verdict:
+  `VERIFIED_TWO_CENTER_CAPACITY_NO_BOUND_PROMOTION`;
+  `m_(x->y)+m_(y->x)<=5`,
+  `3n3+4p3<=5|U|`, and `epsilon>=5b`. A `b=0` accounting/local control
+  survives, so `Q>=7059` remains the honest bound.
 
 No verifier promotes a pseudowitness refutation to endpoint infeasibility, a
 partial binary factor to a graph, or a numerical solver status to a proof.

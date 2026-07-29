@@ -287,3 +287,88 @@ Waves 130--134 reports:
 - `2026-07-28-wave134-z4-symmetrized-enumerator.md`: full-problem
   quaternary-code shift, corrected forced-word tables and transform orbit
   partition, both verifier-veto repairs, and the unchanged feasibility wall.
+
+Waves 185--186 reports:
+
+- `2026-07-28-wave185-local-a6-transitions-proof-b.md`: independent
+  proof-B reconstruction of the local transition profiles and hostile
+  arithmetic controls on the former equality face.
+- `2026-07-29-wave186-nonedge-relation-dimension-proof-a.md`: analytic
+  star-translation and cover-accounting proof of `Q>=3696`, including exact
+  scope and unresolved endpoint boundary.
+
+Waves 187--188 reports:
+
+- `2026-07-29-wave187-code-geometry-literature.md`: exact-hypothesis audit
+  of finite-field frame, code, matroid, blocking-set, and polar-space
+  theorems, isolating the zero-tight fusion-frame boundary.
+- `2026-07-29-wave187-code-geometry-proof-b.md`: exact rational
+  code-theoretic hostile control through complete degree six and the
+  degree-seven stopping point.
+- `2026-07-29-wave187-multiplicity-one-star-translation-proof-a.md`:
+  affine star-coset proof of the projective short-word amplification and
+  the weaker parameter-sensitive circuit refinement.
+
+Waves 189--190 reports:
+
+- `2026-07-29-wave189-orbit-closed-star-translations-proof-a.md`:
+  orbit-closed extraction packing, common-center capacity, the sharp
+  Hoffman design boundary, and checkerboard equality exclusion.
+- `2026-07-29-wave189-degree7-star-complete-proof-b.md`: exact rational
+  degree-seven null control together with an independent derivation of the
+  orbit-closed circuit theorem.
+- `2026-07-29-wave190-residual-stability-proof-b.md`: residual-cancellation
+  stability and the exact conditional bound `Q>=5544`.
+- `2026-07-29-wave190-residual-stability-proof-a-audit.md`: independent
+  proof-agent collision audit of the raw-plus-residual three-label capacity
+  and coefficient certificate.
+
+Waves 191--194 reports:
+
+- `2026-07-29-wave191-exact-three-residual-proof-a.md` and
+  `2026-07-29-wave191-global-star-module-proof-b.md`: exact-three raw
+  exclusion and joint residual amplification to `Q>=6237`.
+- `2026-07-29-wave192-equality-face-proof-a.md` and
+  `2026-07-29-wave192-c4-cohomology-proof-b.md`: equality-face
+  reconstruction and canonical-square exclusion, giving `Q>=6238`.
+- `2026-07-29-wave193-global-low-target-proof-a.md` and
+  `2026-07-29-wave193-aggregate-proof-b-audit.md`: the exact aggregate
+  certificate `117Q>=177C`, giving `Q>=6291`.
+- `2026-07-29-wave194-type2-residual-low-u-proof-a.md` and
+  `2026-07-29-wave194-five-thirds-proof-b-audit.md`: doubled type-two
+  residuals and the five-thirds certificate `Q>=6930`.
+
+Waves 195--198 reports:
+
+- `2026-07-29-wave195-leaf-packet-intersection-proof-a.md` and
+  `2026-07-29-wave195-packet-cohomology-proof-b.md`: Hilton--Milner flag
+  diversity and the conditional bound `Q>=6980`.
+- `2026-07-29-wave196-four-fiber-hilton-milner-proof-a.md` and
+  `2026-07-29-wave196-four-fiber-proof-b-audit.md`: four-point fiber
+  rigidity, `j_x<=36`, and `Q>=7029`.
+- `2026-07-29-wave197-degree10-flag-cap-proof-a.md` and
+  `2026-07-29-wave197-ten-flag-capacity-proof-b-audit.md`: unordered
+  selected-label degree ten and `Q>=7033`.
+- `2026-07-29-wave198-orientation-lift-proof-b.md` and
+  `2026-07-29-wave198-orientation-lift-proof-a-audit.md`: orientation
+  multiplicity, the `S5` row, and `Q>=7037`.
+
+Waves 199--202 reports:
+
+- `2026-07-29-wave199-near-face-gluing-proof-a.md` and
+  `2026-07-29-wave199-near-face-gluing-proof-b-audit.md`: first near-face
+  exclusion, subsumed by Wave 200.
+- `2026-07-29-wave200-two-face-gluing-proof-a.md` and
+  `2026-07-29-wave200-two-face-gluing-proof-b-audit.md`: additive saturated
+  fiber loss and the verified conditional bound `Q>=7039`.
+- `2026-07-29-wave201-multiplicity-weighted-fiber-loss-proof-a.md` and
+  `2026-07-29-wave201-multiplicity-weighted-fiber-loss-proof-b-audit.md`:
+  arbitrary fiber-multiplicity loss and the verified conditional bound
+  `Q>=7059`.
+- `2026-07-29-wave202-three-unit-equality-face-proof-a.md`: exact
+  characterization of the three-unit `Q0=7059` face and the retained
+  no-exclusion boundary.
+- `2026-07-29-wave203-two-center-incidence-proof-b.md` and
+  `2026-07-29-wave203-two-center-incidence-proof-a-audit.md`: independent
+  derivation and hostile audit of the combined directional capacity-five
+  theorem and `epsilon>=5b`, with no inflated `Q>=7060` claim.

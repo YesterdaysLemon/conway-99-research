@@ -32,6 +32,9 @@ claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
 latest_public_checkpoint: "logs/2026-07-28-wave147-public-checkpoint.json"
 latest_integration_audit: "verification/2026-07-28-wave147-integration-audit.md"
+latest_verified_wave: 203
+latest_verifier_package: "verification/wave203-two-center-incidence-verifier/package-manifest.sha256"
+latest_verifier_manifest_sha256: "ee0d994825ad9b687fb29eb7bcde02c86dacbd78042edff2111bd9fb4bc7d0ab"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3180,4 +3183,38 @@ waves_135_147_alternative_space_checkpoint:
   solver_evidence_promoted: NONE
   novelty_status: UNKNOWN
   caveat: "Waves 135--147 verify scoped quadratic-form, graph-code, profile, one-root, and finite two-root/order-eight boundaries with material corrections. They supply no graph, code realization, endpoint exclusion, strict upper bound below 4158, Conway-99 resolution, or novelty result."
+waves_148_203_geometric_circuit_checkpoint:
+  public_base_commit: "6de5cb7cae6fe53ded33e1bd4915ed4f578058b2"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  unrestricted_automorphism_assumption: false
+  wave171_status: VERIFIED_INCIDENCE_GEOMETRY_REFRAME
+  wave174_status: VERIFIED_CONDITIONAL_DUAL_DISTANCE_AT_LEAST_4
+  wave178_edge_isolated_projective_circuits: 693
+  wave186_conditional_projective_circuit_lower: 4389
+  wave188_conditional_projective_short_word_lower: 9009
+  wave188_conditional_nonzero_scalar_short_word_lower: 18018
+  wave190_conditional_projective_circuit_lower: 6237
+  wave195_196_status: VERIFIED_HILTON_MILNER_FIBRE_BOUNDS
+  wave201_status: VERIFIED_MULTIPLICITY_WEIGHTED_FIBRE_LOSS
+  wave201_conditional_Q_lower: 7059
+  wave201_edge_plus_nonedge_projective_circuits: 7752
+  wave201_nonzero_scalar_short_circuit_words: 15504
+  wave202_status: VERIFIED_THREE_UNIT_FACE_NO_EXCLUSION
+  wave203_status: VERIFIED_TWO_CENTER_CAPACITY_NO_BOUND_PROMOTION
+  wave203_combined_directional_capacity: 5
+  wave203_selected_incidence_row: "3n3+4p3<=5|U|"
+  wave203_bidirectional_loss_row: "epsilon>=5b"
+  wave203_q_7060_proved: false
+  wave201_verifier_manifest_sha256: "d08624de5a64c4a49ce5a9bd6a7c65cb36eeef17c736f83070a4d12f66473854"
+  wave202_verifier_manifest_sha256: "d5caff62db1be705865c30227de0326c11023392d9d62ac261448e7c667af97a"
+  wave203_verifier_manifest_sha256: "ee0d994825ad9b687fb29eb7bcde02c86dacbd78042edff2111bd9fb4bc7d0ab"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "force bidirectional selected-label occupancy or derive a global compatibility obstruction for the 99-star zero-tight fusion frame"
+  caveat: "Waves 148--203 add independently checked incidence-geometry, coding, polar-space, extremal-set, and circuit-count restrictions, culminating in the conditional rank-11 bound Q>=7059. They supply no graph, rank-11 exclusion, endpoint exclusion, strict n3 upper bound below 4158, Conway-99 resolution, or external novelty result."
 last_updated: 2026-07-28
