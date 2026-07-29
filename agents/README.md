@@ -401,3 +401,20 @@ Wave 205 reports:
 - `2026-07-29-wave205-fourth-trace-globalization-verifier.md`: fresh
   source-blind and post-source verifier report with no mathematical or scope
   finding.
+
+Wave 206 reports:
+
+- `2026-07-29-wave206-three-center-proof-a.md`: fixed-middle coordinates,
+  four-point fibres, prism-free matching restriction, low-`t` censuses, and
+  the missing shared-completion boundary.
+- `2026-07-29-wave206-crossing-kernel-proof-b.md`: crossing/localizer
+  identities, `Gamma`, and the nonzero nonconstant tensor-balance
+  intersection code.
+- `2026-07-29-wave206-tensor-balance-weight-proof-b.md`: separately sealed
+  minimum-weight-eight strengthening and equality boundary.
+- `2026-07-29-wave206-literature-hostile-controls.md`: bounded
+  hypothesis-level source audit and relaxed complete-`g,H` controls with
+  varying `tau`.
+- `wave206-three-center-global-extension-verifier/audit.md`: fresh
+  source-blind and post-source verification, including the independent
+  weight-eight strengthening and all endpoint vetoes.

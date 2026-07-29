@@ -1,0 +1,5207 @@
+{
+  "claim_label": "DERIVED",
+  "conclusions": {
+    "combined_shared_operator_and_graph_module_completion": "UNKNOWN",
+    "conway_99_status": "UNKNOWN",
+    "four_vertex_fiber_matching_lemma": "DERIVED",
+    "full_labelled_three_center_graph_type_determines_tau": "UNKNOWN",
+    "newly_named_missing_invariant": "the joint four-operator fiber law for the four compressions owned by each y-star block pair, coupled across all 21 fibers by one shared 231-column realization",
+    "rank21_zero_row_three_center_gram": "DERIVED",
+    "rank_11_endpoint_excluded": false,
+    "root_relation_and_forced_y_star_placement_determine_tau": false,
+    "scalar_contraction_plus_marginal_modules_determine_h": false,
+    "t7_marked_r_one_excludes_h_two": "DERIVED_LOW_T_ONLY",
+    "twenty_one_coordinate_first_quadratic_moment_model": "DERIVED"
+  },
+  "coordinate_moment_model": {
+    "control_checks": {
+      "t6_h1": {
+        "claimed_t_integer": 6,
+        "coordinate_matrix": [
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "coordinate_sum_mod_3": 0,
+        "g": 0,
+        "h": 1,
+        "quadratic_coordinate_value": 1,
+        "two_times_coordinate_sum": 0
+      },
+      "t7_h0": {
+        "claimed_t_integer": 7,
+        "coordinate_matrix": [
+          [
+            2,
+            0,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        ],
+        "coordinate_sum_mod_3": 1,
+        "g": 2,
+        "h": 0,
+        "quadratic_coordinate_value": 0,
+        "two_times_coordinate_sum": 2
+      },
+      "t7_h1": {
+        "claimed_t_integer": 7,
+        "coordinate_matrix": [
+          [
+            2,
+            0,
+            1,
+            2,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            2,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            1
+          ]
+        ],
+        "coordinate_sum_mod_3": 1,
+        "g": 2,
+        "h": 1,
+        "quadratic_coordinate_value": 1,
+        "two_times_coordinate_sum": 2
+      },
+      "t7_h2": {
+        "claimed_t_integer": 7,
+        "coordinate_matrix": [
+          [
+            2,
+            0,
+            0,
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            0,
+            1,
+            1,
+            2,
+            0
+          ]
+        ],
+        "coordinate_sum_mod_3": 1,
+        "g": 2,
+        "h": 2,
+        "quadratic_coordinate_value": 2,
+        "two_times_coordinate_sum": 2
+      }
+    },
+    "coordinate_definition": "r_x^(y)[i,j]=<z_i,P_x z_j>, i<j; these are the 21 off-diagonal entries of R_x=Z_y^* P_x Z_y",
+    "diagonal_reconstruction": "R_x[i,i]=-sum_(j != i) r_x^(y)[i,j], because R_x 1=0",
+    "global_coordinate_sum": "sum_x r_x^(y)=0 coordinatewise, from sum_x P_x=0",
+    "linear_moment": "g_xy=tr(A_x^(y))=2 sum_(i<j) r_x^(y)[i,j]",
+    "nonedge_t_moment": "sum_(i<j) r_x^(y)[i,j]=t_xy modulo 3",
+    "nonneighbor_fiber_ownership": "the four nonneighbors in y-star block-pair {i,j} own the marked coordinate r[i,j], although their other coordinates need not vanish",
+    "operator_reconstruction": "A_x^(y)=Z_y R_x Z_y^* on E_y",
+    "quadratic_moment": "h_xy=tr(R_x G R_x G), a fixed quadratic form in the 21-coordinate row",
+    "root_star_gram": [
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "weighted_relation_projection": "for every c with sum_x c_x P_x=0, sum_x c_x r_x^(y)=0 coordinatewise"
+  },
+  "edge_module_census": {
+    "labelled_degree_two_biadjacency_matrices": 67950,
+    "profile_rank_g_h": [
+      {
+        "count": 15,
+        "g": 0,
+        "h": 0,
+        "rank": 3
+      },
+      {
+        "count": 60,
+        "g": 0,
+        "h": 0,
+        "rank": 4
+      },
+      {
+        "count": 45,
+        "g": 0,
+        "h": 1,
+        "rank": 4
+      },
+      {
+        "count": 10,
+        "g": 0,
+        "h": 0,
+        "rank": 6
+      }
+    ],
+    "unique_compressions": 130
+  },
+  "field": 3,
+  "formal_zero_sum_operator_controls": {
+    "t6_h1": {
+      "fixed_pair_g": 0,
+      "fixed_pair_h": 1,
+      "operator_count": 99,
+      "operator_sum_zero": true,
+      "residual_is_claimed_to_be_a_graph_projector_compression": false,
+      "residual_operator": [
+        [
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      ],
+      "tau_gram_rank": 1,
+      "tau_gram_row_sums_zero": true,
+      "tau_gram_symmetric": true
+    },
+    "t7_h0": {
+      "fixed_pair_g": 2,
+      "fixed_pair_h": 0,
+      "operator_count": 99,
+      "operator_sum_zero": true,
+      "residual_is_claimed_to_be_a_graph_projector_compression": false,
+      "residual_operator": [
+        [
+          2,
+          1,
+          2,
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1
+        ]
+      ],
+      "tau_gram_rank": 2,
+      "tau_gram_row_sums_zero": true,
+      "tau_gram_symmetric": true
+    },
+    "t7_h1": {
+      "fixed_pair_g": 2,
+      "fixed_pair_h": 1,
+      "operator_count": 99,
+      "operator_sum_zero": true,
+      "residual_is_claimed_to_be_a_graph_projector_compression": false,
+      "residual_operator": [
+        [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tau_gram_rank": 2,
+      "tau_gram_row_sums_zero": true,
+      "tau_gram_symmetric": true
+    },
+    "t7_h2": {
+      "fixed_pair_g": 2,
+      "fixed_pair_h": 2,
+      "operator_count": 99,
+      "operator_sum_zero": true,
+      "residual_is_claimed_to_be_a_graph_projector_compression": false,
+      "residual_operator": [
+        [
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          0
+        ]
+      ],
+      "tau_gram_rank": 2,
+      "tau_gram_row_sums_zero": true,
+      "tau_gram_symmetric": true
+    }
+  },
+  "graph_patterns_and_fibers": {
+    "edge_third_center_common_block_placements": {
+      "z_adjacent_to_both": "one in each of the two distinguished y-star blocks",
+      "z_adjacent_to_y_only": "one in each distinguished block and two in each of the five ordinary blocks"
+    },
+    "fiber_allowed_edges": [
+      [
+        "x00",
+        "x11"
+      ],
+      [
+        "x01",
+        "x10"
+      ]
+    ],
+    "fiber_forbidden_edges_sharing_an_endpoint_choice": [
+      [
+        "x00",
+        "x01"
+      ],
+      [
+        "x00",
+        "x10"
+      ],
+      [
+        "x01",
+        "x11"
+      ],
+      [
+        "x10",
+        "x11"
+      ]
+    ],
+    "fiber_graph_is_subgraph_of_opposite_corner_matching": true,
+    "fiber_vertices": [
+      "x00",
+      "x01",
+      "x10",
+      "x11"
+    ],
+    "fixed_nonedge_xy_pattern_counts": {
+      "z_adjacent_to_both": 2,
+      "z_adjacent_to_neither": 71,
+      "z_adjacent_to_x_only": 12,
+      "z_adjacent_to_y_only": 12
+    },
+    "nonedge_third_center_marked_pair_distribution": {
+      "star_block_pairs": 21,
+      "total": 84,
+      "vertices_per_pair": 4
+    },
+    "possible_induced_fiber_graph_count": 4,
+    "possible_induced_fiber_graphs": [
+      [],
+      [
+        [
+          "x00",
+          "x11"
+        ]
+      ],
+      [
+        [
+          "x01",
+          "x10"
+        ]
+      ],
+      [
+        [
+          "x00",
+          "x11"
+        ],
+        [
+          "x01",
+          "x10"
+        ]
+      ]
+    ],
+    "same_endpoint_hypothetical_edge_forces_prism_cross_edges": [
+      [
+        "y",
+        "a_p"
+      ],
+      [
+        "b0",
+        "x_p0"
+      ],
+      [
+        "b1",
+        "x_p1"
+      ]
+    ]
+  },
+  "inputs": {
+    "attempts/wave205-global-fourth-moment-proof-b/package-manifest.sha256": "a91a2a1cdbc129fa66e9d63b34031a774d5af78c458d18d9a1aadd7e4be217e7",
+    "attempts/wave205-nonedge-fourth-trace-proof-a/package-manifest.sha256": "2c9976b6cb07a3036df07fd0e7ceb7ffce6a339651d604fcecdcf8c0c3da3d96",
+    "attempts/wave206-three-center-global-extension/protocol.md": "66c20334e284a26cc771ee86d97e678cb67b6efb4648b2af2fffe480fb5a9103",
+    "verification/2026-07-29-wave205-integration-audit.md": "f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297",
+    "verification/2026-07-29-wave205-orchestrator.md": "9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb",
+    "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256": "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
+  },
+  "marginal_tau_census": {
+    "t6_h1": {
+      "edge_tau_values_by_common_block": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1,
+          2
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ],
+        "6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fourth_trace_h": 1,
+      "marginal_assignment": [
+        {
+          "common_block": 0,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 2
+        },
+        {
+          "common_block": 0,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 0,
+          "module_index": 1,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 1,
+          "module_index": 1,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 9,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 9,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 9,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 9,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 15,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        }
+      ],
+      "marginal_assignment_size": 97,
+      "marginal_tau_sum": 2,
+      "nonedge_tau_values_by_marked_pair": {
+        "0,1": [
+          0,
+          1,
+          2
+        ],
+        "0,2": [
+          0,
+          1,
+          2
+        ],
+        "0,3": [
+          0,
+          1,
+          2
+        ],
+        "0,4": [
+          0,
+          1,
+          2
+        ],
+        "0,5": [
+          0,
+          1,
+          2
+        ],
+        "0,6": [
+          0,
+          1,
+          2
+        ],
+        "1,2": [
+          0,
+          1,
+          2
+        ],
+        "1,3": [
+          0,
+          1,
+          2
+        ],
+        "1,4": [
+          0,
+          1,
+          2
+        ],
+        "1,5": [
+          0,
+          1,
+          2
+        ],
+        "1,6": [
+          0,
+          1,
+          2
+        ],
+        "2,3": [
+          0,
+          1,
+          2
+        ],
+        "2,4": [
+          0,
+          1,
+          2
+        ],
+        "2,5": [
+          0,
+          1,
+          2
+        ],
+        "2,6": [
+          0,
+          1,
+          2
+        ],
+        "3,4": [
+          0,
+          1,
+          2
+        ],
+        "3,5": [
+          0,
+          1,
+          2
+        ],
+        "3,6": [
+          0,
+          1,
+          2
+        ],
+        "4,5": [
+          0,
+          1,
+          2
+        ],
+        "4,6": [
+          0,
+          1,
+          2
+        ],
+        "5,6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pair_trace_g": 0,
+      "required_remaining_tau_sum": 2,
+      "root_relative_placement_multiplicities_imposed": true,
+      "shared_operator_sum_or_shared_231_columns_imposed": false,
+      "x_z_adjacency_or_pair_module_imposed": false
+    },
+    "t7_h0": {
+      "edge_tau_values_by_common_block": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1,
+          2
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ],
+        "6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fourth_trace_h": 0,
+      "marginal_assignment": [
+        {
+          "common_block": 0,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 1
+        },
+        {
+          "common_block": 0,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 0,
+          "module_index": 2,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 1,
+          "module_index": 2,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 0,
+          "module_index": 2,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 1,
+          "module_index": 2,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 0,
+          "module_index": 1,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 1,
+          "module_index": 1,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 10,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 10,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 10,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 10,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 7,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 7,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 7,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 7,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 6,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        }
+      ],
+      "marginal_assignment_size": 97,
+      "marginal_tau_sum": 1,
+      "nonedge_tau_values_by_marked_pair": {
+        "0,1": [
+          0,
+          1,
+          2
+        ],
+        "0,2": [
+          0,
+          1,
+          2
+        ],
+        "0,3": [
+          0,
+          1,
+          2
+        ],
+        "0,4": [
+          0,
+          1,
+          2
+        ],
+        "0,5": [
+          0,
+          1,
+          2
+        ],
+        "0,6": [
+          0,
+          1,
+          2
+        ],
+        "1,2": [
+          0,
+          1,
+          2
+        ],
+        "1,3": [
+          0,
+          1,
+          2
+        ],
+        "1,4": [
+          0,
+          1,
+          2
+        ],
+        "1,5": [
+          0,
+          1,
+          2
+        ],
+        "1,6": [
+          0,
+          1,
+          2
+        ],
+        "2,3": [
+          0,
+          1,
+          2
+        ],
+        "2,4": [
+          0,
+          1,
+          2
+        ],
+        "2,5": [
+          0,
+          1,
+          2
+        ],
+        "2,6": [
+          0,
+          1,
+          2
+        ],
+        "3,4": [
+          0,
+          1,
+          2
+        ],
+        "3,5": [
+          0,
+          1,
+          2
+        ],
+        "3,6": [
+          0,
+          1,
+          2
+        ],
+        "4,5": [
+          0,
+          1,
+          2
+        ],
+        "4,6": [
+          0,
+          1,
+          2
+        ],
+        "5,6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pair_trace_g": 2,
+      "required_remaining_tau_sum": 1,
+      "root_relative_placement_multiplicities_imposed": true,
+      "shared_operator_sum_or_shared_231_columns_imposed": false,
+      "x_z_adjacency_or_pair_module_imposed": false
+    },
+    "t7_h1": {
+      "edge_tau_values_by_common_block": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1,
+          2
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ],
+        "6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fourth_trace_h": 1,
+      "marginal_assignment": [
+        {
+          "common_block": 0,
+          "copy": 0,
+          "module_index": 30,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 0,
+          "copy": 1,
+          "module_index": 30,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 0,
+          "module_index": 30,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 1,
+          "module_index": 30,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 0,
+          "module_index": 39,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 1,
+          "module_index": 39,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 0,
+          "module_index": 17,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 1,
+          "module_index": 17,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 0,
+          "module_index": 7,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 1,
+          "module_index": 7,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 0,
+          "module_index": 8,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 1,
+          "module_index": 8,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 13,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 19,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 19,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 19,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 19,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 30,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        }
+      ],
+      "marginal_assignment_size": 97,
+      "marginal_tau_sum": 0,
+      "nonedge_tau_values_by_marked_pair": {
+        "0,1": [
+          0,
+          1,
+          2
+        ],
+        "0,2": [
+          0,
+          1,
+          2
+        ],
+        "0,3": [
+          0,
+          1,
+          2
+        ],
+        "0,4": [
+          0,
+          1,
+          2
+        ],
+        "0,5": [
+          0,
+          1,
+          2
+        ],
+        "0,6": [
+          0,
+          1,
+          2
+        ],
+        "1,2": [
+          0,
+          1,
+          2
+        ],
+        "1,3": [
+          0,
+          1,
+          2
+        ],
+        "1,4": [
+          0,
+          1,
+          2
+        ],
+        "1,5": [
+          0,
+          1,
+          2
+        ],
+        "1,6": [
+          0,
+          1,
+          2
+        ],
+        "2,3": [
+          0,
+          1,
+          2
+        ],
+        "2,4": [
+          0,
+          1,
+          2
+        ],
+        "2,5": [
+          0,
+          1,
+          2
+        ],
+        "2,6": [
+          0,
+          1,
+          2
+        ],
+        "3,4": [
+          0,
+          1,
+          2
+        ],
+        "3,5": [
+          0,
+          1,
+          2
+        ],
+        "3,6": [
+          0,
+          1,
+          2
+        ],
+        "4,5": [
+          0,
+          1,
+          2
+        ],
+        "4,6": [
+          0,
+          1,
+          2
+        ],
+        "5,6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pair_trace_g": 2,
+      "required_remaining_tau_sum": 0,
+      "root_relative_placement_multiplicities_imposed": true,
+      "shared_operator_sum_or_shared_231_columns_imposed": false,
+      "x_z_adjacency_or_pair_module_imposed": false
+    },
+    "t7_h2": {
+      "edge_tau_values_by_common_block": {
+        "0": [
+          0,
+          1,
+          2
+        ],
+        "1": [
+          0,
+          1,
+          2
+        ],
+        "2": [
+          0,
+          1,
+          2
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          0,
+          1,
+          2
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ],
+        "6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "fourth_trace_h": 2,
+      "marginal_assignment": [
+        {
+          "common_block": 0,
+          "copy": 0,
+          "module_index": 21,
+          "relation_to_y": "edge",
+          "tau": 2
+        },
+        {
+          "common_block": 0,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 1,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 0,
+          "module_index": 5,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 2,
+          "copy": 1,
+          "module_index": 5,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 0,
+          "module_index": 10,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 3,
+          "copy": 1,
+          "module_index": 10,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 4,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 0,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 5,
+          "copy": 1,
+          "module_index": 0,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 0,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "common_block": 6,
+          "copy": 1,
+          "module_index": 4,
+          "relation_to_y": "edge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            1
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            2
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            3
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            0,
+            6
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            2
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            3
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            4
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            5
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            1,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            3
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            4
+          ],
+          "module_index": 8,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            5
+          ],
+          "module_index": 3,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            2,
+            6
+          ],
+          "module_index": 1,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            4
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            5
+          ],
+          "module_index": 4,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            3,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            5
+          ],
+          "module_index": 5,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            4,
+            6
+          ],
+          "module_index": 2,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 0,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 1,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 2,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        },
+        {
+          "copy": 3,
+          "marked_pair": [
+            5,
+            6
+          ],
+          "module_index": 0,
+          "relation_to_y": "nonedge",
+          "tau": 0
+        }
+      ],
+      "marginal_assignment_size": 97,
+      "marginal_tau_sum": 2,
+      "nonedge_tau_values_by_marked_pair": {
+        "0,1": [
+          0,
+          1,
+          2
+        ],
+        "0,2": [
+          0,
+          1,
+          2
+        ],
+        "0,3": [
+          0,
+          1,
+          2
+        ],
+        "0,4": [
+          0,
+          1,
+          2
+        ],
+        "0,5": [
+          0,
+          1,
+          2
+        ],
+        "0,6": [
+          0,
+          1,
+          2
+        ],
+        "1,2": [
+          0,
+          1,
+          2
+        ],
+        "1,3": [
+          0,
+          1,
+          2
+        ],
+        "1,4": [
+          0,
+          1,
+          2
+        ],
+        "1,5": [
+          0,
+          1,
+          2
+        ],
+        "1,6": [
+          0,
+          1,
+          2
+        ],
+        "2,3": [
+          0,
+          1,
+          2
+        ],
+        "2,4": [
+          0,
+          1,
+          2
+        ],
+        "2,5": [
+          0,
+          1,
+          2
+        ],
+        "2,6": [
+          0,
+          1,
+          2
+        ],
+        "3,4": [
+          0,
+          1,
+          2
+        ],
+        "3,5": [
+          0,
+          1,
+          2
+        ],
+        "3,6": [
+          0,
+          1,
+          2
+        ],
+        "4,5": [
+          0,
+          1,
+          2
+        ],
+        "4,6": [
+          0,
+          1,
+          2
+        ],
+        "5,6": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pair_trace_g": 2,
+      "required_remaining_tau_sum": 2,
+      "root_relative_placement_multiplicities_imposed": true,
+      "shared_operator_sum_or_shared_231_columns_imposed": false,
+      "x_z_adjacency_or_pair_module_imposed": false
+    }
+  },
+  "marked_coordinate_low_t_census": {
+    "census": {
+      "6": {
+        "admissible_normalized_modules": 18,
+        "counts_by_h_and_r": {
+          "1,1": 18
+        }
+      },
+      "7": {
+        "admissible_normalized_modules": 765,
+        "counts_by_h_and_r": {
+          "0,0": 288,
+          "0,1": 9,
+          "1,0": 144,
+          "1,1": 180,
+          "2,0": 144
+        }
+      }
+    },
+    "consequence": "at t=7, r=1 excludes h=2; r=0 permits h=0,1,2; at t=6, r=1 and h=1 are forced within the censused branch",
+    "definition": "r_x^(y)[i,j]=<z_i,P_x z_j>=-(C C^T)[i,j] for the two marked y-star blocks",
+    "special_row_formula": {
+      "ordinary_extra_two_positions_aligned": "r=0",
+      "ordinary_extra_two_positions_distinct": "r=1"
+    }
+  },
+  "omitted_target_premises": [
+    "one simultaneous choice of 98 graph-derived compressions whose operator sum is zero",
+    "one shared set of 231 projectively distinct centered columns for all marginal modules",
+    "compatibility of the four compression operators inside each nonneighbor fiber",
+    "compatibility between the 21 fibers and the 14 edge compressions",
+    "the prescribed x-z adjacency and pair module for each third center",
+    "all t>=8 nonedge modules",
+    "global point-triangle incidence, square-zero Gram, and rank-11 endpoint realization",
+    "a 99-vertex srg(99,14,1,2), construction, or nonexistence proof"
+  ],
+  "scope": "conditional prism-free rank-11 endpoint; exact fixed-root three-center operator identities, graph placements, low-t marked-coordinate census, and marginal tau compatibility",
+  "three_center_operator_theorem": {
+    "compression": "A_x^(y)=P_y P_x P_y restricted to E_y",
+    "diagonal": "T_y[x,x]=h_yx",
+    "fixed_root": "y",
+    "nonedge_pair_contraction": "sum_(z not in {x,y}) tau_(xy;z)=-h_xy-g_xy",
+    "operator_sum": "sum_x A_x^(y)=0",
+    "rank_bound": 21,
+    "root_row": "T_y[y,x]=g_yx",
+    "row_sums_zero": true,
+    "self_adjoint_operator_dimension_on_E_y": 21,
+    "symmetric": true,
+    "tau_gram": "T_y[x,z]=tr(A_x^(y) A_z^(y))"
+  }
+}

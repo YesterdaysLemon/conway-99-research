@@ -1,0 +1,381 @@
+{
+  "cap_audit": {
+    "cap_transfer": "dual distance at least four means every three selected original columns are linearly independent, hence the support points form a projective cap in their span",
+    "exact_exhaustion": {
+      "1": {
+        "maximum_no_three_collinear": 1,
+        "number_of_maximum_labelled_subsets": 1,
+        "projective_points": 1,
+        "projective_space": "PG(0,3)"
+      },
+      "2": {
+        "maximum_no_three_collinear": 2,
+        "number_of_maximum_labelled_subsets": 6,
+        "projective_points": 4,
+        "projective_space": "PG(1,3)"
+      },
+      "3": {
+        "maximum_no_three_collinear": 4,
+        "number_of_maximum_labelled_subsets": 234,
+        "projective_points": 13,
+        "projective_space": "PG(2,3)"
+      }
+    }
+  },
+  "claim_label": "DERIVED_PENDING_INDEPENDENT_VERIFICATION",
+  "conclusions": {
+    "Q_7060_proved": false,
+    "conway_99_resolved": false,
+    "crossing_package_promoted_to_verified": false,
+    "n3_improved": false,
+    "rank11_endpoint_excluded": false,
+    "status": "UNKNOWN",
+    "tensor_balance_weight_lower_bound": 8,
+    "weight_nine_lower_bound_proved": false
+  },
+  "field": 3,
+  "inputs": {
+    "attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256": "6c7718de1c5f2c7d4203d1727d6b74214e51fa069608f318c8583b07b0325f0a",
+    "attempts/wave206-tensor-balance-weight-proof-b/protocol.md": "96d7e061a5df7aee9cf675198535788be11a0f0f2491536d0a18d51ab767319e",
+    "verification/wave174-no-weight3-dual/package-manifest.sha256": "ac34c8a3b045bec70e3a2080cb4365c0ea43cc732b313ecb3cec355a28f23450",
+    "verification/wave174-no-weight3-dual/verification-report.md": "59bc0e470a7d007aa2ddaec262a2f3046c8df7da56192bdab90327962feb9b0a"
+  },
+  "operator_to_coefficient_form": {
+    "ambient_form_step": "the operator matrix is V Lambda V^T F; multiply by the invertible ambient form F^{-1}",
+    "ordinary_tensor_equation": "V Lambda V^T=0",
+    "rank_one_operator_equation": "sum_i a_i(z_i tensor z_i)=0",
+    "support_span_step": "factoring V=E X with E full column rank and applying a left inverse gives X Lambda X^T=0; the ambient support span need not be nondegenerate"
+  },
+  "scope": "support bound for the nonzero nonconstant Wave 206 tensor-balance intersection-code word",
+  "small_support_exclusion": {
+    "cases": [
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 0,
+        "maximum_span_rank_from_Witt": 0,
+        "support_size": 1
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 1,
+        "maximum_span_rank_from_Witt": 1,
+        "support_size": 2
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 1,
+        "maximum_span_rank_from_Witt": 1,
+        "support_size": 3
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 2,
+        "maximum_span_rank_from_Witt": 2,
+        "support_size": 4
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 2,
+        "maximum_span_rank_from_Witt": 2,
+        "support_size": 5
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 4,
+        "maximum_span_rank_from_Witt": 3,
+        "support_size": 6
+      },
+      {
+        "excluded": true,
+        "maximum_cap_in_that_rank": 4,
+        "maximum_span_rank_from_Witt": 3,
+        "support_size": 7
+      }
+    ],
+    "conclusion": "every nonzero tensor-balance word has weight at least eight"
+  },
+  "weight_eight_boundary": {
+    "allowed_number_of_coefficient_2_entries": [
+      0,
+      2,
+      4,
+      6,
+      8
+    ],
+    "coefficient_form": "Lambda must be the split 8-dimensional form",
+    "composition_consequence": "the number of coefficient-2 support entries is even",
+    "forced_span_rank": 4,
+    "reason": "an eight-point cap cannot lie in projective dimension at most two, while the Witt bound gives rank at most four"
+  },
+  "weight_eight_control": {
+    "all_coefficients_nonzero": true,
+    "all_support_columns_singular": true,
+    "ambient_dimension": 11,
+    "ambient_form_determinant": 2,
+    "ambient_form_nonsquare": true,
+    "coefficient_composition": {
+      "1": 4,
+      "2": 4
+    },
+    "coefficient_form_witt_index": 4,
+    "conclusion": "weight eight is attainable under the tensor relation, projectivity, dual-distance-four, singular-column, and nonsquare-11-space premises",
+    "every_three_columns_independent": true,
+    "failed_endpoint_premises": [
+      "only eight support columns are supplied, not a shared 231-column frame",
+      "there is no 99-by-231 point-triangle incidence",
+      "there is no endpoint centered code or zero global frame",
+      "there is no srg(99,14,1,2) or prism-free graph",
+      "the control does not assert that its coefficient word lies in im(B^T)"
+    ],
+    "projectively_distinct": true,
+    "span_rank": 4,
+    "support_form_determinant": 1,
+    "support_form_rank": 4,
+    "support_size": 8,
+    "tensor_sum_zero": true
+  },
+  "witt_audit": {
+    "coefficient_form": "Lambda=diag(a_i), every a_i in {1,2}",
+    "dimension_bound_proof": "U subset U^perp and nondegeneracy gives dim(U)+dim(U^perp)=k, hence 2 dim(U)<=k",
+    "exact_diagonal_form_table": {
+      "1": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 0
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 0
+        }
+      ],
+      "2": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 0
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 1
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 0
+        }
+      ],
+      "3": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 1
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 1
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 1
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 1
+        }
+      ],
+      "4": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 1
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 1
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 4,
+          "witt_index": 2
+        }
+      ],
+      "5": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 2
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 2
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 4,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 5,
+          "witt_index": 2
+        }
+      ],
+      "6": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 4,
+          "witt_index": 2
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 5,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 6,
+          "witt_index": 2
+        }
+      ],
+      "7": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 3
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 3
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 4,
+          "witt_index": 3
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 5,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 6,
+          "witt_index": 3
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 7,
+          "witt_index": 3
+        }
+      ],
+      "8": [
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 0,
+          "witt_index": 4
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 1,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 2,
+          "witt_index": 4
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 3,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 4,
+          "witt_index": 4
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 5,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 6,
+          "witt_index": 4
+        },
+        {
+          "determinant": 2,
+          "number_of_coefficient_2_entries": 7,
+          "witt_index": 3
+        },
+        {
+          "determinant": 1,
+          "number_of_coefficient_2_entries": 8,
+          "witt_index": 4
+        }
+      ]
+    },
+    "nondegenerate": true,
+    "row_space_consequence": "V Lambda V^T=0 makes row(V) totally isotropic, so rank(V)<=WittIndex(Lambda)<=floor(k/2)"
+  }
+}

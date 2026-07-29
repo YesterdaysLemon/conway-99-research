@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-28
+as_of: 2026-07-29
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -2621,3 +2621,62 @@ obligations:
       censuses, relaxed controls, or ambient coordinate counts do not
       discharge this obligation. Actual nonedge h, rank 11, n3=4158, and
       Conway-99 remain UNKNOWN.
+
+  - id: O-WAVE206-THREE-CENTER-INFLECTION-CHECKPOINT
+    requirement: >-
+      Independently freeze and verify the fixed-middle 21-coordinate trace
+      model, four-point fibre restriction, Proof-A censuses, crossing and
+      Gamma identities, true-kernel quotient, nonconstant tensor-balance
+      code, minimum support, and all hostile-control premise failures.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/2026-07-29-wave206-integration-audit.md"
+      - "verification/2026-07-29-wave206-orchestrator.md"
+      - "verification/wave206-three-center-global-extension-verifier/SOURCE_BLIND_FREEZE.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+      - "verification/wave206-three-center-global-extension-verifier/package-manifest.sha256"
+    note: >-
+      The source-blind and post-source verifier suites pass 37 tests; the
+      submitted Proof-A, Proof-B, weight-addendum, and hostile suites pass 44
+      tests. The verifier independently strengthened the support bound to
+      weight at least eight. No endpoint or target status is promoted.
+
+  - id: O-WAVE206-TENSOR-BALANCE-CODE-CLASSIFICATION
+    requirement: >-
+      Determine the complete or sufficiently marked weight distribution of
+      A_Delta=im(B^T) intersect ker(a -> D diag(a) D), beginning with the
+      rank-four, even-composition weight-eight case, using the full
+      231-column incidence and im(B^T) membership; then derive a checked
+      endpoint contradiction or construct a compatible word.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave206-crossing-kernel-proof-b/failed-routes.md"
+      - "attempts/wave206-tensor-balance-weight-proof-b/failed-routes.md"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+      - "verification/2026-07-29-wave206-orchestrator.md"
+    note: >-
+      Existence and minimum weight are verified, but no actual endpoint word
+      is known. The exact support-eight control lacks the target incidence
+      and im(B^T), so it prevents inflation to weight at least nine but does
+      not discharge this obligation.
+
+  - id: O-WAVE206-MIXED-FOUR-CENTER-COMPATIBILITY
+    requirement: >-
+      Impose all three pair modules on each labelled center triple and derive
+      a simultaneous mixed-middle law, such as a controlled formula for
+      tr((P_yP_xP_y)(P_vP_zP_v)) with y!=v, that couples the common
+      A_Delta kernel to actual graph incidence strongly enough to classify
+      nonedge h or exclude the conditional endpoint.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave206-three-center-proof-a/failed-routes.md"
+      - "attempts/wave206-crossing-kernel-proof-b/failed-routes.md"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+      - "verification/2026-07-29-wave206-integration-audit.md"
+    note: >-
+      Proof A is marginal in the x-z pair and the relaxed controls show that
+      complete g, H, zero-frame, and shared linear incidence do not determine
+      tau. A graph-specific simultaneous completion law remains necessary.

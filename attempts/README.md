@@ -1119,3 +1119,26 @@ The independently verified inflection is that pair-local fourth-order data
 cannot decide the endpoint. Further work must control simultaneous
 99-center extension, the crossing kernel on `row(U)`, or an equivalent
 three-center invariant. No endpoint or Conway-99 claim is promoted.
+
+Wave 206 attempts:
+
+- `wave206-three-center-global-extension/` freezes the prism-free rank-11
+  branch, the three-center tensor, the inflection criteria, and all status
+  walls.
+- `wave206-three-center-proof-a/` derives the fixed-middle 21-coordinate
+  model, the 21 four-point nonneighbor fibres, their prism-free matching
+  restriction, and the complete low-`t` marked censuses.
+- `wave206-crossing-kernel-proof-b/` proves the crossing and `Gamma`
+  identities and forces the nonzero, nonconstant tensor-balance code
+  `A_Delta` with equal three-class tensor sums and a common true kernel.
+- `wave206-tensor-balance-weight-proof-b/` strengthens every nonzero
+  `A_Delta` word to weight at least eight and records the exact equality
+  conditions and sharp relaxed boundary control.
+- `wave206-three-center-hostile-controls/` provides the bounded source audit
+  and exact relaxed systems with identical complete `g,H` but 209,952
+  differing ordered `tau` entries.
+
+The independently verified inflection is a genuine global relation code, not
+an endpoint exclusion. The next route is to classify its possible
+weight-eight words under `im(B^T)` and the full 231-column incidence, then
+couple different middle centers through a mixed four-center law.

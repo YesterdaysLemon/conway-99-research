@@ -3239,6 +3239,44 @@ wheel hashes, proof-producing solver binary, and independent checker binaries,
 then record their cryptographic hashes in the run manifest. The current Exact,
 VeriPB, and CakePB identities and hashes are in the calibration report.
 
+## Wave 206 three-center and tensor-balance replay
+
+Replay the sealed discovery packages:
+
+```powershell
+python -B attempts\wave206-three-center-hostile-controls\exact_check.py `
+  --verify-results attempts\wave206-three-center-hostile-controls\exact-results.json
+python -B -m pytest -q attempts\wave206-three-center-hostile-controls
+python -B attempts\wave206-three-center-proof-a\exact_check.py `
+  --verify attempts\wave206-three-center-proof-a\exact-results.json
+python -B -m unittest -v `
+  attempts\wave206-three-center-proof-a\test_exact_check.py
+python -B attempts\wave206-crossing-kernel-proof-b\exact_check.py `
+  --verify attempts\wave206-crossing-kernel-proof-b\exact-results.json
+python -B -m unittest -v `
+  attempts\wave206-crossing-kernel-proof-b\test_exact_check.py
+python -B attempts\wave206-tensor-balance-weight-proof-b\exact_check.py `
+  --verify attempts\wave206-tensor-balance-weight-proof-b\exact-results.json
+python -B -m unittest -v `
+  attempts\wave206-tensor-balance-weight-proof-b\test_exact_check.py
+```
+
+Replay the fresh independent verifier:
+
+```powershell
+python -B -m unittest -v `
+  verification\wave206-three-center-global-extension-verifier\test_independent_verifier.py `
+  verification\wave206-three-center-global-extension-verifier\test_post_source_hostile_audit.py `
+  verification\wave206-three-center-global-extension-verifier\test_post_source_proof_a_audit.py `
+  verification\wave206-three-center-global-extension-verifier\test_post_source_proof_b_audit.py
+```
+
+The verifier promotes a nonzero nonconstant tensor-balance code, common true
+kernels, and minimum weight eight only on the conditional prism-free rank-11
+endpoint. The exact controls are scoped boundary objects, not target graphs.
+No endpoint exclusion, strict `n3` improvement, `Q>=7060` proof, or
+Conway-99 resolution follows.
+
 ## Artifact retention
 
 Small certificates and verification reports belong in Git. Large CNF, LRAT,

@@ -1,0 +1,61 @@
+role: construction
+date_utc: 2026-07-29T21:35:14Z
+git_commit: 85e705cc6c2a14d123120c93a847e30aaab1789e
+claim_label: CANDIDATE
+scope: >-
+  Wave 206 construction, literature, and hostile-control lane: exact relaxed
+  99x231 shared-incidence controls with identical full labeled g and H but
+  separated tau, plus projector-only fixed-y rank-21 sharpness controls.
+inputs:
+  - path: attempts/wave206-three-center-global-extension/protocol.md
+    sha256: 66c20334e284a26cc771ee86d97e678cb67b6efb4648b2af2fffe480fb5a9103
+  - path: verification/2026-07-29-wave205-integration-audit.md
+    sha256: f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297
+  - path: verification/2026-07-29-wave205-orchestrator.md
+    sha256: 9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb
+  - path: verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256
+    sha256: b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325
+  - path: attempts/wave205-nonedge-fourth-trace-proof-a/package-manifest.sha256
+    sha256: 2c9976b6cb07a3036df07fd0e7ceb7ffce6a339651d604fcecdcf8c0c3da3d96
+  - path: attempts/wave205-global-fourth-moment-proof-b/package-manifest.sha256
+    sha256: a91a2a1cdbc129fa66e9d63b34031a774d5af78c458d18d9a1aadd7e4be217e7
+  - path: attempts/wave205-fourth-trace-globalization/protocol.md
+    sha256: a1d45fc0a82b9944a9e020ded3945e75944e0e00202eacbb20eb05598e30bf4d
+method: >-
+  Deterministically reconstruct 34 rank-six self-adjoint F_3 projectors from
+  a listed reflection word; attach exact seven-vector singular simplices;
+  build a labeled cyclic 99x231 linear incidence; compare complete 99x99 g
+  and H matrices and type-expanded tau tensors; independently compute
+  fixed-y trace-Gram ranks; audit primary-source hypotheses.
+command: >-
+  python -B attempts\wave206-three-center-hostile-controls\exact_check.py
+  --verify-results
+  attempts\wave206-three-center-hostile-controls\exact-results.json ;
+  python -m pytest -q attempts\wave206-three-center-hostile-controls
+outputs:
+  - path: attempts/wave206-three-center-hostile-controls/certificate.json
+    sha256: 49e70f464d4800982abce3ba71d9b62d3877fc6e967317a67306ef6a514db945
+  - path: attempts/wave206-three-center-hostile-controls/exact-results.json
+    sha256: 977839eeaab6dff1c2faaa8780494849e1d3c7b2402e8a76158b06ca4fa5cd18
+  - path: attempts/wave206-three-center-hostile-controls/literature-sources.json
+    sha256: 46300051c7764eb44a9b2a6f8fb934cdf66ff8f4e101ef48f9387f8bfebbcdf8
+  - path: attempts/wave206-three-center-hostile-controls/literature-audit.md
+    sha256: 9a41f0b69cdf54d2a01f8f02fdbdf5ca6068248442126fc927399037e3518661
+limitations:
+  - >-
+    The shared-incidence control is disconnected, is not
+    srg(99,14,1,2), has nonuniform lambda and mu, has extra triangles, and
+    uses only 19 projective block directions.
+  - >-
+    Its tau differences occur only on triples using all three disconnected
+    components and do not classify an actual target graph type.
+  - >-
+    The rank-21 controls repeat 33 projector types three times and have no
+    coupled 231-column incidence or star-to-column constraint.
+  - >-
+    The projector search is restricted to the listed 34-type reflection-word
+    pool. No automorphism is assumed; every bounded nonhit is non-evidentiary.
+  - >-
+    This package is a construction/literature discovery lane, not the Wave
+    206 verifier, and it does not change Conway-99, rank-11, n3=4158, or Q
+    status.

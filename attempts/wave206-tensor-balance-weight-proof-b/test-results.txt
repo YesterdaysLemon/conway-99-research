@@ -1,0 +1,16 @@
+command:
+.\.venv\Scripts\python.exe -B -m unittest -v attempts\wave206-tensor-balance-weight-proof-b\test_exact_check.py
+
+result:
+Ran 11 tests in 0.132s
+OK
+
+covered:
+- frozen inputs
+- ambient-form removal and support-span degeneracy
+- coefficient-form Witt bound
+- exact projective cap maxima in vector ranks one through three
+- exclusion of support sizes one through seven
+- weight-eight rank and coefficient-parity boundary
+- singular weight-eight control in a nonsquare 11-space
+- scope and status-inflation rejection

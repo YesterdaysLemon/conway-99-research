@@ -3967,33 +3967,38 @@ status.
 - `logs/`: run manifests and summarized logs; bulky raw output stays in releases
   or external archives with checksums.
 
-## Current verified frontier: Wave 205
+## Current verified frontier: Wave 206
 
-Wave 205 closes the pair-local version of the fourth-trace route.  For a
-nonedge, exact two-star geometry forces `t_xy>=6`, average `t_xy=7`, and
-
-```text
-tr(P_xP_y)=2t_xy,
-h_xy=tr((C C^T)^2).
-```
-
-The complete normalized frontier contains 646 matrices at `t=6` and 7,886
-at `t=7`.  Full-rank local modules exist at `t=6`; at `t=7` they realize all
-three possible fourth traces.  Four exact 28-vertex certificates verify this
-pair-local boundary, but they are not global graphs.
-
-For the full 99-star system, the verified factorization is
+Wave 206 turns the three-center route into a concrete global necessary
+condition.  Conditional on the prism-free rank-11 endpoint, the 99 star
+projectors force a nonzero, nonconstant ternary relation in
 
 ```text
-H=U K_D U^T,
-rank_F3(U)=99.
+A_Delta=im(B^T) intersect ker(a -> D diag(a) D).
 ```
 
-Consequently the next theorem must control the graph-specific crossing
-kernel, the equivalent localizers, or a simultaneous three-center/99-center
-extension law.  A fresh source-blind verifier passed all 17 independent
-tests.  Actual endpoint nonedge traces, rank 11, `n3=4158`, the interval
-`708<=n3<=4158`, and Conway-99 remain `UNKNOWN`.
+Every nonzero word in this code:
+
+- has support at least eight;
+- has equal tensor sums over its three coefficient classes;
+- pulls back to a genuine projector relation common to every fixed-middle
+  three-center trace kernel and the global `Gamma` kernel.
+
+At weight eight, the supported triangle columns must span dimension four and
+the number of coefficient-two entries is even.  A relaxed eight-column
+control shows that these local ingredients alone cannot prove weight at least
+nine; it is not a target word or graph.
+
+For each fixed middle center, the trace tensor has an exact nondegenerate
+21-coordinate model.  The 84 nonneighbors split into 21 four-point fibres,
+and prism-freeness restricts each fibre to an opposite-corner matching.
+Relaxed shared-incidence controls can keep complete `g` and `H` fixed while
+changing `tau` on 209,952 ordered triples, so the next theorem must use the
+full target incidence or a mixed four-center compatibility law.
+
+A fresh verifier passed 37 independent tests and all 44 submitted tests.
+Actual endpoint nonedge traces, rank 11, `n3=4158`, the interval
+`708<=n3<=4158`, `Q>=7060`, and Conway-99 remain `UNKNOWN` or unproved.
 
 ## Primary starting points
 

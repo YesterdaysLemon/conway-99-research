@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-28
+as_of: 2026-07-29
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -2969,3 +2969,68 @@ claims:
       - "verification/2026-07-29-wave205-orchestrator.md"
       - "logs/2026-07-29-wave205-public-checkpoint.json"
     limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. Novelty and priority remain UNKNOWN."
+
+  - id: C-WAVE206-FIXED-MIDDLE-001
+    statement: "Conditional on the prism-free rank-11 endpoint, every fixed-middle three-center trace matrix Tau^(y) is a symmetric zero-row-sum trace Gram of rank at most 21, and its star compression has an exact nondegenerate 21-coordinate trace metric J_star=C^T C+2I with determinant two over F3."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_FIXED_MIDDLE_PROJECTOR_TENSOR
+    evidence:
+      - "attempts/wave206-three-center-proof-a/derivation.md"
+      - "attempts/wave206-crossing-kernel-proof-b/derivation.md"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+      - "verification/wave206-three-center-global-extension-verifier/package-manifest.sha256"
+    limitations: "A restricted trace-Gram null vector need not be a true operator relation. The rank-21 bound is sharp in relaxed projector controls and does not classify the target Tau entries."
+
+  - id: C-WAVE206-FIBRE-001
+    statement: "For a fixed endpoint vertex, its 84 nonneighbors split into 21 exact four-point fibres indexed by pairs of star triangles, and prism-freeness restricts each fibre graph to a subgraph of the two-edge opposite-corner matching."
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ROOT_GEOMETRY
+    evidence:
+      - "attempts/wave206-three-center-proof-a/derivation.md"
+      - "attempts/wave206-three-center-proof-a/exact-results.json"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_a_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "The root-relative modules do not impose the x-z pair module, a shared 231-column realization, t>=8 modules, or a full endpoint completion."
+
+  - id: C-WAVE206-TENSOR-BALANCE-001
+    statement: "Conditional on the prism-free rank-11 endpoint, A_Delta=im(B^T) intersect ker(a -> D diag(a) D) has dimension at least one, contains no nonzero constant word, and every nonzero word has equal coefficient-class tensor sums R0=R1=R2 and pulls back to a true relation in every ker(Tau^(y)) and ker(Gamma)."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_GLOBAL_TENSOR_BALANCE_CODE
+    evidence:
+      - "attempts/wave206-crossing-kernel-proof-b/derivation.md"
+      - "attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_b_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "Equality of the three tensor sums is not equality of class sizes. The result proves a necessary relation exists, not that any listed candidate word is endpoint-compatible."
+
+  - id: C-WAVE206-TENSOR-WEIGHT-001
+    statement: "Every nonzero word in the conditional endpoint code A_Delta has weight at least eight; if equality holds, the eight supported columns span dimension four and the number of coefficient-two entries is even."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_TENSOR_BALANCE_SUPPORT
+    evidence:
+      - "attempts/wave206-tensor-balance-weight-proof-b/derivation.md"
+      - "attempts/wave206-tensor-balance-weight-proof-b/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_b_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "A relaxed eight-column control proves the local ingredients cannot force weight at least nine. It is not a 231-column incidence object, graph, word in im(B^T), or target construction."
+
+  - id: C-WAVE206-TAU-UNDERDETERMINATION-001
+    statement: "The complete labelled pair-trace matrix, complete labelled fourth-trace matrix, shared linear 99-by-231 incidence, rank-11 square-zero centered Gram, exact star-projector coupling, and zero global frame determine the complete labelled three-center tensor tau."
+    label: REFUTED
+    scope: RELAXED_SHARED_INCIDENCE_PROJECTOR_IMPLICATION
+    evidence:
+      - "attempts/wave206-three-center-hostile-controls/exact-results.json"
+      - "attempts/wave206-three-center-hostile-controls/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_hostile_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "The two exact controls are disconnected, fail lambda=1 and mu=2, contain extra triangles, and repeat projective directions. They refute only the stated relaxed implication and are not target counterexamples."
+
+  - id: C-WAVE206-TARGET-001
+    statement: "Wave206 does not classify actual endpoint nonedge fourth traces or decide the rank-11 endpoint, n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-29-wave206-integration-audit.md"
+      - "verification/2026-07-29-wave206-orchestrator.md"
+      - "logs/2026-07-29-wave206-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. A target A_Delta word, novelty, and priority remain UNKNOWN."

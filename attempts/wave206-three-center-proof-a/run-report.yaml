@@ -1,0 +1,50 @@
+role: proof_a
+date_utc: "2026-07-29T21:45:42Z"
+git_commit: "85e705cc6c2a14d123120c93a847e30aaab1789e"
+claim_label: DERIVED
+scope: >-
+  Conditional prism-free rank-11 endpoint: fixed-root three-center operator
+  Gram, exact nonedge fiber geometry, 21-coordinate moments, low-t marked
+  census, and marginal tau controls.
+inputs:
+  - path: attempts/wave206-three-center-global-extension/protocol.md
+    sha256: 66c20334e284a26cc771ee86d97e678cb67b6efb4648b2af2fffe480fb5a9103
+  - path: verification/2026-07-29-wave205-integration-audit.md
+    sha256: f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297
+  - path: verification/2026-07-29-wave205-orchestrator.md
+    sha256: 9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb
+  - path: attempts/wave205-nonedge-fourth-trace-proof-a/exact_check.py
+    sha256: 3532d6ac65c46003ae313409fa5f6e7e3b99131a51982d2171eda2697f772297
+  - path: attempts/wave205-nonedge-fourth-trace-proof-a/controls.json
+    sha256: e52c068f5fdba18110debdd1455195ec22145f07993437b5438e8f77ae03fdcf
+method: >-
+  Derive the fixed-root operator Gram and 21-coordinate identities over F_3;
+  classify labelled root-star placements and four-vertex fibers; exhaustively
+  enumerate degree-two edge modules and normalized t=6,7 nonedge modules;
+  test all marginal tau residues and construct explicitly scoped scalar and
+  abstract-operator obstruction controls.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave206-three-center-proof-a\exact_check.py --verify
+  attempts\wave206-three-center-proof-a\exact-results.json;
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave206-three-center-proof-a\test_exact_check.py
+outputs:
+  - path: attempts/wave206-three-center-proof-a/exact_check.py
+    sha256: 045771466f9fc4fe313d8ac6752b0216430771863ad7316e53915d62f48a716e
+  - path: attempts/wave206-three-center-proof-a/test_exact_check.py
+    sha256: 51c2f161928bf22dc07470d961d48e08e0b86a63b558e9d371dd3edf64764e6e
+  - path: attempts/wave206-three-center-proof-a/exact-results.json
+    sha256: 3eda9e08e48ed9489938d4d871c7bea3e5808f1b0622999879952755af853494
+  - path: attempts/wave206-three-center-proof-a/derivation.md
+    sha256: 0e9e3c304b4f93a2283a6008f10fea3733de44c9d65fb689e33b8a90c0877962
+  - path: attempts/wave206-three-center-proof-a/failed-routes.md
+    sha256: e55d47fc4660370451f165ecda7ee06b3ad0152aa58501f67ea511f597fc2154
+limitations:
+  - Discovery package; independent verification has not yet promoted any claim.
+  - Marginal ledgers do not impose the prescribed x-z adjacency or pair module.
+  - Marginal module choices are not one simultaneous 99-center completion.
+  - Formal zero-sum residual operators are not claimed graph-derived.
+  - The t=6,7 normalized census does not cover t>=8.
+  - No shared 231-column endpoint realization or nonexistence proof is supplied.
+  - Conway-99, the rank-11 endpoint, and the actual nonedge h values remain UNKNOWN.

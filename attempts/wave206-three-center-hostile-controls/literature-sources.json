@@ -1,0 +1,121 @@
+{
+  "audit_cutoff_date_utc": "2026-07-29",
+  "claim_label": "CITED",
+  "search_boundary": "Bounded primary-source audit. Failure to locate an applicable theorem is not evidence that no theorem exists.",
+  "sources": [
+    {
+      "identifier": "arXiv:2012.12977v2",
+      "title": "Frames over finite fields: Basic theory and equiangular lines in unitary geometry",
+      "authors": ["Gary Greaves", "Joseph W. Iverson", "John Jasper", "Dustin G. Mixon"],
+      "url": "https://arxiv.org/abs/2012.12977",
+      "exact_item": "Proposition 3.5 and Remark 3.7",
+      "hypotheses": [
+        "a vector frame, hence a spanning family",
+        "the frame Gramian over the formed field"
+      ],
+      "result_used": "A spanning vector frame is c-tight exactly when G^2=cG; the spanning hypothesis cannot be deleted.",
+      "wave206_gap": "This supports the checked square-zero centered Gram when c=0. It is rank-one vector-frame theory and supplies no joint law for rank-six projector triple traces."
+    },
+    {
+      "identifier": "arXiv:1201.1798v2",
+      "title": "Tight p-fusion frames",
+      "authors": ["Christine Bachoc", "Martin Ehler"],
+      "url": "https://arxiv.org/abs/1201.1798",
+      "doi": "10.1016/j.acha.2012.07.001",
+      "exact_item": "Theorem 5.3; Definition 5.5; Theorem 5.7; Remark 5.8",
+      "hypotheses": [
+        "real compact Grassmannian",
+        "Euclidean orthogonal projectors",
+        "positive real weights summing to one",
+        "normalized invariant Haar measure",
+        "exact integration on the specified polynomial space or equality in a positive potential bound"
+      ],
+      "result_used": "Tight p-fusion frames and strength-2p cubatures are characterized by specified polynomial integration identities; for p at least 2, strength-2p cubature is stronger.",
+      "wave206_gap": "The F_3 zero-frame identity sum_x P_x=0 is not a positive weighted real cubature, and no p=2 design condition has been proved. Single-index projector moment exactness would also not by itself identify the labeled joint tensor tau."
+    },
+    {
+      "identifier": "arXiv:0806.2317v1",
+      "title": "Bounds for codes and designs in complex subspaces",
+      "authors": ["Aidan Roy"],
+      "url": "https://arxiv.org/abs/0806.2317",
+      "doi": "10.1007/s10801-009-0170-7",
+      "exact_item": "Theorem 10.5 and the t=2 example following it",
+      "hypotheses": [
+        "complex Grassmannian",
+        "a (2t-2)-design",
+        "an A-code with exactly t inner-product values",
+        "the required annihilator polynomials"
+      ],
+      "result_used": "Under all listed design, angle-class, and annihilator hypotheses, the relations form an association scheme; the displayed t=2 specialization still assumes a 2-design and exactly two pair-trace values.",
+      "wave206_gap": "The modular star spaces have not been proved to be a Grassmannian design or to satisfy the required angle-class and annihilator hypotheses. Full labeled g and H do not manufacture triple intersection numbers."
+    },
+    {
+      "identifier": "arXiv:0903.5169v1",
+      "title": "Coherent configurations and triply regular association schemes obtained from spherical designs",
+      "authors": ["Sho Suda"],
+      "url": "https://arxiv.org/abs/0903.5169",
+      "doi": "10.1016/j.jcta.2010.03.016",
+      "exact_item": "Definition 2.7; Lemma 2.8; Corollary 3.1",
+      "hypotheses": [
+        "an association scheme with its relation matrices",
+        "for the cited consequences, a tight real spherical 4-design, or the separately stated spherical 3-design and dual-parameter hypotheses"
+      ],
+      "result_used": "Triple regularity means the number of vertices in three prescribed relations to a labeled triple depends only on the six pair-relation indices; it is equivalent to a coherent-configuration condition on every basepoint subconstituent. Tight spherical 4-designs satisfy the cited consequence.",
+      "wave206_gap": "Strong regularity alone is not the cited tight-design hypothesis. No proof identifies modular projector tau with scheme triple intersection numbers, and the hostile control shows the checked relaxed pair data do not force such a law."
+    },
+    {
+      "identifier": "doi:10.2206/kyushujm.48.323",
+      "title": "The Subconstituent Algebra of a Strongly Regular Graph",
+      "authors": ["Masato Tomiyama", "Norio Yamazaki"],
+      "url": "https://doi.org/10.2206/kyushujm.48.323",
+      "journal": "Kyushu Journal of Mathematics 48 (1994), 323-334",
+      "exact_item": "basepoint subconstituent algebra of an actual strongly regular graph",
+      "hypotheses": [
+        "an actual strongly regular graph",
+        "a fixed base vertex",
+        "the actual adjacency matrix and dual subconstituent idempotents"
+      ],
+      "result_used": "The subconstituent or Terwilliger algebra is a basepoint algebra generated from actual graph adjacency and its subconstituent decomposition.",
+      "wave206_gap": "It is not determined by the numerical parameter tuple alone, and it does not turn an arbitrary shared linear triple incidence or projector family into the missing graph. Its modules become useful only after the actual basepoint adjacency actions are supplied."
+    },
+    {
+      "identifier": "arXiv:2110.07109v2",
+      "title": "Terwilliger algebras and some related algebras defined by finite connected simple graphs",
+      "authors": ["Akihide Hanaki", "Masayoshi Yoshikawa"],
+      "url": "https://arxiv.org/abs/2110.07109",
+      "doi": "10.1016/j.disc.2023.113509",
+      "exact_item": "definition in the abstract and Section 2",
+      "hypotheses": [
+        "a finite connected simple graph",
+        "a fixed vertex and its actual distance partition"
+      ],
+      "result_used": "For a graph, the Terwilliger algebra is generated by adjacency and the idempotents of the fixed-vertex distance partition.",
+      "wave206_gap": "The shared-incidence hostile control is disconnected and its adjacency is not the target SRG. A module calculation on it cannot be transferred to Conway-99."
+    },
+    {
+      "identifier": "internal-exact-linear-algebra",
+      "title": "Linear triple-system incidence identities checked in this package",
+      "authors": [],
+      "url": null,
+      "exact_item": "exact_check.py build_incidence",
+      "hypotheses": [
+        "binary 99x231 incidence",
+        "row degree 7 and column degree 3",
+        "linearity: two points occur together in at most one block"
+      ],
+      "result_used": "These hypotheses give BB^T=A+7I over the integers and BB^T=A+I over F_3, with a 14-regular point graph.",
+      "wave206_gap": "They do not force lambda=1, mu=2, connectedness, triple regularity, or a closure formula for projector tau. The exact control satisfies all three incidence hypotheses while failing those stronger conclusions."
+    }
+  ],
+  "bounded_non_discovery": {
+    "claim_label": "UNKNOWN",
+    "query_topics": [
+      "linear triple system triple moment closure",
+      "projector triple moments over finite fields",
+      "three-point Grassmannian designs",
+      "Terwilliger modules and triple regularity"
+    ],
+    "applicable_theorem_for_the_frozen_F3_tau_tensor_located": false,
+    "absence_is_nonexistence_evidence": false
+  }
+}

@@ -5,11 +5,11 @@ target_frozen_on: 2026-07-22
 literature_audit:
   through: 2026-07-29
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "The focused Wave 205 theorem-by-theorem audit found no applicable finite-field fusion-frame, projector-design, trace-identity, or association-scheme theorem forcing the missing fourth moment. The latest located status source was submitted 2026-04-24. The search was bounded and cannot prove openness beyond its evidence cutoff, novelty, or priority. The earlier Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types."
-  latest_audit: "agents/2026-07-29-wave205-literature-hostile-controls.md"
-  latest_audit_sha256: "d7dea71419c3559bd6d6c56b802efcb2d3d3d644d6a73d4d312b1005ac979202"
-  source_query_ledger: "attempts/wave205-fourth-trace-hostile-controls/literature-sources.json"
-  source_query_ledger_sha256: "cc1c3fa03dc92a05a99e85e09cf1683157b3f3dced50861305e947b19fea95d2"
+  caveat: "The focused Wave 206 hypothesis audit found no applicable finite-field frame, Grassmannian design, triply regular association-scheme, or Terwilliger-algebra theorem forcing the missing labelled three-center tensor law. The latest located status source was submitted 2026-04-24. The search was bounded and cannot prove openness beyond its evidence cutoff, novelty, or priority. The earlier Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types."
+  latest_audit: "agents/2026-07-29-wave206-literature-hostile-controls.md"
+  latest_audit_sha256: "71e5e9a3d6ca13ef5d3715a712f3bb9b7a85db6425c226c1f054809b1c3fbc6d"
+  source_query_ledger: "attempts/wave206-three-center-hostile-controls/literature-sources.json"
+  source_query_ledger_sha256: "46300051c7764eb44a9b2a6f8fb934cdf66ff8f4e101ef48f9387f8bfebbcdf8"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -26,17 +26,18 @@ literature_audit:
   exact_wave42_rank27_prior_hit: NOT_SEARCHED_THIS_WAVE
   exact_wave204_global_compatibility_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave205_fourth_trace_globalization_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave206_three_center_tensor_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-29-wave205-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-29-wave205-integration-audit.md"
-latest_verified_wave: 205
-latest_verifier_package: "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256"
-latest_verifier_manifest_sha256: "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
+latest_public_checkpoint: "logs/2026-07-29-wave206-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-29-wave206-integration-audit.md"
+latest_verified_wave: 206
+latest_verifier_package: "verification/wave206-three-center-global-extension-verifier/package-manifest.sha256"
+latest_verifier_manifest_sha256: "3368b0b1995e40f294530cefb596cd2722a859d22aaa672190c55dbd23107ecf"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3294,4 +3295,55 @@ wave_205_fourth_trace_globalization_checkpoint:
   novelty_status: UNKNOWN
   next_frontier: "derive simultaneous 99-center extension compatibility through K_D restricted to row(U), Q o (D S_x D), w_TU norms, or an equivalent three-center overlap law"
   caveat: "Wave 205 independently verifies exact nonedge pair-local constraints, the complete t=6,7 census, a full fourth-trace factorization, and scoped refutations of pair-local and generic moment shortcuts. Its controls are local or relaxed and do not classify actual endpoint nonedges. No graph, rank-11 exclusion, endpoint exclusion, Q>=7060, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
+wave_206_three_center_global_extension_checkpoint:
+  public_base_commit: "85e705cc6c2a14d123120c93a847e30aaab1789e"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  actual_nonedge_fourth_trace_status: UNKNOWN
+  full_graph_type_tau_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave206_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave206_status: PASS_VERIFIED_TENSOR_BALANCE_INFLECTION
+  fixed_middle_tau_rank_upper: 21
+  fixed_middle_coordinate_count: 21
+  fixed_middle_J_star_rank: 21
+  fixed_middle_J_star_determinant_mod_3: 2
+  nonneighbor_fibre_count: 21
+  nonneighbor_fibre_size: 4
+  fibre_graph_restriction: OPPOSITE_CORNER_MATCHING
+  tensor_balance_code: "A_Delta=im(B^T) intersect ker(a -> D diag(a) D)"
+  tensor_balance_dimension_lower: 1
+  tensor_balance_nonzero_words_nonconstant: true
+  tensor_balance_minimum_weight: 8
+  tensor_class_sums_equal: "R0=R1=R2"
+  common_true_kernel_all_tau_slices: true
+  common_true_kernel_Gamma: true
+  weight_eight_span_rank: 4
+  weight_eight_coefficient_two_count_even: true
+  target_weight_eight_word_constructed: false
+  wave206_hostile_tau_differences: 209952
+  wave206_hostile_status: VERIFIED_RELAXED_CONTROL
+  wave206_rank21_slice_H_rank96_control: VERIFIED_RELAXED_CONTROL
+  wave206_protocol_sha256: "66c20334e284a26cc771ee86d97e678cb67b6ef4648b2af2fffe480fb5a9103"
+  wave206_hostile_manifest_sha256: "775582984a530671acf0d0c08eef80ed8bb2242aad79901ba05c0132b06ae47a"
+  wave206_proof_a_manifest_sha256: "7a146cd8cae29246cff81b7614fa02f673927514f220218be2860b73554a39fb"
+  wave206_proof_b_manifest_sha256: "6c7718de1c5f2c7d4203d1727d6b74214e51fa069608f318c8583b07b0325f0a"
+  wave206_weight_addendum_manifest_sha256: "a2d0b2e23b108e373616f5d5316612053768118435c11a0a2ed4f6520a9b8f25"
+  wave206_source_blind_freeze_sha256: "f878441cf73e9087596f82b1600cbffb9f22659ee10f438825161ac28246adac"
+  wave206_verifier_manifest_sha256: "3368b0b1995e40f294530cefb596cd2722a859d22aaa672190c55dbd23107ecf"
+  public_checkpoint: "logs/2026-07-29-wave206-public-checkpoint.json"
+  public_checkpoint_sha256: "50408288e47da5a89f67c800e0450177c1f04b0d90dae1cb205153d80917fb03"
+  integration_audit: "verification/2026-07-29-wave206-integration-audit.md"
+  integration_audit_sha256: "2fdb00f86cadecb5430011fbd938a3fda44e9314f21db005dacf10e9eb4f6341"
+  orchestrator_decision: "verification/2026-07-29-wave206-orchestrator.md"
+  orchestrator_decision_sha256: "c29a098c45dad04bfdfb3134a49ea240e470598006f2cae42fdde656ac7d18ab"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "classify A_Delta and its possible weight-eight words using im(B^T), the full 231-column incidence, all-three-pair triple compatibility, and mixed four-center tensors"
+  caveat: "Wave 206 independently verifies a nonzero nonconstant tensor-balance intersection code, common true kernels, minimum weight eight, fixed-middle 21-coordinate geometry, and scoped hostile controls. It does not construct a target word, classify actual nonedge fourth traces, or exclude rank 11 or n3=4158. No graph, Q>=7060 proof, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
 last_updated: 2026-07-29
