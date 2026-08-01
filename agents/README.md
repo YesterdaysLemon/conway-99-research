@@ -4,6 +4,12 @@ This directory records role prompts and immutable summaries from staged agent
 runs. Reports are evidence-index entries, not mathematical authority. Each
 claim must point onward to a source, derivation, computation, or certificate.
 
+Repository closeout reports:
+
+- `2026-08-01-instance-separation-closeout.md`: documents the clean Conway
+  checkout after an unrelated Krenn--Gu handoff was sent to this instance;
+  no mathematical claim or ledger status changed.
+
 Wave 28 reports:
 
 - `2026-07-24-wave28-orchestrator-brief.md`: frozen unrestricted endpoint

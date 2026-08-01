@@ -1,5 +1,23 @@
 # Next-instance handoff: Wave 209 public checkpoint and Wave 210/211 frontier
 
+## 2026-08-01 instance-separation checkpoint
+
+This checkout was re-audited after an instance briefly received a handoff for
+the unrelated Krenn--Gu project.  The Conway worktree was clean at
+`698f4db2cecd67fb4b9cfa8ff2bf7b375d9d93f3`, its remote is
+`YesterdaysLemon/conway-99-research`, and no Krenn--Gu files, claims, or
+computations were introduced here.  The unrelated work remains isolated in
+its own repository and worktree.
+
+This closeout changes no mathematical status and does not claim a fresh replay
+of the Wave 210/211 packages.  The public ledgers still stop at the
+independently accepted Wave 209 checkpoint.  The first continuation task is
+still a complete independent reconstruction of the Wave 210 rank-four
+point/line coupling universe before any of its 51 claimed exclusions can be
+promoted.  In parallel, any rank-three continuation must use the quadratic
+outside-block common-neighbour equations (or an equivalent nonlinear
+constraint), not the already-refuted linear/spectral relaxation.
+
 ```yaml
 role: orchestrator
 date_utc: 2026-08-01T04:29:11Z
