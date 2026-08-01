@@ -1,0 +1,7 @@
+# Independent reconstruction sealed at 2026-08-01T04:09:15Z before any
+# programmatic import, execution, or labelled-set comparison with discovery code.
+7f1271517cfdde0916da83db9a6c51d19c25a04bfc9890655e54bcdb0780e34e  protocol.md
+717b36cfbfec5d6c22cc968518e08a72e0a9764d1b5ca662dc99f31bd190c11d  input-freeze.sha256
+9bf6390f235933ac275e5a6cdb2e1187da44c161489400a27f31f69ed032d600  independent_check.py
+350134f2e5593d3d83e3463b1a536622db294a127c5fccab05a7b42858ce42bd  independent-results.json
+ca8f9381bf1b63be957007e0f038d9dbdb50ae2b2951674ca1c52fdace24acc2  independent-hostile-tests.json

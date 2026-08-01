@@ -1,0 +1,126 @@
+{
+  "additional_wave207_survivors_excluded": 19,
+  "claim_label": "DERIVED",
+  "concurrent_secant_matchings_retained_without_choice": 4,
+  "limitations": [
+    "all conclusions remain conditional on a hypothetical weight-eight endpoint word",
+    "the three S_D=-24 forms retain a divided residual -4 eigenvector of squared norm 56",
+    "the S_D=12 form retains exact integer A*b=3*b branches of point weight 14 and 20",
+    "the local controls omit 77 or 80 graph vertices, outside completion, and the full 231-column frame",
+    "no target graph, nonexistence proof, endpoint exclusion, or Conway-99 resolution follows"
+  ],
+  "local_controls": [
+    {
+      "edges": 53,
+      "exact_AUb_equals_3b": true,
+      "graph_triangles": 11,
+      "induced_triangular_prisms": 0,
+      "integer_b_norm": 20,
+      "lambda_mu_caps": true,
+      "maximum_induced_degree": 7,
+      "name": "weight20_two_intersections",
+      "point_weight": 20,
+      "selected_intersections": 2,
+      "vertices": 22
+    },
+    {
+      "edges": 44,
+      "exact_AUb_equals_3b": true,
+      "graph_triangles": 11,
+      "induced_triangular_prisms": 0,
+      "integer_b_norm": 14,
+      "lambda_mu_caps": true,
+      "maximum_induced_degree": 6,
+      "name": "weight14_five_intersections",
+      "point_weight": 14,
+      "selected_intersections": 5,
+      "vertices": 19
+    }
+  ],
+  "minus24_intersection_profiles": {
+    "m1_same1_opposite0_w23_p10_n13_norm26": 2,
+    "m1_same1_opposite0_w23_p13_n10_norm26": 2,
+    "m2_same0_opposite2_w20_p10_n10_norm20": 6,
+    "m3_same2_opposite1_w20_p10_n10_norm26": 16,
+    "m3_same2_opposite1_w20_p13_n7_norm26": 4,
+    "m3_same2_opposite1_w20_p7_n13_norm26": 4,
+    "m4_same1_opposite3_w17_p10_n7_norm20": 8,
+    "m4_same1_opposite3_w17_p7_n10_norm20": 8,
+    "m4_same4_opposite0_w20_p10_n10_norm32": 1,
+    "m5_same3_opposite2_w17_p10_n7_norm26": 12,
+    "m5_same3_opposite2_w17_p7_n10_norm26": 12,
+    "m6_same2_opposite4_w14_p7_n7_norm20": 4,
+    "m7_same4_opposite3_w14_p7_n7_norm26": 4
+  },
+  "plus12_intersection_profiles": {
+    "m2_same0_opposite2_w20_p10_n10_norm20": 66,
+    "m5_same0_opposite5_w14_p7_n7_norm14": 792
+  },
+  "projective_linear_weight_eight_relation_classes": 4,
+  "projective_tensor_weight_eight_relation_classes": 1,
+  "restricted_polar_forms": 27,
+  "signed_polar_sum_distribution": {
+    "-12": 4,
+    "-24": 3,
+    "0": 19,
+    "12": 1
+  },
+  "spectral_divisibility": {
+    "admissible_signed_polar_sums": [-24, 12],
+    "coordinate_divisor": 3,
+    "forced_squared_norm": "7*(24-2*S_D)",
+    "required_squared_norm_modulus": 9,
+    "residual": "r=(A-3I)B*a_integer",
+    "residual_eigenvalue": -4
+  },
+  "surviving_forms": 4,
+  "survivor_classes": [
+    {
+      "relation": [1, 1, 1, 1, 2, 2, 2, 2],
+      "relation_index": 0,
+      "surviving_forms": [
+        {
+          "accepted_labelled_intersection_subsets": 83,
+          "diagonal": [0, 0, 1],
+          "divided_residual_squared_norm": 56,
+          "product_one_edges": 8,
+          "rank": 4,
+          "residual_squared_norm": 504,
+          "same_sign_product_one_edges": 4,
+          "signed_polar_sum": -24
+        },
+        {
+          "accepted_labelled_intersection_subsets": 83,
+          "diagonal": [0, 1, 0],
+          "divided_residual_squared_norm": 56,
+          "product_one_edges": 8,
+          "rank": 4,
+          "residual_squared_norm": 504,
+          "same_sign_product_one_edges": 4,
+          "signed_polar_sum": -24
+        },
+        {
+          "accepted_labelled_intersection_subsets": 83,
+          "diagonal": [1, 0, 0],
+          "divided_residual_squared_norm": 56,
+          "product_one_edges": 8,
+          "rank": 4,
+          "residual_squared_norm": 504,
+          "same_sign_product_one_edges": 4,
+          "signed_polar_sum": -24
+        },
+        {
+          "accepted_labelled_intersection_subsets": 858,
+          "diagonal": [2, 2, 2],
+          "divided_residual_squared_norm": 0,
+          "product_one_edges": 12,
+          "rank": 3,
+          "residual_squared_norm": 0,
+          "same_sign_product_one_edges": 0,
+          "signed_polar_sum": 12
+        }
+      ]
+    }
+  ],
+  "wave207_no_product_one_forms": 4
+}

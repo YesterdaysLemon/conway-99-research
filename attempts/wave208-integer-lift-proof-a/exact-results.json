@@ -1,0 +1,1707 @@
+{
+  "balanced_weight14": {
+    "derived_overlap_conclusion": {
+      "opposite_sign_overlap": 6,
+      "same_sign_overlap": 0,
+      "support_union_size": 22,
+      "z_profile": "eight +1, eight -1, all other coordinates zero"
+    },
+    "exclusive_graph_shapes": {
+      "k_2": {
+        "cross_edges_from_smaller_side": 0,
+        "exclusive_sign_sizes": [
+          5,
+          3
+        ],
+        "q_support_contribution_on_smaller_side": -1,
+        "smaller_side": "K3"
+      },
+      "k_3": {
+        "cross_edges": 0,
+        "exclusive_sign_sizes": [
+          4,
+          4
+        ],
+        "labelled_C4_survivors": 3,
+        "labelled_four_vertex_graphs_checked": 64,
+        "negative_side": "C4",
+        "positive_side": "C4",
+        "q_support_contributions": {
+          "negative": -1,
+          "positive": 1
+        }
+      },
+      "k_4": {
+        "cross_edges_from_smaller_side": 0,
+        "exclusive_sign_sizes": [
+          3,
+          5
+        ],
+        "q_support_contribution_on_smaller_side": 1,
+        "smaller_side": "K3"
+      },
+      "k_definition": "number of x=+1,q=-1 opposite-overlap coordinates",
+      "reason": "each exclusive positive and negative coordinate needs at least two same-sign exclusive neighbors",
+      "universal_bound": [
+        2,
+        4
+      ]
+    },
+    "norm14_q_overlap_capacity": {
+      "0": {
+        "count_rows": [
+          {
+            "counts": [
+              0,
+              0,
+              0,
+              6,
+              7,
+              1,
+              7,
+              1
+            ],
+            "feasible": 7,
+            "total": 7
+          },
+          {
+            "counts": [
+              0,
+              0,
+              1,
+              5,
+              6,
+              2,
+              6,
+              2
+            ],
+            "feasible": 42,
+            "total": 147
+          },
+          {
+            "counts": [
+              0,
+              0,
+              2,
+              4,
+              5,
+              3,
+              5,
+              3
+            ],
+            "feasible": 84,
+            "total": 735
+          },
+          {
+            "counts": [
+              0,
+              0,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4
+            ],
+            "feasible": 385,
+            "total": 1225
+          },
+          {
+            "counts": [
+              0,
+              0,
+              4,
+              2,
+              3,
+              5,
+              3,
+              5
+            ],
+            "feasible": 84,
+            "total": 735
+          },
+          {
+            "counts": [
+              0,
+              0,
+              5,
+              1,
+              2,
+              6,
+              2,
+              6
+            ],
+            "feasible": 42,
+            "total": 147
+          },
+          {
+            "counts": [
+              0,
+              0,
+              6,
+              0,
+              1,
+              7,
+              1,
+              7
+            ],
+            "feasible": 7,
+            "total": 7
+          }
+        ],
+        "labelled_assignments": 3003,
+        "outside_token_capacity_survivors": 651
+      },
+      "1": {
+        "count_rows": [
+          {
+            "counts": [
+              0,
+              1,
+              1,
+              6,
+              6,
+              0,
+              5,
+              1
+            ],
+            "feasible": 0,
+            "total": 49
+          },
+          {
+            "counts": [
+              0,
+              1,
+              2,
+              5,
+              5,
+              1,
+              4,
+              2
+            ],
+            "feasible": 0,
+            "total": 882
+          },
+          {
+            "counts": [
+              0,
+              1,
+              3,
+              4,
+              4,
+              2,
+              3,
+              3
+            ],
+            "feasible": 0,
+            "total": 3675
+          },
+          {
+            "counts": [
+              0,
+              1,
+              4,
+              3,
+              3,
+              3,
+              2,
+              4
+            ],
+            "feasible": 0,
+            "total": 4900
+          },
+          {
+            "counts": [
+              0,
+              1,
+              5,
+              2,
+              2,
+              4,
+              1,
+              5
+            ],
+            "feasible": 21,
+            "total": 2205
+          },
+          {
+            "counts": [
+              0,
+              1,
+              6,
+              1,
+              1,
+              5,
+              0,
+              6
+            ],
+            "feasible": 0,
+            "total": 294
+          },
+          {
+            "counts": [
+              1,
+              0,
+              1,
+              6,
+              5,
+              1,
+              6,
+              0
+            ],
+            "feasible": 0,
+            "total": 294
+          },
+          {
+            "counts": [
+              1,
+              0,
+              2,
+              5,
+              4,
+              2,
+              5,
+              1
+            ],
+            "feasible": 21,
+            "total": 2205
+          },
+          {
+            "counts": [
+              1,
+              0,
+              3,
+              4,
+              3,
+              3,
+              4,
+              2
+            ],
+            "feasible": 0,
+            "total": 4900
+          },
+          {
+            "counts": [
+              1,
+              0,
+              4,
+              3,
+              2,
+              4,
+              3,
+              3
+            ],
+            "feasible": 0,
+            "total": 3675
+          },
+          {
+            "counts": [
+              1,
+              0,
+              5,
+              2,
+              1,
+              5,
+              2,
+              4
+            ],
+            "feasible": 0,
+            "total": 882
+          },
+          {
+            "counts": [
+              1,
+              0,
+              6,
+              1,
+              0,
+              6,
+              1,
+              5
+            ],
+            "feasible": 0,
+            "total": 49
+          }
+        ],
+        "labelled_assignments": 24010,
+        "outside_token_capacity_survivors": 42
+      },
+      "2": {
+        "count_rows": [
+          {
+            "counts": [
+              0,
+              2,
+              3,
+              5,
+              4,
+              0,
+              2,
+              2
+            ],
+            "feasible": 0,
+            "total": 735
+          },
+          {
+            "counts": [
+              0,
+              2,
+              4,
+              4,
+              3,
+              1,
+              1,
+              3
+            ],
+            "feasible": 0,
+            "total": 3675
+          },
+          {
+            "counts": [
+              0,
+              2,
+              5,
+              3,
+              2,
+              2,
+              0,
+              4
+            ],
+            "feasible": 0,
+            "total": 4410
+          },
+          {
+            "counts": [
+              1,
+              1,
+              2,
+              6,
+              4,
+              0,
+              4,
+              0
+            ],
+            "feasible": 0,
+            "total": 735
+          },
+          {
+            "counts": [
+              1,
+              1,
+              3,
+              5,
+              3,
+              1,
+              3,
+              1
+            ],
+            "feasible": 0,
+            "total": 5880
+          },
+          {
+            "counts": [
+              1,
+              1,
+              4,
+              4,
+              2,
+              2,
+              2,
+              2
+            ],
+            "feasible": 0,
+            "total": 11025
+          },
+          {
+            "counts": [
+              1,
+              1,
+              5,
+              3,
+              1,
+              3,
+              1,
+              3
+            ],
+            "feasible": 0,
+            "total": 5880
+          },
+          {
+            "counts": [
+              1,
+              1,
+              6,
+              2,
+              0,
+              4,
+              0,
+              4
+            ],
+            "feasible": 0,
+            "total": 735
+          },
+          {
+            "counts": [
+              2,
+              0,
+              3,
+              5,
+              2,
+              2,
+              4,
+              0
+            ],
+            "feasible": 0,
+            "total": 4410
+          },
+          {
+            "counts": [
+              2,
+              0,
+              4,
+              4,
+              1,
+              3,
+              3,
+              1
+            ],
+            "feasible": 0,
+            "total": 3675
+          },
+          {
+            "counts": [
+              2,
+              0,
+              5,
+              3,
+              0,
+              4,
+              2,
+              2
+            ],
+            "feasible": 0,
+            "total": 735
+          }
+        ],
+        "labelled_assignments": 41895,
+        "outside_token_capacity_survivors": 0
+      },
+      "3": {
+        "count_rows": [
+          {
+            "counts": [
+              1,
+              2,
+              4,
+              5,
+              2,
+              0,
+              1,
+              1
+            ],
+            "feasible": 0,
+            "total": 2205
+          },
+          {
+            "counts": [
+              1,
+              2,
+              5,
+              4,
+              1,
+              1,
+              0,
+              2
+            ],
+            "feasible": 0,
+            "total": 4410
+          },
+          {
+            "counts": [
+              2,
+              1,
+              4,
+              5,
+              1,
+              1,
+              2,
+              0
+            ],
+            "feasible": 0,
+            "total": 4410
+          },
+          {
+            "counts": [
+              2,
+              1,
+              5,
+              4,
+              0,
+              2,
+              1,
+              1
+            ],
+            "feasible": 0,
+            "total": 2205
+          }
+        ],
+        "labelled_assignments": 13230,
+        "outside_token_capacity_survivors": 0
+      },
+      "4": {
+        "count_rows": [
+          {
+            "counts": [
+              2,
+              2,
+              5,
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "feasible": 0,
+            "total": 441
+          }
+        ],
+        "labelled_assignments": 441,
+        "outside_token_capacity_survivors": 0
+      }
+    },
+    "same_overlap_one_coupled_exclusion": {
+      "capacity_survivors_before_coupling": 42,
+      "maximum_negative_endpoints_on_other_side": 3,
+      "required_negative_endpoints_on_demand_side": 4,
+      "status": "EXCLUDED_BY_COUPLED_X_OR_Y_ENDPOINTS",
+      "two_sign_symmetric_patterns": [
+        {
+          "counts_and_deficits": [
+            [
+              0,
+              1,
+              5,
+              2,
+              2,
+              4,
+              1,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "multiplicity": 21
+        },
+        {
+          "counts_and_deficits": [
+            [
+              1,
+              0,
+              2,
+              5,
+              4,
+              2,
+              5,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "multiplicity": 21
+        }
+      ]
+    },
+    "spectral_shells": {
+      "h_definition": "h=x.z=(x^T A x)/3",
+      "orthogonality": "q.r=0",
+      "q": "z-x",
+      "q_equation": "Aq=-4q",
+      "r": "4x+3z",
+      "r_equation": "Ar=3r",
+      "rows": [
+        {
+          "h": -16,
+          "q_squared": 70
+        },
+        {
+          "h": -10,
+          "q_squared": 56
+        },
+        {
+          "h": -4,
+          "q_squared": 42
+        },
+        {
+          "h": 2,
+          "q_squared": 28
+        },
+        {
+          "h": 8,
+          "q_squared": 14
+        },
+        {
+          "h": 14,
+          "q_squared": 0
+        }
+      ]
+    },
+    "zero_q_three_eigen_branch": {
+      "premise": "balanced weight 14 and q=z-x=0, hence Ax=3x",
+      "restricted_edge_cap_on_support": 31,
+      "rows": [
+        {
+          "cross_edges": 1,
+          "minimizing_degree_sequence": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+          ],
+          "minimum_same_side_wedges": 24,
+          "same_side_common_neighbor_capacity": 31,
+          "same_sign_edges_each_side": 11,
+          "status": "SURVIVES_THIS_ARGUMENT",
+          "total_support_edges": 23
+        },
+        {
+          "cross_edges": 3,
+          "minimizing_degree_sequence": [
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4
+          ],
+          "minimum_same_side_wedges": 30,
+          "same_side_common_neighbor_capacity": 30,
+          "same_sign_edges_each_side": 12,
+          "status": "EXCLUDED_BY_EQUALITY_TRIANGLE_PARITY",
+          "total_support_edges": 27
+        },
+        {
+          "cross_edges": 5,
+          "minimizing_degree_sequence": [
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "minimum_same_side_wedges": 36,
+          "same_side_common_neighbor_capacity": 29,
+          "same_sign_edges_each_side": 13,
+          "status": "EXCLUDED_BY_WEDGE_CAPACITY",
+          "total_support_edges": 31
+        }
+      ],
+      "survivor": "exactly one cross edge, joining the unique degree-four vertex on each side; both same-sign degree sequences are (4,3^6)"
+    }
+  },
+  "claim_label": "DERIVED_PARTIAL_WITH_UNKNOWN_WALL",
+  "conclusions": {
+    "balanced_weight14_excluded": false,
+    "balanced_weight14_q_squared_14_branch_excluded": false,
+    "balanced_weight14_q_squared_14_branch_strictly_reduced": true,
+    "conway_99": "UNKNOWN",
+    "kernel_minimum_distance_at_least_24": "UNKNOWN",
+    "rank11_endpoint": "UNKNOWN",
+    "weights_17_20_23_excluded": false
+  },
+  "frozen_inputs": [
+    {
+      "path": "CONJECTURE.md",
+      "sha256": "7b4e67a28dbae58dffbf8f06a5fcb0241b12c34807dcb145ef2ff5c70d4c1c58"
+    },
+    {
+      "path": "attempts/wave208-global-residual-rigidity/protocol.md",
+      "sha256": "3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740"
+    },
+    {
+      "path": "attempts/wave207-ternary-adjacency-code-bridge/derivation.md",
+      "sha256": "27860e2f8b5ce23c37a43a1ef53fb31d7eda1ee67926e04406ccbf0d938e40b5"
+    },
+    {
+      "path": "attempts/wave207-ternary-adjacency-code-bridge/exact-results.json",
+      "sha256": "94ed011861be9cf201ac5c531a704832cf8675c5b993c420e92a2e5812f8e7d8"
+    },
+    {
+      "path": "attempts/wave207-kernel-endpoint-proof-c/derivation.md",
+      "sha256": "da5397c731df8912e076671f80724413be8ab3b5e6dd2336778c61741c25b69f"
+    },
+    {
+      "path": "attempts/wave207-kernel-endpoint-proof-c/exact-results.json",
+      "sha256": "f323f6735893c0f1b48de7c1eab92e964fc7a6ab89fe479ae985aeec1662bc4e"
+    },
+    {
+      "path": "verification/wave71-modular-theta-extension/audit.md",
+      "sha256": "0a6280aa008ea7d329c3609bb044f636d52600315e5aff78a27c4712a439cd73"
+    },
+    {
+      "path": "verification/wave94-general-n3-norm14-bound/audit.md",
+      "sha256": "ab87d369345a27abb4326915f6c392545573780b4fc7f5d67bc494743c4a2ce6"
+    }
+  ],
+  "hostile_partial_control": {
+    "degree_multiset": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "edge_count": 52,
+    "edges": [
+      [
+        "L0",
+        "R3"
+      ],
+      [
+        "L0",
+        "R4"
+      ],
+      [
+        "L0",
+        "R5"
+      ],
+      [
+        "L0",
+        "R6"
+      ],
+      [
+        "L1",
+        "N0"
+      ],
+      [
+        "L1",
+        "R1"
+      ],
+      [
+        "L1",
+        "R2"
+      ],
+      [
+        "L1",
+        "R5"
+      ],
+      [
+        "L1",
+        "R6"
+      ],
+      [
+        "L2",
+        "N1"
+      ],
+      [
+        "L2",
+        "N2"
+      ],
+      [
+        "L2",
+        "R1"
+      ],
+      [
+        "L2",
+        "R2"
+      ],
+      [
+        "L2",
+        "R3"
+      ],
+      [
+        "L2",
+        "R4"
+      ],
+      [
+        "L3",
+        "N3"
+      ],
+      [
+        "L3",
+        "R0"
+      ],
+      [
+        "L3",
+        "R2"
+      ],
+      [
+        "L3",
+        "R4"
+      ],
+      [
+        "L3",
+        "R6"
+      ],
+      [
+        "L4",
+        "P0"
+      ],
+      [
+        "L4",
+        "R0"
+      ],
+      [
+        "L4",
+        "R2"
+      ],
+      [
+        "L4",
+        "R3"
+      ],
+      [
+        "L4",
+        "R5"
+      ],
+      [
+        "L5",
+        "P1"
+      ],
+      [
+        "L5",
+        "P2"
+      ],
+      [
+        "L5",
+        "R0"
+      ],
+      [
+        "L5",
+        "R1"
+      ],
+      [
+        "L5",
+        "R4"
+      ],
+      [
+        "L5",
+        "R5"
+      ],
+      [
+        "L6",
+        "P3"
+      ],
+      [
+        "L6",
+        "R0"
+      ],
+      [
+        "L6",
+        "R1"
+      ],
+      [
+        "L6",
+        "R3"
+      ],
+      [
+        "L6",
+        "R6"
+      ],
+      [
+        "N0",
+        "N1"
+      ],
+      [
+        "N0",
+        "N3"
+      ],
+      [
+        "N0",
+        "R4"
+      ],
+      [
+        "N1",
+        "N2"
+      ],
+      [
+        "N1",
+        "R6"
+      ],
+      [
+        "N2",
+        "N3"
+      ],
+      [
+        "N2",
+        "R5"
+      ],
+      [
+        "N3",
+        "R5"
+      ],
+      [
+        "P0",
+        "P1"
+      ],
+      [
+        "P0",
+        "P3"
+      ],
+      [
+        "P0",
+        "R1"
+      ],
+      [
+        "P1",
+        "P2"
+      ],
+      [
+        "P1",
+        "R3"
+      ],
+      [
+        "P2",
+        "P3"
+      ],
+      [
+        "P2",
+        "R2"
+      ],
+      [
+        "P3",
+        "R2"
+      ]
+    ],
+    "limitations": [
+      "The other 77 vertices and every equation at them are absent.",
+      "Displayed degrees are below 14 and have not been completed.",
+      "Missing common neighbors and neighborhood matching mates are absent.",
+      "This is neither a ternary codeword in a target graph nor a graph certificate."
+    ],
+    "local_triangle_upper_cap_holds": true,
+    "negative_cells_in_C4_order": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "nodes": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "R0",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "N0",
+      "N1",
+      "N2",
+      "N3"
+    ],
+    "pair_common_neighbor_caps_hold": true,
+    "positive_cells_in_C4_order": [
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ]
+    ],
+    "q": {
+      "L0": -1,
+      "L1": -1,
+      "L2": -1,
+      "L3": -1,
+      "L4": -1,
+      "L5": -1,
+      "L6": -1,
+      "N0": 0,
+      "N1": 0,
+      "N2": 0,
+      "N3": 0,
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0,
+      "R0": 1,
+      "R1": 1,
+      "R2": 1,
+      "R3": 1,
+      "R4": 1,
+      "R5": 1,
+      "R6": 1
+    },
+    "scope": "22 vertices only; all displayed Ax=3z, Az=4x-z, Aq=-4q equations and lambda/mu upper caps hold on displayed vertices",
+    "status": "HOSTILE_PARTIAL_CONTROL_NOT_A_COMPLETION",
+    "x": {
+      "L0": 0,
+      "L1": 0,
+      "L2": 0,
+      "L3": 0,
+      "L4": 1,
+      "L5": 1,
+      "L6": 1,
+      "N0": -1,
+      "N1": -1,
+      "N2": -1,
+      "N3": -1,
+      "P0": 1,
+      "P1": 1,
+      "P2": 1,
+      "P3": 1,
+      "R0": 0,
+      "R1": 0,
+      "R2": 0,
+      "R3": 0,
+      "R4": -1,
+      "R5": -1,
+      "R6": -1
+    },
+    "z": {
+      "L0": -1,
+      "L1": -1,
+      "L2": -1,
+      "L3": -1,
+      "L4": 0,
+      "L5": 0,
+      "L6": 0,
+      "N0": -1,
+      "N1": -1,
+      "N2": -1,
+      "N3": -1,
+      "P0": 1,
+      "P1": 1,
+      "P2": 1,
+      "P3": 1,
+      "R0": 1,
+      "R1": 1,
+      "R2": 1,
+      "R3": 1,
+      "R4": 0,
+      "R5": 0,
+      "R6": 0
+    }
+  },
+  "residue_shell_quantization": {
+    "identity": "Q^2=99*t*(9-t)+162*L for 0<=t<=8, because Q_i=9*n_i-t, sum(n_i)=11*t, and sum n_i(n_i-1) is even",
+    "warning": "Rows are arithmetic necessities only; no row is asserted to be a graph or codeword. Negative t is covered by x -> -x.",
+    "weights": {
+      "17": [
+        {
+          "composition_up_to_sign": [
+            10,
+            7
+          ],
+          "minimum_residue_norm": 792,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 7434,
+              "h": -22,
+              "residue_shell_index_L": 41
+            },
+            {
+              "Q_squared": 6300,
+              "h": -16,
+              "residue_shell_index_L": 34
+            },
+            {
+              "Q_squared": 5166,
+              "h": -10,
+              "residue_shell_index_L": 27
+            },
+            {
+              "Q_squared": 4032,
+              "h": -4,
+              "residue_shell_index_L": 20
+            },
+            {
+              "Q_squared": 2898,
+              "h": 2,
+              "residue_shell_index_L": 13
+            },
+            {
+              "Q_squared": 1764,
+              "h": 8,
+              "residue_shell_index_L": 6
+            }
+          ],
+          "spectral_h_interval": [
+            "-730/33",
+            "52/3"
+          ],
+          "t": 1
+        },
+        {
+          "composition_up_to_sign": [
+            13,
+            4
+          ],
+          "minimum_residue_norm": 1782,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 6804,
+              "h": -16,
+              "residue_shell_index_L": 31
+            },
+            {
+              "Q_squared": 5670,
+              "h": -10,
+              "residue_shell_index_L": 24
+            },
+            {
+              "Q_squared": 4536,
+              "h": -4,
+              "residue_shell_index_L": 17
+            },
+            {
+              "Q_squared": 3402,
+              "h": 2,
+              "residue_shell_index_L": 10
+            },
+            {
+              "Q_squared": 2268,
+              "h": 8,
+              "residue_shell_index_L": 3
+            }
+          ],
+          "spectral_h_interval": [
+            "-586/33",
+            "20"
+          ],
+          "t": 3
+        },
+        {
+          "composition_up_to_sign": [
+            16,
+            1
+          ],
+          "minimum_residue_norm": 1980,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 5544,
+              "h": -4,
+              "residue_shell_index_L": 22
+            },
+            {
+              "Q_squared": 4410,
+              "h": 2,
+              "residue_shell_index_L": 15
+            },
+            {
+              "Q_squared": 3276,
+              "h": 8,
+              "residue_shell_index_L": 8
+            },
+            {
+              "Q_squared": 2142,
+              "h": 14,
+              "residue_shell_index_L": 1
+            }
+          ],
+          "spectral_h_interval": [
+            "-298/33",
+            "76/3"
+          ],
+          "t": 5
+        }
+      ],
+      "20": [
+        {
+          "composition_up_to_sign": [
+            10,
+            10
+          ],
+          "minimum_residue_norm": 0,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 7938,
+              "h": -22,
+              "residue_shell_index_L": 49
+            },
+            {
+              "Q_squared": 6804,
+              "h": -16,
+              "residue_shell_index_L": 42
+            },
+            {
+              "Q_squared": 5670,
+              "h": -10,
+              "residue_shell_index_L": 35
+            },
+            {
+              "Q_squared": 4536,
+              "h": -4,
+              "residue_shell_index_L": 28
+            },
+            {
+              "Q_squared": 3402,
+              "h": 2,
+              "residue_shell_index_L": 21
+            },
+            {
+              "Q_squared": 2268,
+              "h": 8,
+              "residue_shell_index_L": 14
+            },
+            {
+              "Q_squared": 1134,
+              "h": 14,
+              "residue_shell_index_L": 7
+            },
+            {
+              "Q_squared": 0,
+              "h": 20,
+              "residue_shell_index_L": 0
+            }
+          ],
+          "spectral_h_interval": [
+            "-80/3",
+            "20"
+          ],
+          "t": 0
+        },
+        {
+          "composition_up_to_sign": [
+            13,
+            7
+          ],
+          "minimum_residue_norm": 1386,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 8190,
+              "h": -22,
+              "residue_shell_index_L": 42
+            },
+            {
+              "Q_squared": 7056,
+              "h": -16,
+              "residue_shell_index_L": 35
+            },
+            {
+              "Q_squared": 5922,
+              "h": -10,
+              "residue_shell_index_L": 28
+            },
+            {
+              "Q_squared": 4788,
+              "h": -4,
+              "residue_shell_index_L": 21
+            },
+            {
+              "Q_squared": 3654,
+              "h": 2,
+              "residue_shell_index_L": 14
+            },
+            {
+              "Q_squared": 2520,
+              "h": 8,
+              "residue_shell_index_L": 7
+            },
+            {
+              "Q_squared": 1386,
+              "h": 14,
+              "residue_shell_index_L": 0
+            }
+          ],
+          "spectral_h_interval": [
+            "-808/33",
+            "64/3"
+          ],
+          "t": 2
+        },
+        {
+          "composition_up_to_sign": [
+            16,
+            4
+          ],
+          "minimum_residue_norm": 1980,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 7812,
+              "h": -16,
+              "residue_shell_index_L": 36
+            },
+            {
+              "Q_squared": 6678,
+              "h": -10,
+              "residue_shell_index_L": 29
+            },
+            {
+              "Q_squared": 5544,
+              "h": -4,
+              "residue_shell_index_L": 22
+            },
+            {
+              "Q_squared": 4410,
+              "h": 2,
+              "residue_shell_index_L": 15
+            },
+            {
+              "Q_squared": 3276,
+              "h": 8,
+              "residue_shell_index_L": 8
+            },
+            {
+              "Q_squared": 2142,
+              "h": 14,
+              "residue_shell_index_L": 1
+            }
+          ],
+          "spectral_h_interval": [
+            "-592/33",
+            "76/3"
+          ],
+          "t": 4
+        },
+        {
+          "composition_up_to_sign": [
+            19,
+            1
+          ],
+          "minimum_residue_norm": 1782,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 6804,
+              "h": -4,
+              "residue_shell_index_L": 31
+            },
+            {
+              "Q_squared": 5670,
+              "h": 2,
+              "residue_shell_index_L": 24
+            },
+            {
+              "Q_squared": 4536,
+              "h": 8,
+              "residue_shell_index_L": 17
+            },
+            {
+              "Q_squared": 3402,
+              "h": 14,
+              "residue_shell_index_L": 10
+            },
+            {
+              "Q_squared": 2268,
+              "h": 20,
+              "residue_shell_index_L": 3
+            }
+          ],
+          "spectral_h_interval": [
+            "-232/33",
+            "32"
+          ],
+          "t": 6
+        }
+      ],
+      "23": [
+        {
+          "composition_up_to_sign": [
+            13,
+            10
+          ],
+          "minimum_residue_norm": 792,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 9702,
+              "h": -28,
+              "residue_shell_index_L": 55
+            },
+            {
+              "Q_squared": 8568,
+              "h": -22,
+              "residue_shell_index_L": 48
+            },
+            {
+              "Q_squared": 7434,
+              "h": -16,
+              "residue_shell_index_L": 41
+            },
+            {
+              "Q_squared": 6300,
+              "h": -10,
+              "residue_shell_index_L": 34
+            },
+            {
+              "Q_squared": 5166,
+              "h": -4,
+              "residue_shell_index_L": 27
+            },
+            {
+              "Q_squared": 4032,
+              "h": 2,
+              "residue_shell_index_L": 20
+            },
+            {
+              "Q_squared": 2898,
+              "h": 8,
+              "residue_shell_index_L": 13
+            },
+            {
+              "Q_squared": 1764,
+              "h": 14,
+              "residue_shell_index_L": 6
+            }
+          ],
+          "spectral_h_interval": [
+            "-994/33",
+            "70/3"
+          ],
+          "t": 1
+        },
+        {
+          "composition_up_to_sign": [
+            16,
+            7
+          ],
+          "minimum_residue_norm": 1782,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 9072,
+              "h": -22,
+              "residue_shell_index_L": 45
+            },
+            {
+              "Q_squared": 7938,
+              "h": -16,
+              "residue_shell_index_L": 38
+            },
+            {
+              "Q_squared": 6804,
+              "h": -10,
+              "residue_shell_index_L": 31
+            },
+            {
+              "Q_squared": 5670,
+              "h": -4,
+              "residue_shell_index_L": 24
+            },
+            {
+              "Q_squared": 4536,
+              "h": 2,
+              "residue_shell_index_L": 17
+            },
+            {
+              "Q_squared": 3402,
+              "h": 8,
+              "residue_shell_index_L": 10
+            },
+            {
+              "Q_squared": 2268,
+              "h": 14,
+              "residue_shell_index_L": 3
+            }
+          ],
+          "spectral_h_interval": [
+            "-850/33",
+            "26"
+          ],
+          "t": 3
+        },
+        {
+          "composition_up_to_sign": [
+            19,
+            4
+          ],
+          "minimum_residue_norm": 1980,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 8946,
+              "h": -16,
+              "residue_shell_index_L": 43
+            },
+            {
+              "Q_squared": 7812,
+              "h": -10,
+              "residue_shell_index_L": 36
+            },
+            {
+              "Q_squared": 6678,
+              "h": -4,
+              "residue_shell_index_L": 29
+            },
+            {
+              "Q_squared": 5544,
+              "h": 2,
+              "residue_shell_index_L": 22
+            },
+            {
+              "Q_squared": 4410,
+              "h": 8,
+              "residue_shell_index_L": 15
+            },
+            {
+              "Q_squared": 3276,
+              "h": 14,
+              "residue_shell_index_L": 8
+            },
+            {
+              "Q_squared": 2142,
+              "h": 20,
+              "residue_shell_index_L": 1
+            }
+          ],
+          "spectral_h_interval": [
+            "-562/33",
+            "94/3"
+          ],
+          "t": 5
+        },
+        {
+          "composition_up_to_sign": [
+            22,
+            1
+          ],
+          "minimum_residue_norm": 1386,
+          "necessary_rows_only": [
+            {
+              "Q_squared": 7056,
+              "h": 2,
+              "residue_shell_index_L": 35
+            },
+            {
+              "Q_squared": 5922,
+              "h": 8,
+              "residue_shell_index_L": 28
+            },
+            {
+              "Q_squared": 4788,
+              "h": 14,
+              "residue_shell_index_L": 21
+            },
+            {
+              "Q_squared": 3654,
+              "h": 20,
+              "residue_shell_index_L": 14
+            },
+            {
+              "Q_squared": 2520,
+              "h": 26,
+              "residue_shell_index_L": 7
+            },
+            {
+              "Q_squared": 1386,
+              "h": 32,
+              "residue_shell_index_L": 0
+            }
+          ],
+          "spectral_h_interval": [
+            "-130/33",
+            "118/3"
+          ],
+          "t": 7
+        }
+      ]
+    }
+  },
+  "schema_version": 1,
+  "scope": "Wave 208 point-code integer lift; no 99-vertex graph search",
+  "spectral_split": {
+    "Q": "9*(z-x)-t*1",
+    "Q_coordinate_residue_mod_9": "-t",
+    "Q_equation": "A*Q=-4*Q",
+    "Q_squared": "63*(3*(w-h)+t^2)",
+    "Q_sum": 0,
+    "R": "11*(4*x+3*z)-6*t*1",
+    "R_equation": "A*R=3*R",
+    "R_squared": "77*(11*(4*w+3*h)-18*t^2)",
+    "R_sum": 0,
+    "balanced_primitive_minus_four_vector": "q=z-x when t=0",
+    "samples": [
+      {
+        "Q_squared": 1134,
+        "R_squared": 67760,
+        "h": 8,
+        "t": 0,
+        "w": 14,
+        "z_squared": 16
+      },
+      {
+        "Q_squared": 1764,
+        "R_squared": 76538,
+        "h": 8,
+        "t": 1,
+        "w": 17,
+        "z_squared": 22
+      },
+      {
+        "Q_squared": 2142,
+        "R_squared": 81158,
+        "h": 14,
+        "t": 4,
+        "w": 20,
+        "z_squared": 54
+      },
+      {
+        "Q_squared": 1386,
+        "R_squared": 91322,
+        "h": 32,
+        "t": 7,
+        "w": 23,
+        "z_squared": 118
+      }
+    ]
+  }
+}

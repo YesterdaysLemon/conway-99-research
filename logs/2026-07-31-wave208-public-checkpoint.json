@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "wave": 208,
+  "date_utc": "2026-08-01T02:55:00Z",
+  "git_commit": "c58fd917ea8f9622e1388f10b0e0e3c709ba4854",
+  "verdict": "PASS_VERIFIED_FOUR_FORM_REDUCTION_NO_RESOLUTION",
+  "target": "Existence of srg(99,14,1,2)",
+  "target_status": "UNKNOWN",
+  "rank_11_endpoint_status": "UNKNOWN",
+  "n3_4158_endpoint_status": "UNKNOWN",
+  "rigorous_n3_interval": "708<=n3<=4158",
+  "conditional_Q_lower": 7059,
+  "Q_7060_proved": false,
+  "automorphism_assumption": false,
+  "marked_m7g": {
+    "conditional_on_weight_eight_word": true,
+    "affine_polar_forms": 27,
+    "signed_polar_sum_distribution": {
+      "-24": 3,
+      "-12": 4,
+      "0": 19,
+      "12": 1
+    },
+    "required_congruence": "S_D=3 mod 9",
+    "excluded_forms": 23,
+    "newly_excluded_from_wave207": 19,
+    "surviving_forms": 4,
+    "actual_endpoint_word_constructed": false
+  },
+  "rank_four_survivors": {
+    "forms": [[0, 0, 1], [0, 1, 0], [1, 0, 0]],
+    "zero_graph": "2C4",
+    "forms_count": 3,
+    "accepted_marked_subsets_per_form": 83,
+    "residual_eigenvalue": -4,
+    "divided_residual_squared_norm": 56,
+    "excluded": false
+  },
+  "rank_three_survivor": {
+    "form": [2, 2, 2],
+    "zero_graph": "4K2",
+    "equation": "A*b=3*b",
+    "weight_20_intersections": 2,
+    "weight_20_marked_subsets": 66,
+    "weight_14_intersections": 5,
+    "weight_14_marked_subsets": 792,
+    "excluded": false
+  },
+  "integer_lift": {
+    "z": "A*x/3",
+    "Q": "9*(z-x)-t*1",
+    "Q_eigenvalue": -4,
+    "R": "11*(4*x+3*z)-6*t*1",
+    "R_eigenvalue": 3,
+    "Q_shell_identity": "Q^2=99*t*(9-t)+162*L",
+    "weights_17_20_23_excluded": false,
+    "balanced_weight_14_q_squared": [0, 14, 28, 42, 56, 70],
+    "balanced_weight_14_excluded": false,
+    "q_zero_surviving_cross_edges": 1,
+    "q_zero_sign_degree_sequence": [4, 3, 3, 3, 3, 3, 3],
+    "q14_same_sign_overlap": 0,
+    "q14_opposite_sign_overlap": 6,
+    "q14_support_union": 22,
+    "q14_surviving_k": [2, 3, 4]
+  },
+  "local_controls": {
+    "rank3_weight20_vertices": 22,
+    "rank3_weight14_vertices": 19,
+    "proof_a_vertices": 22,
+    "outside_equations_checked": false,
+    "one_row_scope_counterexamples": true,
+    "is_target_graph": false,
+    "is_completion": false
+  },
+  "tests": {
+    "m7g_norm_source": "8/8 PASS",
+    "marked_proof_b_source": "5/5 PASS",
+    "integer_lift_proof_a_source": "10/10 PASS",
+    "imported_wave94_verifier": "12/12 PASS",
+    "wave208_clean_room_verifier": "33/33 PASS"
+  },
+  "manifests": {
+    "protocol": "3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740",
+    "m7g_norm": "a633dff62e4e1127b8a0c7329928e110d1fef1e78f1f322bbc4e250e277167f3",
+    "marked_proof_b": "f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc",
+    "integer_lift_proof_a": "28d69162a8f52bdc325471946efecad890b1edac33f3576bdba8777e32887202",
+    "verifier": "c9551a7c4d62a57f081b8008f49b9e27fb0372f50a7d114e10136557242fbab4"
+  },
+  "verifier_findings": [
+    "The corrected M7g construction no longer asserts a fixed outside-vertex count.",
+    "The verifier independently enumerated all 105 perfect matchings and recovered exactly four concurrent-secant matchings.",
+    "The verifier symbolically expanded the general proof-A spectral identities rather than relying on sampled rows.",
+    "One-row extensions preserve internal equations and caps while violating omitted outside equations."
+  ],
+  "next_frontier": [
+    "Classify or exclude the rank-three weight-14 and weight-20 signed 3-eigenfunctions using all selected-line and outside signatures.",
+    "Classify or exclude the three rank-four norm-56 minus-four eigenvectors using all 231 triangle sums and the integral incidence lattice."
+  ],
+  "limitations": [
+    "All marked-M7g conclusions are conditional on a hypothetical endpoint weight-eight word.",
+    "No residual point-code weight is excluded.",
+    "No local control supplies the omitted outside equations or a graph completion.",
+    "No graph, nonexistence proof, endpoint exclusion, strict n3 improvement, Q>=7060 theorem, novelty, or priority claim follows."
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "claim_label": "DERIVED_PENDING_INDEPENDENT_VERIFICATION",
+  "conclusions": {
+    "Q_7060_proved": false,
+    "conway_99_resolved": false,
+    "fixed_middle_rank_bound_excludes_endpoint": false,
+    "n3_improved": false,
+    "new_exact_coordinate_bridge": true,
+    "new_nonincidence_projector_relation_forced": true,
+    "pair_local_data_sufficient": false,
+    "rank11_endpoint_excluded": false,
+    "status": "UNKNOWN"
+  },
+  "crossing_toy": {
+    "D_M_and_M_D_zero": true,
+    "D_square_zero": true,
+    "Gamma_equals_sum_fixed_middle_tau": true,
+    "Gamma_identity": "Gamma_xy=tr((Q o M_x)M_y)=sum_z tr(P_x P_z P_y P_z)",
+    "Gamma_rank": 16,
+    "M_identity": "M_x=D S_x D=-Z^*P_xZ",
+    "W_W_transpose_square_zero": true,
+    "W_definition": "W[(T,U),x]=M_x[T,U]=w_TU[x]",
+    "W_rank": 16,
+    "W_transpose_W_zero": true,
+    "all_M_products_zero": true,
+    "centers": 24,
+    "columns": 168,
+    "each_M_rank": 6,
+    "failed_target_premises": [
+      "the 168 columns are twenty-four disjoint local stars",
+      "each toy column has incidence degree one, not three",
+      "the toy has no SRG or prism-free graph",
+      "the toy does not claim projective distinctness"
+    ],
+    "projector_span_rank": 16,
+    "sum_M_zero": true,
+    "synthesis_rank": 11,
+    "tau_coordinate_formula_directly_checked_middles": 3
+  },
+  "field": 3,
+  "inputs": {
+    "agents/2026-07-29-wave191-global-star-module-proof-b.md": "afe7d35627ec14a9599b427bcca0751e86a3f32b71fb7baf4d91e9e2e335f75f",
+    "attempts/wave205-fourth-trace-globalization/protocol.md": "a1d45fc0a82b9944a9e020ded3945e75944e0e00202eacbb20eb05598e30bf4d",
+    "attempts/wave205-global-fourth-moment-proof-b/package-manifest.sha256": "a91a2a1cdbc129fa66e9d63b34031a774d5af78c458d18d9a1aadd7e4be217e7",
+    "attempts/wave205-nonedge-fourth-trace-proof-a/package-manifest.sha256": "2c9976b6cb07a3036df07fd0e7ceb7ffce6a339651d604fcecdcf8c0c3da3d96",
+    "attempts/wave206-three-center-global-extension/protocol.md": "66c20334e284a26cc771ee86d97e678cb67b6efb4648b2af2fffe480fb5a9103",
+    "verification/2026-07-29-wave205-integration-audit.md": "f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297",
+    "verification/2026-07-29-wave205-orchestrator.md": "9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb",
+    "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256": "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
+  },
+  "nonconstant_pullback_audit": {
+    "conclusion": "im(B^T) intersect span{1_231}={0}",
+    "identities": [
+      "B 1_231=7 1_99=1_99",
+      "G=B B^T=A+I",
+      "G^2=G-J",
+      "G 1_99=0"
+    ],
+    "nonzero_constant_cases": {
+      "1": {
+        "G_minus_J_times_c": 1,
+        "G_times_Gc": 0,
+        "contradiction": true,
+        "forced_sum_c": 0
+      },
+      "2": {
+        "G_minus_J_times_c": 2,
+        "G_times_Gc": 0,
+        "contradiction": true,
+        "forced_sum_c": 0
+      }
+    }
+  },
+  "scope": "conditional prism-free n3=4158 centered rank-11 endpoint; crossing kernel, Hadamard localizers, and fixed-middle three-center compression coordinates",
+  "star_coordinate_theorem": {
+    "J_star_determinant": 2,
+    "J_star_formula": "J_star=C^T C+2I_21, C=vertex-edge incidence of K_7",
+    "J_star_rank": 21,
+    "coordinate_convention": "r_ij=<z_i,A z_j> for 0<=i<j<=6; N_ii=-sum_(j!=i) r_ij",
+    "coordinate_map_rank": 21,
+    "hostile_restricted_span": {
+      "feature": "span{I_6}",
+      "lesson": "ambient trace-form nondegeneracy does not imply that a restricted feature span is nondegenerate",
+      "operator_span_rank": 1,
+      "restricted_Gram_rank": 0
+    },
+    "self_adjoint_operator_dimension": 21,
+    "star_columns": 7,
+    "star_dimension": 6,
+    "star_gram": "J_7-I_7",
+    "trace_formula": "tr(A)=2 sum_(i<j) r_ij",
+    "trace_pair_formula": "tr(AB)=r(A)^T J_star r(B)",
+    "trace_square_formula": "tr(A^2)=r^T J_star r",
+    "trace_zero_dimension": 20,
+    "trace_zero_radical": "span{I_6}",
+    "trace_zero_restricted_rank": 19
+  },
+  "strong_hostile_control": {
+    "Gamma_diagonal_equals_H_row_sum": true,
+    "Gamma_rank": 64,
+    "Gamma_row_sum_distribution": {
+      "0": 99
+    },
+    "ambient_form_diagonal": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "ambient_form_discriminant": 2,
+    "conclusion": "all 99 fixed-middle tau slices can have rank 21 while the global fourth-trace matrix H has rank 96",
+    "distinct_projectors": 96,
+    "each_projector": {
+      "idempotent": true,
+      "projector_identity": "P=-sum_i(z_i tensor z_i)",
+      "rank": 6,
+      "self_adjoint": true,
+      "seven_singular_simplex_columns": true,
+      "simplex_gram": "J_7-I_7",
+      "simplex_sum_zero": true,
+      "trace": 0
+    },
+    "failed_target_premises": [
+      "three projector labels repeat one projector",
+      "the local simplexes are not glued into 231 shared projectively distinct columns",
+      "there is no 99-by-231 point-triangle incidence with column degree three",
+      "there is no srg(99,14,1,2) graph or prism-free crossing geometry",
+      "the rank-11 endpoint code, dual-distance, and circuit-cover conditions are absent"
+    ],
+    "fixed_middle_feature_rank_distribution": {
+      "21": 99
+    },
+    "fixed_middle_tau_rank_distribution": {
+      "21": 99
+    },
+    "fourth_trace_matrix_rank": 96,
+    "fourth_trace_row_sum_distribution": {
+      "0": 40,
+      "1": 29,
+      "2": 30
+    },
+    "pair_trace_matrix_rank": 64,
+    "projector_labels": 99,
+    "projector_span_rank": 64,
+    "satisfied_endpoint_shaped_premises": [
+      "nondegenerate nonsquare 11-space over F_3",
+      "99 rank-six trace-zero self-adjoint idempotents",
+      "96 distinct projector labels",
+      "every projector has a seven-singular-column J_7-I_7 simplex",
+      "sum of all 99 projectors is zero"
+    ],
+    "sum_projectors_zero": true
+  },
+  "theorem_ledger": {
+    "common_true_kernel": {
+      "dimension_lower_bound": 34,
+      "incidence_dependency": "L=ker(B^T) is contained in ker(mathcal P)",
+      "inherited_incidence_dimension": "17<=dim(L)<=33",
+      "intersection_code_dimension": "dim(A_Delta)=dim(ker(mathcal P)/L)=rank(B)-dim span{P_x}>=1",
+      "map": "mathcal P(c)=sum_x c_x P_x",
+      "matrix_consequences": [
+        "D diag(a) D=0",
+        "(D o D) a=0 from the diagonal entries"
+      ],
+      "named_intersection_code": "A_Delta=im(B^T) intersect ker(a -> D diag(a) D)",
+      "new_quotient_lower_bound": "dim(ker(mathcal P)/L)>=1",
+      "nonconstant": "a is outside span{1_231}; im(B^T) intersects the constant line trivially by G^2=G-J, G1=0, and B1=1 over F_3",
+      "slice_consequence": "ker(mathcal P) is a true operator-relation subspace contained in every ker(Tau^(y)) and in ker(Gamma)",
+      "support_bound": "wt(a)>=4 by projective distinctness of the Veronese columns z_T tensor z_T",
+      "support_caveat": "the original centered-code dual-distance theorem does not directly apply to this quadratic-tensor relation; no stronger weight or complete-composition bound is proved",
+      "three_class_balance": "if R_j=sum_(T:a_T=j) z_T tensor z_T, then R_0=R_1=R_2",
+      "triangle_coefficient_consequence": "there exists c notin L with a=B^T c nonzero and sum_T a_T(z_T tensor z_T)=0"
+    },
+    "next_global_invariant": {
+      "mixed_four_center_tensor": "tr((P_y P_x P_y)(P_v P_z P_v)) for y!=v",
+      "open_kernel_question": "does its restriction to span{P_x} have kernel exactly zero, or exactly the known projector-relation kernel after pulling back to center coefficients?",
+      "reason": "fixed-middle tau slices give within-star Gram data but do not compare compression coordinates across two middle centers",
+      "simultaneous_compression_map": "A -> (P_y A P_y restricted to E_y)_(y=1..99)"
+    },
+    "target_Gamma": {
+      "definition": "Gamma_xy=tr((Q o M_x)M_y)",
+      "diagonal": "diag(Gamma)=H 1",
+      "factorization": "Gamma=W^T diag(vec(Q)) W",
+      "rank_bound": 65,
+      "row_sum": "Gamma 1=0",
+      "sum_slices": "Gamma=sum_y Tau^(y)"
+    },
+    "target_crossing_feature": {
+      "M_properties": [
+        "M_x is symmetric of rank six",
+        "D M_x=M_x D=0",
+        "M_x M_y=0 for every x,y",
+        "sum_x M_x=0"
+      ],
+      "W": "W[(T,U),x]=M_x[T,U]=w_TU[x]",
+      "W_relations": [
+        "W 1=0",
+        "W^T W=0"
+      ],
+      "rank_W": "rank(W)=dim span{P_x}<=65 because Z has full row rank 11 and P maps injectively to -Z^*PZ",
+      "square_zero_kernel": "(W W^T)^2=0"
+    },
+    "target_fixed_middle_slice": {
+      "A_y": "I_(E_y)",
+      "diagonal": "Tau^(y)[x,x]=h_xy",
+      "operator": "A_x^(y)=P_y P_x P_y restricted to E_y",
+      "rank_bound": 21,
+      "rank_warning": "rank(Tau^(y)) can be smaller than the operator-span rank because the restricted trace form can have a radical",
+      "row_sum": "Tau^(y) 1=0",
+      "row_y": "Tau^(y)[y,x]=g_xy",
+      "self_adjoint": true,
+      "sum_x_A_x": "0",
+      "tau_Gram": "Tau^(y)[x,z]=tau_(xy;z)=tr(A_x^(y) A_z^(y))",
+      "trace_A_x": "g_xy"
+    },
+    "target_localizer_coordinates": {
+      "coordinate": "m_x^(y)[i,j]=M_x[T_i,T_j] for the 21 unordered distinct pairs of the seven y-star triangles",
+      "g_formula": "g_xy=sum_e m_x^(y)[e]",
+      "h_formula": "h_xy=m_x^(y)^T J_star m_x^(y)",
+      "inside_Q_o_M": "Q[T_i,T_j]=1 for i!=j; diagonal Q[T_i,T_i]=3=0; disjoint triangle pairs have Q=0",
+      "known_from_incidence": "which 21 coordinates belong to y and the Q mask values",
+      "reconstruction": "the missing diagonal is N_ii=-sum_(j!=i)N_ij, so the 21 localizer entries determine P_y P_x P_y completely",
+      "sign": "m_x^(y)[i,j]= -<z_i,P_x z_j>; the two minus signs cancel in tau",
+      "still_unknown": "the coordinate values, their graph-type distributions, and whether any 21 center rows span the 21-space",
+      "tau_formula": "tau_(xy;z)=m_x^(y)^T J_star m_z^(y)"
+    },
+    "trace_class_consequence": {
+      "centered_Gram_rank_bound": 19,
+      "centered_feature_dimension": 20,
+      "centered_feature_space": "I_6^perp",
+      "centered_trace_form_rank": 19,
+      "nonneighbor_pigeonhole": "among the 84 nonneighbors of y one residue class has k>=28, so its (k-1)-by-(k-1) difference Gram has nullity>=8",
+      "scope": "for any fixed y and any collection of k centers having the same g_xy residue",
+      "warning": "these are Gram nullities, not true operator relations, unless the radical is separately controlled"
+    }
+  },
+  "veronese_short_relation_audit": {
+    "consequence": "a nonzero relation among projectively distinct rank-one symmetric tensors has support at least four",
+    "minimum_rank_by_distinct_point_count": {
+      "1": 1,
+      "2": 2,
+      "3": 3
+    },
+    "projective_points_checked_in_PG_2_3": 13,
+    "scope_note": "any one-, two-, or three-column relation lives in a vector subspace of dimension at most three, so this exhaustive F_3 audit covers the ambient 11-space short-relation case"
+  }
+}

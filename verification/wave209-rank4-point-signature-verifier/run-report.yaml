@@ -1,0 +1,42 @@
+role: verifier
+date_utc: 2026-08-01T03:25:04Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: VERIFIED
+scope: >-
+  Source-blind audit of the sealed conditional Wave209 rank-four package:
+  reconstruct the three forms and all 249 labelled marked branches; verify
+  the projector and parity deductions; replay every point-signature Farkas
+  exclusion, surviving point census, aggregate residual census, and
+  selected-union control after explicit transport to every labelled branch.
+inputs:
+  AGENTS.md: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+  attempts/wave209-four-survivor-globalization/protocol.md: 3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196
+  verification/2026-07-31-wave208-integration-audit.md: eb46057b18ce4d0c0f4c1bd2b4377509c0392194c5cbaa04cd765151bcc3c754
+  logs/2026-07-31-wave208-public-checkpoint.json: af31d56635f47b0a2c8d961fa813a34590d53773c022211b7cdc39731c0cb77b
+  attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256: 2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b
+method: >-
+  Import no discovery module. Reconstruct the vanishing symmetric-form
+  space over F3, marked-subset census, sign-preserving polar label maps,
+  all 2187 integral point signatures, all 279 point-count equations, the
+  81-word residual evaluation code, and all 99 aggregate equations.
+  Check integer Farkas orientation and exact controls on representatives,
+  transport descriptors and witnesses through proved constraint
+  isomorphisms, and replay every one of the 249 labelled branches. Attack
+  the archives by erased and reversed duals and mutated positive controls.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  verification\wave209-rank4-point-signature-verifier\independent_verify.py
+  --verify ; .\.venv\Scripts\python.exe -B -m unittest -v
+  verification\wave209-rank4-point-signature-verifier\test_independent_verify.py
+outputs:
+  verification/wave209-rank4-point-signature-verifier/independent_verify.py: 6d16fdf89fdcfd131e967ef56f493eea9e1f948a964c4f7183401af0d07357d0
+  verification/wave209-rank4-point-signature-verifier/independent-results.json: 404dab594f3223ccb49bf8e072c0c1dff8a579985ddb992947959f1d8eea74de
+  verification/wave209-rank4-point-signature-verifier/test_independent_verify.py: a6f9f91eb2fcf886f008b132471aa97eec20c233a06cbbc47e838826061695d0
+  verification/wave209-rank4-point-signature-verifier/input-freeze.sha256: a40fc70df227a8e947a2cb1bf969b2ebeaed8a923414154ed78dc170cb6e8b4e
+  verification/wave209-rank4-point-signature-verifier/audit.md: 710a04623664064f321abe87287f75a8f0dbb48147c3d6896b50e59a959fe089
+limitations:
+  - Every verified conclusion is conditional on the frozen hypothetical endpoint and a Wave208 rank-four branch.
+  - The 51 surviving labelled branches have anonymous integer point-signature censuses, not named points or adjacency.
+  - Aggregate controls omit residual-residual incidence, 223 rows of Ct=0, and a 231-block frame.
+  - No 99-vertex graph, nonexistence proof, endpoint exclusion, or global resolution is certified.
+  - Conway-99 remains UNKNOWN.

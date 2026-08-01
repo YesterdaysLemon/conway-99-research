@@ -1,0 +1,1028 @@
+{
+  "field": 3,
+  "format": "wave207-incidence-tensor-rigidity-clean-room-v1",
+  "four_center_control": {
+    "cumulative_symmetric_square_ranks": [
+      21,
+      41,
+      56,
+      66
+    ],
+    "local_six_space_gram_ranks": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "restriction_rank_on_25_K_coordinates": 25,
+    "scope": "abstract four-space control only; not endpoint data"
+  },
+  "gram_radical": {
+    "ambient_form": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "exact_sequence_checked": true,
+    "nontrivial_radical_example": {
+      "gram": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "gram_rank": 0,
+      "kernel_gram_size": 27,
+      "kernel_synthesis_size": 9,
+      "radical_size": 3,
+      "synthesis": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "synthesis_rank": 1
+    },
+    "sequence": "0 -> ker(R) -> ker(R^T H R) -> rad(im R) -> 0",
+    "synthesis_maps_exhausted": 729
+  },
+  "local_rank_four_certificate": {
+    "b_norm_mod3": 2,
+    "circuit_cross_realizations": {
+      "weight4_multiplicity0": 12,
+      "weight5_multiplicity0": 8
+    },
+    "common_neighbor_histogram": {
+      "edge_0": 18,
+      "edge_1": 33,
+      "nonedge_0": 71,
+      "nonedge_1": 99,
+      "nonedge_2": 32
+    },
+    "does_not_check_76_outside_coordinates_of_Ab": true,
+    "edges": 51,
+    "edges_missing_their_required_common_neighbor_inside": 18,
+    "form_rank": 4,
+    "graph_triangles": 11,
+    "induced_triangular_prisms": 0,
+    "input_path": "attempts/wave207-m7g-incidence-bridge/local-rank4-certificate.json",
+    "internal_projective_circuits": {
+      "4": 12,
+      "5": 8
+    },
+    "local_adjacency_times_b_zero_on_23_coordinates": true,
+    "maximum_induced_degree": 8,
+    "restriction": "pair-specific selected intersections and no triple memberships",
+    "selected_intersections": [
+      [
+        0,
+        3
+      ]
+    ],
+    "verdict": "RESTRICTED_LOCAL_COMPATIBILITY_ONLY",
+    "vertices": 23,
+    "zero_graph": "2C4"
+  },
+  "m7g": {
+    "chosen_relative_column_signs": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1
+    ],
+    "column_rank": 4,
+    "columns": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        2
+      ]
+    ],
+    "concurrency": {
+      "all_valid_matchings_have_no_three_secants_coplanar": true,
+      "each_matching_has_a_unique_common_point": true,
+      "expected_source_pairing_is_recovered": true,
+      "note": "M7g is the unique surviving projective orbit, but this labelled eight-set has four valid concurrent-secant decompositions",
+      "perfect_matchings_checked": 105,
+      "projective_points_checked": 40,
+      "valid_external_concurrent_matchings": 4,
+      "valid_matchings": [
+        {
+          "external_point": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ]
+        },
+        {
+          "external_point": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ]
+        },
+        {
+          "external_point": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "pairs": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        },
+        {
+          "external_point": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "pairs": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    "displayed_relation_is_linear": true,
+    "displayed_relation_is_quadratic": true,
+    "every_three_independent": true,
+    "linear_relation_code": {
+      "dimension": 4,
+      "weight_enumerator": {
+        "0": 1,
+        "4": 24,
+        "5": 16,
+        "6": 32,
+        "8": 8
+      },
+      "words": 81
+    },
+    "linearizing_relative_sign_classes": 4,
+    "no_one_offdiagonal_audit_by_sign_class": [
+      {
+        "no_one_offdiagonal_forms_by_rank": {
+          "0": 1,
+          "2": 3
+        },
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "no_one_offdiagonal_forms_by_rank": {
+          "0": 1,
+          "2": 3
+        },
+        "signs": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "no_one_offdiagonal_forms_by_rank": {
+          "0": 1,
+          "2": 3
+        },
+        "signs": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "no_one_offdiagonal_forms_by_rank": {
+          "0": 1,
+          "2": 3
+        },
+        "signs": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2
+        ]
+      }
+    ],
+    "polar_net": {
+      "affine_forms": 27,
+      "form_space_dimension": 3,
+      "projective_nonzero_rank_counts": {
+        "2": 6,
+        "3": 4,
+        "4": 3
+      },
+      "rank_counts": {
+        "0": 1,
+        "2": 12,
+        "3": 8,
+        "4": 6
+      },
+      "zero_graph_counts": {
+        "2C4": 6,
+        "2K4": 12,
+        "4K2": 8,
+        "K8": 1
+      },
+      "zero_graph_details": {
+        "2C4": {
+          "component_sizes": [
+            4,
+            4
+          ],
+          "degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "edges": 8,
+          "name": "2C4"
+        },
+        "2K4": {
+          "component_sizes": [
+            4,
+            4
+          ],
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "edges": 12,
+          "name": "2K4"
+        },
+        "4K2": {
+          "component_sizes": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "edges": 4,
+          "name": "4K2"
+        },
+        "K8": {
+          "component_sizes": [
+            8
+          ],
+          "degrees": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "edges": 28,
+          "name": "K8"
+        }
+      }
+    },
+    "quadratic_relation_nullity": 1,
+    "source_representative": "Kaipa--Pradhan arXiv:2405.12011 M7g",
+    "tensor_relation": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      2,
+      1
+    ],
+    "tensor_relation_composition": {
+      "1": 4,
+      "2": 4
+    },
+    "veronese_rank": 7
+  },
+  "point_code_supplement": {
+    "a_dot_a_mod3": 2,
+    "allowed_weights_at_most_24": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23
+    ],
+    "b_dot_b_mod3_from_G_squared_equals_G_minus_J": 2,
+    "b_is_nonzero": true,
+    "hypothesis": "hypothetical wt(a)=8 A_Delta word with four 1s and four 2s",
+    "no_one_offdiagonal_extension": {
+      "excluded_affine_forms_per_relative_sign_class": {
+        "rank_0": 1,
+        "rank_2": 3
+      },
+      "identity": "b.b=a^T(B_S^T B_S)a=2*sum_intersections(a_i*a_j)=2",
+      "intersection_requires_restricted_gram_value": 1,
+      "relative_sign_classes_checked": 4,
+      "verdict": "EXCLUDED_CONDITIONALLY"
+    },
+    "rank_zero_K8_case": {
+      "D_restriction_zero_forces": "eight pairwise disjoint anticomplete triangles",
+      "contradicts_required_b_dot_b_mod3": 2,
+      "then_b_dot_b_mod3": 0,
+      "then_weight_b": 24,
+      "verdict": "EXCLUDED_CONDITIONALLY"
+    },
+    "sharpened_weight_upper": 23,
+    "sum_a_mod3": 0,
+    "sum_c_mod3_from_B1_equals_1": 0
+  },
+  "scope_wall": {
+    "Q_ge_7060": "NOT_PROVED",
+    "conway_99": "UNKNOWN",
+    "counterexample_or_nonexistence_proof": false,
+    "graph_constructed": false,
+    "n3_4158_endpoint": "UNKNOWN",
+    "rank_11_endpoint": "UNKNOWN"
+  },
+  "signed_neighbor_distance": {
+    "base_function_nonnegative_on_all_neighbor_ranges": true,
+    "base_table_entries_checked": 75,
+    "derived_minimum_distance_lower_bound": 12,
+    "moment_identities": {
+      "sum_choose_i_2": "p(p-1)-e_P",
+      "sum_choose_j_2": "n(n-1)-e_N",
+      "sum_i": "14p",
+      "sum_i_j": "2pn-e_PN",
+      "sum_j": "14n"
+    },
+    "not_proved": [
+      "existence of a weight-12 word",
+      "d(ker_F3 A)>=24",
+      "classification at weight 24"
+    ],
+    "scope": "parameter-only for any hypothetical srg(99,14,1,2)",
+    "weight_10": {
+      "admissible_compositions": [
+        {
+          "negative": 8,
+          "positive": 2,
+          "upper": 132
+        },
+        {
+          "negative": 5,
+          "positive": 5,
+          "upper": 150
+        },
+        {
+          "negative": 2,
+          "positive": 8,
+          "upper": 132
+        }
+      ],
+      "base_equality_types": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "contradiction_modulo_3": true,
+      "only_inequality_survivor": [
+        5,
+        5
+      ],
+      "same_sign_common_neighbor_sum": 20
+    },
+    "weight_11": {
+      "all_phi_values_nonnegative": true,
+      "contradiction": true,
+      "global_farkas_sum": -60,
+      "hard_composition_up_to_global_sign": [
+        7,
+        4
+      ],
+      "phi_tables": {
+        "N": [
+          {
+            "Phi": 3,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 11,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 3,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 36,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 48,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 107,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 111,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 180,
+            "i": 6,
+            "j": 3
+          },
+          {
+            "Phi": 204,
+            "i": 7,
+            "j": 1
+          }
+        ],
+        "O": [
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 6,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 4
+          },
+          {
+            "Phi": 14,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 0,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 42,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 48,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 84,
+            "i": 4,
+            "j": 4
+          },
+          {
+            "Phi": 110,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 108,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 186,
+            "i": 6,
+            "j": 3
+          },
+          {
+            "Phi": 204,
+            "i": 7,
+            "j": 1
+          },
+          {
+            "Phi": 276,
+            "i": 7,
+            "j": 4
+          }
+        ],
+        "P": [
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 18,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 10,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 22,
+            "i": 1,
+            "j": 4
+          },
+          {
+            "Phi": 34,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 18,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 72,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 76,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 124,
+            "i": 4,
+            "j": 4
+          },
+          {
+            "Phi": 148,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 144,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 234,
+            "i": 6,
+            "j": 3
+          }
+        ]
+      }
+    },
+    "weights_1_through_9": [
+      {
+        "required": 15,
+        "upper": 1,
+        "weight": 1
+      },
+      {
+        "required": 30,
+        "upper": 6,
+        "weight": 2
+      },
+      {
+        "required": 45,
+        "upper": 13,
+        "weight": 3
+      },
+      {
+        "required": 60,
+        "upper": 24,
+        "weight": 4
+      },
+      {
+        "required": 75,
+        "upper": 37,
+        "weight": 5
+      },
+      {
+        "required": 90,
+        "upper": 54,
+        "weight": 6
+      },
+      {
+        "required": 105,
+        "upper": 73,
+        "weight": 7
+      },
+      {
+        "required": 120,
+        "upper": 96,
+        "weight": 8
+      },
+      {
+        "required": 135,
+        "upper": 121,
+        "weight": 9
+      }
+    ]
+  },
+  "transition_rank": {
+    "formula": "rank(S -> C S C^T)=rank(C)*(rank(C)+1)/2 over F3",
+    "rectangular_edge_cases": [
+      {
+        "expected": 6,
+        "rank_C": 3,
+        "shape": [
+          4,
+          6
+        ],
+        "symmetric_transition_rank": 6
+      },
+      {
+        "expected": 6,
+        "rank_C": 3,
+        "shape": [
+          6,
+          4
+        ],
+        "symmetric_transition_rank": 6
+      },
+      {
+        "expected": 3,
+        "rank_C": 2,
+        "shape": [
+          3,
+          7
+        ],
+        "symmetric_transition_rank": 3
+      }
+    ],
+    "square_6_by_6_ranks": {
+      "0": 0,
+      "1": 1,
+      "2": 3,
+      "3": 6,
+      "4": 10,
+      "5": 15,
+      "6": 21
+    }
+  },
+  "weight_fourteen_aggregate_control": {
+    "aggregate_identities": {
+      "category_counts": {
+        "N": 7,
+        "O": 85,
+        "P": 7
+      },
+      "choose_i": 36,
+      "choose_j": 36,
+      "e_cross": 0,
+      "e_negative": 6,
+      "e_positive": 6,
+      "matching_totals": {
+        "h_nn": 6,
+        "h_pn": 0,
+        "h_pp": 6
+      },
+      "sum_i": 98,
+      "sum_ij": 98,
+      "sum_j": 98
+    },
+    "all_local_7K2_records_feasible": true,
+    "evidentiary_status": "hostile stopping control only",
+    "is_codeword": false,
+    "is_graph": false,
+    "negative_internal_degree_multiset": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6
+    ],
+    "nongraphical_reason": "a degree-six vertex must meet all six peers, contradicting the five declared degree-zero peers",
+    "positive_internal_degree_multiset": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6
+    ],
+    "transcribed_candidate_records": 8
+  },
+  "weight_fourteen_composition": {
+    "admissible_compositions_before_farkas": [
+      [
+        1,
+        13
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        13,
+        1
+      ]
+    ],
+    "balanced_branch": "UNKNOWN",
+    "category_summed_lift_residuals": [
+      {
+        "N_residual": 0,
+        "P_residual": 0,
+        "composition": [
+          1,
+          13
+        ],
+        "t": -4
+      },
+      {
+        "N_residual": 0,
+        "P_residual": 0,
+        "composition": [
+          4,
+          10
+        ],
+        "t": -2
+      },
+      {
+        "N_residual": 0,
+        "P_residual": 0,
+        "composition": [
+          7,
+          7
+        ],
+        "t": 0
+      },
+      {
+        "N_residual": 0,
+        "P_residual": 0,
+        "composition": [
+          10,
+          4
+        ],
+        "t": 2
+      },
+      {
+        "N_residual": 0,
+        "P_residual": 0,
+        "composition": [
+          13,
+          1
+        ],
+        "t": 4
+      }
+    ],
+    "four_plus_ten": {
+      "admissible_types_checked": 51,
+      "all_pointwise_values_nonnegative": true,
+      "excluded": true,
+      "global_sum": -12,
+      "maximum_phi": 63,
+      "minimum_phi": 0,
+      "zero_types": 16
+    },
+    "integer_lift_identity": "z=Ax/3; Az=4x-z+2t*1",
+    "negation_excludes": [
+      [
+        13,
+        1
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "one_plus_thirteen": {
+      "admissible_types_checked": 24,
+      "all_pointwise_values_nonnegative": true,
+      "excluded": true,
+      "global_sum": -35,
+      "maximum_phi": 121,
+      "minimum_phi": 0,
+      "zero_types": 7
+    },
+    "only_surviving_composition": [
+      7,
+      7
+    ],
+    "weight_14_excluded": false,
+    "weights_17_20_23": "UNKNOWN"
+  }
+}

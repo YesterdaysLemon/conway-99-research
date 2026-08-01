@@ -1,0 +1,38 @@
+role: proof_b
+date_utc: 2026-08-01T02:32:04Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional marked-M7g branch at the prism-free rank-11 endpoint: use an
+  integer spectral lift and all 99 modular point equations to reduce the 23
+  Wave 207 polar survivors to four, classify their selected-intersection
+  residuals, and retain exact local controls without claiming completion.
+inputs:
+  attempts/wave208-global-residual-rigidity/protocol.md: 3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740
+  attempts/wave207-m7g-incidence-bridge/package-manifest.sha256: 3fa21f164fd7a7afb13c546447e3a42f9ae870d2d1b8cd5030d254ee61a5c561
+  attempts/wave207-ternary-adjacency-code-bridge/package-manifest.sha256: 31e3abf3a7e16bf80eb8de4721c683f41d4d20d55f90564398e4d638b3414f99
+  verification/wave207-incidence-tensor-rigidity/package-manifest.sha256: 63aa632350e7191075203de6a7568ca0a3e387925d99f824a073eed12db00023
+method: >-
+  Lift the unique signed tensor relation to integers, compute the norm and
+  adjacency energy of b=B a using actual selected intersections, form the
+  coordinatewise-three-divisible minus-four eigenvector (A-3I)b, apply its
+  squared-norm divisibility, enumerate the 27 exact polar forms and their
+  labelled triangle-free intersection subsets, and directly replay two
+  positive induced controls. No automorphism or 99-vertex search.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave208-marked-m7g-proof-b\exact_check.py --verify ;
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave208-marked-m7g-proof-b\test_exact_check.py
+outputs:
+  attempts/wave208-marked-m7g-proof-b/derivation.md: b2c7b895da9cd3261c8b2400e3e64deff46e4dc0aff3df534fa684f63e84a78a
+  attempts/wave208-marked-m7g-proof-b/exact_check.py: 3f1a89dcfc39e6939b14b03ab8ed74e837b032e6b95aed1e18388ca81634433f
+  attempts/wave208-marked-m7g-proof-b/exact-results.json: e8030f62781b2badf85bb46a266c1d71b651f7e8517dd6aec4a2e453c14e01af
+  attempts/wave208-marked-m7g-proof-b/local-controls.json: 4fc0e87b03d824f640234cdc93441bd3286a2902f331fc5d75c9726f66c076cd
+limitations:
+  - The theorem is conditional on a hypothetical weight-eight A_Delta word.
+  - Three rank-four forms survive with an integer minus-four eigenvector of norm 56.
+  - One rank-three form survives with exact integer three-eigenvector branches of point weight 14 or 20.
+  - The two positive controls omit 77 or 80 vertices and every outside completion equation.
+  - Rank 11, the prism-free endpoint, and Conway-99 remain UNKNOWN.
+

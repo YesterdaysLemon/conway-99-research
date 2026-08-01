@@ -1,0 +1,264 @@
+{
+  "affine_forms_per_orientation": 27,
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "forms_excluded_per_orientation": 23,
+  "forms_surviving_per_orientation": 4,
+  "global_status": "UNKNOWN",
+  "integer_lift": [
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+  ],
+  "necessary_congruence": "d(Q)=3 mod 9",
+  "norm_identity": "||AUalpha||^2=240+18s-2d(Q)",
+  "orientation_classes": [
+    {
+      "distribution": {
+        "rank0_K8_remainder6": 1,
+        "rank2_2K4_remainder6": 12,
+        "rank3_4K2_remainder0": 1,
+        "rank3_4K2_remainder3": 1,
+        "rank3_4K2_remainder6": 6,
+        "rank4_2C4_remainder0": 3,
+        "rank4_2C4_remainder3": 3
+      },
+      "signs": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "survivors": [
+        {
+          "affine_form": 1,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 0,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 8,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 0,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 13,
+          "base_norm": 216,
+          "d": 12,
+          "orientation": 0,
+          "product_one_pairs": 12,
+          "rank": 3,
+          "zero_graph": "4K2"
+        },
+        {
+          "affine_form": 20,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 0,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        }
+      ]
+    },
+    {
+      "distribution": {
+        "rank0_K8_remainder6": 1,
+        "rank2_2K4_remainder6": 12,
+        "rank3_4K2_remainder0": 1,
+        "rank3_4K2_remainder3": 1,
+        "rank3_4K2_remainder6": 6,
+        "rank4_2C4_remainder0": 3,
+        "rank4_2C4_remainder3": 3
+      },
+      "signs": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "survivors": [
+        {
+          "affine_form": 2,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 1,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 8,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 1,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 10,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 1,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 22,
+          "base_norm": 216,
+          "d": 12,
+          "orientation": 1,
+          "product_one_pairs": 12,
+          "rank": 3,
+          "zero_graph": "4K2"
+        }
+      ]
+    },
+    {
+      "distribution": {
+        "rank0_K8_remainder6": 1,
+        "rank2_2K4_remainder6": 12,
+        "rank3_4K2_remainder0": 1,
+        "rank3_4K2_remainder3": 1,
+        "rank3_4K2_remainder6": 6,
+        "rank4_2C4_remainder0": 3,
+        "rank4_2C4_remainder3": 3
+      },
+      "signs": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "survivors": [
+        {
+          "affine_form": 2,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 2,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 4,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 2,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 16,
+          "base_norm": 216,
+          "d": 12,
+          "orientation": 2,
+          "product_one_pairs": 12,
+          "rank": 3,
+          "zero_graph": "4K2"
+        },
+        {
+          "affine_form": 20,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 2,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        }
+      ]
+    },
+    {
+      "distribution": {
+        "rank0_K8_remainder6": 1,
+        "rank2_2K4_remainder6": 12,
+        "rank3_4K2_remainder0": 1,
+        "rank3_4K2_remainder3": 1,
+        "rank3_4K2_remainder6": 6,
+        "rank4_2C4_remainder0": 3,
+        "rank4_2C4_remainder3": 3
+      },
+      "signs": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "survivors": [
+        {
+          "affine_form": 1,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 3,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 4,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 3,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 10,
+          "base_norm": 288,
+          "d": -24,
+          "orientation": 3,
+          "product_one_pairs": 8,
+          "rank": 4,
+          "zero_graph": "2C4"
+        },
+        {
+          "affine_form": 24,
+          "base_norm": 216,
+          "d": 12,
+          "orientation": 3,
+          "product_one_pairs": 12,
+          "rank": 3,
+          "zero_graph": "4K2"
+        }
+      ]
+    }
+  ],
+  "product_one_interpretation_fixed": false,
+  "relative_orientation_count": 4,
+  "survivor_type_totals": {
+    "rank3_4K2_d12_base216": 4,
+    "rank4_2C4_d-24_base288": 12
+  }
+}

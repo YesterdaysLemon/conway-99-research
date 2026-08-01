@@ -1,0 +1,65 @@
+role: proof_a
+date_utc: 2026-08-01T02:32:25Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional on a hypothetical srg(99,14,1,2), use the pointwise integer
+  lift z=Ax/3 to classify exact restricted-eigenspace residues and reduce
+  the balanced weight-fourteen branch, without searching for a 99-vertex
+  graph or assuming an automorphism.
+inputs:
+  - path: CONJECTURE.md
+    sha256: 7b4e67a28dbae58dffbf8f06a5fcb0241b12c34807dcb145ef2ff5c70d4c1c58
+  - path: attempts/wave208-global-residual-rigidity/protocol.md
+    sha256: 3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740
+  - path: attempts/wave207-ternary-adjacency-code-bridge/derivation.md
+    sha256: 27860e2f8b5ce23c37a43a1ef53fb31d7eda1ee67926e04406ccbf0d938e40b5
+  - path: attempts/wave207-ternary-adjacency-code-bridge/exact-results.json
+    sha256: 94ed011861be9cf201ac5c531a704832cf8675c5b993c420e92a2e5812f8e7d8
+  - path: attempts/wave207-kernel-endpoint-proof-c/derivation.md
+    sha256: da5397c731df8912e076671f80724413be8ab3b5e6dd2336778c61741c25b69f
+  - path: attempts/wave207-kernel-endpoint-proof-c/exact-results.json
+    sha256: f323f6735893c0f1b48de7c1eab92e964fc7a6ab89fe479ae985aeec1662bc4e
+  - path: verification/wave71-modular-theta-extension/audit.md
+    sha256: 0a6280aa008ea7d329c3609bb044f636d52600315e5aff78a27c4712a439cd73
+  - path: verification/wave94-general-n3-norm14-bound/audit.md
+    sha256: ab87d369345a27abb4326915f6c392545573780b4fc7f5d67bc494743c4a2ce6
+method: >-
+  Split the pointwise lift into exact integral -4 and 3 eigenvectors;
+  derive exact norm and residue-shell identities; classify the six balanced
+  weight-fourteen spectral rows; apply lambda/mu wedge capacity to the
+  zero-minus-four-vector row; exhaust every labelled complementary-Fano
+  overlap partition with exact token capacities; couple the two Fano sides
+  through the 70 one-one outside vertices; and retain an exact 22-vertex
+  hostile partial control for the surviving branch.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave208-integer-lift-proof-a\exact_check.py --verify
+  attempts\wave208-integer-lift-proof-a\exact-results.json;
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave208-integer-lift-proof-a\test_exact_check.py
+outputs:
+  - path: attempts/wave208-integer-lift-proof-a/protocol.md
+    sha256: 3c58b0da5b4c91c7f66146cdcbad31bf899d8215062c185a15ee63828ec5f0b4
+  - path: attempts/wave208-integer-lift-proof-a/input-freeze.sha256
+    sha256: f42c3d21695735872b2d99b0e80d305d0d0799b27e61a491515fff66f4fd4874
+  - path: attempts/wave208-integer-lift-proof-a/derivation.md
+    sha256: 03514a173a24e0fdfd8b1c01038583bc71ba218f8937a1f9fc389a171851765d
+  - path: attempts/wave208-integer-lift-proof-a/exact_check.py
+    sha256: 07eeeb9cb5323e64192bab18e67fada82af2a534c5b8bea71e43c596a158e871
+  - path: attempts/wave208-integer-lift-proof-a/test_exact_check.py
+    sha256: a411f194e8b48491d73ef95796f2d1600d852bd1cc1bd90f200527f5e27f97b9
+  - path: attempts/wave208-integer-lift-proof-a/exact-results.json
+    sha256: 8d6656cf476d2c75b05134d307e3694e283a95811b749610ae5daf20e12bc4da
+  - path: attempts/wave208-integer-lift-proof-a/failed-routes.md
+    sha256: 91a8307199e4e4d226c3e19be3a91d26147d08c19817ad2fa8f62f40e9f43498
+  - path: attempts/wave208-integer-lift-proof-a/README.md
+    sha256: 8662cedfbe5f184aff9a4b49829d9a45a178ee775206736a03bd9ccaea52c33c
+limitations:
+  - No residual weight among 14, 17, 20, and 23 is excluded.
+  - The q-squared 0, 28, 42, 56, and 70 balanced branches remain open.
+  - The q-squared 14 branch retains alpha=0 and k=2,3,4 cases.
+  - The 22-vertex hostile control omits 77 vertices, degree completion, exact missing common neighbors, and their code equations.
+  - Arithmetic residue rows for weights 17, 20, and 23 are necessary only and are not asserted realizable.
+  - No graph, counterexample, rank-11 endpoint exclusion, global proof, or novelty claim is supplied.
+

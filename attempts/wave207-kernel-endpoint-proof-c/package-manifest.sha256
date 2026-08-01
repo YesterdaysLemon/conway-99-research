@@ -1,0 +1,11 @@
+66a9015dad9f0c1a179e68065df440f94bcd1a480e89538d065313c957d1ee4f  agents/2026-07-31-wave207-kernel-endpoint-proof-c.md
+b8304be81f5ff504a4afe234e8e07c5c84fd5e6a82c9153a6e69971b7fc4b445  attempts/wave207-kernel-endpoint-proof-c/balanced-aggregate-control.json
+da5397c731df8912e076671f80724413be8ab3b5e6dd2336778c61741c25b69f  attempts/wave207-kernel-endpoint-proof-c/derivation.md
+56e2f34d3775665e6bbe2e865c3f377b2b9784e947d55d327f976733bef62437  attempts/wave207-kernel-endpoint-proof-c/exact_check.py
+f323f6735893c0f1b48de7c1eab92e964fc7a6ab89fe479ae985aeec1662bc4e  attempts/wave207-kernel-endpoint-proof-c/exact-results.json
+43ca10d59893e51df9c5ccb7f356805899bd779a27d93c6fa7a597ad49829792  attempts/wave207-kernel-endpoint-proof-c/failed-routes.md
+8b82530fbef4f27941a740e60f0e54807bcccd47c1a6cdb0c0d52381f0862d93  attempts/wave207-kernel-endpoint-proof-c/input-freeze.sha256
+fea6b6cc8e15a1eb342e9f1dc51b71582f8a0a8a4c4283a6670173e1452241df  attempts/wave207-kernel-endpoint-proof-c/protocol.md
+97c9230febd50c9a01cb344974cbb2490357c2e3a42528cddab9e8a609099c9d  attempts/wave207-kernel-endpoint-proof-c/README.md
+9f0a67b99615fc0fd76d3e33d67427cb1862f6ef01f05223061d2976ae011e9a  attempts/wave207-kernel-endpoint-proof-c/run-report.yaml
+557ba9e1738a8724bb43f28127fb8e7dfff75ea82982e60e8d4a780c8cae7c99  attempts/wave207-kernel-endpoint-proof-c/test_exact_check.py

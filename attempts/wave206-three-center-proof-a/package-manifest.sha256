@@ -1,0 +1,10 @@
+7190373ef7820420769aa1ba183c1b25dce552d5d630e50cf2435bbc8603f7fb  agents/2026-07-29-wave206-three-center-proof-a.md
+0e9e3c304b4f93a2283a6008f10fea3733de44c9d65fb689e33b8a90c0877962  attempts/wave206-three-center-proof-a/derivation.md
+045771466f9fc4fe313d8ac6752b0216430771863ad7316e53915d62f48a716e  attempts/wave206-three-center-proof-a/exact_check.py
+3eda9e08e48ed9489938d4d871c7bea3e5808f1b0622999879952755af853494  attempts/wave206-three-center-proof-a/exact-results.json
+e55d47fc4660370451f165ecda7ee06b3ad0152aa58501f67ea511f597fc2154  attempts/wave206-three-center-proof-a/failed-routes.md
+0f0264c851ebcdbe657d2146d8f6a894ecc45069dedb05c1788a4bf21e0052d6  attempts/wave206-three-center-proof-a/input-freeze.sha256
+f34a6643e0de292fc176c8d20a5eb0594c7e876726be7a390678892f9feb852c  attempts/wave206-three-center-proof-a/protocol.md
+c721adf5a2c194bc7339e96529bcf92e3db0dcb4ea7b8663a5cc21a77f49d8ae  attempts/wave206-three-center-proof-a/README.md
+c4010c76c372bc85e7e47a08fb0ab487049311f9cfaba24918ec09f7e4a6457e  attempts/wave206-three-center-proof-a/run-report.yaml
+51c2f161928bf22dc07470d961d48e08e0b86a63b558e9d371dd3edf64764e6e  attempts/wave206-three-center-proof-a/test_exact_check.py

@@ -1,0 +1,71 @@
+{
+  "aggregate_graphical_gates": {
+    "fractional_matrix_rejected": true,
+    "impossible_overlap_rejected": true,
+    "valid_binary_gram_accepted": true
+  },
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "global_status": "UNKNOWN",
+  "outside_block_obligations": {
+    "binary_required": true,
+    "full_A_O_completion_required": true,
+    "outside_rows_for_23_vertex_union": 76,
+    "overlap_gram": "M^T*M=12I-A_U+2J-A_U^2",
+    "point_kernel": "M*b_U=0"
+  },
+  "outside_scope_hostile_control": {
+    "full_equation_zero": false,
+    "inside_equation_zero": true,
+    "omitted_outside_coordinate": 1
+  },
+  "parameter_only_compositions_weight14": [
+    [1, 13, -4],
+    [4, 10, -2],
+    [7, 7, 0],
+    [10, 4, 2],
+    [13, 1, 4]
+  ],
+  "product_one_witnesses": {
+    "disjoint_one_cross_edge": {
+      "kind": "disjoint",
+      "product": 1
+    },
+    "intersecting": {
+      "kind": "intersecting",
+      "product": 1
+    }
+  },
+  "restricted_nonhit_is_nonexistence": false,
+  "sign_compositions": {
+    "14": [[7, 7, 0]],
+    "17": [
+      [1, 16, -5], [4, 13, -3], [7, 10, -1],
+      [10, 7, 1], [13, 4, 3], [16, 1, 5]
+    ],
+    "20": [
+      [1, 19, -6], [4, 16, -4], [7, 13, -2], [10, 10, 0],
+      [13, 7, 2], [16, 4, 4], [19, 1, 6]
+    ],
+    "23": [
+      [1, 22, -7], [4, 19, -5], [7, 16, -3], [10, 13, -1],
+      [13, 10, 1], [16, 7, 3], [19, 4, 5], [22, 1, 7]
+    ]
+  },
+  "source_blind": true,
+  "spectral_integer_lift_obligations": {
+    "coordinate_z_values": [-4, -3, -2, -1, 0, 1, 2, 3, 4],
+    "eigenvalues": {
+      "-4": 44,
+      "14": 1,
+      "3": 54
+    },
+    "integer_lift": "Az=4x-z+2t*1",
+    "neighborhood_graph": "7K2",
+    "sum_z": "14t",
+    "three_norm_z": "4w-x_dot_z+6t^2",
+    "u3": "(3*x_dot_z+4*w-18*t^2/11)/7",
+    "u_minus4": "(3*w-3*x_dot_z+t^2)/7"
+  },
+  "unknown_enumerator_coefficients_may_be_zeroed": false
+}

@@ -1,0 +1,42 @@
+role: proof_b
+date_utc: '2026-08-01T04:09:47Z'
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional exclusion of the seven independently reconstructed Wave209
+  rank-four constraint orbits, containing 51 labelled branches, by an exact
+  typed point--residual-triangle incidence relaxation; no claim about the
+  rank-three branch or the global Conway-99 target.
+inputs:
+  manifest: attempts/wave210-rank4-point-line-coupling-proof-b/input-freeze.sha256
+  pinned:
+    - path: AGENTS.md
+      sha256: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+    - path: attempts/wave209-four-survivor-globalization/protocol.md
+      sha256: 3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196
+    - path: attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256
+      sha256: 2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b
+    - path: verification/wave209-rank4-point-signature-verifier/package-manifest.sha256
+      sha256: 62c32cfa278a677053353d5a3c21c01600cadc867d597f5135ab32a6fdb1c07a
+method: >-
+  Independently reconstruct the rank-four forms, marked branches, and seven
+  surviving constraint orbits; enumerate every locally valid decomposition of
+  a residual (d,h,t) triangle into three integral point signatures; impose
+  seven-line incidence and Bt=3q residual-demand equations by point type; and
+  replay seven sparse integer Farkas vectors on every admissible point and
+  local-triangle column.  Transport the constraint systems through every
+  checked sign-preserving relabeling.  Retain exact positive controls for the
+  failed coarse 35-q-triple-type relaxation.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave210-rank4-point-line-coupling-proof-b\coupling_check.py
+  --verify ; .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave210-rank4-point-line-coupling-proof-b\test_coupling_check.py
+outputs:
+  manifest: attempts/wave210-rank4-point-line-coupling-proof-b/package-manifest.sha256
+limitations:
+  - The exclusion is conditional on the frozen endpoint and Wave208/209 rank-four inputs.
+  - This discovery agent does not promote its own certificates to VERIFIED.
+  - Numerical solver status and floating duals are not evidence; only archived integer replay is claimed.
+  - The rank-three branch is untouched and remains UNKNOWN.
+  - No adjacency matrix, graph, or global nonexistence proof is supplied; Conway-99 remains UNKNOWN.

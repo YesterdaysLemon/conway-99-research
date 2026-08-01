@@ -1,0 +1,46 @@
+role: proof_a
+date_utc: 2026-08-01T03:02:36Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional rank-three M7g signed trade in a hypothetical prism-free
+  rank-11 srg(99,14,1,2) endpoint, retaining both support 14 and support 20.
+inputs:
+  - path: attempts/wave209-four-survivor-globalization/protocol.md
+    sha256: 3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196
+  - path: attempts/wave208-marked-m7g-proof-b/package-manifest.sha256
+    sha256: f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc
+  - path: attempts/wave208-marked-m7g-proof-b/exact-results.json
+    sha256: e8030f62781b2badf85bb46a266c1d71b651f7e8517dd6aec4a2e453c14e01af
+  - path: attempts/wave208-marked-m7g-proof-b/local-controls.json
+    sha256: 4fc0e87b03d824f640234cdc93441bd3286a2902f331fc5d75c9726f66c076cd
+method: >-
+  Exact point-signature and lambda/mu moments; spectral support bound;
+  complete integer composition catalog; complete rooted seven-vertex census;
+  labelled marked-line packing; exact bounded selected-zero dynamic program;
+  and the 231-line incidence eigenvector reformulation.
+command: >-
+  .venv\Scripts\python.exe -B
+  attempts\wave209-rank3-trade-proof-a\exact_check.py --verify ;
+  .venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave209-rank3-trade-proof-a\test_exact_check.py ;
+  .venv\Scripts\python.exe -B -m py_compile
+  attempts\wave209-rank3-trade-proof-a\exact_check.py
+  attempts\wave209-rank3-trade-proof-a\test_exact_check.py
+outputs:
+  - path: attempts/wave209-rank3-trade-proof-a/derivation.md
+    sha256: 2c8635339c96b99f6b58754665c9ff4643212b2651f5acceb9ec75c04f22b293
+  - path: attempts/wave209-rank3-trade-proof-a/exact_check.py
+    sha256: fe2b5649d2ecc6e596dae96151f82747e3b3c6644e7aec80767f07cecc523319
+  - path: attempts/wave209-rank3-trade-proof-a/exact-results.json
+    sha256: 294c873a751ec5750eb74089d65289cba55ceaf19008e263753b2616b36b7246
+  - path: attempts/wave209-rank3-trade-proof-a/test_exact_check.py
+    sha256: c6c0d1bc0df1f70050389b69aba3feacb10d5846677acbd353ab6e484b6d5aa0
+  - path: attempts/wave209-rank3-trade-proof-a/failed-routes.md
+    sha256: 7667ece4d5d07801c5148b89767bd288af6078d825d061c67727d8dad2aec1f4
+limitations:
+  - Support 14 retains 204 labelled selected-intersection graphs and 4480 cross-deficit bijections per fixed rooted support labelling.
+  - Support 20 retains 352 aggregate profiles across x=2,4,6,8.
+  - Aggregate line types and selected-union controls are not 99-vertex graphs.
+  - No target automorphism is assumed and no 99-vertex brute-force search is performed.
+  - The rank-three branch, rank-11 endpoint, and Conway-99 remain UNKNOWN.

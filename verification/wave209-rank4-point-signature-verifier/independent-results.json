@@ -1,0 +1,267 @@
+{
+  "aggregate_controls": {
+    "aggregate_orbits": 24,
+    "explicit_transported_branch_checks": 249
+  },
+  "claim_label": "VERIFIED",
+  "frozen_inputs": {
+    "AGENTS.md": "4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3",
+    "attempts/wave209-four-survivor-globalization/protocol.md": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196",
+    "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256": "2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b",
+    "logs/2026-07-31-wave208-public-checkpoint.json": "af31d56635f47b0a2c8d961fa813a34590d53773c022211b7cdc39731c0cb77b",
+    "verification/2026-07-31-wave208-integration-audit.md": "eb46057b18ce4d0c0f4c1bd2b4377509c0392194c5cbaa04cd765151bcc3c754"
+  },
+  "global_status": "UNKNOWN",
+  "hostile_tests": {
+    "erased_farkas_rejected": true,
+    "mutated_aggregate_control_rejected": true,
+    "mutated_point_control_rejected": true,
+    "reversed_farkas_orientation_rejected": true
+  },
+  "independent_algebra": {
+    "coordinate_bound": "q_x^2<=224/9<25, so integral |q_x|<=4",
+    "incidence_identity": "BB^T=A+7I",
+    "point_projector_diagonal": "44/99=4/9",
+    "projector_forms": [
+      {
+        "eigenvalue_multiplicities_21P": {
+          "1": 1,
+          "3": 4,
+          "5": 2,
+          "9": 1
+        },
+        "form": [
+          0,
+          0,
+          1
+        ],
+        "minimum_norm": 168
+      },
+      {
+        "eigenvalue_multiplicities_21P": {
+          "1": 1,
+          "3": 4,
+          "5": 2,
+          "9": 1
+        },
+        "form": [
+          0,
+          1,
+          0
+        ],
+        "minimum_norm": 168
+      },
+      {
+        "eigenvalue_multiplicities_21P": {
+          "1": 1,
+          "3": 4,
+          "5": 2,
+          "9": 1
+        },
+        "form": [
+          1,
+          0,
+          0
+        ],
+        "minimum_norm": 168
+      }
+    ],
+    "q_even_excluded": true,
+    "residual_223_norm": 96,
+    "residual_223_sum": 0,
+    "selected_sums": [
+      -3,
+      -3,
+      -3,
+      -3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "srg_identity": "A^2=12I-A+2J",
+    "triangle_sum_norm": 168
+  },
+  "limitations": [
+    "All conclusions are conditional on the frozen hypothetical endpoint and one rank-four marked branch.",
+    "The 51 surviving point-signature controls are anonymous row-count tables, not named graph points or adjacency.",
+    "The aggregate controls do not impose the 223 residual rows of Ct=0 or a 231-block incidence frame.",
+    "No 99-vertex graph, counterexample, nonexistence proof, endpoint exclusion, or global resolution is certified."
+  ],
+  "marked_branch_census": {
+    "forms": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "maps_per_ordered_form_pair": 8,
+    "orbit_size_distribution": {
+      "12": 12,
+      "24": 2,
+      "3": 1,
+      "6": 9
+    },
+    "orbits": 24,
+    "subsets_per_form": [
+      83,
+      83,
+      83
+    ],
+    "target_automorphism_assumed": false,
+    "total_labelled_branches": 249
+  },
+  "point_coordinate_profiles": {
+    "after_odd_support_minimum": 800,
+    "before_odd_support_minimum": 872,
+    "odd_support_distribution": {
+      "12": 152,
+      "16": 154,
+      "20": 116,
+      "24": 86,
+      "28": 56,
+      "32": 40,
+      "36": 24,
+      "40": 16,
+      "44": 8,
+      "48": 5,
+      "52": 2,
+      "56": 1,
+      "8": 140
+    }
+  },
+  "point_signature_certificates": {
+    "certificate_extremes": [
+      {
+        "orbit_id": 1,
+        "pointwise_minimum": 0,
+        "rhs": -39
+      },
+      {
+        "orbit_id": 3,
+        "pointwise_minimum": 0,
+        "rhs": -60
+      },
+      {
+        "orbit_id": 5,
+        "pointwise_minimum": 0,
+        "rhs": -546
+      },
+      {
+        "orbit_id": 6,
+        "pointwise_minimum": 0,
+        "rhs": -4896
+      },
+      {
+        "orbit_id": 7,
+        "pointwise_minimum": 0,
+        "rhs": -9447
+      },
+      {
+        "orbit_id": 8,
+        "pointwise_minimum": 0,
+        "rhs": -1566
+      },
+      {
+        "orbit_id": 9,
+        "pointwise_minimum": 0,
+        "rhs": -360
+      },
+      {
+        "orbit_id": 10,
+        "pointwise_minimum": 4920944517230529593,
+        "rhs": -22958564002380212635224
+      },
+      {
+        "orbit_id": 13,
+        "pointwise_minimum": 0,
+        "rhs": -15
+      },
+      {
+        "orbit_id": 15,
+        "pointwise_minimum": 0,
+        "rhs": -216
+      },
+      {
+        "orbit_id": 16,
+        "pointwise_minimum": 0,
+        "rhs": -6
+      },
+      {
+        "orbit_id": 17,
+        "pointwise_minimum": 0,
+        "rhs": -54
+      },
+      {
+        "orbit_id": 18,
+        "pointwise_minimum": 0,
+        "rhs": -63
+      },
+      {
+        "orbit_id": 19,
+        "pointwise_minimum": 0,
+        "rhs": -2004
+      },
+      {
+        "orbit_id": 20,
+        "pointwise_minimum": 0,
+        "rhs": -48
+      },
+      {
+        "orbit_id": 21,
+        "pointwise_minimum": 0,
+        "rhs": -3480
+      },
+      {
+        "orbit_id": 22,
+        "pointwise_minimum": 0,
+        "rhs": -144
+      }
+    ],
+    "control_orbits": 7,
+    "controlled_labelled_branches": 51,
+    "excluded_labelled_branches": 198,
+    "explicit_transported_branch_checks": 249,
+    "farkas_orbits": 17
+  },
+  "role": "verifier",
+  "selected_union_controls": {
+    "explicit_transported_branch_checks": 249,
+    "minimum_norm_distribution": {
+      "20": 3,
+      "23": 24,
+      "24": 24,
+      "25": 48,
+      "26": 72,
+      "32": 54,
+      "34": 24
+    }
+  },
+  "source_manifest_entries": {
+    "agents/2026-07-31-wave209-rank4-norm56-proof-b.md": "73ebf9dc89ecb8c7a69319768a03fb20875baa3e713a607cf96e7294ff41f1ae",
+    "attempts/wave209-rank4-norm56-proof-b/README.md": "5d7e4f4ee6794b6cf2c7a236bc6ade4ccf9a87e84e18e065331558df8216d9dc",
+    "attempts/wave209-rank4-norm56-proof-b/aggregate-controls.json": "7d952c24d4a26a84fcc928e3d2d64662091ef2e93995f18454837d2af57470fe",
+    "attempts/wave209-rank4-norm56-proof-b/derivation.md": "443f29fa1d60751cc651d700247d741412f613678bb1778feba89bc652a5b99c",
+    "attempts/wave209-rank4-norm56-proof-b/exact-results.json": "c490b7fbe287c7c1cfe7feccb68ba6677c25d22e292439202c3f1826f964a13f",
+    "attempts/wave209-rank4-norm56-proof-b/exact_check.py": "268cf881d594b4e5ad718a29379205bc8a3b71180e412d28ecda91257bac0925",
+    "attempts/wave209-rank4-norm56-proof-b/failed-routes.md": "9a0d3cd7dc82cccd0bd8dc8036d377c26c17c1448e961e24b79d298209c66d84",
+    "attempts/wave209-rank4-norm56-proof-b/input-freeze.sha256": "9ec90501850fc05c85691d82baba473beeb8374bc5f56bb39790d5f76084105e",
+    "attempts/wave209-rank4-norm56-proof-b/point-signature-controls.json": "4285d2052c71bf501cf9fc266ddae0d8684075476c85bd29ef1f3668291d338f",
+    "attempts/wave209-rank4-norm56-proof-b/protocol.md": "534ca08191bba01ed5e7301f2cdcb9e1279f31a77267dec3b99c130f5ec55482",
+    "attempts/wave209-rank4-norm56-proof-b/run-report.yaml": "1c73dc8c17fdda44df5caff6a3ae3538b63231c370f15d12dd4ffa965ce2e021",
+    "attempts/wave209-rank4-norm56-proof-b/test_exact_check.py": "744648f3dbf669a6f42aecce0154a373cf40fc4f3640a599786dbfee1adb4e3f"
+  },
+  "source_manifest_entries_checked": 12,
+  "verdict": "PASS_NO_VETO"
+}

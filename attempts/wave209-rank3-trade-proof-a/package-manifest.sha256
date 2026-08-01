@@ -1,0 +1,10 @@
+2c8635339c96b99f6b58754665c9ff4643212b2651f5acceb9ec75c04f22b293  attempts/wave209-rank3-trade-proof-a/derivation.md
+fe2b5649d2ecc6e596dae96151f82747e3b3c6644e7aec80767f07cecc523319  attempts/wave209-rank3-trade-proof-a/exact_check.py
+294c873a751ec5750eb74089d65289cba55ceaf19008e263753b2616b36b7246  attempts/wave209-rank3-trade-proof-a/exact-results.json
+7667ece4d5d07801c5148b89767bd288af6078d825d061c67727d8dad2aec1f4  attempts/wave209-rank3-trade-proof-a/failed-routes.md
+cda29df29d8a994d082c67ce6b21dfb00e39ab93bdefdec083a61ac488b5840e  attempts/wave209-rank3-trade-proof-a/input-freeze.sha256
+56ff50c4d60dc7756bd8815ef58bfdabdd16b44722d5e6b4dee0451298c0eade  attempts/wave209-rank3-trade-proof-a/protocol.md
+e5b8b24b91a2786b642c83f70fe412abd2c249fce1c9ba069516c88e2f41b3a3  attempts/wave209-rank3-trade-proof-a/README.md
+3bc7ddc184e4e1d50338c3a6074fb124d2b902d9e5738408701a9de83e9373c9  attempts/wave209-rank3-trade-proof-a/run-report.yaml
+c6c0d1bc0df1f70050389b69aba3feacb10d5846677acbd353ab6e484b6d5aa0  attempts/wave209-rank3-trade-proof-a/test_exact_check.py
+dce857fd7fde33cd31d1894580741a39b16c12a65aa63d96c8d898785f3a45bc  agents/2026-07-31-wave209-rank3-trade-proof-a.md

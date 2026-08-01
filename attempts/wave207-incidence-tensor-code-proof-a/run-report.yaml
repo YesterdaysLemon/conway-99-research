@@ -1,0 +1,46 @@
+role: proof_a
+date_utc: 2026-08-01T01:18:05Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional prism-free rank-11 endpoint: prove the incidence-linear
+  first-moment correction for A_Delta and classify every hypothetical
+  weight-eight equality support, its coefficient composition, short
+  relation code, concurrent-secant geometry, and restricted polar types.
+inputs:
+  AGENTS.md: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+  attempts/wave171-pq-centered-code/derivation.md: 0ff4280e782acccfb76e2ca093291be3e3a1c4ca08225ccb763b113c5ac286e3
+  attempts/wave174-no-weight3-dual/package-manifest.sha256: 4244d369d4cfdd2819a4d377b8328b425d110be2d09c45f3418262cef0bee276
+  attempts/wave176-star-projector-circuits/package-manifest.sha256: ba866285f2ae45bbe89d62358da799259576ba4d1f720c0ca89e6c271f0556e3
+  attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256: 6c7718de1c5f2c7d4203d1727d6b74214e51fa069608f318c8583b07b0325f0a
+  attempts/wave206-tensor-balance-weight-proof-b/package-manifest.sha256: a2d0b2e23b108e373616f5d5316612053768118435c11a0a2ed4f6520a9b8f25
+  verification/wave206-three-center-global-extension-verifier/package-manifest.sha256: 3368b0b1995e40f294530cefb596cd2722a859d22aaa672190c55dbd23107ecf
+method: >-
+  Incidence-module identities giving ZB^T=0; maximal-isotropic geometry
+  in the eight-coordinate coefficient form; affine degree-at-most-two
+  moment equality; an index-two S4 subgroup of O(3,3) to force central
+  reflection; and exact evaluation of the canonical 81-word relation
+  code and 27-element restricted-form space. No graph, endpoint, cap,
+  code, SAT, LP, or isomorphism search.
+command: >-
+  python -B
+  attempts/wave207-incidence-tensor-code-proof-a/exact_check.py --verify;
+  python -B -m unittest -v
+  attempts/wave207-incidence-tensor-code-proof-a/test_exact_check.py;
+  python -m py_compile
+  attempts/wave207-incidence-tensor-code-proof-a/exact_check.py
+  attempts/wave207-incidence-tensor-code-proof-a/test_exact_check.py
+outputs:
+  attempts/wave207-incidence-tensor-code-proof-a/derivation.md: f78ec47b4105fb7392c8474386d922d3566696e6be336bb29d717d36b29ad128
+  attempts/wave207-incidence-tensor-code-proof-a/failed-routes.md: 91f87a0a652573455557c8464cd47290b5105677e368a1a7144acb68a80990af
+  attempts/wave207-incidence-tensor-code-proof-a/exact_check.py: f20d4575ca4b4363777ca7f9a0944ed06d16ecd2a452418b4eb7924ba60dcb25
+  attempts/wave207-incidence-tensor-code-proof-a/exact-results.json: 77fb2fc582d17db5e5bb529f749e453e3e65d415f0c44cc5280e7a307516cca3
+  attempts/wave207-incidence-tensor-code-proof-a/test_exact_check.py: e703dc1bc34c7fca1fcf63d98caae75a76e9f96ea5622befff9d6a6f16d54a38
+  attempts/wave207-incidence-tensor-code-proof-a/input-freeze.sha256: 0534eb9342415c7c69ad2d05cf113000f78f55c26d34693d5235291ae038c94c
+  agents/2026-07-31-wave207-proof-a.md: 89a88da3f20fc0ef58206e8eae663baf1e6e7ff6cae1e0e1b0ccba17218ca5e7
+limitations:
+  - Every conclusion is conditional on the putative prism-free rank-11 endpoint.
+  - The four forced triangle-block anticompleteness patterns are not excluded.
+  - The canonical support does not construct membership in a target im(B^T) or a 231-column endpoint.
+  - Internal weight-four and weight-five circuits are not proved to be incidence words or to cross-realize graph pairs.
+  - No rank-11 exclusion, strict n3 improvement, Q>=7060 proof, graph construction, or Conway-99 resolution follows.

@@ -1,0 +1,460 @@
+{
+  "claim_label": "DERIVED",
+  "conditional_scope": "the 51 independently reconstructed Wave209 rank-four branches under the frozen hypothetical endpoint",
+  "failed_coarse_relaxation": {
+    "positive_control_orbits": 7,
+    "possible_unordered_q_triples": 35,
+    "residual_types_after_abs_t_at_most_2": 21,
+    "summaries": [
+      {
+        "orbit_id": 0,
+        "residual_nonzero_types": 4,
+        "selected_q_triples": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit_id": 2,
+        "residual_nonzero_types": 6,
+        "selected_q_triples": [
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit_id": 4,
+        "residual_nonzero_types": 6,
+        "selected_q_triples": [
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit_id": 11,
+        "residual_nonzero_types": 6,
+        "selected_q_triples": [
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit_id": 12,
+        "residual_nonzero_types": 8,
+        "selected_q_triples": [
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit_id": 14,
+        "residual_nonzero_types": 6,
+        "selected_q_triples": [
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit_id": 23,
+        "residual_nonzero_types": 4,
+        "selected_q_triples": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "warning": "these controls couple only q-value multiplicities to triangle sums; they are not 99 points, 223 residual triangles, or a graph"
+  },
+  "frozen_input_hashes": {
+    "AGENTS.md": "4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3",
+    "attempts/wave209-four-survivor-globalization/protocol.md": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196",
+    "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256": "2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b",
+    "verification/wave209-rank4-point-signature-verifier/package-manifest.sha256": "62c32cfa278a677053353d5a3c21c01600cadc867d597f5135ab32a6fdb1c07a"
+  },
+  "limitations": [
+    "The exclusions are conditional on the Wave208/209 rank-four reduction and frozen endpoint assumptions.",
+    "This proof agent does not promote its own certificates to VERIFIED.",
+    "The rank-three branch and the global Conway-99 target are untouched and remain UNKNOWN."
+  ],
+  "local_coupling": {
+    "admissible_point_signature_counts": {
+      "0": 444,
+      "11": 532,
+      "12": 488,
+      "14": 510,
+      "2": 576,
+      "23": 444,
+      "4": 532
+    },
+    "certificate_logic": "for z>=0 and Az=b, each integer y has A^T y>=0 but b^T y<0",
+    "certificate_summaries": [
+      {
+        "labelled_branches": 6,
+        "local_pattern_count": 12110,
+        "nonzero_coefficients": 71,
+        "orbit_id": 0,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 521,
+        "rhs": -4
+      },
+      {
+        "labelled_branches": 12,
+        "local_pattern_count": 11444,
+        "nonzero_coefficients": 102,
+        "orbit_id": 2,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 507,
+        "rhs": -239020
+      },
+      {
+        "labelled_branches": 6,
+        "local_pattern_count": 11672,
+        "nonzero_coefficients": 140,
+        "orbit_id": 4,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 513,
+        "rhs": -18
+      },
+      {
+        "labelled_branches": 6,
+        "local_pattern_count": 11672,
+        "nonzero_coefficients": 140,
+        "orbit_id": 11,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 513,
+        "rhs": -18
+      },
+      {
+        "labelled_branches": 12,
+        "local_pattern_count": 11888,
+        "nonzero_coefficients": 101,
+        "orbit_id": 12,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 517,
+        "rhs": -239020
+      },
+      {
+        "labelled_branches": 3,
+        "local_pattern_count": 12003,
+        "nonzero_coefficients": 390,
+        "orbit_id": 14,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 531,
+        "rhs": -3240
+      },
+      {
+        "labelled_branches": 6,
+        "local_pattern_count": 12110,
+        "nonzero_coefficients": 72,
+        "orbit_id": 23,
+        "pattern_minimum": 0,
+        "point_minimum": 0,
+        "realizable_triangle_type_count": 521,
+        "rhs": -4
+      }
+    ],
+    "constraint_transport": {
+      "transported_branch_checks": 51,
+      "transported_local_pattern_checks": 601377
+    },
+    "equation_counts": {
+      "0": 1266,
+      "11": 1442,
+      "12": 1354,
+      "14": 1398,
+      "2": 1530,
+      "23": 1266,
+      "4": 1442
+    },
+    "excluded_constraint_orbits": 7,
+    "excluded_labelled_branches": 51,
+    "integral_point_signature_count_before_membership_filter": 2187
+  },
+  "status": "DERIVED",
+  "wave209_reconstruction": {
+    "labelled_branch_count": 249,
+    "orbit_count": 24,
+    "surviving_labelled_branches": 51,
+    "survivor_orbits": [
+      0,
+      2,
+      4,
+      11,
+      12,
+      14,
+      23
+    ]
+  }
+}

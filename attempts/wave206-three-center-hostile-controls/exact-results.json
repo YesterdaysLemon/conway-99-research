@@ -1,0 +1,583 @@
+{
+  "bounded_search_ledger": {
+    "automorphism_assumption": "NONE",
+    "claim_label": "UNKNOWN",
+    "nonhit_is_evidence_of_nonexistence": false,
+    "pool_size": 34,
+    "shared_collision_search_space": "ordered triples of distinct types from the 34-type deterministic reflection-word pool",
+    "sharp_rank_search_space": "the two displayed consecutive 33-type windows with multiplicity three",
+    "stronger_coupled_rank21_shared_incidence_control_found": false
+  },
+  "certificate_sha256": "49e70f464d4800982abce3ba71d9b62d3877fc6e967317a67306ef6a514db945",
+  "claim_label": "CANDIDATE",
+  "field": 3,
+  "fixed_y_rank21_controls": {
+    "claim_label": "DERIVED",
+    "controls": {
+      "A": {
+        "compressed_operator_coordinate_rank_over_F3": 21,
+        "distinct_projector_type_count": 33,
+        "fixed_y_label": 0,
+        "fixed_y_pool_index": 0,
+        "fixed_y_slice_diagonal_distribution": {
+          "0": 30,
+          "1": 33,
+          "2": 36
+        },
+        "fixed_y_slice_diagonal_equals_H_y_star": true,
+        "fixed_y_slice_entry_distribution": {
+          "0": 3078,
+          "1": 3195,
+          "2": 3528
+        },
+        "fixed_y_slice_rank_over_F3": 21,
+        "fixed_y_slice_row_sums_zero": true,
+        "fixed_y_slice_symmetric": true,
+        "fixed_y_slice_y_row_equals_g_y_star": true,
+        "multiplicity_per_type": 3,
+        "projector_count": 99,
+        "sum_projectors_zero": true,
+        "unique_33_type_slice_diagonal_distribution": {
+          "0": 10,
+          "1": 11,
+          "2": 12
+        },
+        "unique_33_type_slice_entry_distribution": {
+          "0": 342,
+          "1": 355,
+          "2": 392
+        }
+      },
+      "B": {
+        "compressed_operator_coordinate_rank_over_F3": 21,
+        "distinct_projector_type_count": 33,
+        "fixed_y_label": 0,
+        "fixed_y_pool_index": 1,
+        "fixed_y_slice_diagonal_distribution": {
+          "0": 33,
+          "1": 15,
+          "2": 51
+        },
+        "fixed_y_slice_diagonal_equals_H_y_star": true,
+        "fixed_y_slice_entry_distribution": {
+          "0": 2925,
+          "1": 3411,
+          "2": 3465
+        },
+        "fixed_y_slice_rank_over_F3": 21,
+        "fixed_y_slice_row_sums_zero": true,
+        "fixed_y_slice_symmetric": true,
+        "fixed_y_slice_y_row_equals_g_y_star": true,
+        "multiplicity_per_type": 3,
+        "projector_count": 99,
+        "sum_projectors_zero": true,
+        "unique_33_type_slice_diagonal_distribution": {
+          "0": 11,
+          "1": 5,
+          "2": 17
+        },
+        "unique_33_type_slice_entry_distribution": {
+          "0": 325,
+          "1": 379,
+          "2": 385
+        }
+      }
+    },
+    "diagonal_distribution_varies": true,
+    "identity": "tau_y[x,z]=tr((P_y P_x P_y)(P_y P_z P_y)) is the trace Gram of self-adjoint operators on the six-space E_y",
+    "missing_target_premises": [
+      "the 99 projector labels are not distinct: 33 types each occur three times",
+      "no 231-column incidence or star-to-column coupling is imposed",
+      "no rank-11 square-zero centered Gram of projectively distinct singular columns is imposed",
+      "no srg(99,14,1,2), triangle, lambda, mu, prism, t_xy, distance, cover, or Q premise is imposed"
+    ],
+    "rank_bound_attained_in_both_controls": true,
+    "restrictions": [
+      "each control uses a consecutive 33-type prefix or suffix of the listed reflection-word pool",
+      "each projector type is repeated exactly three times",
+      "sum_x P_x=0 follows and is checked in characteristic three",
+      "no automorphism assumed"
+    ],
+    "tau_entry_distribution_varies": true,
+    "universal_dimension_bound": 21
+  },
+  "inputs": {
+    "attempts/wave205-fourth-trace-globalization/protocol.md": "a1d45fc0a82b9944a9e020ded3945e75944e0e00202eacbb20eb05598e30bf4d",
+    "attempts/wave205-global-fourth-moment-proof-b/package-manifest.sha256": "a91a2a1cdbc129fa66e9d63b34031a774d5af78c458d18d9a1aadd7e4be217e7",
+    "attempts/wave205-nonedge-fourth-trace-proof-a/package-manifest.sha256": "2c9976b6cb07a3036df07fd0e7ceb7ffce6a339651d604fcecdcf8c0c3da3d96",
+    "attempts/wave206-three-center-global-extension/protocol.md": "66c20334e284a26cc771ee86d97e678cb67b6efb4648b2af2fffe480fb5a9103",
+    "verification/2026-07-29-wave205-integration-audit.md": "f50b5591cb0e1e3dfdd835a22fd9156dd3a2a039323388889a6fa5e756a0a297",
+    "verification/2026-07-29-wave205-orchestrator.md": "9b9711ad4b9ac902161833b4a5825404e95ba6f443462ac3d79532df704b2deb",
+    "verification/wave205-fourth-trace-globalization-verifier/package-manifest.sha256": "b93f65f72db94539c7d42d7eca6debbaf3a5c4a401db3b812a80549bcb9b8325"
+  },
+  "next_required_invariant": "a graph-typed joint law for the fixed-y Gram slices tau_y, or an equivalent four-center/Terwilliger-localizer constraint coupling different y, is needed; pair data and the checked contraction alone do not determine tau",
+  "projector_pool": {
+    "ambient_dimension": 11,
+    "ambient_form_diagonal": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "claim_label": "DERIVED",
+    "distinct_projector_count": 34,
+    "every_projector_has_seven_singular_simplex": true,
+    "every_projector_idempotent": true,
+    "every_projector_rank": 6,
+    "every_projector_self_adjoint": true,
+    "every_projector_trace": 0,
+    "joined_selected_basis_rank_A": 11,
+    "joined_selected_basis_rank_B": 11,
+    "reflection_word_length": 34,
+    "simplex_frame_identity": "P=-sum(z tensor z)",
+    "simplex_gram": "J_7-I_7"
+  },
+  "shared_incidence_tau_collision": {
+    "all_tau_differences_use_one_center_from_each_component": true,
+    "claim_label": "REFUTED",
+    "different_ordered_tau_entries": 209952,
+    "different_type_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "fixed_y_slice_rank_over_F3": 3,
+    "incidence": {
+      "all_graph_triangle_count": 1329,
+      "block_count": 231,
+      "column_degree": 3,
+      "connected_component_sizes": [
+        27,
+        36,
+        36
+      ],
+      "designated_block_triangle_count": 231,
+      "each_vertex_sees_each_color_once": true,
+      "edge_common_neighbor_distribution": {
+        "4": 144,
+        "5": 243,
+        "6": 27,
+        "7": 225,
+        "8": 27,
+        "9": 27
+      },
+      "extra_graph_triangle_count": 1098,
+      "integer_bbt_identity": "BB^T=A+7I",
+      "linear_triple_system": true,
+      "nonedge_common_neighbor_distribution": {
+        "0": 3240,
+        "2": 144,
+        "4": 180,
+        "5": 27,
+        "6": 315,
+        "7": 27,
+        "8": 225
+      },
+      "point_count": 99,
+      "point_graph_degree": 14,
+      "point_graph_edge_count": 693,
+      "row_degree": 7,
+      "ternary_bbt_identity": "BB^T=A+I over F_3"
+    },
+    "missing_target_premises": [
+      "the point graph is disconnected with component sizes 27,36,36",
+      "edge common-neighbor counts are not uniformly lambda=1",
+      "nonedge common-neighbor counts are not uniformly mu=2; cross-component nonedges have mu=0",
+      "the point graph has 1098 graph triangles beyond the 231 designated blocks",
+      "only 19 projective block directions occur, with multiplicities 9, 12, and 21, so projective distinctness fails",
+      "the exact selected orthogonality graph and endpoint block-relation profiles are not imposed",
+      "prism-free crossing caps, outer-cycle statistics, endpoint t_xy restrictions, distance, cover, and Q constraints are not imposed",
+      "the separated triples are cross-component triples; they do not realize any target srg three-center graph type"
+    ],
+    "pair_signatures_between_component_types": [
+      {
+        "H": 2,
+        "component_pair": [
+          0,
+          1
+        ],
+        "g": 2
+      },
+      {
+        "H": 1,
+        "component_pair": [
+          0,
+          2
+        ],
+        "g": 2
+      },
+      {
+        "H": 2,
+        "component_pair": [
+          1,
+          2
+        ],
+        "g": 0
+      }
+    ],
+    "realizations": {
+      "A": {
+        "all_block_columns_singular": true,
+        "ambient_column_span_rank": 11,
+        "centered_gram_rank": 11,
+        "centered_gram_square_zero": true,
+        "distinct_projective_direction_count": 19,
+        "fixed_y_slices": [
+          {
+            "component": "C27",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 0,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                0,
+                2,
+                2
+              ],
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                2,
+                2,
+                1
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          },
+          {
+            "component": "C36a",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 27,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                2
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          },
+          {
+            "component": "C36b",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 63,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                1,
+                0,
+                2
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                2,
+                0,
+                0
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          }
+        ],
+        "global_column_frame_zero": true,
+        "projective_direction_multiplicity_distribution": {
+          "12": 12,
+          "21": 2,
+          "9": 5
+        },
+        "projector_pool_indices_by_component": [
+          0,
+          2,
+          9
+        ],
+        "projector_type_counts": {
+          "0": 27,
+          "2": 36,
+          "9": 36
+        },
+        "sum_projectors_zero": true
+      },
+      "B": {
+        "all_block_columns_singular": true,
+        "ambient_column_span_rank": 11,
+        "centered_gram_rank": 11,
+        "centered_gram_square_zero": true,
+        "distinct_projective_direction_count": 19,
+        "fixed_y_slices": [
+          {
+            "component": "C27",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 0,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                0,
+                2,
+                2
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                2,
+                1,
+                1
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          },
+          {
+            "component": "C36a",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 27,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                2,
+                2,
+                2
+              ],
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                2
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          },
+          {
+            "component": "C36b",
+            "diagonal_equals_H_y_star": true,
+            "rank_over_F3": 3,
+            "representative_y": 63,
+            "row_sums_zero": true,
+            "three_type_slice": [
+              [
+                1,
+                2,
+                2
+              ],
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                0,
+                0
+              ]
+            ],
+            "y_row_equals_g_y_star": true
+          }
+        ],
+        "global_column_frame_zero": true,
+        "projective_direction_multiplicity_distribution": {
+          "12": 12,
+          "21": 2,
+          "9": 5
+        },
+        "projector_pool_indices_by_component": [
+          0,
+          2,
+          15
+        ],
+        "projector_type_counts": {
+          "0": 27,
+          "15": 36,
+          "2": 36
+        },
+        "sum_projectors_zero": true
+      }
+    },
+    "refuted_implication": "the explicitly checked relaxed shared-incidence, rank-11, zero-frame, star-projector, full-g, and full-H premises determine the three-center tensor tau",
+    "restrictions": [
+      "three component-constant projector types selected from the listed 34-type reflection-word pool",
+      "the cyclic component incidence has sizes 27, 36, 36",
+      "no automorphism assumed"
+    ],
+    "same_full_H_matrix": true,
+    "same_full_g_matrix": true,
+    "same_labelled_99x231_incidence": true,
+    "tau_contraction_sum_z_zero": true,
+    "tau_type_tables": {
+      "A": [
+        [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ]
+      ],
+      "B": [
+        [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  },
+  "status": {
+    "Conway-99": "UNKNOWN",
+    "Q>=7060": "NOT PROVED",
+    "actual nonedge h": "UNKNOWN",
+    "automorphism_assumption": "NONE",
+    "n3=4158 endpoint": "UNKNOWN",
+    "rank-11 endpoint": "UNKNOWN"
+  }
+}

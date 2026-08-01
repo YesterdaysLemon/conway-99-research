@@ -1,0 +1,72 @@
+{
+  "form_classes": {
+    "rank0_K8_ones0": 1,
+    "rank2_2K4_ones0": 3,
+    "rank2_2K4_ones16": 3,
+    "rank2_2K4_ones8": 6,
+    "rank3_4K2_ones12": 2,
+    "rank3_4K2_ones16": 3,
+    "rank3_4K2_ones8": 3,
+    "rank4_2C4_ones12": 3,
+    "rank4_2C4_ones8": 3
+  },
+  "internal_circuits": {
+    "certificate_cross_realizations": {
+      "weight4_multiplicity0": 12,
+      "weight5_multiplicity0": 8
+    },
+    "projective_circuits": {
+      "4": 12,
+      "5": 8
+    },
+    "weight_enumerator": {
+      "0": 1,
+      "4": 24,
+      "5": 16,
+      "6": 32,
+      "8": 8
+    }
+  },
+  "limitations": [
+    "the certificate is an induced 23-vertex necessary-condition model, not a 99-vertex SRG completion",
+    "edges with no common neighbor inside the certificate require outside completion",
+    "the other 223 triangle blocks and the full 231-column rank-11 frame are absent",
+    "internal weight-four and weight-five circuits are not asserted to lie in im(B^T)"
+  ],
+  "local_rank4_certificate": {
+    "Ab_zero": true,
+    "b_norm": 2,
+    "common_neighbor_histogram": {
+      "edge_0": 18,
+      "edge_1": 33,
+      "nonedge_0": 71,
+      "nonedge_1": 99,
+      "nonedge_2": 32
+    },
+    "edges": 51,
+    "graph_triangles": 11,
+    "induced_triangular_prisms": 0,
+    "lambda_local_cap": true,
+    "maximum_local_degree": 8,
+    "mu_local_cap": true,
+    "selected_intersections": 1,
+    "vertices": 23
+  },
+  "no_product_one_exclusions": {
+    "by_rank": {
+      "0": 1,
+      "2": 3
+    },
+    "total_forms": 4,
+    "zero_graphs": [
+      "K8",
+      "2K4"
+    ]
+  },
+  "polar_row_relation_weights_by_rank": {
+    "0": [0],
+    "2": [4],
+    "3": [6],
+    "4": [5]
+  }
+}

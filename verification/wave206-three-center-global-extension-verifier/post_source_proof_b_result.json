@@ -1,0 +1,274 @@
+{
+  "claim_label": "VERIFIED_WITH_SCOPE_AND_STRENGTHENING",
+  "common_true_kernel": {
+    "Gamma_calculation": "Gamma=sum_y Tau^(y)",
+    "contained_in_Gamma_kernel": true,
+    "contained_in_every_fixed_middle_kernel": true,
+    "premise": "sum_x c_x P_x=0",
+    "slice_calculation": "(Tau^(y)c)_x=tr(P_x P_y (sum_z c_z P_z) P_y)=0",
+    "true_relation_guard": "the implication starts from an operator equality, not a restricted trace-Gram null vector"
+  },
+  "crossing_and_localizer": {
+    "D_square_zero": true,
+    "Gamma_diagonal_equals_H_row_sum": true,
+    "Gamma_equals_sum_fixed_middle_tau": true,
+    "Gamma_rank": 10,
+    "Gamma_rank_at_most_W_rank": true,
+    "Gamma_row_sum_zero": true,
+    "J_star_equals_edge_incidence_gram_plus_2I": true,
+    "J_star_rank": 21,
+    "M_identity": "M_x=D S_x D=-Z^*P_xZ",
+    "W_rank": 12,
+    "W_transpose_W_zero": true,
+    "algebraic_zero_products": {
+      "D_M_x": "D(D S_x D)=D^2 S_x D=0",
+      "M_x_D": "(D S_x D)D=D S_x D^2=0",
+      "M_x_M_y": "(D S_x D)(D S_y D)=D S_x D^2 S_y D=0",
+      "WWt_square": "(WW^T)^2=W(W^T W)W^T=0"
+    },
+    "centers": 24,
+    "columns": 168,
+    "construction": "fresh balanced six-support zero frame, reflected to 12 centers, plus one independent deterministic orthogonal image",
+    "each_M_rank": 6,
+    "g_formula": "g_xy=sum_e m_x^(y)[e]",
+    "h_formula": "h_xy=m_x^(y)^T J_star m_x^(y)",
+    "incidence_degree": 1,
+    "localizer_sign_checks": 576,
+    "projector_span_rank": 12,
+    "scope": "formal algebra control only: disjoint degree-one stars, not the target 99-by-231 degree-three incidence or an SRG",
+    "synthesis_rank": 11,
+    "tau_formula": "Tau^(y)=W_y J_star W_y^T"
+  },
+  "nonconstant_and_three_class_balance": {
+    "balance_equations": [
+      "R_1+2R_2=0 from the tensor relation",
+      "R_0+R_1+R_2=0 from the global zero frame"
+    ],
+    "class_balance": "R_0=R_1=R_2",
+    "im_Bt_intersects_constant_line": "zero only",
+    "interpretation_guard": "this is equality of operator sums, not equality of class sizes",
+    "nonzero_constant_cases": {
+      "1": {
+        "G_minus_J_times_c": 1,
+        "G_times_Gc": 0,
+        "contradiction": true,
+        "forced_sum_c": 0
+      },
+      "2": {
+        "G_minus_J_times_c": 2,
+        "G_times_Gc": 0,
+        "contradiction": true,
+        "forced_sum_c": 0
+      }
+    },
+    "uses": [
+      "B 1_231=1_99",
+      "G=B B^T=A+I",
+      "G 1_99=0",
+      "G^2=G-J"
+    ]
+  },
+  "role": "verifier",
+  "scope": "conditional prism-free n3=4158 centered rank-11 endpoint; Wave 206 Proof-B crossing/localizer and true-kernel claims",
+  "scope_wall": {
+    "Conway_99_resolved": false,
+    "Q_7060_proved": false,
+    "endpoint_status": "UNKNOWN",
+    "external_novelty": "UNKNOWN",
+    "fixed_middle_trace_class_nullities_are_true_relations": false,
+    "n3_improved": false,
+    "rank11_endpoint_excluded": false,
+    "shared_231_column_endpoint_constructed": false,
+    "trace_class_nullity_kind": "Gram only unless radical controlled"
+  },
+  "source_integrity": {
+    "blind_files_unchanged": true,
+    "blind_freeze_manifest_sha256": "f878441cf73e9087596f82b1600cbffb9f22659ee10f438825161ac28246adac",
+    "proof_b": {
+      "all_entries_match": true,
+      "entries": {
+        "agents/2026-07-29-wave206-crossing-kernel-proof-b.md": "82fe8ee5cd4be62a8284cc041b85a39f10674948fafb577848f9514897aec75b",
+        "attempts/wave206-crossing-kernel-proof-b/README.md": "896da2f51de8a1b4286f9a18c801d436fb3464a86667c6cdd4c57649ae019daf",
+        "attempts/wave206-crossing-kernel-proof-b/derivation.md": "9bdc0a296f704a5bd73ffa3a726694b74454b011dac486da9afa599f868aab13",
+        "attempts/wave206-crossing-kernel-proof-b/exact-results.json": "8c926d1275835767ccd7af722ac64921f80035655f305da2e4ad0e9a27571683",
+        "attempts/wave206-crossing-kernel-proof-b/exact_check.py": "2084abdfad4ddb486f6b1f1c59ee4bc840b56b2f9c133d690bcbf1d73c0c4da8",
+        "attempts/wave206-crossing-kernel-proof-b/failed-routes.md": "3467cb78afd7b3352790328478f1803178141fdd0683b92103abf98822e5a57d",
+        "attempts/wave206-crossing-kernel-proof-b/input-freeze.sha256": "440ff37caa63d304e9d20f7b5867e4b9fe20e31ac7dd7ec14e728d44bff98b5c",
+        "attempts/wave206-crossing-kernel-proof-b/run-report.yaml": "6ebb383e5488fe752f12ec81f2abcf86fd490ceeff54f10f79e55ac75306e244",
+        "attempts/wave206-crossing-kernel-proof-b/test-results.txt": "0ce9f3db6fc087a7098b5493205fb2f471be2e71e35259eb21ed489ec99a586c",
+        "attempts/wave206-crossing-kernel-proof-b/test_exact_check.py": "6dfaf3e2710c298af7a89c1431f192c4503776181192184a26e1e28e2ce49458"
+      },
+      "entry_count": 10,
+      "manifest": "attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256",
+      "manifest_sha256": "6c7718de1c5f2c7d4203d1727d6b74214e51fa069608f318c8583b07b0325f0a"
+    },
+    "wave174": {
+      "all_entries_match": true,
+      "entries": {
+        "verification/wave174-no-weight3-dual/README.md": "54c80e337b4af62d9e292f46fa48535c433d8377b475c3e32e65f23c88fcb70d",
+        "verification/wave174-no-weight3-dual/input-freeze.sha256": "31c3530deb0003a5896771d4781c79c23dd25a6809ae7f932223c683bef058ef",
+        "verification/wave174-no-weight3-dual/protocol.md": "e417b75581bc2f470c942fd4273e47110b7a1a5ce21f9846624c9ec057644e17",
+        "verification/wave174-no-weight3-dual/run-report.yaml": "b31a0663a7c629bfe7395c590c2006bd3516b187f3ad5f7b3d3ef20b9d6d2dee",
+        "verification/wave174-no-weight3-dual/verification-report.md": "59bc0e470a7d007aa2ddaec262a2f3046c8df7da56192bdab90327962feb9b0a"
+      },
+      "entry_count": 5,
+      "manifest": "verification/wave174-no-weight3-dual/package-manifest.sha256",
+      "manifest_sha256": "ac34c8a3b045bec70e3a2080cb4365c0ea43cc732b313ecb3cec355a28f23450"
+    },
+    "wave191_report_sha256": "afe7d35627ec14a9599b427bcca0751e86a3f32b71fb7baf4d91e9e2e335f75f",
+    "weight_addendum": {
+      "all_entries_match": true,
+      "entries": {
+        "agents/2026-07-29-wave206-tensor-balance-weight-proof-b.md": "67e1c97ece31ce8911b7a3d398067d6585f77cddd58f4bf5b27c769ef0880128",
+        "attempts/wave206-tensor-balance-weight-proof-b/README.md": "515c3c50d8c41f0edd6bb2ffe2a7347dde7805ee81277df21e1123a325514cb0",
+        "attempts/wave206-tensor-balance-weight-proof-b/derivation.md": "7d13a1834819e952c4d4eff033fac033e23699ab643d9852318a67d19bcb6cf2",
+        "attempts/wave206-tensor-balance-weight-proof-b/exact-results.json": "e1dd9c788b54016dc63284ad7a8602723ee714b8e703e224fc9e39e1fbbf5d47",
+        "attempts/wave206-tensor-balance-weight-proof-b/exact_check.py": "95bbe28da691efef48ecffd88d6000e4c01f043aa27e20bfee842812e2151157",
+        "attempts/wave206-tensor-balance-weight-proof-b/failed-routes.md": "73901b9218254363373069158c339ebfce22b5016ed000418b9a45aaaa13c302",
+        "attempts/wave206-tensor-balance-weight-proof-b/input-freeze.sha256": "bbb08fadd71b6503fb54f77c79c547e3fdd7f3882a612ca66c81236e80441425",
+        "attempts/wave206-tensor-balance-weight-proof-b/protocol.md": "96d7e061a5df7aee9cf675198535788be11a0f0f2491536d0a18d51ab767319e",
+        "attempts/wave206-tensor-balance-weight-proof-b/run-report.yaml": "ea0e4994a8f097125ac288fc32dece9ecbc4ee482647a3361572c8a595ff5fa2",
+        "attempts/wave206-tensor-balance-weight-proof-b/test-results.txt": "1edc98960018fde194f356c112d0f26b9fe79a7c4934251389d3b99f2f5ae43e",
+        "attempts/wave206-tensor-balance-weight-proof-b/test_exact_check.py": "84bafe1f547150d455303502ce949c8554188c6901b1248cb55ebeddb5f87d8d"
+      },
+      "entry_count": 11,
+      "manifest": "attempts/wave206-tensor-balance-weight-proof-b/package-manifest.sha256",
+      "manifest_sha256": "a2d0b2e23b108e373616f5d5316612053768118435c11a0a2ed4f6520a9b8f25"
+    }
+  },
+  "tensor_support": {
+    "coefficient_metric_nondegenerate": true,
+    "input_premise": "verified Wave 174 theorem d(W^perp)>=4, equivalently no dependent set of at most three centered columns",
+    "operator_to_row_space": "sum a_T(z_T tensor z_T)=0 implies V Lambda V^T=0 after multiplying by the inverse ambient form",
+    "projective_cap_enumeration": {
+      "1": {
+        "maximum_no_dependent_triple_subset": 1,
+        "number_of_maximum_subsets": 1,
+        "projective_point_count": 1
+      },
+      "2": {
+        "maximum_no_dependent_triple_subset": 2,
+        "number_of_maximum_subsets": 6,
+        "projective_point_count": 4
+      },
+      "3": {
+        "maximum_no_dependent_triple_subset": 4,
+        "number_of_maximum_subsets": 234,
+        "projective_point_count": 13
+      }
+    },
+    "rank_bound": "rank(V)<=floor(wt(a)/2)",
+    "scope": "conditional on the prism-free rank-11 endpoint and the verified Wave 174 centered-column dual-distance theorem",
+    "submitted_bound": 4,
+    "support_exclusions": {
+      "1": {
+        "cap_size_upper_bound": 0,
+        "excluded": true,
+        "row_rank_upper_bound": 0
+      },
+      "2": {
+        "cap_size_upper_bound": 1,
+        "excluded": true,
+        "row_rank_upper_bound": 1
+      },
+      "3": {
+        "cap_size_upper_bound": 1,
+        "excluded": true,
+        "row_rank_upper_bound": 1
+      },
+      "4": {
+        "cap_size_upper_bound": 2,
+        "excluded": true,
+        "row_rank_upper_bound": 2
+      },
+      "5": {
+        "cap_size_upper_bound": 2,
+        "excluded": true,
+        "row_rank_upper_bound": 2
+      },
+      "6": {
+        "cap_size_upper_bound": 4,
+        "excluded": true,
+        "row_rank_upper_bound": 3
+      },
+      "7": {
+        "cap_size_upper_bound": 4,
+        "excluded": true,
+        "row_rank_upper_bound": 3
+      }
+    },
+    "totally_isotropic_row_space": true,
+    "verified_strengthened_bound": 8,
+    "wave174_report_sha256": "59bc0e470a7d007aa2ddaec262a2f3046c8df7da56192bdab90327962feb9b0a",
+    "weight_eight_boundary": {
+      "allowed_number_of_coefficient_2_entries": [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "coefficient_form_must_be_split": true,
+      "forced_span_rank": 4,
+      "reason": "an 8-cap needs rank at least 4, the Witt bound gives rank at most 4, and a split diagonal 8-form has square determinant, hence an even number of 2 entries"
+    },
+    "weight_eight_relaxed_control": {
+      "all_columns_singular": true,
+      "ambient_dimension": 11,
+      "ambient_form_determinant": 2,
+      "ambient_form_nonsquare": true,
+      "blocks_weight_nine_from_local_ingredients_alone": true,
+      "coefficient_composition": {
+        "1": 4,
+        "2": 4
+      },
+      "coefficient_form_has_totally_isotropic_dimension": 4,
+      "every_three_columns_independent": true,
+      "proves_target_weight_eight_word_exists": false,
+      "scope": "sharp only for the local tensor, cap, singularity, and ambient-form ingredients; no 231-frame, incidence, graph, or im(B^T)",
+      "span_rank": 4,
+      "support_form_determinant": 1,
+      "support_size": 8,
+      "tensor_and_operator_sum_zero": true
+    }
+  },
+  "true_kernel_quotient": {
+    "diagonal_consequence": "diag(D diag(a)D)=0 gives (D Hadamard D)a=0",
+    "dim_A_Delta_lower_bound": 1,
+    "dim_KP_lower_bound": 34,
+    "dimension_formula": "dim(A_Delta)=rank(B)-dim span{P_x}",
+    "gram_kernel_warning": "no null vector of a trace Gram matrix is promoted; A_Delta comes from a genuine operator relation",
+    "inherited_dim_L_interval": [
+      17,
+      33
+    ],
+    "inherited_rank_B_interval": [
+      66,
+      82
+    ],
+    "map_ledger": {
+      "L_contained_in_KP": true,
+      "Theta_equivalence": "D diag(a) D=0 iff T(a)=0",
+      "induced_isomorphism": "ker(projector map)/L isomorphic to im(B^T) intersect ker(a |-> D diag(a) D)",
+      "kernel_phi": "L=ker(B^T)",
+      "outer_map": "A |-> Z^* A Z",
+      "outer_map_injective_reason": "Z has a right inverse R, so R^*(Z^*AZ)R=A",
+      "phi": "F_3^99 -> F_3^231, c |-> B^T c",
+      "projector_map": "P(c)=sum_x c_x P_x=-T(B^T c)",
+      "tensor_map": "T(a)=sum_T a_T(z_T tensor z_T)"
+    },
+    "projector_span_upper_bound": 65
+  },
+  "verdict": {
+    "promotion": "A_Delta is nonzero, nonconstant, has three equal tensor-class sums, lies in every true slice kernel, and every nonzero A_Delta word has weight at least 8",
+    "released_weight_addendum": "VERIFIED_WITH_SCOPE",
+    "submitted_Proof_B_claims": "VERIFIED_WITH_SCOPE",
+    "submitted_support_bound_wt_at_least_4": "VERIFIED_BUT_NOT_SHARP",
+    "verifier_support_strengthening_wt_at_least_8": "VERIFIED",
+    "vetoes": [
+      "no Gram-kernel word is promoted to an operator relation",
+      "no endpoint exclusion or Conway-99 resolution follows"
+    ],
+    "weight_eight_local_boundary_control": "VERIFIED_SCOPED"
+  }
+}

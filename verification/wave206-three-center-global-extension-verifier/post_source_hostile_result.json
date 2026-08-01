@@ -1,0 +1,418 @@
+{
+  "blind_matrix_layer_reused": true,
+  "claim_label": "VERIFIED_SCOPED",
+  "collision": {
+    "all_differences_cross_component": true,
+    "different_ordered_tau_entries": 209952,
+    "different_type_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "refuted_implication": "the checked relaxed shared-incidence, rank-11, zero-frame, star-projector, complete-g, and complete-H premises determine tau",
+    "same_complete_labelled_H": true,
+    "same_complete_labelled_g": true,
+    "target_endpoint_counterexample": false,
+    "tau_type_table_A": [
+      [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    ],
+    "tau_type_table_B": [
+      [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "discovery_python_imported": false,
+  "frozen_comparison": {
+    "different_ordered_entries_match": true,
+    "different_type_triples_match": true,
+    "incidence_summary_matches": true,
+    "rank_control_A_matches": true,
+    "rank_control_B_matches": true
+  },
+  "incidence": {
+    "all_graph_triangle_count": 1329,
+    "block_count": 231,
+    "column_degree": 3,
+    "connected_component_sizes": [
+      27,
+      36,
+      36
+    ],
+    "designated_block_triangle_count": 231,
+    "each_vertex_sees_each_color_once": true,
+    "edge_common_neighbor_distribution": {
+      "4": 144,
+      "5": 243,
+      "6": 27,
+      "7": 225,
+      "8": 27,
+      "9": 27
+    },
+    "extra_graph_triangle_count": 1098,
+    "integer_bbt_identity_checked": true,
+    "linear_triple_system": true,
+    "nonedge_common_neighbor_distribution": {
+      "0": 3240,
+      "2": 144,
+      "4": 180,
+      "5": 27,
+      "6": 315,
+      "7": 27,
+      "8": 225
+    },
+    "point_count": 99,
+    "point_graph_degree": 14,
+    "point_graph_edge_count": 693,
+    "row_degree": 7,
+    "ternary_bbt_identity_checked": true
+  },
+  "mutations": {
+    "incidence_orbit_mutation_rejected": true,
+    "simplex_mutation_rejected": true,
+    "zero_reflection_root_rejected": true
+  },
+  "premise_gaps": {
+    "rank21_controls": [
+      "the 99 projector labels are not distinct: 33 types each occur three times",
+      "no 231-column incidence or star-to-column coupling is imposed",
+      "no rank-11 square-zero centered Gram of projectively distinct singular columns is imposed",
+      "no srg(99,14,1,2), triangle, lambda, mu, prism, t_xy, distance, cover, or Q premise is imposed"
+    ],
+    "restriction_ledger": {
+      "automorphism_assumption": "NONE",
+      "claim_label": "UNKNOWN",
+      "nonhit_is_evidence_of_nonexistence": false,
+      "pool_size": 34,
+      "shared_collision_search_space": "ordered triples of distinct types from the 34-type deterministic reflection-word pool",
+      "sharp_rank_search_space": "the two displayed consecutive 33-type windows with multiplicity three",
+      "stronger_coupled_rank21_shared_incidence_control_found": false
+    },
+    "shared_control": [
+      "the point graph is disconnected with component sizes 27,36,36",
+      "edge common-neighbor counts are not uniformly lambda=1",
+      "nonedge common-neighbor counts are not uniformly mu=2; cross-component nonedges have mu=0",
+      "the point graph has 1098 graph triangles beyond the 231 designated blocks",
+      "only 19 projective block directions occur, with multiplicities 9, 12, and 21, so projective distinctness fails",
+      "the exact selected orthogonality graph and endpoint block-relation profiles are not imposed",
+      "prism-free crossing caps, outer-cycle statistics, endpoint t_xy restrictions, distance, cover, and Q constraints are not imposed",
+      "the separated triples are cross-component triples; they do not realize any target srg three-center graph type"
+    ]
+  },
+  "projector_pool": {
+    "all_rank_6": true,
+    "all_self_adjoint_idempotent": true,
+    "all_seven_simplices_valid": true,
+    "all_trace_zero": true,
+    "count": 34,
+    "distinct_count": 34,
+    "joined_selected_basis_rank_A": 11,
+    "joined_selected_basis_rank_B": 11
+  },
+  "rank21_controls": {
+    "A": {
+      "diagonal_equals_H": true,
+      "fixed_y_pool_index": 0,
+      "full_diagonal_distribution": {
+        "0": 30,
+        "1": 33,
+        "2": 36
+      },
+      "full_entry_distribution": {
+        "0": 3078,
+        "1": 3195,
+        "2": 3528
+      },
+      "full_slice_rank": 21,
+      "row_sums_zero": true,
+      "seven_star_21_coordinate_model_used": true,
+      "slice_symmetric": true,
+      "sum_projectors_zero": true,
+      "unique_coordinate_rank": 21,
+      "unique_diagonal_distribution": {
+        "0": 10,
+        "1": 11,
+        "2": 12
+      },
+      "unique_entry_distribution": {
+        "0": 342,
+        "1": 355,
+        "2": 392
+      },
+      "unique_slice_rank": 21,
+      "y_row_equals_g": true
+    },
+    "B": {
+      "diagonal_equals_H": true,
+      "fixed_y_pool_index": 1,
+      "full_diagonal_distribution": {
+        "0": 33,
+        "1": 15,
+        "2": 51
+      },
+      "full_entry_distribution": {
+        "0": 2925,
+        "1": 3411,
+        "2": 3465
+      },
+      "full_slice_rank": 21,
+      "row_sums_zero": true,
+      "seven_star_21_coordinate_model_used": true,
+      "slice_symmetric": true,
+      "sum_projectors_zero": true,
+      "unique_coordinate_rank": 21,
+      "unique_diagonal_distribution": {
+        "0": 11,
+        "1": 5,
+        "2": 17
+      },
+      "unique_entry_distribution": {
+        "0": 325,
+        "1": 379,
+        "2": 385
+      },
+      "unique_slice_rank": 21,
+      "y_row_equals_g": true
+    }
+  },
+  "realizations": {
+    "A": {
+      "all_block_columns_singular": true,
+      "centered_gram_rank": 11,
+      "centered_gram_square_zero": true,
+      "column_span_rank": 11,
+      "distinct_projective_direction_count": 19,
+      "fixed_y_slices": [
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 0,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        },
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 1,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        },
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 2,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        }
+      ],
+      "global_column_frame_zero": true,
+      "projective_direction_multiplicity_distribution": {
+        "12": 12,
+        "21": 2,
+        "9": 5
+      },
+      "star_projector_coupling": true,
+      "sum_projectors_zero": true,
+      "type_indices": [
+        0,
+        2,
+        9
+      ]
+    },
+    "B": {
+      "all_block_columns_singular": true,
+      "centered_gram_rank": 11,
+      "centered_gram_square_zero": true,
+      "column_span_rank": 11,
+      "distinct_projective_direction_count": 19,
+      "fixed_y_slices": [
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 0,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        },
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 1,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        },
+        {
+          "diagonal_equals_H": true,
+          "middle_component": 2,
+          "rank_over_F3": 3,
+          "row_sums_zero": true,
+          "y_row_equals_g": true
+        }
+      ],
+      "global_column_frame_zero": true,
+      "projective_direction_multiplicity_distribution": {
+        "12": 12,
+        "21": 2,
+        "9": 5
+      },
+      "star_projector_coupling": true,
+      "sum_projectors_zero": true,
+      "type_indices": [
+        0,
+        2,
+        15
+      ]
+    }
+  },
+  "released_package": "attempts/wave206-three-center-hostile-controls",
+  "source_ledger": {
+    "all_required_entries_present": true,
+    "bounded_non_discovery_remains_UNKNOWN": true,
+    "complex_design_angle_annihilator_scope_retained": true,
+    "finite_frame_spanning_scope_retained": true,
+    "ledger_entry_count": 7,
+    "manual_primary_source_check": {
+      "arXiv:0806.2317v1": "Theorem 10.5 assumes a (2t-2)-design, exactly t inner products, and annihilators; its t=2 example still assumes a 2-design.",
+      "arXiv:0903.5169v1": "Definition 2.7 and Lemma 2.8 start from a symmetric association scheme; Corollary 3.1 concerns tight spherical 4-designs.",
+      "arXiv:1201.1798v2": "Section 5 is real Grassmannian harmonic analysis with positive weights; Theorem 5.3, Definition 5.5, Theorem 5.7, and Remark 5.8 do not transfer to the F_3 zero-sum frame.",
+      "arXiv:2012.12977v2": "Proposition 3.5 and Remark 3.7 retain the frame/spanning hypothesis, especially at c=0.",
+      "arXiv:2110.07109v2": "The definition uses a finite connected simple graph, its adjacency matrix, and basepoint distance idempotents.",
+      "doi:10.2206/kyushujm.48.323": "The cited paper studies the subconstituent algebra of an actual strongly regular graph."
+    },
+    "real_positive_fusion_frame_scope_retained": true,
+    "terwilliger_actual_graph_basepoint_scope_retained": true,
+    "triple_regularity_extra_hypotheses_retained": true
+  },
+  "status": {
+    "Conway-99": "UNKNOWN",
+    "Q>=7060": "NOT PROVED",
+    "actual nonedge h": "UNKNOWN",
+    "automorphism assumption": "NONE",
+    "n3=4158 endpoint": "UNKNOWN",
+    "rank-11 endpoint": "UNKNOWN"
+  }
+}

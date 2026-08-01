@@ -1,0 +1,17 @@
+command:
+.\.venv\Scripts\python.exe -B -m unittest -v attempts\wave206-crossing-kernel-proof-b\test_exact_check.py
+
+result:
+Ran 14 tests in 19.239s
+OK
+
+covered:
+- frozen input hashes
+- 21 star coordinates and J_star determinant
+- characteristic-three trace-zero radical
+- restricted-span Gram-kernel hostile control
+- exact crossing and Gamma replay
+- forced common true kernel and nonconstant pullback
+- short Veronese support audit
+- 99-projector slice/global-rank hostile control
+- status-inflation rejection

@@ -1,0 +1,226 @@
+{
+  "aggregate_line_type_witnesses": {
+    "weight14": {
+      "k": 7,
+      "types": {
+        "000": 154,
+        "N00": 29,
+        "NN0": 8,
+        "NNN": 1,
+        "P00": 29,
+        "PN0": 1,
+        "PNN": 0,
+        "PP0": 8,
+        "PPN": 0,
+        "PPP": 1
+      },
+      "x": 1
+    },
+    "weight20": {
+      "k": 10,
+      "types": {
+        "000": 128,
+        "N00": 34,
+        "NN0": 12,
+        "NNN": 2,
+        "P00": 37,
+        "PN0": 6,
+        "PNN": 0,
+        "PP0": 9,
+        "PPN": 0,
+        "PPP": 3
+      },
+      "x": 6
+    }
+  },
+  "claim_label": "DERIVED",
+  "general_identities": {
+    "cross_edges": "x=e(P,N)",
+    "line_occupancy": "R2=2x+3k-3R3; R1=8k-4x+3R3; R0=231-11k+2x-R3",
+    "line_trade": "t=B^T c, C t=7t, B t=10c, ||t||^2=20k",
+    "outside_first_moment": "sum t z_t = 11k-2x",
+    "outside_second_moment": "sum t^2 z_t = 2k^2-7x-sum j_v^2",
+    "outside_vertex_signatures": "Z: (t,t)",
+    "positive_and_negative_sizes": "|P|=|N|=k",
+    "same_sign_edges_each_side": "(x+3k)/2",
+    "spectral_support_bound": "x <= k^2/9",
+    "support_vertex_signatures": "P: (j+3,j), N: (j,j+3)"
+  },
+  "global_status": "UNKNOWN",
+  "hostile_positive_controls": [
+    {
+      "induced_lambda_mu_caps": true,
+      "internal_Ac_equals_3c": true,
+      "name": "weight20_two_intersections",
+      "negative_opposite_degrees": [0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+      "positive_opposite_degrees": [0, 0, 0, 0, 0, 1, 1, 1, 1, 2],
+      "selected_intersection_degrees": [2, 0, 0, 0, 0, 1, 1, 0],
+      "support": 20,
+      "vertices": 22,
+      "x": 6
+    },
+    {
+      "induced_lambda_mu_caps": true,
+      "internal_Ac_equals_3c": true,
+      "name": "weight14_five_intersections",
+      "negative_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+      "positive_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+      "selected_intersection_degrees": [3, 1, 1, 0, 0, 2, 2, 1],
+      "support": 14,
+      "vertices": 19,
+      "x": 1
+    }
+  ],
+  "inputs": {
+    "attempts/wave208-marked-m7g-proof-b/exact-results.json": "e8030f62781b2badf85bb46a266c1d71b651f7e8517dd6aec4a2e453c14e01af",
+    "attempts/wave208-marked-m7g-proof-b/local-controls.json": "4fc0e87b03d824f640234cdc93441bd3286a2902f331fc5d75c9726f66c076cd",
+    "attempts/wave208-marked-m7g-proof-b/package-manifest.sha256": "f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc",
+    "attempts/wave209-four-survivor-globalization/protocol.md": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196"
+  },
+  "limitations": [
+    "the weight-14 reduction stops at 204 labelled selected-intersection graphs and 4480 capacity-compatible outside deficit bijections for each fixed rooted support labelling",
+    "the 352 weight-20 rows are aggregate necessary profiles, not graph realizations",
+    "the line-type witnesses do not assign 231 actual lines or satisfy their pairwise intersections",
+    "the imported 19- and 22-vertex controls are induced controls, not 99-vertex completions",
+    "no target automorphism, 99-vertex adjacency matrix, endpoint exclusion, or counterexample is supplied"
+  ],
+  "raw_aggregate_catalog_sha256": "102d23b4d1fde73595864ad5f7f4dace380938cec59e55fa647daa8bfe783a81",
+  "raw_catalogs": {
+    "weight14": {
+      "aggregate_rows": 5,
+      "degree_profile_pairs_with_rows_by_x": {"1": 1, "3": 1},
+      "rows_by_x": {"1": 4, "3": 1}
+    },
+    "weight20": {
+      "aggregate_rows": 425,
+      "degree_profile_pairs_with_rows_by_x": {"0": 1, "2": 3, "4": 15, "6": 25, "8": 6},
+      "rows_by_x": {"0": 73, "2": 109, "4": 157, "6": 76, "8": 10}
+    }
+  },
+  "selected_line_row_identity": {
+    "identity": "(U^T A U-3U^T U) alpha=0",
+    "rows": [
+      {"line": 0, "matched_opposite_line": 4, "row_equation": "-matched_cross_count=0"},
+      {"line": 1, "matched_opposite_line": 5, "row_equation": "-matched_cross_count=0"},
+      {"line": 2, "matched_opposite_line": 6, "row_equation": "-matched_cross_count=0"},
+      {"line": 3, "matched_opposite_line": 7, "row_equation": "-matched_cross_count=0"},
+      {"line": 4, "matched_opposite_line": 0, "row_equation": "-matched_cross_count=0"},
+      {"line": 5, "matched_opposite_line": 1, "row_equation": "-matched_cross_count=0"},
+      {"line": 6, "matched_opposite_line": 2, "row_equation": "-matched_cross_count=0"},
+      {"line": 7, "matched_opposite_line": 3, "row_equation": "-matched_cross_count=0"}
+    ],
+    "all_four_matched_q0_cross_counts": [0, 0, 0, 0]
+  },
+  "weight14_final_reduction": {
+    "cross_deficit_bijections": {
+      "all_bijections": 5040,
+      "capacity_compatible_bijections": 4480,
+      "residual_value_profile_counts": {
+        "zeros_1_ones_35_twos_13": 32,
+        "zeros_2_ones_33_twos_14": 96,
+        "zeros_3_ones_31_twos_15": 656,
+        "zeros_4_ones_29_twos_16": 1268,
+        "zeros_5_ones_27_twos_17": 1328,
+        "zeros_6_ones_25_twos_18": 872,
+        "zeros_7_ones_23_twos_19": 192,
+        "zeros_8_ones_21_twos_20": 36
+      },
+      "t1_incidence_degrees_each_side": [9, 9, 9, 9, 9, 8, 8]
+    },
+    "deficit_edges": [[1, 4], [1, 5], [2, 3], [2, 6], [3, 5], [4, 6], [5, 6]],
+    "forced_outside_signatures_z0_to_z7": [17, 61, 7, 0, 0, 0, 0, 0],
+    "forced_x": 1,
+    "labelled_selected_intersection_census": {
+      "all_labelled_five_edge_subsets": 792,
+      "degree_type_counts": {
+        "P_2,2,1,0__N_2,2,1,0": 120,
+        "P_2,2,1,0__N_3,1,1,0": 36,
+        "P_3,1,1,0__N_2,2,1,0": 36,
+        "P_3,1,1,0__N_3,1,1,0": 12
+      },
+      "labelled_subsets_after_marked_line_and_root_cross_edge_tests": 204
+    },
+    "line_graph_norms_by_degree_square_sum": {
+      "18": {"line_vector_squared_norm": 140, "point_support": 14, "selected_line_squared_norm": 30, "unselected_line_squared_norm": 110},
+      "20": {"line_vector_squared_norm": 140, "point_support": 14, "selected_line_squared_norm": 32, "unselected_line_squared_norm": 108},
+      "22": {"line_vector_squared_norm": 140, "point_support": 14, "selected_line_squared_norm": 34, "unselected_line_squared_norm": 106}
+    },
+    "marked_line_census": {
+      "all_support_triangles_contain_cross_root": true,
+      "allowed_intersection_degree_multisets": [[3, 1, 1, 0], [2, 2, 1, 0]],
+      "external_third_edge_matching_number": 2,
+      "external_third_edges": [[1, 5], [2, 6], [3, 5], [4, 6], [5, 6]],
+      "representative_ordered_packing_counts": {"2,1,1,1": 0, "2,2,1,0": 12, "3,1,1,0": 4, "3,2,0,0": 0},
+      "support_triangles": [[0, 1, 2], [0, 3, 4]]
+    },
+    "raw_rows": [
+      {
+        "negative_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "outside_signatures_z0_to_z7": [17, 61, 7, 0, 0, 0, 0, 0],
+        "positive_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "x": 1
+      },
+      {
+        "negative_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "outside_signatures_z0_to_z7": [16, 64, 4, 1, 0, 0, 0, 0],
+        "positive_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "x": 1
+      },
+      {
+        "negative_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "outside_signatures_z0_to_z7": [15, 67, 1, 2, 0, 0, 0, 0],
+        "positive_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "x": 1
+      },
+      {
+        "negative_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "outside_signatures_z0_to_z7": [14, 69, 1, 0, 1, 0, 0, 0],
+        "positive_opposite_degrees": [0, 0, 0, 0, 0, 0, 1],
+        "x": 1
+      },
+      {
+        "negative_opposite_degrees": [0, 0, 0, 0, 1, 1, 1],
+        "outside_signatures_z0_to_z7": [14, 71, 0, 0, 0, 0, 0, 0],
+        "positive_opposite_degrees": [0, 0, 0, 0, 1, 1, 1],
+        "x": 3
+      }
+    ],
+    "rooted_support_census": {
+      "canonical_edges": [[0, 1], [0, 2], [0, 3], [0, 4], [1, 2], [1, 5], [2, 6], [3, 4], [3, 5], [4, 6], [5, 6]],
+      "degree_sequence_graphs": 810,
+      "lambda_cap_graphs": 360,
+      "lambda_cap_rooted_types": 2,
+      "lambda_mu_cap_graphs": 180,
+      "lambda_mu_cap_rooted_types": 1,
+      "rejected_type_max_internal_common_neighbors_on_a_nonedge": 3
+    },
+    "x3_intersection_obstruction": {
+      "labelled_five_edge_subsets_checked": 792,
+      "subsets_compatible_with_all_intersection_signatures_t_le_1": 0,
+      "x3_eliminated": true
+    }
+  },
+  "weight20_reduction": {
+    "aggregate_rows_after_x0_and_x10_exclusions": 352,
+    "line_graph_norms": {
+      "disjoint": {"line_vector_squared_norm": 200, "point_support": 20, "selected_line_squared_norm": 52, "unselected_line_squared_norm": 148},
+      "shared_endpoint": {"line_vector_squared_norm": 200, "point_support": 20, "selected_line_squared_norm": 54, "unselected_line_squared_norm": 146}
+    },
+    "remaining_rows_by_x": {"2": 109, "4": 157, "6": 76, "8": 10},
+    "selected_pair_zero_capacity": {
+      "after_even_parity_and_global_moments": {
+        "other_disjoint_36_subsets": [4, 6, 8],
+        "shared_endpoint_24_subsets": [6, 8],
+        "swapped_disjoint_6_subsets": [2, 4, 6, 8]
+      },
+      "all_labelled_two_edge_subsets": 66,
+      "exact_relaxation_counts_by_kind_and_raw_x_lower_bound": {
+        "other_disjoint_xmin_3": 24,
+        "other_disjoint_xmin_4": 12,
+        "shared_endpoint_xmin_5": 24,
+        "swapped_disjoint_xmin_2": 6
+      },
+      "maximum_dynamic_states": 256
+    }
+  }
+}

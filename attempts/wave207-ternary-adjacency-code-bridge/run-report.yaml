@@ -1,0 +1,50 @@
+role: proof_a
+date_utc: 2026-08-01T01:39:53Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional on a hypothetical srg(99,14,1,2), audit the point image of a
+  weight-eight 4+4 A_Delta word and derive a parameter-only lower bound for
+  the ternary code ker_F3(A), without a graph search.
+inputs:
+  - path: CONJECTURE.md
+    sha256: 7b4e67a28dbae58dffbf8f06a5fcb0241b12c34807dcb145ef2ff5c70d4c1c58
+  - path: attempts/wave176-star-projector-circuits/derivation.md
+    sha256: b5ba53c9d93d3c8169f7d7bbf179c3d355b01df36f3feb9fec797c7274a568c8
+  - path: attempts/wave206-crossing-kernel-proof-b/derivation.md
+    sha256: 9bdc0a296f704a5bd73ffa3a726694b74454b011dac486da9afa599f868aab13
+  - path: attempts/wave206-tensor-balance-weight-proof-b/derivation.md
+    sha256: 7d13a1834819e952c4d4eff033fac033e23699ab643d9852318a67d19bcb6cf2
+method: >-
+  Exact F_3 adjacency algebra; signed positive/negative neighbor counts;
+  common-neighbor first and second moments; a pointwise inequality through
+  weight ten; an exact rational Farkas certificate at weight eleven; and an
+  aggregate weight-fourteen hostile control with an explicit nongraphical
+  failure.
+command: >-
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts/wave207-ternary-adjacency-code-bridge/test_exact_check.py;
+  .\.venv\Scripts\python.exe -B
+  attempts/wave207-ternary-adjacency-code-bridge/exact_check.py --verify
+  attempts/wave207-ternary-adjacency-code-bridge/exact-results.json
+outputs:
+  - path: attempts/wave207-ternary-adjacency-code-bridge/protocol.md
+    sha256: 5c01e96dcc1c785b0ded9a3090323b630e04cb80675e3c84adb74890a0b8fce4
+  - path: attempts/wave207-ternary-adjacency-code-bridge/derivation.md
+    sha256: 27860e2f8b5ce23c37a43a1ef53fb31d7eda1ee67926e04406ccbf0d938e40b5
+  - path: attempts/wave207-ternary-adjacency-code-bridge/exact_check.py
+    sha256: 0b6598ff982b02b393a5238459f1b5447e5db1eed5ba9a5d5bfe5fcad5f57dd9
+  - path: attempts/wave207-ternary-adjacency-code-bridge/test_exact_check.py
+    sha256: 238e34200470994fdf40aaa01944d316d68f8eac59484660680f693a0305823b
+  - path: attempts/wave207-ternary-adjacency-code-bridge/exact-results.json
+    sha256: 94ed011861be9cf201ac5c531a704832cf8675c5b993c420e92a2e5812f8e7d8
+  - path: attempts/wave207-ternary-adjacency-code-bridge/formal-control.json
+    sha256: 97ef89ff784dd1a42b0c4608bb22c7b6babe4b9b657872bf411e52f1c20c455e
+  - path: attempts/wave207-ternary-adjacency-code-bridge/failed-routes.md
+    sha256: e880d38418876934e66c0f1fb35b14128f9a58f5f35fd2c93222ce4383837eab
+limitations:
+  - The result proves d(ker_F3 A)>=12, not the desired lower bound 24.
+  - The weight-eight endpoint point image is narrowed only to 14, 17, 20, or 23.
+  - The weight-fourteen aggregate control is deliberately nongraphical and is neither a graph nor a codeword.
+  - No endpoint exclusion, graph construction, strict n3 bound, or Conway-99 resolution follows.
+  - Ruff was unavailable in the repository virtual environment; exact replay and 10 unit tests passed.

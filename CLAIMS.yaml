@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-28
+as_of: 2026-07-31
 project_primary_status: EXPLORATORY
 resolution_candidates: []
 claims:
@@ -2969,3 +2969,292 @@ claims:
       - "verification/2026-07-29-wave205-orchestrator.md"
       - "logs/2026-07-29-wave205-public-checkpoint.json"
     limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. Novelty and priority remain UNKNOWN."
+
+  - id: C-WAVE206-FIXED-MIDDLE-001
+    statement: "Conditional on the prism-free rank-11 endpoint, every fixed-middle three-center trace matrix Tau^(y) is a symmetric zero-row-sum trace Gram of rank at most 21, and its star compression has an exact nondegenerate 21-coordinate trace metric J_star=C^T C+2I with determinant two over F3."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_FIXED_MIDDLE_PROJECTOR_TENSOR
+    evidence:
+      - "attempts/wave206-three-center-proof-a/derivation.md"
+      - "attempts/wave206-crossing-kernel-proof-b/derivation.md"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+      - "verification/wave206-three-center-global-extension-verifier/package-manifest.sha256"
+    limitations: "A restricted trace-Gram null vector need not be a true operator relation. The rank-21 bound is sharp in relaxed projector controls and does not classify the target Tau entries."
+
+  - id: C-WAVE206-FIBRE-001
+    statement: "For a fixed endpoint vertex, its 84 nonneighbors split into 21 exact four-point fibres indexed by pairs of star triangles, and prism-freeness restricts each fibre graph to a subgraph of the two-edge opposite-corner matching."
+    label: VERIFIED
+    scope: CONDITIONAL_PRISM_FREE_ENDPOINT_ROOT_GEOMETRY
+    evidence:
+      - "attempts/wave206-three-center-proof-a/derivation.md"
+      - "attempts/wave206-three-center-proof-a/exact-results.json"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_a_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "The root-relative modules do not impose the x-z pair module, a shared 231-column realization, t>=8 modules, or a full endpoint completion."
+
+  - id: C-WAVE206-TENSOR-BALANCE-001
+    statement: "Conditional on the prism-free rank-11 endpoint, A_Delta=im(B^T) intersect ker(a -> D diag(a) D) has dimension at least one, contains no nonzero constant word, and every nonzero word has equal coefficient-class tensor sums R0=R1=R2 and pulls back to a true relation in every ker(Tau^(y)) and ker(Gamma)."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_GLOBAL_TENSOR_BALANCE_CODE
+    evidence:
+      - "attempts/wave206-crossing-kernel-proof-b/derivation.md"
+      - "attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_b_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "Equality of the three tensor sums is not equality of class sizes. The result proves a necessary relation exists, not that any listed candidate word is endpoint-compatible."
+
+  - id: C-WAVE206-TENSOR-WEIGHT-001
+    statement: "Every nonzero word in the conditional endpoint code A_Delta has weight at least eight; if equality holds, the eight supported columns span dimension four and the number of coefficient-two entries is even."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_TENSOR_BALANCE_SUPPORT
+    evidence:
+      - "attempts/wave206-tensor-balance-weight-proof-b/derivation.md"
+      - "attempts/wave206-tensor-balance-weight-proof-b/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_proof_b_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "A relaxed eight-column control proves the local ingredients cannot force weight at least nine. It is not a 231-column incidence object, graph, word in im(B^T), or target construction."
+
+  - id: C-WAVE206-TAU-UNDERDETERMINATION-001
+    statement: "The complete labelled pair-trace matrix, complete labelled fourth-trace matrix, shared linear 99-by-231 incidence, rank-11 square-zero centered Gram, exact star-projector coupling, and zero global frame determine the complete labelled three-center tensor tau."
+    label: REFUTED
+    scope: RELAXED_SHARED_INCIDENCE_PROJECTOR_IMPLICATION
+    evidence:
+      - "attempts/wave206-three-center-hostile-controls/exact-results.json"
+      - "attempts/wave206-three-center-hostile-controls/package-manifest.sha256"
+      - "verification/wave206-three-center-global-extension-verifier/post_source_hostile_result.json"
+      - "verification/wave206-three-center-global-extension-verifier/audit.md"
+    limitations: "The two exact controls are disconnected, fail lambda=1 and mu=2, contain extra triangles, and repeat projective directions. They refute only the stated relaxed implication and are not target counterexamples."
+
+  - id: C-WAVE206-TARGET-001
+    statement: "Wave206 does not classify actual endpoint nonedge fourth traces or decide the rank-11 endpoint, n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/2026-07-29-wave206-integration-audit.md"
+      - "verification/2026-07-29-wave206-orchestrator.md"
+      - "logs/2026-07-29-wave206-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, and Q>=7060 is not proved. A target A_Delta word, novelty, and priority remain UNKNOWN."
+
+  - id: C-WAVE207-M7G-001
+    statement: "Conditional on a weight-eight word in the prism-free rank-11 endpoint code A_Delta, incidence membership forces Da=Za=0; the support is the unique projective M7g orbit, the coefficient composition is 4+4, and the canonical linear relation code has enumerator 1+24y^4+16y^5+32y^6+8y^8."
+    label: VERIFIED
+    scope: CONDITIONAL_ENDPOINT_WEIGHT_EIGHT_CLASSIFICATION
+    evidence:
+      - "attempts/wave207-incidence-tensor-code-proof-a/derivation.md"
+      - "attempts/wave207-incidence-tensor-code-proof-a/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "The projective M7g orbit is unique, but the labelled representative has four valid concurrent-secant decompositions. No weight-eight A_Delta word or 231-column endpoint is constructed."
+
+  - id: C-WAVE207-POINT-CODE-001
+    statement: "For any hypothetical srg(99,14,1,2), the ternary code ker_F3(A) has minimum distance at least twelve. A hypothetical weight-eight endpoint A_Delta word maps to a nonzero b=Ba in that code with b.b=2 and weight in {14,17,20,23}."
+    label: VERIFIED
+    scope: PARAMETER_ONLY_TERNARY_CODE_AND_CONDITIONAL_ENDPOINT_BRIDGE
+    evidence:
+      - "attempts/wave207-ternary-adjacency-code-bridge/derivation.md"
+      - "attempts/wave207-ternary-adjacency-code-bridge/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "The theorem proves d>=12, not d>=24. It excludes none of the four endpoint-image weights and supplies no graph or codeword."
+
+  - id: C-WAVE207-WEIGHT14-COMPOSITION-001
+    statement: "Every weight-fourteen word in ker_F3(A), if one exists, has exactly seven positive and seven negative coordinates; exact pointwise Farkas certificates exclude the other four sign compositions."
+    label: VERIFIED
+    scope: PARAMETER_ONLY_TERNARY_KERNEL_WEIGHT_FOURTEEN_COMPOSITION
+    evidence:
+      - "attempts/wave207-kernel-endpoint-proof-c/derivation.md"
+      - "attempts/wave207-kernel-endpoint-proof-c/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "The balanced 7+7 case remains UNKNOWN. The aggregate control is deliberately nongraphical and is neither an SRG nor a codeword; weights 17, 20, and 23 are untouched."
+
+  - id: C-WAVE207-POLAR-INCIDENCE-001
+    statement: "The incidence norm of a hypothetical M7g endpoint word excludes exactly four of the 27 normalized restricted polar forms: the rank-zero K8 form and the three rank-two 2K4 forms having no off-diagonal product one."
+    label: VERIFIED
+    scope: CONDITIONAL_MARKED_M7G_INCIDENCE_EXCLUSION
+    evidence:
+      - "attempts/wave207-m7g-incidence-bridge/derivation.md"
+      - "attempts/wave207-m7g-incidence-bridge/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "Twenty-three normalized forms remain. Product one is ambiguous between triangle intersection and one cross edge, so the whole rank-two type is not excluded."
+
+  - id: C-WAVE207-LOCAL-SURVIVOR-001
+    statement: "A frozen rank-four 2C4 certificate realizes the selected-pair product table on a 23-vertex induced union, satisfies A_U b_U=0, the local lambda/mu caps, and local prism-freeness, and gives zero cross-realizations for all twelve weight-four and eight weight-five internal projective circuits."
+    label: VERIFIED
+    scope: RESTRICTED_INDUCED_LOCAL_NECESSARY_CONDITION_CONTROL
+    evidence:
+      - "attempts/wave207-m7g-incidence-bridge/local-rank4-certificate.json"
+      - "attempts/wave207-m7g-incidence-bridge/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "The control checks only 23 induced code coordinates. It omits 76 outside Ab equations, outside degree/common-neighbor completion, 223 triangle blocks, and the full rank-eleven frame; it is not a target graph."
+
+  - id: C-WAVE207-LINEAR-MIXED-BOUNDARY-001
+    statement: "The mixed four-center synthesis obeys the stated Gram-radical exact sequence and transition-rank formula d(d+1)/2, but every sandwich or mixed-trace feature linear in P_y P_x P_y annihilates a true projector relation functorially."
+    label: VERIFIED
+    scope: ABSTRACT_FINITE_FIELD_THEOREM_AND_CONDITIONAL_METHOD_BOUNDARY
+    evidence:
+      - "attempts/wave207-mixed-four-center-proof-b/derivation.md"
+      - "attempts/wave207-mixed-four-center-proof-b/package-manifest.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    limitations: "The four-center rank-66 and 25-coordinate objects are abstract sharpness controls, not endpoint data. Nonlinear or graph-typed features remain possible."
+
+  - id: C-WAVE207-TARGET-001
+    statement: "Wave207 does not decide the rank-11 endpoint, the n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+      - "verification/2026-07-31-wave207-integration-audit.md"
+      - "verification/2026-07-31-wave207-orchestrator.md"
+      - "logs/2026-07-31-wave207-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, Q>=7060 is not proved, 23 polar forms survive, and the point-code weights 14, 17, 20, and 23 are not excluded."
+
+  - id: C-WAVE208-M7G-NORM-001
+    statement: "Conditional on a hypothetical weight-eight word in the prism-free rank-11 endpoint code, the signed canonical M7g polar sum satisfies S_D=3 modulo 9. Equivalently, the exact 27-form census excludes 23 forms and leaves precisely three rank-four 2C4 forms and one rank-three 4K2 form."
+    label: VERIFIED
+    scope: CONDITIONAL_MARKED_M7G_NORM_DIVISIBILITY
+    evidence:
+      - "attempts/wave208-m7g-norm-divisibility/derivation.md"
+      - "attempts/wave208-m7g-norm-divisibility/package-manifest.sha256"
+      - "attempts/wave208-marked-m7g-proof-b/derivation.md"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/wave208-global-residual-verifier/package-manifest.sha256"
+    limitations: "The theorem is conditional on a weight-eight endpoint word. All four forms survive; the congruence supplies neither an intersection graph nor a 99-vertex completion."
+
+  - id: C-WAVE208-MARKED-SURVIVORS-001
+    statement: "For each of the three surviving rank-four forms, exactly 83 labelled selected-intersection subsets pass the frozen marked restrictions and the divided residual is an integer -4 eigenvector of squared norm 56. In the rank-three form, the exact marked restrictions leave 66 candidate subsets of point weight 20 and 792 candidate subsets of point weight 14; conditional on an actual global marked realization, the corresponding point image satisfies A*b=3*b."
+    label: VERIFIED
+    scope: CONDITIONAL_COMPLETE_MARKED_SUBSET_CENSUS
+    evidence:
+      - "attempts/wave208-marked-m7g-proof-b/exact-results.json"
+      - "attempts/wave208-marked-m7g-proof-b/package-manifest.sha256"
+      - "verification/wave208-global-residual-verifier/proof-b-independent-results.json"
+      - "verification/wave208-global-residual-verifier/proof-b-delta-audit.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+    limitations: "The counts classify labelled marked subsets only. The rank-four residuals, rank-three weight-14/20 words, all outside equations, binary completion, and the full 231-column frame remain UNKNOWN."
+
+  - id: C-WAVE208-INTEGER-LIFT-001
+    statement: "For any signed integer lift x of a nonzero word in ker_F3(A), with z=Ax/3 and p-n=3t, the integer vectors Q=9(z-x)-t1 and R=11(4x+3z)-6t1 satisfy AQ=-4Q and AR=3R, the archived exact norm formulas, and Q^2=99t(9-t)+162L for a nonnegative integer L."
+    label: VERIFIED
+    scope: PARAMETER_ONLY_TERNARY_KERNEL_INTEGRAL_SPECTRAL_SPLIT
+    evidence:
+      - "attempts/wave208-integer-lift-proof-a/derivation.md"
+      - "attempts/wave208-integer-lift-proof-a/package-manifest.sha256"
+      - "verification/wave208-global-residual-verifier/proof-a-independent-results.json"
+      - "verification/wave208-global-residual-verifier/proof-a-delta-audit.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+    limitations: "The residue tables are necessary arithmetic conditions. They eliminate no sign composition or residual weight at 17, 20, or 23 and construct no codeword."
+
+  - id: C-WAVE208-WEIGHT14-REDUCTION-001
+    statement: "For a balanced weight-fourteen ternary kernel word, q=z-x is an integer -4 eigenvector with q^2 in {0,14,28,42,56,70}. The q=0 shell reduces to one cross edge and sign-side degree sequence (4,3,3,3,3,3,3). In the q^2=14 shell, complementary-Fano capacity plus the alpha-one cross-side coupling force same-sign overlap zero, opposite-sign overlap six, a 22-point union, and k in {2,3,4}."
+    label: VERIFIED
+    scope: PARAMETER_ONLY_BALANCED_WEIGHT_FOURTEEN_STRUCTURAL_REDUCTION
+    evidence:
+      - "attempts/wave208-integer-lift-proof-a/derivation.md"
+      - "attempts/wave208-integer-lift-proof-a/exact-results.json"
+      - "attempts/wave208-integer-lift-proof-a/package-manifest.sha256"
+      - "verification/wave208-global-residual-verifier/proof-a-independent-results.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+    limitations: "Neither named shell is excluded; the other four positive q^2 shells also remain. The 22-vertex control is partial and omits 77 outside equations."
+
+  - id: C-WAVE208-LOCAL-TO-GLOBAL-001
+    statement: "The displayed Wave208 local equations and lambda/mu upper caps imply the omitted outside code equations or an SRG completion."
+    label: REFUTED
+    scope: LOCAL_CONTROL_TO_OUTSIDE_COMPLETION_IMPLICATION
+    evidence:
+      - "verification/wave208-global-residual-verifier/proof-b-delta-audit.json"
+      - "verification/wave208-global-residual-verifier/proof-a-delta-audit.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+    limitations: "The verifier adds one zero-coordinate outside vertex while preserving the internal equations and upper caps but producing a nonzero omitted-row residual. These are countercontrols to the implication, not target graphs."
+
+  - id: C-WAVE208-TARGET-001
+    statement: "Wave208 does not decide the rank-11 endpoint, the n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/2026-07-31-wave208-integration-audit.md"
+      - "verification/2026-07-31-wave208-orchestrator.md"
+      - "logs/2026-07-31-wave208-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158, the conditional circuit bound remains Q>=7059, Q>=7060 and d>=24 are not proved, four marked forms survive, and no residual point-code weight is excluded."
+
+  - id: C-WAVE209-RANK3-WEIGHT14-001
+    statement: "Conditional on the Wave208 rank-three 4K2 survivor having point support 14, the selected-line equations force e(P,N)=1. Each sign side has the unique rooted seven-vertex graph with edges 01,02,03,04,12,15,26,34,35,46,56; the outside signature is (z0,z1,z2)=(17,61,7); 4480 of 5040 deficit bijections and 204 of 792 labelled marked five-intersection graphs remain."
+    label: VERIFIED
+    scope: CONDITIONAL_COMPLETE_LABELLED_RANK3_WEIGHT14_REDUCTION
+    evidence:
+      - "attempts/wave209-rank3-trade-proof-a/package-manifest.sha256"
+      - "verification/wave209-four-survivor-verifier/exact-results.json"
+      - "verification/wave209-four-survivor-verifier/post-source-audit.json"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/wave209-four-survivor-verifier/package-manifest.sha256"
+    limitations: "The 204 marked graphs and 4480 deficit bijections are separate necessary objects. They do not specify the 85-vertex outside graph, all 99 adjacency rows, or a 231-line incidence realization, and none is claimed completable."
+
+  - id: C-WAVE209-RANK3-WEIGHT20-001
+    statement: "Conditional on the Wave208 rank-three 4K2 survivor having point support 20, the exact selected-zero bounds exclude x=0, restrict x=2 to six swapped-disjoint labelled marked pairs, and retain the stated marked domains at x=4,6,8; an independent complete aggregate census has 109+157+76+10=352 rows at x=2,4,6,8, while x=10 is impossible."
+    label: VERIFIED
+    scope: CONDITIONAL_SELECTED_LINE_BOUNDS_AND_AGGREGATE_MOMENT_CATALOG
+    evidence:
+      - "attempts/wave209-rank3-trade-proof-a/package-manifest.sha256"
+      - "verification/wave209-four-survivor-verifier/exact-results.json"
+      - "verification/wave209-four-survivor-verifier/post-source-audit.json"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+    limitations: "The 352 rows contain degree histograms, bipartite graphicality, and outside first/two-star moments only. They are not selected-line completions, adjacency graphs, or codewords."
+
+  - id: C-WAVE209-RANK3-WEIGHT20-CAP-001
+    statement: "Combining the verified matched-product-zero selected-line equation with the 352-row aggregate table forces every support point to have opposite degree at most three. Exactly six x=4 degree-four-star rows fail, leaving 346 rows under this added necessary cap."
+    label: DERIVED
+    scope: CONDITIONAL_POST_AGGREGATE_SELECTED_LINE_DEGREE_CAP
+    evidence:
+      - "verification/wave209-four-survivor-verifier/post-source-audit.json"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/2026-07-31-wave209-integration-audit.md"
+    limitations: "This narrowing was discovered by the verifier and has not yet received a separate independent promotion. The 346 survivors are still aggregate profiles, not graphs."
+
+  - id: C-WAVE209-RANK4-SPECTRAL-001
+    statement: "For every Wave208 rank-four survivor, t=B^Tq lies in the zero eigenspace of the triangle-intersection graph with squared norm 168 and marked entries -3alpha. The marked projector interpolation bound is exactly 168, and q is not even because U^T(q mod 2)=1_8."
+    label: VERIFIED
+    scope: CONDITIONAL_RANK4_PROJECTOR_SATURATION_AND_PARITY
+    evidence:
+      - "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256"
+      - "verification/wave209-rank4-point-signature-verifier/audit.md"
+      - "verification/wave209-rank4-point-signature-verifier/package-manifest.sha256"
+    limitations: "Projector saturation determines the real interpolant but does not prove its integral signatures are realized by 231 actual triangles. Non-even q blocks only the invalid division to the norm-14 shell."
+
+  - id: C-WAVE209-RANK4-FARKAS-001
+    statement: "The 249 labelled rank-four marked branches form 24 proved constraint-relabeling orbits. Exact 99-point signature equations and integer Farkas certificates exclude 17 orbits, hence 198 labelled branches, and leave seven orbits or 51 labelled census controls, exactly 17 survivors in each of the three rank-four forms."
+    label: VERIFIED
+    scope: CONDITIONAL_COMPLETE_POINT_SIGNATURE_CENSUS_AND_EXACT_FARKAS_EXCLUSION
+    evidence:
+      - "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256"
+      - "verification/wave209-rank4-point-signature-verifier/independent-results.json"
+      - "verification/wave209-rank4-point-signature-verifier/audit.md"
+      - "verification/wave209-rank4-point-signature-verifier/package-manifest.sha256"
+    limitations: "The 51 controls are anonymous 99-row signature counts satisfying 279 equations. They do not identify points, residual triangles, adjacency, all Ct=0 rows, or the 99 point-star K7 cliques. All three forms survive."
+
+  - id: C-WAVE209-ANONYMOUS-CENSUS-COMPLETION-001
+    statement: "A Wave209 marked, point-signature, line-signature, or aggregate census satisfying its archived equations necessarily supplies the omitted outside adjacency and a 99-vertex SRG completion."
+    label: REFUTED
+    scope: ANONYMOUS_CENSUS_TO_GRAPH_COMPLETION_IMPLICATION
+    evidence:
+      - "attempts/wave209-rank3-trade-proof-a/failed-routes.md"
+      - "attempts/wave209-rank4-norm56-proof-b/failed-routes.md"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/wave209-rank4-point-signature-verifier/audit.md"
+      - "verification/2026-07-31-wave209-integration-audit.md"
+    limitations: "The refutation is of the implication and scope promotion. It is not a target counterexample and does not show that any surviving census fails completion."
+
+  - id: C-WAVE209-TARGET-001
+    statement: "Wave209 does not decide the rank-11 endpoint, the n3=4158 endpoint, or existence or nonexistence of srg(99,14,1,2)."
+    label: UNKNOWN
+    scope: ENDPOINT_AND_TARGET_COMPLETION
+    evidence:
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/wave209-rank4-point-signature-verifier/audit.md"
+      - "verification/2026-07-31-wave209-integration-audit.md"
+      - "verification/2026-07-31-wave209-orchestrator.md"
+      - "logs/2026-07-31-wave209-public-checkpoint.json"
+    limitations: "The rigorous interval remains 708<=n3<=4158 and Q>=7060 is not proved. One rank-three and all three rank-four forms survive; none of their remaining anonymous or marked branches is a graph completion."

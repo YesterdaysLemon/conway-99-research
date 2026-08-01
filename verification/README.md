@@ -2184,3 +2184,118 @@ the exact nonedge pair-local constraints and censuses, scoped refutations,
 the full crossing factorization/localizers, and the relaxed-control
 predicates. Actual endpoint nonedge traces, rank 11, `n3=4158`, and
 Conway-99 remain `UNKNOWN`.
+
+## Wave 207 incidence--tensor rigidity verifier
+
+`wave207-incidence-tensor-rigidity/` froze a 13,375-byte source-blind
+protocol before opening any Wave 207 discovery package. Its standard-library
+checker imports no discovery module and independently reconstructs the M7g
+configuration, all 105 labelled perfect matchings, the 81-word relation
+code, all 27 polar forms and four relative sign classes, the abstract
+Gram-radical and transition theorems, the point-code bridge, both signed
+Farkas arguments, and the restricted local certificate.
+
+```text
+Proof A submitted tests:             3/3 PASS
+Proof B submitted tests:             5/5 PASS
+ternary bridge submitted tests:    10/10 PASS
+kernel endpoint submitted tests:     8/8 PASS
+M7g bridge submitted tests:          5/5 PASS
+clean-room verifier tests:          13/13 PASS
+discovery manifest entries: 8+9+11+11+11 all match
+```
+
+Verdict: `VERIFIED_SYMBOLIC_REDUCTION_WITH_SCOPE`. The audit records three
+precision findings: the labelled M7g set has four internal concurrent-secant
+decompositions; the local control checks only 23 induced `A_Ub_U=0`
+coordinates and omits 76 outside equations; and one frozen failed-route file
+miscounts those omitted vertices as 91. None changes a computation.
+
+The verified endpoint image still has possible weights
+`{14,17,20,23}`; weight 14 must be `7+7`, but no weight is excluded. The
+remaining 23 polar forms, rank 11, `n3=4158`, and Conway-99 remain `UNKNOWN`.
+
+## Wave 208 global-residual verifier
+
+`wave208-global-residual-verifier/` froze its protocol before opening the
+Wave 208 discovery packages, then performed separately sealed norm,
+proof-B, and proof-A delta audits.  It independently reconstructs the M7g
+polar net, all four relative orientations, all 105 perfect matchings, every
+marked subset, the full integral spectral split, every residue row, the
+complementary-Fano design, and the labelled overlap-capacity census.
+
+```text
+M7g norm submitted tests:             8/8 PASS
+marked proof-B submitted tests:       5/5 PASS
+integer-lift proof-A submitted tests: 10/10 PASS
+imported Wave94 tests:               12/12 PASS
+clean-room Wave208 tests:            33/33 PASS
+package manifests:             10+11+10+24 entries PASS
+```
+
+Verdict: `VERIFIED_FOUR_FORM_REDUCTION_WITH_SCOPE`.  The audit confirms
+`S_D=3 mod 9`, the 23-of-27 exclusion, the three rank-four norm-56 branches,
+the rank-three weight-14/20 profiles, and the general integer-lift
+reductions.  It records two checker-coverage gaps filled by independent
+enumeration or symbolic expansion, not theorem errors.
+
+For every positive local control, the verifier constructs a one-row
+extension preserving the internal equations and common-neighbor upper caps
+while violating an omitted outside equation.  Thus the controls imply
+neither the missing code rows nor a graph completion.  Four marked forms,
+all residual weights, rank 11, `n3=4158`, and Conway-99 remain `UNKNOWN`.
+
+## Wave 209 four-survivor verifiers
+
+`wave209-four-survivor-verifier/` reconstructs the rank-three branch before
+source contact and then compares complete finite sets after unsealing.
+
+```text
+rank-three submitted tests:       11/11 PASS
+rank-three independent tests:     15/15 PASS
+source manifest:                  10/10 entries PASS
+verifier manifest:                14/14 entries PASS
+weight-14 marked set:            204/204 equal
+weight-20 aggregate set:         352/352 equal
+deficit bijections:            4480/4480 equal
+```
+
+Verdict:
+`PASS_VERIFIED_SCOPED_WITH_DERIVED_352_TO_346_NARROWING_NO_RESOLUTION`.
+The 352 table is verified as aggregate-only.  Combining it with the
+selected-line degree-three cap removes six `x=4` degree-four-star rows and
+leaves 346; that verifier discovery remains `DERIVED` pending a separate
+promotion.  Neither table counts graphs.
+
+`wave209-rank4-point-signature-verifier/` independently rebuilds all 249
+labelled branches, their 24 proved constraint-relabeling orbits, the 2,187
+allowed point signatures, and all 279 census equations.
+
+```text
+rank-four submitted tests:         9/9 PASS
+rank-four independent tests:       6/6 PASS
+source manifest:                 12/12 entries PASS
+verifier manifest:                7/7 entries PASS
+Farkas-excluded branches:        198/198 replayed
+positive-control branches:         51/51 replayed
+```
+
+Verdict: `PASS_NO_VETO` with strict conditional scope.  Every Farkas vector
+is checked exactly after transport, without relying on solver status.  The 51
+survivors are anonymous point and triangle censuses; no form, endpoint, or
+Conway-99 is excluded.
+
+## Wave 210 coupling verifiers
+
+`wave210-rank3-marked-outside-coupling-verifier/` independently reconstructs
+the complete labelled rank-three coupling before source comparison.  It
+matches 33 case orbits, survivors `{0,4,29}`, 96 retained marked graphs, 1,536
+packings, 55,296 labelled triples, all 4,480 support-column systems, and all
+62,720 local matching vectors.  Verdict: `PASS / NO VETO` for the finite
+`DERIVED` reduction.  No outside `85 x 85` adjacency block is supplied.
+
+`wave210-rank4-point-line-coupling-verifier/` freezes and checks the necessary
+point/triangle incidence identities and all 51 input branches, but its blind
+matrix is weaker than the source's 11,444--12,110-column systems.  Verdict:
+`PENDING_VERIFICATION` with a promotion veto.  The source's seven duals are
+not refuted, but they are not independently authenticated by this run.

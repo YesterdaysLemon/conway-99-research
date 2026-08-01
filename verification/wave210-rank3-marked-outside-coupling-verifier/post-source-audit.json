@@ -1,0 +1,139 @@
+{
+  "F_and_local_comparison": {
+    "all_4480_column_multisets_equal_in_canonical_order": true,
+    "all_4480_gram_checks_equal": true,
+    "all_4480_residual_matrices_equal": true,
+    "all_62720_local_matching_count_vectors_equal": true,
+    "local_count_distribution": {
+      "594": 18496,
+      "604": 17344,
+      "68": 7808,
+      "78": 17536,
+      "90": 1536
+    },
+    "rank_over_Q": 13
+  },
+  "claim_label": "DERIVED",
+  "complete_set_comparison": {
+    "all_1536_surviving_labelled_cases_equal": true,
+    "all_204_labelled_H_equal": true,
+    "all_20928_labelled_cases_equal": true,
+    "all_33_orbit_member_sets_equal": true,
+    "all_4480_deficit_bijections_equal": true,
+    "all_55296_surviving_labelled_triples_equal": true,
+    "all_96_surviving_labelled_H_equal": true,
+    "all_orbit_abstract_solution_sets_equal": true,
+    "all_orbit_matching_index_sets_equal": true,
+    "digests": {
+      "H": {
+        "count": 204,
+        "sha256": "c9c26bfef9b2e3f5a5ebe36e527986195a30563052b9d23ace7c24f110484488"
+      },
+      "cases": {
+        "count": 20928,
+        "sha256": "f372a8be49b588a1c4cb0093b4fa0db9d8d1cf1a38ae65263934804cf62aea9f"
+      },
+      "deficit_bijections": {
+        "count": 4480,
+        "sha256": "d424d73355f7dc8d6fdbd791310f8c244a107dec96470afec82aba3947b49f14"
+      },
+      "orbit_partition": {
+        "count": 33,
+        "sha256": "2107fd1801f7b8319f2fa09d252a445e1a5eedc6b12eb39ec9e0e7e2f7f1c25e"
+      },
+      "surviving_H": {
+        "count": 96,
+        "sha256": "00d53b199579bb08d77f8b7608ac7f707352c25e47c32417574e6e2c8ea31c45"
+      },
+      "surviving_cases": {
+        "count": 1536,
+        "sha256": "d4e3c24aa2454ad35f5afa2512d983e99fc15f682539a243832db62ae7542b68"
+      },
+      "surviving_triples": {
+        "count": 55296,
+        "sha256": "2ea2e847d91a77908f8b19d77879ea21c1849fecad4cd4ee91db7926588bf833"
+      }
+    }
+  },
+  "discovery_output_rebuild": {
+    "D_block_status": "not solved; no 85-vertex D adjacency matrix is supplied",
+    "claim_label": "DERIVED",
+    "global_status": "UNKNOWN",
+    "no_global_completion_or_exclusion": true,
+    "sealed_exact_results_equal_fresh_discovery_rebuild": true
+  },
+  "global_status": "UNKNOWN",
+  "hostile_control_audit": {
+    "controls_are_partial_19_point_objects_not_99_vertex_completions": true,
+    "independent_replays": {
+      "0": {
+        "F_gram": true,
+        "all_14_local_one_factors": true,
+        "all_28_polar_counts": true,
+        "demonstrably_not_a_D_completion": true,
+        "distinct_selected_column_copies": true,
+        "induced_Ac_equals_3c": true,
+        "induced_lambda_mu_caps": true,
+        "required_support_containment": true,
+        "selected_triangles_are_cliques": true
+      },
+      "29": {
+        "F_gram": true,
+        "all_14_local_one_factors": true,
+        "all_28_polar_counts": true,
+        "demonstrably_not_a_D_completion": true,
+        "distinct_selected_column_copies": true,
+        "induced_Ac_equals_3c": true,
+        "induced_lambda_mu_caps": true,
+        "required_support_containment": true,
+        "selected_triangles_are_cliques": true
+      },
+      "4": {
+        "F_gram": true,
+        "all_14_local_one_factors": true,
+        "all_28_polar_counts": true,
+        "demonstrably_not_a_D_completion": true,
+        "distinct_selected_column_copies": true,
+        "induced_Ac_equals_3c": true,
+        "induced_lambda_mu_caps": true,
+        "required_support_containment": true,
+        "selected_triangles_are_cliques": true
+      }
+    },
+    "mandatory_triangle_edge_deletion_rejected": true,
+    "sealed_controls_equal_fresh_discovery_rebuild": true,
+    "single_F_coordinate_mutation_rejected": true
+  },
+  "limitations": [
+    "the verified result is conditional on the frozen Wave 209 weight-14 branch",
+    "the 55296 survivors satisfy selected-union and local necessary conditions only",
+    "the unknown 85x85 outside adjacency block D and all global SRG equations remain unresolved",
+    "Conway-99 remains UNKNOWN"
+  ],
+  "manifest_audit": {
+    "all_outer_manifest_entries_valid": true,
+    "expected_outer_manifest_sha256": "d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722",
+    "frozen_upstream_inputs_valid": true,
+    "in_memory_manifest_corruption_rejected": true,
+    "observed_outer_manifest_sha256": "d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722",
+    "package_file_coverage_exact": true
+  },
+  "restriction_audit": {
+    "204_H_generated_labelled_before_any_quotient": true,
+    "20928_packings_generated_labelled_before_any_quotient": true,
+    "4480_F_configurations_generated_from_all_5040_bijections": true,
+    "case_action_order_768_closed_faithful_and_Burnside_checked": true,
+    "no_D_completion_constructed_or_excluded": true,
+    "no_target_graph_automorphism_assumed": true,
+    "polar_order_48_proved_by_bruteforce_full_8_point_automorphism_enumeration": true,
+    "support_order_4_proved_by_bruteforce_full_7_point_automorphism_enumeration": true
+  },
+  "verdict": "PASS / NO VETO",
+  "verdict_checks": {
+    "F_and_local": true,
+    "complete_labelled_sets": true,
+    "hostile_controls": true,
+    "manifests": true,
+    "status_wall": true
+  }
+}

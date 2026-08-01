@@ -1,0 +1,32 @@
+role: proof_b
+date_utc: "2026-07-29T22:10:12Z"
+git_commit: "85e705cc6c2a14d123120c93a847e30aaab1789e"
+claim_label: DERIVED
+scope: >-
+  Conditional Wave 206 tensor-balance intersection code: audit and prove the
+  proposed support lower bound eight using the coefficient-space Witt index,
+  verified original-column dual distance four, and exact small cap maxima.
+inputs:
+  attempts/wave206-tensor-balance-weight-proof-b/protocol.md: "96d7e061a5df7aee9cf675198535788be11a0f0f2491536d0a18d51ab767319e"
+  attempts/wave206-crossing-kernel-proof-b/package-manifest.sha256: "6c7718de1c5f2c7d4203d1727d6b74214e51fa069608f318c8583b07b0325f0a"
+  verification/wave174-no-weight3-dual/package-manifest.sha256: "ac34c8a3b045bec70e3a2080cb4365c0ea43cc732b313ecb3cec355a28f23450"
+  verification/wave174-no-weight3-dual/verification-report.md: "59bc0e470a7d007aa2ddaec262a2f3046c8df7da56192bdab90327962feb9b0a"
+method: >-
+  Exact operator-to-ordinary-tensor transfer, coefficient-space
+  nondegenerate Witt bound, exhaustive caps in PG(0,3), PG(1,3), and
+  PG(2,3), characteristic-three diagonal-form classification, and a
+  singular weight-eight hostile control embedded in a nonsquare 11-space.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave206-tensor-balance-weight-proof-b\exact_check.py --verify
+  attempts\wave206-tensor-balance-weight-proof-b\exact-results.json ;
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave206-tensor-balance-weight-proof-b\test_exact_check.py
+outputs:
+  attempts/wave206-tensor-balance-weight-proof-b/exact-results.json: "e1dd9c788b54016dc63284ad7a8602723ee714b8e703e224fc9e39e1fbbf5d47"
+  attempts/wave206-tensor-balance-weight-proof-b/derivation.md: "7d13a1834819e952c4d4eff033fac033e23699ab643d9852318a67d19bcb6cf2"
+  attempts/wave206-tensor-balance-weight-proof-b/failed-routes.md: "73901b9218254363373069158c339ebfce22b5016ed000418b9a45aaaa13c302"
+limitations:
+  - The addendum is conditional on the sealed discovery theorem that A_Delta is nonzero.
+  - The weight-eight control is not in a demonstrated im(B^T) and does not extend to the target 231-column incidence.
+  - No weight-nine bound, endpoint exclusion, n3 improvement, Q>=7060 proof, graph construction, or Conway-99 resolution follows.

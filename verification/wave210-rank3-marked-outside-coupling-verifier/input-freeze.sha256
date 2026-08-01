@@ -1,0 +1,24 @@
+# Frozen source-blind byte inventory at 2026-08-01T03:56:41Z
+# repository HEAD: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+# format: sha256  bytes  repository-relative path
+4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3  1757  AGENTS.md
+b871867092a63d502a75a9524e96c3fce26c7f837f265d5de9e45cb7f04982e7  7511  attempts/wave210-rank3-marked-outside-coupling-proof-a/derivation.md
+2b47b7bf449eed9638f495702ff0354b23d28b77570630acda1f38c5f76e2563  48589  attempts/wave210-rank3-marked-outside-coupling-proof-a/exact_check.py
+f4b40b0d6e0ab45a2389c218abeba9e473658351090607fbd86faf0a9089e09c  159591  attempts/wave210-rank3-marked-outside-coupling-proof-a/exact-results.json
+c592dfcc69968a0984f6f8af0c16258d4a2e1e68c974986789d419fb16d3ef62  1478  attempts/wave210-rank3-marked-outside-coupling-proof-a/failed-routes.md
+32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd  26157  attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json
+302a8b8cd3b11256da8f6719c4bbfad8ab7188afa36ffdc2b92b3b10a310157a  461  attempts/wave210-rank3-marked-outside-coupling-proof-a/input-freeze.sha256
+d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722  1632  attempts/wave210-rank3-marked-outside-coupling-proof-a/package-manifest.sha256
+ddfd30926f1f796306f8556ff117d0ca6cc979242b461630aa1feef7f0d1a0ea  2142  attempts/wave210-rank3-marked-outside-coupling-proof-a/protocol.md
+adc2c823cc8e62119553f5eda3a4d40cb7d3fb3c59d070c0de9b6c0cd3455ae5  1058  attempts/wave210-rank3-marked-outside-coupling-proof-a/README.md
+5ff8da9cb85cbd17aeb730e5db5676a9160f4677f00e210164042538c7e20719  2156  attempts/wave210-rank3-marked-outside-coupling-proof-a/run-report.yaml
+c4ac7258581478d018d645be1692860ad244778ea3574e3f464396d5c1dec4da  4166  attempts/wave210-rank3-marked-outside-coupling-proof-a/test_exact_check.py
+4d924ba2929eaf23f71aedd8a62323530ea08abc803c5cbcc5e5804c8e9e16e9  566  attempts/wave210-rank3-marked-outside-coupling-proof-a/upstream-delta.md
+
+# Expected outer-manifest digest supplied by the orchestrator and reproduced:
+# d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722
+
+# Stage-2 upstream freeze at 2026-08-01T03:57:33Z, before opening these files.
+3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196  2610  attempts/wave209-four-survivor-globalization/protocol.md
+521c7ba3e0b34a563f30cc6251c053fe250beb000ff0a808d57fc0a6dcec5ff1  1185  attempts/wave209-rank3-trade-proof-a/package-manifest.sha256
+7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91  1799  verification/wave209-four-survivor-verifier/package-manifest.sha256

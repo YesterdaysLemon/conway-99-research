@@ -1,0 +1,29 @@
+role: construction
+date_utc: "2026-08-01T02:20:00Z"
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional prism-free rank-11 endpoint; exact mod-nine necessary condition
+  for all 27 labelled M7g polar forms across all four relative sign classes.
+inputs:
+  - path: attempts/wave208-global-residual-rigidity/protocol.md
+    sha256: 3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740
+  - path: verification/wave207-incidence-tensor-rigidity/audit.md
+    sha256: 2234c7b6029f0b5f41cac6c93f4208b489e7fc27628dc7dc2b518bd75b718ae4
+  - path: verification/wave207-incidence-tensor-rigidity/independent-results.json
+    sha256: da5d43852a33efda699af210ea13f871c31ca83f3b933a2972a6e79f1fe2250a
+method: >-
+  Lift the balanced ternary coefficient word to plus/minus one, apply the
+  exact SRG identity A^2=12I-A+2J, retain the unknown intersection correction,
+  and enumerate the complete labelled three-dimensional M7g polar net.
+command: >-
+  .venv\Scripts\python.exe attempts\wave208-m7g-norm-divisibility\exact_check.py --verify
+outputs:
+  - path: attempts/wave208-m7g-norm-divisibility/exact-results.json
+    sha256: ea3481c805a88d233f9e35f1c9e9c61e8546e7f6ddb56add2e552b9a80ec3703
+  - path: attempts/wave208-m7g-norm-divisibility/derivation.md
+    sha256: 2c480d92d0c9f47d2425b3a0aef0e02d2dd89be27404877f46910395699b46f7
+limitations: >-
+  Four of 27 forms survive in every orientation; no intersection graph,
+  99-vertex SRG, proof of existence, proof of nonexistence, or counterexample
+  is supplied. Global status remains UNKNOWN.
