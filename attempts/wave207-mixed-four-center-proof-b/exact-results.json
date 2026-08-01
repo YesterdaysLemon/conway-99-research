@@ -1,0 +1,214 @@
+{
+  "A_Delta_functorial_boundary": {
+    "consequence": "linear sandwich and mixed trace-Gram constructions cannot classify or exclude an already true A_Delta relation; nonlinear or graph-typed data are required",
+    "linear_relation_correction": "a=B^T c and BD=0 imply D a=0; full-rank nondegenerate factorization then implies Z a=0",
+    "mixed_annihilation": "sum_x c_x M[(y,x),(v,z)]=0 for every y,v,z",
+    "operator_relation": "Theta(a)=0 and injectivity of A |-> Z^* A Z imply sum_x c_x P_x=-sum_T a_T(z_T tensor z_T)=0",
+    "sandwich_annihilation": "sum_x c_x F_yx=P_y(sum_x c_xP_x)P_y=0 for every y"
+  },
+  "characteristic_three_radical_audit": {
+    "adding_one_trace_nonzero_feature": {
+      "feature_gram_rank": 21,
+      "feature_synthesis_rank": 21,
+      "identity_radical_is_detected": true
+    },
+    "full_self_adjoint_dimension": 21,
+    "full_trace_pairing_rank": 21,
+    "gram_nullity_minus_true_relation_nullity": 1,
+    "identity_coordinate": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "identity_is_gram_null_against_trace_zero_space": true,
+    "identity_is_nonzero_true_feature": true,
+    "trace_I6_squared": 0,
+    "trace_zero_feature_gram_rank": 19,
+    "trace_zero_feature_synthesis_rank": 20,
+    "trace_zero_radical": "span{I_6}",
+    "trace_zero_radical_dimension": 1
+  },
+  "claim_label": "DERIVED_PENDING_INDEPENDENT_VERIFICATION",
+  "conclusions": {
+    "Q_7060_proved": false,
+    "conway_99_resolved": false,
+    "n3_improved": false,
+    "new_exact_mixed_center_compatibility_theorem": true,
+    "new_exact_transition_rank_formula": "rank=binom(rank(C_yv)+1,2)",
+    "new_four_center_25_coordinate_certificate": true,
+    "rank_11_endpoint_excluded": false,
+    "rank_66_certificate_established_for_endpoint": false,
+    "status": "UNKNOWN"
+  },
+  "field": 3,
+  "format": "wave207-mixed-four-center-proof-b-v1",
+  "four_center_certificate_audit": {
+    "ambient_dimension": 11,
+    "companion_polynomial": "t^5+2t^4+1",
+    "control_scope_failure": [
+      "ambient standard form has square discriminant, not the endpoint nonsquare type",
+      "there are only four abstract six-spaces, not 99 graph stars",
+      "there are no seven-column singular simplexes or shared 231 columns",
+      "there is no point-triangle incidence, SRG, or prism-free graph"
+    ],
+    "cumulative_symmetric_square_span_ranks": [
+      21,
+      41,
+      56,
+      66
+    ],
+    "each_subspace_dimension": 6,
+    "first_full_span_pair": {
+      "annihilator_dimension": 25,
+      "annihilator_normal_form": "a 5x5 cross matrix K between complements of the common line",
+      "intersection_dimension": 1,
+      "symmetric_square_span_rank": 41
+    },
+    "four_center_symmetric_square_span_is_full": true,
+    "four_subspaces": 4,
+    "irreducibility_rabin_checks": {
+      "gcd_with_t^3_minus_t": [
+        1
+      ],
+      "irreducible": true,
+      "t_to_3_power_5_mod_polynomial": [
+        0,
+        1
+      ]
+    },
+    "local_standard_form_gram_determinants": [
+      1,
+      1,
+      2,
+      1
+    ],
+    "local_standard_form_gram_ranks": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "pairwise_cross_gram_ranks": [
+      [
+        6,
+        1,
+        6,
+        6
+      ],
+      [
+        1,
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        6,
+        6
+      ]
+    ],
+    "self_adjoint_dimension": 66,
+    "two_additional_center_restriction_rank_on_K": 25
+  },
+  "gram_radical_exact_sequence": {
+    "center_coefficient_kernel_chain": "K_P subset K_C subset K_mix subset intersection_y ker(Tau^(y))",
+    "feature_definitions": {
+      "F": "span_(y,x){F_yx}",
+      "F_y": "span_x{F_yx}",
+      "F_yx": "P_y P_x P_y",
+      "M": "M[(y,x),(v,z)]=tr(F_yx F_vz)"
+    },
+    "fixed_slice": "ker(Tau^(y))/ker(R_y) is isomorphic to rad(F_y)",
+    "general": "for synthesis R with Gram G, 0 -> ker(R) -> ker(G) -> rad(im R) -> 0 via c |-> R(c)",
+    "global_mixed": "ker(M)/ker(R_all) is isomorphic to rad(F)",
+    "nondegenerate_mixed_span_consequence": "rad(F)=0 implies K_P=K_C=K_mix",
+    "rank_66_certificate": "a rank-66 mixed Gram submatrix from four middle-center rows forces F=Self(V), kills all radical defects, and makes the four selected compressions jointly injective",
+    "rank_defect": "rank(R_all)-rank(M)=dim rad(F)",
+    "why_four_is_first_possible": "3*dim Self(E_y)=3*21=63<66"
+  },
+  "scope": "conditional prism-free n3=4158 rank-11 endpoint; exact kernel, radical, mixed-transition, and four-center compression algebra",
+  "simultaneous_compression_theorem": {
+    "adjoint": "C^*((X_y)_y)=sum_y X_y",
+    "kernel": "ker C=J^perp",
+    "local_operator_span": "J=sum_y Self(E_y)",
+    "map": "C(A)=(P_y A P_y restricted to E_y)_y",
+    "normal_operator": "C^*C(A)=Phi(A)=sum_y P_y A P_y",
+    "projector_span_kernel": "ker(C restricted to S)=S intersect rad(J), S=span{P_x}",
+    "warning": "ker Phi may strictly contain ker C because im(C) can be isotropic in characteristic three"
+  },
+  "transition_rank_audit": {
+    "coordinate_count": 21,
+    "coordinate_space": "symmetric 7x7 matrices R with R*1=0",
+    "cross_rank_table": {
+      "0": {
+        "cross_rank": 0,
+        "formula": "binom(0+1,2)",
+        "transition_left_radical_dimension": 21,
+        "transition_rank": 0
+      },
+      "1": {
+        "cross_rank": 1,
+        "formula": "binom(1+1,2)",
+        "transition_left_radical_dimension": 20,
+        "transition_rank": 1
+      },
+      "2": {
+        "cross_rank": 2,
+        "formula": "binom(2+1,2)",
+        "transition_left_radical_dimension": 18,
+        "transition_rank": 3
+      },
+      "3": {
+        "cross_rank": 3,
+        "formula": "binom(3+1,2)",
+        "transition_left_radical_dimension": 15,
+        "transition_rank": 6
+      },
+      "4": {
+        "cross_rank": 4,
+        "formula": "binom(4+1,2)",
+        "transition_left_radical_dimension": 11,
+        "transition_rank": 10
+      },
+      "5": {
+        "cross_rank": 5,
+        "formula": "binom(5+1,2)",
+        "transition_left_radical_dimension": 6,
+        "transition_rank": 15
+      },
+      "6": {
+        "cross_rank": 6,
+        "formula": "binom(6+1,2)",
+        "transition_left_radical_dimension": 0,
+        "transition_rank": 21
+      }
+    },
+    "same_center_J_star_determinant": 2,
+    "same_center_J_star_rank": 21
+  }
+}

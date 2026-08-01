@@ -1,0 +1,45 @@
+{
+  "claim_label": "VERIFIED",
+  "clean_room_agreement": {
+    "affine_forms_per_orientation": 27,
+    "excluded_per_orientation": 23,
+    "rank3_4K2_survivors_total": 4,
+    "rank4_2C4_survivors_total": 12,
+    "relative_orientations": 4,
+    "survivors_per_orientation": 4
+  },
+  "documentation_history": {
+    "changed_document_hashes": {
+      "agents/2026-07-31-wave208-m7g-norm-divisibility.md": {
+        "new": "92680a0fd429e1e257dd60c6aeb5780f5aa3c0bbb7e36b7307f095da885c0c4f",
+        "old": "00a44e05201c040cb537cfb0b28d5d314b0fa2bc5046ff5b0c53aac934b8ad9b"
+      },
+      "derivation.md": {
+        "new": "2c480d92d0c9f47d2425b3a0aef0e02d2dd89be27404877f46910395699b46f7",
+        "old": "a56c075c1e0fd4c5129dfbf3fabc11b3264f62abb4fe144039fda3a13a16532c"
+      },
+      "run-report.yaml": {
+        "new": "77d8ea6954e5cb262d4df830dc1216cb6fa3795c9b45a06ec81cb911674e18bc",
+        "old": "12a3d6c553ad770b4671e756c2791f7a56b00e8cd20f80cdef39d8cecced4ab6"
+      }
+    },
+    "computational_artifacts_unchanged": true,
+    "corrected_manifest_sha256": "a633dff62e4e1127b8a0c7329928e110d1fef1e78f1f322bbc4e250e277167f3",
+    "correction_verified": "derivation now states that the selected-triangle union size is not fixed",
+    "original_finding": "derivation.md says 'other 91 vertices', but eight triangle columns are not eight graph vertices and no union size is fixed; the outside count is unsupported",
+    "original_manifest_sha256": "8d7088cf4bee7792ae22f75c4babbd114fe3aee7c1ca64a25fe33c04dac40373"
+  },
+  "global_status": "UNKNOWN",
+  "hostile_boundaries": {
+    "complete_graph_certificate": false,
+    "complete_nonexistence_certificate": false,
+    "intersection_sum_reconstructed": false,
+    "literal_plus_minus_one_lift_required": true,
+    "outside_completion_supplied": false,
+    "product_one_interpretation_fixed": false
+  },
+  "input_freeze_entries_verified": 5,
+  "manifest_entries_verified": 10,
+  "manifest_sha256": "a633dff62e4e1127b8a0c7329928e110d1fef1e78f1f322bbc4e250e277167f3",
+  "verified_scope": "conditional prism-free M7g branch: the exact mod-nine norm condition excludes 23 of 27 labelled polar forms in each of four orientations"
+}

@@ -1,0 +1,44 @@
+{
+  "claim_label": "VERIFIED",
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "form_census": {
+    "all_forms": 27,
+    "newly_excluded": 19,
+    "survivor_diagonals": [[0, 0, 1], [0, 1, 0], [1, 0, 0], [2, 2, 2]],
+    "survivors": 4,
+    "wave207_survivors_before": 23
+  },
+  "global_status": "UNKNOWN",
+  "input_freeze_entries_verified": 4,
+  "local_control_verdict": {
+    "controls_replayed": 2,
+    "global_completion_implied": false,
+    "internal_necessary_equations_verified": true,
+    "outside_equations_implied": false,
+    "outside_row_counterwitnesses": 2
+  },
+  "manifest_entries_verified": 11,
+  "manifest_sha256": "f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc",
+  "marked_subset_census": {
+    "rank3_support_weights": [14, 20],
+    "rank3_weight14_subsets": 792,
+    "rank3_weight20_subsets": 66,
+    "rank4_subsets_per_form": 83
+  },
+  "relation_matching_distinction": {
+    "all_105_perfect_matchings_independently_enumerated": true,
+    "concurrent_secant_matchings": 4,
+    "objects_identified": false,
+    "projective_linear_words": 4,
+    "tensor_words": 1
+  },
+  "source_coverage_finding": "source exact_check.py hard-codes the concurrent-secant count; the clean-room verifier independently enumerates and verifies the four matchings",
+  "spectral_verification": {
+    "coordinate_divisor": 3,
+    "necessary_congruence": "S_D=3 mod 9",
+    "norm": "7*(24-2*S_D)",
+    "residual_eigenvalue": -4
+  },
+  "verified_scope": "conditional marked-M7g proof-B reduction: exact spectral divisibility removes 19 of the 23 Wave207 survivors and leaves the same four forms"
+}

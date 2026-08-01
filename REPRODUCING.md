@@ -3277,6 +3277,180 @@ endpoint. The exact controls are scoped boundary objects, not target graphs.
 No endpoint exclusion, strict `n3` improvement, `Q>=7060` proof, or
 Conway-99 resolution follows.
 
+## Wave 207 M7g, incidence, and point-code replay
+
+Replay the sealed symbolic packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave207-incidence-tensor-code-proof-a\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave207-incidence-tensor-code-proof-a\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave207-mixed-four-center-proof-b\exact_check.py `
+  --verify attempts\wave207-mixed-four-center-proof-b\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave207-mixed-four-center-proof-b -p "test_*.py" -v
+.\.venv\Scripts\python.exe -B `
+  attempts\wave207-ternary-adjacency-code-bridge\exact_check.py `
+  --verify attempts\wave207-ternary-adjacency-code-bridge\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave207-ternary-adjacency-code-bridge\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave207-kernel-endpoint-proof-c\exact_check.py `
+  --verify attempts\wave207-kernel-endpoint-proof-c\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave207-kernel-endpoint-proof-c\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave207-m7g-incidence-bridge\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave207-m7g-incidence-bridge\test_exact_check.py
+```
+
+Replay the fresh clean-room verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave207-incidence-tensor-rigidity\independent_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave207-incidence-tensor-rigidity\test_independent_check.py
+```
+
+Read the verifier audit before using the local rank-four certificate. It
+checks `A_Ub_U=0` only on 23 induced coordinates; the 76 outside equations
+and every completion condition remain absent. The verified global conclusion
+is still `UNKNOWN`, with no `d>=24`, endpoint exclusion, construction, or
+Conway-99 resolution.
+
+## Wave 208 norm, marked-survivor, and integer-lift replay
+
+Replay the three sealed discovery packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave208-m7g-norm-divisibility\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave208-m7g-norm-divisibility\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave208-marked-m7g-proof-b\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave208-marked-m7g-proof-b\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave208-integer-lift-proof-a\exact_check.py `
+  --verify attempts\wave208-integer-lift-proof-a\exact-results.json
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave208-integer-lift-proof-a\test_exact_check.py
+```
+
+Replay the complete clean-room verifier and the imported complementary-Fano
+dependency:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  verification\wave208-global-residual-verifier\independent_baseline.py --verify
+.\.venv\Scripts\python.exe -B `
+  verification\wave208-global-residual-verifier\independent_m7g_norm.py --verify
+.\.venv\Scripts\python.exe -B `
+  verification\wave208-global-residual-verifier\independent_proof_b.py --verify
+.\.venv\Scripts\python.exe -B `
+  verification\wave208-global-residual-verifier\independent_proof_a.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave208-global-residual-verifier\test_independent_baseline.py `
+  verification\wave208-global-residual-verifier\test_independent_m7g_norm.py `
+  verification\wave208-global-residual-verifier\test_post_source_m7g_audit.py `
+  verification\wave208-global-residual-verifier\test_independent_proof_b.py `
+  verification\wave208-global-residual-verifier\test_independent_proof_a.py
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave94-general-n3-norm14-bound -p "test_*.py" -v
+```
+
+The verifier package is authoritative for scope.  It confirms the four-form
+reduction and both integer-lift reductions, but it also gives explicit
+outside-row witnesses showing that none of the local controls implies a
+missing code equation or a completion.  Four marked forms, every residual
+point-code weight, rank 11, and Conway-99 remain `UNKNOWN`.
+
+## Wave 209 four-survivor globalization replay
+
+Replay the sealed rank-three source package and its source-blind verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave209-rank3-trade-proof-a\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave209-rank3-trade-proof-a\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  verification\wave209-four-survivor-verifier\independent_rank3.py --verify
+.\.venv\Scripts\python.exe -B `
+  verification\wave209-four-survivor-verifier\post_source_audit.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  verification\wave209-four-survivor-verifier\test_independent_rank3.py `
+  verification\wave209-four-survivor-verifier\test_post_source_audit.py
+```
+
+Replay the sealed rank-four source package and its independent verifier:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave209-rank4-norm56-proof-b\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave209-rank4-norm56-proof-b\test_exact_check.py
+.\.venv\Scripts\python.exe -B `
+  verification\wave209-rank4-point-signature-verifier\independent_verify.py `
+  --verify
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave209-rank4-point-signature-verifier `
+  -p "test_*.py" -v
+```
+
+Wave 209 verifies finite symbolic reductions, not a graph census.  The
+rank-three `352` total counts aggregate moment rows; the separately derived
+selected-line cap removes six such rows and leaves `346`, still not graphs.
+The rank-four Farkas certificates exclude 198 of 249 labelled marked branches,
+but the 51 survivors are anonymous marginal point-signature controls.  They do
+not name a common set of 99 points and 223 residual triangles or enforce the
+remaining incidence equations.  All four forms and Conway-99 remain
+`UNKNOWN`.
+
+## Wave 210/211 handoff replay
+
+Replay the independently reproduced rank-three coupling:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave210-rank3-marked-outside-coupling-proof-a\exact_check.py --verify
+Push-Location attempts\wave210-rank3-marked-outside-coupling-proof-a
+..\..\.venv\Scripts\python.exe -B -m unittest -v test_exact_check.py
+Pop-Location
+.\.venv\Scripts\python.exe -B `
+  verification\wave210-rank3-marked-outside-coupling-verifier\verify_sealed.py
+.\.venv\Scripts\python.exe -B `
+  verification\wave210-rank3-marked-outside-coupling-verifier\post_source_audit.py --verify
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s verification\wave210-rank3-marked-outside-coupling-verifier `
+  -p test_verifier.py -v
+```
+
+Replay the two still-`DERIVED` source packages:
+
+```powershell
+.\.venv\Scripts\python.exe -B `
+  attempts\wave210-rank4-point-line-coupling-proof-b\coupling_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest -v `
+  attempts\wave210-rank4-point-line-coupling-proof-b\test_coupling_check.py
+.\.venv\Scripts\python.exe -B `
+  attempts\wave211-rank3-outside-block-proof-b\exact_check.py --verify
+.\.venv\Scripts\python.exe -B -m unittest discover `
+  -s attempts\wave211-rank3-outside-block-proof-b `
+  -p test_exact_check.py -v
+```
+
+The rank-four source's seven duals are not yet independently promoted; read
+`verification/wave210-rank4-point-line-coupling-verifier/audit.md` before
+using them.  Wave 211 supplies a hostile linear-block control, not a graph.
+The direct presealed rank-three verifier has a documented tuple/list replay
+defect; use `verify_sealed.py` without rewriting its historical seal.
+
 ## Artifact retention
 
 Small certificates and verification reports belong in Git. Large CNF, LRAT,

@@ -1,0 +1,171 @@
+{
+  "additional_wave207_survivors_excluded": 19,
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "concurrent_secant_matching_count": 4,
+  "concurrent_secant_matchings": [
+    {
+      "pairs": [[0, 4], [1, 5], [2, 6], [3, 7]],
+      "point": [1, 0, 0, 0]
+    },
+    {
+      "pairs": [[0, 5], [1, 4], [2, 7], [3, 6]],
+      "point": [0, 1, 2, 2]
+    },
+    {
+      "pairs": [[0, 6], [1, 7], [2, 4], [3, 5]],
+      "point": [0, 1, 2, 1]
+    },
+    {
+      "pairs": [[0, 7], [1, 6], [2, 5], [3, 4]],
+      "point": [0, 1, 1, 2]
+    }
+  ],
+  "divisibility_excluded_forms": 23,
+  "full_99_vertex_completion_supplied": false,
+  "full_outside_equations_supplied": false,
+  "global_status": "UNKNOWN",
+  "local_controls": [
+    {
+      "edges": 53,
+      "exact_AUb_equals_3b": true,
+      "full_outside_equation_implied": false,
+      "global_completion_implied": false,
+      "graph_triangles": 11,
+      "hostile_extension_preserves_upper_caps": true,
+      "hostile_outside_row_dot_b": 1,
+      "induced_triangular_prisms": 0,
+      "integer_b_norm": 20,
+      "lambda_mu_caps": true,
+      "maximum_induced_degree": 7,
+      "name": "weight20_two_intersections",
+      "outside_vertices_missing": 77,
+      "point_weight": 20,
+      "selected_intersections": 2,
+      "vertices": 22
+    },
+    {
+      "edges": 44,
+      "exact_AUb_equals_3b": true,
+      "full_outside_equation_implied": false,
+      "global_completion_implied": false,
+      "graph_triangles": 11,
+      "hostile_extension_preserves_upper_caps": true,
+      "hostile_outside_row_dot_b": 1,
+      "induced_triangular_prisms": 0,
+      "integer_b_norm": 14,
+      "lambda_mu_caps": true,
+      "maximum_induced_degree": 6,
+      "name": "weight14_five_intersections",
+      "outside_vertices_missing": 80,
+      "point_weight": 14,
+      "selected_intersections": 5,
+      "vertices": 19
+    }
+  ],
+  "minus24_coarse_profile": {
+    "same0_opposite2_w20_m2": 6,
+    "same1_opposite0_w23_m1": 4,
+    "same1_opposite3_w17_m4": 16,
+    "same2_opposite1_w20_m3": 24,
+    "same2_opposite4_w14_m6": 4,
+    "same3_opposite2_w17_m5": 24,
+    "same4_opposite0_w20_m4": 1,
+    "same4_opposite3_w14_m7": 4
+  },
+  "minus24_intersection_profiles": {
+    "m1_same1_opposite0_w23_p10_n13_norm26": 2,
+    "m1_same1_opposite0_w23_p13_n10_norm26": 2,
+    "m2_same0_opposite2_w20_p10_n10_norm20": 6,
+    "m3_same2_opposite1_w20_p10_n10_norm26": 16,
+    "m3_same2_opposite1_w20_p13_n7_norm26": 4,
+    "m3_same2_opposite1_w20_p7_n13_norm26": 4,
+    "m4_same1_opposite3_w17_p10_n7_norm20": 8,
+    "m4_same1_opposite3_w17_p7_n10_norm20": 8,
+    "m4_same4_opposite0_w20_p10_n10_norm32": 1,
+    "m5_same3_opposite2_w17_p10_n7_norm26": 12,
+    "m5_same3_opposite2_w17_p7_n10_norm26": 12,
+    "m6_same2_opposite4_w14_p7_n7_norm20": 4,
+    "m7_same4_opposite3_w14_p7_n7_norm26": 4
+  },
+  "plus12_coarse_profile": {
+    "same0_opposite2_w20_m2": 66,
+    "same0_opposite5_w14_m5": 792
+  },
+  "plus12_intersection_profiles": {
+    "m2_same0_opposite2_w20_p10_n10_norm20": 66,
+    "m5_same0_opposite5_w14_p7_n7_norm14": 792
+  },
+  "projective_linear_weight_eight_relation_classes": 4,
+  "projective_linear_weight_eight_relations": [
+    [1, 1, 1, 1, 2, 2, 2, 2],
+    [1, 1, 2, 2, 1, 1, 2, 2],
+    [1, 2, 1, 2, 1, 2, 1, 2],
+    [1, 2, 2, 1, 1, 2, 2, 1]
+  ],
+  "projective_tensor_weight_eight_relation_classes": 1,
+  "projective_tensor_weight_eight_relations": [[1, 1, 1, 1, 2, 2, 2, 2]],
+  "relation_matching_objects_identified": false,
+  "signed_polar_sum_distribution": {
+    "-12": 4,
+    "-24": 3,
+    "0": 19,
+    "12": 1
+  },
+  "source_code_imported": false,
+  "spectral_identity": {
+    "annihilator_on_zero_sum": "(A+4I)(A-3I)=0",
+    "coordinate_divisor_from_Ab_mod3": 3,
+    "necessary_congruence": "S_D=3 mod 9",
+    "norm": "7*(24-2*S_D)",
+    "residual": "r=(A-3I)b_integer",
+    "residual_eigenvalue": -4
+  },
+  "surviving_forms": [
+    {
+      "accepted_labelled_intersection_subsets": 83,
+      "diagonal": [0, 0, 1],
+      "divided_residual_squared_norm": 56,
+      "product_one_component_sizes": [4, 4],
+      "product_one_edges": 8,
+      "rank": 4,
+      "residual_squared_norm": 504,
+      "same_sign_product_one_edges": 4,
+      "signed_polar_sum": -24
+    },
+    {
+      "accepted_labelled_intersection_subsets": 83,
+      "diagonal": [0, 1, 0],
+      "divided_residual_squared_norm": 56,
+      "product_one_component_sizes": [4, 4],
+      "product_one_edges": 8,
+      "rank": 4,
+      "residual_squared_norm": 504,
+      "same_sign_product_one_edges": 4,
+      "signed_polar_sum": -24
+    },
+    {
+      "accepted_labelled_intersection_subsets": 83,
+      "diagonal": [1, 0, 0],
+      "divided_residual_squared_norm": 56,
+      "product_one_component_sizes": [4, 4],
+      "product_one_edges": 8,
+      "rank": 4,
+      "residual_squared_norm": 504,
+      "same_sign_product_one_edges": 4,
+      "signed_polar_sum": -24
+    },
+    {
+      "accepted_labelled_intersection_subsets": 858,
+      "diagonal": [2, 2, 2],
+      "divided_residual_squared_norm": 0,
+      "product_one_component_sizes": [8],
+      "product_one_edges": 12,
+      "rank": 3,
+      "residual_squared_norm": 0,
+      "same_sign_product_one_edges": 0,
+      "signed_polar_sum": 12
+    }
+  ],
+  "wave207_no_product_one_forms": 4
+}

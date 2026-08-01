@@ -1,0 +1,13 @@
+{
+  "all_hostile_controls_rejected": true,
+  "checks": {
+    "altered_rank_claim_rejected": true,
+    "corrupt_support_group_generator_rejected": true,
+    "deleted_accepted_triple_rejected": true,
+    "deleted_labelled_H_rejected": true,
+    "duplicated_labelled_H_rejected": true,
+    "forced_incompatible_local_edge_rejected": true,
+    "mutated_stored_result_rejected": true,
+    "single_F_coordinate_mutation_rejected": true
+  }
+}

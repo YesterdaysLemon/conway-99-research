@@ -325,3 +325,27 @@ verification/wave20[0-3]*/** whitespace=cr-at-eol,-blank-at-eof
 verification/wave144-sixset-odd-profile/** whitespace=cr-at-eol,-blank-at-eof
 agents/2026-07-*-wave1[7-9]*.md whitespace=cr-at-eol,-blank-at-eof
 agents/2026-07-*-wave20[0-3]*.md whitespace=cr-at-eol,-blank-at-eof
+
+# Waves 207--211 are sealed, checksum-pinned mixed-platform research packages.
+# Preserve their exact bytes in the index so a clean checkout reproduces every
+# manifest, while suppressing only retained CR/terminal-record diagnostics.
+attempts/wave20[7-9]*/** -text -eol
+attempts/wave21[0-1]*/** -text -eol
+verification/wave20[7-9]*/** -text -eol
+verification/wave21[0-1]*/** -text -eol
+agents/2026-07-31-wave20[7-9]*.md -text -eol
+agents/2026-07-31-wave21[0-1]*.md -text -eol
+verification/2026-07-31-wave20[7-9]-*.md -text -eol
+logs/2026-07-31-wave20[7-9]-*.json -text -eol
+
+attempts/wave20[7-9]*/** whitespace=cr-at-eol,-blank-at-eof
+attempts/wave21[0-1]*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave20[7-9]*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave21[0-1]*/** whitespace=cr-at-eol,-blank-at-eof
+agents/2026-07-31-wave20[7-9]*.md whitespace=cr-at-eol,-blank-at-eof
+agents/2026-07-31-wave21[0-1]*.md whitespace=cr-at-eol,-blank-at-eof
+verification/2026-07-31-wave20[7-9]-*.md whitespace=cr-at-eol,-blank-at-eof
+logs/2026-07-31-wave20[7-9]-*.json whitespace=cr-at-eol,-blank-at-eof
+
+# This checksum-pinned audit uses a Markdown hard break on its date line.
+verification/wave208-global-residual-verifier/audit.md whitespace=cr-at-eol,-blank-at-eof,-trailing-space

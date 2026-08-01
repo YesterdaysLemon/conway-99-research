@@ -1,0 +1,25 @@
+{
+  "claim_label": "VERIFIED",
+  "clean_room_agreement": {
+    "affine_forms_per_orientation": 27,
+    "excluded_per_orientation": 23,
+    "rank3_4K2_survivors_total": 4,
+    "rank4_2C4_survivors_total": 12,
+    "relative_orientations": 4,
+    "survivors_per_orientation": 4
+  },
+  "documentation_finding": "derivation.md says 'other 91 vertices', but eight triangle columns are not eight graph vertices and no union size is fixed; the outside count is unsupported",
+  "global_status": "UNKNOWN",
+  "hostile_boundaries": {
+    "complete_graph_certificate": false,
+    "complete_nonexistence_certificate": false,
+    "intersection_sum_reconstructed": false,
+    "literal_plus_minus_one_lift_required": true,
+    "outside_completion_supplied": false,
+    "product_one_interpretation_fixed": false
+  },
+  "input_freeze_entries_verified": 5,
+  "manifest_entries_verified": 10,
+  "manifest_sha256": "8d7088cf4bee7792ae22f75c4babbd114fe3aee7c1ca64a25fe33c04dac40373",
+  "verified_scope": "conditional prism-free M7g branch: the exact mod-nine norm condition excludes 23 of 27 labelled polar forms in each of four orientations"
+}

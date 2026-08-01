@@ -1,0 +1,29 @@
+{
+  "claim_label": "CANDIDATE_AGGREGATE_CONTROL_NOT_GRAPH_NOT_CODEWORD",
+  "field": 3,
+  "support": {
+    "positive": 7,
+    "negative": 7,
+    "weight": 14
+  },
+  "records": [
+    {"membership": "P", "i": 0, "j": 0, "h_pp": 0, "h_nn": 0, "h_pn": 0, "count": 5},
+    {"membership": "P", "i": 6, "j": 0, "h_pp": 3, "h_nn": 0, "h_pn": 0, "count": 2},
+    {"membership": "N", "i": 0, "j": 0, "h_pp": 0, "h_nn": 0, "h_pn": 0, "count": 5},
+    {"membership": "N", "i": 0, "j": 6, "h_pp": 0, "h_nn": 1, "h_pn": 0, "count": 1},
+    {"membership": "N", "i": 0, "j": 6, "h_pp": 0, "h_nn": 3, "h_pn": 0, "count": 1},
+    {"membership": "O", "i": 0, "j": 0, "h_pp": 0, "h_nn": 0, "h_pn": 0, "count": 3},
+    {"membership": "O", "i": 1, "j": 1, "h_pp": 0, "h_nn": 0, "h_pn": 0, "count": 80},
+    {"membership": "O", "i": 3, "j": 3, "h_pp": 0, "h_nn": 1, "h_pn": 0, "count": 2}
+  ],
+  "known_failure": {
+    "positive_internal_degree_multiset": [0, 0, 0, 0, 0, 6, 6],
+    "negative_internal_degree_multiset": [0, 0, 0, 0, 0, 6, 6],
+    "reason": "A degree-six vertex would meet all six peers, contradicting the five declared degree-zero peers."
+  },
+  "limitations": [
+    "This is an exact aggregate solution of the recorded equations only.",
+    "It is deliberately nongraphical and is not a 99-vertex SRG.",
+    "It supplies no adjacency matrix, ternary code, or endpoint triangle configuration."
+  ]
+}

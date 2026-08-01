@@ -1,0 +1,5 @@
+# sealed 2026-08-01T04:23:21Z before opening Wave 210 discovery internals
+244d2ced668aefc3d9bfad27ad19a6150cf1394700c47ff919bdfa21276efeb9  verification/wave210-rank4-point-line-coupling-verifier/protocol.md
+78c88dcb536172df61374a82510b82435246c1d529f29b65102ef2395fd8b0ff  verification/wave210-rank4-point-line-coupling-verifier/input-freeze.sha256
+b98ef03eb8eeeecdbfffe37013b60640a2488cc7f995976856ad6f6e2e578d9f  verification/wave210-rank4-point-line-coupling-verifier/independent_verify.py
+9f6672f94c95afff15190a060b3a6ba5d6cdc7d6951783204821a887c7a3cb83  verification/wave210-rank4-point-line-coupling-verifier/blind-results.json

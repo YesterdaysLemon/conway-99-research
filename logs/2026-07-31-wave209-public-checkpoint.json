@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "wave": 209,
+  "date_utc": "2026-08-01T03:48:00Z",
+  "git_commit": "c58fd917ea8f9622e1388f10b0e0e3c709ba4854",
+  "verdict": "PASS_VERIFIED_SCOPED_REDUCTIONS_WITH_DERIVED_352_TO_346_NO_RESOLUTION",
+  "target": "Existence of srg(99,14,1,2)",
+  "target_status": "UNKNOWN",
+  "rank_11_endpoint_status": "UNKNOWN",
+  "n3_4158_endpoint_status": "UNKNOWN",
+  "rigorous_n3_interval": "708<=n3<=4158",
+  "conditional_Q_lower": 7059,
+  "Q_7060_proved": false,
+  "automorphism_assumption": false,
+  "rank_three": {
+    "conditional_on_wave208_survivor": true,
+    "matched_product_zero_cross_counts": [0, 0, 0, 0],
+    "weight14_cross_edges": 1,
+    "weight14_rooted_support_types": 1,
+    "weight14_outside_signature": [17, 61, 7],
+    "weight14_deficit_bijections": 4480,
+    "weight14_all_deficit_bijections": 5040,
+    "weight14_marked_survivors": 204,
+    "weight14_all_marked_subsets": 792,
+    "weight20_x0_excluded": true,
+    "weight20_x10_excluded": true,
+    "weight20_x2_marked_pairs": 6,
+    "weight20_aggregate_rows": 352,
+    "weight20_aggregate_rows_status": "VERIFIED_AGGREGATE_ONLY",
+    "weight20_selected_line_cap_rows": 346,
+    "weight20_selected_line_cap_status": "DERIVED_NOT_INDEPENDENTLY_PROMOTED",
+    "excluded": false
+  },
+  "rank_four": {
+    "conditional_on_wave208_survivors": true,
+    "forms": [[0, 0, 1], [0, 1, 0], [1, 0, 0]],
+    "residual_eigenvalue": -4,
+    "residual_squared_norm": 56,
+    "line_squared_norm": 168,
+    "q_even_excluded": true,
+    "labelled_branches": 249,
+    "constraint_relabeling_orbits": 24,
+    "farkas_excluded_orbits": 17,
+    "farkas_excluded_labelled_branches": 198,
+    "surviving_orbits": 7,
+    "surviving_labelled_branches": 51,
+    "surviving_labelled_branches_per_form": 17,
+    "survivor_controls_are_graphs": false,
+    "forms_excluded": 0
+  },
+  "tests": {
+    "rank3_source": "11/11 PASS",
+    "rank3_verifier": "15/15 PASS",
+    "rank4_source": "9/9 PASS",
+    "rank4_verifier": "6/6 PASS"
+  },
+  "manifests": {
+    "protocol": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196",
+    "rank3_source": "521c7ba3e0b34a563f30cc6251c053fe250beb000ff0a808d57fc0a6dcec5ff1",
+    "rank3_verifier": "7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91",
+    "rank4_source": "2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b",
+    "rank4_verifier": "62c32cfa278a677053353d5a3c21c01600cadc867d597f5135ab32a6fdb1c07a"
+  },
+  "next_frontier": [
+    "Couple the rank-three marked points to the exact outside F columns and zero-block adjacency.",
+    "Couple each rank-four 99-point q census to the same 223 residual triangle rows and point-star K7 decomposition."
+  ],
+  "limitations": [
+    "All statements remain conditional on the Wave208 marked survivors under a hypothetical endpoint.",
+    "The 346-row selected-line cap is DERIVED pending separate independent promotion.",
+    "No anonymous point or line census is an adjacency realization.",
+    "No graph, nonexistence proof, endpoint exclusion, strict n3 improvement, Q>=7060 theorem, novelty, or priority claim follows."
+  ]
+}

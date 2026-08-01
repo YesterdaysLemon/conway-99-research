@@ -1,0 +1,8 @@
+244d2ced668aefc3d9bfad27ad19a6150cf1394700c47ff919bdfa21276efeb9  verification/wave210-rank4-point-line-coupling-verifier/protocol.md
+78c88dcb536172df61374a82510b82435246c1d529f29b65102ef2395fd8b0ff  verification/wave210-rank4-point-line-coupling-verifier/input-freeze.sha256
+dcf324111e0a37381103aff9472579a325147fd59607bc1f05858c33122cd260  verification/wave210-rank4-point-line-coupling-verifier/blind-seal.sha256
+b98ef03eb8eeeecdbfffe37013b60640a2488cc7f995976856ad6f6e2e578d9f  verification/wave210-rank4-point-line-coupling-verifier/independent_verify.py
+9f6672f94c95afff15190a060b3a6ba5d6cdc7d6951783204821a887c7a3cb83  verification/wave210-rank4-point-line-coupling-verifier/blind-results.json
+d39850ef87de73b9e428a05fc25c08bc0065db521aa505938cde50726606f269  verification/wave210-rank4-point-line-coupling-verifier/audit.md
+2a30a4f7587c5a8cdc062f572d57f8a98785f059b7accb175cb003785838db59  verification/wave210-rank4-point-line-coupling-verifier/run-report.yaml
+dc27559fc7d3a0e3e04b7c4340ff0bea2f64435b1619fe8c9b25005f1d13be02  agents/2026-07-31-wave210-rank4-verifier.md

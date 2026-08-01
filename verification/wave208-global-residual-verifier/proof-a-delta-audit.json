@@ -1,0 +1,58 @@
+{
+  "claim_label": "VERIFIED",
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "global_status": "UNKNOWN",
+  "input_freeze_entries_verified": 8,
+  "manifest_entries_verified": 10,
+  "manifest_sha256": "28d69162a8f52bdc325471946efecad890b1edac33f3576bdba8777e32887202",
+  "norm14_overlap_reduction": {
+    "alpha_one_rows_before_coupling": 42,
+    "capacity_counts": {
+      "0": {"labelled_assignments": 3003, "outside_token_capacity_survivors": 651},
+      "1": {"labelled_assignments": 24010, "outside_token_capacity_survivors": 42},
+      "2": {"labelled_assignments": 41895, "outside_token_capacity_survivors": 0},
+      "3": {"labelled_assignments": 13230, "outside_token_capacity_survivors": 0},
+      "4": {"labelled_assignments": 441, "outside_token_capacity_survivors": 0}
+    },
+    "k_values": [2, 3, 4],
+    "maximum_endpoints": 3,
+    "opposite_sign_overlap": 6,
+    "required_endpoints": 4,
+    "same_sign_overlap": 0,
+    "support_union_size": 22,
+    "z_negative_coordinates": 8,
+    "z_positive_coordinates": 8
+  },
+  "partial_control_verdict": {
+    "global_completion_implied": false,
+    "internal_lift_equations_verified": true,
+    "outside_equations_implied": false,
+    "outside_row_counterwitnesses": 1,
+    "vertices": 22
+  },
+  "q_zero_reduction": {
+    "e12_excluded": true,
+    "e13_excluded": true,
+    "surviving_cross_edges": 1,
+    "surviving_degree_sequence_each_side": [4, 3, 3, 3, 3, 3, 3]
+  },
+  "rank11_endpoint": "UNKNOWN",
+  "source_coverage_findings": [
+    "source spectral checker compares precomputed coefficient literals and tests norm formulas on four samples; clean-room symbolic expansion verifies the general identities"
+  ],
+  "spectral_and_shells": {
+    "all_identities_verified": true,
+    "all_weight_17_20_23_compositions_retained": true,
+    "balanced_q_squared": [70, 56, 42, 28, 14, 0],
+    "full_residue_table_sha256": "22d837cedaf21b0dc2fced9e805b5aa27706a1747bd49dc6acfd65b85c3df713"
+  },
+  "verified_scope": "conditional proof-A integer lift, residue shells, q=0 reduction, and norm-14 complementary-Fano alpha=0 reduction",
+  "wave94_import": {
+    "audit_sha256": "ab87d369345a27abb4326915f6c392545573780b4fc7f5d67bc494743c4a2ce6",
+    "complementary_fano_design_reconstructed": true,
+    "expected_sha256": "ab87d369345a27abb4326915f6c392545573780b4fc7f5d67bc494743c4a2ce6",
+    "outside_profile": "70 meet one of each sign; 15 meet neither"
+  },
+  "weights_excluded": {"14": false, "17": false, "20": false, "23": false}
+}

@@ -418,3 +418,74 @@ Wave 206 reports:
 - `wave206-three-center-global-extension-verifier/audit.md`: fresh
   source-blind and post-source verification, including the independent
   weight-eight strengthening and all endpoint vetoes.
+
+Wave 207 reports:
+
+- `2026-07-31-wave207-statement-literature.md`: current-through-cutoff
+  primary-source audit, Kaipa--Pradhan `M7g` bridge, triply-regular route
+  veto, ternary-code target, and new Phillips triangle clique-graph context.
+- `2026-07-31-wave207-proof-a.md`: incidence-linear correction, exact `4+4`
+  `M7g` classification, 81-word relation code, and 27-form polar census.
+- `2026-07-31-wave207-proof-b.md`: mixed four-center radical and transition
+  theorems, 25-coordinate sharpness control, and the functorial linear-feature
+  obstruction boundary.
+- `2026-07-31-wave207-ternary-code-bridge.md`: nonzero point-code image,
+  parameter-only `d(ker_F3(A))>=12`, and residual weights
+  `{14,17,20,23}`.
+- `2026-07-31-wave207-m7g-incidence-bridge.md`: exact signed-intersection
+  identity, four-of-27 polar exclusion, and the restricted rank-four local
+  survivor.
+- `2026-07-31-wave207-kernel-endpoint-proof-c.md`: exact Farkas reduction
+  forcing every possible weight-14 kernel word to have composition `7+7`.
+- `wave207-incidence-tensor-rigidity/audit.md`: fresh source-blind and
+  post-source verification, with the four internal M7g pairings, local
+  23-coordinate scope correction, and frozen documentation discrepancy
+  recorded explicitly.
+
+Wave 208 reports:
+
+- `2026-07-31-wave208-m7g-norm-divisibility.md`: exact mod-nine incidence
+  norm and complete 27-form survivor census, with the corrected outside-union
+  wording retained in the seal.
+- `2026-07-31-wave208-marked-m7g-proof-b.md`: independent spectral lift,
+  four-form reduction, complete marked-subset profiles, and rank-three local
+  controls.
+- `2026-07-31-wave208-integer-lift-proof-a.md`: general integral `-4`/`3`
+  eigensplitting, residue shells, complementary-Fano capacity reduction, and
+  hostile 22-vertex control.
+- `2026-07-31-wave208-verifier.md`: manifest-pinned clean-room verification
+  of all three lanes, including checker-coverage findings and explicit
+  outside-row countercontrols.  No residual weight or endpoint is excluded.
+
+Wave 209 reports:
+
+- `2026-07-31-wave209-rank3-trade-proof-a.md`: selected-line identity,
+  support-14 rooted trade, deficit-bijection and marked-line censuses,
+  support-20 aggregate reductions, and exact line-vector reformulation.
+- `2026-07-31-wave209-rank3-verifier.md`: source-blind complete-set replay,
+  post-source comparison, the mandatory aggregate-only scope on 352 rows,
+  and the separately labelled DERIVED six-row narrowing to 346.
+- `2026-07-31-wave209-rank4-norm56-proof-b.md`: projector saturation,
+  non-even residual parity, exact 249-to-24 constraint relabelling, and
+  integer point-signature Farkas certificates excluding 198 branches.
+- `2026-07-31-wave209-rank4-verifier.md`: independent transport and replay of
+  all 198 exclusion duals and 51 positive controls.  The controls remain
+  anonymous censuses, and no rank-four form or global endpoint is excluded.
+
+Wave 210/211 handoff reports:
+
+- `2026-07-31-wave210-rank3-coupling-proof-a.md`: exact coupling of the 204
+  rank-three marked graphs to all 4,480 support/outside column systems,
+  leaving three proved case orbits and explicit partial controls.
+- `2026-07-31-wave210-rank3-verifier.md`: source-blind complete-set replay of
+  the `204 -> 96`, `20,928 -> 1,536`, and `93,757,440 -> 55,296` reductions,
+  with the absent outside block and checker representation finding retained.
+- `2026-07-31-wave210-rank4-coupling-proof-b.md`: seven source-side integer
+  Farkas certificates claiming a conditional exclusion of the remaining 51
+  rank-four branches; status remains `DERIVED`.
+- `2026-07-31-wave210-rank4-verifier.md`: `PENDING_VERIFICATION` veto because
+  the blind lane did not reconstruct the source's full local-triangle column
+  universe; this is incompleteness, not a refutation.
+- `2026-07-31-wave211-rank3-outside-block-proof-b.md`: exact forced-subspace
+  spectrum and an orbit-29 520-edge hostile linear-block control, showing that
+  the linear/spectral outside-block relaxation does not close the branch.

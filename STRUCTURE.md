@@ -4242,3 +4242,196 @@ A fresh verifier froze nine tests before source exposure and passed eight
 more independent post-source tests.  Verdict: `PASS_SCOPED_INFLECTION`.
 Actual endpoint nonedge traces, rank 11, `n3=4158`, and Conway-99 remain
 `UNKNOWN`.
+
+## Wave 207: M7g and ternary point-code reduction
+
+Conditional on the prism-free rank-11 endpoint, incidence membership gives
+a stronger linear consequence than the Wave 206 tensor equation alone.  For
+every `a in im(B^T)`,
+
+```text
+Da=0,
+Za=0.
+```
+
+At weight eight the sealed cap and rank premises then force a unique
+projective `M7g` support and coefficient composition `4+4`.  Its canonical
+linear relation code has enumerator
+
+```text
+1+24y^4+16y^5+32y^6+8y^8,
+```
+
+and the restricted three-dimensional polar-form space has 27 affine forms:
+one rank-zero `K8`, twelve rank-two `2K4`, eight rank-three `4K2`, and six
+rank-four `2C4` forms.  The labelled eight-set has four concurrent-secant
+decompositions; uniqueness is the projective orbit/closure, not the internal
+pairing.
+
+Writing `a=B^T c` and `b=Ba` gives
+
+```text
+Ab=0,
+b^T b=a^T a=2,
+b!=0,
+wt(b)<=24,
+wt(b)=2 mod 3.
+```
+
+A parameter-only signed-neighbor argument proves
+
+```text
+d(ker_F3(A))>=12.
+```
+
+Thus the endpoint point image has weight in `{14,17,20,23}`.  Exact Farkas
+certificates further show that a weight-14 kernel word must have sign
+composition `7+7`; they do not exclude the balanced case.  The incidence
+norm requires at least one selected-triangle intersection at a polar product
+one, excluding exactly the rank-zero form and three rank-two forms, four of
+27 in total.
+
+A 23-vertex rank-four `2C4` certificate satisfies the selected-pair product
+table, the 23 induced-coordinate code equations, local common-neighbor caps,
+and local prism-freeness.  It omits the other 76 code coordinates, outside
+completion, 223 triangle blocks, and the full rank-eleven frame, so it is not
+a graph or counterexample.
+
+The exact mixed four-center transition theorem has rank
+`d(d+1)/2` for a cross matrix of rank `d`.  However, every feature linear in
+the sandwiches `P_y P_x P_y` annihilates true projector relations
+functorially.  The remaining endpoint obstruction must therefore be
+nonlinear or graph-typed.  No endpoint, strict `n3` bound, construction,
+nonexistence proof, or Conway-99 resolution follows.
+
+## Wave 208: four-form residual rigidity
+
+Wave 208 keeps the unknown selected-triangle intersection correction in the
+calculation rather than identifying every polar product with an
+intersection.  For the balanced integer M7g relation `alpha`, exact expansion
+of the point-incidence norm gives
+
+```text
+||AU alpha||^2=240+18s-2S_D,
+```
+
+where `s` is the signed actual-intersection sum and `S_D` is the signed
+canonical polar sum.  The left side is divisible by nine and the `18s`
+term vanishes modulo nine, so `S_D=3 mod 9`.
+
+An independent spectral route puts `b~=B alpha` and
+`r=(A-3I)b~`.  Then
+
+```text
+Ar=-4r,
+3 divides r,
+||r||^2=7(24-2S_D).
+```
+
+Both routes reduce the 27 polar forms to the same four:
+
+```text
+three rank-4 2C4 forms with ||r/3||^2=56;
+one rank-3 4K2 form with r=0 and A b~=3b~.
+```
+
+The complete marked census retains 83 subsets per rank-four form.  In the
+rank-three form, 66 subsets have point weight 20 and 792 have point weight
+14.  These are exact finite classifications, not constructions.
+
+The parallel point-code lane gives a general integral eigensplitting.  For
+`z=Ax/3` and `p-n=3t`,
+
+```text
+Q=9(z-x)-t1,       AQ=-4Q,
+R=11(4x+3z)-6t1,  AR=3R,
+Q^2=99t(9-t)+162L.
+```
+
+Balanced weight 14 has six possible `q=z-x` norms.  The `q=0` branch leaves
+one cross edge and sign-side degree sequence `(4,3^6)`.  The `q^2=14`
+branch imports the independently verified complementary-Fano
+classification and reduces to same-sign overlap zero, opposite-sign overlap
+six, a 22-point union, and `k=2,3,4`.  No shell or point-code weight is
+excluded.
+
+Three positive local controls satisfy their displayed internal equations
+and upper caps.  The verifier's one-row extensions preserve those premises
+while violating an omitted outside equation.  This explicitly separates
+local feasibility from global completion.  The next objects are therefore
+the full rank-three signed trade and the full rank-four norm-56 incidence
+signature; the endpoint and Conway-99 remain `UNKNOWN`.
+
+## Wave 209: scoped globalization of the four survivors
+
+Wave 209 keeps the rank-three and rank-four branches structurally separate
+and gives each a source-blind verifier.
+
+For the rank-three signed trade `c=U alpha`, the selected-line matrix identity
+
+```text
+(U^T A U-3U^T U)alpha=0
+```
+
+kills the four matched product-zero cross counts.  With support 14 this forces
+one `P-N` edge, the unique rooted sign-side graph
+
+```text
+01 02 03 04 12 15 26 34 35 46 56,
+```
+
+the outside signature `(17,61,7)`, 4,480 deficit-edge bijections, and 204
+labelled marked five-intersection graphs.  The deficit graph is triangle-free,
+which is why no outside point has more than two neighbors of each sign.
+
+With support 20, exact selected-zero capacity excludes `x=0`, confines `x=2`
+to six swapped-disjoint marked pairs, and combines with the moment census to
+leave 352 aggregate rows at `x=2,4,6,8`; `x=10` is impossible.  A verifier
+delta observes that every support point lies on one selected line and has no
+edge to its matched opposite line, so it has opposite degree at most three.
+Exactly six aggregate `x=4` rows violate this, leaving 346 under the added
+cap.  That last delta remains `DERIVED`, and all retained rows omit outside
+adjacency.
+
+For the rank-four residual, put `t=B^Tq`.  Exact incidence gives
+
+```text
+Ct=0,  t^2=168,  t_i=-3alpha_i.
+```
+
+The marked zero-projector lower bound is exactly 168.  Also
+`U^T(q mod 2)=1_8`, so `q` is not even.  The 249 labelled marked branches
+split into 24 proved constraint-relabeling orbits.  Exact point-signature
+Farkas certificates exclude 17 orbits, or 198 branches, and leave seven
+orbits, or 51 branches.  The distribution is 17 surviving branches in each
+of the three rank-four forms.
+
+The residual controls are marginal censuses, not a common incidence object.
+They do not assign the 99 points to the same 223 residual triangles, enforce
+all residual rows of `Ct=0`, or realize the block-intersection graph as 99
+point-star `K7` cliques.  Wave 210 therefore targets this named point-line
+coupling rather than another scalar moment table.  All four forms and all
+global endpoint statuses remain `UNKNOWN`.
+
+## Unintegrated Wave 210/211 handoff frontier
+
+The rank-three named marked/outside coupling is independently reproduced:
+204 marked graphs reduce to 96, 20,928 ordered packings reduce to 1,536, and
+93,757,440 packing/deficit triples reduce to 55,296 in three proved orbits.
+The missing object is still the binary outside block `D` satisfying both
+
+```text
+FD=2J-(A_S+I)F,
+D^2+D=12I+2J-F^T F.
+```
+
+Wave 211 shows why the first equation, degrees, parity, and forced spectrum
+are insufficient: orbit 29 has an explicit 520-edge binary control satisfying
+all linear rows but failing 2,416 of 3,570 quadratic pair equations.
+
+The rank-four source now has seven integer Farkas vectors claiming to exclude
+all 51 surviving census branches after exact point-to-residual-triangle
+coupling.  A fresh verifier confirmed the necessary identities but did not
+reconstruct the full source column universe, so it issued a promotion veto.
+Public project state therefore remains Wave 209 with all four forms alive.
+See `NEXT_INSTANCE_HANDOFF_2026-07-31.md` for the exact continuation.

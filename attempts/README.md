@@ -1142,3 +1142,86 @@ The independently verified inflection is a genuine global relation code, not
 an endpoint exclusion. The next route is to classify its possible
 weight-eight words under `im(B^T)` and the full 231-column incidence, then
 couple different middle centers through a mixed four-center law.
+
+Wave 207 attempts:
+
+- `wave207-incidence-tensor-code-proof-a/` classifies a hypothetical
+  weight-eight endpoint word as a `4+4` `M7g` relation, reconstructs its
+  81-word linear code, and enumerates all 27 restricted polar forms.
+- `wave207-mixed-four-center-proof-b/` proves exact Gram-radical and
+  transition-rank theorems. Its decisive boundary is negative: every feature
+  linear in the sandwiches `P_yP_xP_y` annihilates true projector relations
+  and therefore cannot itself exclude `A_Delta`.
+- `wave207-ternary-adjacency-code-bridge/` maps a hypothetical weight-eight
+  word to a nonzero point word and proves the parameter-only bound
+  `d(ker_F3(A))>=12`, leaving weights `14,17,20,23`.
+- `wave207-kernel-endpoint-proof-c/` excludes all unbalanced sign
+  compositions at weight 14 by exact Farkas polynomials. The balanced `7+7`
+  case survives; its aggregate hostile control is deliberately nongraphical
+  and is not a codeword.
+- `wave207-m7g-incidence-bridge/` excludes four of 27 polar forms and archives
+  a rank-four 23-vertex induced local control. The control checks only the 23
+  internal code coordinates and necessary common-neighbor caps; it omits 76
+  outside code equations and is not a graph completion.
+
+The exact checkpoint is a substantially narrower conditional obstruction,
+not a proof or counterexample. The remaining work is global: exclude the 23
+polar survivors through all 99 code coordinates and 231 triangle columns, or
+classify the balanced weight-14 and weights 17, 20, and 23 point-code cases.
+
+Wave 208 attempts:
+
+- `wave208-global-residual-rigidity/` freezes the marked-M7g and general
+  integer-lift obligations, evidence boundary, and status wall.
+- `wave208-m7g-norm-divisibility/` keeps the unknown actual intersections
+  symbolic and proves `S_D=3 mod 9`, leaving exactly four of 27 polar forms.
+- `wave208-marked-m7g-proof-b/` independently derives the same reduction by
+  an integer `-4` spectral residual, enumerates 83 marked subsets per
+  rank-four form and the rank-three counts 66 and 792, and archives two
+  internal positive controls.
+- `wave208-integer-lift-proof-a/` splits every ternary kernel lift into
+  integral `-4` and `3` eigenspaces, enumerates all residue shells, reduces
+  the `q=0` and `q^2=14` balanced weight-fourteen branches, and retains a
+  hostile 22-vertex partial control.
+
+The independently verified checkpoint excludes 19 of the 23 Wave 207
+survivors, but all four final forms remain.  The next exact routes are the
+rank-three weight-14/20 trade and the three rank-four norm-56 incidence
+signatures.  No aggregate table or local control is a global certificate.
+
+Wave 209 attempts:
+
+- `wave209-four-survivor-globalization/` freezes the four Wave 208 survivors,
+  separation rules, exact certificate standards, and global status wall.
+- `wave209-rank3-trade-proof-a/` proves the matched selected-line identity,
+  reduces support 14 to one rooted type with 204 marked graphs and 4,480
+  deficit bijections, and gives the complete 352-row support-20 aggregate
+  table.  The independent verifier adds, but does not silently fold into the
+  source seal, a DERIVED selected-line cap leaving 346 rows.
+- `wave209-rank4-norm56-proof-b/` proves projector saturation and non-even
+  parity, partitions 249 labelled branches into 24 constraint-relabeling
+  orbits, and supplies exact Farkas certificates excluding 198 branches.
+  Seven orbits and 51 labelled anonymous point-signature controls remain.
+
+The independently verified inflection is shared naming: separate marked,
+point, line, and aggregate tables survive, but none assigns the same points,
+triangles, and adjacency rows.  The next route must couple those incidence
+objects.  All four polar forms and Conway-99 remain `UNKNOWN`.
+
+Wave 210/211 handoff attempts:
+
+- `wave210-rank3-marked-outside-coupling-proof-a/` couples all labelled
+  marked support packings to exact outside-column multisets and selected-line
+  equations.  A fresh verifier reproduces the finite reduction, but three
+  case orbits and 55,296 labelled triples remain without an outside `D` block.
+- `wave210-rank4-point-line-coupling-proof-b/` archives seven exact integer
+  duals claiming to exclude the 51 rank-four census survivors.  Its source
+  replay passes, but independent promotion is vetoed pending reconstruction
+  of the full local-triangle matrix.
+- `wave211-rank3-outside-block-proof-b/` derives the forced 14-dimensional
+  outside-block action and archives a 520-edge orbit-29 binary control for all
+  linear equations.  The control fails 2,416 quadratic pair equations and is
+  not a graph; orbit 0/4 time caps are inconclusive.
+
+See `NEXT_INSTANCE_HANDOFF_2026-07-31.md` before continuing.  Public ledgers
+remain at Wave 209 and Conway-99 remains `UNKNOWN`.

@@ -1,0 +1,592 @@
+{
+  "adjacency_algebra": {
+    "A_E_equals_zero": true,
+    "A_squared_mod_3": [
+      0,
+      2,
+      2
+    ],
+    "E": [
+      1,
+      1,
+      2
+    ],
+    "E_squared_equals_E": true,
+    "G": [
+      1,
+      1,
+      0
+    ],
+    "G_squared_equals_G_minus_J": true,
+    "basis": [
+      "I",
+      "A",
+      "J"
+    ]
+  },
+  "aggregate_hostile_control": {
+    "all_local_matching_records_feasible": true,
+    "category_counts": {
+      "N": 7,
+      "O": 85,
+      "P": 7
+    },
+    "declared_nongraphical": true,
+    "edge_counts": {
+      "e_N": 6,
+      "e_P": 6,
+      "e_PN": 0
+    },
+    "is_codeword": false,
+    "is_graph": false,
+    "matching_totals": {
+      "h_nn": 6,
+      "h_pn": 0,
+      "h_pp": 6
+    },
+    "pair_moments": {
+      "sum_choose_i_2": 36,
+      "sum_choose_j_2": 36,
+      "sum_i_j": 98
+    },
+    "path": "attempts/wave207-ternary-adjacency-code-bridge/formal-control.json",
+    "sha256": "97ef89ff784dd1a42b0c4608bb22c7b6babe4b9b657872bf411e52f1c20c455e",
+    "sum_i": 98,
+    "sum_j": 98
+  },
+  "claim_label": "DERIVED_CONDITIONAL_WITH_UNKNOWN_WALL",
+  "conclusions": {
+    "conway_99": "UNKNOWN",
+    "endpoint_point_image_nonzero": true,
+    "endpoint_point_image_possible_weights": [
+      14,
+      17,
+      20,
+      23
+    ],
+    "kernel_minimum_distance_at_least_24": "UNKNOWN",
+    "kernel_minimum_distance_lower_bound": 12,
+    "rank_11_endpoint": "UNKNOWN",
+    "weight_24_classification": "UNKNOWN"
+  },
+  "frozen_inputs": {
+    "CONJECTURE.md": "7b4e67a28dbae58dffbf8f06a5fcb0241b12c34807dcb145ef2ff5c70d4c1c58",
+    "attempts/wave176-star-projector-circuits/derivation.md": "b5ba53c9d93d3c8169f7d7bbf179c3d355b01df36f3feb9fec797c7274a568c8",
+    "attempts/wave206-crossing-kernel-proof-b/derivation.md": "9bdc0a296f704a5bd73ffa3a726694b74454b011dac486da9afa599f868aab13",
+    "attempts/wave206-tensor-balance-weight-proof-b/derivation.md": "7d13a1834819e952c4d4eff033fac033e23699ab643d9852318a67d19bcb6cf2"
+  },
+  "schema_version": 1,
+  "scope": "parameter-only ternary adjacency-code bridge for a hypothetical srg(99,14,1,2)",
+  "signed_neighbor_distance": {
+    "derived_minimum_distance_lower_bound": 12,
+    "pointwise_F_nonnegative": true,
+    "pointwise_F_table": [
+      {
+        "F": 0,
+        "i": 0,
+        "j": 0
+      },
+      {
+        "F": 0,
+        "i": 0,
+        "j": 3
+      },
+      {
+        "F": 9,
+        "i": 0,
+        "j": 6
+      },
+      {
+        "F": 27,
+        "i": 0,
+        "j": 9
+      },
+      {
+        "F": 54,
+        "i": 0,
+        "j": 12
+      },
+      {
+        "F": 0,
+        "i": 1,
+        "j": 1
+      },
+      {
+        "F": 9,
+        "i": 1,
+        "j": 4
+      },
+      {
+        "F": 27,
+        "i": 1,
+        "j": 7
+      },
+      {
+        "F": 54,
+        "i": 1,
+        "j": 10
+      },
+      {
+        "F": 90,
+        "i": 1,
+        "j": 13
+      },
+      {
+        "F": 6,
+        "i": 2,
+        "j": 2
+      },
+      {
+        "F": 24,
+        "i": 2,
+        "j": 5
+      },
+      {
+        "F": 51,
+        "i": 2,
+        "j": 8
+      },
+      {
+        "F": 87,
+        "i": 2,
+        "j": 11
+      },
+      {
+        "F": 0,
+        "i": 3,
+        "j": 0
+      },
+      {
+        "F": 18,
+        "i": 3,
+        "j": 3
+      },
+      {
+        "F": 45,
+        "i": 3,
+        "j": 6
+      },
+      {
+        "F": 81,
+        "i": 3,
+        "j": 9
+      },
+      {
+        "F": 9,
+        "i": 4,
+        "j": 1
+      },
+      {
+        "F": 36,
+        "i": 4,
+        "j": 4
+      },
+      {
+        "F": 72,
+        "i": 4,
+        "j": 7
+      },
+      {
+        "F": 117,
+        "i": 4,
+        "j": 10
+      },
+      {
+        "F": 24,
+        "i": 5,
+        "j": 2
+      },
+      {
+        "F": 60,
+        "i": 5,
+        "j": 5
+      },
+      {
+        "F": 105,
+        "i": 5,
+        "j": 8
+      },
+      {
+        "F": 9,
+        "i": 6,
+        "j": 0
+      },
+      {
+        "F": 45,
+        "i": 6,
+        "j": 3
+      },
+      {
+        "F": 90,
+        "i": 6,
+        "j": 6
+      },
+      {
+        "F": 27,
+        "i": 7,
+        "j": 1
+      },
+      {
+        "F": 72,
+        "i": 7,
+        "j": 4
+      },
+      {
+        "F": 126,
+        "i": 7,
+        "j": 7
+      },
+      {
+        "F": 51,
+        "i": 8,
+        "j": 2
+      },
+      {
+        "F": 105,
+        "i": 8,
+        "j": 5
+      },
+      {
+        "F": 27,
+        "i": 9,
+        "j": 0
+      },
+      {
+        "F": 81,
+        "i": 9,
+        "j": 3
+      },
+      {
+        "F": 54,
+        "i": 10,
+        "j": 1
+      },
+      {
+        "F": 117,
+        "i": 10,
+        "j": 4
+      },
+      {
+        "F": 87,
+        "i": 11,
+        "j": 2
+      },
+      {
+        "F": 54,
+        "i": 12,
+        "j": 0
+      },
+      {
+        "F": 90,
+        "i": 13,
+        "j": 1
+      }
+    ],
+    "weight_10": {
+      "admissible_compositions_and_bounds": [
+        [
+          2,
+          8,
+          132
+        ],
+        [
+          5,
+          5,
+          150
+        ],
+        [
+          8,
+          2,
+          132
+        ]
+      ],
+      "contradiction": true,
+      "forced_same_sign_common_neighbor_sum": 20,
+      "local_contribution_divisor": 3,
+      "only_survivor": [
+        5,
+        5
+      ]
+    },
+    "weight_11": {
+      "all_phi_nonnegative": true,
+      "contradiction": true,
+      "global_farkas_sum": -60,
+      "hard_composition": [
+        7,
+        4
+      ],
+      "phi_tables": {
+        "N": [
+          {
+            "Phi": 3,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 11,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 3,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 36,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 48,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 107,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 111,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 180,
+            "i": 6,
+            "j": 3
+          },
+          {
+            "Phi": 204,
+            "i": 7,
+            "j": 1
+          }
+        ],
+        "O": [
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 6,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 0,
+            "i": 1,
+            "j": 4
+          },
+          {
+            "Phi": 14,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 0,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 42,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 48,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 84,
+            "i": 4,
+            "j": 4
+          },
+          {
+            "Phi": 110,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 108,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 186,
+            "i": 6,
+            "j": 3
+          },
+          {
+            "Phi": 204,
+            "i": 7,
+            "j": 1
+          },
+          {
+            "Phi": 276,
+            "i": 7,
+            "j": 4
+          }
+        ],
+        "P": [
+          {
+            "Phi": 0,
+            "i": 0,
+            "j": 0
+          },
+          {
+            "Phi": 18,
+            "i": 0,
+            "j": 3
+          },
+          {
+            "Phi": 10,
+            "i": 1,
+            "j": 1
+          },
+          {
+            "Phi": 22,
+            "i": 1,
+            "j": 4
+          },
+          {
+            "Phi": 34,
+            "i": 2,
+            "j": 2
+          },
+          {
+            "Phi": 18,
+            "i": 3,
+            "j": 0
+          },
+          {
+            "Phi": 72,
+            "i": 3,
+            "j": 3
+          },
+          {
+            "Phi": 76,
+            "i": 4,
+            "j": 1
+          },
+          {
+            "Phi": 124,
+            "i": 4,
+            "j": 4
+          },
+          {
+            "Phi": 148,
+            "i": 5,
+            "j": 2
+          },
+          {
+            "Phi": 144,
+            "i": 6,
+            "j": 0
+          },
+          {
+            "Phi": 234,
+            "i": 6,
+            "j": 3
+          }
+        ]
+      }
+    },
+    "weights_1_through_9": [
+      {
+        "required": 15,
+        "upper_w2_plus_2pn": 1,
+        "weight": 1
+      },
+      {
+        "required": 30,
+        "upper_w2_plus_2pn": 6,
+        "weight": 2
+      },
+      {
+        "required": 45,
+        "upper_w2_plus_2pn": 13,
+        "weight": 3
+      },
+      {
+        "required": 60,
+        "upper_w2_plus_2pn": 24,
+        "weight": 4
+      },
+      {
+        "required": 75,
+        "upper_w2_plus_2pn": 37,
+        "weight": 5
+      },
+      {
+        "required": 90,
+        "upper_w2_plus_2pn": 54,
+        "weight": 6
+      },
+      {
+        "required": 105,
+        "upper_w2_plus_2pn": 73,
+        "weight": 7
+      },
+      {
+        "required": 120,
+        "upper_w2_plus_2pn": 96,
+        "weight": 8
+      },
+      {
+        "required": 135,
+        "upper_w2_plus_2pn": 121,
+        "weight": 9
+      }
+    ]
+  },
+  "weight_eight_bridge": {
+    "B_one_mod_3": 1,
+    "a_dot_a_mod_3": 2,
+    "b_dot_b_mod_3": 2,
+    "composition": {
+      "coefficient_1": 4,
+      "coefficient_2": 4
+    },
+    "kernel_identity": "Ab=0",
+    "nonzero_witness": "c^T b=a^T a=2",
+    "point_image": "b=Ba=BB^T c=Gc=Ec",
+    "possible_weights_after_distance_floor": [
+      14,
+      17,
+      20,
+      23
+    ],
+    "possible_weights_before_distance_floor": [
+      2,
+      5,
+      8,
+      11,
+      14,
+      17,
+      20,
+      23
+    ],
+    "sum_a_mod_3": 0,
+    "sum_c_mod_3": 0,
+    "support_union_bound": 24
+  }
+}

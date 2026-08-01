@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "wave": 207,
+  "date_utc": "2026-08-01T02:01:00Z",
+  "git_commit": "c58fd917ea8f9622e1388f10b0e0e3c709ba4854",
+  "verdict": "PASS_VERIFIED_SYMBOLIC_REDUCTION_NO_RESOLUTION",
+  "target": "Existence of srg(99,14,1,2)",
+  "target_status": "UNKNOWN",
+  "rank_11_endpoint_status": "UNKNOWN",
+  "n3_4158_endpoint_status": "UNKNOWN",
+  "rigorous_n3_interval": "708<=n3<=4158",
+  "conditional_Q_lower": 7059,
+  "Q_7060_proved": false,
+  "automorphism_assumption": false,
+  "weight_eight_m7g": {
+    "conditional_on_word_existing": true,
+    "incidence_forces_Da_zero": true,
+    "incidence_forces_Za_zero": true,
+    "coefficient_composition": [4, 4],
+    "projective_orbit": "M7g",
+    "labelled_concurrent_secant_matchings": 4,
+    "linear_relation_code_dimension": 4,
+    "weight_enumerator": {
+      "0": 1,
+      "4": 24,
+      "5": 16,
+      "6": 32,
+      "8": 8
+    },
+    "actual_endpoint_word_constructed": false
+  },
+  "restricted_polar_forms": {
+    "affine_forms": 27,
+    "rank_counts": {
+      "0": 1,
+      "2": 12,
+      "3": 8,
+      "4": 6
+    },
+    "zero_graphs": {
+      "0": "K8",
+      "2": "2K4",
+      "3": "4K2",
+      "4": "2C4"
+    },
+    "excluded_by_incidence_norm": 4,
+    "surviving": 23
+  },
+  "point_code": {
+    "code": "ker_F3(A)",
+    "parameter_only_minimum_distance_lower_bound": 12,
+    "endpoint_image_nonzero": true,
+    "endpoint_image_norm_mod_3": 2,
+    "endpoint_image_possible_weights": [14, 17, 20, 23],
+    "weight_14_required_composition": [7, 7],
+    "weight_14_excluded": false,
+    "minimum_distance_at_least_24_proved": false
+  },
+  "mixed_four_center": {
+    "gram_radical_exact_sequence_verified": true,
+    "transition_rank_formula": "d(d+1)/2",
+    "abstract_cumulative_span_ranks": [21, 41, 56, 66],
+    "abstract_restriction_coordinates": 25,
+    "endpoint_rank_66_minor_established": false,
+    "linear_sandwich_features_annihilate_true_relations": true
+  },
+  "restricted_local_control": {
+    "polar_rank": 4,
+    "polar_zero_graph": "2C4",
+    "vertices": 23,
+    "edges": 51,
+    "selected_intersections": 1,
+    "induced_triangles": 11,
+    "induced_prisms": 0,
+    "internal_edges_requiring_outside_common_neighbor": 18,
+    "checked_code_coordinates": 23,
+    "unchecked_outside_code_coordinates": 76,
+    "is_target_graph": false,
+    "is_completion": false
+  },
+  "tests": {
+    "submitted_proof_a": "3/3 PASS",
+    "submitted_proof_b": "5/5 PASS",
+    "submitted_ternary_bridge": "10/10 PASS",
+    "submitted_kernel_endpoint": "8/8 PASS",
+    "submitted_m7g_bridge": "5/5 PASS",
+    "clean_room_verifier": "13/13 PASS"
+  },
+  "manifests": {
+    "literature_report": "d53c453f41b4671d3904fdba7d303fa68d01ddfd4b49f0ac4ffa5a5181b29f25",
+    "proof_a": "544e9d469dc0666ff3463f5c7f3b41a4ad3acfde857100c422dd3acea4c6d8ab",
+    "proof_b": "87158d7931f6f2440bb176670368b112055b84a0e358a1b6b8ea18cb630e756d",
+    "ternary_bridge": "31e3abf3a7e16bf80eb8de4721c683f41d4d20d55f90564398e4d638b3414f99",
+    "kernel_endpoint": "bb0a3e8b4821f7533330fcdd9b0fb58085eaefcb2281f387b7356784efacd2e6",
+    "m7g_bridge": "3fa21f164fd7a7afb13c546447e3a42f9ae870d2d1b8cd5030d254ee61a5c561",
+    "source_blind_protocol": "e381877375f1f5f270e7ad064db570494a7df12dc0bbf01a0df0d24b67884444",
+    "verifier": "63aa632350e7191075203de6a7568ca0a3e387925d99f824a073eed12db00023"
+  },
+  "verifier_findings": [
+    "The labelled M7g representative has four valid concurrent-secant pairings.",
+    "The local certificate checks only the 23 induced Ab coordinates and omits 76 outside equations.",
+    "A frozen failed-routes line says 91 omitted vertices; the correct number is 76."
+  ],
+  "next_frontier": [
+    "Exploit neighbor-to-neighbor correlations in z=Ax/3 to classify balanced weight 14 and weights 17, 20, and 23.",
+    "Impose all 99 code equations, outside completion, and all 231 triangle columns on the 23 surviving M7g polar forms.",
+    "Use nonlinear or graph-typed simultaneous-center data rather than further linear sandwiches."
+  ],
+  "limitations": [
+    "All M7g consequences are conditional on a hypothetical minimum-weight endpoint word.",
+    "The local certificate is not a graph completion or counterexample.",
+    "No endpoint, rank, strict-bound, graph, novelty, priority, or Conway-99 claim is promoted."
+  ]
+}

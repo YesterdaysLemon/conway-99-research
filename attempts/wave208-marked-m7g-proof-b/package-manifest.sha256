@@ -1,0 +1,11 @@
+b2c7b895da9cd3261c8b2400e3e64deff46e4dc0aff3df534fa684f63e84a78a  attempts/wave208-marked-m7g-proof-b/derivation.md
+e8030f62781b2badf85bb46a266c1d71b651f7e8517dd6aec4a2e453c14e01af  attempts/wave208-marked-m7g-proof-b/exact-results.json
+3f1a89dcfc39e6939b14b03ab8ed74e837b032e6b95aed1e18388ca81634433f  attempts/wave208-marked-m7g-proof-b/exact_check.py
+65bcd627289061fb21108784bf73a65bcc010e9768a17cbdf680622018fdaba7  attempts/wave208-marked-m7g-proof-b/failed-routes.md
+128bbdf8a8f376f82aba2b3e1f9bd3558279c3f19e476bb686ebbb4baf21b72e  attempts/wave208-marked-m7g-proof-b/input-freeze.sha256
+4fc0e87b03d824f640234cdc93441bd3286a2902f331fc5d75c9726f66c076cd  attempts/wave208-marked-m7g-proof-b/local-controls.json
+f6f168994e9d3f68ad8e3c8ab1974dbe4e8556ecc9d78ab5501311af7e44e0e7  attempts/wave208-marked-m7g-proof-b/protocol.md
+e2cf638dcc9541fcda59260fc3391413a475ea1fdf078ef568121606809130df  attempts/wave208-marked-m7g-proof-b/README.md
+06c4db9952e2129fde5495695744bf843669ab300bf188ec6ec144dff41ef533  attempts/wave208-marked-m7g-proof-b/run-report.yaml
+ebd14b7b10d59fd6efb058c54ea82f1e9be0e0ef206aa07e57456c14d97a1f54  attempts/wave208-marked-m7g-proof-b/test_exact_check.py
+04990cd24f053e58e8682089e90643bea68e74675ec2932439fada398a2ef0d2  agents/2026-07-31-wave208-marked-m7g-proof-b.md

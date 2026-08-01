@@ -1,5 +1,5 @@
 schema_version: 1
-as_of: 2026-07-29
+as_of: 2026-07-31
 obligations:
   - id: O-STATEMENT
     requirement: "Freeze the historical statement, definitions, and exact positive and negative certificate standards."
@@ -2680,3 +2680,228 @@ obligations:
       Proof A is marginal in the x-z pair and the relaxed controls show that
       complete g, H, zero-frame, and shared linear incidence do not determine
       tau. A graph-specific simultaneous completion law remains necessary.
+
+  - id: O-WAVE207-SYMBOLIC-REDUCTION-CHECKPOINT
+    requirement: >-
+      Independently freeze and verify the incidence-linear correction, M7g
+      classification, 4+4 composition, canonical relation code, 27-form
+      census, mixed-radical theorem and method boundary, ternary distance
+      floor, weight-fourteen sign reduction, four-form incidence exclusion,
+      and restricted local certificate with all scope failures retained.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "verification/wave207-incidence-tensor-rigidity/SOURCE_BLIND_PROTOCOL.sha256"
+      - "verification/wave207-incidence-tensor-rigidity/independent-results.json"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+      - "verification/wave207-incidence-tensor-rigidity/package-manifest.sha256"
+      - "verification/2026-07-31-wave207-integration-audit.md"
+    note: >-
+      Discovery suites pass 3+5+10+8+5 tests and the clean-room suite passes
+      13 tests. The verifier records four internal M7g pairings, the 23-only
+      A_U b_U scope, and the frozen 91-versus-76 prose error. No endpoint or
+      target status is promoted.
+
+  - id: O-WAVE207-TERNARY-DISTANCE-AND-ENDPOINT-WEIGHTS
+    requirement: >-
+      Exclude or classify the balanced 7+7 weight-fourteen branch and the
+      weight-17, weight-20, and weight-23 branches of ker_F3(A), preferably by
+      pointwise integer-lift neighbor correlations or an independently
+      certified code theorem; alternatively prove d=24 and classify equality.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave207-ternary-adjacency-code-bridge/failed-routes.md"
+      - "attempts/wave207-kernel-endpoint-proof-c/failed-routes.md"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+      - "verification/2026-07-31-wave207-orchestrator.md"
+    note: >-
+      The parameter-only floor is d>=12, not 24. Category sums of the exact
+      integer lift z=Ax/3 collapse to existing moments, and the balanced
+      aggregate control is explicitly nongraphical. Neither is evidence for
+      a low-weight codeword.
+
+  - id: O-WAVE207-MARKED-M7G-GLOBAL-COMPLETION
+    requirement: >-
+      Use all 99 point-code equations, the 231 triangle columns, outside
+      degree/common-neighbor completion, and the marked M7g incidence to
+      exclude the four Wave 208 surviving restricted polar forms or construct
+      a full endpoint-compatible marked word.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave207-m7g-incidence-bridge/derivation.md"
+      - "attempts/wave207-m7g-incidence-bridge/failed-routes.md"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+      - "verification/2026-07-31-wave207-orchestrator.md"
+      - "attempts/wave208-marked-m7g-proof-b/derivation.md"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/2026-07-31-wave208-orchestrator.md"
+    note: >-
+      Wave 208 excludes 23 of the 27 restricted polar forms. The three
+      surviving rank-four 2C4 forms retain 83 candidate marked subsets each,
+      and the rank-three 4K2 form retains 66 weight-20 and 792 weight-14
+      candidate subsets. The remaining outside equations, binary completion,
+      and full 231-column rank-eleven frame are absent. A restricted marked
+      census cannot discharge this obligation.
+
+  - id: O-WAVE207-NONLINEAR-GRAPH-TYPED-COMPATIBILITY
+    requirement: >-
+      Derive a nonlinear or explicitly graph-typed simultaneous-center law
+      that does not factor linearly through the sandwiches P_y P_x P_y and
+      use it to constrain the marked A_Delta relation globally.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave207-mixed-four-center-proof-b/derivation.md"
+      - "attempts/wave207-mixed-four-center-proof-b/failed-routes.md"
+      - "verification/wave207-incidence-tensor-rigidity/audit.md"
+    note: >-
+      Linear sandwich and mixed-trace features annihilate every true
+      projector relation functorially, so additional linear combinations of
+      the same data cannot exclude the M7g word. The abstract four-center
+      sharpness control has no endpoint incidence.
+
+  - id: O-WAVE208-FOUR-FORM-CHECKPOINT
+    requirement: >-
+      Independently freeze and verify the M7g norm congruence, exact
+      23-of-27 exclusion, complete four-form and marked-subset census,
+      general integral spectral lift, balanced weight-fourteen shell
+      reductions, imported complementary-Fano theorem, and every local
+      outside-equation scope veto.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave208-m7g-norm-divisibility/package-manifest.sha256"
+      - "attempts/wave208-marked-m7g-proof-b/package-manifest.sha256"
+      - "attempts/wave208-integer-lift-proof-a/package-manifest.sha256"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/wave208-global-residual-verifier/package-manifest.sha256"
+      - "verification/2026-07-31-wave208-integration-audit.md"
+    note: >-
+      The three source suites pass 8+5+10 tests, the imported Wave94 suite
+      passes 12 tests, and the clean-room Wave208 suite passes 33 tests. All
+      55 entries across the four Wave208 manifests match. The verifier adds
+      explicit outside-row countercontrols. No endpoint or target status is
+      promoted.
+
+  - id: O-WAVE208-RANK3-TRADE-GLOBALIZATION
+    requirement: >-
+      Classify or exclude the surviving rank-three marked branch: the
+      integer equation Ab=3b with balanced point support 7+7 or 10+10,
+      respectively five or two selected opposite-sign intersections, all
+      selected-line cross counts, all 99 point equations, and the complete
+      231-line incidence signature.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave208-marked-m7g-proof-b/derivation.md"
+      - "attempts/wave208-marked-m7g-proof-b/local-controls.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/2026-07-31-wave208-orchestrator.md"
+      - "attempts/wave209-rank3-trade-proof-a/package-manifest.sha256"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/wave209-four-survivor-verifier/package-manifest.sha256"
+    note: >-
+      Wave 209 reduces weight 14 to one rooted support type, 204 marked
+      graphs, and 4480 deficit bijections. At weight 20 it verifies 352
+      aggregate rows; a new DERIVED selected-line cap leaves 346. None names
+      the outside adjacency or completes the 231-line frame.
+
+  - id: O-WAVE208-RANK4-NORM56-GLOBALIZATION
+    requirement: >-
+      Classify or exclude the three surviving rank-four marked forms by
+      combining their integer Aq=-4q, q^2=56 residuals with all 231 triangle
+      sums, the triangle-intersection eigenspaces, binary and ternary residue
+      constraints, and every outside degree/common-neighbor equation.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave208-marked-m7g-proof-b/derivation.md"
+      - "attempts/wave208-marked-m7g-proof-b/exact-results.json"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/2026-07-31-wave208-orchestrator.md"
+      - "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256"
+      - "verification/wave209-rank4-point-signature-verifier/audit.md"
+      - "verification/wave209-rank4-point-signature-verifier/package-manifest.sha256"
+    note: >-
+      Exact Wave 209 Farkas certificates remove 66 of the 83 labelled
+      branches in each form and leave 17 per form, 51 total. The survivors
+      are anonymous point and triangle censuses; no form is excluded and no
+      Aq=-4q adjacency realization is supplied.
+
+  - id: O-WAVE208-RESIDUAL-POINT-CODE-WEIGHTS
+    requirement: >-
+      Exclude or construct every remaining point-code weight 14, 17, 20,
+      and 23. For balanced weight 14, close all six q-squared shells,
+      including the one-cross-edge q=0 case and the complementary-Fano
+      alpha=0, beta=6, k=2,3,4 cases, using checked global equations rather
+      than aggregate residue tables.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave208-integer-lift-proof-a/derivation.md"
+      - "attempts/wave208-integer-lift-proof-a/failed-routes.md"
+      - "verification/wave208-global-residual-verifier/audit.md"
+      - "verification/2026-07-31-wave208-integration-audit.md"
+    note: >-
+      The integral spectral split and complete residue tables are verified,
+      but they exclude no residual weight. The hostile 22-vertex control
+      satisfies every displayed internal equation and remains explicitly
+      non-completable from those premises alone.
+
+  - id: O-WAVE209-SCOPED-CHECKPOINT
+    requirement: >-
+      Independently reconstruct the complete Wave209 rank-three and
+      rank-four labelled finite reductions, replay every Farkas certificate
+      and positive control, distinguish the 352 aggregate catalog from the
+      346 added-cap rows, and preserve all outside-completion status walls.
+    critical: true
+    status: PASS_SCOPED
+    evidence:
+      - "attempts/wave209-rank3-trade-proof-a/package-manifest.sha256"
+      - "verification/wave209-four-survivor-verifier/package-manifest.sha256"
+      - "attempts/wave209-rank4-norm56-proof-b/package-manifest.sha256"
+      - "verification/wave209-rank4-point-signature-verifier/package-manifest.sha256"
+      - "verification/2026-07-31-wave209-integration-audit.md"
+    note: >-
+      All 43 manifest entries and 41 source/verifier tests pass. The
+      rank-three verifier qualifies 352 as aggregate-only and records the
+      separate DERIVED 346 cap. The rank-four verifier transports all 198
+      dual certificates and 51 controls. No global status is promoted.
+
+  - id: O-WAVE209-INDEPENDENT-346-PROMOTION
+    requirement: >-
+      Reconstruct independently, without importing the Wave209 rank-three
+      verifier implementation, the selected-line degree-three theorem and
+      the exact removal of six x=4 degree-four-star rows from the 352-row
+      aggregate table.
+    critical: false
+    status: UNKNOWN
+    evidence:
+      - "verification/wave209-four-survivor-verifier/post-source-audit.json"
+      - "verification/wave209-four-survivor-verifier/audit.md"
+      - "verification/2026-07-31-wave209-orchestrator.md"
+    note: >-
+      The implication is short and its six rows are archived, but it was a
+      verifier discovery. It remains DERIVED until an independent lane
+      reproduces both the theorem and complete row delta.
+
+  - id: O-WAVE209-NAMED-POINT-LINE-COUPLING
+    requirement: >-
+      Couple each surviving point signature to the same named residual
+      triangle and outside adjacency data: every triangle must contain three
+      named points with q-sum t, every point must lie on seven named
+      triangles with incident t-sum 3q, all residual Ct=0 rows must hold, and
+      the triangle graph must decompose into the 99 point-star K7 cliques.
+    critical: true
+    status: UNKNOWN
+    evidence:
+      - "attempts/wave209-rank3-trade-proof-a/derivation.md"
+      - "attempts/wave209-rank4-norm56-proof-b/derivation.md"
+      - "verification/2026-07-31-wave209-integration-audit.md"
+      - "verification/2026-07-31-wave209-orchestrator.md"
+    note: >-
+      Separate point, line, marked, and aggregate controls all survive. A
+      proof must now enforce their shared naming and adjacency rather than
+      repeat a marginal census.

@@ -1,0 +1,71 @@
+role: verifier
+date_utc: 2026-08-01T01:58:17Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: VERIFIED
+scope: >-
+  Source-blind hostile verification of the conditional Wave 207
+  incidence-kernel correction, weight-eight M7g classification and exact
+  canonical enumerations, mixed-center Gram algebra, point-code and polar
+  supplements, parameter-only ternary distance floor, weight-fourteen sign
+  balance, and restricted 23-vertex local certificate, while preserving the
+  unresolved global endpoint.
+inputs:
+  - path: verification/wave207-incidence-tensor-rigidity/audited-inputs.sha256
+    sha256: de0c57f64a3bcd2af975e4d733c6dcbb89c8166e5bb7107325a4288825f9e17d
+  - path: attempts/wave207-incidence-tensor-code-proof-a/package-manifest.sha256
+    sha256: 544e9d469dc0666ff3463f5c7f3b41a4ad3acfde857100c422dd3acea4c6d8ab
+  - path: attempts/wave207-mixed-four-center-proof-b/package-manifest.sha256
+    sha256: 87158d7931f6f2440bb176670368b112055b84a0e358a1b6b8ea18cb630e756d
+  - path: attempts/wave207-ternary-adjacency-code-bridge/package-manifest.sha256
+    sha256: 31e3abf3a7e16bf80eb8de4721c683f41d4d20d55f90564398e4d638b3414f99
+  - path: attempts/wave207-m7g-incidence-bridge/package-manifest.sha256
+    sha256: 3fa21f164fd7a7afb13c546447e3a42f9ae870d2d1b8cd5030d254ee61a5c561
+  - path: attempts/wave207-kernel-endpoint-proof-c/package-manifest.sha256
+    sha256: bb0a3e8b4821f7533330fcdd9b0fb58085eaefcb2281f387b7356784efacd2e6
+method: >-
+  Freeze and hash a hostile protocol before reading Wave 207; verify all
+  sealed input and discovery manifests; replay discovery suites with the
+  repository virtual environment; inspect Kaipa--Pradhan arXiv:2405.12011v1;
+  and independently implement exact F3 row reduction, projective and
+  Veronese geometry, relation and polar enumeration, Gram-radical and
+  symmetric-transition checks, signed-neighbor Farkas certificates, and a
+  parser/checker for the frozen 23-vertex candidate without importing any
+  Wave 207 discovery module.
+command: |-
+  .\.venv\Scripts\python.exe -B verification\wave207-incidence-tensor-rigidity\independent_check.py --write
+  .\.venv\Scripts\python.exe -B verification\wave207-incidence-tensor-rigidity\independent_check.py --verify
+  .\.venv\Scripts\python.exe -B -m unittest -v verification\wave207-incidence-tensor-rigidity\test_independent_check.py
+  .\.venv\Scripts\python.exe -B attempts\wave207-incidence-tensor-code-proof-a\exact_check.py --verify
+  .\.venv\Scripts\python.exe -B -m unittest -v attempts\wave207-incidence-tensor-code-proof-a\test_exact_check.py
+  .\.venv\Scripts\python.exe -B attempts\wave207-mixed-four-center-proof-b\exact_check.py --verify attempts\wave207-mixed-four-center-proof-b\exact-results.json
+  .\.venv\Scripts\python.exe -B -m unittest discover -s attempts\wave207-mixed-four-center-proof-b -p "test_*.py" -v
+  .\.venv\Scripts\python.exe -B attempts\wave207-ternary-adjacency-code-bridge\exact_check.py --verify attempts\wave207-ternary-adjacency-code-bridge\exact-results.json
+  .\.venv\Scripts\python.exe -B -m unittest -v attempts\wave207-ternary-adjacency-code-bridge\test_exact_check.py
+  .\.venv\Scripts\python.exe -B attempts\wave207-m7g-incidence-bridge\exact_check.py --verify
+  .\.venv\Scripts\python.exe -B -m unittest -v attempts\wave207-m7g-incidence-bridge\test_exact_check.py
+  .\.venv\Scripts\python.exe -B attempts\wave207-kernel-endpoint-proof-c\exact_check.py --verify attempts\wave207-kernel-endpoint-proof-c\exact-results.json
+  .\.venv\Scripts\python.exe -B -m unittest -v attempts\wave207-kernel-endpoint-proof-c\test_exact_check.py
+outputs:
+  - path: verification/wave207-incidence-tensor-rigidity/protocol-freeze.md
+    sha256: e381877375f1f5f270e7ad064db570494a7df12dc0bbf01a0df0d24b67884444
+  - path: verification/wave207-incidence-tensor-rigidity/audit.md
+    sha256: 2234c7b6029f0b5f41cac6c93f4208b489e7fc27628dc7dc2b518bd75b718ae4
+  - path: verification/wave207-incidence-tensor-rigidity/literature-source-audit.md
+    sha256: 4f8ccc1db4fb26767d04e0393866030b8ec9eb7ae17edbe05d554727c5193af9
+  - path: verification/wave207-incidence-tensor-rigidity/replay-log.md
+    sha256: bc5885c5a02a535c2b2ed42852f8601273f3f8c1c71096b68c53b33c4a187cb2
+  - path: verification/wave207-incidence-tensor-rigidity/independent_check.py
+    sha256: 6448959fa9ad3988d175c9e96540a2be737c81d435683af307f4f7cf9338ad10
+  - path: verification/wave207-incidence-tensor-rigidity/test_independent_check.py
+    sha256: ebef896cec9dc3d10224864a29068b2f5ec2e5ce15594d3cdb3c6b33a6b7fec2
+  - path: verification/wave207-incidence-tensor-rigidity/independent-results.json
+    sha256: da5d43852a33efda699af210ea13f871c31ca83f3b933a2972a6e79f1fe2250a
+limitations:
+  - Every endpoint conclusion remains conditional on a hypothetical prism-free n3=4158 rank-11 endpoint.
+  - The unique statement for M7g is projective-orbit uniqueness; a labelled representative has four concurrent-secant decompositions.
+  - Exactly four of 27 polar restrictions are excluded; 23 remain.
+  - The local certificate checks only 23 induced Ab coordinates and omits 76 outside coordinates and global completion.
+  - The frozen M7g failed-routes note says 91 omitted vertices; the correct arithmetic is 76.
+  - The parameter-only theorem proves d(ker_F3 A)>=12 and weight-14 balance only; d>=24 and weights 14,17,20,23 remain unresolved.
+  - No endpoint exclusion, graph construction, counterexample, Q>=7060 proof, strict n3 improvement, or Conway-99 resolution follows.
+  - Primary-source PDF and e-print bytes were inspected transiently and removed before packaging; only URL, version, hashes, and source-line mapping remain.

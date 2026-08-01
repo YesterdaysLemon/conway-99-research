@@ -1,0 +1,12 @@
+7d952c24d4a26a84fcc928e3d2d64662091ef2e93995f18454837d2af57470fe  attempts/wave209-rank4-norm56-proof-b/aggregate-controls.json
+443f29fa1d60751cc651d700247d741412f613678bb1778feba89bc652a5b99c  attempts/wave209-rank4-norm56-proof-b/derivation.md
+268cf881d594b4e5ad718a29379205bc8a3b71180e412d28ecda91257bac0925  attempts/wave209-rank4-norm56-proof-b/exact_check.py
+c490b7fbe287c7c1cfe7feccb68ba6677c25d22e292439202c3f1826f964a13f  attempts/wave209-rank4-norm56-proof-b/exact-results.json
+9a0d3cd7dc82cccd0bd8dc8036d377c26c17c1448e961e24b79d298209c66d84  attempts/wave209-rank4-norm56-proof-b/failed-routes.md
+9ec90501850fc05c85691d82baba473beeb8374bc5f56bb39790d5f76084105e  attempts/wave209-rank4-norm56-proof-b/input-freeze.sha256
+4285d2052c71bf501cf9fc266ddae0d8684075476c85bd29ef1f3668291d338f  attempts/wave209-rank4-norm56-proof-b/point-signature-controls.json
+534ca08191bba01ed5e7301f2cdcb9e1279f31a77267dec3b99c130f5ec55482  attempts/wave209-rank4-norm56-proof-b/protocol.md
+5d7e4f4ee6794b6cf2c7a236bc6ade4ccf9a87e84e18e065331558df8216d9dc  attempts/wave209-rank4-norm56-proof-b/README.md
+1c73dc8c17fdda44df5caff6a3ae3538b63231c370f15d12dd4ffa965ce2e021  attempts/wave209-rank4-norm56-proof-b/run-report.yaml
+744648f3dbf669a6f42aecce0154a373cf40fc4f3640a599786dbfee1adb4e3f  attempts/wave209-rank4-norm56-proof-b/test_exact_check.py
+73ebf9dc89ecb8c7a69319768a03fb20875baa3e713a607cf96e7294ff41f1ae  agents/2026-07-31-wave209-rank4-norm56-proof-b.md

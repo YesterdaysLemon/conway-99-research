@@ -1,0 +1,12 @@
+1887c3e25d82ab8e3b396b601033c18ce01ae91702a53ad554c585f1c2cfc6b3  attempts/wave210-rank4-point-line-coupling-proof-b/coarse-q-type-controls.json
+a55937703d9d9f44aa9d7b0db87e3eeeab4e6c17d33ded8b45a181f02dc52311  attempts/wave210-rank4-point-line-coupling-proof-b/coupling-certificates.json
+554714c96a5f1baa822bfcf654bceb78ad50b40c92fbde187c850cd7a618b758  attempts/wave210-rank4-point-line-coupling-proof-b/coupling_check.py
+95ddb1aca3bed92bb11b56065c7c17711762b453164eed4d7cd927a4032a3cd4  attempts/wave210-rank4-point-line-coupling-proof-b/derivation.md
+9f92445ab0e21e8dbfd8ed64ab8daa8f54e282898de4156d3a8a282fac26eefc  attempts/wave210-rank4-point-line-coupling-proof-b/exact-results.json
+058979bd98ad66c7cb04ac9ca7a1dba6745693738514681609a790f8140c0331  attempts/wave210-rank4-point-line-coupling-proof-b/failed-routes.md
+5b97f388ee866e0cf8854e66f001311f25ed96ee207966468581225b4b74df03  attempts/wave210-rank4-point-line-coupling-proof-b/input-freeze.sha256
+87eda5329dc4407a9a918a4b846d041fedbede5fbef5c37a7b207f901ea1de3f  attempts/wave210-rank4-point-line-coupling-proof-b/protocol.md
+bb0730a62803a13c7cee67999f6ea78dbd375b5cf70378acfb0afd61c5342772  attempts/wave210-rank4-point-line-coupling-proof-b/README.md
+5b9b8acc9df15c27aef18d98c11fa1e117bf3190d264bf0debf086b0d43b3d19  attempts/wave210-rank4-point-line-coupling-proof-b/run-report.yaml
+ba3750099e3a9b6e3731291c828fa7b4796619dccbce8d0abaec9e8b2d1e976d  attempts/wave210-rank4-point-line-coupling-proof-b/test_coupling_check.py
+e5e9b6f625daa58fb87341607a273fd2bb2cef93afd755d2c9176e2ed7da53c5  agents/2026-07-31-wave210-rank4-coupling-proof-b.md

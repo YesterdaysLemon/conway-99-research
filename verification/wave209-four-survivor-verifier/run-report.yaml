@@ -1,0 +1,73 @@
+role: verifier
+date_utc: 2026-08-01T03:42:19Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: VERIFIED
+scope: >-
+  Independently reproduce and post-source audit the sealed conditional
+  Wave 209 rank-three signed-trade proof-A package under its exact aggregate,
+  selected-union, line-moment, and global UNKNOWN walls; record the new
+  six-row selected-line tightening as DERIVED only.
+inputs:
+  - path: AGENTS.md
+    sha256: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+  - path: attempts/wave209-four-survivor-globalization/protocol.md
+    sha256: 3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196
+  - path: verification/2026-07-31-wave208-integration-audit.md
+    sha256: eb46057b18ce4d0c0f4c1bd2b4377509c0392194c5cbaa04cd765151bcc3c754
+  - path: logs/2026-07-31-wave208-public-checkpoint.json
+    sha256: af31d56635f47b0a2c8d961fa813a34590d53773c022211b7cdc39731c0cb77b
+  - path: attempts/wave209-rank3-trade-proof-a/package-manifest.sha256
+    sha256: 521c7ba3e0b34a563f30cc6251c053fe250beb000ff0a808d57fc0a6dcec5ff1
+  - path: verification/wave209-four-survivor-verifier/input-freeze.sha256
+    sha256: af8d87f06f80853ce5631bdccbde8e505f2407dd5416ea26c58a466853c0a6c7
+method: >-
+  Freeze claims and hostile tests before source inspection; reconstruct
+  (R-3K)alpha coordinatewise; enumerate labelled rooted graphs, deficit
+  bijections, marked subsets, graphical degree/outside shells, and line-type
+  moments with standard-library code; verify complete source manifest; replay
+  source and independent tests; compare complete finite result sets; attack
+  mutations, symmetries, loop bounds, and omitted outside/global equations.
+command: >-
+  .venv\Scripts\python.exe -B
+  verification\wave209-four-survivor-verifier\independent_rank3.py --verify ;
+  .venv\Scripts\python.exe -B
+  verification\wave209-four-survivor-verifier\post_source_audit.py --verify ;
+  .venv\Scripts\python.exe -B
+  attempts\wave209-rank3-trade-proof-a\exact_check.py --verify ;
+  .venv\Scripts\python.exe -B
+  attempts\wave209-rank3-trade-proof-a\test_exact_check.py ;
+  .venv\Scripts\python.exe -B -m unittest discover -s
+  verification\wave209-four-survivor-verifier -p test_*.py -v ;
+  .venv\Scripts\python.exe -B -m py_compile
+  verification\wave209-four-survivor-verifier\independent_rank3.py
+  verification\wave209-four-survivor-verifier\post_source_audit.py
+  verification\wave209-four-survivor-verifier\test_independent_rank3.py
+  verification\wave209-four-survivor-verifier\test_post_source_audit.py
+  attempts\wave209-rank3-trade-proof-a\exact_check.py
+  attempts\wave209-rank3-trade-proof-a\test_exact_check.py
+outputs:
+  - path: verification/wave209-four-survivor-verifier/protocol.md
+    sha256: 5914a3f874e26f7f29b96055e7ae63d2938fa37a50b513d71946947dfc1d991f
+  - path: verification/wave209-four-survivor-verifier/independent_rank3.py
+    sha256: d8ac41f650837108910a5182dc5ab8112d6881099c081a07b67b5f1243e4501d
+  - path: verification/wave209-four-survivor-verifier/exact-results.json
+    sha256: 03b7a75882d663424f5c8e5ca5df5edb7423bd4509c1ec3d0d154fe393e53e11
+  - path: verification/wave209-four-survivor-verifier/test_independent_rank3.py
+    sha256: b4ac0b38a59cf8a11777d56e400a64b37c27b1343e4fb3f0b44d1a88a6d76757
+  - path: verification/wave209-four-survivor-verifier/post_source_audit.py
+    sha256: 93d39ac187363aa62a200d54c77a0e05a134ca91e4ba560079fa63d2b147121e
+  - path: verification/wave209-four-survivor-verifier/post-source-audit.json
+    sha256: 5916440ccaf27e6fb20c1b4f31dd71e907badaf3cc7eceaf32cbfead8eaf103b
+  - path: verification/wave209-four-survivor-verifier/test_post_source_audit.py
+    sha256: b39ac4c2d5f33d4225396b6a3ccc3bc603cef1eca085c9f1d4c285c951883903
+  - path: verification/wave209-four-survivor-verifier/audit.md
+    sha256: 20f901d53faec37931e05da52df1355dc051030766b8557442c45c3db8910319
+  - path: agents/2026-07-31-wave209-rank3-verifier.md
+    sha256: 87cdc48b7f9df9ffe8061f394579f21034d788dc4553db82cf9416216bd49680
+limitations:
+  - The 352 source rows are verified only as aggregate necessary profiles; they are not graphs.
+  - The six-row reduction to 346 is new DERIVED verifier work and requires independent promotion.
+  - The 346 remaining aggregate profiles may fail further selected-line or outside coupling.
+  - Line-type and norm feasibility does not supply a 231-line incidence realization.
+  - No rank-four branch, 99-vertex graph, nonexistence certificate, endpoint, n3, Q>=7060, novelty, or priority claim follows.
+  - Conway-99, the rank-11 endpoint, and n3=4158 remain UNKNOWN.

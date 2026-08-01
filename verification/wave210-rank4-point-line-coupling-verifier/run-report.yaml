@@ -1,0 +1,45 @@
+role: verifier
+date_utc: 2026-08-01T04:27:04Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: UNKNOWN
+scope: >-
+  Independent verification of the conditional Wave210 rank-four
+  point-to-residual-triangle coupling source package, its seven survivor
+  representatives, and transport to 51 labelled branches.
+inputs:
+  - path: attempts/wave209-rank4-norm56-proof-b/aggregate-controls.json
+    sha256: 7d952c24d4a26a84fcc928e3d2d64662091ef2e93995f18454837d2af57470fe
+  - path: attempts/wave209-rank4-norm56-proof-b/point-signature-controls.json
+    sha256: 4285d2052c71bf501cf9fc266ddae0d8684075476c85bd29ef1f3668291d338f
+  - path: attempts/wave209-rank4-norm56-proof-b/exact-results.json
+    sha256: c490b7fbe287c7c1cfe7feccb68ba6677c25d22e292439202c3f1826f964a13f
+  - path: verification/wave209-rank4-point-signature-verifier/independent-results.json
+    sha256: 404dab594f3223ccb49bf8e072c0c1dff8a579985ddb992947959f1d8eea74de
+  - path: attempts/wave210-rank4-point-line-coupling-proof-b/package-manifest.sha256
+    sha256: 7eb45280b61e1612f4d70aa95922b7821e16aa3c426832eadb8995809d5cff78
+method: >-
+  Sealed a source-blind protocol and deterministic weaker incidence-system
+  hashes; independently audited the necessary equations; then unsealed and
+  validated all source manifest entries. The blind system did not match the
+  source's full exact local-triple system, so promotion was vetoed.
+command: >-
+  .\.venv\Scripts\python.exe
+  verification/wave210-rank4-point-line-coupling-verifier/independent_verify.py;
+  .\.venv\Scripts\python.exe
+  attempts/wave210-rank4-point-line-coupling-proof-b/coupling_check.py;
+  .\.venv\Scripts\python.exe -m unittest
+  attempts/wave210-rank4-point-line-coupling-proof-b/test_coupling_check.py
+outputs:
+  - path: verification/wave210-rank4-point-line-coupling-verifier/blind-results.json
+    sha256: 9f6672f94c95afff15190a060b3a6ba5d6cdc7d6951783204821a887c7a3cb83
+  - path: verification/wave210-rank4-point-line-coupling-verifier/audit.md
+    sha256: d39850ef87de73b9e428a05fc25c08bc0065db521aa505938cde50726606f269
+  - path: agents/2026-07-31-wave210-rank4-verifier.md
+    sha256: dc27559fc7d3a0e3e04b7c4340ff0bea2f64435b1619fe8c9b25005f1d13be02
+limitations: >-
+  The combined archived replay and unittest command exceeded the 64-second
+  tool limit without captured completion. The blind relaxation used fixed
+  control supports and separate point roles, not the source's full admissible
+  signature universe and exact local triples. Archived Farkas vectors,
+  51-branch transport, and hostile mutations therefore remain pending. Rank
+  three and the global target remain UNKNOWN.

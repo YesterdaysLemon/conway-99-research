@@ -1,0 +1,144 @@
+{
+  "balanced_weight14_q_squared14_branch_excluded": false,
+  "balanced_weight14_shells": [
+    {"h": -16, "q_squared": 70},
+    {"h": -10, "q_squared": 56},
+    {"h": -4, "q_squared": 42},
+    {"h": 2, "q_squared": 28},
+    {"h": 8, "q_squared": 14},
+    {"h": 14, "q_squared": 0}
+  ],
+  "complementary_fano_import": {
+    "cross_degree": 4,
+    "design": "2-(7,4,2)",
+    "import_scope": "verified norm-14 integral -4 eigenvector theorem",
+    "outside_vertex_meets_at_most_one_per_sign": true,
+    "outside_vertices_meeting_neither_sign": 15,
+    "outside_vertices_meeting_one_of_each_sign": 70,
+    "same_sign_edges": 0,
+    "support_edge_cap": 31,
+    "unit_sign_class_sizes": [7, 7]
+  },
+  "complete_graph_certificate": false,
+  "complete_nonexistence_certificate": false,
+  "exclusive_shapes": {
+    "k2_smaller_side": "K3",
+    "k3_cross_edges": 0,
+    "k3_sides": ["C4", "C4"],
+    "k4_smaller_side": "K3",
+    "k_values": [2, 3, 4],
+    "labelled_C4_survivors": 3,
+    "labelled_four_vertex_graphs_checked": 64
+  },
+  "global_status": "UNKNOWN",
+  "hostile_partial_control": {
+    "all_displayed_Aq_equals_minus4q": true,
+    "all_displayed_Ax_equals_3z": true,
+    "all_displayed_Az_equals_4x_minus_z": true,
+    "degree_multiset": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6],
+    "edges": 52,
+    "full_outside_equations_implied": false,
+    "global_completion_implied": false,
+    "hostile_extension_preserves_upper_caps": true,
+    "hostile_outside_Ax_residual": 1,
+    "hostile_outside_Az_residual": 1,
+    "local_triangle_upper_cap": true,
+    "outside_vertices_missing": 77,
+    "pair_common_neighbor_caps": true,
+    "vertices": 22
+  },
+  "norm14_overlap": {
+    "alpha_one_excluded": true,
+    "alpha_one_maximum_other_side_endpoints": 3,
+    "alpha_one_patterns": [
+      {
+        "counts": [0, 1, 5, 2, 2, 4, 1, 5],
+        "left_deficits": [0, 0, 0, 0, 0],
+        "multiplicity": 21,
+        "right_deficits": [2, 2]
+      },
+      {
+        "counts": [1, 0, 2, 5, 4, 2, 5, 1],
+        "left_deficits": [2, 2],
+        "multiplicity": 21,
+        "right_deficits": [0, 0, 0, 0, 0]
+      }
+    ],
+    "alpha_one_required_endpoints": 4,
+    "capacity": {
+      "0": {"labelled_assignments": 3003, "outside_token_capacity_survivors": 651},
+      "1": {"labelled_assignments": 24010, "outside_token_capacity_survivors": 42},
+      "2": {"labelled_assignments": 41895, "outside_token_capacity_survivors": 0},
+      "3": {"labelled_assignments": 13230, "outside_token_capacity_survivors": 0},
+      "4": {"labelled_assignments": 441, "outside_token_capacity_survivors": 0}
+    },
+    "derived": {
+      "opposite_sign_overlap": 6,
+      "same_sign_overlap": 0,
+      "support_union_size": 22,
+      "z_negative_coordinates": 8,
+      "z_positive_coordinates": 8
+    }
+  },
+  "rank11_endpoint": "UNKNOWN",
+  "residue_shell_quantization": {
+    "all_compositions_retained": true,
+    "canonical_table_sha256": "22d837cedaf21b0dc2fced9e805b5aa27706a1747bd49dc6acfd65b85c3df713",
+    "compositions_per_weight": {"17": 3, "20": 4, "23": 4},
+    "identity": "Q^2=99*t*(9-t)+162*L",
+    "rows_are_graphs": false,
+    "rows_per_composition": {
+      "17": [6, 5, 4],
+      "20": [8, 7, 6, 5],
+      "23": [8, 7, 7, 6]
+    }
+  },
+  "source_code_imported": false,
+  "spectral_split": {
+    "AQ": "-4*Q",
+    "AR": "3*R",
+    "Q": "9*(z-x)-t*1",
+    "Q_coordinate_residue_mod9": "-t",
+    "Q_squared": "63*(3*(w-h)+t^2)",
+    "R": "11*(4*x+3*z)-6*t*1",
+    "R_squared": "77*(11*(4*w+3*h)-18*t^2)",
+    "sum_Q": 0,
+    "sum_R": 0,
+    "z_squared": "(4*w-h+6*t^2)/3"
+  },
+  "weights_excluded": {"14": false, "17": false, "20": false, "23": false},
+  "zero_q_branch": {
+    "restricted_edge_cap_on_support": 31,
+    "rows": [
+      {
+        "cross_edges": 1,
+        "minimizing_degree_sequence": [3, 3, 3, 3, 3, 3, 4],
+        "minimum_same_side_wedges": 24,
+        "same_side_common_neighbor_capacity": 31,
+        "same_sign_edges_each_side": 11,
+        "status": "SURVIVES_THIS_ARGUMENT",
+        "total_support_edges": 23
+      },
+      {
+        "cross_edges": 3,
+        "minimizing_degree_sequence": [3, 3, 3, 3, 4, 4, 4],
+        "minimum_same_side_wedges": 30,
+        "same_side_common_neighbor_capacity": 30,
+        "same_sign_edges_each_side": 12,
+        "status": "EXCLUDED_BY_EQUALITY_TRIANGLE_PARITY",
+        "total_support_edges": 27
+      },
+      {
+        "cross_edges": 5,
+        "minimizing_degree_sequence": [3, 3, 4, 4, 4, 4, 4],
+        "minimum_same_side_wedges": 36,
+        "same_side_common_neighbor_capacity": 29,
+        "same_sign_edges_each_side": 13,
+        "status": "EXCLUDED_BY_WEDGE_CAPACITY",
+        "total_support_edges": 31
+      }
+    ],
+    "surviving_cross_edges": 1,
+    "surviving_degree_sequence_each_side": [4, 3, 3, 3, 3, 3, 3]
+  }
+}

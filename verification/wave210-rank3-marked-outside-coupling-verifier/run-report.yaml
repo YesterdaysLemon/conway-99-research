@@ -1,0 +1,38 @@
+role: verifier
+date_utc: 2026-08-01T04:19:50Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+verdict: PASS / NO VETO
+scope: >-
+  Sealed conditional Wave 210 weight-14 selected-union coupling: complete
+  labelled H, packing, deficit-bijection, selected-union, and local one-factor
+  checks. No outside-block D completion or 99-vertex graph claim.
+inputs:
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/package-manifest.sha256
+    sha256: d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/input-freeze.sha256
+    sha256: 717b36cfbfec5d6c22cc968518e08a72e0a9764d1b5ca662dc99f31bd190c11d
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/pre-source-comparison-seal.sha256
+    sha256: 8fac8f07e3c3ca2605e30e7e08387586d5ef028881d0fcb865b73c0676f34067
+method: >-
+  Source-blind protocol freeze; independent bitmask census; brute-force full
+  polar/support automorphism groups; exact rational-rank implication from the
+  Gram identity; independent perfect-matching recursion; full labelled-set and
+  orbit-member comparison; manifest audit; hostile mutations.
+command: >-
+  .venv\Scripts\python.exe -B
+  verification\wave210-rank3-marked-outside-coupling-verifier\verify_sealed.py
+outputs:
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/independent-results.json
+    sha256: 350134f2e5593d3d83e3463b1a536622db294a127c5fccab05a7b42858ce42bd
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/independent-hostile-tests.json
+    sha256: ca8f9381bf1b63be957007e0f038d9dbdb50ae2b2951674ca1c52fdace24acc2
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/post-source-audit.json
+    sha256: 52c3e04799cc25547f8caad057b7cf224a37bbdb275a6844f806657b0fab76bb
+limitations:
+  - The result is conditional on the frozen Wave 209 rank-three weight-14 branch.
+  - The 55296 survivors meet necessary selected-union and local conditions only.
+  - No 85-by-85 outside adjacency block D is constructed or excluded.
+  - No 99-vertex SRG construction, endpoint exclusion, or Conway-99 resolution is claimed.
+  - The presealed checker's direct --verify mode has a tuple-versus-JSON-list comparison defect; verify_sealed.py normalizes representation without changing the enumeration.
+global_status: UNKNOWN

@@ -1,0 +1,162 @@
+{
+  "canonical_support": {
+    "coefficients": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "column_rank": 4,
+    "columns": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1
+      ]
+    ],
+    "composition": {
+      "1": 4,
+      "2": 4
+    },
+    "concurrent_pairs": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "every_three_independent": true,
+    "quadratic_relation_nullity": 1,
+    "quadratic_veronese_rank": 7,
+    "signed_first_moment": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "signed_second_moment_zero": true
+  },
+  "limitations": [
+    "the canonical support is not a 231-column endpoint construction",
+    "membership of the signed word in a target im(B^T) is not constructed",
+    "the four forced anticompleteness patterns are not excluded"
+  ],
+  "relation_code": {
+    "dimension": 4,
+    "projective_circuit_supports": {
+      "4": 12,
+      "5": 8
+    },
+    "weight4_circuits_from_two_concurrent_pairs": 6,
+    "weight_enumerator": {
+      "0": 1,
+      "4": 24,
+      "5": 16,
+      "6": 32,
+      "8": 8
+    },
+    "words": 81
+  },
+  "restricted_polar_forms": {
+    "concurrent_pair_gram_value_counts_by_rank": {
+      "0": {
+        "0": 1
+      },
+      "2": {
+        "0": 6,
+        "1": 3,
+        "2": 3
+      },
+      "3": {
+        "0": 2,
+        "1": 3,
+        "2": 3
+      },
+      "4": {
+        "1": 3,
+        "2": 3
+      }
+    },
+    "form_space_dimension": 3,
+    "forms": 27,
+    "rank_counts": {
+      "0": 1,
+      "2": 12,
+      "3": 8,
+      "4": 6
+    },
+    "zero_graph_by_rank": {
+      "0": [
+        "K8"
+      ],
+      "2": [
+        "2K4"
+      ],
+      "3": [
+        "4K2"
+      ],
+      "4": [
+        "2C4"
+      ]
+    }
+  },
+  "scope": "canonical symbolic audit of the conditional weight-eight support; no graph or 231-column endpoint search"
+}

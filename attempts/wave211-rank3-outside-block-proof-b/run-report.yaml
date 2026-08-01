@@ -1,0 +1,20 @@
+role: proof_b
+date_utc: 2026-08-01T04:20:49Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: exact linear, degree, spectral, and parity consequences of the 85x85 outside block for all three Wave 210 rank-three survivor orbits
+inputs:
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json
+    sha256: 32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/package-manifest.sha256
+    sha256: d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722
+  - path: AGENTS.md
+    sha256: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+method: exact block-algebra reduction on U=im(F^T)+<1>, exact rational and F2 ranks, conditional spectral multiplicities on K, and explicit binary linear-block hostile-control replay
+command: .venv\Scripts\python.exe -B attempts\wave211-rank3-outside-block-proof-b\exact_check.py --verify
+outputs:
+  - path: attempts/wave211-rank3-outside-block-proof-b/hostile-linear-control.json
+    sha256: 6c2ab54613c38dc9b6942ee08b9c0930957c949edcec0c8821380457d391e98e
+  - path: attempts/wave211-rank3-outside-block-proof-b/exact-results.json
+    sha256: 7064f0b4ad0f1fac2e40121c87500ae32fe8c4b532371921c2a461abf43932de
+limitations: orbit 29 survives only the linear block and fails 2416 quadratic pair equations; orbit 0 and 4 capped searches are inconclusive; no D satisfying the full quadratic block is constructed or excluded; no target automorphism is assumed; global status UNKNOWN

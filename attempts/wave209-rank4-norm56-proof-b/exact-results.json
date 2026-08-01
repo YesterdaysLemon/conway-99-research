@@ -1,0 +1,4728 @@
+{
+  "aggregate_controls": {
+    "all_orbits_have_exact_integer_controls": true,
+    "covered_labelled_branches": 249,
+    "orbit_summaries": [
+      {
+        "allowed_type_count": 531,
+        "nonzero_type_count": 62,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 113,
+          "1": 82,
+          "2": 24,
+          "3": 4
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 12,
+          "0": 175,
+          "1": 24,
+          "2": 4
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 531,
+        "nonzero_type_count": 58,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 127,
+          "1": 55,
+          "2": 40,
+          "3": 1
+        },
+        "residual_t_counts": {
+          "-1": 20,
+          "-2": 8,
+          "0": 163,
+          "1": 28,
+          "2": 4
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 513,
+        "nonzero_type_count": 48,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 139,
+          "1": 45,
+          "2": 33,
+          "3": 5,
+          "4": 1
+        },
+        "residual_t_counts": {
+          "-1": 30,
+          "-2": 3,
+          "0": 163,
+          "1": 18,
+          "2": 9
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 522,
+        "nonzero_type_count": 61,
+        "orbit_size": 24,
+        "residual_h_size_counts": {
+          "0": 128,
+          "1": 64,
+          "2": 25,
+          "3": 4,
+          "4": 2
+        },
+        "residual_t_counts": {
+          "-1": 22,
+          "-2": 5,
+          "0": 175,
+          "1": 10,
+          "2": 11
+        },
+        "transported_branch_checks": 24
+      },
+      {
+        "allowed_type_count": 522,
+        "nonzero_type_count": 47,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 126,
+          "1": 70,
+          "2": 18,
+          "3": 8,
+          "4": 1
+        },
+        "residual_t_counts": {
+          "-1": 22,
+          "-2": 7,
+          "0": 163,
+          "1": 26,
+          "2": 5
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 70,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 134,
+          "1": 49,
+          "2": 35,
+          "3": 5
+        },
+        "residual_t_counts": {
+          "-1": 12,
+          "-2": 8,
+          "0": 187,
+          "1": 4,
+          "2": 12
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 70,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 129,
+          "1": 57,
+          "2": 32,
+          "3": 5
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 10,
+          "0": 187,
+          "1": 8,
+          "2": 10
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 522,
+        "nonzero_type_count": 67,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 136,
+          "1": 49,
+          "2": 31,
+          "3": 7
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 10,
+          "0": 187,
+          "1": 8,
+          "2": 10
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 516,
+        "nonzero_type_count": 71,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 136,
+          "1": 47,
+          "2": 37,
+          "3": 1,
+          "4": 2
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 10,
+          "0": 187,
+          "1": 8,
+          "2": 10
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 525,
+        "nonzero_type_count": 67,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 126,
+          "1": 64,
+          "2": 28,
+          "3": 4,
+          "4": 1
+        },
+        "residual_t_counts": {
+          "-1": 12,
+          "-2": 10,
+          "0": 175,
+          "1": 20,
+          "2": 6
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 522,
+        "nonzero_type_count": 65,
+        "orbit_size": 24,
+        "residual_h_size_counts": {
+          "0": 129,
+          "1": 62,
+          "2": 25,
+          "3": 6,
+          "4": 1
+        },
+        "residual_t_counts": {
+          "-1": 24,
+          "-2": 4,
+          "0": 175,
+          "1": 8,
+          "2": 12
+        },
+        "transported_branch_checks": 24
+      },
+      {
+        "allowed_type_count": 522,
+        "nonzero_type_count": 51,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 124,
+          "1": 74,
+          "2": 18,
+          "3": 4,
+          "4": 3
+        },
+        "residual_t_counts": {
+          "-1": 22,
+          "-2": 7,
+          "0": 163,
+          "1": 26,
+          "2": 5
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 525,
+        "nonzero_type_count": 51,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 116,
+          "1": 87,
+          "2": 9,
+          "3": 11
+        },
+        "residual_t_counts": {
+          "-1": 24,
+          "-2": 6,
+          "0": 163,
+          "1": 24,
+          "2": 6
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 58,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 118,
+          "1": 80,
+          "2": 19,
+          "3": 4,
+          "4": 2
+        },
+        "residual_t_counts": {
+          "-1": 30,
+          "-2": 3,
+          "0": 163,
+          "1": 18,
+          "2": 9
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 537,
+        "nonzero_type_count": 68,
+        "orbit_size": 3,
+        "residual_h_size_counts": {
+          "0": 121,
+          "1": 79,
+          "2": 15,
+          "3": 5,
+          "4": 3
+        },
+        "residual_t_counts": {
+          "-1": 12,
+          "-2": 8,
+          "0": 187,
+          "1": 4,
+          "2": 12
+        },
+        "transported_branch_checks": 3
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 68,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 131,
+          "1": 56,
+          "2": 32,
+          "3": 2,
+          "4": 2
+        },
+        "residual_t_counts": {
+          "-1": 14,
+          "-2": 9,
+          "0": 175,
+          "1": 18,
+          "2": 7
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 537,
+        "nonzero_type_count": 71,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 124,
+          "1": 65,
+          "2": 29,
+          "3": 5
+        },
+        "residual_t_counts": {
+          "-1": 6,
+          "-2": 11,
+          "0": 187,
+          "1": 10,
+          "2": 9
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 73,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 126,
+          "1": 58,
+          "2": 37,
+          "3": 2
+        },
+        "residual_t_counts": {
+          "-1": 20,
+          "-2": 6,
+          "0": 175,
+          "1": 12,
+          "2": 10
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 531,
+        "nonzero_type_count": 71,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 121,
+          "1": 66,
+          "2": 34,
+          "3": 2
+        },
+        "residual_t_counts": {
+          "-1": 14,
+          "-2": 9,
+          "0": 175,
+          "1": 18,
+          "2": 7
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 72,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 131,
+          "1": 51,
+          "2": 38,
+          "3": 3
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 12,
+          "0": 175,
+          "1": 24,
+          "2": 4
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 525,
+        "nonzero_type_count": 69,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 127,
+          "1": 62,
+          "2": 28,
+          "3": 6
+        },
+        "residual_t_counts": {
+          "-1": 4,
+          "-2": 12,
+          "0": 187,
+          "1": 12,
+          "2": 8
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 528,
+        "nonzero_type_count": 76,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 121,
+          "1": 66,
+          "2": 34,
+          "3": 2
+        },
+        "residual_t_counts": {
+          "-1": 8,
+          "-2": 10,
+          "0": 187,
+          "1": 8,
+          "2": 10
+        },
+        "transported_branch_checks": 6
+      },
+      {
+        "allowed_type_count": 531,
+        "nonzero_type_count": 74,
+        "orbit_size": 12,
+        "residual_h_size_counts": {
+          "0": 122,
+          "1": 69,
+          "2": 28,
+          "3": 3,
+          "4": 1
+        },
+        "residual_t_counts": {
+          "-1": 12,
+          "-2": 10,
+          "0": 175,
+          "1": 20,
+          "2": 6
+        },
+        "transported_branch_checks": 12
+      },
+      {
+        "allowed_type_count": 531,
+        "nonzero_type_count": 81,
+        "orbit_size": 6,
+        "residual_h_size_counts": {
+          "0": 114,
+          "1": 79,
+          "2": 27,
+          "3": 3
+        },
+        "residual_t_counts": {
+          "-1": 12,
+          "-2": 10,
+          "0": 175,
+          "1": 20,
+          "2": 6
+        },
+        "transported_branch_checks": 6
+      }
+    ],
+    "warning": "these are aggregate residual signature/intersection counts, not 223 residual blocks, C*t=0 on residual rows, a 231-block incidence frame, or a 99-vertex graph"
+  },
+  "claim_label": "DERIVED",
+  "conditional_scope": "three Wave208 rank-four forms under the frozen hypothetical endpoint",
+  "input_hashes": {
+    "attempts/wave208-marked-m7g-proof-b/package-manifest.sha256": "f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc",
+    "attempts/wave209-four-survivor-globalization/protocol.md": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196",
+    "verification/wave66-spherical-code-shift/package-manifest.sha256": "a6051ebcfccab0fc9b3f9698f0024cc3284549f5148c9a12a4c6bbe08c786486"
+  },
+  "marked_branch_census": {
+    "forms": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "labelled_subsets_per_form": [
+      83,
+      83,
+      83
+    ],
+    "orbit_size_distribution": {
+      "12": 12,
+      "24": 2,
+      "3": 1,
+      "6": 9
+    },
+    "proved_constraint_relabeling_orbits": 24,
+    "target_automorphism_assumed": false,
+    "total_labelled_branches": 249
+  },
+  "parity": {
+    "imported_kernel_minimum": 8,
+    "norm14_division_available": false,
+    "odd_support": "p=q mod 2 is nonzero, A*p=0, B_S^T*p=1_8",
+    "odd_support_weight_distribution": {
+      "12": 152,
+      "16": 154,
+      "20": 116,
+      "24": 86,
+      "28": 56,
+      "32": 40,
+      "36": 24,
+      "40": 16,
+      "44": 8,
+      "48": 5,
+      "52": 2,
+      "56": 1,
+      "8": 140
+    },
+    "point_count_profiles_after_odd_support_minimum": 800,
+    "point_count_profiles_before_graph_realization": 872,
+    "q_even_excluded": true,
+    "reason": "each marked triangle sum is odd: U^Tq=-3*alpha",
+    "selected_union_integer_controls": {
+      "all_249_branches_have_norm_at_most_56": true,
+      "minimum_norm_distribution": {
+        "20": 3,
+        "23": 24,
+        "24": 24,
+        "25": 48,
+        "26": 72,
+        "32": 54,
+        "34": 24
+      },
+      "odd_coordinate_distribution": {
+        "10": 72,
+        "12": 24,
+        "14": 12,
+        "15": 12,
+        "16": 30,
+        "17": 48,
+        "18": 12,
+        "20": 3,
+        "23": 12,
+        "8": 24
+      },
+      "orbit_examples": [
+        {
+          "minimum_selected_union_norm": 23,
+          "odd_selected_union_coordinates": 23,
+          "orbit_id": 0,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 25,
+          "odd_selected_union_coordinates": 17,
+          "orbit_id": 1,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 24,
+          "odd_selected_union_coordinates": 8,
+          "orbit_id": 2,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 26,
+          "odd_selected_union_coordinates": 10,
+          "orbit_id": 3,
+          "transported_branch_checks": 24,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 23,
+          "odd_selected_union_coordinates": 15,
+          "orbit_id": 4,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 26,
+          "odd_selected_union_coordinates": 14,
+          "orbit_id": 5,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 34,
+          "odd_selected_union_coordinates": 10,
+          "orbit_id": 6,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 8,
+          "orbit_id": 7,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 2
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 8,
+          "orbit_id": 8,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 12,
+          "orbit_id": 9,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 26,
+          "odd_selected_union_coordinates": 10,
+          "orbit_id": 10,
+          "transported_branch_checks": 24,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 23,
+          "odd_selected_union_coordinates": 15,
+          "orbit_id": 11,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 24,
+          "odd_selected_union_coordinates": 16,
+          "orbit_id": 12,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 25,
+          "odd_selected_union_coordinates": 17,
+          "orbit_id": 13,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 20,
+          "odd_selected_union_coordinates": 20,
+          "orbit_id": 14,
+          "transported_branch_checks": 3,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1,
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 26,
+          "odd_selected_union_coordinates": 14,
+          "orbit_id": 15,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 26,
+          "odd_selected_union_coordinates": 18,
+          "orbit_id": 16,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 25,
+          "odd_selected_union_coordinates": 17,
+          "orbit_id": 17,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 16,
+          "orbit_id": 18,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 34,
+          "odd_selected_union_coordinates": 10,
+          "orbit_id": 19,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 12,
+          "orbit_id": 20,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1,
+                6
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                2,
+                5
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 32,
+          "odd_selected_union_coordinates": 16,
+          "orbit_id": 21,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                3,
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 25,
+          "odd_selected_union_coordinates": 17,
+          "orbit_id": 22,
+          "transported_branch_checks": 12,
+          "witness": [
+            {
+              "membership": [
+                0,
+                7
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -2
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 0
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5,
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            }
+          ]
+        },
+        {
+          "minimum_selected_union_norm": 23,
+          "odd_selected_union_coordinates": 23,
+          "orbit_id": 23,
+          "transported_branch_checks": 6,
+          "witness": [
+            {
+              "membership": [
+                4,
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                4
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                7
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                0
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                1
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                2
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                3
+              ],
+              "q": -1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                5
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            },
+            {
+              "membership": [
+                6
+              ],
+              "q": 1
+            }
+          ]
+        }
+      ],
+      "warning": "selected-union controls satisfy only the eight marked triangle sums, not Aq=-4q or any outside equation"
+    },
+    "triangle_word": "s=B^T*p=t mod 2 satisfies C*s=0 and s_S=1_8"
+  },
+  "point_signature_census": {
+    "allowed_signature_count": 2187,
+    "certificate_logic": "Farkas y has A^T y>=0 on all 2187 allowed signatures but b^T y<0",
+    "definition": "s_i(x)=-1 on T_i, +1 outside T_i when x is adjacent to its unique T_i point, and 0 otherwise",
+    "excluded_labelled_branches": 198,
+    "excluded_orbits": 17,
+    "feasible_orbits": 7,
+    "formula": "q_x=(1/3)*sum_i alpha_i*s_i(x)",
+    "orbit_summaries": [
+      {
+        "branch_count": 6,
+        "kind": "control",
+        "opposite_sign_intersections": 0,
+        "orbit_id": 0,
+        "q_value_counts": {
+          "-1": 28,
+          "-2": 0,
+          "0": 43,
+          "1": 28,
+          "2": 0
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 1,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 129,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -39,
+        "kind": "farkas",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 1,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "kind": "control",
+        "opposite_sign_intersections": 3,
+        "orbit_id": 2,
+        "q_value_counts": {
+          "-1": 20,
+          "-2": 2,
+          "0": 55,
+          "1": 20,
+          "2": 2
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 4,
+        "selected_intersection_count": 7,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 24,
+        "farkas_nonzero_coefficients": 119,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -60,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 3,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 24
+      },
+      {
+        "branch_count": 6,
+        "kind": "control",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 4,
+        "q_value_counts": {
+          "-1": 21,
+          "-2": 2,
+          "0": 52,
+          "1": 23,
+          "2": 1
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 6,
+        "farkas_nonzero_coefficients": 128,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -546,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 5,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 129,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -4896,
+        "kind": "farkas",
+        "opposite_sign_intersections": 3,
+        "orbit_id": 6,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 4,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 6,
+        "farkas_nonzero_coefficients": 128,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -9447,
+        "kind": "farkas",
+        "opposite_sign_intersections": 4,
+        "orbit_id": 7,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 6,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 6,
+        "farkas_nonzero_coefficients": 129,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -1566,
+        "kind": "farkas",
+        "opposite_sign_intersections": 4,
+        "orbit_id": 8,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 6,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 128,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -360,
+        "kind": "farkas",
+        "opposite_sign_intersections": 3,
+        "orbit_id": 9,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 4,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 24,
+        "farkas_nonzero_coefficients": 129,
+        "farkas_pointwise_minimum": 4920944517230529593,
+        "farkas_rhs": -22958564002380212635224,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 10,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 24
+      },
+      {
+        "branch_count": 6,
+        "kind": "control",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 11,
+        "q_value_counts": {
+          "-1": 23,
+          "-2": 1,
+          "0": 52,
+          "1": 21,
+          "2": 2
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "kind": "control",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 12,
+        "q_value_counts": {
+          "-1": 24,
+          "-2": 1,
+          "0": 49,
+          "1": 24,
+          "2": 1
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 108,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -15,
+        "kind": "farkas",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 13,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 3,
+        "kind": "control",
+        "opposite_sign_intersections": 0,
+        "orbit_id": 14,
+        "q_value_counts": {
+          "-1": 21,
+          "-2": 2,
+          "0": 52,
+          "1": 23,
+          "2": 1
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 4,
+        "selected_intersection_count": 4,
+        "transported_branch_checks": 3
+      },
+      {
+        "branch_count": 6,
+        "farkas_nonzero_coefficients": 126,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -216,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 15,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 3,
+        "selected_intersection_count": 5,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 49,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -6,
+        "kind": "farkas",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 16,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 127,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -54,
+        "kind": "farkas",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 17,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 104,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -63,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 18,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "same_sign_intersections": 0,
+        "selected_intersection_count": 2,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 128,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -2004,
+        "kind": "farkas",
+        "opposite_sign_intersections": 3,
+        "orbit_id": 19,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 4,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 117,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -48,
+        "kind": "farkas",
+        "opposite_sign_intersections": 3,
+        "orbit_id": 20,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 4,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 6,
+        "farkas_nonzero_coefficients": 129,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -3480,
+        "kind": "farkas",
+        "opposite_sign_intersections": 2,
+        "orbit_id": 21,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            7
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "same_sign_intersections": 0,
+        "selected_intersection_count": 2,
+        "transported_branch_checks": 6
+      },
+      {
+        "branch_count": 12,
+        "farkas_nonzero_coefficients": 128,
+        "farkas_pointwise_minimum": 0,
+        "farkas_rhs": -144,
+        "kind": "farkas",
+        "opposite_sign_intersections": 1,
+        "orbit_id": 22,
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            0,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "same_sign_intersections": 2,
+        "selected_intersection_count": 3,
+        "transported_branch_checks": 12
+      },
+      {
+        "branch_count": 6,
+        "kind": "control",
+        "opposite_sign_intersections": 0,
+        "orbit_id": 23,
+        "q_value_counts": {
+          "-1": 28,
+          "-2": 0,
+          "0": 43,
+          "1": 28,
+          "2": 0
+        },
+        "representative_form_diagonal": [
+          0,
+          0,
+          1
+        ],
+        "representative_selected_intersections": [
+          [
+            4,
+            7
+          ]
+        ],
+        "same_sign_intersections": 1,
+        "selected_intersection_count": 1,
+        "transported_branch_checks": 6
+      }
+    ],
+    "pair_tables_forced_by": "selected intersection H_ij and polar cross-edge count D_ij",
+    "single_coordinate_counts": {
+      "-1": 3,
+      "0": 60,
+      "1": 36
+    },
+    "surviving_labelled_branches": 51,
+    "warning": "integer controls are 99-row joint signature censuses, not points with adjacency or a graph"
+  },
+  "spectral_triangle_reduction": {
+    "definitions": "t=B^Tq and C=B^TB-3I",
+    "identities": [
+      "t.t=168",
+      "B*t=3*q",
+      "C*t=0",
+      "sum(t)=0",
+      "t_i=-3*alpha_i on the eight marked triangles"
+    ],
+    "projector": {
+      "coordinate_bound": "q_x^2 <= (4/9)*56 < 25, hence |q_x|<=4",
+      "identity": "F=231*P_const-21*P_0, hence P_0=(J-F)/21",
+      "point_projector_diagonal": "(E_-4)_(x,x)=4/9",
+      "selected_forms": [
+        {
+          "eigenvalues_of_21P_SS": {
+            "1": 1,
+            "3": 4,
+            "5": 2,
+            "9": 1
+          },
+          "form_diagonal": [
+            0,
+            0,
+            1
+          ],
+          "inverse_action": [
+            -7,
+            -7,
+            -7,
+            -7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "marked_minimum_zero_eigen_norm": 168
+        },
+        {
+          "eigenvalues_of_21P_SS": {
+            "1": 1,
+            "3": 4,
+            "5": 2,
+            "9": 1
+          },
+          "form_diagonal": [
+            0,
+            1,
+            0
+          ],
+          "inverse_action": [
+            -7,
+            -7,
+            -7,
+            -7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "marked_minimum_zero_eigen_norm": 168
+        },
+        {
+          "eigenvalues_of_21P_SS": {
+            "1": 1,
+            "3": 4,
+            "5": 2,
+            "9": 1
+          },
+          "form_diagonal": [
+            1,
+            0,
+            0
+          ],
+          "inverse_action": [
+            -7,
+            -7,
+            -7,
+            -7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "marked_minimum_zero_eigen_norm": 168
+        }
+      ]
+    },
+    "residual_223": {
+      "squared_norm": 96,
+      "sum": 0,
+      "value_alphabet": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "status": "UNKNOWN",
+  "unresolved_boundary": "for the 51 surviving labelled branches, couple an allowed 99-point joint signature census to actual adjacency and the controlled 223 residual triangle types, or derive a contradiction"
+}

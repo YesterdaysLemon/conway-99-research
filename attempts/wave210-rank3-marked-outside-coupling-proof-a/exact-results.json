@@ -1,0 +1,9069 @@
+{
+  "base_local_matching": {
+    "configurations_admitting_all_14_local_matchings": 4480,
+    "deficit_bijections_checked": 4480,
+    "distinct_sorted_14_neighborhood_count_signatures": 41,
+    "individual_neighborhood_perfect_matching_count_distribution": {
+      "594": 18496,
+      "604": 17344,
+      "68": 7808,
+      "78": 17536,
+      "90": 1536
+    }
+  },
+  "claim_label": "DERIVED",
+  "containment_only": {
+    "maximum_compatible_deficit_bijections": 2116,
+    "minimum_compatible_deficit_bijections": 422,
+    "patterns": [
+      {
+        "compatible_deficit_bijections": 2116,
+        "first_matching_index": 102,
+        "requirements": [
+          [],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 2116,
+        "first_matching_index": 0,
+        "requirements": [
+          [],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 2116,
+        "first_matching_index": 0,
+        "requirements": [
+          [],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 2116,
+        "first_matching_index": 4,
+        "requirements": [
+          [],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 194,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 217,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 302,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 293,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 400,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1
+          ],
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 116,
+        "requirements": [
+          [
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 9,
+        "requirements": [
+          [
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            9,
+            13
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 12,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            8,
+            12
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 116,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 112,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 116,
+        "requirements": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            8,
+            12
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 194,
+        "requirements": [
+          [
+            1,
+            5,
+            9,
+            13
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 108,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 102,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 100,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            11,
+            13
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 112,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 108,
+        "requirements": [
+          [
+            1,
+            5,
+            10
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 292,
+        "requirements": [
+          [
+            1,
+            5,
+            10,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 394,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 404,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 400,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            10,
+            12
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            5,
+            11,
+            13
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 310,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 9,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 488,
+        "requirements": [
+          [
+            1,
+            5,
+            12,
+            13
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 488,
+        "requirements": [
+          [
+            1,
+            5,
+            12,
+            13
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 194,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 202,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 194,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 214,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            8,
+            12
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 198,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 196,
+        "requirements": [
+          [
+            1,
+            5,
+            13
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            6,
+            10,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 116,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 12,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6,
+            12,
+            13
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 544,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            5,
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 15,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 133,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 198,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 194,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 134,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            9,
+            13
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            9,
+            13
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 6,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 123,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            9,
+            13
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 488,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 490,
+        "requirements": [
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 6,
+        "requirements": [
+          [
+            1,
+            8,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 508,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 515,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 116,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            8,
+            12
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            9
+          ],
+          [
+            5,
+            8,
+            12
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            5,
+            8,
+            12
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 105,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            8,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 123,
+        "requirements": [
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 214,
+        "requirements": [
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 219,
+        "requirements": [
+          [
+            1,
+            9,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 9,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 12,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            6,
+            12,
+            13
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 544,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 12,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 13,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 400,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            5,
+            11,
+            13
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 9,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            11,
+            13
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            12
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 9,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 10,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            11,
+            13
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 502,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 489,
+        "requirements": [
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 298,
+        "requirements": [
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 292,
+        "requirements": [
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 302,
+        "requirements": [
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 293,
+        "requirements": [
+          [
+            1,
+            10,
+            12
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 488,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 488,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            12,
+            13
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            10,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 10,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            11
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            6,
+            13
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            10,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            5,
+            6,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 390,
+        "requirements": [
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 104,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 102,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 33,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3
+          ],
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5
+          ],
+          [
+            5,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 140,
+        "requirements": [
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 136,
+        "requirements": [
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            5
+          ],
+          [
+            4
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            6
+          ],
+          [
+            6,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 162,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 121,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 120,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 156,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            9,
+            13
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 121,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 162,
+        "requirements": [
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 120,
+        "requirements": [
+          [
+            3,
+            5,
+            8,
+            12
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 144,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 144,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 134,
+        "requirements": [
+          [
+            3,
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            8,
+            12
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            5,
+            9,
+            13
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 20,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            11,
+            13
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 20,
+        "requirements": [
+          [
+            3,
+            5,
+            10
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            5,
+            10,
+            12
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 434,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            10,
+            12
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            11,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 7,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 8,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5,
+            12,
+            13
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            5,
+            12,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 5,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 540,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11
+          ],
+          [
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 118,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            8,
+            12
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            5,
+            13
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            6,
+            10,
+            12
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 5,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6,
+            12,
+            13
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 544,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 6,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 127,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 144,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            9,
+            13
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 5,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            9,
+            13
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 5,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 6,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            9,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 147,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            9,
+            13
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 7,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 8,
+        "requirements": [
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 99,
+        "requirements": [
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 98,
+        "requirements": [
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 104,
+        "requirements": [
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 105,
+        "requirements": [
+          [
+            3,
+            8,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 123,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            8,
+            12
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 5,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            5,
+            8,
+            12
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            5,
+            8,
+            12
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 146,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            8,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 123,
+        "requirements": [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            8,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 122,
+        "requirements": [
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 123,
+        "requirements": [
+          [
+            3,
+            9,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6,
+            12,
+            13
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 544,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6,
+            12,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 4,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12,
+            13
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            5,
+            11,
+            13
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            11,
+            13
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            12
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 3,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            5,
+            6,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            11,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 13,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            11,
+            13
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 8,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 33,
+        "requirements": [
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 16,
+        "requirements": [
+          [
+            3,
+            10,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 456,
+        "first_matching_index": 25,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            12,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 640,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            10,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 628,
+        "first_matching_index": 13,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            11
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            5,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 920,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            6,
+            13
+          ],
+          [
+            5,
+            10,
+            12
+          ],
+          [
+            5,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 592,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6,
+            13
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 2,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            10,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            11
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 624,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            6,
+            10,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 422,
+        "first_matching_index": 0,
+        "requirements": [
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            12
+          ]
+        ]
+      },
+      {
+        "compatible_deficit_bijections": 444,
+        "first_matching_index": 1,
+        "requirements": [
+          [
+            3,
+            11,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            6,
+            10
+          ]
+        ]
+      }
+    ],
+    "patterns_with_at_least_one_assignment": 232
+  },
+  "global_status": "UNKNOWN",
+  "inputs": {
+    "AGENTS.md": "4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3",
+    "attempts/wave209-four-survivor-globalization/protocol.md": "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196",
+    "attempts/wave209-rank3-trade-proof-a/package-manifest.sha256": "521c7ba3e0b34a563f30cc6251c053fe250beb000ff0a808d57fc0a6dcec5ff1",
+    "verification/wave209-four-survivor-verifier/package-manifest.sha256": "7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91"
+  },
+  "label_coverage": {
+    "capacity_compatible_deficit_bijections": 4480,
+    "case_orbit_size_distribution": {
+      "192": 1,
+      "384": 10,
+      "768": 22
+    },
+    "distinct_base_requirement_multisets": 232,
+    "labelled_H_cases": 204,
+    "ordered_support_block_packing_cases": 20928,
+    "polar_line_symmetries_enumerated": 48,
+    "proved_case_orbits": 33,
+    "raw_H_packing_deficit_branches": 93757440,
+    "support_graph_automorphisms_enumerated": 4,
+    "symmetry_audit": {
+      "all_4480_deficit_bijections_closed_under_independent_support_relabelling_and_sign_swap": true,
+      "polar_line_group_order": 48,
+      "support_graph_automorphism_group_order": 4
+    }
+  },
+  "limitations": [
+    "the 33-orbit cache is used only after all 20,928 labelled H/packing cases are explicitly generated and partitioned under 48 proved polar-line symmetries and two independent four-element support automorphism groups",
+    "the 55,296 survivors are necessary selected-union and local-neighborhood controls, not 99-vertex graph completions",
+    "outside-outside edges beyond the forced local matchings, the full 85-vertex D block equations, all degrees, and all common-neighbor equalities remain unresolved",
+    "no target automorphism is assumed and no global graph, endpoint exclusion, or Conway-99 resolution is supplied"
+  ],
+  "selected_union_coupling": {
+    "abstract_column_assignment_branches_surviving": 73728,
+    "all_surviving_selected_unions_extend_local_matchings": true,
+    "case_orbits_surviving": 3,
+    "expanded_labelled_survivors": {
+      "P_3,1,1,0__N_3,1,1,0_H_surviving": 0,
+      "distinct_labelled_H_surviving": 96,
+      "ordered_packings_per_surviving_H": 16,
+      "surviving_H_degree_type_counts": {
+        "P_2,2,1,0__N_2,2,1,0": 24,
+        "P_2,2,1,0__N_3,1,1,0": 36,
+        "P_3,1,1,0__N_2,2,1,0": 36
+      }
+    },
+    "fraction_of_raw_branches": "55296/93757440",
+    "labelled_H_packing_cases_surviving": 1536,
+    "labelled_H_packing_deficit_branches_surviving": 55296,
+    "orbit_catalog": [
+      {
+        "deficit_bijections_after_local_matching_extension": 24,
+        "deficit_bijections_after_polar_and_induced_caps": 24,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 0,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 3,
+        "witness": {
+          "deficit_bijection": [
+            1,
+            0,
+            3,
+            2,
+            4,
+            5,
+            6
+          ],
+          "local_perfect_matching_counts": [
+            78,
+            604,
+            604,
+            594,
+            594,
+            78,
+            78,
+            78,
+            604,
+            604,
+            78,
+            78,
+            78,
+            78
+          ],
+          "matching_index": 602,
+          "optional_marked_zero_edges": [],
+          "selected_column_ids": [
+            10,
+            49,
+            6,
+            1,
+            3
+          ],
+          "selected_column_kinds": [
+            "t1:0,3",
+            "t1:4,4",
+            "t2:6,6",
+            "t2:1,0",
+            "t2:3,2"
+          ],
+          "selected_column_supports": [
+            [
+              0,
+              10
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              6,
+              12,
+              13
+            ],
+            [
+              1,
+              5,
+              8,
+              11
+            ],
+            [
+              2,
+              6,
+              9,
+              10
+            ]
+          ],
+          "t1_residual_matrix": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              0,
+              2,
+              2,
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              0,
+              1,
+              2,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1,
+              1,
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2,
+              2,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              2,
+              2,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 1,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            [
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 2,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 3,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              4
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 48,
+        "deficit_bijections_after_polar_and_induced_caps": 48,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 4,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 2,
+        "witness": {
+          "deficit_bijection": [
+            1,
+            2,
+            3,
+            0,
+            4,
+            6,
+            5
+          ],
+          "local_perfect_matching_counts": [
+            78,
+            594,
+            594,
+            594,
+            604,
+            78,
+            68,
+            78,
+            594,
+            594,
+            68,
+            78,
+            78,
+            78
+          ],
+          "matching_index": 711,
+          "optional_marked_zero_edges": [],
+          "selected_column_ids": [
+            5,
+            38,
+            20,
+            1,
+            3
+          ],
+          "selected_column_kinds": [
+            "t2:5,6",
+            "t1:3,3",
+            "t1:1,4",
+            "t2:1,2",
+            "t2:3,0"
+          ],
+          "selected_column_supports": [
+            [
+              4,
+              6,
+              12,
+              13
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              1,
+              5,
+              9,
+              10
+            ],
+            [
+              2,
+              6,
+              8,
+              11
+            ]
+          ],
+          "t1_residual_matrix": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              2,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1,
+              1,
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              2,
+              2,
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              2,
+              1,
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              2,
+              2,
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 192,
+        "orbit_index": 5,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [],
+            [
+              4,
+              6
+            ]
+          ],
+          "P_blocks": [
+            [],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 6,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 7,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 8,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 9,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 10,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 11,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 12,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 13,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 14,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 15,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 16,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 17,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 18,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 19,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 20,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 21,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 22,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 23,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              5,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 24,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 25,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              5,
+              6
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              2
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 26,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "N_blocks": [
+            [
+              1,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 27,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 28,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 24,
+        "deficit_bijections_after_polar_and_induced_caps": 24,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 29,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 1,
+        "witness": {
+          "deficit_bijection": [
+            6,
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "local_perfect_matching_counts": [
+            78,
+            78,
+            78,
+            604,
+            604,
+            68,
+            68,
+            78,
+            604,
+            604,
+            78,
+            78,
+            68,
+            68
+          ],
+          "matching_index": 3913,
+          "optional_marked_zero_edges": [
+            [
+              14,
+              18
+            ]
+          ],
+          "selected_column_ids": [
+            0,
+            20,
+            2,
+            29,
+            6
+          ],
+          "selected_column_kinds": [
+            "t2:0,6",
+            "t1:1,3",
+            "t2:2,2",
+            "t1:2,4",
+            "t2:6,0"
+          ],
+          "selected_column_supports": [
+            [
+              1,
+              4,
+              12,
+              13
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3,
+              9,
+              10
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              5,
+              6,
+              8,
+              11
+            ]
+          ],
+          "t1_residual_matrix": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              2,
+              2,
+              2,
+              0,
+              1
+            ],
+            [
+              1,
+              2,
+              0,
+              1,
+              2,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              1,
+              0,
+              2,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              2,
+              2,
+              1,
+              1,
+              0
+            ],
+            [
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              1,
+              1,
+              2,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 768,
+        "orbit_index": 30,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 31,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6
+            ],
+            [
+              4
+            ]
+          ],
+          "P_blocks": [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      },
+      {
+        "deficit_bijections_after_local_matching_extension": 0,
+        "deficit_bijections_after_polar_and_induced_caps": 0,
+        "labelled_case_orbit_size": 384,
+        "orbit_index": 32,
+        "representative": {
+          "H": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "N_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ],
+          "P_blocks": [
+            [
+              5
+            ],
+            [
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              0,
+              3,
+              4
+            ]
+          ]
+        },
+        "selected_union_abstract_solutions": 0,
+        "witness": null
+      }
+    ],
+    "orbit_solution_survival_distribution": {
+      "abstract_solutions_0_matching_bijections_0": 30,
+      "abstract_solutions_1_matching_bijections_24": 1,
+      "abstract_solutions_2_matching_bijections_48": 1,
+      "abstract_solutions_3_matching_bijections_24": 1
+    }
+  },
+  "unresolved_outside_block": {
+    "F_rank_over_Q": 13,
+    "bottom_right_block_equation": "D^2+D = 12I+2J-F^T F",
+    "left_kernel_generator": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "status": "not solved; no 85-vertex D adjacency matrix is supplied",
+    "top_right_block_equation": "F D = 2J - (A_S+I)F"
+  },
+  "upstream_delta": {
+    "delta_claim_label": "DERIVED in the sealed verifier package",
+    "independent_reproduction_in_this_lane": false,
+    "wave209_verifier_weight20_352_to_346": "recorded but not imported; this Wave210 lane is restricted to the weight-14 branch"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "induced selected-union controls only; no outside completion",
+  "form_diagonal": [2, 2, 2],
+  "relation": [1, 1, 1, 1, 2, 2, 2, 2],
+  "controls": [
+    {
+      "name": "weight20_two_intersections",
+      "selected_triangle_intersections": [[0, 5], [0, 6]],
+      "triangles": [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [9, 10, 11],
+        [12, 13, 14],
+        [0, 15, 16],
+        [1, 17, 18],
+        [19, 20, 21]
+      ],
+      "extra_edges": [
+        [0, 6], [0, 10], [0, 19], [1, 3], [2, 4], [2, 7], [2, 11],
+        [3, 9], [4, 8], [4, 11], [4, 13], [4, 19], [5, 6], [7, 9],
+        [7, 14], [8, 10], [8, 20], [9, 12], [11, 17], [12, 16],
+        [12, 18], [13, 15], [13, 19], [14, 17], [14, 20], [15, 17],
+        [16, 21], [17, 20], [18, 19]
+      ],
+      "b_integer": [
+        0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+      ]
+    },
+    {
+      "name": "weight14_five_intersections",
+      "selected_triangle_intersections": [[0, 5], [0, 6], [0, 7], [1, 6], [2, 5]],
+      "triangles": [
+        [0, 1, 2],
+        [3, 5, 6],
+        [4, 7, 8],
+        [9, 10, 11],
+        [12, 13, 14],
+        [0, 4, 15],
+        [1, 3, 16],
+        [2, 17, 18]
+      ],
+      "extra_edges": [
+        [0, 9], [1, 11], [2, 5], [2, 7], [3, 13], [4, 14], [5, 7],
+        [5, 9], [6, 8], [6, 11], [7, 10], [8, 11], [11, 12], [12, 15],
+        [12, 16], [13, 17], [14, 18], [15, 16], [15, 17], [16, 18]
+      ],
+      "b_integer": [
+        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+        -1, -1, -1, -1, -1, -1, -1
+      ]
+    }
+  ],
+  "limitations": [
+    "the controls have 22 and 19 vertices rather than 99",
+    "outside degrees and outside common-neighbor equalities are absent",
+    "the other 223 triangle blocks and the full rank-11 frame are absent",
+    "a local positive control is not a graph or endpoint construction"
+  ]
+}

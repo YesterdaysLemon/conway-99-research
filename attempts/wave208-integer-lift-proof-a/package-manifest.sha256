@@ -1,0 +1,10 @@
+123cce2ed7e182bd97df5734a5d13862b47052c58d08d0d56aac824d5a1f3f90  agents/2026-07-31-wave208-integer-lift-proof-a.md
+8662cedfbe5f184aff9a4b49829d9a45a178ee775206736a03bd9ccaea52c33c  attempts/wave208-integer-lift-proof-a/README.md
+03514a173a24e0fdfd8b1c01038583bc71ba218f8937a1f9fc389a171851765d  attempts/wave208-integer-lift-proof-a/derivation.md
+8d6656cf476d2c75b05134d307e3694e283a95811b749610ae5daf20e12bc4da  attempts/wave208-integer-lift-proof-a/exact-results.json
+07eeeb9cb5323e64192bab18e67fada82af2a534c5b8bea71e43c596a158e871  attempts/wave208-integer-lift-proof-a/exact_check.py
+91a8307199e4e4d226c3e19be3a91d26147d08c19817ad2fa8f62f40e9f43498  attempts/wave208-integer-lift-proof-a/failed-routes.md
+f42c3d21695735872b2d99b0e80d305d0d0799b27e61a491515fff66f4fd4874  attempts/wave208-integer-lift-proof-a/input-freeze.sha256
+3c58b0da5b4c91c7f66146cdcbad31bf899d8215062c185a15ee63828ec5f0b4  attempts/wave208-integer-lift-proof-a/protocol.md
+41056092f40a81acd5c14d1576b000afef237f487478c75361008862f1d4cb34  attempts/wave208-integer-lift-proof-a/run-report.yaml
+a411f194e8b48491d73ef95796f2d1600d852bd1cc1bd90f200527f5e27f97b9  attempts/wave208-integer-lift-proof-a/test_exact_check.py

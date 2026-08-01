@@ -3,13 +3,13 @@ project: conway-99-research
 target: "Existence of a strongly regular graph with parameters (99,14,1,2)"
 target_frozen_on: 2026-07-22
 literature_audit:
-  through: 2026-07-29
+  through: 2026-07-31
   status: NO_RESOLUTION_FOUND_IN_SOURCES_SEARCHED
-  caveat: "The focused Wave 206 hypothesis audit found no applicable finite-field frame, Grassmannian design, triply regular association-scheme, or Terwilliger-algebra theorem forcing the missing labelled three-center tensor law. The latest located status source was submitted 2026-04-24. The search was bounded and cannot prove openness beyond its evidence cutoff, novelty, or priority. The earlier Wave 40 audit found Gray Taylor's 2020 notebook to be exact prior art for the 27-vertex edge scaffold and its eleven types."
-  latest_audit: "agents/2026-07-29-wave206-literature-hostile-controls.md"
-  latest_audit_sha256: "71e5e9a3d6ca13ef5d3715a712f3bb9b7a85db6425c226c1f054809b1c3fbc6d"
-  source_query_ledger: "attempts/wave206-three-center-hostile-controls/literature-sources.json"
-  source_query_ledger_sha256: "46300051c7764eb44a9b2a6f8fb934cdf66ff8f4e101ef48f9387f8bfebbcdf8"
+  caveat: "The focused Wave 207 primary-source audit found no proof, counterexample, exact ternary [99,54] minimum-distance theorem, or polar-space theorem closing the marked M7g incidence problem. Kaipa--Pradhan supplies prior art for the rank-seven quadratic-Veronese classification; Phillips supplies a current triangle clique-graph language but no resolution; the revised SAT preprint remains a computational nonresolution. The search was bounded and cannot prove openness beyond its cutoff, novelty, or priority."
+  latest_audit: "agents/2026-07-31-wave207-statement-literature.md"
+  latest_audit_sha256: "d53c453f41b4671d3904fdba7d303fa68d01ddfd4b49f0ac4ffa5a5181b29f25"
+  source_query_ledger: "agents/2026-07-31-wave207-statement-literature.md"
+  source_query_ledger_sha256: "d53c453f41b4671d3904fdba7d303fa68d01ddfd4b49f0ac4ffa5a5181b29f25"
   exact_wave25_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave26_prior_hit: NONE_IN_BOUNDED_AUDIT
   exact_wave27_prior_hit: NONE_IN_BOUNDED_AUDIT
@@ -27,17 +27,19 @@ literature_audit:
   exact_wave204_global_compatibility_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave205_fourth_trace_globalization_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
   exact_wave206_three_center_tensor_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  exact_wave207_marked_m7g_incidence_prior_hit: NOT_FOUND_IN_SEARCHED_SOURCES
+  wave207_rank_seven_configuration_prior_art: KAIPA_PRADHAN_2025
   wave40_edge_scaffold_prior_hit: GRAY_TAYLOR_2020
   novelty_status: UNKNOWN
 project_status: EXPLORATORY
 resolution_claim: NONE
 claim_ledger: "CLAIMS.yaml"
 proof_obligation_ledger: "OBLIGATIONS.yaml"
-latest_public_checkpoint: "logs/2026-07-29-wave206-public-checkpoint.json"
-latest_integration_audit: "verification/2026-07-29-wave206-integration-audit.md"
-latest_verified_wave: 206
-latest_verifier_package: "verification/wave206-three-center-global-extension-verifier/package-manifest.sha256"
-latest_verifier_manifest_sha256: "3368b0b1995e40f294530cefb596cd2722a859d22aaa672190c55dbd23107ecf"
+latest_public_checkpoint: "logs/2026-07-31-wave209-public-checkpoint.json"
+latest_integration_audit: "verification/2026-07-31-wave209-integration-audit.md"
+latest_verified_wave: 209
+latest_verifier_package: "verification/wave209-four-survivor-verifier/package-manifest.sha256"
+latest_verifier_manifest_sha256: "7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:
@@ -3346,4 +3348,168 @@ wave_206_three_center_global_extension_checkpoint:
   novelty_status: UNKNOWN
   next_frontier: "classify A_Delta and its possible weight-eight words using im(B^T), the full 231-column incidence, all-three-pair triple compatibility, and mixed four-center tensors"
   caveat: "Wave 206 independently verifies a nonzero nonconstant tensor-balance intersection code, common true kernels, minimum weight eight, fixed-middle 21-coordinate geometry, and scoped hostile controls. It does not construct a target word, classify actual nonedge fourth traces, or exclude rank 11 or n3=4158. No graph, Q>=7060 proof, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
-last_updated: 2026-07-29
+wave_207_incidence_tensor_rigidity_checkpoint:
+  public_base_commit: "c58fd917ea8f9622e1388f10b0e0e3c709ba4854"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave207_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave207_status: PASS_VERIFIED_SYMBOLIC_REDUCTION_NO_RESOLUTION
+  incidence_implies_Da_zero: true
+  incidence_implies_Za_zero: true
+  weight_eight_projective_orbit: M7g
+  weight_eight_composition: "4+4"
+  labelled_m7g_concurrent_secant_matchings: 4
+  relation_code_dimension: 4
+  relation_code_weight_enumerator: "1+24y^4+16y^5+32y^6+8y^8"
+  restricted_polar_form_count: 27
+  restricted_polar_forms_excluded: 4
+  restricted_polar_forms_surviving: 23
+  ternary_kernel_minimum_distance_lower: 12
+  endpoint_point_image_possible_weights: [14, 17, 20, 23]
+  weight_14_required_composition: "7+7"
+  weight_14_excluded: false
+  d_ker_A_at_least_24_proved: false
+  local_rank4_control_vertices: 23
+  local_rank4_control_checked_code_coordinates: 23
+  local_rank4_control_unchecked_code_coordinates: 76
+  local_rank4_control_is_target_graph: false
+  mixed_transition_rank_formula: "d(d+1)/2"
+  linear_sandwich_route_excludes_true_relation: false
+  wave207_literature_report_sha256: "d53c453f41b4671d3904fdba7d303fa68d01ddfd4b49f0ac4ffa5a5181b29f25"
+  wave207_proof_a_manifest_sha256: "544e9d469dc0666ff3463f5c7f3b41a4ad3acfde857100c422dd3acea4c6d8ab"
+  wave207_proof_b_manifest_sha256: "87158d7931f6f2440bb176670368b112055b84a0e358a1b6b8ea18cb630e756d"
+  wave207_ternary_bridge_manifest_sha256: "31e3abf3a7e16bf80eb8de4721c683f41d4d20d55f90564398e4d638b3414f99"
+  wave207_kernel_endpoint_manifest_sha256: "bb0a3e8b4821f7533330fcdd9b0fb58085eaefcb2281f387b7356784efacd2e6"
+  wave207_m7g_bridge_manifest_sha256: "3fa21f164fd7a7afb13c546447e3a42f9ae870d2d1b8cd5030d254ee61a5c561"
+  wave207_source_blind_protocol_sha256: "e381877375f1f5f270e7ad064db570494a7df12dc0bbf01a0df0d24b67884444"
+  wave207_verifier_manifest_sha256: "63aa632350e7191075203de6a7568ca0a3e387925d99f824a073eed12db00023"
+  public_checkpoint: "logs/2026-07-31-wave207-public-checkpoint.json"
+  public_checkpoint_sha256: "d90bdd8fb04f7d579a9bf11164fbd890c54de5ab9f0697fa33d569b1d6170ae3"
+  integration_audit: "verification/2026-07-31-wave207-integration-audit.md"
+  integration_audit_sha256: "4c320426a735774b36dd806cf77d6df97a98bf4e38d4c3e2b856424445a0a4de"
+  orchestrator_decision: "verification/2026-07-31-wave207-orchestrator.md"
+  orchestrator_decision_sha256: "3211bc5fb4d68e8d1d5b7cb8b647d5c7117bb0f539398702b962179969f1cd4e"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "exclude balanced weight 14 and weights 17,20,23 using pointwise integer-lift correlations, or impose all 99 code equations and 231 triangle columns on the 23 surviving marked M7g polar forms"
+  caveat: "Wave 207 independently verifies the incidence-linear M7g reduction, d(ker_F3(A))>=12, the weight-14 7+7 composition theorem, a four-of-27 polar exclusion, and abstract mixed-center method boundaries. The 23-vertex control checks only induced coordinates and is not a completion. No graph, endpoint exclusion, d>=24 proof, Q>=7060 proof, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
+wave_208_global_residual_rigidity_checkpoint:
+  public_base_commit: "c58fd917ea8f9622e1388f10b0e0e3c709ba4854"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave208_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave208_status: PASS_VERIFIED_FOUR_FORM_REDUCTION_NO_RESOLUTION
+  marked_m7g_polar_forms: 27
+  marked_m7g_forms_excluded: 23
+  marked_m7g_newly_excluded_from_wave207: 19
+  marked_m7g_forms_surviving: 4
+  signed_polar_sum_congruence: "S_D=3 mod 9"
+  rank4_surviving_forms: 3
+  rank4_zero_graph: "2C4"
+  rank4_marked_subsets_per_form: 83
+  rank4_residual_eigenvalue: -4
+  rank4_divided_residual_squared_norm: 56
+  rank3_surviving_forms: 1
+  rank3_zero_graph: "4K2"
+  rank3_exact_equation: "A*b=3*b"
+  rank3_weight20_marked_subsets: 66
+  rank3_weight14_marked_subsets: 792
+  general_integer_lift_verified: true
+  integer_lift_Q: "9*(z-x)-t*1"
+  integer_lift_R: "11*(4*x+3*z)-6*t*1"
+  integer_lift_shell_identity: "Q^2=99*t*(9-t)+162L"
+  balanced_weight14_q_squared: [0, 14, 28, 42, 56, 70]
+  balanced_weight14_excluded: false
+  q_zero_cross_edges_surviving: 1
+  q14_same_sign_overlap: 0
+  q14_opposite_sign_overlap: 6
+  q14_surviving_k: [2, 3, 4]
+  weights_17_20_23_excluded: false
+  outside_row_scope_counterexamples: true
+  local_controls_are_completions: false
+  wave208_protocol_sha256: "3f3def2dd84610fd352d257b0b7d5b014f160901f63e6c2b91038e4734053740"
+  wave208_norm_manifest_sha256: "a633dff62e4e1127b8a0c7329928e110d1fef1e78f1f322bbc4e250e277167f3"
+  wave208_proof_b_manifest_sha256: "f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc"
+  wave208_proof_a_manifest_sha256: "28d69162a8f52bdc325471946efecad890b1edac33f3576bdba8777e32887202"
+  wave208_verifier_manifest_sha256: "c9551a7c4d62a57f081b8008f49b9e27fb0372f50a7d114e10136557242fbab4"
+  public_checkpoint: "logs/2026-07-31-wave208-public-checkpoint.json"
+  public_checkpoint_sha256: "af31d56635f47b0a2c8d961fa813a34590d53773c022211b7cdc39731c0cb77b"
+  integration_audit: "verification/2026-07-31-wave208-integration-audit.md"
+  integration_audit_sha256: "eb46057b18ce4d0c0f4c1bd2b4377509c0392194c5cbaa04cd765151bcc3c754"
+  orchestrator_decision: "verification/2026-07-31-wave208-orchestrator.md"
+  orchestrator_decision_sha256: "95a3d4aabaeeaf473012cf0934ce4a9f9ea7647f250c270718c213a7db9b39e8"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "exclude the rank-three weight-14/20 trades or the three rank-four norm-56 residuals using full 231-line incidence and all outside equations"
+  caveat: "Wave 208 independently verifies a 23-of-27 marked-form exclusion, the exact four-survivor census, the general integral spectral lift, and scoped balanced weight-14 reductions. No residual weight or surviving form is excluded, and explicit outside-row witnesses veto every local-to-global promotion. No graph, endpoint exclusion, d>=24 proof, Q>=7060 proof, strict n3 improvement, Conway-99 resolution, novelty, or priority claim follows."
+wave_209_four_survivor_globalization_checkpoint:
+  public_base_commit: "c58fd917ea8f9622e1388f10b0e0e3c709ba4854"
+  target_result: UNKNOWN
+  n3_4158_status: UNKNOWN
+  rank_11_endpoint_status: UNKNOWN
+  upper_bound_improved_below_4158: false
+  strongest_general_upper_bound: "n3<=4158"
+  rigorous_interval: "708<=n3<=4158"
+  conditional_Q_lower: 7059
+  wave209_q_7060_proved: false
+  unrestricted_automorphism_assumption: false
+  wave209_status: PASS_VERIFIED_SCOPED_REDUCTIONS_WITH_DERIVED_352_TO_346_NO_RESOLUTION
+  marked_m7g_forms_surviving: 4
+  rank3_forms_surviving: 1
+  rank3_weight14_cross_edges: 1
+  rank3_weight14_rooted_support_types: 1
+  rank3_weight14_outside_signature: [17, 61, 7]
+  rank3_weight14_all_deficit_bijections: 5040
+  rank3_weight14_deficit_bijections_surviving: 4480
+  rank3_weight14_all_marked_subsets: 792
+  rank3_weight14_marked_subsets_surviving: 204
+  rank3_weight14_excluded: false
+  rank3_weight20_x0_excluded: true
+  rank3_weight20_x10_excluded: true
+  rank3_weight20_x2_marked_pairs_surviving: 6
+  rank3_weight20_aggregate_rows: 352
+  rank3_weight20_aggregate_rows_status: VERIFIED_AGGREGATE_ONLY
+  rank3_weight20_selected_line_cap_rows: 346
+  rank3_weight20_selected_line_cap_status: DERIVED_PENDING_INDEPENDENT_PROMOTION
+  rank3_weight20_excluded: false
+  rank4_forms_surviving: 3
+  rank4_labelled_branches_before_wave209: 249
+  rank4_constraint_relabeling_orbits: 24
+  rank4_farkas_excluded_orbits: 17
+  rank4_farkas_excluded_labelled_branches: 198
+  rank4_surviving_orbits: 7
+  rank4_surviving_labelled_branches: 51
+  rank4_surviving_labelled_branches_per_form: 17
+  rank4_forms_excluded: 0
+  rank4_q_even_excluded: true
+  rank4_line_squared_norm: 168
+  anonymous_census_is_graph_completion: false
+  named_point_line_coupling_complete: false
+  wave209_protocol_sha256: "3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196"
+  wave209_rank3_source_manifest_sha256: "521c7ba3e0b34a563f30cc6251c053fe250beb000ff0a808d57fc0a6dcec5ff1"
+  wave209_rank3_verifier_manifest_sha256: "7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91"
+  wave209_rank4_source_manifest_sha256: "2486affc14226e35542fac320216043c60bb881736af277bd19cabf8623d2a1b"
+  wave209_rank4_verifier_manifest_sha256: "62c32cfa278a677053353d5a3c21c01600cadc867d597f5135ab32a6fdb1c07a"
+  public_checkpoint: "logs/2026-07-31-wave209-public-checkpoint.json"
+  public_checkpoint_sha256: "a9f231f16f7ca5fbe20327577ba5da43e5fd1c4c49f3396ee7c11c5e74925cbb"
+  integration_audit: "verification/2026-07-31-wave209-integration-audit.md"
+  integration_audit_sha256: "eda1a6569a545ce6d4b550f56e01ee4f6396da1edfea3e5017c4e7ab357c0d99"
+  orchestrator_decision: "verification/2026-07-31-wave209-orchestrator.md"
+  orchestrator_decision_sha256: "5ab3a723090281a57d0dde88a0648c2c2e27c26a62a7c36c4f5122c103b14922"
+  solver_evidence_promoted: NONE
+  novelty_status: UNKNOWN
+  next_frontier: "couple the surviving named rank-three marked points to exact outside F columns and couple the 51 rank-four point censuses to the same 223 residual triangles, all Ct=0 rows, and the 99 point-star K7 cliques"
+  caveat: "Wave 209 independently verifies the complete scoped rank-three reductions and exact exclusion of 198 of 249 rank-four labelled branches. The 352 rank-three weight-20 rows are aggregate-only; the added 346 cap is DERIVED pending independent promotion. The 51 rank-four survivors are anonymous censuses. All four forms, both rank-three support sizes, every global endpoint, and Conway-99 remain UNKNOWN."
+last_updated: 2026-07-31

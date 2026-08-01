@@ -1,0 +1,43 @@
+role: proof_b
+date_utc: 2026-08-01T03:10:56Z
+git_commit: c58fd917ea8f9622e1388f10b0e0e3c709ba4854
+claim_label: DERIVED
+scope: >-
+  Conditional Wave209 rank-four branch: retain the three sealed M7g forms
+  and all 249 labelled marked-intersection branches; use the norm-56 integer
+  minus-four eigenvector, the full point--triangle incidence identities, and
+  complete marked point-signature moments to derive exact exclusions or
+  fail-closed controls without constructing a target graph.
+inputs:
+  attempts/wave209-four-survivor-globalization/protocol.md: 3a7208c3cc44bfb1884ad0031592fdca5999c7b52b41fd0cade84d31ddf1f196
+  attempts/wave208-marked-m7g-proof-b/package-manifest.sha256: f708a29bc2948e4bf732f6fbaa92125f132c28ac753a525f2af1b6fd479180bc
+  verification/wave66-spherical-code-shift/package-manifest.sha256: a6051ebcfccab0fc9b3f9698f0024cc3284549f5148c9a12a4c6bbe08c786486
+method: >-
+  Set t=B^Tq and derive Ct=0, norm 168, residual norm 96, the exact
+  triangle projector P0=(J-F)/21, and saturation of the marked interpolation
+  bound. Reduce modulo two to rule out q even. Prove a 249-to-24 orbit cover
+  using only explicit sign- and polar-form-preserving label permutations.
+  Enumerate all 2187 divisible {-1,0,+1}^8 point signatures, impose exact
+  one- and two-coordinate tables plus q norm 56, and archive either an exact
+  nonnegative integer census or an integer Farkas certificate for each orbit.
+  Solver output is used only to discover artifacts that are replayed exactly.
+command: >-
+  .\.venv\Scripts\python.exe -B
+  attempts\wave209-rank4-norm56-proof-b\exact_check.py --verify ;
+  .\.venv\Scripts\python.exe -B -m unittest -v
+  attempts\wave209-rank4-norm56-proof-b\test_exact_check.py
+outputs:
+  attempts/wave209-rank4-norm56-proof-b/derivation.md: 443f29fa1d60751cc651d700247d741412f613678bb1778feba89bc652a5b99c
+  attempts/wave209-rank4-norm56-proof-b/exact_check.py: 268cf881d594b4e5ad718a29379205bc8a3b71180e412d28ecda91257bac0925
+  attempts/wave209-rank4-norm56-proof-b/exact-results.json: c490b7fbe287c7c1cfe7feccb68ba6677c25d22e292439202c3f1826f964a13f
+  attempts/wave209-rank4-norm56-proof-b/aggregate-controls.json: 7d952c24d4a26a84fcc928e3d2d64662091ef2e93995f18454837d2af57470fe
+  attempts/wave209-rank4-norm56-proof-b/point-signature-controls.json: 4285d2052c71bf501cf9fc266ddae0d8684075476c85bd29ef1f3668291d338f
+  attempts/wave209-rank4-norm56-proof-b/test_exact_check.py: 744648f3dbf669a6f42aecce0154a373cf40fc4f3640a599786dbfee1adb4e3f
+limitations:
+  - All claims remain conditional on the hypothetical endpoint and Wave208 rank-four branch.
+  - The 198 labelled exclusions are DERIVED and require source-blind verifier promotion.
+  - The 51 surviving labelled branches have aggregate 99-row point-signature controls, not named points or adjacency graphs.
+  - The triangle controls omit residual--residual intersection geometry and 223 rows of Ct=0.
+  - No surviving control satisfies or claims all rows of Aq=-4q or the SRG equations.
+  - No target automorphism, norm-56 short-vector classification, or 99-vertex brute force is used.
+  - Conway-99 remains UNKNOWN.

@@ -1,0 +1,22 @@
+{
+  "claim_label": "DERIVED",
+  "format": "wave210-rank4-cleanroom-coupling-v1",
+  "labelled_branches": 51,
+  "limitations": [
+    "This seals an independently derived necessary aggregate incidence system.",
+    "No infeasibility dual has yet been supplied or checked at this source-blind stage.",
+    "The system couples censuses, not named graph points or named residual lines."
+  ],
+  "orbits": [
+    {"branch_count":6,"column_count":315,"line_point_slots":669,"orbit_id":0,"point_degree_total":669,"point_signature_support":49,"residual_line_type_support":62,"residual_lines":223,"row_count":1123,"row_rhs_sha256":"6c17e3bbe0f6187f8189920de4f2a2b56b062b9b7b002141eaf3f57dc92cf9fe","selected_intersections":[[0,3]],"sparse_matrix_sha256":"1b763c3fd145391141153bc7fde6d971384ba3dcb609311b2c6f93b731d2e620"},
+    {"branch_count":12,"column_count":320,"line_point_slots":669,"orbit_id":2,"point_degree_total":669,"point_signature_support":40,"residual_line_type_support":48,"residual_lines":223,"row_count":869,"row_rhs_sha256":"d553179519c9b4046ee502c637e7638239adac05b46d09e08f00e88b70bafebf","selected_intersections":[[0,3],[0,7],[1,2],[1,6],[2,5],[4,7],[5,6]],"sparse_matrix_sha256":"b76e6d8116b8212f701af4e76af15f01a8d37c1a28985e93884992c57d6d6071"},
+    {"branch_count":6,"column_count":368,"line_point_slots":669,"orbit_id":4,"point_degree_total":669,"point_signature_support":43,"residual_line_type_support":47,"residual_lines":223,"row_count":885,"row_rhs_sha256":"070c359c400307337d935f9c2567091dc521cb9e264641db1e7887f1c843043b","selected_intersections":[[0,3],[0,7],[1,2],[3,4],[4,7]],"sparse_matrix_sha256":"527f22faf2b3f1b8ad8ce530ab40ae01bf16eb419cbfe00bacecc5bfa0534f9a"},
+    {"branch_count":6,"column_count":436,"line_point_slots":669,"orbit_id":11,"point_degree_total":669,"point_signature_support":44,"residual_line_type_support":51,"residual_lines":223,"row_count":933,"row_rhs_sha256":"c52a0175187caae106d610dee40cdb4551e23009abef0911b8debb26e337b982","selected_intersections":[[0,3],[0,7],[3,4],[4,7],[5,6]],"sparse_matrix_sha256":"60ed5df2dda855997c649f61c0bce0f50cc550922525e8ff6cfd6731cba45795"},
+    {"branch_count":12,"column_count":460,"line_point_slots":669,"orbit_id":12,"point_degree_total":669,"point_signature_support":48,"residual_line_type_support":51,"residual_lines":223,"row_count":973,"row_rhs_sha256":"ac867c9280489947cdef876b00f541f4902e91b09ef583e8ccff6d4642ba3e7c","selected_intersections":[[0,3],[0,7],[4,7]],"sparse_matrix_sha256":"371daa4fff750b1f5d3f3d8196179948789af4b5b397e40bcb94158fdd13b8a3"},
+    {"branch_count":3,"column_count":432,"line_point_slots":669,"orbit_id":14,"point_degree_total":669,"point_signature_support":48,"residual_line_type_support":68,"residual_lines":223,"row_count":1153,"row_rhs_sha256":"f44ba33f425bdf661f7985599827bfef70da040d5336d68eeef241a255fecb74","selected_intersections":[[0,3],[1,2],[4,7],[5,6]],"sparse_matrix_sha256":"2c626ebdbf5bced5dab1aa09b116254670f843f4f07166e775bc72f1d69799b5"},
+    {"branch_count":6,"column_count":406,"line_point_slots":669,"orbit_id":23,"point_degree_total":669,"point_signature_support":49,"residual_line_type_support":81,"residual_lines":223,"row_count":1314,"row_rhs_sha256":"0a15323236fc3e2b889d170197797f04c944ba558b88ea7dc574e32b11a525c3","selected_intersections":[[4,7]],"sparse_matrix_sha256":"97caf86aca889a3db112541c9cc7648d29b640229a7086414c621010ca349e50"}
+  ],
+  "source_blind": true,
+  "survivor_orbits": [0,2,4,11,12,14,23],
+  "target_automorphism_assumed": false
+}

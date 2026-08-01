@@ -26,8 +26,14 @@ and the normalized search problem.
 
 ## Current status
 
+For the exact branch frontier, including sealed Wave 210/211 work that is not
+yet promoted into the public ledgers, read
+[NEXT_INSTANCE_HANDOFF_2026-07-31.md](NEXT_INSTANCE_HANDOFF_2026-07-31.md).
+The latest integrated checkpoint remains Wave 209; the Wave 210 rank-four
+exclusion claim is still `DERIVED` with a pending-verification veto.
+
 - **Literature status:** no resolution found in the sources searched through
-  2026-07-29; this is not a proof of openness or exhaustive coverage.
+  2026-07-31; this is not a proof of openness or exhaustive coverage.
 - **Project status:** `EXPLORATORY`.
 - **Resolution claim:** none.
 - **Strongest internally verified conditional bound:** `n3>=708`, hence at
@@ -36,16 +42,19 @@ and the normalized search problem.
   `rank_F7(2A-J+I)=28` row, exact full-space level-seven modularity forces
   `N14+N16+N18>=5868`. This is conditional on a hypothetical graph and does
   not exclude the rank row.
-- **Newest rank-11 structural invariant and boundary:** for adjacent
-  endpoint stars,
-  `h_xy=tr(P_xP_yP_xP_y)` is `1` exactly for outer type `4+2` and `0`
-  for types `6`, `3+3`, and `2+2+2`; the exterior-square trace is the same
-  detector. Independent hostile controls show that pair trace and
-  intersection dimension do not determine `h`. A separate exact relaxed
-  99-center certificate has `b=0`, and the Wave 203 partial slot data do not
-  define center-to-center or total-`S_5` holonomy. These are scoped structural
-  results, not an endpoint exclusion: `Q>=7059`, `708<=n3<=4158`, and
-  Conway-99 remains `UNKNOWN`.
+- **Newest rank-11 symbolic reduction and boundary:** a hypothetical
+  weight-eight endpoint word is a signed `4+4` `M7g` configuration whose
+  incidence image has ternary weight `14`, `17`, `20`, or `23`.  The exact
+  norm congruence now excludes 23 of all 27 marked polar forms.  The four
+  survivors are three rank-four branches carrying integer `-4`
+  eigenvectors of squared norm 56 and one rank-three branch satisfying
+  `Ab=3b`, with point weight 14 or 20.  A separately verified integral lift
+  gives all residual spectral shells and sharply reduces two balanced
+  weight-14 branches, but excludes no residual weight.  Explicit outside-row
+  witnesses show why the archived 19-, 22-, and 23-vertex controls do not
+  imply a completion.  These are scoped conditional reductions, not an
+  endpoint exclusion: `Q>=7059`, `708<=n3<=4158`, and Conway-99 remains
+  `UNKNOWN`.
 - **Strongest prism-free rank-11 endpoint circuit bound:** the independently
   verified multiplicity-weighted four-fiber certificate gives `Q>=7059`
   projective short circuits cross-realizing graph nonedges. Together with
@@ -3967,38 +3976,98 @@ status.
 - `logs/`: run manifests and summarized logs; bulky raw output stays in releases
   or external archives with checksums.
 
-## Current verified frontier: Wave 206
+## Current verified frontier: Wave 209
 
-Wave 206 turns the three-center route into a concrete global necessary
-condition.  Conditional on the prism-free rank-11 endpoint, the 99 star
-projectors force a nonzero, nonconstant ternary relation in
+Wave 207 reduced a hypothetical minimum word in the conditional prism-free
+rank-11 tensor-balance code
 
 ```text
-A_Delta=im(B^T) intersect ker(a -> D diag(a) D).
+A_Delta=im(B^T) intersect ker(a -> D diag(a) D)
 ```
 
-Every nonzero word in this code:
+to a signed `4+4` `M7g` configuration.  Its nonzero point image lies in
+`ker_F3(A)`, whose parameter-only minimum distance is at least 12, and has
+weight in `{14,17,20,23}`.  Weight 14 must be balanced `7+7`.
 
-- has support at least eight;
-- has equal tensor sums over its three coefficient classes;
-- pulls back to a genuine projector relation common to every fixed-middle
-  three-center trace kernel and the global `Gamma` kernel.
+Wave 208 keeps the actual selected-triangle intersections symbolic.  If
+`S_D` is the signed canonical polar sum, the exact incidence norm and an
+independent spectral derivation both give
 
-At weight eight, the supported triangle columns must span dimension four and
-the number of coefficient-two entries is even.  A relaxed eight-column
-control shows that these local ingredients alone cannot prove weight at least
-nine; it is not a target word or graph.
+```text
+S_D=3 (mod 9).
+```
 
-For each fixed middle center, the trace tensor has an exact nondegenerate
-21-coordinate model.  The 84 nonneighbors split into 21 four-point fibres,
-and prism-freeness restricts each fibre to an opposite-corner matching.
-Relaxed shared-incidence controls can keep complete `g` and `H` fixed while
-changing `tau` on 209,952 ordered triples, so the next theorem must use the
-full target incidence or a mixed four-center compatibility law.
+The complete 27-form census consequently leaves only
 
-A fresh verifier passed 37 independent tests and all 44 submitted tests.
-Actual endpoint nonedge traces, rank 11, `n3=4158`, the interval
-`708<=n3<=4158`, `Q>=7060`, and Conway-99 remain `UNKNOWN` or unproved.
+```text
+three rank-4 2C4 forms: ||q||^2=56, Aq=-4q;
+one rank-3 4K2 form:    Ab=3b.
+```
+
+Each rank-four form has 83 compatible labelled intersection subsets.  The
+rank-three form has exactly 66 marked subsets of point weight 20 and 792 of
+point weight 14.  This eliminates 19 of the 23 Wave 207 survivors and 23 of
+all 27 forms, but none of the four remaining branches.
+
+For an arbitrary signed lift `x` of a ternary kernel word, put `z=Ax/3` and
+`p-n=3t`.  The verified integral eigensplitting is
+
+```text
+Q=9(z-x)-t*1,       AQ=-4Q,
+R=11(4x+3z)-6t*1,  AR=3R,
+Q^2=99t(9-t)+162L.
+```
+
+At balanced weight 14, `q=z-x` has squared norm in
+`{0,14,28,42,56,70}`.  The zero shell reduces to one cross edge and sign-side
+degree sequence `(4,3,3,3,3,3,3)`.  The norm-14 shell reduces, through the
+complementary-Fano classification, to zero same-sign overlap, six
+opposite-sign overlaps, a 22-point union, and `k in {2,3,4}`.  These cases,
+the other four shells, and every weight 17, 20, and 23 arithmetic row remain.
+
+Wave 209 attacks the four marked survivors without fixing a target
+automorphism.  In the rank-three branch, the exact selected-line equation
+forces all four matched product-zero cross counts to vanish.  At point support
+14 it then forces
+
+```text
+e(P,N)=1,
+one rooted seven-vertex sign-side graph type,
+(z0,z1,z2)=(17,61,7),
+4480/5040 outside deficit bijections,
+204/792 labelled marked intersection graphs.
+```
+
+These are complete labelled reductions at their stated scope, not 85-vertex
+outside graphs.  At point support 20, `x=0,10` are excluded and `x=2` is
+confined to six swapped-disjoint marked pairs.  The independent aggregate
+catalog has 352 rows at `x=2,4,6,8`.  Combining it with the selected-line
+degree-three cap removes six `x=4` degree-four-star rows and leaves 346; that
+last narrowing is `DERIVED` pending a separate independent promotion.  Neither
+number counts graphs.
+
+In each rank-four form, `t=B^Tq` has squared norm 168 and saturates the marked
+zero-projector interpolation bound.  The congruence
+`U^T(q mod 2)=1_8` proves that `q` is not even, so division to the norm-14
+shell is unavailable.  Exact constraint relabellings partition all 249
+labelled branches into 24 orbits.  A complete 2,187-signature, 279-equation
+point census gives integer Farkas certificates for 198 branches and retains
+51 anonymous census controls:
+
+```text
+66 of 83 labelled branches excluded per rank-four form;
+17 of 83 remain per form;
+all three rank-four forms still survive.
+```
+
+The 51 controls do not couple named points to the 223 residual triangles,
+all residual `Ct=0` rows, the 99 point-star `K7` cliques, or adjacency.
+
+The verifiers replayed all 43 Wave 209 manifest entries, every one of the 198
+Farkas exclusions, every one of the 51 surviving controls, and complete
+rank-three labelled result sets.  Anonymous or local controls still do not
+imply outside adjacency.  Rank 11, `n3=4158`, `Q>=7060`, a graph or
+nonexistence certificate, and Conway-99 all remain `UNKNOWN` or unproved.
 
 ## Primary starting points
 
@@ -4006,6 +4075,8 @@ Actual endpoint nonedge traces, rank 11, `n3=4158`, the interval
 - [Lou and Murin, *On the Strongly Regular Graph of Parameters (99, 14, 1, 2)* (2014)](https://math.mit.edu/research/highschool/primes/materials/2014/Lou-Murin.pdf)
 - [Cesarz and Woldar, *Algebraic Combinatorics* 8 (2025)](https://doi.org/10.5802/alco.418)
 - [Keramatipour, *Approaching the Conway-99 problem using SAT solvers*](https://arxiv.org/abs/2604.23037)
+- [Kaipa and Pradhan, *Higher weight spectra of ternary codes associated to the quadratic Veronese 3-fold*](https://arxiv.org/abs/2405.12011)
+- [Phillips, *A Comprehensive Study of Clique Graphs and Clique Regular Graphs*](https://arxiv.org/abs/2605.22867)
 - [Petro and Phillips, *On clique graphs and clique regular graphs*](https://doi.org/10.1016/j.disc.2025.114862)
 - [Reimbayev, *The lower bound for number of hexagons in strongly regular graphs with parameters lambda=1 and mu=2*](https://doi.org/10.62780/ejaam/2024-001)
 
