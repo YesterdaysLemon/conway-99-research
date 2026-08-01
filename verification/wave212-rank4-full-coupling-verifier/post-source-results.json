@@ -1,0 +1,360 @@
+{
+  "archived_integer_dual_replay": {
+    "all_exact_integer_replays": true,
+    "certificates": [
+      {
+        "labelled_branches": 6,
+        "nonzero_coefficients": 71,
+        "orbit_id": 0,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 6,
+        "pattern_minimum": 0,
+        "point_maximum": 24,
+        "point_minimum": 0,
+        "rhs": -4
+      },
+      {
+        "labelled_branches": 12,
+        "nonzero_coefficients": 102,
+        "orbit_id": 2,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 239020,
+        "pattern_minimum": 0,
+        "point_maximum": 1151070,
+        "point_minimum": 0,
+        "rhs": -239020
+      },
+      {
+        "labelled_branches": 6,
+        "nonzero_coefficients": 140,
+        "orbit_id": 4,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 12,
+        "pattern_minimum": 0,
+        "point_maximum": 0,
+        "point_minimum": 0,
+        "rhs": -18
+      },
+      {
+        "labelled_branches": 6,
+        "nonzero_coefficients": 140,
+        "orbit_id": 11,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 12,
+        "pattern_minimum": 0,
+        "point_maximum": 0,
+        "point_minimum": 0,
+        "rhs": -18
+      },
+      {
+        "labelled_branches": 12,
+        "nonzero_coefficients": 101,
+        "orbit_id": 12,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 239020,
+        "pattern_minimum": 0,
+        "point_maximum": 1151070,
+        "point_minimum": 0,
+        "rhs": -239020
+      },
+      {
+        "labelled_branches": 3,
+        "nonzero_coefficients": 390,
+        "orbit_id": 14,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 1944,
+        "pattern_minimum": 0,
+        "point_maximum": 13242,
+        "point_minimum": 0,
+        "rhs": -3240
+      },
+      {
+        "labelled_branches": 6,
+        "nonzero_coefficients": 72,
+        "orbit_id": 23,
+        "orientation": "A^T y >= 0 and b^T y < 0",
+        "pattern_maximum": 6,
+        "pattern_minimum": 0,
+        "point_maximum": 24,
+        "point_minimum": 0,
+        "rhs": -4
+      }
+    ]
+  },
+  "claim_label": "VERIFIED",
+  "format": "wave212-rank4-full-coupling-post-source-v1",
+  "global_status": "UNKNOWN",
+  "hostile_tests": {
+    "column_mutation_rejected": true,
+    "erased_coefficients_rejected": true,
+    "reversed_dual_orientation_rejected": true,
+    "rhs_mutation_rejected": true,
+    "sign_breaking_map_mutation_rejected": true
+  },
+  "independent_full_relaxation": {
+    "exact_duals": {
+      "all_exact": true,
+      "certificates": [
+        {
+          "orbit_id": 0,
+          "pointwise_maximum": 118001,
+          "pointwise_minimum": 1,
+          "rhs": -678,
+          "support_size": 180
+        },
+        {
+          "orbit_id": 2,
+          "pointwise_maximum": 23001,
+          "pointwise_minimum": 1,
+          "rhs": -678,
+          "support_size": 68
+        },
+        {
+          "orbit_id": 4,
+          "pointwise_maximum": 62959,
+          "pointwise_minimum": 3,
+          "rhs": -6735,
+          "support_size": 1331
+        },
+        {
+          "orbit_id": 11,
+          "pointwise_maximum": 156677,
+          "pointwise_minimum": 6,
+          "rhs": -6746,
+          "support_size": 240
+        },
+        {
+          "orbit_id": 12,
+          "pointwise_maximum": 23001,
+          "pointwise_minimum": 1,
+          "rhs": -678,
+          "support_size": 68
+        },
+        {
+          "orbit_id": 14,
+          "pointwise_maximum": 191240,
+          "pointwise_minimum": 6,
+          "rhs": -5113,
+          "support_size": 1297
+        },
+        {
+          "orbit_id": 23,
+          "pointwise_maximum": 118001,
+          "pointwise_minimum": 1,
+          "rhs": -678,
+          "support_size": 178
+        }
+      ]
+    },
+    "global_status": "UNKNOWN"
+  },
+  "limitations": [
+    "The verified exclusion is conditional on the frozen hypothetical endpoint and the verified Wave208/209 rank-four reduction.",
+    "The rank-three survivor is not addressed by this verifier.",
+    "No 99-vertex graph, unrestricted nonexistence proof, counterexample, or global resolution is certified.",
+    "Conway-99 remains UNKNOWN."
+  ],
+  "membership_filtered_source_comparison": {
+    "all_complete_matrix_matches": true,
+    "systems": [
+      {
+        "admissible_point_signature_count": 444,
+        "column_count": 12554,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "de1f1c24a65dc97d62b0c0b6c56d69abaf5b6e3a17a5d8fc70188df25c600390",
+        "nonzero_count": 489372,
+        "orbit_id": 0,
+        "realizable_triangle_type_count": 521,
+        "residual_type_count": 531,
+        "row_count": 1266,
+        "row_universe_sha256": "ac6cc118b4a93f80096a248f70c7025a9c0fe9549ff3280771ed67d5f5ddc404",
+        "w_column_count": 12110,
+        "w_columns_sha256": "969caaed23622ab26bea238146e66a1ebed1c9e4d3f74da55f51dac819130aae",
+        "x_column_count": 444,
+        "x_columns_sha256": "fab0634c05cbd14d48d7b9329d36f8076936b838c36d04248c13ea2ef22d328e"
+      },
+      {
+        "admissible_point_signature_count": 576,
+        "column_count": 12020,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "051efcf48204e0e5215b88eeb4b557efde6e66a2b0a18ef2d705fe5c962c3b32",
+        "nonzero_count": 466899,
+        "orbit_id": 2,
+        "realizable_triangle_type_count": 507,
+        "residual_type_count": 513,
+        "row_count": 1530,
+        "row_universe_sha256": "d44a9e13248b2aa496c3560102c73586418e39e6fc4dc6d679e3372fb0a9327f",
+        "w_column_count": 11444,
+        "w_columns_sha256": "2480de7f255a29aaeeea7b2e919ec2339fb7e5ae3c4ce0672a41ed08ba7fb3ed",
+        "x_column_count": 576,
+        "x_columns_sha256": "93820f30c77caf692ebd45d988e65e5701a32a91ce24ef1042d1bcc44cca2224"
+      },
+      {
+        "admissible_point_signature_count": 532,
+        "column_count": 12204,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "f57b21a4626b606cbd24d9b6d0d1a06cb7d8bcc9049e32c6927982bf72d30aa1",
+        "nonzero_count": 474690,
+        "orbit_id": 4,
+        "realizable_triangle_type_count": 513,
+        "residual_type_count": 522,
+        "row_count": 1442,
+        "row_universe_sha256": "5d2ffe1e371efb9e09f1235c30c487a88faf8ccf2a74e6db0de1ea51d829cf71",
+        "w_column_count": 11672,
+        "w_columns_sha256": "99b60615353d7e41c5b611be72e86334719b9e5a79f9260381a5a9e4c79158f3",
+        "x_column_count": 532,
+        "x_columns_sha256": "698ccdf722328cf1f34f9f6ba2ddedfaf7cb27d353814efba593286b257cc4a2"
+      },
+      {
+        "admissible_point_signature_count": 532,
+        "column_count": 12204,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "73665ce51f7d476d7f1c9dbdcd4346bba32db96d15368d3be0bcdcf2e4bd9ac2",
+        "nonzero_count": 474690,
+        "orbit_id": 11,
+        "realizable_triangle_type_count": 513,
+        "residual_type_count": 522,
+        "row_count": 1442,
+        "row_universe_sha256": "a3b92d8997ac74d52bd5a7cb35bb3e338971fa309457d03e7f8578241bdf2c73",
+        "w_column_count": 11672,
+        "w_columns_sha256": "dc0f8866c0c38ce73885c260de249ce1ade9b690f118ae20de36245abfb9725e",
+        "x_column_count": 532,
+        "x_columns_sha256": "8f4b6156b8092519b935bb7dcb14b486bcff82c0a2b63f60d64a2144df2ce837"
+      },
+      {
+        "admissible_point_signature_count": 488,
+        "column_count": 12376,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "fcf506d7ae7efd0b52a77dd59a098fc358be4acada833c45b9c3b9b82e62436f",
+        "nonzero_count": 481881,
+        "orbit_id": 12,
+        "realizable_triangle_type_count": 517,
+        "residual_type_count": 525,
+        "row_count": 1354,
+        "row_universe_sha256": "c739d01048ca87c07d4d6468c2bca90b28d8d25849aef47f128e861169cbc87f",
+        "w_column_count": 11888,
+        "w_columns_sha256": "767e87a9c1d799c3baf2edeb6dc6a62608f4c2b702521f7e7db13eab58924104",
+        "x_column_count": 488,
+        "x_columns_sha256": "a9e62c6865e4e1dc353fff0a2a22e7891fda3eb0cd90640e87e36be8e074fa1a"
+      },
+      {
+        "admissible_point_signature_count": 510,
+        "column_count": 12513,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "23454529e8519c31d40568271f1472ec38b860b082fe9462b7d65051b183eede",
+        "nonzero_count": 488614,
+        "orbit_id": 14,
+        "realizable_triangle_type_count": 531,
+        "residual_type_count": 537,
+        "row_count": 1398,
+        "row_universe_sha256": "3db4543b3275c092e2af68e63e564d132db41241ebee45fead52ee2c2edb960a",
+        "w_column_count": 12003,
+        "w_columns_sha256": "b49390ff748fe23464670d6c0f33edd85bd1eccc7be6cc40cd91befbb6cb461b",
+        "x_column_count": 510,
+        "x_columns_sha256": "dc64ca2633fc6ebb025f5553c5d3f5931247d8392ac1bd98e9c6198f4f15e1bb"
+      },
+      {
+        "admissible_point_signature_count": 444,
+        "column_count": 12554,
+        "complete_source_matrix_match": true,
+        "full_system_sha256": "61e008e6538808d2df6eeab4bf5c8cf5027ef35eef18d5c2333fdaecc3a5fd23",
+        "nonzero_count": 489372,
+        "orbit_id": 23,
+        "realizable_triangle_type_count": 521,
+        "residual_type_count": 531,
+        "row_count": 1266,
+        "row_universe_sha256": "587889a22f95f7eb2be9ae00c48ae5bc540d117bfd0f9e38743b706887dccd3c",
+        "w_column_count": 12110,
+        "w_columns_sha256": "9cdc8a8a8291e697505fc68dfde7e5e9532616bd6f36eb6f468f9ab778061a32",
+        "x_column_count": 444,
+        "x_columns_sha256": "c30bf087763ee0a0743eac1a8e34d783476f1e1e897d7f224a425fa79cba09c7"
+      }
+    ]
+  },
+  "rank_three_status": "UNKNOWN",
+  "relaxation_inclusion": {
+    "larger_system_is_a_necessary_relaxation": true,
+    "logic": "every membership-filtered feasible vector extends by zero to the larger full-signature system",
+    "systems": [
+      {
+        "embedded_columns_checked": 12554,
+        "filtered_columns": 12554,
+        "filtered_rows": 1266,
+        "full_columns": 20094,
+        "full_rows": 4752,
+        "orbit_id": 0,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12020,
+        "filtered_columns": 12020,
+        "filtered_rows": 1530,
+        "full_columns": 19348,
+        "full_rows": 4752,
+        "orbit_id": 2,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12204,
+        "filtered_columns": 12204,
+        "filtered_rows": 1442,
+        "full_columns": 19795,
+        "full_rows": 4752,
+        "orbit_id": 4,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12204,
+        "filtered_columns": 12204,
+        "filtered_rows": 1442,
+        "full_columns": 19795,
+        "full_rows": 4752,
+        "orbit_id": 11,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12376,
+        "filtered_columns": 12376,
+        "filtered_rows": 1354,
+        "full_columns": 19912,
+        "full_rows": 4752,
+        "orbit_id": 12,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12513,
+        "filtered_columns": 12513,
+        "filtered_rows": 1398,
+        "full_columns": 20524,
+        "full_rows": 4752,
+        "orbit_id": 14,
+        "zero_extension_is_exact": true
+      },
+      {
+        "embedded_columns_checked": 12554,
+        "filtered_columns": 12554,
+        "filtered_rows": 1266,
+        "full_columns": 20094,
+        "full_rows": 4752,
+        "orbit_id": 23,
+        "zero_extension_is_exact": true
+      }
+    ]
+  },
+  "role": "verifier",
+  "scope": "conditional exclusion of all seven Wave209 rank-four survivor orbits and all 51 labelled branches",
+  "seals_and_manifests": {
+    "blind_input_entries": 7,
+    "blind_output_entries": 3,
+    "source_manifest_entries": 12,
+    "source_manifest_sha256": "7eb45280b61e1612f4d70aa95922b7821e16aa3c426832eadb8995809d5cff78"
+  },
+  "target_automorphism_assumed": false,
+  "transport": {
+    "target_automorphism_assumed": false,
+    "transported_branch_checks": 51,
+    "transported_dual_replays": 51,
+    "transported_local_pattern_checks": 601377
+  },
+  "verdict": "PASS_NO_VETO"
+}

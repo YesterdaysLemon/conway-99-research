@@ -40,6 +40,11 @@ latest_integration_audit: "verification/2026-07-31-wave209-integration-audit.md"
 latest_verified_wave: 209
 latest_verifier_package: "verification/wave209-four-survivor-verifier/package-manifest.sha256"
 latest_verifier_manifest_sha256: "7e20ac726cc4823360e49d3fcf08e5c8ff6c7f219c5d1cbbba781d015fe59c91"
+latest_handoff: "NEXT_INSTANCE_HANDOFF_2026-08-01.md"
+latest_handoff_wave: 212
+latest_handoff_branch: "codex/wave212-global-coupling"
+latest_sealed_verifier_package: "verification/wave212-rank4-full-coupling-verifier/package-manifest.sha256"
+latest_sealed_verifier_manifest_sha256: "01427c528c465c70a770313c67d3c966addd333c9f88f19507a75effc7dddc65"
 rigorous_n3_interval: "708<=n3<=4158"
 endpoint_complete_case_proof_coverage: "0/33"
 symmetry_policy:

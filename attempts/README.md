@@ -1225,3 +1225,19 @@ Wave 210/211 handoff attempts:
 
 See `NEXT_INSTANCE_HANDOFF_2026-07-31.md` before continuing.  Public ledgers
 remain at Wave 209 and Conway-99 remains `UNKNOWN`.
+
+Wave 212 attempts:
+
+- `wave212-rank3-common-neighbor-proof-b/` derives the forced `64+456`
+  outside-edge split, 152 outside triangles, the complete support-refined
+  four-cycle census, and simultaneous coloured one-factors.  Its three
+  labelled incidence controls are deliberately partial: all degrees, ten
+  selected pairs, and 104 zero-target rows pass, but most `FD` and quadratic
+  rows fail.
+- `wave212-rank3-quadratic-algebra-proof-a/` derives the exact
+  `J5^2+J3^2+J1^69` Artin--Schreier data and closes all diagonal and `2 x 2`
+  conditional projector shortcuts.  Its core computations verify, while a
+  fresh verifier refutes only the claimed allocation-undetermined boundary.
+
+See `NEXT_INSTANCE_HANDOFF_2026-08-01.md`.  Wave 212 conditionally removes
+rank four, but rank three and Conway-99 remain `UNKNOWN`.

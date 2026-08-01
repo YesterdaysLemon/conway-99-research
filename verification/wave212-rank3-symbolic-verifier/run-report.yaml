@@ -1,0 +1,37 @@
+role: verifier
+date_utc: 2026-08-01T05:19:08Z
+git_commit: 698f4db2cecd67fb4b9cfa8ff2bf7b375d9d93f3
+claim_label: VERIFIED
+scope: >-
+  Independent replay of Wave 212 rank-three common-neighbor and
+  quadratic-algebra packages; proof-B restricted claims and proof-A core
+  computations verified, proof-A allocation-undetermined boundary refuted.
+inputs:
+  - path: verification/wave212-rank3-symbolic-verifier/preinspection-seal.sha256
+    sha256: 232085da8acdaa9dbc936de65bf9964c92cd40ec56cfa49bf3b7beb2ccdc9168
+  - path: attempts/wave212-rank3-common-neighbor-proof-b/package-manifest.sha256
+    sha256: 6fbd4427f701d63e40df2718057dab37b0b7930cc5dc9f0ed7ecf76eab813447
+  - path: attempts/wave212-rank3-quadratic-algebra-proof-a/package-manifest.sha256
+    sha256: 10dbc03ce2ea6e9f5bed46ab5b735fe36d6dddd073a40010c947e59f516496ab
+method: >-
+  Source-blind preinspection freeze, independent common-neighbor residual
+  replay, exact F2 power ranks and forced-U action, exact rational K
+  projectors, source unit-test replay, manifest audit, and hostile mutations.
+command: >-
+  C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe
+  -B verification\wave212-rank3-symbolic-verifier\independent_verify.py
+  --verify; Push-Location verification\wave212-rank3-symbolic-verifier;
+  C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe
+  -B -m unittest -v test_independent_verify.py; Pop-Location
+outputs:
+  - path: verification/wave212-rank3-symbolic-verifier/independent_verify.py
+    sha256: 835bdd753dc5a80ea93aa37998d9c3ee3eee143eeb6f927e36ed96abe23da7ef
+  - path: verification/wave212-rank3-symbolic-verifier/exact-results.json
+    sha256: 9edea84a3a834c4426758d90992f0782140a5681b9976eaf254e4e0ff6493c13
+  - path: verification/wave212-rank3-symbolic-verifier/audit.md
+    sha256: 310496998aaa55135ba60c96a9ce8bfc9868fbe4fe3c6b0e8f66401c59f562b9
+limitations: >-
+  Proof-B controls are restricted and fail most FD/quadratic rows; the
+  zero-primary allocation and D power ranks are newly verifier-derived and
+  pending an independent promotion check; no D or 99-vertex graph is
+  constructed or excluded; global status remains UNKNOWN.

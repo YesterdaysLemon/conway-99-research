@@ -26,11 +26,12 @@ and the normalized search problem.
 
 ## Current status
 
-For the exact branch frontier, including sealed Wave 210/211 work that is not
-yet promoted into the public ledgers, read
-[NEXT_INSTANCE_HANDOFF_2026-07-31.md](NEXT_INSTANCE_HANDOFF_2026-07-31.md).
-The latest integrated checkpoint remains Wave 209; the Wave 210 rank-four
-exclusion claim is still `DERIVED` with a pending-verification veto.
+For the exact branch frontier, including the sealed Wave 212 verification and
+the remaining rank-three wall, read
+[NEXT_INSTANCE_HANDOFF_2026-08-01.md](NEXT_INSTANCE_HANDOFF_2026-08-01.md).
+The latest integrated public ledger remains Wave 209.  Wave 212 closes the
+old rank-four promotion veto and conditionally excludes all 51 rank-four
+branches; the sole rank-three form and Conway-99 remain `UNKNOWN`.
 
 - **Literature status:** no resolution found in the sources searched through
   2026-07-31; this is not a proof of openness or exhaustive coverage.

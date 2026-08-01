@@ -1,0 +1,51 @@
+{
+  "common_neighbor_target_histogram": {
+    "0": 104,
+    "1": 1044,
+    "2": 2422
+  },
+  "conditional_D_jordan_over_F2": {
+    "eigenvalue_0": {
+      "1": 29,
+      "3": 2,
+      "5": 2
+    },
+    "eigenvalue_1": {
+      "1": 40
+    }
+  },
+  "conditional_D_plus_I_power_ranks_over_F2": [45, 45, 45, 45, 45],
+  "conditional_D_power_ranks_over_F2": [52, 48, 44, 42, 40],
+  "degree_distribution": {
+    "10": 7,
+    "12": 61,
+    "14": 17
+  },
+  "outside_C4s": 1211,
+  "outside_edges": 520,
+  "outside_triangles": 152,
+  "overlap_edge_distribution": {
+    "0": 456,
+    "1": 64,
+    "2": 0
+  },
+  "overlap_pair_distribution": {
+    "0": 2878,
+    "1": 652,
+    "2": 40
+  },
+  "projector_expectations": {
+    "E_-4_diagonal_sum": 31,
+    "E_3_diagonal_sum": 40,
+    "K_dimension": 71,
+    "P_K_trace": 71,
+    "U_dimension": 14,
+    "forced_L_trace": 4
+  },
+  "q_power_ranks_over_F2": [12, 8, 4, 2, 0],
+  "rank_F_over_F2": 13,
+  "rank_F_over_Q": 13,
+  "rank_stacked_over_F2": 14,
+  "rank_stacked_over_Q": 14,
+  "u_forced_action_power_ranks_over_F2": [8, 4, 2, 0]
+}

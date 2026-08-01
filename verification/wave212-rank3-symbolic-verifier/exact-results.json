@@ -1,0 +1,685 @@
+{
+  "claim_label": "VERIFIED",
+  "common_neighbor": {
+    "conditional_census": {
+      "all_four_cycles": 2079,
+      "common_neighbor_target_histogram": {
+        "0": 104,
+        "1": 1044,
+        "2": 2422
+      },
+      "edge_overlap_split": {
+        "q0": 456,
+        "q1": 64,
+        "q2": 0
+      },
+      "four_cycle_support_census": {
+        "support_0": 1211,
+        "support_1": 588,
+        "support_2_adjacent": 220,
+        "support_2_alternating": 40,
+        "support_3": 12,
+        "support_4": 8
+      },
+      "outside_edges": 520,
+      "outside_four_cycles": 1211,
+      "outside_pair_overlap_histogram": {
+        "0": 2878,
+        "1": 652,
+        "2": 40
+      },
+      "outside_triangles": 152
+    },
+    "controls": [
+      {
+        "FD_residual_histogram": {
+          "-1": 290,
+          "-2": 65,
+          "0": 499,
+          "1": 261,
+          "2": 66,
+          "3": 9
+        },
+        "FD_satisfied": 499,
+        "graph_triangles": 284,
+        "orbit_index": 0,
+        "quadratic_residual_histogram": {
+          "-1": 911,
+          "-2": 300,
+          "0": 1256,
+          "1": 769,
+          "2": 268,
+          "3": 59,
+          "4": 6,
+          "5": 1
+        },
+        "quadratic_satisfied": 1256,
+        "spurious_triangles": 132,
+        "target_zero_pairs": 104,
+        "target_zero_violations": 0
+      },
+      {
+        "FD_residual_histogram": {
+          "-1": 271,
+          "-2": 69,
+          "0": 534,
+          "1": 227,
+          "2": 85,
+          "3": 4
+        },
+        "FD_satisfied": 534,
+        "graph_triangles": 306,
+        "orbit_index": 4,
+        "quadratic_residual_histogram": {
+          "-1": 882,
+          "-2": 340,
+          "0": 1259,
+          "1": 722,
+          "2": 278,
+          "3": 73,
+          "4": 15,
+          "5": 1
+        },
+        "quadratic_satisfied": 1259,
+        "spurious_triangles": 154,
+        "target_zero_pairs": 104,
+        "target_zero_violations": 0
+      },
+      {
+        "FD_residual_histogram": {
+          "-1": 277,
+          "-2": 64,
+          "0": 532,
+          "1": 235,
+          "2": 76,
+          "3": 6
+        },
+        "FD_satisfied": 532,
+        "graph_triangles": 275,
+        "orbit_index": 29,
+        "quadratic_residual_histogram": {
+          "-1": 869,
+          "-2": 322,
+          "0": 1299,
+          "1": 730,
+          "2": 278,
+          "3": 61,
+          "4": 11
+        },
+        "quadratic_satisfied": 1299,
+        "spurious_triangles": 123,
+        "target_zero_pairs": 104,
+        "target_zero_violations": 0
+      }
+    ],
+    "hostile_mutation_rejected": true,
+    "verdict": "PASS / NO VETO"
+  },
+  "global_status": "UNKNOWN",
+  "limitations": [
+    "The common-neighbor controls satisfy all degrees, selected pairs, and 104 zero-target rows, but only partial FD and many quadratic rows; none is a completion.",
+    "No 85-by-85 outside block is constructed or excluded.",
+    "No target-graph automorphism or unknown-graph search is used."
+  ],
+  "manifests": {
+    "common_neighbor": {
+      "entries": 10,
+      "exact_file_coverage": true,
+      "sha256": "6fbd4427f701d63e40df2718057dab37b0b7930cc5dc9f0ed7ecf76eab813447"
+    },
+    "quadratic_algebra": {
+      "entries": 9,
+      "exact_file_coverage": true,
+      "sha256": "10dbc03ce2ea6e9f5bed46ab5b735fe36d6dddd073a40010c947e59f516496ab"
+    }
+  },
+  "quadratic_algebra": {
+    "allocation_statement_verdict": "VETO / REFUTED",
+    "core_verdict": "PASS / NO VETO",
+    "hostile_mutation_rejected": true,
+    "orbits": [
+      {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "205958/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "294/673"
+          },
+          {
+            "multiplicity": 2,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 2,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 20,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 22,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "1/4"
+          },
+          {
+            "multiplicity": 2,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 4,
+            "value": "67/245"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 2,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 22,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 20,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "1849/2692"
+          },
+          {
+            "multiplicity": 4,
+            "value": "341231/494655"
+          },
+          {
+            "multiplicity": 2,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 2,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 20,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 22,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "orbit_index": 0,
+        "projector_traces": {
+          "E_3": 40,
+          "E_minus4": 31,
+          "L": 4,
+          "P_K": 71
+        },
+        "q_jordan": {
+          "1": 69,
+          "3": 2,
+          "5": 2
+        },
+        "q_power_ranks": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ],
+        "two_by_two_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        },
+        "u_action_power_ranks": [
+          8,
+          4,
+          2,
+          0
+        ],
+        "verifier_derived_allocation_pending_independent_promotion": {
+          "claim_label": "DERIVED",
+          "conditional_D_jordan": {
+            "eigenvalue_0": {
+              "1": 29,
+              "3": 2,
+              "5": 2
+            },
+            "eigenvalue_1": {
+              "1": 40
+            }
+          },
+          "conditional_D_power_ranks": [
+            52,
+            48,
+            44,
+            42,
+            40
+          ],
+          "promotion_status": "PENDING_INDEPENDENT_VERIFICATION"
+        }
+      },
+      {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "205958/494655"
+          },
+          {
+            "multiplicity": 2,
+            "value": "216178/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 3,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 18,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 23,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 2,
+            "value": "247/980"
+          },
+          {
+            "multiplicity": 4,
+            "value": "67/245"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 3,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 23,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 18,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 2,
+            "value": "272681/395724"
+          },
+          {
+            "multiplicity": 4,
+            "value": "341231/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 3,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 18,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 23,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "orbit_index": 4,
+        "projector_traces": {
+          "E_3": 40,
+          "E_minus4": 31,
+          "L": 4,
+          "P_K": 71
+        },
+        "q_jordan": {
+          "1": 69,
+          "3": 2,
+          "5": 2
+        },
+        "q_power_ranks": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ],
+        "two_by_two_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        },
+        "u_action_power_ranks": [
+          8,
+          4,
+          2,
+          0
+        ],
+        "verifier_derived_allocation_pending_independent_promotion": {
+          "claim_label": "DERIVED",
+          "conditional_D_jordan": {
+            "eigenvalue_0": {
+              "1": 29,
+              "3": 2,
+              "5": 2
+            },
+            "eigenvalue_1": {
+              "1": 40
+            }
+          },
+          "conditional_D_power_ranks": [
+            52,
+            48,
+            44,
+            42,
+            40
+          ],
+          "promotion_status": "PENDING_INDEPENDENT_VERIFICATION"
+        }
+      },
+      {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "5590/14133"
+          },
+          {
+            "multiplicity": 2,
+            "value": "5798/14133"
+          },
+          {
+            "multiplicity": 4,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 4,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 16,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 24,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 2,
+            "value": "39/140"
+          },
+          {
+            "multiplicity": 1,
+            "value": "41/140"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 4,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 24,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 16,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "27797/40380"
+          },
+          {
+            "multiplicity": 2,
+            "value": "194701/282660"
+          },
+          {
+            "multiplicity": 4,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 4,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 16,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 24,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "orbit_index": 29,
+        "projector_traces": {
+          "E_3": 40,
+          "E_minus4": 31,
+          "L": 4,
+          "P_K": 71
+        },
+        "q_jordan": {
+          "1": 69,
+          "3": 2,
+          "5": 2
+        },
+        "q_power_ranks": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ],
+        "two_by_two_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        },
+        "u_action_power_ranks": [
+          8,
+          4,
+          2,
+          0
+        ],
+        "verifier_derived_allocation_pending_independent_promotion": {
+          "claim_label": "DERIVED",
+          "conditional_D_jordan": {
+            "eigenvalue_0": {
+              "1": 29,
+              "3": 2,
+              "5": 2
+            },
+            "eigenvalue_1": {
+              "1": 40
+            }
+          },
+          "conditional_D_power_ranks": [
+            52,
+            48,
+            44,
+            42,
+            40
+          ],
+          "promotion_status": "PENDING_INDEPENDENT_VERIFICATION"
+        }
+      }
+    ],
+    "reason": "The submitted Q power ranks and projector calculations replay, but the claim that the four nontrivial D blocks may be allocated between roots 0 and 1 omits the forced nilpotent D action on U. Since im(F^T F) is contained in U, every nontrivial Artin-Schreier chain has root 0.",
+    "replacement_status": "VERIFIER-DERIVED / PENDING INDEPENDENT PROMOTION"
+  }
+}

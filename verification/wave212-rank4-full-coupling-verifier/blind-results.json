@@ -1,0 +1,288 @@
+{
+  "branch_orbits": 24,
+  "claim_label": "CANDIDATE",
+  "format": "wave212-rank4-full-coupling-blind-v1",
+  "global_status": "UNKNOWN",
+  "labelled_branches": 249,
+  "point_signature_count": 2187,
+  "role": "verifier",
+  "row_count": 4752,
+  "surviving_labelled_branches": 51,
+  "surviving_orbit_ids": [
+    0,
+    2,
+    4,
+    11,
+    12,
+    14,
+    23
+  ],
+  "systems": [
+    {
+      "branch_count": 6,
+      "column_count": 20094,
+      "decomposition_count": 17907,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "84c4e3186627207ea824f5b361a3608a47df3fabf9ae9a197800b0ee34a5870c",
+      "nonzero_count": 805670,
+      "orbit_id": 0,
+      "residual_type_count": 531,
+      "row_count": 4752,
+      "row_universe_sha256": "e62fec5d76ecdbd63cf0da2d8cb79e9a6c769fd4bed22c3f92987ff69270fd85",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ]
+      ],
+      "w_column_count": 17907,
+      "w_columns_sha256": "d7748a192aee36718c492af88b389f0bd64162e47cd20f3e145345af11cc26dc",
+      "x_column_count": 2187,
+      "x_columns_sha256": "78198edf3fdec47106a5f4e8ffef2f5b87b79efb5bce375bc68895b52918a808"
+    },
+    {
+      "branch_count": 12,
+      "column_count": 19348,
+      "decomposition_count": 17161,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "a0787295bd23c83d18b8ac7dab1ed07abf949ff7a017a1c72f884760e6634f91",
+      "nonzero_count": 774002,
+      "orbit_id": 2,
+      "residual_type_count": 513,
+      "row_count": 4752,
+      "row_universe_sha256": "018c474838e8804b8410c7e9abe187cd8bd7b79752196fe5023e615159c93035",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "w_column_count": 17161,
+      "w_columns_sha256": "d79af156f21cd6019cd07474f9dc315edf591e869e857420a018fc31c68c97f0",
+      "x_column_count": 2187,
+      "x_columns_sha256": "7bd2b8fee3392dd40fb62ea58b9639855a68139690f6fa4d646b3ff1b5e6e223"
+    },
+    {
+      "branch_count": 6,
+      "column_count": 19795,
+      "decomposition_count": 17608,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "666ad9656f43b172b0fd52c93f91fb438725f80c5395d4f0d61ac86f1696c4ef",
+      "nonzero_count": 794155,
+      "orbit_id": 4,
+      "residual_type_count": 522,
+      "row_count": 4752,
+      "row_universe_sha256": "31f7a08578b7bad0c278876b49a8e1a16e648e33ef8764329dd1708780e6be8e",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "w_column_count": 17608,
+      "w_columns_sha256": "d813546f7bfa59a901b3427ad84b29143119ebdbbcbaa8d4a5a3a44ee8076c26",
+      "x_column_count": 2187,
+      "x_columns_sha256": "6a27c0cf5cb1bdccc8066e51a6a70f378911d4b4ee1dbcb1a716bd120615e54b"
+    },
+    {
+      "branch_count": 6,
+      "column_count": 19795,
+      "decomposition_count": 17608,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "876397a748e56c15c5e3704fbb10ed72fe3b26ce2493622b610406513d21325c",
+      "nonzero_count": 794155,
+      "orbit_id": 11,
+      "residual_type_count": 522,
+      "row_count": 4752,
+      "row_universe_sha256": "39c60e98a93d680a07eefbca4c5fc1c1eb05a66769960129ec9660aa13ebaf00",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "w_column_count": 17608,
+      "w_columns_sha256": "d813546f7bfa59a901b3427ad84b29143119ebdbbcbaa8d4a5a3a44ee8076c26",
+      "x_column_count": 2187,
+      "x_columns_sha256": "6a27c0cf5cb1bdccc8066e51a6a70f378911d4b4ee1dbcb1a716bd120615e54b"
+    },
+    {
+      "branch_count": 12,
+      "column_count": 19912,
+      "decomposition_count": 17725,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "3b010208bdb6fefa07584e2cb1829f00217111889c187badc4e6ef5291d44102",
+      "nonzero_count": 798698,
+      "orbit_id": 12,
+      "residual_type_count": 525,
+      "row_count": 4752,
+      "row_universe_sha256": "755b902269adb980c0e3231f476aa07ddd7d469301d7169e5718984b6d4f4ae1",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "w_column_count": 17725,
+      "w_columns_sha256": "fe91a921d0fe7f3698a00581877ba24fb8537cf9afcdb160c43e64274138b145",
+      "x_column_count": 2187,
+      "x_columns_sha256": "91d25f72ef192db2d269e1c8652c483700b801a110c37d5399c284eaf097e2e6"
+    },
+    {
+      "branch_count": 3,
+      "column_count": 20524,
+      "decomposition_count": 18337,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "32928501eb179ac4788cb467271f2799f63ce6b1eb01d4159fa11190c9c558bf",
+      "nonzero_count": 826656,
+      "orbit_id": 14,
+      "residual_type_count": 537,
+      "row_count": 4752,
+      "row_universe_sha256": "df5145c854a8e6b980708e9892351d38c9510f457b354a57fbc94a646bd3ddea",
+      "selected_intersections": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "w_column_count": 18337,
+      "w_columns_sha256": "ffb615938df6939ec966915ba7f8ebbe04ecd088da61c5939467f434ce576d98",
+      "x_column_count": 2187,
+      "x_columns_sha256": "5cda2e99fab983e0f848ef74592062b428d420151104764a6782bc2f497ac9aa"
+    },
+    {
+      "branch_count": 6,
+      "column_count": 20094,
+      "decomposition_count": 17907,
+      "form_diagonal": [
+        0,
+        0,
+        1
+      ],
+      "form_index": 0,
+      "full_system_sha256": "2910ad74e28465258c9ad56b79c23d450b46cf6c1e6acce51a105c1513097cc6",
+      "nonzero_count": 805670,
+      "orbit_id": 23,
+      "residual_type_count": 531,
+      "row_count": 4752,
+      "row_universe_sha256": "b1f05a870482c0c802b4ccfe7dc4f4c29176cd1867522af760de778159dcd586",
+      "selected_intersections": [
+        [
+          4,
+          7
+        ]
+      ],
+      "w_column_count": 17907,
+      "w_columns_sha256": "799dca64a90ad9f10b4280f62fc43e07313b51941d10750ff793914dcacccdf5",
+      "x_column_count": 2187,
+      "x_columns_sha256": "78198edf3fdec47106a5f4e8ffef2f5b87b79efb5bce375bc68895b52918a808"
+    }
+  ],
+  "target_automorphism_assumed": false
+}

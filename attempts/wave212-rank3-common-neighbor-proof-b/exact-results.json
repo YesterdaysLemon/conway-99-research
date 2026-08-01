@@ -1,0 +1,102 @@
+{
+  "claim_label": "DERIVED",
+  "conditional_completion_census_common_to_all_three_orbits": {
+    "forced_all_outside_triangles": 152,
+    "forced_four_cycle_support_census": {"support_0": 1211, "support_1": 588, "support_2_adjacent_supports": 220, "support_2_alternating_supports": 40, "support_3": 12, "support_4": 8},
+    "forced_four_cycles_total": 2079,
+    "forced_outside_edge_split": {"q0": 456, "q1": 64},
+    "outside_pair_support_intersection_histogram": {"0": 2878, "1": 652, "2": 40},
+    "support_outside_nonedge_internal_common_histogram": {"0": 588, "1": 440, "2": 12},
+    "support_support_nonedge_internal_common_histogram": {"0": 40, "1": 12, "2": 16}
+  },
+  "global_status": "UNKNOWN",
+  "hostile_incidence_controls": [
+    {
+      "FD_equations_satisfied": 499,
+      "FD_equations_total": 1190,
+      "FD_residual_histogram": {"-2": 65, "-1": 290, "0": 499, "1": 261, "2": 66, "3": 9},
+      "all_14_colored_matchings_simultaneously_cover_forced_endpoints": true,
+      "colored_q1_edges": 64,
+      "column_metric_histogram_t_a_q1degree_outsideTriangles": {"0,0,0,7": 17, "2,0,2,5": 60, "2,1,0,6": 1, "4,1,2,4": 4, "4,2,0,5": 3},
+      "degree_equations_satisfied": 85,
+      "designated_outside_triangles": 152,
+      "graph_outside_triangles": 284,
+      "is_full_quadratic_solution": false,
+      "orbit_index": 0,
+      "outside_edges": 520,
+      "outside_triangle_blocks": 152,
+      "q0_pairs_covered_once": 456,
+      "quadratic_pairs_satisfied": 1256,
+      "quadratic_pairs_total": 3570,
+      "quadratic_residual_histogram": {"-2": 300, "-1": 911, "0": 1256, "1": 769, "2": 268, "3": 59, "4": 6, "5": 1},
+      "selected_pair_values_satisfied": 10,
+      "spurious_outside_triangles": 132,
+      "target_zero_pairs": 104,
+      "target_zero_violations": 0
+    },
+    {
+      "FD_equations_satisfied": 534,
+      "FD_equations_total": 1190,
+      "FD_residual_histogram": {"-2": 69, "-1": 271, "0": 534, "1": 227, "2": 85, "3": 4},
+      "all_14_colored_matchings_simultaneously_cover_forced_endpoints": true,
+      "colored_q1_edges": 64,
+      "column_metric_histogram_t_a_q1degree_outsideTriangles": {"0,0,0,7": 17, "2,0,2,5": 60, "2,1,0,6": 1, "4,1,2,4": 4, "4,2,0,5": 3},
+      "degree_equations_satisfied": 85,
+      "designated_outside_triangles": 152,
+      "graph_outside_triangles": 306,
+      "is_full_quadratic_solution": false,
+      "orbit_index": 4,
+      "outside_edges": 520,
+      "outside_triangle_blocks": 152,
+      "q0_pairs_covered_once": 456,
+      "quadratic_pairs_satisfied": 1259,
+      "quadratic_pairs_total": 3570,
+      "quadratic_residual_histogram": {"-2": 340, "-1": 882, "0": 1259, "1": 722, "2": 278, "3": 73, "4": 15, "5": 1},
+      "selected_pair_values_satisfied": 10,
+      "spurious_outside_triangles": 154,
+      "target_zero_pairs": 104,
+      "target_zero_violations": 0
+    },
+    {
+      "FD_equations_satisfied": 532,
+      "FD_equations_total": 1190,
+      "FD_residual_histogram": {"-2": 64, "-1": 277, "0": 532, "1": 235, "2": 76, "3": 6},
+      "all_14_colored_matchings_simultaneously_cover_forced_endpoints": true,
+      "colored_q1_edges": 64,
+      "column_metric_histogram_t_a_q1degree_outsideTriangles": {"0,0,0,7": 17, "2,0,2,5": 60, "2,1,0,6": 1, "4,0,4,3": 1, "4,1,2,4": 2, "4,2,0,5": 4},
+      "degree_equations_satisfied": 85,
+      "designated_outside_triangles": 152,
+      "graph_outside_triangles": 275,
+      "is_full_quadratic_solution": false,
+      "orbit_index": 29,
+      "outside_edges": 520,
+      "outside_triangle_blocks": 152,
+      "q0_pairs_covered_once": 456,
+      "quadratic_pairs_satisfied": 1299,
+      "quadratic_pairs_total": 3570,
+      "quadratic_residual_histogram": {"-2": 322, "-1": 869, "0": 1299, "1": 730, "2": 278, "3": 61, "4": 11},
+      "selected_pair_values_satisfied": 10,
+      "spurious_outside_triangles": 123,
+      "target_zero_pairs": 104,
+      "target_zero_violations": 0
+    }
+  ],
+  "inputs": {
+    "AGENTS.md": "4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3",
+    "attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json": "32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd",
+    "attempts/wave210-rank3-marked-outside-coupling-proof-a/package-manifest.sha256": "d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722",
+    "verification/wave210-rank3-marked-outside-coupling-verifier/package-manifest.sha256": "d7f30a8c3e5d89c363f88da64d0a0baf2a2c933694e6bf12efdb94e6cd3132fb"
+  },
+  "limitations": [
+    "the controls are labelled triangle-incidence relaxations, not 85-vertex SRG outside blocks",
+    "the controls were required to satisfy all degrees, all ten selected pair values, coloured q=1 compatibility, and all 104 zero-target common-neighbor pairs, but not the 1190 FD entries or the remaining quadratic equalities",
+    "their nonzero residuals are explicit failures, not evidence for an SRG construction",
+    "no target automorphism is assumed and no unknown 85-vertex graph is enumerated"
+  ],
+  "path_budget_identity": {
+    "consequence": "for any degree-correct binary D, if every off-diagonal common-neighbor value is at most its target, then all 3570 values equal their targets",
+    "sum_choose_outside_degrees_2": 5888,
+    "sum_pair_targets_2_minus_q_minus_D": 5888
+  },
+  "scope": "common-neighbor, triangle, four-cycle, and coloured-one-factor consequences for the three Wave 210 rank-three representatives"
+}

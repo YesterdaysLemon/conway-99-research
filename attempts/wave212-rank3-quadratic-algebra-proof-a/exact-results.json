@@ -1,0 +1,537 @@
+{
+  "claim_label": "DERIVED",
+  "conditional_characteristic_polynomial_mod_2": {
+    "alternating_odd_order_form": "x * (x^22 (x+1)^20)^2",
+    "expanded_nonzero_degrees": [
+      85,
+      77,
+      53,
+      45
+    ],
+    "factorization": "x^45 (x+1)^40",
+    "verdict": "compatible; no alternating-characteristic-polynomial obstruction"
+  },
+  "global_status": "UNKNOWN",
+  "input_sha256": {
+    "attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json": "32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd"
+  },
+  "limitations": [
+    "No 85-by-85 binary matrix D is constructed or excluded.",
+    "The allocation of the four nontrivial mod-2 Jordan blocks between the 0- and 1-primary spaces is not forced.",
+    "Strict projector diagonals and all 2-by-2 PSD minors close only local spectral-projector shortcuts; larger minors remain equivalent to unresolved quadratic content.",
+    "No target automorphism is assumed."
+  ],
+  "orbits": [
+    {
+      "K_projector_local_multiplicities": {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "205958/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "294/673"
+          },
+          {
+            "multiplicity": 2,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 2,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 20,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 22,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_3_diagonal_max": "2502/4711",
+        "E_3_diagonal_min": "205958/494655",
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "1/4"
+          },
+          {
+            "multiplicity": 2,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 4,
+            "value": "67/245"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 2,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 22,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 20,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "E_minus4_diagonal_max": "59/140",
+        "E_minus4_diagonal_min": "1/4",
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "1849/2692"
+          },
+          {
+            "multiplicity": 4,
+            "value": "341231/494655"
+          },
+          {
+            "multiplicity": 2,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 2,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 20,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 22,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "trace_E_3_on_K": 40,
+        "trace_E_minus4_on_K": 31,
+        "trace_P_K": 71,
+        "two_by_two_PSD_pair_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        }
+      },
+      "mod_2_artin_schreier": {
+        "consequence_for_D": "If D^2+D=F^T F over F2, D has exactly the same four nontrivial Jordan blocks J5,J5,J3,J3, allocated in an undetermined way between its 0-primary and 1-primary spaces.",
+        "jordan_type_of_F_transpose_F": {
+          "blocks_of_exact_size": {
+            "1": 69,
+            "3": 2,
+            "5": 2
+          },
+          "blocks_of_size_at_least": {
+            "1": 73,
+            "2": 4,
+            "3": 4,
+            "4": 2,
+            "5": 2
+          },
+          "compact": "J5^2 + J3^2 + J1^69"
+        },
+        "nilpotency_index": 5,
+        "rank_F_transpose_F_powers_1_through_5": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ]
+      },
+      "orbit_index": 0
+    },
+    {
+      "K_projector_local_multiplicities": {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "205958/494655"
+          },
+          {
+            "multiplicity": 2,
+            "value": "216178/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 3,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 18,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 23,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_3_diagonal_max": "2502/4711",
+        "E_3_diagonal_min": "205958/494655",
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 2,
+            "value": "247/980"
+          },
+          {
+            "multiplicity": 4,
+            "value": "67/245"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 3,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 23,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 18,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "E_minus4_diagonal_max": "59/140",
+        "E_minus4_diagonal_min": "491/1960",
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 2,
+            "value": "272681/395724"
+          },
+          {
+            "multiplicity": 4,
+            "value": "341231/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 3,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 18,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 23,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "trace_E_3_on_K": 40,
+        "trace_E_minus4_on_K": 31,
+        "trace_P_K": 71,
+        "two_by_two_PSD_pair_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        }
+      },
+      "mod_2_artin_schreier": {
+        "consequence_for_D": "If D^2+D=F^T F over F2, D has exactly the same four nontrivial Jordan blocks J5,J5,J3,J3, allocated in an undetermined way between its 0-primary and 1-primary spaces.",
+        "jordan_type_of_F_transpose_F": {
+          "blocks_of_exact_size": {
+            "1": 69,
+            "3": 2,
+            "5": 2
+          },
+          "blocks_of_size_at_least": {
+            "1": 73,
+            "2": 4,
+            "3": 4,
+            "4": 2,
+            "5": 2
+          },
+          "compact": "J5^2 + J3^2 + J1^69"
+        },
+        "nilpotency_index": 5,
+        "rank_F_transpose_F_powers_1_through_5": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ]
+      },
+      "orbit_index": 4
+    },
+    {
+      "K_projector_local_multiplicities": {
+        "E_3_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "5590/14133"
+          },
+          {
+            "multiplicity": 2,
+            "value": "5798/14133"
+          },
+          {
+            "multiplicity": 4,
+            "value": "217736/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "220228/494655"
+          },
+          {
+            "multiplicity": 8,
+            "value": "14898/32977"
+          },
+          {
+            "multiplicity": 4,
+            "value": "15082/32977"
+          },
+          {
+            "multiplicity": 16,
+            "value": "227398/494655"
+          },
+          {
+            "multiplicity": 24,
+            "value": "230036/494655"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2228/4711"
+          },
+          {
+            "multiplicity": 17,
+            "value": "2502/4711"
+          }
+        ],
+        "E_3_diagonal_max": "2502/4711",
+        "E_3_diagonal_min": "5590/14133",
+        "E_minus4_diagonal_distribution": [
+          {
+            "multiplicity": 4,
+            "value": "491/1960"
+          },
+          {
+            "multiplicity": 2,
+            "value": "39/140"
+          },
+          {
+            "multiplicity": 1,
+            "value": "41/140"
+          },
+          {
+            "multiplicity": 1,
+            "value": "11/35"
+          },
+          {
+            "multiplicity": 8,
+            "value": "347/980"
+          },
+          {
+            "multiplicity": 4,
+            "value": "88/245"
+          },
+          {
+            "multiplicity": 24,
+            "value": "709/1960"
+          },
+          {
+            "multiplicity": 16,
+            "value": "71/196"
+          },
+          {
+            "multiplicity": 8,
+            "value": "179/490"
+          },
+          {
+            "multiplicity": 17,
+            "value": "59/140"
+          }
+        ],
+        "E_minus4_diagonal_max": "59/140",
+        "E_minus4_diagonal_min": "491/1960",
+        "P_K_diagonal_distribution": [
+          {
+            "multiplicity": 1,
+            "value": "27797/40380"
+          },
+          {
+            "multiplicity": 2,
+            "value": "194701/282660"
+          },
+          {
+            "multiplicity": 4,
+            "value": "2733217/3957240"
+          },
+          {
+            "multiplicity": 1,
+            "value": "2649/3365"
+          },
+          {
+            "multiplicity": 8,
+            "value": "316301/395724"
+          },
+          {
+            "multiplicity": 4,
+            "value": "134634/164885"
+          },
+          {
+            "multiplicity": 8,
+            "value": "269447/329770"
+          },
+          {
+            "multiplicity": 16,
+            "value": "1626337/1978620"
+          },
+          {
+            "multiplicity": 24,
+            "value": "3271759/3957240"
+          },
+          {
+            "multiplicity": 17,
+            "value": "12821/13460"
+          }
+        ],
+        "trace_E_3_on_K": 40,
+        "trace_E_minus4_on_K": 31,
+        "trace_P_K": 71,
+        "two_by_two_PSD_pair_choices": {
+          "both_0_and_1_allowed": 3570,
+          "forced_0": 0,
+          "forced_1": 0,
+          "neither_allowed": 0
+        }
+      },
+      "mod_2_artin_schreier": {
+        "consequence_for_D": "If D^2+D=F^T F over F2, D has exactly the same four nontrivial Jordan blocks J5,J5,J3,J3, allocated in an undetermined way between its 0-primary and 1-primary spaces.",
+        "jordan_type_of_F_transpose_F": {
+          "blocks_of_exact_size": {
+            "1": 69,
+            "3": 2,
+            "5": 2
+          },
+          "blocks_of_size_at_least": {
+            "1": 73,
+            "2": 4,
+            "3": 4,
+            "4": 2,
+            "5": 2
+          },
+          "compact": "J5^2 + J3^2 + J1^69"
+        },
+        "nilpotency_index": 5,
+        "rank_F_transpose_F_powers_1_through_5": [
+          12,
+          8,
+          4,
+          2,
+          0
+        ]
+      },
+      "orbit_index": 29
+    }
+  ],
+  "scope": "exact mod-2 Artin-Schreier/Jordan and K-projector local-minor consequences for Wave 210 rank-three survivor orbits 0, 4, and 29"
+}

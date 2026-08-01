@@ -1,0 +1,22 @@
+role: proof_b
+date_utc: 2026-08-01T05:02:46Z
+git_commit: 698f4db2cecd67fb4b9cfa8ff2bf7b375d9d93f3
+claim_label: DERIVED
+scope: exact common-neighbor, triangle, four-cycle, and simultaneous coloured-one-factor consequences for the three Wave 210 rank-three outside-column representatives
+inputs:
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json
+    sha256: 32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/package-manifest.sha256
+    sha256: d2c2bef169139d4e47d55d5084d5912caf5b8fa20bacda1ee5031e4e4e121722
+  - path: verification/wave210-rank3-marked-outside-coupling-verifier/package-manifest.sha256
+    sha256: d7f30a8c3e5d89c363f88da64d0a0baf2a2c933694e6bf12efdb94e6cd3132fb
+  - path: AGENTS.md
+    sha256: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+method: symbolic local 7K2 decomposition, opposite-pair four-cycle double counting, simultaneous labelled support-colour matchings, and exact replay of restricted labelled triangle-incidence controls
+command: C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe -B attempts\wave212-rank3-common-neighbor-proof-b\exact_check.py --verify
+outputs:
+  - path: attempts/wave212-rank3-common-neighbor-proof-b/exact-results.json
+    sha256: 370fff3eef0b4b9fc78f1e7d5d4968a2cd7582c88118675850d3bb417871f335
+  - path: attempts/wave212-rank3-common-neighbor-proof-b/hostile-incidence-controls.json
+    sha256: d583aad1c09d718ff8f8d8690a474e419e2aacf51ec050816903a24a261aa604
+limitations: all three coloured matching layers and restricted triangle-incidence controls survive; the controls satisfy all degrees, all ten selected pair values, and all 104 zero-target constraints but only 499, 534, and 532 of 1190 FD entries and only 1256, 1259, and 1299 of 3570 quadratic pairs; no full D is constructed or excluded; no target automorphism is assumed; global status UNKNOWN

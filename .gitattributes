@@ -349,3 +349,13 @@ logs/2026-07-31-wave20[7-9]-*.json whitespace=cr-at-eol,-blank-at-eof
 
 # This checksum-pinned audit uses a Markdown hard break on its date line.
 verification/wave208-global-residual-verifier/audit.md whitespace=cr-at-eol,-blank-at-eof,-trailing-space
+
+# Wave 212 discovery and verifier packages are checksum-pinned exact streams.
+# Preserve their bytes across Windows checkouts so package seals remain stable.
+attempts/wave212*/** -text -eol
+verification/wave212*/** -text -eol
+agents/2026-08-01-wave212*.md -text -eol
+
+attempts/wave212*/** whitespace=cr-at-eol,-blank-at-eof
+verification/wave212*/** whitespace=cr-at-eol,-blank-at-eof
+agents/2026-08-01-wave212*.md whitespace=cr-at-eol,-blank-at-eof

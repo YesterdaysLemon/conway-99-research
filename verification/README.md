@@ -2299,3 +2299,19 @@ point/triangle incidence identities and all 51 input branches, but its blind
 matrix is weaker than the source's 11,444--12,110-column systems.  Verdict:
 `PENDING_VERIFICATION` with a promotion veto.  The source's seven duals are
 not refuted, but they are not independently authenticated by this run.
+
+## Wave 212 symbolic verifiers
+
+`wave212-rank4-full-coupling-verifier/` closes the Wave 210 veto.  It first
+blind-seals seven larger full-signature systems and independent integer
+Farkas vectors, then reconstructs the exact membership-filtered matrices.
+All seven source matrices match completely, all archived duals replay, and
+51 labelled transports cover 601,377 local patterns.  Verdict:
+`PASS_NO_VETO` for the conditional exclusion of every rank-four branch.
+
+`wave212-rank3-symbolic-verifier/` independently replays both rank-three
+lanes.  The common-neighbor lane and proof-A's rank/Jordan/projector
+computations pass.  The phrase that the four nontrivial mod-2 blocks remain
+unallocated is vetoed: the forced nilpotent action on `U` puts them all in
+the zero-primary part.  That sharper allocation remains verifier-derived and
+pending separate promotion.  No outside block is constructed or excluded.

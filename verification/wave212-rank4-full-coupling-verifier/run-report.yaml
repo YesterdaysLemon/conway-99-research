@@ -1,0 +1,43 @@
+role: verifier
+date_utc: '2026-08-01T05:30:20Z'
+git_commit: 698f4db2cecd67fb4b9cfa8ff2bf7b375d9d93f3
+claim_label: VERIFIED
+scope: >-
+  Conditional exclusion of all seven Wave209 rank-four survivor orbits and
+  all 51 labelled branches by complete exact point-line coupling systems;
+  rank three and the global Conway-99 target remain UNKNOWN.
+inputs:
+  manifest: verification/wave212-rank4-full-coupling-verifier/input-freeze.sha256
+  pinned:
+    - path: AGENTS.md
+      sha256: 4d3e4590a8634cafaf5d87f288be211497f60a8f5ab40094a83f555724e469b3
+    - path: verification/wave212-rank4-full-coupling-verifier/blind-seal.sha256
+      sha256: b0bae5bfa69108ae3970618c9566eb79f8ee07eb44a70349e26cdb1f8965a903
+    - path: attempts/wave210-rank4-point-line-coupling-proof-b/package-manifest.sha256
+      sha256: 7eb45280b61e1612f4d70aa95922b7821e16aa3c426832eadb8995809d5cff78
+method: >-
+  Source-blind reconstruction of larger full-signature systems and seven
+  independent exact integer Farkas vectors; post-seal reconstruction of the
+  geometric membership filter and forced H[h] grouping; semantic
+  canonicalization and complete comparison of all source rows, right-hand
+  sides, W columns, and X columns; exact replay of all seven archived integer
+  duals; proof of zero-extension into the larger relaxation; explicit
+  sign-preserving constraint transport over 51 labelled branches and 601377
+  local patterns; hostile coefficient, RHS, column, and mapping mutations.
+command: >-
+  & 'C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe'
+  -B verification\wave212-rank4-full-coupling-verifier\independent_verify.py
+  --verify-blind ; & 'C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe'
+  -B verification\wave212-rank4-full-coupling-verifier\independent_verify.py
+  --verify-duals ; & 'C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe'
+  -B verification\wave212-rank4-full-coupling-verifier\post_source_audit.py
+  --write ; & 'C:\Users\Yeste\OneDrive\Documents\math conjecture\.venv\Scripts\python.exe'
+  -B -m unittest -v verification\wave212-rank4-full-coupling-verifier\test_post_source_audit.py
+outputs:
+  manifest: verification/wave212-rank4-full-coupling-verifier/package-manifest.sha256
+limitations:
+  - The verified exclusion is conditional on the frozen endpoint and verified Wave208/209 rank-four reduction.
+  - A dimension-only orchestrator message arrived after blind matrices and hashes but before blind dual sealing; no source matrix or certificate data arrived, and the contact is logged.
+  - Terminated duplicate and pre-optimization processes produced no accepted output and are not evidence.
+  - Rank three remains UNKNOWN.
+  - No graph, counterexample, unrestricted endpoint exclusion, or global resolution is certified; Conway-99 remains UNKNOWN.

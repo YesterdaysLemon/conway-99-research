@@ -489,3 +489,15 @@ Wave 210/211 handoff reports:
 - `2026-07-31-wave211-rank3-outside-block-proof-b.md`: exact forced-subspace
   spectrum and an orbit-29 520-edge hostile linear-block control, showing that
   the linear/spectral outside-block relaxation does not close the branch.
+
+Wave 212 reports:
+
+- `2026-08-01-wave212-rank3-common-neighbor-proof-b.md`: forced triangle and
+  four-cycle structure, simultaneous support-colour matchings, and exact
+  restricted hostile incidence controls for all three rank-three orbits.
+- `2026-08-01-wave212-rank3-quadratic-algebra-proof-a.md`: exact mod-2
+  Artin--Schreier ranks and conditional projector-minor closure.
+- `2026-08-01-wave212-rank3-verifier.md`: independent split verdict, including
+  the verifier-derived forced zero-primary Jordan allocation.
+- `2026-08-01-wave212-rank4-verifier.md`: source-blind and post-source exact
+  verification excluding all 51 rank-four branches conditionally.

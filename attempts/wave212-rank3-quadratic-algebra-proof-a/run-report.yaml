@@ -1,0 +1,33 @@
+role: proof_a
+date_utc: 2026-08-01T05:02:51Z
+git_commit: 698f4db2cecd67fb4b9cfa8ff2bf7b375d9d93f3
+claim_label: DERIVED
+scope: >-
+  Exact mod-2 Artin-Schreier/Jordan and conditional K-projector
+  local-minor consequences for Wave 210 rank-three survivor orbits 0, 4,
+  and 29.
+inputs:
+  - path: attempts/wave210-rank3-marked-outside-coupling-proof-a/hostile-controls.json
+    sha256: 32788ca74d17730d7e3c8aec12b23af13c26fc772dd94b36ffbcbab6473c38dd
+  - path: attempts/wave211-rank3-outside-block-proof-b/package-manifest.sha256
+    sha256: c8066f81ad607d598755442994c7804ebc375f9d637ed33e5cbd8335aae47a10
+method: >-
+  Standard-library exact rational elimination, exact F2 matrix powers and
+  ranks, nilpotent Jordan reconstruction, Artin-Schreier transport, and
+  exhaustive exact 2-by-2 conditional projector-minor checks.
+command: >-
+  python attempts\wave212-rank3-quadratic-algebra-proof-a\exact_check.py
+  --verify; python -m unittest -v
+  attempts\wave212-rank3-quadratic-algebra-proof-a\test_exact_check.py
+outputs:
+  - path: attempts/wave212-rank3-quadratic-algebra-proof-a/exact-results.json
+    sha256: 782a89c9ff134b73427bc9235548e830038ebefacb61efdf21602eb54f0f7df9
+  - path: attempts/wave212-rank3-quadratic-algebra-proof-a/derivation.md
+    sha256: 6d80d4ad47b31d7c5204561cee359ff43c10d975cacabf9c1719a705072e4e1a
+limitations:
+  - No 85-by-85 binary D is constructed or excluded.
+  - The nontrivial mod-2 blocks are not allocated between the 0- and 1-primary spaces.
+  - Diagonal and 2-by-2 projector tests do not control larger correlated minors.
+  - No target automorphism is assumed.
+  - Conway-99 remains UNKNOWN.
+
